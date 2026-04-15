@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+function FaqSchema() {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "K18のネックレスが切れてしまったのですが、買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、切れたネックレスでも問題なく買取できます。金の買取は素材としての価値がベースなので、チェーンが切れていても金としての価値は変わりません。" } },
+      { "@type": "Question", name: "K18WGとプラチナの見分け方は？", acceptedAnswer: { "@type": "Answer", text: "刻印を確認してください。K18WGなら「K18WG」「750」、プラチナなら「Pt900」「Pt950」などの刻印があります。" } },
+      { "@type": "Question", name: "K18のメッキ製品は買取できますか？", acceptedAnswer: { "@type": "Answer", text: "K18GP（Gold Plated）やK18GF（Gold Filled）は金の含有量が非常に少ないため、ほとんどの業者で買取不可または数十円程度です。" } },
+      { "@type": "Question", name: "K18とK14、どちらが高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "K18の方が高く売れます。K18は金含有率75%、K14は58.5%なので、同じ重量ならK18の方が約28%高い買取価格です。" } },
+    ],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
+}
+
 export const metadata: Metadata = {
-  title: "【完全ガイド】K18（18金）買取相場と高く売る方法 — 製品別・刻印の見方",
+  title: "【2026年最新】K18（18金）買取相場と高く売る方法 — 製品別・カラー別・刻印の見方",
   description:
     "K18（18金）の最新買取相場を1gあたりの価格で掲載。ネックレス・指輪・ブレスレットの製品別価格目安、K18の刻印の見分け方、高く売るコツ、おすすめ買取業者4社の比較まで徹底解説。",
 };
@@ -24,6 +38,8 @@ function CtaBox() {
 
 export default function K18KaitoriPage() {
   return (
+    <>
+      <FaqSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">
@@ -34,8 +50,8 @@ export default function K18KaitoriPage() {
       </nav>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【完全ガイド】K18（18金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新：2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】K18（18金）買取相場と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
         <p>K18（18金）は、日本で最も流通量が多い金製品です。ネックレス、指輪、ブレスレット、ピアスなど、多くのジュエリーにK18が使われています。</p>
 
@@ -84,7 +100,31 @@ export default function K18KaitoriPage() {
           </table>
         </div>
 
-        <p>買取価格は色（カラー）による大きな差はありません。いずれも金の含有率は75%で同じだからです。ただし、<strong>K18WGの場合、表面にロジウムメッキ（銀白色のコーティング）が施されている</strong>ことが多く、剥がれていると見た目が黄色っぽくなりますが、買取価格には影響しません。</p>
+        <h3>WG（ホワイトゴールド）/YG/PGのカラー別価格差</h3>
+
+        <p>基本的に買取価格はカラーによる大きな差はありません。いずれも金の含有率は75%で同じだからです。ただし、以下の微妙な違いがあります。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>カラー</th>
+                <th>素材価値</th>
+                <th>中古市場での人気</th>
+                <th>買取への影響</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>K18YG（イエロー）</strong></td><td>同じ（75%）</td><td>最も高い</td><td>ブランド買取で若干有利な場合あり</td></tr>
+              <tr><td><strong>K18PG（ピンク）</strong></td><td>同じ（75%）</td><td>女性に人気</td><td>ほぼ同じ</td></tr>
+              <tr><td><strong>K18WG（ホワイト）</strong></td><td>同じ（75%）</td><td>安定した需要</td><td>ほぼ同じ</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>K18WGの場合、表面にロジウムメッキ（銀白色のコーティング）が施されている</strong>ことが多く、剥がれていると見た目が黄色っぽくなりますが、買取価格には影響しません。素材買取では「金としての重量と純度」だけで価格が決まるため、どのカラーでも基本的に同じ価格です。</p>
+
+        <p>ただし、ブランドジュエリーとして評価される場合は、中古市場での人気が影響します。例えば、カルティエのラブリングはK18PGの人気が特に高いため、PGの方が高値がつくことがあります。</p>
 
         <h2>K18の最新買取相場（2026年4月）</h2>
 
@@ -247,6 +287,33 @@ export default function K18KaitoriPage() {
 
         <p>刻印が見えにくい場合は、<strong>ルーペ（10倍程度の拡大鏡）</strong>を使うと確認できます。100円ショップやホームセンターで手に入ります。</p>
 
+        <h3>K18刻印の見つけ方 —「750」「K18」「18K」の違い</h3>
+
+        <p>K18の刻印にはいくつかの表記バリエーションがあり、それぞれ意味と信頼性が異なります。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>刻印</th>
+                <th>表記方式</th>
+                <th>産地の傾向</th>
+                <th>信頼性</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>K18</strong></td><td>日本式（Kが前）</td><td>日本製に多い</td><td>高い</td></tr>
+              <tr><td><strong>750</strong></td><td>国際式（千分率）</td><td>イタリア・欧州に多い</td><td>高い</td></tr>
+              <tr><td><strong>18K</strong></td><td>海外式（Kが後）</td><td>アメリカ・アジアに多い</td><td>正規品にもあるが、偽物にも多い表記</td></tr>
+              <tr><td><strong>18KT</strong></td><td>海外式</td><td>アメリカ製</td><td>やや注意</td></tr>
+              <tr><td><strong>K18GP</strong></td><td>金メッキ</td><td>各国共通</td><td>金としての価値はほぼない</td></tr>
+              <tr><td><strong>K18GF</strong></td><td>金張り</td><td>各国共通</td><td>金としての価値はほぼない</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>最も注意すべきは「K18GP」と「K18GF」です。</strong>これらは金メッキ・金張りの意味であり、K18の金そのものではありません。GPは薄い金の膜がコーティングされただけの製品で、金の含有量は極めて少なく、ほとんどの業者で買取不可です。</p>
+
         <h3>「18K」の刻印は偽物？</h3>
 
         <p>「Kが後ろに付く"18K"は偽物」という俗説がありますが、これは<strong>必ずしも正しくありません</strong>。海外（特にイタリアやアメリカ）では「18K」「18KT」という表記が正規品にも使われています。</p>
@@ -325,6 +392,31 @@ export default function K18KaitoriPage() {
 
         <CtaBox />
 
+        <h2>業者別K18買取価格の比較</h2>
+
+        <p>K18の買取価格は業者によって差があります。以下は2026年4月時点の主要な買取チャネルにおけるK18/1gあたりの買取価格の傾向です。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>買取チャネル</th>
+                <th>K18/1g買取価格の傾向</th>
+                <th>メリット</th>
+                <th>デメリット</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>一括査定（ヒカカク！）</strong></td><td>11,400〜11,600円</td><td>最高値が見つかりやすい</td><td>実物査定までに時間がかかる</td></tr>
+              <tr><td><strong>大手チェーン（買取大吉）</strong></td><td>11,200〜11,400円</td><td>即日現金化、安心感</td><td>一括査定よりやや低い場合あり</td></tr>
+              <tr><td><strong>出張買取（ウリエル）</strong></td><td>11,100〜11,400円</td><td>自宅完結、持ち運び不要</td><td>日程調整が必要</td></tr>
+              <tr><td><strong>地域の質屋</strong></td><td>10,500〜11,000円</td><td>地元で気軽に</td><td>相場より低い傾向</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>K18ネックレス（30g）の場合、最安値（10,500円/g）と最高値（11,600円/g）で<strong>33,000円の差</strong>になります。必ず複数業者を比較しましょう。</p>
+
         <h2>K18買取に関するFAQ</h2>
 
         <div className="space-y-3 not-prose">
@@ -400,5 +492,6 @@ export default function K18KaitoriPage() {
         <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>でお手持ちのK18製品の価値を確認してみてください。査定は無料です。</p>
       </article>
     </div>
+    </>
   );
 }

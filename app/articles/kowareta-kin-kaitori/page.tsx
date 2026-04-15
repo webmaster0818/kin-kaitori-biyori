@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "【壊れた金・刻印なしでも売れる】金買取の条件と査定方法を徹底解説",
+  title: "【2026年最新】壊れた金・刻印なしでも売れる — 金買取の条件と査定方法を徹底解説",
   description:
     "壊れた金製品や刻印なしの金でも買取可能。チェーン切れ・片方のピアス・変色したリング・刻印が消えた金製品の買取条件、X線分析による純度測定の仕組み、持ち込み前の準備、おすすめ買取業者4社を解説。",
 };
@@ -91,8 +91,8 @@ export default function KowaretaKinKaitoriPage() {
         </nav>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【壊れた金・刻印なしでも売れる】金買取の条件と査定方法</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新：2026年4月13日</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】壊れた金・刻印なしでも売れる — 金買取の条件と査定方法</h1>
+          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
           <p>「チェーンが切れたネックレスは売れる？」「刻印がない金は買い取ってもらえる？」「変色した金は価値が下がる？」——こうした不安から、壊れた金製品を引き出しにしまったままの方は多いのではないでしょうか。</p>
 
@@ -197,6 +197,94 @@ export default function KowaretaKinKaitoriPage() {
           <h3>比重測定も併用される</h3>
 
           <p>XRFに加えて、<strong>比重計</strong>を使った測定も行われることがあります。金は比重が大きい（K24で19.3）ため、水に沈めて体積と重量から比重を計算し、金の純度を推定できます。XRFとの併用で、より正確な査定が可能になります。</p>
+
+          <h2>壊れ方別の解説 — こんな状態でも売れます</h2>
+
+          <h3>チェーン切れ・留め具破損</h3>
+          <p>ネックレスやブレスレットのチェーンが切れたもの。留め金（クラスプ）が壊れたもの。金の重量が変わらないため、買取価格は新品と同じです。切れた破片も含めてすべて持ち込みましょう。</p>
+
+          <h3>変形・歪み</h3>
+          <p>指輪が歪んだ、バングルが曲がった、ペンダントトップが潰れたなど。金は溶かして精錬するため、どんなに変形していても問題ありません。</p>
+
+          <h3>石取れ・宝石欠損</h3>
+          <p>ダイヤモンドやルビーが取れた指輪やネックレス。金の台座部分の重量で査定されます。取れた石が手元にあれば、一緒に持ち込むと石の価値も加算される場合があります。</p>
+
+          <h3>断片・破片</h3>
+          <p>完全に壊れてバラバラになった金製品の破片。小さな破片でも金であれば重量を計って買取してもらえます。まとめて持ち込みましょう。</p>
+
+          <h2>修理して売るか、壊れたまま売るか — 損得比較</h2>
+
+          <p>「修理した方が高く売れるのでは？」と考える方がいますが、ほとんどの場合、<strong>壊れたまま売る方がお得</strong>です。</p>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>修理してから売る</th>
+                  <th>壊れたまま売る</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>修理費用</strong></td><td>3,000〜30,000円</td><td>0円</td></tr>
+                <tr><td><strong>素材買取価格</strong></td><td>変わらない（重量・純度は同じ）</td><td>変わらない</td></tr>
+                <tr><td><strong>ブランド買取価格</strong></td><td>修理跡が減点になる場合あり</td><td>壊れた状態でもブランド評価あり</td></tr>
+                <tr><td><strong>手間</strong></td><td>修理に1〜2週間</td><td>そのまま持ち込むだけ</td></tr>
+                <tr><td><strong>トータル</strong></td><td>修理費用分だけマイナス</td><td><strong>最もお得</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>例外：</strong>高級ブランドジュエリー（カルティエ、ティファニーなど）で、正規修理により「完品」として販売できる状態に戻せる場合は、修理した方がブランド価値が評価されて高値がつく可能性があります。ただし、自分で修理するのではなく、まず買取業者に相談し、「修理してから売った方がいいか」を聞いてみましょう。</p>
+
+          <h2>メルカリ vs 買取業者 — 壊れた金製品はどこで売る？</h2>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>メルカリ</th>
+                  <th>買取業者</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>壊れた金の出品</strong></td><td>可能だが買い手が見つかりにくい</td><td>問題なく買取可能</td></tr>
+                <tr><td><strong>手数料</strong></td><td>売上の10%</td><td>無料</td></tr>
+                <tr><td><strong>価格の目安</strong></td><td>相場以下になりがち</td><td>金相場に連動した公正価格</td></tr>
+                <tr><td><strong>トラブルリスク</strong></td><td>「偽物だ」というクレームのリスク</td><td>なし</td></tr>
+                <tr><td><strong>入金スピード</strong></td><td>売れるまで不確定</td><td>即日〜3日程度</td></tr>
+                <tr><td><strong>おすすめ度</strong></td><td>壊れた金には不向き</td><td><strong>最適</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>壊れた金製品をメルカリに出品しても、「壊れている」というだけで買い手がつきにくく、相場以下でしか売れないことが多いです。<strong>壊れた金の売却は買取業者一択</strong>と考えてよいでしょう。</p>
+
+          <h2>実査定事例 — 壊れた金製品はいくらで売れた？</h2>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>事例</th>
+                  <th>製品</th>
+                  <th>状態</th>
+                  <th>純度・重量</th>
+                  <th>買取価格</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>事例1</td><td>K18ネックレス</td><td>チェーン切れ</td><td>K18 / 8.2g</td><td><strong>93,480円</strong></td></tr>
+                <tr><td>事例2</td><td>K18指輪</td><td>石取れ・変形</td><td>K18 / 4.5g（枠のみ）</td><td><strong>51,300円</strong></td></tr>
+                <tr><td>事例3</td><td>K14ブレスレット</td><td>留め具破損・絡まり</td><td>K14 / 12.0g</td><td><strong>106,800円</strong></td></tr>
+                <tr><td>事例4</td><td>K18ピアス</td><td>片方のみ</td><td>K18 / 1.2g</td><td><strong>13,680円</strong></td></tr>
+                <tr><td>事例5</td><td>K24金杯</td><td>変色・刻印不鮮明</td><td>K24 / 35.0g</td><td><strong>532,000円</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>事例5のように、変色して古びた金杯でもK24であれば<strong>50万円以上</strong>の買取価格になります。「こんなもの売れるわけない」と決めつけず、まずは査定に出してみましょう。</p>
 
           <h2>買取対象になるもの一覧</h2>
 

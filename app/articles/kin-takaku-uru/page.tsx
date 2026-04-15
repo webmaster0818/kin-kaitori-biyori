@@ -1,8 +1,89 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+function HowToSchema() {
+  const howToData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "金を高く売る方法",
+    description: "金・貴金属を最高値で売却するための5つのステップ",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "複数業者に相見積もりを取る",
+        text: "最低3社以上に見積もりを依頼する。一括査定サービスを利用すると効率的。",
+      },
+      {
+        "@type": "HowToStep",
+        name: "金相場が高いタイミングで売る",
+        text: "田中貴金属のサイトなどで当日の相場を確認し、高値圏であることを確認してから売却する。",
+      },
+      {
+        "@type": "HowToStep",
+        name: "付属品・保証書を揃える",
+        text: "ブランドジュエリーの場合は、鑑定書・専用ケース・保証書・購入レシートを揃えて査定に出す。",
+      },
+      {
+        "@type": "HowToStep",
+        name: "純度・重量を事前に確認する",
+        text: "刻印を確認して純度を把握し、デジタルスケールで重量を計測して概算額を計算する。",
+      },
+      {
+        "@type": "HowToStep",
+        name: "信頼できる業者を選ぶ",
+        text: "古物商許可証を取得し、査定料・キャンセル料が無料で、買取価格の根拠を説明してくれる業者を選ぶ。",
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(howToData) }}
+    />
+  );
+}
+
+function FaqSchema() {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "質屋と買取専門店、どちらが高く売れますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "一般的に買取専門店の方が高値を付ける傾向があります。質屋は買取価格がやや保守的です。ただし、例外もあるため両方に見積もりを取るのが確実です。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "フリマアプリで金を売るのはお得ですか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "フリマアプリは手数料10%が差し引かれ、偽物トラブルのリスクもあります。金の素材価値で売る場合は買取業者の方が確実で、手数料も無料です。ブランドジュエリーなどデザイン価値がある場合のみフリマアプリが有利になる場合があります。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "売却で得た利益に税金はかかりますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "個人が金を売却して得た利益は「譲渡所得」として確定申告の対象になります。年間50万円の特別控除があり、保有期間5年超の場合は課税額がさらに半額に軽減されます。",
+        },
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+    />
+  );
+}
+
 export const metadata: Metadata = {
-  title: "金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
+  title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
   description:
     "金・貴金属を少しでも高く売るための実践テクニックを徹底解説。相見積もりの取り方、売却タイミングの見極め方、付属品の重要性、避けるべきNG行動まで、プロが教える5つのコツ。",
 };
@@ -24,6 +105,9 @@ function CtaBox() {
 
 export default function KinTakakuUruPage() {
   return (
+    <>
+      <HowToSchema />
+      <FaqSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">
@@ -34,8 +118,8 @@ export default function KinTakakuUruPage() {
       </nav>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新：2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
         <p>「金のアクセサリーを売りたいけど、損したくない」「どうすれば少しでも高く売れる？」——金や貴金属の売却を検討している方にとって、<strong>「いかに高値で売るか」は最大の関心事</strong>です。</p>
 
@@ -232,6 +316,53 @@ export default function KinTakakuUruPage() {
         <h3>NG5：貴金属以外のパーツを外す</h3>
         <p>「金の部分だけ外して持ち込もう」と自分で分解するのはNGです。うまく外せずに素材を傷つけたり、破損させたりする可能性があります。<strong>そのままの状態で持ち込む</strong>のがベストです。</p>
 
+        <h2>フリマアプリ vs 買取業者 — どちらが得か？</h2>
+
+        <p>「メルカリやヤフオクで売った方が高く売れるのでは？」と考える方もいるでしょう。結論から言うと、<strong>金の素材買取なら業者の方が確実にお得</strong>です。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>比較項目</th>
+                <th>フリマアプリ</th>
+                <th>買取業者</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>手数料</strong></td><td>売上の10%（メルカリ）</td><td>無料（当サイト掲載4社）</td></tr>
+              <tr><td><strong>送料</strong></td><td>出品者負担が一般的</td><td>無料（出張・宅配とも）</td></tr>
+              <tr><td><strong>入金スピード</strong></td><td>売れるまで不確定</td><td>即日〜3日程度</td></tr>
+              <tr><td><strong>偽物トラブル</strong></td><td>返品・クレームリスクあり</td><td>なし（業者が鑑定）</td></tr>
+              <tr><td><strong>価格の確実性</strong></td><td>相場より安くなることも</td><td>金相場に連動した公正価格</td></tr>
+              <tr><td><strong>手間</strong></td><td>撮影・出品・梱包・発送・対応</td><td>持ち込むだけ or 出張</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>フリマアプリが有利になるケース：</strong>ブランドジュエリー（ティファニー、カルティエなど）でデザイン価値が高い製品。買い手がブランド名に対して金の素材価値以上の金額を支払う場合のみ、フリマアプリが有利です。</p>
+
+        <p><strong>買取業者が有利になるケース：</strong>ノーブランドの金製品、壊れたアクセサリー、金歯、インゴットなど、素材価値で取引される金製品のすべて。手数料ゼロ・トラブルリスクゼロ・即現金化が可能で、圧倒的に有利です。</p>
+
+        <h2>売却前チェックリスト</h2>
+
+        <p>金を売りに行く前に、以下のチェックリストを確認しましょう。事前準備をしっかり行うことで、高値売却の可能性が上がります。</p>
+
+        <ul>
+          <li><strong>刻印を確認したか</strong> — K18、K24、750、999などの刻印で純度を把握</li>
+          <li><strong>重量を計ったか</strong> — キッチンスケール（0.1g単位）で計量し、概算額を把握</li>
+          <li><strong>当日の金相場を確認したか</strong> — 田中貴金属のサイトなどで本日の相場をチェック</li>
+          <li><strong>付属品を揃えたか</strong> — 保証書、鑑定書、専用ケース、購入レシート</li>
+          <li><strong>本人確認書類を用意したか</strong> — 運転免許証、マイナンバーカード、パスポートのいずれか</li>
+          <li><strong>3社以上に見積もり依頼したか</strong> — 一括査定または個別に連絡</li>
+          <li><strong>磨きすぎていないか</strong> — 柔らかい布で軽く拭く程度でOK。研磨剤は禁止</li>
+          <li><strong>分解・修理はしていないか</strong> — そのままの状態で持ち込むのがベスト</li>
+        </ul>
+
+        <blockquote>
+          <p><strong>ポイント：</strong>このチェックリストの中で最も重要なのは「3社以上に見積もり依頼したか」です。これだけで数千円〜数万円の差が出ます。一括査定なら数分で複数業者に依頼できます。</p>
+        </blockquote>
+
         <h2>金を高く売る方法に関するFAQ</h2>
 
         <div className="space-y-3 not-prose">
@@ -288,5 +419,6 @@ export default function KinTakakuUruPage() {
         <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で相場感を掴むことから始めてみてください。</p>
       </article>
     </div>
+    </>
   );
 }

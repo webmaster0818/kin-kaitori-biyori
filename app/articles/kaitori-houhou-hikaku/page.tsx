@@ -1,8 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+function FaqSchema() {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "出張買取で押し買い（強引な買取）はありませんか？",
+        acceptedAnswer: { "@type": "Answer", text: "当サイトで紹介している業者では押し買いはありません。法律上もクーリングオフ（8日間）が適用されるため、万が一納得できない場合は取引を取り消せます。" },
+      },
+      {
+        "@type": "Question",
+        name: "出張買取のクーリングオフは何日ですか？",
+        acceptedAnswer: { "@type": "Answer", text: "出張買取はクーリングオフの対象であり、契約書面を受け取った日から8日以内であれば無条件で契約を解除できます。" },
+      },
+      {
+        "@type": "Question",
+        name: "女性の査定員を指名できますか？",
+        acceptedAnswer: { "@type": "Answer", text: "買取大吉やウリエルなどの大手業者では、女性査定員の指名が可能な場合があります。予約時に相談してみてください。" },
+      },
+    ],
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
+  );
+}
+
 export const metadata: Metadata = {
-  title: "金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ",
+  title: "【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ",
   description:
     "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて徹底比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
 };
@@ -24,6 +51,8 @@ function CtaBox() {
 
 export default function KaitoriHouhouHikakuPage() {
   return (
+    <>
+      <FaqSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">
@@ -34,8 +63,8 @@ export default function KaitoriHouhouHikakuPage() {
       </nav>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新：2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
         <p>金・貴金属を売りたいと思ったとき、「どの方法で売ればいいの？」と迷う方は多いはずです。金の買取方法は大きく分けて<strong>4つ</strong>あり、それぞれにメリット・デメリットがあります。</p>
 
@@ -258,6 +287,72 @@ export default function KaitoriHouhouHikakuPage() {
 
         <CtaBox />
 
+        <h2>出張買取のトラブル事例と対策</h2>
+
+        <p>出張買取は便利なサービスですが、一部の悪質業者によるトラブルも報告されています。事前に知っておくことで、安全に利用できます。</p>
+
+        <h3>トラブル事例1：「ついでに他のものも見せて」と言われる</h3>
+        <p>金の査定を依頼したはずが、「ついでに他の貴金属やブランド品も見せてください」と言われ、安値で買い叩かれるケース。<strong>対策：</strong>事前に「金製品のみ査定希望」と伝えておく。依頼していないものは見せない。</p>
+
+        <h3>トラブル事例2：「今日決めないと価格が下がる」と急かされる</h3>
+        <p>その場で即決を迫られるケース。金相場は1日で大きく変わることはほぼありません。<strong>対策：</strong>「他社にも見積もりを取りたい」と伝え、持ち帰る。まともな業者は快く応じてくれます。</p>
+
+        <h3>トラブル事例3：査定後に「やっぱり売りたくない」と言いにくい</h3>
+        <p>わざわざ来てもらった手前、断りにくいと感じる方が多いです。<strong>対策：</strong>キャンセル無料を事前に確認。「検討します」と言えば問題ありません。当サイト掲載の4社はキャンセル無料です。</p>
+
+        <h2>クーリングオフ制度 — 8日間なら無条件で取り消し可能</h2>
+
+        <p>出張買取は<strong>特定商取引法の「訪問購入」</strong>に該当し、クーリングオフの対象です。以下のルールを覚えておきましょう。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>対象取引</strong></td><td>出張買取（訪問購入）</td></tr>
+              <tr><td><strong>クーリングオフ期間</strong></td><td>契約書面を受け取った日から<strong>8日以内</strong></td></tr>
+              <tr><td><strong>手続き方法</strong></td><td>書面（はがき・内容証明郵便）で通知</td></tr>
+              <tr><td><strong>費用負担</strong></td><td>返金・返品の送料等は業者負担</td></tr>
+              <tr><td><strong>注意点</strong></td><td>店頭買取・宅配買取にはクーリングオフは適用されない</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>重要：</strong>クーリングオフ期間中は、業者は買い取った品物を第三者に転売してはいけません。つまり、8日以内であれば確実に品物を取り戻せます。契約書面（クーリングオフについて記載された書面）を受け取っていない場合は、8日を過ぎてもクーリングオフが可能です。</p>
+
+        <h2>女性査定員への対応について</h2>
+
+        <p>「男性の査定員が自宅に来るのは不安」という女性の方は少なくありません。以下の対応が可能です。</p>
+
+        <ul>
+          <li><strong>買取大吉：</strong>店頭であれば女性スタッフが対応する店舗あり。出張買取でも女性査定員を相談可能</li>
+          <li><strong>ウリエル：</strong>出張買取時に女性査定員の希望を伝えられる。対応可能エリアは事前確認が必要</li>
+          <li><strong>ティファナ：</strong>宅配買取なら完全非対面で安心。対面不要で売却が完結</li>
+        </ul>
+
+        <p>いずれの場合も、<strong>予約時に「女性の査定員を希望」と伝える</strong>ことが重要です。対応できない場合もありますが、まずは相談してみましょう。</p>
+
+        <h2>査定に納得できないときの「断り方」</h2>
+
+        <p>「査定額に納得できないけど、断りにくい…」という方のために、スムーズな断り方をご紹介します。</p>
+
+        <ul>
+          <li>「他社にも見積もりを取りたいので、今日は持ち帰ります」</li>
+          <li>「家族に相談してから決めます」</li>
+          <li>「想定より低かったので、今回は見送ります」</li>
+          <li>「検討させてください」</li>
+        </ul>
+
+        <p>いずれも問題なく断れるフレーズです。まともな買取業者であれば、断られることは日常的であり、嫌な顔をされることはありません。<strong>当サイト掲載の4社はキャンセル料無料</strong>なので、安心して査定を依頼できます。</p>
+
+        <blockquote>
+          <p><strong>ポイント：</strong>「断るのが苦手」という方は、宅配買取（ティファナ）を利用するのも手です。メールで査定結果が届くので、断る場合も「お見送りします」と返信するだけでOKです。</p>
+        </blockquote>
+
         <h2>買取方法に関するFAQ</h2>
 
         <div className="space-y-3 not-prose">
@@ -301,5 +396,6 @@ export default function KaitoriHouhouHikakuPage() {
         <p>最もおすすめなのは、<strong>一括査定で最高値を把握してから、店頭または出張で売却</strong>する組み合わせです。この方法なら、高値と利便性の両方を実現できます。</p>
       </article>
     </div>
+    </>
   );
 }

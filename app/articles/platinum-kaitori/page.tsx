@@ -92,7 +92,7 @@ export default function PlatinumKaitoriPage() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】プラチナ買取相場ガイド — 純度別の価格と高く売る方法</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新：2026年4月13日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
           <p>プラチナ（白金）は、結婚指輪やダイヤモンドリングに使われる高級貴金属です。「プラチナのリングを売りたい」「Pt900の刻印があるけど、いくらで売れるのか」「金との価格差が気になる」——この記事では、プラチナ買取に関するあらゆる疑問を解決します。</p>
 
@@ -253,6 +253,60 @@ export default function PlatinumKaitoriPage() {
           </div>
 
           <p>ブランド時計の場合は、金属買取業者よりも<strong>時計専門の買取業者の方が高値</strong>がつくことが多いです。両方に見積もりを取って比較しましょう。</p>
+
+          <h2>金 vs プラチナ: 2026年、どちらを売るべきか</h2>
+
+          <p>金とプラチナの両方を保有している方にとって、「どちらを先に売るべきか」は悩ましい問題です。2026年4月時点の状況を比較して判断材料を提示します。</p>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  <th>金（K24）</th>
+                  <th>プラチナ（Pt1000）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>現在の価格（1g）</strong></td><td>約15,200円</td><td>約5,300円</td></tr>
+                <tr><td><strong>過去最高値比</strong></td><td>ほぼ最高値圏</td><td>過去最高値（2008年：約7,500円）の約70%</td></tr>
+                <tr><td><strong>6年間の上昇率</strong></td><td>約2.3倍（2020年比）</td><td>約1.9倍（2020年比）</td></tr>
+                <tr><td><strong>今後の見通し</strong></td><td>高止まり〜緩やかな上昇</td><td>水素社会で中長期的な需要拡大</td></tr>
+                <tr><td><strong>売り時の評価</strong></td><td>歴史的高値で好機</td><td>上昇余地あり、急がなくてもよい</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>結論：</strong>「今すぐ現金化したい」場合は、歴史的高値にある<strong>金を先に売却</strong>するのが合理的です。プラチナは水素社会への移行に伴う需要拡大が見込まれるため、もう少し待つ余地があります。ただし、「両方とも高値にあるうちに売りたい」のであれば、まとめて売却しても問題ありません。</p>
+
+          <h2>Pt刻印の読み方ガイド</h2>
+
+          <p>プラチナ製品の刻印（ホールマーク）にはいくつかのバリエーションがあります。正確に読み取ることで、製品の純度がわかります。</p>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>刻印</th>
+                  <th>意味</th>
+                  <th>純度</th>
+                  <th>備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Pt1000</strong></td><td>純プラチナ</td><td>99.95%以上</td><td>インゴットに多い</td></tr>
+                <tr><td><strong>Pt950</strong></td><td>プラチナ95%合金</td><td>95.0%</td><td>海外ハイブランドに多い</td></tr>
+                <tr><td><strong>Pt900</strong></td><td>プラチナ90%合金</td><td>90.0%</td><td>日本のジュエリーで最も一般的</td></tr>
+                <tr><td><strong>Pt850</strong></td><td>プラチナ85%合金</td><td>85.0%</td><td>ネックレスチェーンに多い</td></tr>
+                <tr><td><strong>Pm</strong></td><td>プラチナの旧表記</td><td>—</td><td>古い日本製品に見られる</td></tr>
+                <tr><td><strong>PLAT</strong></td><td>プラチナの英語表記</td><td>—</td><td>海外製品</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>刻印の場所：</strong>指輪は内側、ネックレスは留め金（クラスプ）付近、ブレスレットは留め金の裏にあることが多いです。ルーペ（10倍）を使うと見つけやすくなります。</p>
+
+          <p><strong>「Pm」表記について：</strong>昔の日本製プラチナ製品には「Pm」（プラチナメタルの略）と刻印されているものがあります。これは正規のプラチナ製品です。現在は「Pt」表記が国際標準ですが、Pmの刻印があれば問題なく買取できます。</p>
 
           <h2>金とプラチナの違い・見分け方</h2>
 
