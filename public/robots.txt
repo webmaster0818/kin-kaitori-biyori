@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kin-kaitori-biyori.pages.dev/sitemap.xml
