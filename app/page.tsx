@@ -120,6 +120,46 @@ const articles = [
       "メイプルリーフ金貨・ウィーン金貨・インゴットの買取相場、重量別の買取目安、200万円超の税金対策を解説。",
     tags: ["金貨", "インゴット", "メイプルリーフ", "税金"],
   },
+  {
+    href: "/articles/tokyo-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】東京の金買取おすすめ業者ガイド — エリア別・方法別に徹底比較",
+    description:
+      "東京で金を高く売るならどこがいい？銀座・新宿・上野御徒町のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["東京", "銀座", "新宿", "御徒町"],
+  },
+  {
+    href: "/articles/osaka-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】大阪の金買取おすすめ業者ガイド — 梅田・難波・心斎橋エリア別比較",
+    description:
+      "大阪で金を高く売るならどこがいい？梅田・難波・心斎橋のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["大阪", "梅田", "難波", "心斎橋"],
+  },
+  {
+    href: "/articles/kin-jundo-mikata/",
+    tag: "知識ガイド",
+    title: "【2026年最新】金の純度の見分け方 — K18・K24の違いと刻印の読み方",
+    description:
+      "金の純度はどうやって見分ける？K24・K18・K14の違い、刻印の読み方、金メッキとの見分け方を徹底解説。",
+    tags: ["純度", "刻印", "K18", "K24"],
+  },
+  {
+    href: "/articles/kin-kaitori-zeikin/",
+    tag: "税金ガイド",
+    title: "【2026年最新】金買取の税金・確定申告ガイド — 譲渡所得の計算と節税対策",
+    description:
+      "金を売った時の税金はいくら？譲渡所得の計算方法、年間50万円の特別控除、5年超保有の優遇措置を解説。",
+    tags: ["税金", "確定申告", "譲渡所得", "節税"],
+  },
+  {
+    href: "/articles/kin-uridoki-2026/",
+    tag: "相場分析",
+    title: "【2026年最新】金の売り時はいつ？相場の見通しと売却判断の基準",
+    description:
+      "2026年は金の売り時？歴史的高値の背景、今後の金相場予測、合理的な売却判断の基準を解説。",
+    tags: ["売り時", "2026年", "金相場", "予測"],
+  },
 ];
 
 const faqs = [
@@ -373,6 +413,12 @@ export default function Home() {
               { label: "ダイヤモンド・宝石", href: "/articles/diamond-kaitori/" },
               { label: "金貨・インゴット", href: "/articles/kinka-ingot-kaitori/" },
               { label: "壊れた金・刻印なし", href: "/articles/kowareta-kin-kaitori/" },
+              { label: "東京の金買取", href: "/articles/tokyo-kin-kaitori/" },
+              { label: "大阪の金買取", href: "/articles/osaka-kin-kaitori/" },
+              { label: "純度の見分け方", href: "/articles/kin-jundo-mikata/" },
+              { label: "税金・確定申告", href: "/articles/kin-kaitori-zeikin/" },
+              { label: "売り時 2026", href: "/articles/kin-uridoki-2026/" },
+              { label: "よくある質問", href: "/faq/" },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -420,7 +466,7 @@ export default function Home() {
           </div>
           <div className="mt-6 pt-4 border-t border-warm-border">
             <p className="text-xs text-warm-gray">
-              ※詳しい税金の計算方法や節税対策は <Link href="/articles/kinka-ingot-kaitori/" className="text-accent hover:underline">金貨・インゴット買取ガイド</Link> で解説しています。不明点は税理士に相談することをおすすめします。
+              ※詳しい税金の計算方法や節税対策は <Link href="/articles/kin-kaitori-zeikin/" className="text-accent hover:underline">金買取の税金・確定申告ガイド</Link> で解説しています。不明点は税理士に相談することをおすすめします。
             </p>
           </div>
         </div>
