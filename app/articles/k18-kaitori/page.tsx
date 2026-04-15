@@ -362,6 +362,27 @@ export default function K18KaitoriPage() {
           ))}
         </div>
 
+        <h2>関連記事</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          <Link href="/articles/k24-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">K24（純金）買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/platinum-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">プラチナ買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取ガイド</p>
+          </Link>
+          <Link href="/articles/diamond-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">ダイヤモンド・宝石買取ガイド</p>
+          </Link>
+        </div>
+
         <h2>まとめ</h2>
 
         <p>K18（18金）は日本で最も多く流通する金製品であり、ネックレス・指輪・ブレスレットなど幅広い製品に使われています。</p>

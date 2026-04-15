@@ -31,6 +31,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/k24-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/platinum-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/kinba-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/kowareta-kin-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/diamond-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kin-kaitori-biyori.pages.dev/articles/kinka-ingot-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kin-kaitori-biyori.pages.dev/about/</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>

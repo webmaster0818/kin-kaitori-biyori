@@ -72,6 +72,54 @@ const articles = [
       "K18の1gあたりの買取相場、ネックレス・指輪・ブレスレットの製品別価格、刻印の見方、おすすめ買取業者を徹底解説。",
     tags: ["K18", "18金", "ネックレス", "指輪"],
   },
+  {
+    href: "/articles/k24-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】K24（純金）買取相場ガイド — 高く売る方法",
+    description:
+      "K24（純金・純度99.99%）の最新買取相場を1gあたりの価格で掲載。インゴット・金貨・ジュエリーの製品別買取価格と高く売るポイントを解説。",
+    tags: ["K24", "純金", "インゴット", "金貨"],
+  },
+  {
+    href: "/articles/platinum-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】プラチナ買取相場ガイド — 純度別の価格と高く売る方法",
+    description:
+      "Pt1000/Pt950/Pt900/Pt850の純度別買取相場、プラチナ価格高騰の背景、金との違い・見分け方を徹底解説。",
+    tags: ["プラチナ", "Pt900", "Pt950", "指輪"],
+  },
+  {
+    href: "/articles/kinba-kaitori/",
+    tag: "品目ガイド",
+    title: "【意外と高い】金歯の買取相場ガイド — 1本いくら？",
+    description:
+      "金歯1本あたりの買取相場、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点を解説。",
+    tags: ["金歯", "K14", "歯科用金合金"],
+  },
+  {
+    href: "/articles/kowareta-kin-kaitori/",
+    tag: "品目ガイド",
+    title: "【壊れた金・刻印なしでも売れる】金買取の条件と査定方法",
+    description:
+      "チェーン切れ・片方のピアス・変色したリング・刻印なしの金製品もすべて買取可能。X線分析による査定の仕組みを解説。",
+    tags: ["壊れた金", "刻印なし", "傷あり"],
+  },
+  {
+    href: "/articles/diamond-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】ダイヤモンド・宝石買取ガイド — 4Cの評価と高く売るコツ",
+    description:
+      "ダイヤモンド買取相場を4C別に解説。鑑定書の有無による価格差、ブランドジュエリーの高額買取のコツも。",
+    tags: ["ダイヤモンド", "宝石", "ルビー", "4C"],
+  },
+  {
+    href: "/articles/kinka-ingot-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】金貨・インゴット買取ガイド — 種類別の相場と税金",
+    description:
+      "メイプルリーフ金貨・ウィーン金貨・インゴットの買取相場、重量別の買取目安、200万円超の税金対策を解説。",
+    tags: ["金貨", "インゴット", "メイプルリーフ", "税金"],
+  },
 ];
 
 const faqs = [
@@ -205,16 +253,16 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
             {[
-              { label: "K24（純金）", href: "/articles/kin-kaitori-souba/#k24" },
+              { label: "K24（純金）", href: "/articles/k24-kaitori/" },
               { label: "K18（18金）", href: "/articles/k18-kaitori/" },
               { label: "K14（14金）", href: "/articles/kin-kaitori-souba/#k14" },
-              { label: "プラチナ", href: "/articles/kin-kaitori-souba/#platinum" },
-              { label: "金歯・金冠", href: "/articles/kin-kaitori-souba/#dental" },
+              { label: "プラチナ", href: "/articles/platinum-kaitori/" },
+              { label: "金歯・金冠", href: "/articles/kinba-kaitori/" },
               { label: "ネックレス", href: "/articles/k18-kaitori/#necklace" },
               { label: "指輪・リング", href: "/articles/k18-kaitori/#ring" },
-              { label: "ブレスレット", href: "/articles/k18-kaitori/#bracelet" },
-              { label: "金貨・インゴット", href: "/articles/kin-kaitori-souba/#ingot" },
-              { label: "壊れたアクセサリー", href: "/articles/kin-takaku-uru/#broken" },
+              { label: "ダイヤモンド・宝石", href: "/articles/diamond-kaitori/" },
+              { label: "金貨・インゴット", href: "/articles/kinka-ingot-kaitori/" },
+              { label: "壊れた金・刻印なし", href: "/articles/kowareta-kin-kaitori/" },
             ].map((item) => (
               <Link
                 key={item.label}
