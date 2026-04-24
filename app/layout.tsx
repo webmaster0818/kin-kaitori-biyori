@@ -20,7 +20,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 });
 
 const SITE_NAME = "金買取びより";
-const SITE_URL = "https://kin-kaitori-biyori.pages.dev";
+const SITE_URL = "https://gold-biyori.com";
 const SITE_DESCRIPTION =
   "金買取びよりは、金・貴金属の買取相場や高く売るコツを徹底解説するガイドサイトです。K18・K24・プラチナの最新相場から、ヒカカク！・買取大吉・ティファナ・ウリエルなど人気買取業者を比較し、あなたに最適な売却方法が見つかります。";
 
