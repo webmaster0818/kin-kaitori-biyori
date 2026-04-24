@@ -160,6 +160,118 @@ const articles = [
       "2026年は金の売り時？歴史的高値の背景、今後の金相場予測、合理的な売却判断の基準を解説。",
     tags: ["売り時", "2026年", "金相場", "予測"],
   },
+  {
+    href: "/articles/nagoya-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】名古屋の金買取おすすめ業者ガイド — 名駅・栄・大須エリア別比較",
+    description:
+      "名古屋で金を高く売るならどこがいい？名駅・栄・大須のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["名古屋", "名駅", "栄", "大須"],
+  },
+  {
+    href: "/articles/fukuoka-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】福岡の金買取おすすめ業者ガイド — 天神・博多・大名エリア別比較",
+    description:
+      "福岡で金を高く売るならどこがいい？天神・博多・大名のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["福岡", "天神", "博多", "大名"],
+  },
+  {
+    href: "/articles/yokohama-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
+    description:
+      "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["横浜", "横浜駅", "元町", "関内"],
+  },
+  {
+    href: "/articles/sapporo-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】札幌の金買取おすすめ業者ガイド — 札幌駅・大通・すすきのエリア別比較",
+    description:
+      "札幌で金を高く売るならどこがいい？札幌駅・大通・すすきののエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["札幌", "大通", "すすきの", "北海道"],
+  },
+  {
+    href: "/articles/gin-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】銀（シルバー）買取相場ガイド — SV925・SV1000の1gあたり価格",
+    description:
+      "銀の最新買取相場を1gあたりの価格で掲載。SV925・SV1000の純度別価格、銀食器の買取、高く売るコツを解説。",
+    tags: ["銀", "シルバー", "SV925", "銀食器"],
+  },
+  {
+    href: "/articles/k10-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    description:
+      "K10の最新買取相場を1gあたりの価格で掲載。K10とK18の違い、製品別価格目安、高く売るコツを解説。",
+    tags: ["K10", "10金", "アクセサリー", "相場"],
+  },
+  {
+    href: "/articles/kin-nobebo-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】金の延べ棒・インゴット買取ガイド — 相場・税金・売る方法",
+    description:
+      "金インゴットの最新買取相場、重量別の価格目安、売却時の税金と注意点、おすすめ買取業者を解説。",
+    tags: ["インゴット", "延べ棒", "ゴールドバー", "税金"],
+  },
+  {
+    href: "/articles/shinju-kaitori/",
+    tag: "品目ガイド",
+    title: "【2026年最新】真珠（パール）買取相場ガイド — 種類別の価格と高く売る方法",
+    description:
+      "真珠の最新買取相場を種類別に掲載。アコヤ真珠・南洋真珠・タヒチパールの価格目安と高く売るコツを解説。",
+    tags: ["真珠", "パール", "アコヤ", "ミキモト"],
+  },
+  {
+    href: "/articles/kin-kaitori-sagi/",
+    tag: "注意ガイド",
+    title: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法",
+    description:
+      "金買取でよくある詐欺の手口7選と対処法。訪問買取の押し買い、不当な安値査定の見分け方を解説。",
+    tags: ["詐欺", "トラブル", "押し買い", "対策"],
+  },
+  {
+    href: "/articles/kin-souzoku-baikyaku/",
+    tag: "税金ガイド",
+    title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点",
+    description:
+      "相続した金の売却で発生する税金、取得費の計算方法、遺品整理で見つかった金の対応手順を解説。",
+    tags: ["相続", "遺品", "税金", "売却"],
+  },
+  {
+    href: "/articles/kin-uru-timing/",
+    tag: "相場分析",
+    title: "【2026年最新】金を売るタイミングはいつ？相場分析と売り時の判断基準",
+    description:
+      "金を売るベストなタイミングを解説。2026年の金相場の見通し、売り時の判断基準、分割売却のメリットを解説。",
+    tags: ["タイミング", "売り時", "相場分析", "2026年"],
+  },
+  {
+    href: "/articles/kin-kaitori-hajimete/",
+    tag: "初心者ガイド",
+    title: "【2026年最新】初めての金買取ガイド — 流れ・必要なもの・注意点を完全解説",
+    description:
+      "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイントをわかりやすく解説。",
+    tags: ["初心者", "流れ", "必要なもの", "注意点"],
+  },
+  {
+    href: "/articles/daikichi-vs-nanboya/",
+    tag: "比較ガイド",
+    title: "【2026年最新】買取大吉 vs なんぼや徹底比較 — 金買取はどちらがお得？",
+    description:
+      "買取大吉となんぼやを店舗数・手数料・口コミ・対応品目で徹底比較。どちらがお得かがわかります。",
+    tags: ["買取大吉", "なんぼや", "比較", "口コミ"],
+  },
+  {
+    href: "/articles/tentou-vs-takuhai/",
+    tag: "比較ガイド",
+    title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別徹底比較",
+    description:
+      "金買取の店頭・宅配・出張を徹底比較。メリット・デメリット、価格傾向、おすすめの方法を解説。",
+    tags: ["店頭買取", "宅配買取", "出張買取", "比較"],
+  },
 ];
 
 const faqs = [
@@ -415,8 +527,18 @@ export default function Home() {
               { label: "壊れた金・刻印なし", href: "/articles/kowareta-kin-kaitori/" },
               { label: "東京の金買取", href: "/articles/tokyo-kin-kaitori/" },
               { label: "大阪の金買取", href: "/articles/osaka-kin-kaitori/" },
+              { label: "名古屋の金買取", href: "/articles/nagoya-kin-kaitori/" },
+              { label: "福岡の金買取", href: "/articles/fukuoka-kin-kaitori/" },
+              { label: "横浜の金買取", href: "/articles/yokohama-kin-kaitori/" },
+              { label: "札幌の金買取", href: "/articles/sapporo-kin-kaitori/" },
+              { label: "銀（シルバー）", href: "/articles/gin-kaitori/" },
+              { label: "K10（10金）", href: "/articles/k10-kaitori/" },
+              { label: "インゴット", href: "/articles/kin-nobebo-kaitori/" },
+              { label: "真珠（パール）", href: "/articles/shinju-kaitori/" },
               { label: "純度の見分け方", href: "/articles/kin-jundo-mikata/" },
               { label: "税金・確定申告", href: "/articles/kin-kaitori-zeikin/" },
+              { label: "詐欺・トラブル対策", href: "/articles/kin-kaitori-sagi/" },
+              { label: "初めての金買取", href: "/articles/kin-kaitori-hajimete/" },
               { label: "売り時 2026", href: "/articles/kin-uridoki-2026/" },
               { label: "よくある質問", href: "/faq/" },
             ].map((item) => (
