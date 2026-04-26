@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -102,19 +103,17 @@ const navLinks = [
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-warm-border">
+    <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-accent/20">
       <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link
           href="/"
-          className="font-display text-xl font-bold text-accent-dark tracking-tight"
+          className="font-display text-xl font-bold text-accent tracking-tight flex items-center gap-2"
         >
-          <span className="text-2xl mr-1" role="img" aria-label="金">
-            &#x2728;
-          </span>
+          <Image src="/images/icon-gold-bar.png" alt="" width={28} height={28} className="rounded" />
           {SITE_NAME}
         </Link>
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-foreground/80">
+        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-white/80">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
@@ -128,9 +127,9 @@ function Header() {
         </ul>
         {/* Mobile hamburger */}
         <details className="md:hidden relative group">
-          <summary className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-cream transition-colors">
+          <summary className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 transition-colors">
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -144,10 +143,10 @@ function Header() {
               />
             </svg>
           </summary>
-          <div className="absolute right-0 mt-2 w-48 bg-white border border-warm-border rounded-lg shadow-lg py-2 z-50">
+          <div className="absolute right-0 mt-2 w-48 bg-navy border border-accent/20 rounded-lg shadow-lg py-2 z-50">
             <Link
               href="/"
-              className="block px-4 py-2 text-sm hover:bg-cream transition-colors"
+              className="block px-4 py-2 text-sm text-white/80 hover:text-accent hover:bg-white/5 transition-colors"
             >
               ホーム
             </Link>
@@ -155,7 +154,7 @@ function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm hover:bg-cream transition-colors"
+                className="block px-4 py-2 text-sm text-white/80 hover:text-accent hover:bg-white/5 transition-colors"
               >
                 {link.label}
               </Link>
@@ -173,8 +172,8 @@ function Footer() {
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <p className="font-display text-lg font-bold mb-2">
-              &#x2728; {SITE_NAME}
+            <p className="font-display text-lg font-bold mb-2 text-accent">
+              {SITE_NAME}
             </p>
             <p className="text-sm text-white/70 leading-relaxed">
               金・貴金属の買取相場を徹底比較。
@@ -183,7 +182,7 @@ function Footer() {
             </p>
           </div>
           <div>
-            <p className="font-bold text-sm mb-3">記事カテゴリ</p>
+            <p className="font-bold text-sm mb-3 text-accent">記事カテゴリ</p>
             <ul className="space-y-2 text-sm text-white/70">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -198,7 +197,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-bold text-sm mb-3">サイト情報</p>
+            <p className="font-bold text-sm mb-3 text-accent">サイト情報</p>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <Link
@@ -227,7 +226,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/20 mt-8 pt-6 text-center text-xs text-white/50">
+        <div className="border-t border-accent/20 mt-8 pt-6 text-center text-xs text-white/50">
           <p>&copy; 2026 {SITE_NAME} All rights reserved.</p>
           <p className="mt-1">
             ※当サイトはアフィリエイト広告を利用しています。

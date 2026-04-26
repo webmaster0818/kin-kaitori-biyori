@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
@@ -7,8 +8,8 @@ const services = [
     description: "複数業者に一括で査定依頼。最高値を簡単に比較できる",
     target: "最高値で売りたい人",
     url: "https://hikakaku.com",
-    color: "bg-amber-50 border-amber-300",
-    icon: "&#x1F50D;",
+    color: "bg-white border-accent/30 hover:border-accent",
+    iconSrc: "/images/icon-compare.png",
   },
   {
     name: "買取大吉",
@@ -16,8 +17,8 @@ const services = [
     description: "全国600店舗以上。その場で査定、即現金化",
     target: "店頭で即現金化したい人",
     url: "https://kaitori-daikichi.jp",
-    color: "bg-red-50 border-red-300",
-    icon: "&#x1F3EA;",
+    color: "bg-white border-accent/30 hover:border-accent",
+    iconSrc: "/images/icon-gold-bar.png",
   },
   {
     name: "ティファナ",
@@ -25,8 +26,8 @@ const services = [
     description: "3つの方法から選べる。ライフスタイルに合わせた柔軟対応",
     target: "選択肢が欲しい人",
     url: "https://tifana.net",
-    color: "bg-blue-50 border-blue-300",
-    icon: "&#x1F4E6;",
+    color: "bg-white border-accent/30 hover:border-accent",
+    iconSrc: "/images/icon-jewelry.png",
   },
   {
     name: "ウリエル",
@@ -34,8 +35,8 @@ const services = [
     description: "自宅にいながら完結。出張費・査定料すべて無料",
     target: "自宅で完結したい人",
     url: "https://uriel-cuore.co.jp",
-    color: "bg-green-50 border-green-300",
-    icon: "&#x1F3E0;",
+    color: "bg-white border-accent/30 hover:border-accent",
+    iconSrc: "/images/icon-price.png",
   },
 ];
 
@@ -436,33 +437,41 @@ export default function Home() {
       <FaqSchema />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-gold-bg via-cream to-background">
-        <div className="max-w-5xl mx-auto px-4 py-12 md:py-20">
+      <section className="relative overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
+        <Image
+          src="/images/hero-gold.png"
+          alt="金・貴金属イメージ"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 md:py-24 w-full">
           <div className="text-center">
-            <p className="text-accent font-medium text-sm mb-3 tracking-wider">
-              金・貴金属買取の比較ガイド
+            <p className="text-accent font-medium text-sm mb-3 tracking-[0.2em] uppercase">
+              Gold &amp; Precious Metals
             </p>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-5">
-              【2026年最新】金・貴金属を
-              <br className="md:hidden" />
-              <span className="text-accent">最高価格</span>で売るなら
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+              大切な金・貴金属を、
+              <br />
+              <span className="text-accent">最高価格</span>で。
             </h1>
-            <p className="text-warm-gray text-base md:text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
               K24（純金）・K18・プラチナの最新買取相場をチェック。
               <br className="hidden md:block" />
               4つの人気買取サービスを比較して、あなたに最適な売却方法が見つかります。
             </p>
-            <div className="bg-white border border-warm-border rounded-xl inline-block px-6 py-3 mb-8 shadow-sm">
-              <p className="text-xs text-warm-gray mb-1">本日の金買取参考相場（K24/1g）</p>
+            <div className="bg-black/40 backdrop-blur-sm border border-accent/30 rounded-xl inline-block px-6 py-3 mb-8">
+              <p className="text-xs text-white/60 mb-1">本日の金買取参考相場（K24/1g）</p>
               <p className="text-2xl md:text-3xl font-bold text-accent">
-                &#165;15,200<span className="text-sm text-warm-gray font-normal ml-1">前後</span>
+                &#165;15,200<span className="text-sm text-white/60 font-normal ml-1">前後</span>
               </p>
-              <p className="text-xs text-warm-gray mt-1">※2026年4月時点の目安。実際の買取価格は業者・純度により異なります。</p>
+              <p className="text-xs text-white/50 mt-1">※2026年4月時点の目安。実際の買取価格は業者・純度により異なります。</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/articles/kin-kaitori-souba/"
-                className="inline-flex items-center justify-center gap-2 bg-accent text-white font-medium px-7 py-3.5 rounded-full hover:bg-accent-dark transition-colors shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent-light text-navy font-bold px-7 py-3.5 rounded-full hover:from-accent-light hover:to-accent transition-all shadow-lg hover:shadow-accent/30"
               >
                 最新の金買取相場を見る
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -471,16 +480,14 @@ export default function Home() {
               </Link>
               <Link
                 href="/articles/kin-takaku-uru/"
-                className="inline-flex items-center justify-center gap-2 bg-navy text-white font-medium px-7 py-3.5 rounded-full hover:bg-navy-light transition-colors shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur text-white border border-white/30 font-medium px-7 py-3.5 rounded-full hover:bg-white/20 transition-all"
               >
                 高く売るコツを読む
               </Link>
             </div>
-            <p className="text-warm-gray text-xs mt-4">最終更新: 2026年4月15日</p>
+            <p className="text-white/40 text-xs mt-4">最終更新: 2026年4月15日</p>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-light/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
       </section>
 
       {/* Trust Badges */}
@@ -561,7 +568,7 @@ export default function Home() {
                 className={`${svc.color} border-2 rounded-xl p-6 hover:shadow-lg transition-all group block`}
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <span className="text-3xl" dangerouslySetInnerHTML={{ __html: svc.icon }} />
+                  <Image src={svc.iconSrc} alt="" width={48} height={48} className="rounded-lg flex-shrink-0" />
                   <div>
                     <h3 className="font-bold text-base group-hover:text-accent transition-colors">
                       {svc.name}
@@ -806,7 +813,7 @@ export default function Home() {
               href="https://hikakaku.com"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-white font-medium px-7 py-3.5 rounded-full hover:bg-accent-dark transition-colors shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent-light text-navy font-bold px-7 py-3.5 rounded-full hover:from-accent-light hover:to-accent transition-all shadow-lg hover:shadow-accent/30"
             >
               一括査定で最高値を調べる
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
