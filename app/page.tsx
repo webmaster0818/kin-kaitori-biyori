@@ -272,6 +272,118 @@ const articles = [
       "金買取の店頭・宅配・出張を徹底比較。メリット・デメリット、価格傾向、おすすめの方法を解説。",
     tags: ["店頭買取", "宅配買取", "出張買取", "比較"],
   },
+  {
+    href: "/articles/cartier-kaitori/",
+    tag: "ブランドガイド",
+    title: "【2026年最新】カルティエ（Cartier）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
+    description:
+      "カルティエの最新買取相場をモデル別に掲載。ラブリング・トリニティ・ジュストアンクルの買取価格目安と高く売るコツを解説。",
+    tags: ["カルティエ", "Cartier", "ラブリング", "ジュストアンクル"],
+  },
+  {
+    href: "/articles/tiffany-kaitori/",
+    tag: "ブランドガイド",
+    title: "【2026年最新】ティファニー（Tiffany）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
+    description:
+      "ティファニーの最新買取相場をモデル別に掲載。Tスマイル・バイザヤード・ハードウェアの買取価格目安と高く売るコツを解説。",
+    tags: ["ティファニー", "Tiffany", "Tスマイル", "バイザヤード"],
+  },
+  {
+    href: "/articles/bvlgari-kaitori/",
+    tag: "ブランドガイド",
+    title: "【2026年最新】ブルガリ（BVLGARI）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
+    description:
+      "ブルガリの最新買取相場をモデル別に掲載。ビー・ゼロワン・セルペンティ・ブルガリブルガリの買取価格と高く売るコツを解説。",
+    tags: ["ブルガリ", "BVLGARI", "セルペンティ", "ビー・ゼロワン"],
+  },
+  {
+    href: "/articles/vancleef-kaitori/",
+    tag: "ブランドガイド",
+    title: "【2026年最新】ヴァンクリーフ&アーペル買取相場ガイド — アルハンブラの価格と高く売るコツ",
+    description:
+      "ヴァンクリーフ&アーペルの最新買取相場をモデル別に掲載。アルハンブラ・フリヴォル・ペルレの買取価格と高く売るコツを解説。",
+    tags: ["ヴァンクリーフ", "Van Cleef", "アルハンブラ", "フリヴォル"],
+  },
+  {
+    href: "/articles/sendai-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】仙台の金買取おすすめ業者ガイド — 仙台駅・一番町・青葉通エリア別比較",
+    description:
+      "仙台で金を高く売るならどこがいい？仙台駅・一番町・青葉通のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["仙台", "仙台駅", "一番町", "東北"],
+  },
+  {
+    href: "/articles/hiroshima-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】広島の金買取おすすめ業者ガイド — 広島駅・八丁堀・本通エリア別比較",
+    description:
+      "広島で金を高く売るならどこがいい？広島駅・八丁堀・本通のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["広島", "八丁堀", "本通", "中国地方"],
+  },
+  {
+    href: "/articles/kobe-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】神戸の金買取おすすめ業者ガイド — 三宮・元町・ハーバーランドエリア別比較",
+    description:
+      "神戸で金を高く売るならどこがいい？三宮・元町・ハーバーランドのエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["神戸", "三宮", "元町", "関西"],
+  },
+  {
+    href: "/articles/kyoto-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】京都の金買取おすすめ業者ガイド — 四条・烏丸・河原町エリア別比較",
+    description:
+      "京都で金を高く売るならどこがいい？四条・烏丸・河原町のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["京都", "四条", "烏丸", "河原町"],
+  },
+  {
+    href: "/articles/omiya-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】大宮（埼玉）の金買取おすすめ業者ガイド — 大宮駅・浦和・川越エリア別比較",
+    description:
+      "大宮・埼玉で金を高く売るならどこがいい？大宮駅・浦和・川越のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["大宮", "埼玉", "浦和", "川越"],
+  },
+  {
+    href: "/articles/chiba-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】千葉の金買取おすすめ業者ガイド — 千葉駅・船橋・柏エリア別比較",
+    description:
+      "千葉で金を高く売るならどこがいい？千葉駅・船橋・柏のエリア別おすすめ買取業者と高く売るコツを解説。",
+    tags: ["千葉", "船橋", "柏", "松戸"],
+  },
+  {
+    href: "/articles/kin-omosa-hakarikata/",
+    tag: "知識ガイド",
+    title: "【2026年最新】金の重さの測り方ガイド — 自宅でグラムを量る方法と買取価格の計算",
+    description:
+      "金の重さを自宅で測る方法を解説。デジタルスケールの使い方、比重測定法、金製品の重量目安、買取価格の計算方法を紹介。",
+    tags: ["重さ", "測り方", "グラム", "比重"],
+  },
+  {
+    href: "/articles/kin-nisemono-mikata/",
+    tag: "知識ガイド",
+    title: "【2026年最新】金の偽物の見分け方ガイド — 金メッキとの違い・7つの判別方法",
+    description:
+      "金の偽物と本物の見分け方を解説。刻印・磁石・比重・色味など7つの判別方法、金メッキとの違いを紹介。",
+    tags: ["偽物", "見分け方", "金メッキ", "GP"],
+  },
+  {
+    href: "/articles/kin-kakutei-shinkoku/",
+    tag: "税金ガイド",
+    title: "【2026年最新】金の売却と確定申告やり方ガイド — 譲渡所得の計算・節税・申告手順",
+    description:
+      "金を売却した時の確定申告のやり方を解説。譲渡所得の計算方法、50万円の特別控除、節税対策、申告書の書き方を紹介。",
+    tags: ["確定申告", "やり方", "譲渡所得", "節税"],
+  },
+  {
+    href: "/articles/ihin-seiri-kin/",
+    tag: "遺品整理ガイド",
+    title: "【2026年最新】遺品整理で見つかった金の売り方ガイド — 相続・税金・高く売る方法",
+    description:
+      "遺品整理で見つかった金の売り方を解説。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法を紹介。",
+    tags: ["遺品整理", "相続", "遺品", "金買取"],
+  },
 ];
 
 const faqs = [
@@ -540,6 +652,20 @@ export default function Home() {
               { label: "詐欺・トラブル対策", href: "/articles/kin-kaitori-sagi/" },
               { label: "初めての金買取", href: "/articles/kin-kaitori-hajimete/" },
               { label: "売り時 2026", href: "/articles/kin-uridoki-2026/" },
+              { label: "カルティエ", href: "/articles/cartier-kaitori/" },
+              { label: "ティファニー", href: "/articles/tiffany-kaitori/" },
+              { label: "ブルガリ", href: "/articles/bvlgari-kaitori/" },
+              { label: "ヴァンクリーフ", href: "/articles/vancleef-kaitori/" },
+              { label: "仙台の金買取", href: "/articles/sendai-kin-kaitori/" },
+              { label: "広島の金買取", href: "/articles/hiroshima-kin-kaitori/" },
+              { label: "神戸の金買取", href: "/articles/kobe-kin-kaitori/" },
+              { label: "京都の金買取", href: "/articles/kyoto-kin-kaitori/" },
+              { label: "大宮の金買取", href: "/articles/omiya-kin-kaitori/" },
+              { label: "千葉の金買取", href: "/articles/chiba-kin-kaitori/" },
+              { label: "金の重さの測り方", href: "/articles/kin-omosa-hakarikata/" },
+              { label: "偽物の見分け方", href: "/articles/kin-nisemono-mikata/" },
+              { label: "確定申告のやり方", href: "/articles/kin-kakutei-shinkoku/" },
+              { label: "遺品整理の金買取", href: "/articles/ihin-seiri-kin/" },
               { label: "よくある質問", href: "/faq/" },
             ].map((item) => (
               <Link
