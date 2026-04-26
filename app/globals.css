@@ -68,6 +68,44 @@ details[open] summary .faq-arrow {
   color: var(--warm-gray);
 }
 
+/* Article hero banner */
+.article-hero {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.article-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26,26,46,0.7) 0%, rgba(26,26,46,0.3) 100%);
+}
+
+/* Article utility classes */
+.article-heading {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--foreground);
+}
+.gold-table-header {
+  background-color: var(--navy) !important;
+  color: var(--accent) !important;
+}
+.gold-cta {
+  background: linear-gradient(135deg, #C9A84C 0%, #8B6914 100%);
+  color: white;
+}
+.gold-cta:hover {
+  background: linear-gradient(135deg, #D4B966 0%, #A07B1A 100%);
+}
+
 /* Article prose styling */
 .prose h2 {
   font-size: 1.375rem;
@@ -75,6 +113,8 @@ details[open] summary .faq-arrow {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent);
   border-bottom: 2px solid var(--accent);
   color: var(--foreground);
 }
@@ -115,17 +155,21 @@ details[open] summary .faq-arrow {
   margin-bottom: 1.5rem;
 }
 .prose th {
-  background: var(--gold-bg);
+  background: var(--navy);
+  color: var(--accent);
   font-weight: 700;
   text-align: left;
   padding: 0.75rem;
-  border: 1px solid var(--warm-border);
+  border: 1px solid var(--navy-light);
   font-size: 0.875rem;
 }
 .prose td {
   padding: 0.75rem;
   border: 1px solid var(--warm-border);
   font-size: 0.875rem;
+}
+.prose tr:nth-child(even) td {
+  background: var(--gold-bg);
 }
 .prose blockquote {
   background: var(--gold-bg);
