@@ -467,17 +467,25 @@ export default function K18KaitoriPage() {
             <span className="text-xs text-accent font-bold">品目ガイド</span>
             <p className="text-sm font-bold mt-1">K24（純金）買取相場ガイド</p>
           </Link>
-          <Link href="/articles/platinum-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+          <Link href="/articles/k22-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
             <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">プラチナ買取相場ガイド</p>
+            <p className="text-sm font-bold mt-1">K22（22金）買取相場ガイド</p>
           </Link>
-          <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+          <Link href="/articles/k14-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
             <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取ガイド</p>
+            <p className="text-sm font-bold mt-1">K14（14金）買取相場ガイド</p>
           </Link>
-          <Link href="/articles/diamond-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+          <Link href="/articles/kin-necklace-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
             <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">ダイヤモンド・宝石買取ガイド</p>
+            <p className="text-sm font-bold mt-1">金ネックレス買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/kin-yubiwa-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">金の指輪買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/kin-bracelet-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">金ブレスレット買取相場ガイド</p>
           </Link>
         </div>
 

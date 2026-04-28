@@ -299,21 +299,29 @@ export default function KinJundoMikataPage() {
         <h2>関連記事</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K18（18金）買取相場ガイド</p>
-          </Link>
           <Link href="/articles/k24-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
             <span className="text-xs text-accent font-bold">品目ガイド</span>
             <p className="text-sm font-bold mt-1">K24（純金）買取相場ガイド</p>
           </Link>
-          <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+          <Link href="/articles/k22-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
             <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取ガイド</p>
+            <p className="text-sm font-bold mt-1">K22（22金）買取相場ガイド</p>
           </Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">相場情報</span>
-            <p className="text-sm font-bold mt-1">金買取相場一覧</p>
+          <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">K18（18金）買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/k14-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">K14（14金）買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/k10-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">品目ガイド</span>
+            <p className="text-sm font-bold mt-1">K10（10金）買取相場ガイド</p>
+          </Link>
+          <Link href="/articles/kin-nisemono-mikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-accent font-bold">知識ガイド</span>
+            <p className="text-sm font-bold mt-1">金の偽物の見分け方ガイド</p>
           </Link>
         </div>
 

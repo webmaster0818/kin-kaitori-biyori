@@ -265,6 +265,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gold-biyori.com/articles/k22-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gold-biyori.com/articles/k14-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gold-biyori.com/articles/kin-necklace-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gold-biyori.com/articles/kin-yubiwa-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gold-biyori.com/articles/kin-bracelet-kaitori/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gold-biyori.com/faq/</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>

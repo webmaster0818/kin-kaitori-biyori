@@ -624,6 +624,10 @@ export default function K24KaitoriPage() {
           <h2>関連記事</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+            <Link href="/articles/k22-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+              <span className="text-xs text-accent font-bold">品目ガイド</span>
+              <p className="text-sm font-bold mt-1">K22（22金）買取相場ガイド</p>
+            </Link>
             <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
               <span className="text-xs text-accent font-bold">品目ガイド</span>
               <p className="text-sm font-bold mt-1">K18（18金）買取相場と高く売る方法</p>
@@ -639,6 +643,10 @@ export default function K24KaitoriPage() {
             <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
               <span className="text-xs text-accent font-bold">売却ガイド</span>
               <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
+            </Link>
+            <Link href="/articles/kin-jundo-mikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
+              <span className="text-xs text-accent font-bold">知識ガイド</span>
+              <p className="text-sm font-bold mt-1">金の純度の見分け方ガイド</p>
             </Link>
           </div>
 
