@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
 export const metadata: Metadata = {
   title: "【2026年最新】K24（純金）買取相場ガイド — 1gあたりの価格推移と高く売る方法",
