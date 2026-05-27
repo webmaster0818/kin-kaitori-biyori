@@ -2,6 +2,49 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金の純度の見分け方", item: "https://gold-biyori.com/articles/kin-jundo-mikata/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】金の純度の見分け方 — K18・K24の違い、刻印の読み方、偽物判別法を解説",
+    description: "金の純度はどうやって見分ける？K24・K18・K14の違い、刻印（ホールマーク）の読み方、金メッキとの見分け方、自宅でできる簡易判別法から業者によるXRF分析まで徹底解説。",
+    datePublished: "2026-04-13",
+    dateModified: "2026-04-13",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -41,6 +84,8 @@ export default function KinJundoMikataPage() {
   return (
     <>
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">

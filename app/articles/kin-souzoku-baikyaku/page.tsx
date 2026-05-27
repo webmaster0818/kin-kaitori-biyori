@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "相続した金・遺品の金を売るガイド", item: "https://gold-biyori.com/articles/kin-souzoku-baikyaku/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "相続した金を売却すると税金はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "はい、売却益は譲渡所得として所得税の課税対象です。ただし年間50万円の特別控除があり、被相続人の購入時から5年超経過していれば課税額が半減します。また、相続時に相続税を支払っている場合は取得費に加算できる特例もあります。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function KinSouzokuBaikyakuPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">相続した金・遺品の金を売るガイド</span></li></ol></nav>
       <div className="article-hero mb-8">

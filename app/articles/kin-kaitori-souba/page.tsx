@@ -23,6 +23,49 @@ function CtaBox() {
   );
 }
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金買取相場", item: "https://gold-biyori.com/articles/kin-kaitori-souba/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】金買取相場一覧 — K24/K18/K14の1gあたり価格と推移",
+    description: "2026年最新の金買取相場を純度別（K24・K22・K18・K14・K10）に一覧で掲載。金相場が動く5つの要因、業者別の買取価格差、過去10年の高値・安値ヒストリカルデータ、今後の見通しを徹底解説。",
+    datePublished: "2026-04-15",
+    dateModified: "2026-04-15",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -82,6 +125,8 @@ export default function KinKaitoriSoubaPage() {
   return (
     <>
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
       <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
         <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
           <ol className="flex items-center gap-1">

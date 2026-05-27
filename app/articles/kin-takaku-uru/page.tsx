@@ -44,6 +44,49 @@ function HowToSchema() {
   );
 }
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金を高く売る方法", item: "https://gold-biyori.com/articles/kin-takaku-uru/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
+    description: "金・貴金属を少しでも高く売るための実践テクニックを徹底解説。相見積もりの取り方、売却タイミングの見極め方、付属品の重要性、避けるべきNG行動まで、プロが教える5つのコツ。",
+    datePublished: "2026-04-15",
+    dateModified: "2026-04-15",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -109,6 +152,8 @@ export default function KinTakakuUruPage() {
     <>
       <HowToSchema />
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">

@@ -170,6 +170,14 @@ const articles = [
     tags: ["東京", "銀座", "新宿", "御徒町"],
   },
   {
+    href: "/articles/okachimachi-kin-kaitori/",
+    tag: "地域ガイド",
+    title: "【2026年最新】御徒町の金買取ガイド — 金買取の聖地で高く売るコツ",
+    description:
+      "御徒町は日本最大の貴金属問屋街。問屋直接買取で高く売れる理由、おすすめ業者タイプ、相見積もりのコツを解説。",
+    tags: ["御徒町", "問屋", "聖地", "高価買取"],
+  },
+  {
     href: "/articles/osaka-kin-kaitori/",
     tag: "地域ガイド",
     title: "【2026年最新】大阪の金買取おすすめ業者ガイド — 梅田・難波・心斎橋エリア別比較",
@@ -685,6 +693,7 @@ export default function Home() {
               { label: "金貨・インゴット", href: "/articles/kinka-ingot-kaitori/" },
               { label: "壊れた金・刻印なし", href: "/articles/kowareta-kin-kaitori/" },
               { label: "東京の金買取", href: "/articles/tokyo-kin-kaitori/" },
+              { label: "御徒町の金買取", href: "/articles/okachimachi-kin-kaitori/" },
               { label: "大阪の金買取", href: "/articles/osaka-kin-kaitori/" },
               { label: "名古屋の金買取", href: "/articles/nagoya-kin-kaitori/" },
               { label: "福岡の金買取", href: "/articles/fukuoka-kin-kaitori/" },

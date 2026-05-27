@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "真珠（パール）買取ガイド", item: "https://gold-biyori.com/articles/shinju-kaitori/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "真珠の買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "真珠の買取価格はサイズ・品質・種類によって大きく異なります。アコヤ真珠ネックレス（7mm）で2〜5万円、南洋白蝶真珠ネックレス（10mm以上）で10〜50万円、黒蝶真珠（タヒチパール）で5〜30万円が目安です。鑑別書の有無でも価格が変わります。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function ShinjuKaitoriPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">真珠（パール）買取ガイド</span></li></ol></nav>
 

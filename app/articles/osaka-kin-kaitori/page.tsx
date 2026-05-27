@@ -2,6 +2,49 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "大阪の金買取おすすめ", item: "https://gold-biyori.com/articles/osaka-kin-kaitori/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】大阪の金買取おすすめ業者ガイド — 梅田・難波・心斎橋エリア別比較",
+    description: "大阪で金を高く売るならどこがいい？梅田・難波・心斎橋のエリア別おすすめ買取業者、買取方法の比較、大阪の金買取相場と高く売るコツを徹底解説。",
+    datePublished: "2026-04-13",
+    dateModified: "2026-04-13",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -41,6 +84,8 @@ export default function OsakaKinKaitoriPage() {
   return (
     <>
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">

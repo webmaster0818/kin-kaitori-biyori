@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金の延べ棒・インゴット買取ガイド", item: "https://gold-biyori.com/articles/kin-nobebo-kaitori/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金の延べ棒（インゴット）はどこで売れますか？", acceptedAnswer: { "@type": "Answer", text: "田中貴金属、三菱マテリアルなどの地金商のほか、買取大吉、おたからや、なんぼやなどの買取専門店でも売却可能です。買取専門店は手数料無料の場合が多く、複数社の比較がしやすいためおすすめです。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function KinNobeboKaitoriPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">金の延べ棒・インゴット買取ガイド</span></li></ol></nav>
 

@@ -2,6 +2,49 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金買取の税金・確定申告ガイド", item: "https://gold-biyori.com/articles/kin-kaitori-zeikin/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】金買取の税金・確定申告ガイド — 譲渡所得の計算方法と節税対策",
+    description: "金を売った時の税金はいくら？確定申告は必要？譲渡所得の計算方法、年間50万円の特別控除、5年超保有の優遇措置、200万円超の支払調書、節税対策まで税金の全知識を解説。",
+    datePublished: "2026-04-13",
+    dateModified: "2026-04-13",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -41,6 +84,8 @@ export default function KinKaitoriZeikinPage() {
   return (
     <>
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">

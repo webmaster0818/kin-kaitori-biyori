@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "買取大吉 vs なんぼや比較", item: "https://gold-biyori.com/articles/daikichi-vs-nanboya/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "買取大吉となんぼやではどちらが金を高く買い取ってくれますか？", acceptedAnswer: { "@type": "Answer", text: "金の買取価格は日によって異なり、一概にどちらが高いとは言えません。両社とも業界大手であり、相場に連動した価格を提示します。最高値で売るには両社に加えてヒカカク！の一括査定も利用し、3社以上を比較するのがおすすめです。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function DaikichiVsNanboyaPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">買取大吉 vs なんぼや比較</span></li></ol></nav>
       <div className="article-hero mb-8">

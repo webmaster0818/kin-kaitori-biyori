@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金を売るタイミング", item: "https://gold-biyori.com/articles/kin-uru-timing/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "2026年は金を売るのに良いタイミングですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K24（純金）の買取価格は1gあたり約15,200円前後と歴史的な高値圏です。2016年（約4,400円）の約3.5倍に上昇しており、売却には好条件と言えます。ただし短期的な調整は常にあり得るため、「今の価格に納得できるなら売る」のが実践的な判断です。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function KinUruTimingPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">金を売るタイミング</span></li></ol></nav>
       <div className="article-hero mb-8">

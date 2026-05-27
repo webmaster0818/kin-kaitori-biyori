@@ -23,6 +23,49 @@ function CtaBox() {
   );
 }
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "金貨・インゴット買取ガイド", item: "https://gold-biyori.com/articles/kinka-ingot-kaitori/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
+function ArticleSchema() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "【2026年最新】金貨・インゴット買取ガイド — 種類別の相場と税金の注意点",
+    description: "金貨（メイプルリーフ・ウィーン・カンガルー・パンダ・天皇陛下記念金貨）とインゴット（田中貴金属・徳力本店・三菱マテリアル）の買取相場を掲載。重量別の買取目安、200万円超の税金対策、おすすめ買取業者4社を徹底解説。",
+    datePublished: "2026-04-15",
+    dateModified: "2026-04-15",
+    author: {
+      "@type": "Organization",
+      name: "金買取びより編集部",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "金買取びより",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = {
     "@context": "https://schema.org",
@@ -82,6 +125,8 @@ export default function KinkaIngotKaitoriPage() {
   return (
     <>
       <FaqSchema />
+      <BreadcrumbSchema />
+      <ArticleSchema />
       <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
         <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
           <ol className="flex items-center gap-1">

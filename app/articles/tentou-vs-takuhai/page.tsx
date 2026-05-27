@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+function BreadcrumbSchema() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+      { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+      { "@type": "ListItem", position: 3, name: "店頭 vs 宅配 vs 出張 比較", item: "https://gold-biyori.com/articles/tentou-vs-takuhai/" },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+    />
+  );
+}
+
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金買取は店頭と宅配どっちが高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "一般的に宅配買取の方がやや高い傾向にあります。宅配買取は店舗運営コストが低いぶん買取価格に還元できるためです。ただし、店頭買取は対面で価格交渉ができるため、交渉次第で逆転することもあります。最も確実なのは両方に見積もりを取って比較することです。" } },
@@ -36,7 +54,8 @@ function CtaBox() {
 }
 
 export default function TentouVsTakuhaiPage() {
-  return (<><FaqSchema /><ArticleSchema />
+  return (<><FaqSchema />
+      <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">店頭 vs 宅配 vs 出張 比較</span></li></ol></nav>
       <div className="article-hero mb-8">
