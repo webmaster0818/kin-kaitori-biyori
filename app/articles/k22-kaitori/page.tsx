@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -411,34 +412,10 @@ export default function K22KaitoriPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/k24-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K24（純金）買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K18（18金）買取相場と高く売る方法</p>
-          </Link>
-          <Link href="/articles/k14-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K14（14金）買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/kinka-ingot-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">金貨・インゴット買取ガイド</p>
-          </Link>
-          <Link href="/articles/kin-jundo-mikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">知識ガイド</span>
-            <p className="text-sm font-bold mt-1">金の純度の見分け方ガイド</p>
-          </Link>
-          <Link href="/articles/kin-kaitori-zeikin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">税金ガイド</span>
-            <p className="text-sm font-bold mt-1">金買取の税金・確定申告ガイド</p>
-          </Link>
-        </div>
+        <RelatedArticles
+          currentSlug="k22-kaitori"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k14-kaitori", "k10-kaitori", "k18wg-kaitori", "k18pg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}
+        />
 
         <h2>まとめ</h2>
 

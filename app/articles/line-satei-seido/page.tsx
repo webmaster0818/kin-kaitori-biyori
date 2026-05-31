@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -172,13 +173,10 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">可能だが、業者により上限あり。10点以上の場合は出張買取の方が効率的。</p>
 </details>
 
-          <h2>関連記事</h2>
-          <ul>
-            <li><Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金の買取相場（最新）</Link></li>
-            <li><Link href="/articles/k18-kaitori/" className="text-accent hover:underline">K18（18金）の買取相場</Link></li>
-            <li><Link href="/articles/kin-takaku-uru/" className="text-accent hover:underline">金を高く売るコツ</Link></li>
-            <li><Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法の比較</Link></li>
-          </ul>
+          <RelatedArticles
+            currentSlug="line-satei-seido"
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+          />
         </article>
       </div>
     </>

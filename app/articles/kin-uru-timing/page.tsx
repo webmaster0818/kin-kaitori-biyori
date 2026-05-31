@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -171,13 +172,10 @@ export default function KinUruTimingPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-uridoki-2026/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">相場分析</span><p className="text-sm font-bold mt-1">金の売り時はいつ？2026年の見通し</p></Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">相場情報</span><p className="text-sm font-bold mt-1">金買取相場一覧</p></Link>
-          <Link href="/articles/kin-kaitori-zeikin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">金買取の税金・確定申告ガイド</p></Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">売却ガイド</span><p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-uru-timing"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-uridoki-2026", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>2026年4月現在、金価格は歴史的な高値水準にあります。10年前の約3.5倍です。</p>

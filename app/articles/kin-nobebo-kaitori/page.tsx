@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -204,13 +205,10 @@ export default function KinNobeboKaitoriPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kinka-ingot-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">品目ガイド</span><p className="text-sm font-bold mt-1">金貨・インゴット買取ガイド</p></Link>
-          <Link href="/articles/kin-kaitori-zeikin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">金買取の税金・確定申告ガイド</p></Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">相場情報</span><p className="text-sm font-bold mt-1">金買取相場一覧</p></Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">売却ガイド</span><p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-nobebo-kaitori"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kinka-ingot-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>2026年4月現在、金インゴットの買取価格は歴史的な高値を記録しています。100gのインゴットで約152万円、1kgで約1,520万円です。</p>

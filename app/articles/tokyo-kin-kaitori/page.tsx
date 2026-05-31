@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -375,27 +377,15 @@ export default function TokyoKinKaitoriPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
+        <RelatedArticles
+          currentSlug="tokyo-kin-kaitori"
+          relatedSlugs={["ginza-kin-kaitori", "okachimachi-kin-kaitori", "ikebukuro-kin-kaitori", "yokohama-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+        />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/osaka-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">地域ガイド</span>
-            <p className="text-sm font-bold mt-1">大阪の金買取おすすめガイド</p>
-          </Link>
-          <Link href="/articles/kaitori-houhou-hikaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">方法比較</span>
-            <p className="text-sm font-bold mt-1">金の買取方法4つを徹底比較</p>
-          </Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">売却ガイド</span>
-            <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-          </Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">相場情報</span>
-            <p className="text-sm font-bold mt-1">金買取相場一覧</p>
-          </Link>
-        </div>
-
+        <DealerComparisonTable
+        heading="東京の金買取で利用できる主要業者 7社比較"
+        intro="全国チェーンから都内拠点の金専門店まで、東京で金を売れる業者を公式情報で比較しました。"
+        />
         <h2>まとめ</h2>
 
         <p>東京は金買取業者の競争が最も激しいエリアであり、<strong>全国で最も高い買取価格が期待できる</strong>地域です。</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -294,13 +295,10 @@ export default function KinKakuteiShinkokuPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-kaitori-zeikin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">金買取の税金・確定申告ガイド</p></Link>
-          <Link href="/articles/kin-souzoku-baikyaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">相続した金の売却ガイド</p></Link>
-          <Link href="/articles/ihin-seiri-kin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">遺品整理</span><p className="text-sm font-bold mt-1">遺品整理で見つかった金の売り方</p></Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">相場情報</span><p className="text-sm font-bold mt-1">金買取相場一覧</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-kakutei-shinkoku"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-zeikin", "kin-200man-mynumber", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>金の売却益は「譲渡所得」として課税対象になりますが、<strong>年間50万円の特別控除</strong>と<strong>5年超保有の半額軽減</strong>を活用することで税負担を大幅に抑えられます。</p>

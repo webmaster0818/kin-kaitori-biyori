@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -162,13 +163,10 @@ export default function KinSouzokuBaikyakuPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-kaitori-zeikin/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">金買取の税金・確定申告ガイド</p></Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">売却ガイド</span><p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p></Link>
-          <Link href="/articles/kin-kaitori-hajimete/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">初心者ガイド</span><p className="text-sm font-bold mt-1">金買取の初心者ガイド</p></Link>
-          <Link href="/articles/kin-nobebo-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">品目ガイド</span><p className="text-sm font-bold mt-1">金の延べ棒・インゴット買取ガイド</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-souzoku-baikyaku"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "ihin-seiri-kin", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>相続した金の売却では、<strong>税金の計算（取得費の有無が重要）</strong>と<strong>遺産分割協議</strong>が通常の売却にはない注意点です。</p>

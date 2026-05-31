@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -205,13 +206,10 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">金専門の買取業者（リファスタ、ゴールドプラザ等）か、一括査定サイト（ヒカカク！）で複数比較するのがおすすめ。総合リサイクルショップは金専門でない場合があり、買取価格が低い傾向。</p>
 </details>
 
-          <h2>関連記事</h2>
-          <ul>
-            <li><Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金の買取相場（最新）</Link></li>
-            <li><Link href="/articles/k18-kaitori/" className="text-accent hover:underline">K18（18金）の買取相場</Link></li>
-            <li><Link href="/articles/kin-takaku-uru/" className="text-accent hover:underline">金を高く売るコツ</Link></li>
-            <li><Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法の比較</Link></li>
-          </ul>
+          <RelatedArticles
+            currentSlug="k18wg-kaitori"
+            relatedSlugs={["k24-kaitori", "k22-kaitori", "k18-kaitori", "k14-kaitori", "k10-kaitori", "k18pg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}
+          />
         </article>
       </div>
     </>

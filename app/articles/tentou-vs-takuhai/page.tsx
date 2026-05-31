@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -189,13 +190,10 @@ export default function TentouVsTakuhaiPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kaitori-houhou-hikaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">方法比較</span><p className="text-sm font-bold mt-1">金の買取方法4つを徹底比較</p></Link>
-          <Link href="/articles/daikichi-vs-nanboya/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">比較ガイド</span><p className="text-sm font-bold mt-1">買取大吉 vs なんぼや比較</p></Link>
-          <Link href="/articles/kin-kaitori-hajimete/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">初心者ガイド</span><p className="text-sm font-bold mt-1">初めての金買取ガイド</p></Link>
-          <Link href="/articles/kin-kaitori-sagi/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">注意ガイド</span><p className="text-sm font-bold mt-1">金買取の詐欺・トラブル対策</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="tentou-vs-takuhai"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+        />
 
         <h2>まとめ</h2>
         <p>金買取の方法は一長一短があり、<strong>「この方法が絶対に正解」というものはありません</strong>。あなたの状況に合った方法を選びましょう。</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -338,26 +339,10 @@ export default function SapporoKinKaitoriPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/tokyo-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">地域ガイド</span>
-            <p className="text-sm font-bold mt-1">東京の金買取おすすめガイド</p>
-          </Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">売却ガイド</span>
-            <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-          </Link>
-          <Link href="/articles/kaitori-houhou-hikaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">方法比較</span>
-            <p className="text-sm font-bold mt-1">金の買取方法4つを徹底比較</p>
-          </Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">相場情報</span>
-            <p className="text-sm font-bold mt-1">金買取相場一覧</p>
-          </Link>
-        </div>
+        <RelatedArticles
+          currentSlug="sapporo-kin-kaitori"
+          relatedSlugs={["sendai-kin-kaitori", "tokyo-kin-kaitori", "fukuoka-kin-kaitori", "yokohama-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+        />
 
         <h2>まとめ</h2>
 

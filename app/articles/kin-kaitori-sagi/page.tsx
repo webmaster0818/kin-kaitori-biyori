@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -215,13 +216,10 @@ export default function KinKaitoriSagiPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-kaitori-hajimete/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">初心者ガイド</span><p className="text-sm font-bold mt-1">金買取の初心者ガイド</p></Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">売却ガイド</span><p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p></Link>
-          <Link href="/articles/kaitori-houhou-hikaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">方法比較</span><p className="text-sm font-bold mt-1">金の買取方法4つを徹底比較</p></Link>
-          <Link href="/articles/tentou-vs-takuhai/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">比較ガイド</span><p className="text-sm font-bold mt-1">店頭 vs 宅配 どっちがお得？</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-kaitori-sagi"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>金買取の詐欺・トラブルは、<strong>知識と準備で防げるもの</strong>がほとんどです。以下の3つを守れば、安全に金を売却できます。</p>

@@ -1,0 +1,506 @@
+[
+  {
+    "slug": "bvlgari-kaitori",
+    "title": "ブルガリ買取相場ガイド",
+    "shortTitle": "ブルガリ買取相場ガイド",
+    "badge": "ブルガリ",
+    "description": "ビー・ゼロワン・セルペンティの買取相場目安。",
+    "category": "brand"
+  },
+  {
+    "slug": "cartier-kaitori",
+    "title": "カルティエ買取相場ガイド",
+    "shortTitle": "カルティエ買取相場ガイド",
+    "badge": "カルティエ",
+    "description": "ラブブレスレット・ラブリングの最新買取相場。",
+    "category": "brand"
+  },
+  {
+    "slug": "chiba-kin-kaitori",
+    "title": "千葉の金買取おすすめ業者ガイド",
+    "shortTitle": "千葉の金買取おすすめ業者ガイド",
+    "badge": "千葉",
+    "description": "千葉県内の金買取相場と人気店をまとめ。",
+    "category": "region"
+  },
+  {
+    "slug": "daikichi-vs-nanboya",
+    "title": "買取大吉 vs なんぼや 徹底比較",
+    "shortTitle": "買取大吉 vs なんぼや 徹底比較",
+    "badge": "業者比較",
+    "description": "大手2社の買取価格・特徴を実情報で比較。",
+    "category": "compare"
+  },
+  {
+    "slug": "diamond-kaitori",
+    "title": "ダイヤモンド・宝石買取ガイド",
+    "shortTitle": "ダイヤモンド・宝石買取ガイド",
+    "badge": "ダイヤモンド",
+    "description": "4Cの基本とダイヤモンド買取相場を解説。",
+    "category": "compare"
+  },
+  {
+    "slug": "fukuoka-kin-kaitori",
+    "title": "福岡の金買取おすすめ業者ガイド",
+    "shortTitle": "福岡の金買取おすすめ業者ガイド",
+    "badge": "福岡",
+    "description": "福岡・九州エリアの金買取相場と人気業者。",
+    "category": "region"
+  },
+  {
+    "slug": "gin-kaitori",
+    "title": "銀（シルバー）買取相場ガイド",
+    "shortTitle": "銀（シルバー）買取相場ガイド",
+    "badge": "銀買取",
+    "description": "純銀・SV925の買取相場と高く売るコツ。",
+    "category": "howto"
+  },
+  {
+    "slug": "ginza-kin-kaitori",
+    "title": "銀座の金買取おすすめ業者ガイド",
+    "shortTitle": "銀座の金買取おすすめ業者ガイド",
+    "badge": "銀座",
+    "description": "銀座エリアの金・ブランド買取店をまとめて紹介。",
+    "category": "region"
+  },
+  {
+    "slug": "harrywinston-kaitori",
+    "title": "ハリーウィンストン買取相場ガイド",
+    "shortTitle": "ハリーウィンストン買取相場ガイド",
+    "badge": "ハリーウィンストン",
+    "description": "リリークラスター等の高額買取ポイント。",
+    "category": "brand"
+  },
+  {
+    "slug": "hiroshima-kin-kaitori",
+    "title": "広島の金買取おすすめ業者ガイド",
+    "shortTitle": "広島の金買取おすすめ業者ガイド",
+    "badge": "広島",
+    "description": "広島・中国地方の金買取業者をまとめて比較。",
+    "category": "region"
+  },
+  {
+    "slug": "ihin-seiri-kin",
+    "title": "遺品の金製品 整理・売却ガイド",
+    "shortTitle": "遺品の金製品 整理・売却ガイド",
+    "badge": "遺品整理",
+    "description": "遺品の金製品を整理・売却する進め方。",
+    "category": "howto"
+  },
+  {
+    "slug": "ikebukuro-kin-kaitori",
+    "title": "池袋の金買取おすすめ業者ガイド",
+    "shortTitle": "池袋の金買取おすすめ業者ガイド",
+    "badge": "池袋",
+    "description": "池袋エリアの金買取専門店を徹底比較。",
+    "category": "region"
+  },
+  {
+    "slug": "ikkatsu-satei-hikaku",
+    "title": "金の一括査定サイト比較",
+    "shortTitle": "金の一括査定サイト比較",
+    "badge": "一括査定",
+    "description": "ヒカカク等の一括査定サービス比較ガイド。",
+    "category": "compare"
+  },
+  {
+    "slug": "k10-kaitori",
+    "title": "K10（10金）買取相場ガイド",
+    "shortTitle": "K10（10金）買取相場ガイド",
+    "badge": "K10",
+    "description": "金含有率41.7%のK10の買取価格と注意点。",
+    "category": "purity"
+  },
+  {
+    "slug": "k14-kaitori",
+    "title": "K14（14金）買取相場ガイド",
+    "shortTitle": "K14（14金）買取相場ガイド",
+    "badge": "K14",
+    "description": "海外製アクセサリに多いK14の相場と査定ポイント。",
+    "category": "purity"
+  },
+  {
+    "slug": "k18-kaitori",
+    "title": "K18（18金）買取相場ガイド",
+    "shortTitle": "K18（18金）買取相場ガイド",
+    "badge": "K18",
+    "description": "国内で最も流通量の多いK18の相場と刻印解説。",
+    "category": "purity"
+  },
+  {
+    "slug": "k18pg-kaitori",
+    "title": "K18PG（ピンクゴールド）買取相場",
+    "shortTitle": "K18PG（ピンクゴールド）買取相場",
+    "badge": "K18PG",
+    "description": "カルティエ等で人気のK18PGの相場と特徴。",
+    "category": "purity"
+  },
+  {
+    "slug": "k18wg-kaitori",
+    "title": "K18WG（ホワイトゴールド）買取相場",
+    "shortTitle": "K18WG（ホワイトゴールド）買取相場",
+    "badge": "K18WG",
+    "description": "プラチナと混同されがちなK18WGの査定基準。",
+    "category": "purity"
+  },
+  {
+    "slug": "k22-kaitori",
+    "title": "K22（22金）買取相場ガイド",
+    "shortTitle": "K22（22金）買取相場ガイド",
+    "badge": "K22",
+    "description": "金含有率91.6%のK22の買取価格と特徴を解説。",
+    "category": "purity"
+  },
+  {
+    "slug": "k24-kaitori",
+    "title": "K24（純金）買取相場ガイド",
+    "shortTitle": "K24（純金）買取相場ガイド",
+    "badge": "K24",
+    "description": "純度99.9%の純金の最新買取相場と高く売るコツ。",
+    "category": "purity"
+  },
+  {
+    "slug": "kaitori-houhou-hikaku",
+    "title": "金の買取方法4種類を徹底比較",
+    "shortTitle": "金の買取方法4種類を徹底比較",
+    "badge": "買取方法比較",
+    "description": "店頭・出張・宅配・一括査定の違いと選び方。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-200man-mynumber",
+    "title": "金200万円超売却とマイナンバー",
+    "shortTitle": "金200万円超売却とマイナンバー",
+    "badge": "200万円超",
+    "description": "200万円ルールと法定調書の仕組みを解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-bracelet-kaitori",
+    "title": "金ブレスレット買取相場ガイド",
+    "shortTitle": "金ブレスレット買取相場ガイド",
+    "badge": "金ブレスレット",
+    "description": "喜平・バングルなど金ブレスレットの査定相場。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-chain-kaitori",
+    "title": "金チェーン買取相場ガイド",
+    "shortTitle": "金チェーン買取相場ガイド",
+    "badge": "金チェーン",
+    "description": "喜平・あずきなどチェーン種類別の相場一覧。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-jundo-mikata",
+    "title": "金の純度の見方ガイド",
+    "shortTitle": "金の純度の見方ガイド",
+    "badge": "純度の見方",
+    "description": "K24/K18/K14など刻印から純度を判別する方法。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-kaitori-hajimete",
+    "title": "金買取がはじめての方ガイド",
+    "shortTitle": "金買取がはじめての方ガイド",
+    "badge": "初めての方",
+    "description": "金買取の流れと初心者がチェックすべき項目。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-kaitori-sagi",
+    "title": "金買取の詐欺・押し買い対策",
+    "shortTitle": "金買取の詐欺・押し買い対策",
+    "badge": "詐欺対策",
+    "description": "悪質業者を見抜くチェックポイントを解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-kaitori-souba",
+    "title": "金買取相場一覧まとめ",
+    "shortTitle": "金買取相場一覧まとめ",
+    "badge": "相場一覧",
+    "description": "K24/K22/K18等の最新買取相場をまとめて掲載。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-kaitori-zeikin",
+    "title": "金買取と税金（譲渡所得）の解説",
+    "shortTitle": "金買取と税金（譲渡所得）の解説",
+    "badge": "税金",
+    "description": "50万円控除や保有期間で変わる税率を整理。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-kakutei-shinkoku",
+    "title": "金売却の確定申告の進め方",
+    "shortTitle": "金売却の確定申告の進め方",
+    "badge": "確定申告",
+    "description": "金売却で必要な確定申告書類と記入例を解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-necklace-kaitori",
+    "title": "金ネックレス買取相場ガイド",
+    "shortTitle": "金ネックレス買取相場ガイド",
+    "badge": "金ネックレス",
+    "description": "喜平・チェーン・ペンダントの重量別買取価格。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-nisemono-mikata",
+    "title": "金の偽物・メッキの見分け方",
+    "shortTitle": "金の偽物・メッキの見分け方",
+    "badge": "偽物の見分け方",
+    "description": "GP/GFなど金メッキと無垢の見分け方を解説。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-nobebo-kaitori",
+    "title": "金の延べ棒（インゴット）買取ガイド",
+    "shortTitle": "金の延べ棒（インゴット）買取ガイド",
+    "badge": "延べ棒",
+    "description": "ブランド別・重量別の延べ棒買取価格を解説。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-omosa-hakarikata",
+    "title": "金の重さの量り方と注意点",
+    "shortTitle": "金の重さの量り方と注意点",
+    "badge": "重さの量り方",
+    "description": "自宅で金の重量を測定する手順と精度の目安。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-pierce-kaitori",
+    "title": "金ピアス買取相場ガイド",
+    "shortTitle": "金ピアス買取相場ガイド",
+    "badge": "金ピアス",
+    "description": "片方だけでもOK。金ピアスの査定相場と注意点。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-souzoku-baikyaku",
+    "title": "相続した金の売却ガイド",
+    "shortTitle": "相続した金の売却ガイド",
+    "badge": "相続",
+    "description": "相続税評価額と売却時の税金関係を整理。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-spot-vs-kaitori",
+    "title": "金スポット価格と買取価格の違い",
+    "shortTitle": "金スポット価格と買取価格の違い",
+    "badge": "スポット価格",
+    "description": "店頭買取・小売・スポット価格の関係を解説。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-takaku-uru",
+    "title": "金を高く売る5つのコツ",
+    "shortTitle": "金を高く売る5つのコツ",
+    "badge": "高く売るコツ",
+    "description": "相見積もり・付属品など売却前の必須準備。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-uridoki-2026",
+    "title": "2026年金の売り時カレンダー",
+    "shortTitle": "2026年金の売り時カレンダー",
+    "badge": "2026年売り時",
+    "description": "今年の金相場展望と売却タイミングの判断軸。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-uru-timing",
+    "title": "金を売る最適なタイミング",
+    "shortTitle": "金を売る最適なタイミング",
+    "badge": "売却タイミング",
+    "description": "為替・国際相場と買取価格の関係を解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-yubiwa-kaitori",
+    "title": "金の指輪・リング買取相場ガイド",
+    "shortTitle": "金の指輪・リング買取相場ガイド",
+    "badge": "金の指輪",
+    "description": "K18・K24リングの重量別買取価格目安。",
+    "category": "product"
+  },
+  {
+    "slug": "kinba-kaitori",
+    "title": "金歯（インレー・クラウン）買取ガイド",
+    "shortTitle": "金歯（インレー・クラウン）買取ガイド",
+    "badge": "金歯",
+    "description": "歯科用金合金の純度と買取の進め方。",
+    "category": "product"
+  },
+  {
+    "slug": "kinka-ingot-kaitori",
+    "title": "金貨・インゴット買取相場ガイド",
+    "shortTitle": "金貨・インゴット買取相場ガイド",
+    "badge": "金貨・インゴット",
+    "description": "メイプル・カンガルー等の金貨買取目安。",
+    "category": "product"
+  },
+  {
+    "slug": "kintokei-rolex-kaitori",
+    "title": "金無垢腕時計・ロレックス買取相場",
+    "shortTitle": "金無垢腕時計・ロレックス買取相場",
+    "badge": "金時計",
+    "description": "ロレックス等の金無垢ケース時計の高額買取。",
+    "category": "product"
+  },
+  {
+    "slug": "kobe-kin-kaitori",
+    "title": "神戸の金買取おすすめ業者ガイド",
+    "shortTitle": "神戸の金買取おすすめ業者ガイド",
+    "badge": "神戸",
+    "description": "神戸市内の金買取相場と人気業者を紹介。",
+    "category": "region"
+  },
+  {
+    "slug": "kongyaku-yubiwa-uru",
+    "title": "婚約指輪・結婚指輪の売却ガイド",
+    "shortTitle": "婚約指輪・結婚指輪の売却ガイド",
+    "badge": "婚約指輪",
+    "description": "婚約・結婚指輪を売る前に知っておきたい注意点。",
+    "category": "howto"
+  },
+  {
+    "slug": "kowareta-kin-kaitori",
+    "title": "壊れた金製品の買取ガイド",
+    "shortTitle": "壊れた金製品の買取ガイド",
+    "badge": "壊れた金",
+    "description": "切れたチェーンや変形した金も買取可能。",
+    "category": "product"
+  },
+  {
+    "slug": "kyoto-kin-kaitori",
+    "title": "京都の金買取おすすめ業者ガイド",
+    "shortTitle": "京都の金買取おすすめ業者ガイド",
+    "badge": "京都",
+    "description": "京都市内の金買取業者を相場とともに紹介。",
+    "category": "region"
+  },
+  {
+    "slug": "line-satei-seido",
+    "title": "LINE査定の精度と注意点",
+    "shortTitle": "LINE査定の精度と注意点",
+    "badge": "LINE査定",
+    "description": "LINE写真査定で本査定にどれだけ近付くか解説。",
+    "category": "compare"
+  },
+  {
+    "slug": "nagoya-kin-kaitori",
+    "title": "名古屋の金買取おすすめ業者ガイド",
+    "shortTitle": "名古屋の金買取おすすめ業者ガイド",
+    "badge": "名古屋",
+    "description": "名古屋市内の金買取相場と人気業者まとめ。",
+    "category": "region"
+  },
+  {
+    "slug": "okachimachi-kin-kaitori",
+    "title": "御徒町の金買取おすすめ業者ガイド",
+    "shortTitle": "御徒町の金買取おすすめ業者ガイド",
+    "badge": "御徒町",
+    "description": "宝石街・御徒町の老舗金買取業者を比較。",
+    "category": "region"
+  },
+  {
+    "slug": "omiya-kin-kaitori",
+    "title": "大宮の金買取おすすめ業者ガイド",
+    "shortTitle": "大宮の金買取おすすめ業者ガイド",
+    "badge": "大宮",
+    "description": "大宮・さいたまエリアの金買取業者比較。",
+    "category": "region"
+  },
+  {
+    "slug": "osaka-kin-kaitori",
+    "title": "大阪の金買取おすすめ業者ガイド",
+    "shortTitle": "大阪の金買取おすすめ業者ガイド",
+    "badge": "大阪",
+    "description": "大阪府全域の金買取相場と人気業者を比較。",
+    "category": "region"
+  },
+  {
+    "slug": "platinum-kaitori",
+    "title": "プラチナ買取相場ガイド",
+    "shortTitle": "プラチナ買取相場ガイド",
+    "badge": "プラチナ",
+    "description": "Pt900/Pt950の最新買取相場と高く売る方法。",
+    "category": "compare"
+  },
+  {
+    "slug": "sapporo-kin-kaitori",
+    "title": "札幌の金買取おすすめ業者ガイド",
+    "shortTitle": "札幌の金買取おすすめ業者ガイド",
+    "badge": "札幌",
+    "description": "札幌・北海道エリアの金買取業者を比較。",
+    "category": "region"
+  },
+  {
+    "slug": "sendai-kin-kaitori",
+    "title": "仙台の金買取おすすめ業者ガイド",
+    "shortTitle": "仙台の金買取おすすめ業者ガイド",
+    "badge": "仙台",
+    "description": "仙台・東北エリアの金買取業者まとめ。",
+    "category": "region"
+  },
+  {
+    "slug": "shinju-kaitori",
+    "title": "真珠（パール）買取相場ガイド",
+    "shortTitle": "真珠（パール）買取相場ガイド",
+    "badge": "真珠買取",
+    "description": "あこや・南洋真珠の買取相場と評価ポイント。",
+    "category": "howto"
+  },
+  {
+    "slug": "tentou-vs-takuhai",
+    "title": "店頭買取と宅配買取の比較",
+    "shortTitle": "店頭買取と宅配買取の比較",
+    "badge": "店頭vs宅配",
+    "description": "店頭・宅配買取それぞれのメリット・デメリット。",
+    "category": "compare"
+  },
+  {
+    "slug": "tiffany-kaitori",
+    "title": "ティファニー買取相場ガイド",
+    "shortTitle": "ティファニー買取相場ガイド",
+    "badge": "ティファニー",
+    "description": "T・バイザヤード等のリセール価格を解説。",
+    "category": "brand"
+  },
+  {
+    "slug": "tokyo-kin-kaitori",
+    "title": "東京の金買取おすすめ業者ガイド",
+    "shortTitle": "東京の金買取おすすめ業者ガイド",
+    "badge": "東京",
+    "description": "東京エリアの金買取相場と人気店を比較。",
+    "category": "region"
+  },
+  {
+    "slug": "umeda-kin-kaitori",
+    "title": "梅田の金買取おすすめ業者ガイド",
+    "shortTitle": "梅田の金買取おすすめ業者ガイド",
+    "badge": "梅田",
+    "description": "梅田・大阪駅周辺の金買取店を徹底比較。",
+    "category": "region"
+  },
+  {
+    "slug": "vancleef-kaitori",
+    "title": "ヴァンクリーフ買取相場ガイド",
+    "shortTitle": "ヴァンクリーフ買取相場ガイド",
+    "badge": "ヴァンクリーフ",
+    "description": "アルハンブラシリーズの中古買取相場一覧。",
+    "category": "brand"
+  },
+  {
+    "slug": "yokohama-kin-kaitori",
+    "title": "横浜の金買取おすすめ業者ガイド",
+    "shortTitle": "横浜の金買取おすすめ業者ガイド",
+    "badge": "横浜",
+    "description": "横浜エリアの金買取相場と人気業者を紹介。",
+    "category": "region"
+  }
+]

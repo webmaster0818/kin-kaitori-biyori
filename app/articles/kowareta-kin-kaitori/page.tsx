@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -499,34 +500,10 @@ export default function KowaretaKinKaitoriPage() {
             ))}
           </div>
 
-          <h2>関連記事</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-            <Link href="/articles/kin-necklace-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">金ネックレス買取相場ガイド</p>
-            </Link>
-            <Link href="/articles/kin-yubiwa-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">金の指輪買取相場ガイド</p>
-            </Link>
-            <Link href="/articles/kin-bracelet-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">金ブレスレット買取相場ガイド</p>
-            </Link>
-            <Link href="/articles/kinba-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">金歯の買取相場ガイド</p>
-            </Link>
-            <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">売却ガイド</span>
-              <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-            </Link>
-            <Link href="/articles/kaitori-houhou-hikaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">方法比較</span>
-              <p className="text-sm font-bold mt-1">金の買取方法4つを徹底比較</p>
-            </Link>
-          </div>
+          <RelatedArticles
+            currentSlug="kowareta-kin-kaitori"
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kinba-kaitori", "ihin-seiri-kin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+          />
 
           <h2>まとめ</h2>
 

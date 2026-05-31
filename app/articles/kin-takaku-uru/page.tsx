@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function HowToSchema() {
@@ -453,6 +455,15 @@ export default function KinTakakuUruPage() {
 
         <CtaBox />
 
+        <RelatedArticles
+          currentSlug="kin-takaku-uru"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-uru-timing", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori"]}
+        />
+
+        <DealerComparisonTable
+        heading="相見積もりに使える金買取業者 7社"
+        intro="金を高く売るには複数業者の比較が必須。公式公開情報を一覧化しました。"
+        />
         <h2>まとめ</h2>
 
         <p>金を高く売るための5つのコツをまとめると、以下のとおりです。</p>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -641,35 +643,15 @@ export default function K24KaitoriPage() {
             ))}
           </div>
 
-          <h2>関連記事</h2>
+          <RelatedArticles
+            currentSlug="k24-kaitori"
+            relatedSlugs={["k22-kaitori", "k18-kaitori", "k14-kaitori", "k10-kaitori", "k18wg-kaitori", "k18pg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-            <Link href="/articles/k22-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">K22（22金）買取相場ガイド</p>
-            </Link>
-            <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">K18（18金）買取相場と高く売る方法</p>
-            </Link>
-            <Link href="/articles/kinka-ingot-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">金貨・インゴット買取ガイド</p>
-            </Link>
-            <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">相場情報</span>
-              <p className="text-sm font-bold mt-1">金買取相場一覧 — K24/K18/K14の1gあたり価格</p>
-            </Link>
-            <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">売却ガイド</span>
-              <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-            </Link>
-            <Link href="/articles/kin-jundo-mikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">知識ガイド</span>
-              <p className="text-sm font-bold mt-1">金の純度の見分け方ガイド</p>
-            </Link>
-          </div>
-
+          <DealerComparisonTable
+          heading="K24（純金）買取に強い業者 7社比較"
+          intro="K24・純金製品の買取依頼前に、各業者の対応範囲・手数料を公式情報で比較しましょう。"
+          />
           <h2>まとめ</h2>
 
           <p>K24（純金）は純度99.99%の最も価値が高い金であり、インゴット・金貨・ジュエリーなどさまざまな形で保有されています。</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -360,26 +361,10 @@ export default function KinKaitoriZeikinPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kinka-ingot-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">金貨・インゴット買取ガイド</p>
-          </Link>
-          <Link href="/articles/kin-uridoki-2026/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">相場分析</span>
-            <p className="text-sm font-bold mt-1">金の売り時 2026年の判断基準</p>
-          </Link>
-          <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">売却ガイド</span>
-            <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-          </Link>
-          <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">相場情報</span>
-            <p className="text-sm font-bold mt-1">金買取相場一覧</p>
-          </Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-kaitori-zeikin"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+        />
 
         <h2>まとめ</h2>
 

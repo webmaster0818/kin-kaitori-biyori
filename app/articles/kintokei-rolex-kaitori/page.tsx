@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -193,13 +194,10 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">ロレックス各モデルの買取価格はロデオドライブ・コメ兵・買取大吉等の業者公式サイトで確認可能。複数社の比較がおすすめ。</p>
 </details>
 
-          <h2>関連記事</h2>
-          <ul>
-            <li><Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金の買取相場（最新）</Link></li>
-            <li><Link href="/articles/k18-kaitori/" className="text-accent hover:underline">K18（18金）の買取相場</Link></li>
-            <li><Link href="/articles/kin-takaku-uru/" className="text-accent hover:underline">金を高く売るコツ</Link></li>
-            <li><Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法の比較</Link></li>
-          </ul>
+          <RelatedArticles
+            currentSlug="kintokei-rolex-kaitori"
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-yubiwa-kaitori", "kin-chain-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+          />
         </article>
       </div>
     </>

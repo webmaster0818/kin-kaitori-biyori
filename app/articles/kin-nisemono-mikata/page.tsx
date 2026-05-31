@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -286,14 +288,15 @@ export default function KinNisemonoMikataPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-jundo-mikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">知識ガイド</span><p className="text-sm font-bold mt-1">金の純度の見分け方</p></Link>
-          <Link href="/articles/kin-omosa-hakarikata/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">知識ガイド</span><p className="text-sm font-bold mt-1">金の重さの測り方</p></Link>
-          <Link href="/articles/kin-kaitori-sagi/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">注意ガイド</span><p className="text-sm font-bold mt-1">金買取の詐欺・トラブル対策</p></Link>
-          <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">品目ガイド</span><p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="kin-nisemono-mikata"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+        />
 
+        <DealerComparisonTable
+        heading="鑑定設備のある金買取業者 7社"
+        intro="X線分析機など鑑定設備を備える業者を中心に、公式情報をまとめました。"
+        />
         <h2>まとめ</h2>
         <p>金の偽物を見分けるためには、<strong>刻印の確認が最も基本的かつ重要</strong>です。GP/GFの表記があれば金メッキ、K18やK24、750の表記があれば本物の可能性が高いです。磁石テストや比重測定も補助的な判定方法として有効です。</p>
         <p>ただし、精巧な偽物は自宅での判定が難しい場合があります。確実な判定が必要な場合は、<strong>買取業者のX線蛍光分析（無料）</strong>を利用してください。</p>

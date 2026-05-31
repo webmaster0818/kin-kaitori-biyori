@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -506,35 +508,15 @@ export default function K18KaitoriPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
+        <RelatedArticles
+          currentSlug="k18-kaitori"
+          relatedSlugs={["k24-kaitori", "k22-kaitori", "k14-kaitori", "k10-kaitori", "k18wg-kaitori", "k18pg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}
+        />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/k24-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K24（純金）買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/k22-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K22（22金）買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/k14-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">K14（14金）買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/kin-necklace-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">金ネックレス買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/kin-yubiwa-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">金の指輪買取相場ガイド</p>
-          </Link>
-          <Link href="/articles/kin-bracelet-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-            <span className="text-xs text-accent font-bold">品目ガイド</span>
-            <p className="text-sm font-bold mt-1">金ブレスレット買取相場ガイド</p>
-          </Link>
-        </div>
-
+        <DealerComparisonTable
+        heading="K18買取に強い業者 7社比較"
+        intro="K18（18金）の買取依頼前に、店舗数・査定スピード・手数料を公式情報で比較できます。"
+        />
         <h2>まとめ</h2>
 
         <p>K18（18金）は日本で最も多く流通する金製品であり、ネックレス・指輪・ブレスレットなど幅広い製品に使われています。</p>

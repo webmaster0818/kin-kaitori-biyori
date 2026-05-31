@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -473,26 +474,10 @@ export default function KinbaKaitoriPage() {
             ))}
           </div>
 
-          <h2>関連記事</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-            <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取ガイド</p>
-            </Link>
-            <Link href="/articles/k18-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">品目ガイド</span>
-              <p className="text-sm font-bold mt-1">K18（18金）買取相場と高く売る方法</p>
-            </Link>
-            <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">相場情報</span>
-              <p className="text-sm font-bold mt-1">金買取相場一覧 — K24/K18/K14の1gあたり価格</p>
-            </Link>
-            <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">売却ガイド</span>
-              <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-            </Link>
-          </div>
+          <RelatedArticles
+            currentSlug="kinba-kaitori"
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-jundo-mikata", "kowareta-kin-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+          />
 
           <h2>まとめ</h2>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -313,13 +314,10 @@ export default function IhinSeiriKinPage() {
           ))}
         </div>
 
-        <h2>関連記事</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-          <Link href="/articles/kin-souzoku-baikyaku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">相続した金の売却ガイド</p></Link>
-          <Link href="/articles/kin-kakutei-shinkoku/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">税金ガイド</span><p className="text-sm font-bold mt-1">金の売却と確定申告</p></Link>
-          <Link href="/articles/kin-kaitori-hajimete/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">初心者ガイド</span><p className="text-sm font-bold mt-1">初めての金買取ガイド</p></Link>
-          <Link href="/articles/kowareta-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow"><span className="text-xs text-accent font-bold">品目ガイド</span><p className="text-sm font-bold mt-1">壊れた金・刻印なしの買取</p></Link>
-        </div>
+        <RelatedArticles
+          currentSlug="ihin-seiri-kin"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-souzoku-baikyaku", "kowareta-kin-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+        />
 
         <h2>まとめ</h2>
         <p>遺品整理で見つかった金は、2026年現在の歴史的高値により<strong>想像以上���価値がある</strong>可能性があります。K18のネックレス1本でも数万〜十数万円、喜平チェーンなら数十万円以上の買取額になることも珍しくありません。</p>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -442,6 +444,15 @@ export default function KinKaitoriSoubaPage() {
 
           <CtaBox />
 
+          <RelatedArticles
+            currentSlug="kin-kaitori-souba"
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+          />
+
+          <DealerComparisonTable
+          heading="金買取業者 主要7社 徹底比較（2026年最新）"
+          intro="全国展開の大手チェーンから金専門の質屋・宅配買取専門店まで、店舗数・対応エリア・手数料を公式情報で比較しました。"
+          />
           <h2>まとめ</h2>
 
           <p>金の買取相場は2026年4月現在、歴史的な高値圏にあります。K24（純金）は1gあたり約15,200円前後、K18は約11,400円前後で取引されています。</p>

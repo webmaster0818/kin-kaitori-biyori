@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -333,26 +334,10 @@ export default function OkachimachiKinKaitoriPage() {
             ))}
           </div>
 
-          <h2>関連記事</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-            <Link href="/articles/tokyo-kin-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">地域ガイド</span>
-              <p className="text-sm font-bold mt-1">東京の金買取おすすめ業者ガイド</p>
-            </Link>
-            <Link href="/articles/kin-nobebo-kaitori/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">アイテム別</span>
-              <p className="text-sm font-bold mt-1">金の延べ棒・インゴット買取ガイド</p>
-            </Link>
-            <Link href="/articles/kin-takaku-uru/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">売却ガイド</span>
-              <p className="text-sm font-bold mt-1">金を高く売る5つのコツ</p>
-            </Link>
-            <Link href="/articles/kin-kaitori-souba/" className="block bg-white border border-warm-border rounded-xl p-4 hover:shadow-md transition-shadow">
-              <span className="text-xs text-accent font-bold">相場情報</span>
-              <p className="text-sm font-bold mt-1">金買取相場一覧</p>
-            </Link>
-          </div>
+          <RelatedArticles
+            currentSlug="okachimachi-kin-kaitori"
+            relatedSlugs={["tokyo-kin-kaitori", "ginza-kin-kaitori", "ikebukuro-kin-kaitori", "omiya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          />
 
           <h2>まとめ</h2>
 

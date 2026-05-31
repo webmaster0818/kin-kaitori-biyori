@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -433,6 +435,15 @@ export default function KaitoriHouhouHikakuPage() {
           ))}
         </div>
 
+        <RelatedArticles
+          currentSlug="kaitori-houhou-hikaku"
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+        />
+
+        <DealerComparisonTable
+        heading="店頭・出張・宅配に対応する金買取業者 7社比較"
+        intro="買取方法ごとの強みと、対応している主要業者を公式情報で整理しました。"
+        />
         <h2>まとめ</h2>
 
         <p>金の買取方法は4つあり、それぞれ特徴が異なります。</p>
