@@ -1,0 +1,114 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import DealerComparisonTable from "@/components/DealerComparisonTable";
+import RelatedArticles from "@/components/RelatedArticles";
+import Image from "next/image";
+
+function BreadcrumbSchema() {
+  const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
+    { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
+    { "@type": "ListItem", position: 3, name: "金買取の手数料を徹底解説", item: "https://gold-biyori.com/articles/kin-kaitori-tesuryo/" },
+  ] };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
+}
+function ArticleSchema() {
+  const d = { "@context": "https://schema.org", "@type": "Article",
+    headline: "金買取の手数料を徹底解説｜査定料・精錬費に注意", description: "金買取の手数料を解説。査定料・精錬費・送料など差し引かれる費用の種類と、手数料無料の業者を選ぶコツを紹介します。",
+    datePublished: "2026-06-05", dateModified: "2026-06-05",
+    author: { "@type": "Organization", name: "金買取びより編集部" },
+    publisher: { "@type": "Organization", name: "金買取びより" } };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
+}
+function FaqSchema() {
+  const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
+      { "@type": "Question", name: "金買取で手数料はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "業者によります。査定料・精錬費などを差し引く業者もあれば、完全無料の業者もあります。" } },
+      { "@type": "Question", name: "手数料無料の業者はどう探せばいい？", acceptedAnswer: { "@type": "Answer", text: "公式サイトで手数料無料を明記しているか確認しましょう。当サイト掲載の4社はすべて無料です。" } },
+      { "@type": "Question", name: "提示額から引かれることはありますか？", acceptedAnswer: { "@type": "Answer", text: "悪質な業者では後から差し引く例もあります。手取り額を必ず確認しましょう。" } }
+  ] };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
+}
+
+export const metadata: Metadata = {
+  title: "金買取の手数料を徹底解説｜査定料・精錬費に注意",
+  description: "金買取の手数料を解説。査定料・精錬費・送料など差し引かれる費用の種類と、手数料無料の業者を選ぶコツを紹介します。",
+};
+
+function CtaBox() {
+  return (
+    <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
+      <h3 className="font-bold text-base mb-3 text-center">手数料の無料査定はこちら</h3>
+      <p className="text-sm text-warm-gray text-center mb-4">複数社を比較して最高値を狙いましょう。査定はすべて無料です。</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
+        <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
+        <a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="block gold-cta text-center text-sm font-medium py-3 rounded-lg transition-colors">出張買取を申し込む（ウリエル）</a>
+        <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy border border-accent/50 text-accent text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">好きな方法で査定する（ティファナ）</a>
+      </div>
+    </div>
+  );
+}
+
+export default function KinKaitoriTesuryoPage() {
+  return (
+    <>
+      <FaqSchema /><BreadcrumbSchema /><ArticleSchema />
+    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
+      <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
+        <ol className="flex items-center gap-1">
+          <li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li>
+          <li className="breadcrumb-sep" />
+          <li><Link href="/articles/" className="hover:text-accent transition-colors">記事一覧</Link></li>
+          <li className="breadcrumb-sep" />
+          <li><span className="text-foreground">金買取の手数料を徹底解説</span></li>
+        </ol>
+      </nav>
+      <div className="article-hero mb-8">
+        <Image src="/images/article-hero-area.png" alt="【2026年最新】金買取の手数料を徹底解説" width={1200} height={400} className="w-full h-[200px] object-cover rounded-xl" priority />
+        <div className="article-hero-overlay rounded-xl" />
+      </div>
+      <article className="prose">
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金買取の手数料を徹底解説</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p>「高価買取」と謳いながら、査定料や精錬費の名目で差し引く業者もあります。手数料の仕組みを知って損を防ぎましょう。</p>
+        <h2>ポイント</h2>
+        <ul>
+          <li>査定料・精錬費・溶解費・送料などの名目に注意</li>
+          <li>手数料無料を明記する業者を選ぶ</li>
+          <li>提示額が手取りか確認する</li>
+        </ul>
+        <CtaBox />
+        <h2>よくある質問</h2>
+        <div className="space-y-3 not-prose">
+          {[
+            {
+              q: "金買取で手数料はかかりますか？",
+              a: "業者によります。査定料・精錬費などを差し引く業者もあれば、完全無料の業者もあります。",
+            },
+            {
+              q: "手数料無料の業者はどう探せばいい？",
+              a: "公式サイトで手数料無料を明記しているか確認しましょう。当サイト掲載の4社はすべて無料です。",
+            },
+            {
+              q: "提示額から引かれることはありますか？",
+              a: "悪質な業者では後から差し引く例もあります。手取り額を必ず確認しましょう。",
+            },
+          ].map((faq) => (
+            <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
+              <summary className="flex items-center justify-between p-5 font-medium text-sm">
+                <span>{faq.q}</span>
+                <svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-warm-gray leading-relaxed">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+        <RelatedArticles currentSlug="kin-kaitori-tesuryo" relatedSlugs={["kin-kaitori-sagi", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-souba", "tentou-vs-takuhai"]} />
+        <DealerComparisonTable heading="手数料の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
+        <h2>まとめ</h2>
+        <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が歴史的高値にある今こそ、手元の品を見直す好機です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>
+      </article>
+    </div>
+    </>
+  );
+}
