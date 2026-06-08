@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function NagareyamaKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="千葉県" areas={[{ slug: "chiba-kin-kaitori", label: "千葉" }, { slug: "abiko-kin-kaitori", label: "我孫子" }, { slug: "chiba-ken-kin-kaitori", label: "千葉県" }, { slug: "funabashi-kin-kaitori", label: "船橋" }, { slug: "ichihara-kin-kaitori", label: "市原" }, { slug: "ichikawa-chiba-kin-kaitori", label: "市川" }, { slug: "kashiwa-kin-kaitori", label: "柏" }, { slug: "kisarazu-kin-kaitori", label: "木更津" }]} />
         <RelatedArticles currentSlug="nagareyama-kin-kaitori" relatedSlugs={["matsudo-kin-kaitori", "kashiwa-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

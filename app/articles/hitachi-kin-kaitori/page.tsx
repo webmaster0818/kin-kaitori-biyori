@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function HitachiKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="茨城県" areas={[{ slug: "hitachinaka-kin-kaitori", label: "ひたちなか" }, { slug: "koga-ibaraki-kin-kaitori", label: "古河" }, { slug: "mito-kin-kaitori", label: "水戸" }, { slug: "tsuchiura-kin-kaitori", label: "土浦" }, { slug: "tsukuba-kin-kaitori", label: "つくば" }, { slug: "chiba-kin-kaitori", label: "千葉" }, { slug: "ginza-kin-kaitori", label: "銀座" }, { slug: "ikebukuro-kin-kaitori", label: "池袋" }]} />
         <RelatedArticles currentSlug="hitachi-kin-kaitori" relatedSlugs={["mito-kin-kaitori", "tsukuba-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

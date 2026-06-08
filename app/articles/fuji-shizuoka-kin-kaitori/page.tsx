@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function FujiShizuokaKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="静岡県" areas={[{ slug: "shizuoka-kin-kaitori", label: "静岡" }, { slug: "fujieda-kin-kaitori", label: "藤枝" }, { slug: "hamamatsu-kin-kaitori", label: "浜松" }, { slug: "iwata-kin-kaitori", label: "磐田" }, { slug: "numazu-kin-kaitori", label: "沼津" }, { slug: "nagoya-kin-kaitori", label: "名古屋" }, { slug: "nagoya-sakae-kin-kaitori", label: "名古屋・栄" }, { slug: "toyota-kin-kaitori", label: "豊田" }]} />
         <RelatedArticles currentSlug="fuji-shizuoka-kin-kaitori" relatedSlugs={["shizuoka-kin-kaitori", "numazu-kin-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

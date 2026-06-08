@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function IsesakiKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="群馬県" areas={[{ slug: "kiryu-kin-kaitori", label: "桐生" }, { slug: "maebashi-kin-kaitori", label: "前橋" }, { slug: "ota-gunma-kin-kaitori", label: "太田" }, { slug: "takasaki-kin-kaitori", label: "高崎" }, { slug: "chiba-kin-kaitori", label: "千葉" }, { slug: "ginza-kin-kaitori", label: "銀座" }, { slug: "ikebukuro-kin-kaitori", label: "池袋" }, { slug: "okachimachi-kin-kaitori", label: "御徒町" }]} />
         <RelatedArticles currentSlug="isesaki-kin-kaitori" relatedSlugs={["maebashi-kin-kaitori", "takasaki-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

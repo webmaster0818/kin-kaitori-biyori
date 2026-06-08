@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -309,6 +310,7 @@ export default function KyotoKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="京都府" areas={[{ slug: "uji-kin-kaitori", label: "宇治" }, { slug: "kobe-kin-kaitori", label: "神戸" }, { slug: "osaka-kin-kaitori", label: "大阪" }, { slug: "umeda-kin-kaitori", label: "梅田" }, { slug: "namba-kin-kaitori", label: "難波" }, { slug: "tennoji-kin-kaitori", label: "天王寺" }, { slug: "sakai-kin-kaitori", label: "堺" }, { slug: "nara-kin-kaitori", label: "奈良" }]} />
         <RelatedArticles
           currentSlug="kyoto-kin-kaitori"
           relatedSlugs={["osaka-kin-kaitori", "umeda-kin-kaitori", "kobe-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -309,6 +310,7 @@ export default function SendaiKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="宮城県" areas={[{ slug: "sapporo-kin-kaitori", label: "札幌" }, { slug: "asahikawa-kin-kaitori", label: "旭川" }, { slug: "hakodate-kin-kaitori", label: "函館" }, { slug: "aomori-kin-kaitori", label: "青森" }, { slug: "morioka-kin-kaitori", label: "盛岡" }, { slug: "akita-kin-kaitori", label: "秋田" }, { slug: "yamagata-kin-kaitori", label: "山形" }, { slug: "fukushima-kin-kaitori", label: "福島" }]} />
         <RelatedArticles
           currentSlug="sendai-kin-kaitori"
           relatedSlugs={["sapporo-kin-kaitori", "tokyo-kin-kaitori", "nagoya-kin-kaitori", "omiya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

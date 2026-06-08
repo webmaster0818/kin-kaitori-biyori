@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function KoriyamaKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="福島県" areas={[{ slug: "fukushima-kin-kaitori", label: "福島" }, { slug: "iwaki-kin-kaitori", label: "いわき" }, { slug: "sapporo-kin-kaitori", label: "札幌" }, { slug: "sendai-kin-kaitori", label: "仙台" }, { slug: "asahikawa-kin-kaitori", label: "旭川" }, { slug: "hakodate-kin-kaitori", label: "函館" }, { slug: "aomori-kin-kaitori", label: "青森" }, { slug: "morioka-kin-kaitori", label: "盛岡" }]} />
         <RelatedArticles currentSlug="koriyama-kin-kaitori" relatedSlugs={["fukushima-kin-kaitori", "sendai-kin-kaitori", "kaitori-houhou-hikaku", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

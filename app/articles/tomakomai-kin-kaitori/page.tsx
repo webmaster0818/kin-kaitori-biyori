@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function TomakomaiKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="北海道" areas={[{ slug: "asahikawa-kin-kaitori", label: "旭川" }, { slug: "hakodate-kin-kaitori", label: "函館" }, { slug: "kushiro-kin-kaitori", label: "釧路" }, { slug: "obihiro-kin-kaitori", label: "帯広" }, { slug: "sapporo-kin-kaitori", label: "札幌" }, { slug: "sendai-kin-kaitori", label: "仙台" }, { slug: "aomori-kin-kaitori", label: "青森" }, { slug: "morioka-kin-kaitori", label: "盛岡" }]} />
         <RelatedArticles currentSlug="tomakomai-kin-kaitori" relatedSlugs={["sapporo-kin-kaitori", "hakodate-kin-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

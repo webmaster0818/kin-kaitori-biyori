@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -211,6 +212,7 @@ export default function KumamotoKinKaitoriPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="region" />
+        <NearbyAreas pref="熊本県" areas={[{ slug: "yatsushiro-kin-kaitori", label: "八代" }, { slug: "fukuoka-kin-kaitori", label: "福岡" }, { slug: "kitakyushu-kin-kaitori", label: "北九州" }, { slug: "kagoshima-kin-kaitori", label: "鹿児島" }, { slug: "naha-kin-kaitori", label: "那覇" }, { slug: "oita-kin-kaitori", label: "大分" }, { slug: "fukuoka-ken-kin-kaitori", label: "福岡県" }, { slug: "kurume-kin-kaitori", label: "久留米" }]} />
         <RelatedArticles currentSlug="kumamoto-kin-kaitori" relatedSlugs={["fukuoka-kin-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable
