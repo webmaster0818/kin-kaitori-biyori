@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -165,6 +167,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">売却金で新生活の準備（引っ越し・転職費用等）に充当する考え方が多い。形を変えてリフォームも選択肢。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kongyaku-yubiwa-uru"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-yubiwa-kaitori", "diamond-kaitori", "cartier-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}

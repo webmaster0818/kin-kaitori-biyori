@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -288,6 +290,8 @@ export default function KinNisemonoMikataPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="compare" />
         <RelatedArticles
           currentSlug="kin-nisemono-mikata"
           relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}

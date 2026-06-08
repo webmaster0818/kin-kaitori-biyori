@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -195,6 +197,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">現在の金相場高騰により、K18PG（純度75%）の方が高い場合が多いです。同じ重量ならピンクゴールドの方が高値傾向。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="purity" />
           <RelatedArticles
             currentSlug="k18pg-kaitori"
             relatedSlugs={["k24-kaitori", "k22-kaitori", "k18-kaitori", "k14-kaitori", "k10-kaitori", "k18wg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}

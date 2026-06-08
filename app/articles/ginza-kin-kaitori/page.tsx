@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -153,6 +155,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">ほぼ全業者で無料。キャンセル料も無料が一般的。事前にHPで確認を。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="region" />
           <RelatedArticles
             currentSlug="ginza-kin-kaitori"
             relatedSlugs={["tokyo-kin-kaitori", "okachimachi-kin-kaitori", "ikebukuro-kin-kaitori", "yokohama-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function HowToSchema() {
@@ -455,6 +457,8 @@ export default function KinTakakuUruPage() {
 
         <CtaBox />
 
+        <GoldPriceTrend />
+        <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-takaku-uru"
           relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-uru-timing", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori"]}

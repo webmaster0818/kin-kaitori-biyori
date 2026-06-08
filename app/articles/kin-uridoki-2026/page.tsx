@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -335,6 +337,8 @@ export default function KinUridoki2026Page() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-uridoki-2026"
           relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-uru-timing", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}

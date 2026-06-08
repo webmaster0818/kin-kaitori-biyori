@@ -145,6 +145,23 @@ def main():
     hist_file.write_text(json.dumps(hist, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"✓ {hist_file} 履歴追記完了 ({len(hist)}日分)")
 
+    # 全月をマージして相場推移用ファイルを生成（コンポーネントが単一ファイルをimportできるように）
+    merged = []
+    for f in sorted(HISTORY_DIR.glob("*.json")):
+        if f.name == "gold-price-trend.json":
+            continue
+        try:
+            merged.extend(json.loads(f.read_text()))
+        except Exception:
+            pass
+    # 同日重複を除去（最後勝ち）・日付順
+    by_date = {h["date"]: h for h in merged if h.get("date")}
+    merged = [by_date[d] for d in sorted(by_date)]
+    trend = merged[-60:]  # 直近60日分まで
+    trend_file = ROOT / "data" / "gold-price-trend.json"
+    trend_file.write_text(json.dumps(trend, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"✓ {trend_file} 相場推移マージ完了 ({len(trend)}日分)")
+
     print(f"\n=== 本日の価格サマリ ({today}) ===")
     print(f"  Au (K24相当): {prices.get('au_buyback_per_g'):,}円/g")
     print(f"  Pt: {prices.get('pt_buyback_per_g'):,}円/g")

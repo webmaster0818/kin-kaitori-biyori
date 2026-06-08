@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -157,6 +159,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">古物営業法により本人確認が必要。運転免許証、マイナンバーカード、パスポートのいずれか。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="region" />
           <RelatedArticles
             currentSlug="ikebukuro-kin-kaitori"
             relatedSlugs={["tokyo-kin-kaitori", "ginza-kin-kaitori", "okachimachi-kin-kaitori", "omiya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

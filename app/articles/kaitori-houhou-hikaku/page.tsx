@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -435,6 +437,8 @@ export default function KaitoriHouhouHikakuPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kaitori-houhou-hikaku"
           relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}

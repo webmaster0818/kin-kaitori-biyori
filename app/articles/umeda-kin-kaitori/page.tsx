@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -144,6 +146,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">地下街は梅田駅から直結でアクセス良好、地上は店舗が広く落ち着いて査定可。両方とも信頼できる業者が多い。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="region" />
           <RelatedArticles
             currentSlug="umeda-kin-kaitori"
             relatedSlugs={["osaka-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

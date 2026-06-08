@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -207,6 +209,8 @@ export default function NishinomiyaKinKaitoriPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="region" />
         <RelatedArticles currentSlug="nishinomiya-kin-kaitori" relatedSlugs={["kobe-kin-kaitori", "osaka-kin-kaitori", "kin-necklace-kaitori", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable

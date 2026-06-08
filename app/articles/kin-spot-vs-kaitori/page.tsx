@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -166,6 +168,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">歴史的には経済不安時・インフレ局面で金価格が上昇。直近は2024〜2026年で歴史的高値圏。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="compare" />
           <RelatedArticles
             currentSlug="kin-spot-vs-kaitori"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}

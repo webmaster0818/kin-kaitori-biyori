@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -173,6 +175,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">可能だが、業者により上限あり。10点以上の場合は出張買取の方が効率的。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="compare" />
           <RelatedArticles
             currentSlug="line-satei-seido"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}

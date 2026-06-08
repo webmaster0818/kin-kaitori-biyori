@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -153,6 +155,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">問題なく買取可。素材としての価値で判断するため、形状は関係ありません。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="product" />
           <RelatedArticles
             currentSlug="kin-pierce-kaitori"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "daikichi-vs-nanboya"]}

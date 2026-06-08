@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -444,6 +446,8 @@ export default function KinKaitoriSoubaPage() {
 
           <CtaBox />
 
+          <GoldPriceTrend />
+          <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-kaitori-souba"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}

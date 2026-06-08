@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -156,6 +158,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">同じ業者で短期間に複数回 = 合算判断される可能性あり。事前に業者へ確認。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-200man-mynumber"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-zeikin", "kin-kakutei-shinkoku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}

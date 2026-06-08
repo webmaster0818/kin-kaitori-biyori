@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -194,6 +196,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">ロレックス各モデルの買取価格はロデオドライブ・コメ兵・買取大吉等の業者公式サイトで確認可能。複数社の比較がおすすめ。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="product" />
           <RelatedArticles
             currentSlug="kintokei-rolex-kaitori"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-yubiwa-kaitori", "kin-chain-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}

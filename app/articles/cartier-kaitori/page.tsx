@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -416,6 +418,8 @@ export default function CartierKaitoriPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="brand" />
         <RelatedArticles
           currentSlug="cartier-kaitori"
           relatedSlugs={["k18-kaitori", "k18pg-kaitori", "k18wg-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "harrywinston-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}

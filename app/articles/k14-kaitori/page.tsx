@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 
@@ -396,6 +398,8 @@ export default function K14KaitoriPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="purity" />
         <RelatedArticles
           currentSlug="k14-kaitori"
           relatedSlugs={["k24-kaitori", "k22-kaitori", "k18-kaitori", "k10-kaitori", "k18wg-kaitori", "k18pg-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-nobebo-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori"]}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -159,6 +161,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">ハリーウィンストンが最高峰。同程度のスペックでも、ハリーウィンストンの方がブランドプレミアムが高い傾向。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="brand" />
           <RelatedArticles
             currentSlug="harrywinston-kaitori"
             relatedSlugs={["k18-kaitori", "k18pg-kaitori", "k18wg-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}

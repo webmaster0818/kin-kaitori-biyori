@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -151,6 +153,8 @@ export default function Page() {
   <p className="mt-3 text-sm leading-relaxed">純度が低く、ほとんどの業者で買取対象外または数十円程度。</p>
 </details>
 
+          <GoldPriceTrend />
+          <ExpertQA category="product" />
           <RelatedArticles
             currentSlug="kin-chain-kaitori"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-yubiwa-kaitori"]}

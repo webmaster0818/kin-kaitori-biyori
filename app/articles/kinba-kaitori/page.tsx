@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -474,6 +476,8 @@ export default function KinbaKaitoriPage() {
             ))}
           </div>
 
+          <GoldPriceTrend />
+          <ExpertQA category="product" />
           <RelatedArticles
             currentSlug="kinba-kaitori"
             relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-jundo-mikata", "kowareta-kin-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -103,6 +105,8 @@ export default function KinHonninKakuninPage() {
             </details>
           ))}
         </div>
+        <GoldPriceTrend />
+        <ExpertQA category="howto" />
         <RelatedArticles currentSlug="kin-honnin-kakunin" relatedSlugs={["kin-200man-mynumber", "kin-kaitori-mochimono", "kin-kaitori-zeikin", "kin-kaitori-hajimete", "kaitori-houhou-hikaku"]} />
         <DealerComparisonTable heading="本人確認の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

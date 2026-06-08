@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -103,6 +105,8 @@ export default function MapleLeafKinkaKaitoriPage() {
             </details>
           ))}
         </div>
+        <GoldPriceTrend />
+        <ExpertQA category="product" />
         <RelatedArticles currentSlug="maple-leaf-kinka-kaitori" relatedSlugs={["kinka-ingot-kaitori", "vienna-kinka-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
         <DealerComparisonTable heading="メイプルリーフ金貨の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

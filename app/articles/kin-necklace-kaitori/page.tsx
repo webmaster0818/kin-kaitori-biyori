@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldPriceTrend } from "@/components/GoldPriceTrend";
+import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 function BreadcrumbSchema() {
@@ -320,6 +322,8 @@ export default function KinNecklaceKaitoriPage() {
           ))}
         </div>
 
+        <GoldPriceTrend />
+        <ExpertQA category="product" />
         <RelatedArticles
           currentSlug="kin-necklace-kaitori"
           relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-chain-kaitori", "kin-bracelet-kaitori", "kin-yubiwa-kaitori", "kin-pierce-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori"]}
