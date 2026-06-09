@@ -23,6 +23,10 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 npx next build 2>&1 | tail -3
 find out -name "__next*.txt" -type f -delete
 
+# Scaled Content リント（warnモード）
+LINT="$HOME/.openclaw/workspace/scaled-content-lint.py"
+[ -f "$LINT" ] && /opt/homebrew/bin/python3 "$LINT" gold "$SRC/out" --glob "articles/*/index.html" --min-unique 100 --dup 0.6 --top 8 2>&1 | sed -n '1,3p' || true
+
 echo "[$(date '+%H:%M:%S')] [3/4] deploy へ rsync & push"
 rsync -a --delete --exclude=.git "$SRC/out/" "$DEPLOY/"
 cd "$DEPLOY"
