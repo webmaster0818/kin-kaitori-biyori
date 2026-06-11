@@ -5,6 +5,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "K10の買取相場は1gあたりいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K10の買取相場は1gあたり約5,800〜6,200円です。K18（約11,400円）の約半分ですが、金価格の高騰により過去と比べて大幅に上昇しています。2024年4月は約4,700円でしたので、2年で約30%上昇しています。" } },
+      { "@type": "Question", name: "K10の買取相場は1gあたりいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。K18（約11,400円）の約半分ですが、金価格の高騰により過去と比べて大幅に上昇しています。2024年4月は約4,700円でしたので、2年で約30%上昇しています。" } },
       { "@type": "Question", name: "K10とK18の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K10は金の純度が41.7%（10/24）、K18は75%（18/24）です。K10は金の含有率が低いぶん買取価格も低くなりますが、硬度が高く変色しにくいという特徴があり、日常使いのアクセサリーに多く使われています。" } },
       { "@type": "Question", name: "K10のアクセサリーは本当に売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、K10の刻印がある製品は買取可能です。K10は金の含有率が41.7%あるため、素材としての価値は十分にあります。1gあたり約6,000円なので、5gのネックレスなら約30,000円の買取額になります。" } },
       { "@type": "Question", name: "K10の刻印が「416」と書いてありますが、これは何ですか？", acceptedAnswer: { "@type": "Answer", text: "「416」はK10の千分率表記です。金の含有率が416/1000（41.6%）であることを示しています。K10と同じ意味です。海外製品に多い表記方法です。" } },
@@ -43,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    headline: "【2026年6月最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
   };
@@ -53,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+  title: "【2026年6月最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
   description:
     "K10（10金）の最新買取相場を1gあたりの価格で掲載。K10とK18の違い、K10アクセサリーの製品別価格目安、刻印の見分け方、高く売るコツを徹底解説。",
 };
@@ -94,8 +95,8 @@ export default function K10KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】K10（10金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K10（10金）買取相場と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>K10（10金）は、手頃な価格で金のジュエリーが楽しめることから人気の金合金です。4℃、スタージュエリー、ヴァンドーム青山など、<strong>日本のジュエリーブランドでK10を採用しているブランドは多数</strong>あります。</p>
 
@@ -109,6 +110,11 @@ export default function K10KaitoriPage() {
           <li>K10の刻印の見方</li>
           <li>K10を高く売るためのコツ</li>
         </ul>
+
+        <GoldSpotPriceCard purity="k10" />
+
+        <WeightPriceTable purities={["k10"]} />
+
 
         <h2>K10（10金）とは — 純度41.7%の金合金</h2>
 
@@ -126,127 +132,33 @@ export default function K10KaitoriPage() {
         <h3>K10・K14・K18・K24の比較</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>金含有率</th>
-                <th>1gあたり買取価格（2026年4月目安）</th>
-                <th>特徴</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>99.9%</td><td>約15,000〜15,400円</td><td>最も高価。柔らかい</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>75.0%</td><td>約11,200〜11,600円</td><td>ジュエリーの定番</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>58.5%</td><td>約8,700〜9,100円</td><td>海外で人気</td></tr>
-              <tr><td><strong>K10（10金）</strong></td><td>41.7%</td><td>約5,800〜6,200円</td><td>手頃で丈夫</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>K10はK18の約55%の買取価格ですが、金価格の高騰により<strong>K10でも1gあたり約6,000円</strong>と、以前では考えられない高値になっています。</p>
 
-        <h2>K10の最新買取相場（2026年4月）</h2>
+        <h2>K10の最新買取相場（目安・毎日変動）</h2>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>項目</th>
-                <th>価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K10 買取価格（1gあたり）</strong></td><td>約5,800〜6,200円</td></tr>
-              <tr><td>K10 小売価格（1gあたり）</td><td>約6,500〜7,000円</td></tr>
-              <tr><td>K18 買取価格（参考）</td><td>約11,200〜11,600円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <h3>K10買取価格の推移</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>年</th>
-                <th>K10 1gあたり買取価格（年間平均目安）</th>
-                <th>前年比</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2020年</td><td>約2,500円</td><td>—</td></tr>
-              <tr><td>2021年</td><td>約2,700円</td><td>+8%</td></tr>
-              <tr><td>2022年</td><td>約3,200円</td><td>+19%</td></tr>
-              <tr><td>2023年</td><td>約3,700円</td><td>+16%</td></tr>
-              <tr><td>2024年</td><td>約4,700円</td><td>+27%</td></tr>
-              <tr><td>2025年</td><td>約5,600円</td><td>+19%</td></tr>
-              <tr><td>2026年（1〜4月）</td><td>約6,000円</td><td>+7%</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>K10の買取価格は6年間で約2.4倍に上昇しています。<strong>「K10だから安い」という時代ではなくなっています</strong>。</p>
-
-        <CtaBox />
-
-        <h2>K10製品別の買取価格目安</h2>
-
-        <h3>K10ネックレス</h3>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>チェーンネックレス（細め）</td><td>2〜4g</td><td>約12,000〜24,000円</td></tr>
-              <tr><td>チェーンネックレス（太め）</td><td>5〜10g</td><td>約30,000〜60,000円</td></tr>
-              <tr><td>ペンダントネックレス</td><td>3〜7g</td><td>約18,000〜42,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <h3>K10指輪・リング</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>細身のリング</td><td>1〜3g</td><td>約6,000〜18,000円</td></tr>
-              <tr><td>標準的なリング</td><td>3〜5g</td><td>約18,000〜30,000円</td></tr>
-              <tr><td>ボリュームリング</td><td>5〜10g</td><td>約30,000〜60,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <h3>K10ピアス・イヤリング</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安（ペア）</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>スタッドピアス</td><td>1〜2g</td><td>約6,000〜12,000円</td></tr>
-              <tr><td>フープピアス</td><td>2〜5g</td><td>約12,000〜30,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <h2>K10の刻印の見方</h2>
@@ -295,7 +207,7 @@ export default function K10KaitoriPage() {
           </li>
           <li>
             <strong>相場が高いときに売る</strong>
-            <p>2026年4月現在、K10の買取価格は歴史的な高値水準です。「K10だから大した金額にならない」と思わず、今の相場で査定を受けてみましょう。</p>
+            <p>2026年現在、K10の買取価格は歴史的な高値水準です。「K10だから大した金額にならない」と思わず、今の相場で査定を受けてみましょう。</p>
           </li>
         </ol>
 
@@ -326,7 +238,7 @@ export default function K10KaitoriPage() {
 
         <div className="space-y-3 not-prose">
           {[
-            { q: "K10の買取相場は1gあたりいくらですか？", a: "2026年4月現在、K10の買取相場は1gあたり約5,800〜6,200円です。金価格の高騰により、2020年（約2,500円）の約2.4倍になっています。" },
+            { q: "K10の買取相場は1gあたりいくらですか？", a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。金価格の高騰により、2020年（約2,500円）の約2.4倍になっています。" },
             { q: "K10のアクセサリーは本当に売れますか？", a: "はい、K10の刻印がある製品は買取可能です。1gあたり約6,000円なので、5gのネックレスなら約30,000円の買取額になります。" },
             { q: "K10とK18の違いは？", a: "K10は金含有率41.7%、K18は75%です。K10の買取価格はK18の約55%ですが、硬度が高く日常使いに向いています。" },
             { q: "K10の刻印が「416」ですが買取できますか？", a: "はい、「416」はK10の千分率表記です。K10と同じ純度なので問題なく買取可能です。" },
@@ -353,7 +265,7 @@ export default function K10KaitoriPage() {
 
         <h2>まとめ</h2>
 
-        <p>K10（10金）はK18に比べて金の含有率は低いですが、2026年4月現在の買取価格は<strong>1gあたり約5,800〜6,200円</strong>と、数年前のK18の価格水準に達しています。</p>
+        <p>K10（10金）はK18に比べて金の含有率は低いですが、金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。</p>
 
         <p>「K10だから大した金額にならない」と思い込まず、まずは査定を受けてみてください。5gのK10ネックレスでも約30,000円になる時代です。</p>
 

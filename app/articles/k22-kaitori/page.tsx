@@ -5,6 +5,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "K22（22金）の買取価格は1gいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K22（22金）の買取相場は1gあたり約13,800〜14,200円です。国際金価格と為替レートにより毎日変動します。K24（純金）の約91%の価格水準です。" } },
+      { "@type": "Question", name: "K22（22金）の買取価格は1gいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。国際金価格と為替レートにより毎日変動します。K24（純金）の約91%の価格水準です。" } },
       { "@type": "Question", name: "K22はどんな製品に使われていますか？", acceptedAnswer: { "@type": "Answer", text: "K22は主に金貨（メイプルリーフ金貨、ブリタニア金貨など）や高級ジュエリーに使用されます。日本国内ではK18が主流ですが、海外（特に中東・東南アジア）ではK22のジュエリーが一般的です。" } },
       { "@type": "Question", name: "K22とK24の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K22は金の純度が91.7%（22/24）、K24は99.99%です。K22はK24より硬度が高く、ジュエリーや金貨として加工しやすいというメリットがあります。買取価格はK24の方が高くなります。" } },
       { "@type": "Question", name: "K22の刻印にはどんな種類がありますか？", acceptedAnswer: { "@type": "Answer", text: "K22の刻印は「K22」「22K」「916」「917」などがあります。「916」「917」は千分率表記で、金の含有率が916/1000（91.6%）であることを示しています。海外製品では「22K」「22ct」と刻印されることもあります。" } },
@@ -43,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    headline: "【2026年6月最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
     datePublished: "2026-04-13",
-    dateModified: "2026-04-13",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -53,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+  title: "【2026年6月最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
   description:
     "K22（22金・純度91.7%）の最新買取相場を1gあたりの価格で掲載。K22金貨・ジュエリーの製品別買取価格、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。",
 };
@@ -94,8 +95,8 @@ export default function K22KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】K22（22金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K22（22金）買取相場と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>K22（22金）は、<strong>純度91.7%</strong>という高い金含有率を持つ金合金です。日本国内ではK18やK24と比べて流通量は少ないものの、<strong>海外製のジュエリーや金貨</strong>に多く使われており、実は買取市場では頻繁に取引されています。</p>
 
@@ -112,6 +113,11 @@ export default function K22KaitoriPage() {
 
         <CtaBox />
 
+        <GoldSpotPriceCard purity="k22" />
+
+        <WeightPriceTable purities={["k22"]} />
+
+
         <h2>K22（22金）とは — 純度91.7%の高純度金合金</h2>
 
         <p>K22は<strong>金の純度が91.7%（917/1000）</strong>の合金です。残りの8.3%には銀や銅などが混ぜられています。「カラット」の24分の22、つまり全体の約92%が金で構成されています。</p>
@@ -119,57 +125,7 @@ export default function K22KaitoriPage() {
         <h3>K22の特徴</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>項目</th>
-                <th>K22の特徴</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>金の純度</strong></td><td>91.7%（917/1000）</td></tr>
-              <tr><td><strong>色味</strong></td><td>K24に近い鮮やかな黄金色</td></tr>
-              <tr><td><strong>硬度</strong></td><td>K24より硬く、K18より柔らかい</td></tr>
-              <tr><td><strong>主な用途</strong></td><td>金貨、海外製ジュエリー、高級アクセサリー</td></tr>
-              <tr><td><strong>刻印</strong></td><td>K22、22K、916、917</td></tr>
-              <tr><td><strong>アレルギー</strong></td><td>金属アレルギーが出にくい（金の含有率が高い）</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>K22はK24（純金）に次いで金の含有率が高い合金です。K24は純度99.99%で非常に柔らかいため、ジュエリーには向きませんが、K22は<strong>適度な硬度を持ちながら高い純度を維持</strong>できるため、高級ジュエリーや金貨の素材として選ばれています。</p>
-
-        <h3>K22が多い製品</h3>
-
-        <p>日本国内ではK18が主流ですが、K22は以下のような製品に多く見られます。</p>
-
-        <ul>
-          <li><strong>投資用金貨:</strong> メイプルリーフ金貨（カナダ）、ブリタニア金貨（イギリス）はK22相当の純度です。クルーガーランド金貨（南アフリカ）は正確にはK21.6（91.67%）です</li>
-          <li><strong>海外製ジュエリー:</strong> インド、タイ、ドバイなど中東・東南アジアで購入したジュエリーはK22が一般的。結婚式や祝祭用の金製品もK22が多い</li>
-          <li><strong>高級ブランドジュエリー:</strong> 一部のハイブランドがK22を採用したコレクションを展開</li>
-          <li><strong>金の仏具・装飾品:</strong> 仏壇の金具や装飾品にK22が使われることがある</li>
-        </ul>
-
-        <h2>K22（22金）の最新買取相場（2026年4月）</h2>
-
-        <p>2026年4月現在、K22の買取相場は以下のとおりです。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-                <th>K24比</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td><td>100%</td></tr>
-              <tr><td><strong>K22（22金）</strong></td><td>約13,800〜14,200円</td><td>約92%</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td><td>約75%</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td><td>約59%</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>K22の買取価格は<strong>K24の約92%の水準</strong>です。K18と比べると1gあたり約2,600円以上高く、同じ重量のジュエリーならK22の方がかなり高額な買取になります。</p>
@@ -177,22 +133,7 @@ export default function K22KaitoriPage() {
         <h3>K22製品の重量別買取目安</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>重量</th>
-                <th>K22買取目安</th>
-                <th>該当する製品例</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>5g</td><td>約69,000〜71,000円</td><td>細めのネックレス、リング</td></tr>
-              <tr><td>10g</td><td>約138,000〜142,000円</td><td>太めのネックレス、ブレスレット</td></tr>
-              <tr><td>20g</td><td>約276,000〜284,000円</td><td>重めのバングル、ペンダント</td></tr>
-              <tr><td>31.1g（1oz）</td><td>約429,000〜441,000円</td><td>1オンス金貨</td></tr>
-              <tr><td>50g</td><td>約690,000〜710,000円</td><td>大型のジュエリーセット</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>1オンス（31.1g）のK22金貨であれば、<strong>約43万円前後</strong>の買取価格が期待できます。金価格が歴史的高値圏にある現在は、売却に非常に有利な時期です。</p>
@@ -200,85 +141,7 @@ export default function K22KaitoriPage() {
         <h3>K22買取価格の推移</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>時期</th>
-                <th>K22の1gあたり買取目安</th>
-                <th>備考</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2020年4月</td><td>約5,800円</td><td>コロナショック後の金価格上昇期</td></tr>
-              <tr><td>2022年4月</td><td>約7,600円</td><td>ロシア・ウクライナ情勢で上昇</td></tr>
-              <tr><td>2024年4月</td><td>約11,500円</td><td>円安・地政学リスクで高騰</td></tr>
-              <tr><td>2026年4月</td><td>約14,000円</td><td>歴史的高値圏</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>6年前（2020年）と比較すると<strong>約2.4倍</strong>に上昇しています。現在の価格水準は歴史的に見ても非常に高く、売却を検討している方にとっては好機と言えるでしょう。</p>
-
-        <CtaBox />
-
-        <h2>K22の刻印の見分け方</h2>
-
-        <p>K22製品には以下のような刻印が打刻されています。刻印を確認することで、金の純度を特定できます。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>刻印</th>
-                <th>意味</th>
-                <th>備考</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K22</strong></td><td>22金（純度91.7%）</td><td>日本での一般的な表記</td></tr>
-              <tr><td><strong>22K</strong></td><td>22金（純度91.7%）</td><td>海外での一般的な表記</td></tr>
-              <tr><td><strong>916</strong></td><td>千分率表記（91.6%）</td><td>ヨーロッパで多い</td></tr>
-              <tr><td><strong>917</strong></td><td>千分率表記（91.7%）</td><td>日本の造幣局ホールマーク</td></tr>
-              <tr><td><strong>22ct</strong></td><td>22カラット</td><td>イギリスなどで使用</td></tr>
-              <tr><td><strong>22KT</strong></td><td>22カラット</td><td>アメリカなどで使用</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>K22とK21.6の違い</h3>
-
-        <p>金貨の中には「K21.6」や「21.6K」と表記されるものがあります。これは正確には<strong>純度90%（21.6/24 = 0.9）</strong>の金合金で、アメリカン・イーグル金貨やクルーガーランド金貨がこれに該当します。</p>
-
-        <p>K22（91.7%）とK21.6（90.0%）は近い純度ですが、買取価格には1gあたり数百円の差が生じます。お持ちの金貨がどちらの純度に該当するか、刻印や金貨の種類で確認してから売却しましょう。</p>
-
-        <h3>K22の偽物に注意</h3>
-
-        <p>海外で購入したK22ジュエリーの中には、<strong>刻印がK22でも実際の純度が低い</strong>ものが稀に存在します。特にインドや東南アジアの露店・小規模店舗で購入した場合は注意が必要です。</p>
-
-        <p>信頼できる買取業者ではX線分析装置（蛍光X線分析装置）で正確な純度を測定しますので、正しい純度で査定を受けられます。自己判断せず、<strong>必ずプロの査定を受ける</strong>ことをおすすめします。</p>
-
-        <h2>K22の金貨別買取相場</h2>
-
-        <p>K22相当の純度を持つ主要な金貨の買取相場は以下のとおりです。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>金貨の種類</th>
-                <th>重量</th>
-                <th>純度</th>
-                <th>買取目安（2026年4月）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>メイプルリーフ金貨（1oz）</strong></td><td>31.1g</td><td>K24（99.99%）</td><td>約470,000〜480,000円</td></tr>
-              <tr><td><strong>ブリタニア金貨（1oz）</strong></td><td>31.1g</td><td>K22（91.7%）</td><td>約430,000〜440,000円</td></tr>
-              <tr><td><strong>クルーガーランド金貨（1oz）</strong></td><td>33.93g</td><td>K21.6（91.67%）</td><td>約430,000〜440,000円</td></tr>
-              <tr><td><strong>アメリカン・イーグル金貨（1oz）</strong></td><td>33.93g</td><td>K21.6（91.67%）</td><td>約430,000〜440,000円</td></tr>
-              <tr><td><strong>ウィーン金貨ハーモニー（1oz）</strong></td><td>31.1g</td><td>K24（99.99%）</td><td>約470,000〜480,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>金貨は金の素材価値に加えて、<strong>プレミアム（付加価値）</strong>がつく場合があります。特に発行枚数が限られた記念金貨や、年号が古いヴィンテージ金貨は、金の重量以上の価格で取引されることがあります。</p>
@@ -383,7 +246,7 @@ export default function K22KaitoriPage() {
           {[
             {
               q: "K22の買取価格は1gいくらですか？",
-              a: "2026年4月現在、K22の買取相場は1gあたり約13,800〜14,200円です。K24（純金）の約92%の価格水準で、K18と比べると1gあたり約2,600円以上高い買取価格です。",
+              a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。K24（純金）の約92%の価格水準で、K18と比べると1gあたり約2,600円以上高い買取価格です。",
             },
             {
               q: "K22の刻印がない金製品は売れますか？",
@@ -425,7 +288,7 @@ export default function K22KaitoriPage() {
 
         <p>K22（22金）は純度91.7%の高純度金合金で、金貨や海外製ジュエリーに多く使われています。日本国内ではK18が主流のため、K22はやや馴染みが薄いかもしれませんが、<strong>買取市場では高値で取引される人気の純度</strong>です。</p>
 
-        <p>2026年4月現在、K22の買取相場は<strong>1gあたり約13,800〜14,200円</strong>と歴史的な高値水準にあります。6年前（2020年）と比べて約2.4倍に上昇しており、売却を検討している方にとっては好機と言えるでしょう。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。6年前（2020年）と比べて約2.4倍に上昇しており、売却を検討している方にとっては好機と言えるでしょう。</p>
 
         <p>K22を少しでも高く売るために、以下の3つを必ず実践してください。</p>
 

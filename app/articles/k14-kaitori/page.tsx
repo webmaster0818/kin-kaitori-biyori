@@ -5,6 +5,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "K14（14金）の買取価格は1gいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K14（14金）の買取相場は1gあたり約8,700〜9,100円です。K18（約11,400円）の約77%、K24（約15,200円）の約59%の価格水準です。" } },
+      { "@type": "Question", name: "K14（14金）の買取価格は1gいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。K18（約11,400円）の約77%、K24（約15,200円）の約59%の価格水準です。" } },
       { "@type": "Question", name: "K14とK18の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K14は金の純度が58.5%（14/24）、K18は75%（18/24）です。K14はK18より金の含有率が低いぶん買取価格も低くなりますが、硬度が高く傷つきにくいという特徴があります。アメリカではK14が主流です。" } },
       { "@type": "Question", name: "K14のアクセサリーは売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、K14の刻印がある製品は買取可能です。K14でも金の含有率が58.5%あるため、素材としての価値は十分にあります。1gあたり約8,900円なので、5gのネックレスなら約44,500円の買取額になります。" } },
       { "@type": "Question", name: "K14の刻印が「585」と書いてあるのですが？", acceptedAnswer: { "@type": "Answer", text: "「585」はK14の千分率表記です。金の含有率が585/1000（58.5%）であることを示しています。K14と同じ意味です。海外製品に多い表記方法です。" } },
@@ -43,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】K14（14金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    headline: "【2026年6月最新】K14（14金）買取相場ガイド — 1gあたりの価格と高く売る方法",
     datePublished: "2026-04-13",
-    dateModified: "2026-04-13",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -53,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】K14（14金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+  title: "【2026年6月最新】K14（14金）買取相場ガイド — 1gあたりの価格と高く売る方法",
   description:
     "K14（14金・純度58.5%）の最新買取相場を1gあたりの価格で掲載。K14とK18の違い、ネックレス・指輪・ブレスレットの製品別買取価格、585刻印の意味、高く売るポイントとおすすめ買取業者4社を徹底解説。",
 };
@@ -94,8 +95,8 @@ export default function K14KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】K14（14金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K14（14金）買取相場と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>K14（14金）は、<strong>純度58.5%</strong>の金合金です。日本ではK18が主流ですが、<strong>アメリカやヨーロッパではK14が最も一般的な金製品の純度</strong>として広く流通しています。海外旅行で購入したジュエリーや、ブランドアクセサリーにK14が使われていることも多いです。</p>
 
@@ -112,6 +113,11 @@ export default function K14KaitoriPage() {
 
         <CtaBox />
 
+        <GoldSpotPriceCard purity="k14" />
+
+        <WeightPriceTable purities={["k14"]} />
+
+
         <h2>K14（14金）とは — 純度58.5%の金合金</h2>
 
         <p>K14は<strong>金の純度が58.5%（585/1000）</strong>の合金です。残りの41.5%は銀、銅、パラジウム、亜鉛などが混ぜられています。24分の14、つまり全体の約59%が金で構成されています。</p>
@@ -119,59 +125,7 @@ export default function K14KaitoriPage() {
         <h3>K14の特徴</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>項目</th>
-                <th>K14の特徴</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>金の純度</strong></td><td>58.5%（585/1000）</td></tr>
-              <tr><td><strong>色味</strong></td><td>K18より淡い黄金色（合金の割合が多い）</td></tr>
-              <tr><td><strong>硬度</strong></td><td>K18より硬く、傷つきにくい</td></tr>
-              <tr><td><strong>主な用途</strong></td><td>海外ブランドジュエリー、時計ケース、万年筆</td></tr>
-              <tr><td><strong>刻印</strong></td><td>K14、14K、585</td></tr>
-              <tr><td><strong>アレルギー</strong></td><td>K18より金属アレルギーが出やすい場合がある</td></tr>
-              <tr><td><strong>価格帯</strong></td><td>K18の約77%の買取価格</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>K14が多い製品</h3>
-
-        <p>K14は以下のような製品に多く見られます。特にアメリカ製品での使用が多いのが特徴です。</p>
-
-        <ul>
-          <li><strong>アメリカンブランドジュエリー:</strong> ティファニー（一部コレクション）、ケイト・スペードなど、米国ブランドの定番素材</li>
-          <li><strong>ハワイアンジュエリー:</strong> ハワイで購入したバングルやリングはK14が一般的</li>
-          <li><strong>時計のケース・ベゼル:</strong> 高級時計の一部パーツにK14が使用されることがある</li>
-          <li><strong>万年筆のペン先:</strong> 「14K」と刻印された万年筆のニブ（ペン先）</li>
-          <li><strong>金歯・歯科用金合金:</strong> K14〜K20の金合金が歯科治療に使用される</li>
-          <li><strong>ヨーロッパ製ジュエリー:</strong> イタリアやドイツなどでK14は一般的な純度</li>
-        </ul>
-
-        <h2>K14（14金）の最新買取相場（2026年4月）</h2>
-
-        <p>2026年4月現在、K14の買取相場は以下のとおりです。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-                <th>K24比</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td><td>100%</td></tr>
-              <tr><td><strong>K22（22金）</strong></td><td>約13,800〜14,200円</td><td>約92%</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td><td>約75%</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td><td>約59%</td></tr>
-              <tr><td><strong>K10（10金）</strong></td><td>約5,800〜6,200円</td><td>約40%</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>K14の買取価格は<strong>K24の約59%</strong>の水準です。K18と比べると1gあたり約2,500円安くなりますが、K10と比べると約2,900円高く、<strong>金の価格高騰により十分な売却価値</strong>があります。</p>
@@ -179,22 +133,7 @@ export default function K14KaitoriPage() {
         <h3>K14製品の重量別買取目安</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>重量</th>
-                <th>K14買取目安</th>
-                <th>該当する製品例</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>3g</td><td>約26,100〜27,300円</td><td>細いチェーンネックレス、ピアス</td></tr>
-              <tr><td>5g</td><td>約43,500〜45,500円</td><td>リング、ペンダントトップ</td></tr>
-              <tr><td>10g</td><td>約87,000〜91,000円</td><td>太めのネックレス、バングル</td></tr>
-              <tr><td>20g</td><td>約174,000〜182,000円</td><td>ハワイアンバングル、ブレスレット</td></tr>
-              <tr><td>30g</td><td>約261,000〜273,000円</td><td>重めのジュエリーセット</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>「K14だから大した金額にならないのでは？」と思われがちですが、金価格が歴史的高値の現在、<strong>10gのK14ネックレスでも約9万円前後</strong>の買取が期待できます。タンスに眠っているK14製品があれば、一度査定に出す価値は十分にあります。</p>
@@ -214,7 +153,6 @@ export default function K14KaitoriPage() {
               <tr><td>2020年4月</td><td>約3,700円</td><td>コロナショック後の金価格上昇期</td></tr>
               <tr><td>2022年4月</td><td>約4,800円</td><td>ロシア・ウクライナ情勢で上昇</td></tr>
               <tr><td>2024年4月</td><td>約7,200円</td><td>円安・地政学リスクで高騰</td></tr>
-              <tr><td>2026年4月</td><td>約8,900円</td><td>歴史的高値圏</td></tr>
             </tbody>
           </table>
         </div>
@@ -367,7 +305,7 @@ export default function K14KaitoriPage() {
           {[
             {
               q: "K14のアクセサリーは売れますか？",
-              a: "はい、K14でも金の含有率が58.5%あるため、素材としての価値は十分にあります。2026年4月現在、1gあたり約8,900円の買取価格です。10gのネックレスなら約89,000円の買取額になります。",
+              a: "はい、K14でも金の含有率が58.5%あるため、素材としての価値は十分にあります。金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのネックレスなら約89,000円の買取額になります。",
             },
             {
               q: "K14GPとK14の違いは？",
@@ -379,7 +317,7 @@ export default function K14KaitoriPage() {
             },
             {
               q: "K14とK10、どちらが高く売れますか？",
-              a: "K14の方が高く売れます。K14は金含有率58.5%、K10は41.7%なので、同じ重量ならK14の方が約40%高い買取価格です。例えば10gの場合、K14は約89,000円、K10は約60,000円（2026年4月時点の目安）です。",
+              a: "K14の方が高く売れます。K14は金含有率58.5%、K10は41.7%なので、同じ重量ならK14の方が約40%高い買取価格です。例えば10gの場合、K14は約89,000円、K10は約60,000円（直近の目安）です。",
             },
             {
               q: "K14の万年筆のペン先も買取できますか？",
@@ -409,7 +347,7 @@ export default function K14KaitoriPage() {
 
         <p>K14（14金）は純度58.5%の金合金で、アメリカンブランドジュエリーやハワイアンジュエリーに多く使われています。日本ではK18が主流のため「K14はあまり高く売れない」と思われがちですが、<strong>金価格が歴史的高値にある現在は、K14でも十分な買取価格</strong>が得られます。</p>
 
-        <p>2026年4月現在、K14の買取相場は<strong>1gあたり約8,700〜9,100円</strong>。6年前（2020年）と比べて約2.4倍に上昇しています。10gのK14ネックレスなら約9万円前後の買取が期待でき、売却を検討する価値は十分にあります。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。6年前（2020年）と比べて約2.4倍に上昇しています。10gのK14ネックレスなら約9万円前後の買取が期待でき、売却を検討する価値は十分にあります。</p>
 
         <p>K14を少しでも高く売るために、以下の3つを必ず実践してください。</p>
 

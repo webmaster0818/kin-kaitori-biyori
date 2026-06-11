@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -28,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "金のブレスレットの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K18のブレスレットは1gあたり約11,200〜11,600円が買取目安です。10gのK18ブレスレットなら約114,000円、30gの喜平ブレスレットなら約342,000円程度です。" } },
+      { "@type": "Question", name: "金のブレスレットの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ブレスレットなら約114,000円、30gの喜平ブレスレットなら約342,000円程度です。" } },
       { "@type": "Question", name: "喜平ブレスレットは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、喜平ブレスレットは金の含有量（重量）が多いため高額買取が期待できます。K18の六面ダブル喜平ブレスレット（20cm・30g）なら約342,000円の買取目安です。" } },
       { "@type": "Question", name: "壊れたブレスレットでも買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、留め具の破損、チェーン切れ、変形などがあっても買取可能です。金の買取は素材の重量と純度がベースなので、状態は買取価格に影響しません。" } },
       { "@type": "Question", name: "バングルとブレスレットで買取価格は違いますか？", acceptedAnswer: { "@type": "Answer", text: "買取価格は純度と重量で決まるため、バングルかブレスレットかは関係ありません。ただしバングルは構造上、チェーンブレスレットより重い傾向があるため、結果的に高額になることが多いです。" } },
@@ -42,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金ブレスレット・バングル買取相場ガイド — 喜平・テニスブレスの価格と高く売るコツ",
+    headline: "【2026年6月最新】金ブレスレット・バングル買取相場ガイド — 喜平・テニスブレスの価格と高く売るコツ",
     datePublished: "2026-04-13",
-    dateModified: "2026-04-13",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -52,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金ブレスレット・バングル買取相場ガイド — 喜平・テニスブレスの価格と高く売るコツ",
+  title: "【2026年6月最新】金ブレスレット・バングル買取相場ガイド — 喜平・テニスブレスの価格と高く売るコツ",
   description:
     "金ブレスレット・バングルの最新買取相場をK18・K24・K14の純度別・重量別に掲載。喜平ブレスレット・テニスブレスレット・バングルの買取価格目安、壊れていても売れる理由、高く売るコツとおすすめ買取業者4社を徹底解説。",
 };
@@ -93,8 +95,8 @@ export default function KinBraceletKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金ブレスレット・バングル買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金ブレスレット・バングル買取相場ガイド</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>金のブレスレットやバングルは、<strong>ネックレスに次いで買取に持ち込まれることの多い金製品</strong>です。特に喜平ブレスレットやバングルは重量があるため、金価格が高騰している現在、<strong>驚くほどの高額買取</strong>が期待できます。</p>
 
@@ -111,54 +113,17 @@ export default function KinBraceletKaitoriPage() {
 
         <CtaBox />
 
-        <h2>金ブレスレットの買取相場一覧（2026年4月）</h2>
+        <GoldSpotPriceCard purity="k18" />
+
+        <WeightPriceTable purities={["k24", "k22", "k18", "k14"]} />
+
+
+        <h2>金ブレスレットの買取相場一覧（目安・毎日変動）</h2>
 
         <p>金ブレスレットの買取価格は<strong>「純度」×「重量」</strong>で決まります。</p>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり</th>
-                <th>10g</th>
-                <th>20g</th>
-                <th>30g</th>
-                <th>50g</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24</strong></td><td>約15,200円</td><td>約152,000円</td><td>約304,000円</td><td>約456,000円</td><td>約760,000円</td></tr>
-              <tr><td><strong>K18</strong></td><td>約11,400円</td><td>約114,000円</td><td>約228,000円</td><td>約342,000円</td><td>約570,000円</td></tr>
-              <tr><td><strong>K14</strong></td><td>約8,900円</td><td>約89,000円</td><td>約178,000円</td><td>約267,000円</td><td>約445,000円</td></tr>
-              <tr><td><strong>K10</strong></td><td>約6,000円</td><td>約60,000円</td><td>約120,000円</td><td>約180,000円</td><td>約300,000円</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>ブレスレットはネックレスと同程度かそれ以上の重量があるため、高額買取が期待できます。<strong>30gのK18喜平ブレスレットなら約34万円</strong>、<strong>50gなら約57万円</strong>です。</p>
-
-        <h2>ブレスレットの種類別 — 重量の目安と買取相場</h2>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>ブレスレットの種類</th>
-                <th>重量の目安</th>
-                <th>K18での買取目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>細いチェーンブレスレット</strong></td><td>3〜5g</td><td>約34,200〜57,000円</td></tr>
-              <tr><td><strong>テニスブレスレット</strong></td><td>5〜15g</td><td>約57,000〜171,000円 + 石の価値</td></tr>
-              <tr><td><strong>喜平ブレスレット（2面）</strong></td><td>10〜20g</td><td>約114,000〜228,000円</td></tr>
-              <tr><td><strong>喜平ブレスレット（6面ダブル）</strong></td><td>20〜50g</td><td>約228,000〜570,000円</td></tr>
-              <tr><td><strong>バングル（細身）</strong></td><td>10〜20g</td><td>約114,000〜228,000円</td></tr>
-              <tr><td><strong>バングル（太身）</strong></td><td>20〜40g</td><td>約228,000〜456,000円</td></tr>
-              <tr><td><strong>ハワイアンバングル</strong></td><td>15〜30g</td><td>約171,000〜342,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>喜平ブレスレットやバングルは<strong>金製品の中でも特に重量がある</strong>ため、買取額も高額になります。特に6面ダブルや8面トリプルの喜平は50g以上のものもあり、K18であれば<strong>50万円超の買取</strong>も珍しくありません。</p>
@@ -170,93 +135,7 @@ export default function KinBraceletKaitoriPage() {
         <h3>喜平の種類と特徴</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>特徴</th>
-                <th>20cmでの重量目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>2面カット</strong></td><td>シンプルな形状、軽め</td><td>10〜20g</td></tr>
-              <tr><td><strong>6面カット</strong></td><td>六角形の断面、上品な光沢</td><td>15〜30g</td></tr>
-              <tr><td><strong>6面ダブル</strong></td><td>密な編み、しっかりした重量感</td><td>20〜50g</td></tr>
-              <tr><td><strong>8面カット</strong></td><td>八角形断面、繊細な輝き</td><td>15〜30g</td></tr>
-              <tr><td><strong>8面トリプル</strong></td><td>最も密な編み、重厚感</td><td>30〜80g</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>喜平ブレスレットの買取価格は<strong>ほぼ純粋に重量で決まる</strong>ため、査定がシンプルです。面数やカット形状による価格差はほとんどなく、<strong>重さがすべて</strong>です。事前にデジタルスケールで重量を測っておくと、査定額の目安がつけやすくなります。</p>
-
-        <h2>テニスブレスレットの買取</h2>
-
-        <p>テニスブレスレットは、ダイヤモンドや宝石が一列に並んだエレガントなブレスレットです。<strong>金属部分の価値 + 宝石の価値</strong>の合計で査定されます。</p>
-
-        <h3>テニスブレスレットの査定ポイント</h3>
-
-        <ul>
-          <li><strong>金属部分:</strong> K18やPt900の素材価値（重量ベース）</li>
-          <li><strong>ダイヤモンド:</strong> 総カラット数と品質（4C）で評価</li>
-          <li><strong>ブランド:</strong> ティファニーやハリーウィンストンなどは高いブランドプレミアム</li>
-          <li><strong>鑑定書:</strong> ダイヤの鑑定書があると正確な評価が可能</li>
-        </ul>
-
-        <p>テニスブレスレットは宝石の品質によって<strong>買取価格が大きく変わる</strong>ため、必ず複数の業者に見積もりを取りましょう。金の素材買取と、ジュエリー買取の両方に査定を依頼することをおすすめします。</p>
-
-        <h2>バングルの買取</h2>
-
-        <p>バングルは<strong>開閉部のないC型や丸型の腕輪</strong>で、チェーンブレスレットより構造がシンプルなぶん、<strong>金の含有量が多い</strong>のが特徴です。</p>
-
-        <h3>バングルの種類別特徴</h3>
-
-        <ul>
-          <li><strong>無垢バングル:</strong> 中身が詰まった構造で非常に重い。30〜50g以上のものもあり高額買取</li>
-          <li><strong>中空バングル:</strong> 内部が空洞の構造。見た目のわりに軽い（10〜20g程度）</li>
-          <li><strong>ハワイアンバングル:</strong> K14が多い。彫刻が施された美しいデザイン。15〜30g程度</li>
-        </ul>
-
-        <p>無垢バングルは特に重量があるため、<strong>K18の30gバングルなら約34万円</strong>の買取が期待できます。中空バングルは見た目より軽いので、事前に計量して重量を確認しておきましょう。</p>
-
-        <h2>壊れたブレスレット・バングルも買取可能</h2>
-
-        <p>金のブレスレットは以下のような状態でも<strong>すべて買取可能</strong>です。</p>
-
-        <ul>
-          <li>留め具が壊れている</li>
-          <li>チェーンが切れている</li>
-          <li>バングルが変形している</li>
-          <li>石が取れている（金属部分のみで査定）</li>
-          <li>表面に傷や変色がある</li>
-          <li>刻印が消えている・読めない</li>
-        </ul>
-
-        <p>金の買取は<strong>素材としての価値</strong>がベースです。壊れていても金の重量と純度は変わらないため、買取価格に影響はありません。</p>
-
-        <CtaBox />
-
-        <h2>ブランドブレスレットの買取</h2>
-
-        <p>ブランドのブレスレットは、金の素材価値に加えて<strong>ブランドプレミアム</strong>が期待できます。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>ブランド</th>
-                <th>人気モデル</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>カルティエ</strong></td><td>ラブブレスレット（K18YG）</td><td>約300,000〜500,000円</td></tr>
-              <tr><td><strong>カルティエ</strong></td><td>ジュストアンクル</td><td>約250,000〜450,000円</td></tr>
-              <tr><td><strong>ティファニー</strong></td><td>ハードウェア</td><td>約100,000〜250,000円</td></tr>
-              <tr><td><strong>ヴァンクリーフ</strong></td><td>アルハンブラ5モチーフ</td><td>約300,000〜500,000円</td></tr>
-              <tr><td><strong>エルメス</strong></td><td>シェーヌダンクル</td><td>約200,000〜400,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>カルティエのラブブレスレットなどは、<strong>金の素材価値の3〜5倍以上</strong>で取引されることもあります。ブランドブレスレットを売る場合は、金買取専門店だけでなく、<strong>ブランド買取専門店にも必ず見積もり</strong>を取りましょう。</p>
@@ -342,7 +221,7 @@ export default function KinBraceletKaitoriPage() {
 
         <p>金のブレスレット・バングルは、ネックレスと並んで<strong>高額買取が期待できる金製品</strong>です。特に喜平ブレスレットやバングルは重量があるため、1本で数十万円の買取額になることも珍しくありません。</p>
 
-        <p>2026年4月現在、K18のブレスレットは1gあたり約11,400円。<strong>20gの喜平ブレスレットなら約23万円</strong>、<strong>50gなら約57万円</strong>の買取が期待できます。壊れていても、変形していても、金の素材価値は変わりません。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>20gの喜平ブレスレットなら約23万円</strong>、<strong>50gなら約57万円</strong>の買取が期待できます。壊れていても、変形していても、金の素材価値は変わりません。</p>
 
         <p>金ブレスレットを少しでも高く売るために、以下のポイントを実践してください。</p>
 

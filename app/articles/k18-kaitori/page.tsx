@@ -6,6 +6,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,10 +30,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】K18（18金）買取相場と高く売る方法 — 製品別・カラー別・刻印の見方",
+    headline: "【2026年6月最新】K18（18金）買取相場と高く売る方法 — 製品別・カラー別・刻印の見方",
     description: "K18（18金）の最新買取相場を1gあたりの価格で掲載。ネックレス・指輪・ブレスレットの製品別価格目安、K18の刻印の見分け方、高く売るコツ、おすすめ買取業者4社の比較まで徹底解説。",
     datePublished: "2026-04-15",
-    dateModified: "2026-04-15",
+    dateModified: "2026-06-11",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -65,7 +66,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】K18（18金）買取相場と高く売る方法 — 製品別・カラー別・刻印の見方",
+  title: "【2026年6月最新】K18（18金）買取相場と高く売る方法 — 製品別・カラー別・刻印の見方",
   description:
     "K18（18金）の最新買取相場を1gあたりの価格で掲載。ネックレス・指輪・ブレスレットの製品別価格目安、K18の刻印の見分け方、高く売るコツ、おすすめ買取業者4社の比較まで徹底解説。",
 };
@@ -106,8 +107,8 @@ export default function K18KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】K18（18金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K18（18金）買取相場と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>K18（18金）は、日本で最も流通量が多い金製品です。ネックレス、指輪、ブレスレット、ピアスなど、多くのジュエリーにK18が使われています。</p>
 
@@ -121,6 +122,11 @@ export default function K18KaitoriPage() {
           <li>K18の刻印の見方と偽物の見分け方</li>
           <li>K18を高く売るためのおすすめ買取業者</li>
         </ul>
+
+        <GoldSpotPriceCard purity="k18" />
+
+        <WeightPriceTable purities={["k18"]} />
+
 
         <h2>K18（18金）とは — 純度75%の金合金</h2>
 
@@ -137,69 +143,7 @@ export default function K18KaitoriPage() {
         <p>K18は混ぜる金属の種類によって色が変わります。</p>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>名称</th>
-                <th>配合</th>
-                <th>色の特徴</th>
-                <th>人気度</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K18YG（イエローゴールド）</strong></td><td>金75%+銀+銅</td><td>クラシックな金色</td><td>最も人気</td></tr>
-              <tr><td><strong>K18PG（ピンクゴールド）</strong></td><td>金75%+銅多め</td><td>温かみのあるピンク色</td><td>女性に人気</td></tr>
-              <tr><td><strong>K18WG（ホワイトゴールド）</strong></td><td>金75%+パラジウム</td><td>プラチナに似た銀色</td><td>男女ともに人気</td></tr>
-              <tr><td><strong>K18RG（ローズゴールド）</strong></td><td>金75%+銅かなり多め</td><td>赤みの強いピンク</td><td>個性的</td></tr>
-              <tr><td><strong>K18GG（グリーンゴールド）</strong></td><td>金75%+銀多め</td><td>薄い緑がかった金色</td><td>希少</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>WG（ホワイトゴールド）/YG/PGのカラー別価格差</h3>
-
-        <p>基本的に買取価格はカラーによる大きな差はありません。いずれも金の含有率は75%で同じだからです。ただし、以下の微妙な違いがあります。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>カラー</th>
-                <th>素材価値</th>
-                <th>中古市場での人気</th>
-                <th>買取への影響</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K18YG（イエロー）</strong></td><td>同じ（75%）</td><td>最も高い</td><td>ブランド買取で若干有利な場合あり</td></tr>
-              <tr><td><strong>K18PG（ピンク）</strong></td><td>同じ（75%）</td><td>女性に人気</td><td>ほぼ同じ</td></tr>
-              <tr><td><strong>K18WG（ホワイト）</strong></td><td>同じ（75%）</td><td>安定した需要</td><td>ほぼ同じ</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p><strong>K18WGの場合、表面にロジウムメッキ（銀白色のコーティング）が施されている</strong>ことが多く、剥がれていると見た目が黄色っぽくなりますが、買取価格には影響しません。素材買取では「金としての重量と純度」だけで価格が決まるため、どのカラーでも基本的に同じ価格です。</p>
-
-        <p>ただし、ブランドジュエリーとして評価される場合は、中古市場での人気が影響します。例えば、カルティエのラブリングはK18PGの人気が特に高いため、PGの方が高値がつくことがあります。</p>
-
-        <h2>K18の最新買取相場（2026年4月）</h2>
-
-        <p>2026年4月現在のK18の買取相場は以下のとおりです。</p>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>項目</th>
-                <th>価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K18 買取価格（1gあたり）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td>K18 小売価格（1gあたり）</td><td>約11,600〜12,000円</td></tr>
-              <tr><td>K24 買取価格（参考）</td><td>約15,000〜15,400円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>K18の買取価格はK24（純金）の約75%です。これはK18の金含有率が75%であることに対応しています。</p>
@@ -207,51 +151,7 @@ export default function K18KaitoriPage() {
         <h3>K18 1gあたり買取価格の推移</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>年</th>
-                <th>K18 1gあたり買取価格（年間平均目安）</th>
-                <th>前年比</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2020年</td><td>約4,500円</td><td>—</td></tr>
-              <tr><td>2021年</td><td>約4,800円</td><td>+6.7%</td></tr>
-              <tr><td>2022年</td><td>約5,700円</td><td>+18.8%</td></tr>
-              <tr><td>2023年</td><td>約6,600円</td><td>+15.8%</td></tr>
-              <tr><td>2024年</td><td>約8,800円</td><td>+33.3%</td></tr>
-              <tr><td>2025年</td><td>約10,600円</td><td>+20.5%</td></tr>
-              <tr><td>2026年（1〜4月）</td><td>約11,400円</td><td>+7.5%</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>K18の買取価格は2020年の約4,500円から2026年の約11,400円へと、<strong>6年間で約2.5倍</strong>に上昇しています。今がまさに「売り時」と言える相場水準です。</p>
-
-        <h2 id="necklace">K18製品別の買取価格目安</h2>
-
-        <p>K18の買取価格は「重量 x 1gあたり相場」が基本ですが、実際の製品の重量は種類によって異なります。以下に代表的なK18製品の重量と買取価格の目安を示します。</p>
-
-        <h3>K18ネックレス</h3>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>チェーンネックレス（細め）</td><td>3〜5g</td><td>約34,000〜57,000円</td></tr>
-              <tr><td>チェーンネックレス（太め）</td><td>8〜15g</td><td>約91,000〜171,000円</td></tr>
-              <tr><td>ペンダントネックレス</td><td>5〜10g</td><td>約57,000〜114,000円</td></tr>
-              <tr><td>喜平ネックレス（50cm）</td><td>30〜50g</td><td>約342,000〜570,000円</td></tr>
-              <tr><td>喜平ネックレス（60cm）</td><td>50〜100g</td><td>約570,000〜1,140,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>喜平ネックレスは重量があるため、買取価格も高額になります。特に<strong>6面カットや8面カットのダブル喜平</strong>は重量があるため、50万円〜100万円以上の買取価格になることも珍しくありません。</p>
@@ -259,21 +159,7 @@ export default function K18KaitoriPage() {
         <h3 id="ring">K18指輪・リング</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>細身のリング</td><td>2〜4g</td><td>約23,000〜46,000円</td></tr>
-              <tr><td>標準的な結婚指輪</td><td>3〜6g</td><td>約34,000〜68,000円</td></tr>
-              <tr><td>ボリュームリング</td><td>8〜15g</td><td>約91,000〜171,000円</td></tr>
-              <tr><td>印台リング（メンズ）</td><td>15〜30g</td><td>約171,000〜342,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>宝石（ダイヤモンド、ルビーなど）が付いた指輪の場合、金の素材価値に加えて<strong>宝石の価値が上乗せ</strong>されることがあります。ただし、宝石の評価は業者によって大きく異なるため、<strong>宝石鑑定に強い業者にも見積もりを取る</strong>のがおすすめです。</p>
@@ -281,21 +167,7 @@ export default function K18KaitoriPage() {
         <h3 id="bracelet">K18ブレスレット</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>種類</th>
-                <th>重量の目安</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>チェーンブレスレット（細め）</td><td>3〜5g</td><td>約34,000〜57,000円</td></tr>
-              <tr><td>チェーンブレスレット（太め）</td><td>8〜15g</td><td>約91,000〜171,000円</td></tr>
-              <tr><td>喜平ブレスレット</td><td>20〜50g</td><td>約228,000〜570,000円</td></tr>
-              <tr><td>バングル</td><td>10〜30g</td><td>約114,000〜342,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <blockquote>
@@ -401,7 +273,7 @@ export default function K18KaitoriPage() {
           </li>
           <li>
             <strong>相場が高いときに売る</strong>
-            <p>2026年4月現在のK18買取価格（1gあたり約11,400円）は歴史的な高値水準です。今後さらに上がる保証はないため、現在の価格に満足できるなら売却のタイミングとしては好適です。</p>
+            <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。今後さらに上がる保証はないため、現在の価格に満足できるなら売却のタイミングとしては好適です。</p>
           </li>
         </ol>
 
@@ -450,7 +322,7 @@ export default function K18KaitoriPage() {
 
         <h2>業者別K18買取価格の比較</h2>
 
-        <p>K18の買取価格は業者によって差があります。以下は2026年4月時点の主要な買取チャネルにおけるK18/1gあたりの買取価格の傾向です。</p>
+        <p>K18の買取価格は業者によって差があります。以下は直近の主要な買取チャネルにおけるK18/1gあたりの買取価格の傾向です。</p>
 
         <div className="table-wrapper">
           <table>
@@ -491,7 +363,7 @@ export default function K18KaitoriPage() {
             },
             {
               q: "K18とK14、どちらが高く売れますか？",
-              a: "K18の方が高く売れます。K18は金含有率75%、K14は58.5%なので、同じ重量ならK18の方が約28%高い買取価格になります。例えば10gのアクセサリーの場合、K18は約114,000円、K14は約89,000円（2026年4月時点の目安）です。",
+              a: "K18の方が高く売れます。K18は金含有率75%、K14は58.5%なので、同じ重量ならK18の方が約28%高い買取価格になります。例えば10gのアクセサリーの場合、K18は約114,000円、K14は約89,000円（直近の目安）です。",
             },
             {
               q: "K18のピアス片方だけでも売れますか？",
@@ -525,7 +397,7 @@ export default function K18KaitoriPage() {
 
         <p>K18（18金）は日本で最も多く流通する金製品であり、ネックレス・指輪・ブレスレットなど幅広い製品に使われています。</p>
 
-        <p>2026年4月現在、K18の買取相場は<strong>1gあたり約11,200〜11,600円</strong>と歴史的な高値水準にあります。6年前（2020年）と比べて約2.5倍に上昇しており、売却を検討している方にとっては好機と言えるでしょう。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。6年前（2020年）と比べて約2.5倍に上昇しており、売却を検討している方にとっては好機と言えるでしょう。</p>
 
         <p>K18を少しでも高く売るために、以下の3つを必ず実践してください。</p>
 

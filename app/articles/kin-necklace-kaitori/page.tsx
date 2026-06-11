@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -28,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "金のネックレスの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K18のネックレスは1gあたり約11,200〜11,600円、K24は約15,000〜15,400円、K14は約8,700〜9,100円が買取目安です。10gのK18ネックレスなら約11万円前後の買取額になります。" } },
+      { "@type": "Question", name: "金のネックレスの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ネックレスなら約11万円前後の買取額になります。" } },
       { "@type": "Question", name: "切れたネックレスでも買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、チェーンが切れたネックレスでも問題なく買取できます。金の買取は素材の重量と純度がベースなので、破損していても金としての価値は変わりません。" } },
       { "@type": "Question", name: "金のネックレスの重さの目安は？", acceptedAnswer: { "@type": "Answer", text: "K18ネックレスの一般的な重量は、細いチェーンで2〜5g、標準的なチェーンで5〜10g、太めのチェーンで10〜20g、喜平ネックレスで20〜100g程度です。" } },
       { "@type": "Question", name: "喜平ネックレスは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、喜平ネックレスは金の含有量（重量）が多いため、高額買取が期待できます。50gのK18六面ダブル喜平なら約57万円前後の買取目安です。喜平はデザイン性も評価されやすいチェーンです。" } },
@@ -42,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
+    headline: "【2026年6月最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
     datePublished: "2026-04-13",
-    dateModified: "2026-04-13",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -52,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
+  title: "【2026年6月最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
   description:
     "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
 };
@@ -93,8 +95,8 @@ export default function KinNecklaceKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金ネックレス買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金ネックレス買取相場ガイド</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>金のネックレスは、<strong>最も多く買取に持ち込まれる金製品</strong>の一つです。使わなくなったネックレス、チェーンが切れたネックレス、デザインが古くなったネックレス——いずれも金の素材価値があるため、買取業者で現金化できます。</p>
 
@@ -111,56 +113,17 @@ export default function KinNecklaceKaitoriPage() {
 
         <CtaBox />
 
-        <h2>金ネックレスの買取相場一覧（2026年4月）</h2>
+        <GoldSpotPriceCard purity="k18" />
 
-        <p>金ネックレスの買取価格は<strong>「純度（K24/K18/K14など）」×「重量（g）」</strong>で決まります。2026年4月現在の1gあたりの買取目安は以下のとおりです。</p>
+        <WeightPriceTable purities={["k24", "k22", "k18", "k14"]} />
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格</th>
-                <th>5g</th>
-                <th>10g</th>
-                <th>20g</th>
-                <th>50g</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24</strong></td><td>約15,200円</td><td>約76,000円</td><td>約152,000円</td><td>約304,000円</td><td>約760,000円</td></tr>
-              <tr><td><strong>K18</strong></td><td>約11,400円</td><td>約57,000円</td><td>約114,000円</td><td>約228,000円</td><td>約570,000円</td></tr>
-              <tr><td><strong>K14</strong></td><td>約8,900円</td><td>約44,500円</td><td>約89,000円</td><td>約178,000円</td><td>約445,000円</td></tr>
-              <tr><td><strong>K10</strong></td><td>約6,000円</td><td>約30,000円</td><td>約60,000円</td><td>約120,000円</td><td>約300,000円</td></tr>
-            </tbody>
-          </table>
-        </div>
 
-        <p>K18の10gのネックレスなら<strong>約11万4千円</strong>、50gの喜平ネックレスなら<strong>約57万円</strong>の買取額が目安です。金価格が歴史的高値圏にある現在、ネックレス1本でも驚くほどの金額になります。</p>
+        <h2>金ネックレスの買取相場一覧（目安・毎日変動）</h2>
 
-        <h2>金ネックレスの重量の目安</h2>
-
-        <p>「自分のネックレスは何グラムくらい？」という疑問を解消するため、チェーンの太さ・長さ別の重量目安をまとめました。</p>
+        <p>金ネックレスの買取価格は<strong>「純度（K24/K18/K14など）」×「重量（g）」</strong>で決まります。2026年現在の1gあたりの買取目安は以下のとおりです。</p>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>ネックレスの種類</th>
-                <th>重量の目安</th>
-                <th>K18での買取目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>細いチェーン（40cm）</td><td>2〜4g</td><td>約22,800〜45,600円</td></tr>
-              <tr><td>標準チェーン（45cm）</td><td>5〜8g</td><td>約57,000〜91,200円</td></tr>
-              <tr><td>太めのチェーン（50cm）</td><td>10〜15g</td><td>約114,000〜171,000円</td></tr>
-              <tr><td>喜平2面（50cm）</td><td>10〜30g</td><td>約114,000〜342,000円</td></tr>
-              <tr><td>喜平6面ダブル（50cm）</td><td>30〜50g</td><td>約342,000〜570,000円</td></tr>
-              <tr><td>喜平6面トリプル（50cm）</td><td>50〜100g</td><td>約570,000〜1,140,000円</td></tr>
-              <tr><td>ペンダントトップ付き</td><td>+3〜10g</td><td>+約34,200〜114,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>正確な重量は<strong>デジタルスケール（0.1g単位）</strong>で測定するのが最も確実です。自宅にスケールがない場合は、買取業者の店頭で正確に計量してもらえます。</p>
@@ -291,7 +254,7 @@ export default function KinNecklaceKaitoriPage() {
           {[
             {
               q: "金のネックレスの買取相場はいくらですか？",
-              a: "2026年4月現在、K18のネックレスは1gあたり約11,400円が買取目安です。10gのK18ネックレスなら約114,000円、50gの喜平ネックレスなら約570,000円の買取額になります。純度（K24/K18/K14/K10）と重量で価格が決まります。",
+              a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ネックレスなら約114,000円、50gの喜平ネックレスなら約570,000円の買取額になります。純度（K24/K18/K14/K10）と重量で価格が決まります。",
             },
             {
               q: "チェーンが切れたネックレスでも売れますか？",
@@ -333,7 +296,7 @@ export default function KinNecklaceKaitoriPage() {
 
         <p>金のネックレスは、最も身近で最も多く買取に出される金製品です。チェーンが切れていても、デザインが古くても、刻印が消えていても——<strong>金の素材としての価値は変わりません</strong>。</p>
 
-        <p>2026年4月現在、K18の金ネックレスは1gあたり約11,400円。<strong>10gのネックレスなら約11万円</strong>、<strong>50gの喜平ネックレスなら約57万円</strong>の買取が期待できます。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>10gのネックレスなら約11万円</strong>、<strong>50gの喜平ネックレスなら約57万円</strong>の買取が期待できます。</p>
 
         <p>金ネックレスを少しでも高く売るために、以下のポイントを実践してください。</p>
 

@@ -5,6 +5,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -28,10 +29,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】ピンクゴールド（K18PG）買取相場｜K18・K18WGとの違いと高く売るコツ",
+    headline: "【2026年6月最新】ピンクゴールド（K18PG）買取相場｜K18・K18WGとの違いと高く売るコツ",
     description: "ピンクゴールド（K18PG）の買取相場はK18・K18WGと同価格。なぜ同じなのか、ローズゴールドとの違い、変色や色落ちは買取価格に影響するか、徹底解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-06-11",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -54,7 +55,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】ピンクゴールド（K18PG）買取相場｜K18・K18WGとの違いと高く売るコツ",
+  title: "【2026年6月最新】ピンクゴールド（K18PG）買取相場｜K18・K18WGとの違いと高く売るコツ",
   description: "ピンクゴールド（K18PG）の買取相場はK18・K18WGと同価格。なぜ同じなのか、ローズゴールドとの違い、変色や色落ちは買取価格に影響するか、徹底解説。",
 };
 
@@ -95,12 +96,17 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">ピンクゴールド（K18PG）の買取相場と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
 
           <p>ピンクゴールド（K18PG）は、その美しいピンク色から女性に人気のジュエリーです。「色がついているから価値が違うの？」と思うかもしれませんが、買取相場は<strong>通常のK18やK18WGと同じ</strong>です。</p>
 
           <p>本記事では、K18PGの買取の仕組み、ローズゴールドとの違い、変色・色落ちへの対応、高く売るコツを徹底解説します。</p>
+
+          <GoldSpotPriceCard purity="k18pg" />
+
+          <WeightPriceTable purities={["k18pg"]} />
+
 
           <h2>1. K18PGとは — 純度75%のピンクゴールド</h2>
 
@@ -119,7 +125,7 @@ export default function Page() {
 
           <p>2026年5月時点の参考相場:</p>
           <ul>
-            <li>K18PG：1gあたり 約19,000〜25,000円（業者・日により変動）</li>
+            <li>K18PG：1gあたりの最新目安は本ページ冒頭の「本日の買取相場」カード参照（毎日自動更新）</li>
             <li>K18：同上</li>
             <li>K18WG：同上</li>
           </ul>

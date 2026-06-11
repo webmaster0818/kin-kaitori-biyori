@@ -5,6 +5,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -28,10 +29,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】ホワイトゴールド（K18WG）買取相場と高く売るコツ｜K18との価格差まで完全解説",
+    headline: "【2026年6月最新】ホワイトゴールド（K18WG）買取相場と高く売るコツ｜K18との価格差まで完全解説",
     description: "ホワイトゴールド（K18WG）の買取相場は通常のK18と同じ。なぜ同価格なのか、刻印の見分け方、変色しても大丈夫か、おすすめ買取業者まで徹底解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-06-11",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -54,7 +55,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】ホワイトゴールド（K18WG）買取相場と高く売るコツ｜K18との価格差まで完全解説",
+  title: "【2026年6月最新】ホワイトゴールド（K18WG）買取相場と高く売るコツ｜K18との価格差まで完全解説",
   description: "ホワイトゴールド（K18WG）の買取相場は通常のK18と同じ。なぜ同価格なのか、刻印の見分け方、変色しても大丈夫か、おすすめ買取業者まで徹底解説。",
 };
 
@@ -95,12 +96,17 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">ホワイトゴールド（K18WG）の買取相場と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
 
           <p>ホワイトゴールド（K18WG）は、見た目はプラチナに似た銀白色のジュエリーですが、<strong>本質は18金（K18）の合金</strong>です。「白っぽいから価値が低いのでは？」と思われがちですが、その買取相場は通常のK18と全く同じです。</p>
 
           <p>本記事では、K18WGがなぜK18と同価格なのか、変色しても問題ないのか、買取時の刻印の見方、高く売るコツを徹底解説します。</p>
+
+          <GoldSpotPriceCard purity="k18wg" />
+
+          <WeightPriceTable purities={["k18wg"]} />
+
 
           <h2>1. K18WGとは — 純度75%のホワイトゴールド</h2>
 
@@ -120,7 +126,7 @@ export default function Page() {
 
           <p>例えば、2026年5月時点の参考相場:</p>
           <ul>
-            <li>K18：1gあたり 約19,000〜25,000円（業者・日により変動）</li>
+            <li>K18WG：1gあたりの最新目安は本ページ冒頭の「本日の買取相場」カード参照（毎日自動更新）</li>
             <li>K18WG：1gあたり 同上</li>
           </ul>
 

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -35,11 +37,11 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】金の延べ棒・インゴット買取ガイド — 相場・税金・売る方法を徹底解説", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年6月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・売る方法を徹底解説", datePublished: "2026-04-24", dateModified: "2026-06-11", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】金の延べ棒・インゴット買取ガイド — 相場・税金・売る方法を徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金（200万円超の支払調書・譲渡所得）、おすすめ買取業者を徹底解説。" };
+export const metadata: Metadata = { title: "【2026年6月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・売る方法を徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金（200万円超の支払調書・譲渡所得）、おすすめ買取業者を徹底解説。" };
 
 function CtaBox() {
   return (
@@ -68,10 +70,10 @@ export default function KinNobeboKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の延べ棒・インゴット買取ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金の延べ棒・インゴット買取ガイド</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
-        <p>金の延べ棒（インゴット・ゴールドバー）は、金を投資・資産保全目的で保有する最も一般的な形態です。2026年4月現在、金相場が歴史的な高値を更新し続けており、<strong>インゴットの売却を検討する方が急増</strong>しています。</p>
+        <p>金の延べ棒（インゴット・ゴールドバー）は、金を投資・資産保全目的で保有する最も一般的な形態です。2026年現在、金相場が歴史的な高値を更新し続けており、<strong>インゴットの売却を検討する方が急増</strong>しています。</p>
 
         <p>「金の延べ棒はどこで売れる？」「インゴットの買取価格はいくら？」「売却時の税金はどうなる？」——この記事では、金インゴットの売却に関する<strong>相場・税金・おすすめ売却先</strong>をすべて解説します。</p>
 
@@ -84,6 +86,11 @@ export default function KinNobeboKaitoriPage() {
           <li>高く売るためのコツと注意点</li>
         </ul>
 
+        <GoldSpotPriceCard purity="k24" />
+
+        <WeightPriceTable purities={["k24"]} />
+
+
         <h2>金インゴットとは</h2>
 
         <p>金インゴットは、溶かした金を鋳型に流し込んで成形した金塊のことです。<strong>延べ棒、ゴールドバー</strong>とも呼ばれます。純度は99.99%（K24/フォーナイン）が標準で、投資用・資産保全用として世界中で流通しています。</p>
@@ -91,39 +98,10 @@ export default function KinNobeboKaitoriPage() {
         <h3>主な金インゴットのブランド</h3>
 
         <div className="table-wrapper">
-          <table>
-            <thead><tr><th>ブランド名</th><th>国</th><th>LBMA認定</th><th>特徴</th></tr></thead>
-            <tbody>
-              <tr><td><strong>田中貴金属工業</strong></td><td>日本</td><td>認定</td><td>日本で最も流通量が多い</td></tr>
-              <tr><td><strong>三菱マテリアル</strong></td><td>日本</td><td>認定</td><td>大手素材メーカー</td></tr>
-              <tr><td><strong>石福金属興業</strong></td><td>日本</td><td>認定</td><td>老舗の地金商</td></tr>
-              <tr><td><strong>徳力本店</strong></td><td>日本</td><td>認定</td><td>造幣局にも金を供給</td></tr>
-              <tr><td><strong>CREDIT SUISSE</strong></td><td>スイス</td><td>認定</td><td>海外ブランドで人気</td></tr>
-              <tr><td><strong>PAMP</strong></td><td>スイス</td><td>認定</td><td>美しいデザインで有名</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
-        <p><strong>LBMA（ロンドン貴金属市場協会）認定</strong>のブランドは、品質が国際的に保証されており、どの買取業者でもスムーズに買い取ってもらえます。</p>
-
-        <h2>金インゴットの最新買取相場（2026年4月）</h2>
-
-        <div className="table-wrapper">
-          <table>
-            <thead><tr><th>重量</th><th>買取価格の目安（税込）</th><th>備考</th></tr></thead>
-            <tbody>
-              <tr><td><strong>5g</strong></td><td>約76,000〜77,000円</td><td>小型バー。初心者向け</td></tr>
-              <tr><td><strong>10g</strong></td><td>約152,000〜154,000円</td><td></td></tr>
-              <tr><td><strong>20g</strong></td><td>約304,000〜308,000円</td><td>200万円以下で支払調書不要</td></tr>
-              <tr><td><strong>50g</strong></td><td>約760,000〜770,000円</td><td></td></tr>
-              <tr><td><strong>100g</strong></td><td>約1,520,000〜1,540,000円</td><td></td></tr>
-              <tr><td><strong>500g</strong></td><td>約7,600,000〜7,700,000円</td><td>地金商ではバーチャージなし</td></tr>
-              <tr><td><strong>1kg</strong></td><td>約15,200,000〜15,400,000円</td><td>大口取引。特別レート適用の場合あり</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>2026年4月現在、金の買取価格は1gあたり約15,200円前後です。100gのインゴットで約152万円、1kgのインゴットで約1,520万円という<strong>歴史的な高額</strong>になっています。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。100gのインゴットで約152万円、1kgのインゴットで約1,520万円という<strong>歴史的な高額</strong>になっています。</p>
 
         <CtaBox />
 
@@ -215,7 +193,7 @@ export default function KinNobeboKaitoriPage() {
         />
 
         <h2>まとめ</h2>
-        <p>2026年4月現在、金インゴットの買取価格は歴史的な高値を記録しています。100gのインゴットで約152万円、1kgで約1,520万円です。</p>
+        <p>2026年現在、金インゴットの買取価格は歴史的な高値を記録しています。100gのインゴットで約152万円、1kgで約1,520万円です。</p>
         <p>インゴットは高額取引になるため、<strong>業者選び・手数料の比較・税金対策</strong>が特に重要です。</p>
         <ol>
           <li><strong>複数業者に見積もりを取る（1gあたりの差が大きな金額差になる）</strong></li>

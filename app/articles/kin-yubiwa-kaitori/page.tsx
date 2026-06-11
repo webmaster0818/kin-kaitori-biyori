@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
+import { WeightPriceTable } from "@/components/WeightPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -28,7 +30,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "金の指輪の買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K18の指輪は1gあたり約11,200〜11,600円が買取目安です。一般的な結婚指輪（3〜5g）なら約34,000〜57,000円、ファッションリング（5〜10g）なら約57,000〜114,000円程度です。" } },
+      { "@type": "Question", name: "金の指輪の買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。最新の相場は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）をご覧ください。" } },
       { "@type": "Question", name: "結婚指輪や婚約指輪も買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、結婚指輪・婚約指輪も買取可能です。K18やPt900の素材価値で査定されます。ダイヤモンド付きの婚約指輪は、金属部分の素材価値に加えてダイヤの評価も加算されます。" } },
       { "@type": "Question", name: "サイズが合わなくなった指輪も売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、サイズに関係なく買取可能です。金の買取は素材の重量と純度で査定されるため、指輪のサイズは買取価格に影響しません。" } },
       { "@type": "Question", name: "刻印がない指輪でも売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、刻印がなくても買取可能です。買取業者はX線分析装置で正確な純度を測定しますので、刻印がなくても適正な査定を受けられます。ただし、金メッキの場合は買取不可です。" } },
@@ -42,9 +44,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金の指輪（リング）買取相場ガイド — 結婚指輪・ブランドリングの価格と高く売るコツ",
+    headline: "【2026年6月最新】金の指輪（リング）買取相場ガイド — 結婚指輪・ブランドリングの価格と高く売るコツ",
     datePublished: "2026-04-13",
-    dateModified: "2026-04-13",
+    dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -52,7 +54,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金の指輪（リング）買取相場ガイド — 結婚指輪・ブランドリングの価格と高く売るコツ",
+  title: "【2026年6月最新】金の指輪（リング）買取相場ガイド — 結婚指輪・ブランドリングの価格と高く売るコツ",
   description:
     "金の指輪の最新買取相場をK18・K24・K14・Pt900の素材別に掲載。結婚指輪・婚約指輪・ブランドリングの買取価格目安、宝石付きリングの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
 };
@@ -93,8 +95,8 @@ export default function KinYubiwaKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の指輪（リング）買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金の指輪（リング）買取相場ガイド</h1>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <p>金の指輪は、結婚指輪、婚約指輪、ファッションリングなど<strong>幅広いシーンで使われる金製品</strong>です。サイズが合わなくなった、離婚して不要になった、デザインが古い——理由はさまざまですが、金の指輪には<strong>素材としての確かな価値</strong>があり、買取業者で現金化できます。</p>
 
@@ -111,54 +113,17 @@ export default function KinYubiwaKaitoriPage() {
 
         <CtaBox />
 
-        <h2>金の指輪の買取相場一覧（2026年4月）</h2>
+        <GoldSpotPriceCard purity="k18" />
+
+        <WeightPriceTable purities={["k24", "k22", "k18", "k14"]} />
+
+
+        <h2>金の指輪の買取相場一覧（目安・毎日変動）</h2>
 
         <p>金の指輪の買取価格は、ネックレスと同様に<strong>「素材の純度」×「重量」</strong>で算出されます。</p>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>素材</th>
-                <th>1gあたり買取価格</th>
-                <th>3g（細身リング）</th>
-                <th>5g（標準リング）</th>
-                <th>10g（太身リング）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,200円</td><td>約45,600円</td><td>約76,000円</td><td>約152,000円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,400円</td><td>約34,200円</td><td>約57,000円</td><td>約114,000円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,900円</td><td>約26,700円</td><td>約44,500円</td><td>約89,000円</td></tr>
-              <tr><td><strong>K10（10金）</strong></td><td>約6,000円</td><td>約18,000円</td><td>約30,000円</td><td>約60,000円</td></tr>
-              <tr><td><strong>Pt900</strong></td><td>約4,700円</td><td>約14,100円</td><td>約23,500円</td><td>約47,000円</td></tr>
-              <tr><td><strong>Pt950</strong></td><td>約4,900円</td><td>約14,700円</td><td>約24,500円</td><td>約49,000円</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>指輪は<strong>ネックレスと比べると重量が軽い</strong>（3〜10g程度）ため、1本あたりの買取額はネックレスより低くなりがちです。しかし、ダイヤモンドや宝石が付いている場合は石の価値が加算され、<strong>金属部分の価値の数倍</strong>になることもあります。</p>
-
-        <h2>指輪の種類別 — 重量の目安と買取相場</h2>
-
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>指輪の種類</th>
-                <th>素材</th>
-                <th>重量の目安</th>
-                <th>買取目安（金属部分のみ）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>結婚指輪（マリッジリング）</strong></td><td>K18 / Pt900</td><td>3〜5g</td><td>約14,000〜57,000円</td></tr>
-              <tr><td><strong>婚約指輪（エンゲージリング）</strong></td><td>Pt900 / K18</td><td>3〜6g</td><td>約14,000〜68,000円 + ダイヤ</td></tr>
-              <tr><td><strong>ファッションリング</strong></td><td>K18 / K14 / K10</td><td>3〜10g</td><td>約18,000〜114,000円</td></tr>
-              <tr><td><strong>印台リング（メンズ）</strong></td><td>K18 / K24</td><td>10〜30g</td><td>約114,000〜456,000円</td></tr>
-              <tr><td><strong>ピンキーリング</strong></td><td>K10 / K14</td><td>1〜3g</td><td>約6,000〜27,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>メンズの印台リングは<strong>10〜30gと重量がある</strong>ため、K18であれば10万円以上の高額買取が期待できます。逆にK10のピンキーリングは1〜3gと軽いため、1本の買取額は6,000〜18,000円程度です。</p>
@@ -184,22 +149,7 @@ export default function KinYubiwaKaitoriPage() {
         <p>ブランドリングは<strong>金属 + 宝石 + ブランド価値</strong>のトリプルで評価されます。人気ブランドの定番モデルは、金の素材価値だけの査定と比べて<strong>2〜5倍以上</strong>の買取価格になることも珍しくありません。</p>
 
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>ブランド</th>
-                <th>人気モデル</th>
-                <th>買取価格の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>カルティエ</strong></td><td>ラブリング（K18YG）</td><td>約80,000〜120,000円</td></tr>
-              <tr><td><strong>カルティエ</strong></td><td>トリニティリング</td><td>約70,000〜100,000円</td></tr>
-              <tr><td><strong>ティファニー</strong></td><td>Tワイヤーリング</td><td>約40,000〜80,000円</td></tr>
-              <tr><td><strong>ブルガリ</strong></td><td>ビー・ゼロワンリング</td><td>約60,000〜120,000円</td></tr>
-              <tr><td><strong>ヴァンクリーフ</strong></td><td>ペルレリング</td><td>約50,000〜90,000円</td></tr>
-            </tbody>
-          </table>
+          
         </div>
 
         <p>ブランドリングを売る場合は、<strong>金買取専門店とブランド買取専門店の両方に見積もりを取る</strong>のが鉄則です。金の素材価値だけを見る業者では、ブランドの付加価値が評価されず損をする可能性があります。</p>
@@ -265,7 +215,7 @@ export default function KinYubiwaKaitoriPage() {
           {[
             {
               q: "結婚指輪は1本いくらで売れますか？",
-              a: "K18の結婚指輪（4g程度）なら約45,600円、Pt900（4g程度）なら約18,800円が2026年4月時点の買取目安です。ペア（2本）で売ると合計額は倍になります。",
+              a: "K18の結婚指輪（4g程度）なら約45,600円、Pt900（4g程度）なら約18,800円が直近の買取目安です。ペア（2本）で売ると合計額は倍になります。",
             },
             {
               q: "名前や日付の刻印が入っていても売れますか？",
@@ -281,7 +231,7 @@ export default function KinYubiwaKaitoriPage() {
             },
             {
               q: "プラチナと金の指輪、どちらが高く売れますか？",
-              a: "2026年4月現在、K18の方がPt900より高く売れます。K18は1gあたり約11,400円、Pt900は約4,700円で、同じ重量ならK18がプラチナの約2.4倍の価格です。",
+              a: "2026年現在、K18の方がPt900より高く売れます。K18は1gあたり約11,400円、Pt900は約4,700円で、同じ重量ならK18がプラチナの約2.4倍の価格です。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
@@ -307,7 +257,7 @@ export default function KinYubiwaKaitoriPage() {
 
         <p>金の指輪は、サイズが合わなくなっても、デザインが古くなっても、宝石が取れてしまっても——<strong>金の素材としての価値は変わりません</strong>。</p>
 
-        <p>2026年4月現在、K18の指輪は1gあたり約11,400円。<strong>5gの指輪なら約57,000円</strong>、<strong>ダイヤ付きのブランドリングなら10万円以上</strong>の買取が期待できます。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>5gの指輪なら約57,000円</strong>、<strong>ダイヤ付きのブランドリングなら10万円以上</strong>の買取が期待できます。</p>
 
         <p>指輪を少しでも高く売るために、以下のポイントを実践してください。</p>
 
