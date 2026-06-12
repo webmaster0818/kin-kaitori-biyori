@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { GoldSimulator } from "@/components/GoldSimulator";
+import { HighRangeIndicator } from "@/components/HighRangeIndicator";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import goldData from "@/data/gold-spot-prices.json";
@@ -59,6 +60,8 @@ export default function SoubaDashboard() {
             <p className="font-display text-4xl md:text-5xl font-bold text-amber-dark mb-2">{Math.round(k24).toLocaleString()}円<span className="text-lg font-medium">/g</span></p>
             {diffBadge()}
           </div>
+
+          <HighRangeIndicator />
 
           <h2>純度別の本日価格</h2>
           <PurityPriceTable />

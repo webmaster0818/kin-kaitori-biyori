@@ -17,6 +17,8 @@ echo "[$(date '+%Y-%m-%d %H:%M:%S')] === 日次金相場更新 開始 ==="
 echo "[$(date '+%H:%M:%S')] [1/4] 田中貴金属 本日価格を取得"
 /opt/homebrew/bin/python3 scripts/fetch-tanaka-gold-prices.py 2>&1 | tail -3
 
+/opt/homebrew/bin/python3 scripts/gen-widget.py 2>&1 | tail -1
+
 echo "[$(date '+%H:%M:%S')] [2/4] Next.js ビルド"
 rm -rf .next
 export NODE_OPTIONS="--max-old-space-size=8192"

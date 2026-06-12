@@ -2414,5 +2414,29 @@
     "badge": "いわき",
     "category": "region",
     "description": "いわきの金買取相場・方法・高く売るコツを解説。"
+  },
+  {
+    "slug": "kin-kaitori-tesuryo-hikaku",
+    "title": "金買取の手数料を8社で徹底比較",
+    "shortTitle": "手数料8社比較",
+    "badge": "手数料比較",
+    "description": "査定料・出張料・返送料・振込手数料を8社の公式サイトで調査して一覧比較。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-zouyo-zeikin",
+    "title": "金の贈与と税金ガイド",
+    "shortTitle": "金の贈与税",
+    "badge": "贈与税",
+    "description": "110万円の基礎控除・贈与税の速算表・売却時の取得費引き継ぎを解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-baikyaku-mynumber",
+    "title": "金売却とマイナンバーの仕組み",
+    "shortTitle": "マイナンバー",
+    "badge": "マイナンバー",
+    "description": "200万円超で必要になる支払調書とマイナンバー告知の仕組みを解説。",
+    "category": "howto"
   }
 ]
