@@ -95,6 +95,7 @@ function JsonLd() {
 }
 
 const navLinks = [
+  { href: "/souba-dashboard/", label: "本日の相場" },
   { href: "/articles/kin-kaitori-souba/", label: "金買取相場" },
   { href: "/articles/kin-takaku-uru/", label: "高く売る方法" },
   { href: "/articles/k18-kaitori/", label: "K18買取" },
