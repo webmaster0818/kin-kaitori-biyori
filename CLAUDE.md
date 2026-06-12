@@ -31,3 +31,7 @@ GSC実数診断（4サイト中で最も厳しい）:
 ### 2026-06-12 Phase 1実行（MediaXAI承認）
 - `scripts/submit-indexing-rotation.py`＝sitemap全URLをカーソル順に**毎日80件**Indexing API送信（カーソルは~/.openclaw/workspace/gold-indexing-cursor.json、429で即停止）。`daily-gold-update.sh` [5/5]に組込み→毎朝11:05自動。初回80件送信済(309URL中)
 - 総合ハブ=既存kin-kaitori-soubaを起点（6/12に価格列修正済み）。6月末に地域記事の表示状況を再判定して絞り込み判断
+
+### 2026-06-12 Phase 2第1弾（MediaXAI「phase2進めない理由ある？」→即実施）
+- **/souba-dashboard/** = 本日K24価格＋前回比バッジ(gold-price-trend.json末尾2点から算出)＋PurityPriceTable＋**GoldSimulator（client component・純度×重量の概算計算）**＋GoldPriceTrend＋WeightPriceTable＋税金/売り時ガイド導線。ヘッダーnav「本日の相場」追加・sitemap(priority0.9 daily)・Indexing送信済み
+- 競合勝ち筋の追加施策リスト（MediaXAIに提示済み）: ①シミュレーター(済) ②高値圏インジケーター(7月・90日percentile) ③手数料・条件の本気比較 ④埋め込みウィジェット配布=被リンク装置 ⑤税金・相続クラスタ深掘り ⑥実査定レポ(要実物・要相談)
