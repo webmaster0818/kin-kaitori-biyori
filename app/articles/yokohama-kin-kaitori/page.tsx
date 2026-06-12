@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -123,24 +124,9 @@ export default function YokohamaKinKaitoriPage() {
 
         <p>横浜駅はJR・私鉄・地下鉄が乗り入れる巨大ターミナルで、駅周辺にはゴールドプラザ横浜店（駅徒歩2分）、おたからや横浜本店、ブランディア横浜店など、<strong>主要な買取業者が徒歩圏内に集中</strong>しています。</p>
 
-        <h3>横浜の金買取相場（2026年4月）</h3>
+        <h3>横浜の金買取相場（毎日自動更新）</h3>
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,400〜4,700円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <PurityPriceTable />
 
         <p>横浜の買取相場は東京とほぼ同水準です。わざわざ東京まで行かなくても、横浜市内で十分に高値での売却が可能です。</p>
 

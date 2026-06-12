@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -125,24 +126,9 @@ export default function FukuokaKinKaitoriPage() {
 
         <p>福岡はアジアとの距離が近く、韓国・中国からの観光客による貴金属購入需要もあります。この需要が間接的に福岡の貴金属市場を活性化させ、買取業者にとっても<strong>再販売のルートが豊富</strong>なため、高値での買取が期待できます。</p>
 
-        <h3>福岡の金買取相場（2026年4月）</h3>
+        <h3>福岡の金買取相場（毎日自動更新）</h3>
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,400〜4,700円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <PurityPriceTable />
 
         <p>福岡の買取相場は東京・大阪とほぼ同水準です。金の買取価格は国際相場と為替レートに連動するため、地域差はほとんどありません。</p>
 

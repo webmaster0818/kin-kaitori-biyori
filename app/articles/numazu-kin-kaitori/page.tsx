@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -105,21 +106,9 @@ export default function NumazuKinKaitoriPage() {
           <li>送客先4社の特徴と選び方</li>
         </ul>
 
-        <h2>沼津の金買取相場（2026年6月）</h2>
-        <p>金の地金価格は世界共通の国際相場で決まり、純度と重量で買取額が算出されます。2026年6月時点の沼津での買取相場の目安は以下のとおりです。</p>
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr><th>純度</th><th>1gあたり買取価格（税込目安）</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,600〜4,800円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <h2>沼津の金買取相場（毎日自動更新）</h2>
+        <p>金の地金価格は世界共通の国際相場で決まり、純度と重量で買取額が算出されます。最新の沼津での買取目安は以下のとおりです（毎日自動更新）。</p>
+        <PurityPriceTable />
         <p>金相場は歴史的な高値圏で推移しています。沼津でも、まとまった量や高純度の金製品は高額査定が期待できます。最新の相場は<Link href="/articles/kin-kaitori-souba/">金買取相場一覧</Link>で確認できます。</p>
 
         <h2>沼津の主な金買取エリア</h2>

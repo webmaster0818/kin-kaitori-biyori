@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -121,26 +122,11 @@ export default function TokyoKinKaitoriPage() {
           <li>送客先4社の東京での特徴と評判</li>
         </ul>
 
-        <h2>東京の金買取相場（2026年4月）</h2>
+        <h2>東京の金買取相場（毎日自動更新）</h2>
 
         <p>2026年4月現在、東京での金買取相場は以下のとおりです。</p>
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,600〜4,800円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <PurityPriceTable />
 
         <p>東京は全国で最も買取業者間の競争が激しいエリアです。そのため、<strong>地方と比べて1gあたり100〜300円ほど高い買取価格</strong>が提示される傾向があります。</p>
 

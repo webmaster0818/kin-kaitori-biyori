@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -176,20 +177,21 @@ export default function KinKaitoriSoubaPage() {
                 <tr>
                   <th>純度</th>
                   <th>金含有率</th>
-                  <th>1gあたり買取相場（税込目安）</th>
                   <th>主な製品例</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>K24（純金）</strong></td><td>99.99%</td><td>約15,000〜15,400円</td><td>インゴット、金貨、金箔</td></tr>
-                <tr><td><strong>K22</strong></td><td>91.7%</td><td>約13,700〜14,100円</td><td>一部のコイン、海外ジュエリー</td></tr>
-                <tr><td><strong>K18</strong></td><td>75.0%</td><td>約11,200〜11,600円</td><td>ネックレス、指輪、ブレスレット</td></tr>
-                <tr><td><strong>K14</strong></td><td>58.5%</td><td>約8,700〜9,100円</td><td>ピアス、ペンダント、時計ケース</td></tr>
-                <tr><td><strong>K10</strong></td><td>41.7%</td><td>約6,200〜6,500円</td><td>カジュアルアクセサリー</td></tr>
-                <tr><td><strong>K9</strong></td><td>37.5%</td><td>約5,600〜5,900円</td><td>海外製アクセサリー</td></tr>
+                <tr><td><strong>K24（純金）</strong></td><td>99.99%</td><td>インゴット、金貨、金箔</td></tr>
+                <tr><td><strong>K22</strong></td><td>91.7%</td><td>一部のコイン、海外ジュエリー</td></tr>
+                <tr><td><strong>K18</strong></td><td>75.0%</td><td>ネックレス、指輪、ブレスレット</td></tr>
+                <tr><td><strong>K14</strong></td><td>58.5%</td><td>ピアス、ペンダント、時計ケース</td></tr>
+                <tr><td><strong>K10</strong></td><td>41.7%</td><td>カジュアルアクセサリー</td></tr>
+                <tr><td><strong>K9</strong></td><td>37.5%</td><td>海外製アクセサリー</td></tr>
               </tbody>
             </table>
           </div>
+          <p>最新の1gあたり買取目安は以下のとおりです（毎日自動更新）。</p>
+          <PurityPriceTable />
 
           <blockquote>
             <p><strong>ポイント：</strong>上記はあくまで「素材としての金」の相場です。ブランド品（ティファニー、カルティエなど）の場合は、ブランド価値が上乗せされることがあります。ブランドジュエリーは、金買取専門店だけでなくブランド買取に強い業者にも見積もりを取りましょう。</p>
@@ -205,7 +207,6 @@ export default function KinKaitoriSoubaPage() {
                 <tr>
                   <th>純度</th>
                   <th>プラチナ含有率</th>
-                  <th>1gあたり買取相場（税込目安）</th>
                   <th>主な製品例</th>
                 </tr>
               </thead>

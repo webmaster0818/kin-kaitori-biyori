@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -123,24 +124,9 @@ export default function SapporoKinKaitoriPage() {
 
         <p>北海道特有の事情として、<strong>冬場（12月〜3月）は積雪や路面凍結で外出が困難</strong>になることがあります。この時期は出張買取や宅配買取を活用することで、自宅にいながら金の売却が完結できます。</p>
 
-        <h3>札幌の金買取相場（2026年4月）</h3>
+        <h3>札幌の金買取相場（毎日自動更新）</h3>
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取価格（税込目安）</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,100円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,400〜4,700円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <PurityPriceTable />
 
         <p>札幌の買取相場は東京・大阪とほぼ同水準です。ただし、札幌は東京ほど業者間競争が激しくないため、1社だけの査定では相場より安く売ってしまうリスクがあります。<strong>必ず複数社を比較</strong>しましょう。</p>
 

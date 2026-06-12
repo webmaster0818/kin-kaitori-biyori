@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -118,24 +119,9 @@ export default function ChibaKinKaitoriPage() {
 
         <p>千葉県内（船橋・柏・松戸・市川・木更津など）からの利用者が千葉に集まるため、買取量が多く、業者も積極的な価格提示をする傾向にあります。</p>
 
-        <h3>千葉の金買取相場（2026年4月）</h3>
+        <h3>千葉の金買取相場（毎日自動更新）</h3>
 
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>純度</th>
-                <th>1gあたり買取相場の目安</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,000〜15,400円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,200〜11,600円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,700〜9,000円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,500〜4,800円</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <PurityPriceTable />
 
         <p>金の買取価格は国際相場に連動しているため、千葉でも東京でも基本的に同じ水準です。ただし、<strong>業者間の競争が激しいエリアほど高値が出やすい</strong>傾向があります。</p>
 
