@@ -27,3 +27,7 @@ GSC実数診断（4サイト中で最も厳しい）:
 4. タイトル【2026年6月最新】化・dateModified更新・sitemap再送信・Indexing API 11ページ
 - **✅地域ページ修正完了(2026-06-12朝)**: `components/PurityPriceTable.tsx`新設（純度別1g目安・gold-spot-prices.json読み＝日次自動更新）→218地域ページの誤り静的テーブルを一括置換＋kin-kaitori-souba(4列表)は価格列撤去＋ライブ表併設＋誤推移行(2025/26)削除＋例示固定額をライブ参照化。**サイト全体で誤り固定価格ゼロ**
 - ⚠️教訓: 価格断定の置換regexは**行単位**で（複数行スパンでテーブル破壊した）。テーブル行は置換でなく行削除＋空tbody掃除
+
+### 2026-06-12 Phase 1実行（MediaXAI承認）
+- `scripts/submit-indexing-rotation.py`＝sitemap全URLをカーソル順に**毎日80件**Indexing API送信（カーソルは~/.openclaw/workspace/gold-indexing-cursor.json、429で即停止）。`daily-gold-update.sh` [5/5]に組込み→毎朝11:05自動。初回80件送信済(309URL中)
+- 総合ハブ=既存kin-kaitori-soubaを起点（6/12に価格列修正済み）。6月末に地域記事の表示状況を再判定して絞り込み判断

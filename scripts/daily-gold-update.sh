@@ -41,3 +41,6 @@ git commit -m "Daily gold price data: $(date '+%Y-%m-%d')" --allow-empty 2>&1 | 
 git push origin HEAD:main 2>&1 | tail -2
 
 echo "[$(date '+%H:%M:%S')] ✅ 完了 — 経過 $(( $(date +%s) - START ))s"
+
+echo "[$(date '+%H:%M:%S')] [5/5] Indexing APIローテーション送信 (Phase1)"
+"$HOME/.openclaw/workspace/gsc-api/venv/bin/python" "$SRC/scripts/submit-indexing-rotation.py" || echo "indexing rotation failed (non-fatal)"
