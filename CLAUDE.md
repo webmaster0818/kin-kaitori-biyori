@@ -35,3 +35,11 @@ GSC実数診断（4サイト中で最も厳しい）:
 ### 2026-06-12 Phase 2第1弾（MediaXAI「phase2進めない理由ある？」→即実施）
 - **/souba-dashboard/** = 本日K24価格＋前回比バッジ(gold-price-trend.json末尾2点から算出)＋PurityPriceTable＋**GoldSimulator（client component・純度×重量の概算計算）**＋GoldPriceTrend＋WeightPriceTable＋税金/売り時ガイド導線。ヘッダーnav「本日の相場」追加・sitemap(priority0.9 daily)・Indexing送信済み
 - 競合勝ち筋の追加施策リスト（MediaXAIに提示済み）: ①シミュレーター(済) ②高値圏インジケーター(7月・90日percentile) ③手数料・条件の本気比較 ④埋め込みウィジェット配布=被リンク装置 ⑤税金・相続クラスタ深掘り ⑥実査定レポ(要実物・要相談)
+
+### 2026-06-12 ②③④⑤一括実行（MediaXAI「全部進めたい・優先順位任せる」）
+- **③手数料8社比較**: `/articles/kin-kaitori-tesuryo-hikaku/`。2エージェントで8社公式を直接調査（大吉/ウリエル/ティファナ/なんぼや/バイセル/福ちゃん/ザ・ゴールド/おたからや）。発見=査定/出張/キャンセル料は全社無料で差がつかず、**差は宅配返送料**（無料:なんぼや・ティファナ／客負担:バイセル・福ちゃん・ザ・ゴールド／宅配なし:大吉・ウリエル・おたからや）と振込手数料明記の有無。なんぼやの「相場価格に手数料含まず」注記も記載。不明項目は「記載なし」と正直表記・調査日明記
+- **④価格ウィジェット**: `scripts/gen-widget.py`→`public/widget.js`(設置先DOMに直接描画＝**followed被リンク装置**)＋`widget.html`(iframe版)。日次スクリプト[1/4]後に組込み済み=毎日自動更新。配布ページ`/widget/`（設置条件=リンク削除不可）
+- **②高値圏インジケーター(正直版)**: `components/HighRangeIndicator.tsx`をダッシュボードに設置。蓄積データ(現在6日)内のK24位置をバー表示、「暫定値・90日で確定運用に自動移行」と明記。直近90日にsliceするので**コード変更不要で自動成熟**
+- **⑤税金クラスタ2本**: `/articles/kin-zouyo-zeikin/`(贈与税: 110万控除/速算表/No.3270取得費引き継ぎ/名義財産・定期贈与の罠)＋`/articles/kin-baikyaku-mynumber/`(200万円境界/支払調書/「分割すれば申告不要」の誤解を否定)。既存zeikin記事と重複しないテーマ選定（確定申告手順はzeikin記事が網羅済みのため見送り）
+- articles-metadata.json+3・sitemap+4(/widget/含む)。⑥実査定レポは要相談としてMediaXAIに提示済み
+- ⚠️正規ドメイン: ウリエル=uriel-cuore.co.jp / ティファナ=tifana.net（uriel.co.jp等は存在しない）
