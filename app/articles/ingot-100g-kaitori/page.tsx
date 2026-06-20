@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
+import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -107,6 +108,20 @@ export default function Ingot100gKaitoriPage() {
         </div>
         <GoldPriceTrend />
         <ExpertQA category="product" />
+        {/* p0-winner-cluster */}
+        <div className="not-prose my-8">
+          <GoldSimulator />
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 mt-8">金種・品目別の買取相場を見る</h2>
+          <div className="flex flex-wrap gap-2">
+          <Link href="/articles/kin-nobebo-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金の延べ棒・インゴット</Link>
+          <Link href="/articles/kin-bracelet-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金ブレスレット（喜平・テニス）</Link>
+          <Link href="/articles/k24-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K24（純金）</Link>
+          <Link href="/articles/k22-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K22（22金）</Link>
+          <Link href="/articles/k14-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K14（14金）</Link>
+          <Link href="/articles/kin-yubiwa-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金の指輪・リング</Link>
+          <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
+          </div>
+        </div>
         <RelatedArticles currentSlug="ingot-100g-kaitori" relatedSlugs={["kinka-ingot-kaitori", "ingot-500g-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
         <DealerComparisonTable heading="インゴット100gの買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>
