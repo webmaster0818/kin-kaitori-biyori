@@ -36,6 +36,13 @@ GSC実数診断（4サイト中で最も厳しい）:
 - **/souba-dashboard/** = 本日K24価格＋前回比バッジ(gold-price-trend.json末尾2点から算出)＋PurityPriceTable＋**GoldSimulator（client component・純度×重量の概算計算）**＋GoldPriceTrend＋WeightPriceTable＋税金/売り時ガイド導線。ヘッダーnav「本日の相場」追加・sitemap(priority0.9 daily)・Indexing送信済み
 - 競合勝ち筋の追加施策リスト（MediaXAIに提示済み）: ①シミュレーター(済) ②高値圏インジケーター(7月・90日percentile) ③手数料・条件の本気比較 ④埋め込みウィジェット配布=被リンク装置 ⑤税金・相続クラスタ深掘り ⑥実査定レポ(要実物・要相談)
 
+### 2026-06-19〜21 戦略再策定(フルフュージョン)→P0押し込み→P1ツール
+- **2026-06-19 フルフュージョン再策定**: `fusion --full`で3モデル完全一致→最優先=P0(商品/純度/グラム勝ち筋の押し込み)。**P0オンページ(日次相場×純度×重量表・FAQ・GoldSimulator)は既存で構築済みと判明→真のギャップ=勝ち筋ページの孤立**。6勝ち筋＋全24商品/純度ページにGoldSimulator埋込＋勝ち筋クラスタ相互リンク＋souba-dashboard導線を注入(内部リンク集中)。Indexing 24。
+- **2026-06-21 P1=グラム計算機ツール独立ページ新設（MediaXAI「p1いこう」）**: `app/kin-kaitori-keisanki/page.tsx`=`/kin-kaitori-keisanki/`。GoldSimulator(client)埋込＋**純度×グラム別買取目安早見表**(K24/K22/K18/K14×1/5/10/20/30/50/100g、gold-spot-prices.jsonから算出＝日次自動更新)＋本日1g単価カード＋製品別送客(kin-bracelet[喜平/テニス]/necklace/yubiwa/k24/k18/ingot)＋計算式＋FAQ可視＋「引用歓迎」(widget配布導線)＝被リンク資産。schema=BreadcrumbList/FAQPage/WebApplication。グラム系クエリ(喜平30g買取価格8.5位等)の受け皿。
+  - ⚠️**重要発見: `amber`/`amber-dark`はトークン未定義**（globals.cssは accent/accent-dark/navy/cream/foreground/warm-gray/warm-border のみ）。GoldSimulver等の`bg-amber/10`は**色が出ていない死にクラス**。新ページはaccent系に統一した。GoldSimulator自体のamberは既存挙動維持で未変更（24ページの見た目を変えないため）。
+  - **全ページnav「グラム計算機」追加**(navLinks配列・PC/モバイル両方)＝内部リンク強化(低権威の主レバー)。sitemap手動+1(static public/sitemap.xml・315 loc)。ビルドEXIT0・方式Bデプロイ(deploy repoはローカルmaster→`push origin HEAD:main`)・**本番curl(title/早見表506,040円/nav)確認・Indexing API 1/1**。
+  - 効果は1-2週GSC。次候補=P2(地域223本のnoindex可逆/要判断)・P3被リンク営業。
+
 ### 2026-06-12 ②③④⑤一括実行（MediaXAI「全部進めたい・優先順位任せる」）
 - **③手数料8社比較**: `/articles/kin-kaitori-tesuryo-hikaku/`。2エージェントで8社公式を直接調査（大吉/ウリエル/ティファナ/なんぼや/バイセル/福ちゃん/ザ・ゴールド/おたからや）。発見=査定/出張/キャンセル料は全社無料で差がつかず、**差は宅配返送料**（無料:なんぼや・ティファナ／客負担:バイセル・福ちゃん・ザ・ゴールド／宅配なし:大吉・ウリエル・おたからや）と振込手数料明記の有無。なんぼやの「相場価格に手数料含まず」注記も記載。不明項目は「記載なし」と正直表記・調査日明記
 - **④価格ウィジェット**: `scripts/gen-widget.py`→`public/widget.js`(設置先DOMに直接描画＝**followed被リンク装置**)＋`widget.html`(iframe版)。日次スクリプト[1/4]後に組込み済み=毎日自動更新。配布ページ`/widget/`（設置条件=リンク削除不可）
