@@ -53,6 +53,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】中央区の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "中央区で金を高く売るならどこ？中央区の金買取相場、店頭・出張・宅配の方法別比較、東京都で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

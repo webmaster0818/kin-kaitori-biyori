@@ -57,6 +57,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】神戸の金買取おすすめ業者ガイド — 三宮・元町・ハーバーランドエリア別比較",
   description: "神戸で金を高く売るならどこがいい？三宮・元町・ハーバーランドのエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、神戸の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

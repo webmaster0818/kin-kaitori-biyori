@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】銀座の金買取おすすめ｜ハイブランド対応・富裕層向け店舗を厳選",
   description: "銀座エリアの金買取は富裕層・コレクター向け。ハイブランドジュエリー、希少金製品の専門業者、銀座中央通り・並木通り周辺の店舗を比較解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

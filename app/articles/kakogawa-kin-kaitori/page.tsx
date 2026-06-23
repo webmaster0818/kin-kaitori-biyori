@@ -53,6 +53,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】加古川の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "加古川で金を高く売るならどこ？加古川の金買取相場、店頭・出張・宅配の方法別比較、兵庫県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

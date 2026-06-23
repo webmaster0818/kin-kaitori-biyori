@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】池袋の金買取おすすめ｜大手7店舗の特徴と相場比較",
   description: "池袋エリアで金を高く売るための業者比較ガイド。サンシャイン通り・西口・東口の主要店舗、出張・宅配対応、相場の見方を完全解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

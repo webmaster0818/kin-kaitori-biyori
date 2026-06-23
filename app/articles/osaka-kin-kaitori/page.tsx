@@ -67,6 +67,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】大阪の金買取おすすめ業者ガイド — 梅田・難波・心斎橋エリア別比較",
   description:
     "大阪で金を高く売るならどこがいい？梅田・難波・心斎橋のエリア別おすすめ買取業者、買取方法の比較、大阪の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

@@ -534,6 +534,7 @@ function ArticleSchema() {{
     "@type": "Article",
     headline: {json.dumps(title,ensure_ascii=False)},
     description: {json.dumps(desc,ensure_ascii=False)},
+  robots: { index: false, follow: true },
     datePublished: "2026-06-05",
     dateModified: "2026-06-05",
     author: {{ "@type": "Organization", name: "金買取びより編集部" }},

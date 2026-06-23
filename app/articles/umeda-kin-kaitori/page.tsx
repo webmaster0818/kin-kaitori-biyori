@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】梅田の金買取おすすめ｜大阪駅周辺の主要店舗と相場比較",
   description: "梅田・大阪駅周辺で金を高く売るための業者比較。JR大阪駅・阪急梅田・地下街の主要店舗、相場、出張・宅配の選び方を解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

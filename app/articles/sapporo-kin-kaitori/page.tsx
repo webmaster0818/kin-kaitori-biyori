@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】札幌の金買取おすすめ業者ガイド — 札幌駅・大通・すすきのエリア別比較",
   description:
     "札幌で金を高く売るならどこがいい？札幌駅・大通・すすきののエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、札幌の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

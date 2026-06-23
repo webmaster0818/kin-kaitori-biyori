@@ -57,6 +57,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】京都の金買取おすすめ業者ガイド — 四条・烏丸・河原町・祇園エリア別比較",
   description: "京都で金を高く売るならどこがいい？四条・烏丸・河原町・祇園のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、京都の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

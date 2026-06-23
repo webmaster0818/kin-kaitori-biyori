@@ -57,6 +57,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】広島の金買取おすすめ業者ガイド — 広島駅・八丁堀・本通エリア別比較",
   description: "広島で金を高く売るならどこがいい？広島駅・八丁堀・本通のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、広島の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {

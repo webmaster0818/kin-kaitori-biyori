@@ -69,6 +69,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】東京の金買取おすすめ業者ガイド — エリア別・方法別に徹底比較",
   description:
     "東京で金を高く売るならどこがいい？銀座・新宿・上野御徒町のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、東京の金買取相場と高く売るコツを徹底解説。",
+  robots: { index: false, follow: true },
 };
 
 function CtaBox() {
