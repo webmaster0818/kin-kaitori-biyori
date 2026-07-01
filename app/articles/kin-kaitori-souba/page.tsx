@@ -449,7 +449,7 @@ export default function KinKaitoriSoubaPage() {
           <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-kaitori-souba"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
           />
 
           <DealerComparisonTable

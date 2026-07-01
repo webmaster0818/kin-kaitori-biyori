@@ -341,7 +341,7 @@ export default function KinUridoki2026Page() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-uridoki-2026"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-uru-timing", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-uru-timing", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <h2>まとめ</h2>

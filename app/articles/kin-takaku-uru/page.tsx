@@ -461,7 +461,7 @@ export default function KinTakakuUruPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-takaku-uru"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-uru-timing", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori"]}
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-uru-timing", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <DealerComparisonTable

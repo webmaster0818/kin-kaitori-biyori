@@ -47,7 +47,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年6月最新】金ブレスレット・バングル買取相場ガイド — 喜平・テニスブレスの価格と高く売るコツ",
     datePublished: "2026-04-13",
-    dateModified: "2026-06-11",
+    dateModified: "2026-07-01",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -97,7 +97,7 @@ export default function KinBraceletKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金ブレスレット・バングル買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月1日</p>
 
         <p>金のブレスレットやバングルは、<strong>ネックレスに次いで買取に持ち込まれることの多い金製品</strong>です。特に喜平ブレスレットやバングルは重量があるため、金価格が高騰している現在、<strong>驚くほどの高額買取</strong>が期待できます。</p>
 

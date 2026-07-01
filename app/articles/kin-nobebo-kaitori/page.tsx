@@ -203,7 +203,7 @@ export default function KinNobeboKaitoriPage() {
         </div>
         <RelatedArticles
           currentSlug="kin-nobebo-kaitori"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kinka-ingot-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kinka-ingot-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <h2>まとめ</h2>
