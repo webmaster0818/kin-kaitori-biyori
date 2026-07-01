@@ -441,7 +441,7 @@ export default function KaitoriHouhouHikakuPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kaitori-houhou-hikaku"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
         />
 
         <DealerComparisonTable

@@ -200,7 +200,7 @@ export default function KinKaitoriHajimetePage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-kaitori-hajimete"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-sagi", "kin-kaitori-souba", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori"]}
+          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-sagi", "kin-kaitori-souba", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>
