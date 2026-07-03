@@ -294,7 +294,7 @@ export default function KinNecklaceKaitoriPage() {
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 mt-8">金種・品目別の買取相場を見る</h2>
           <div className="flex flex-wrap gap-2">
           <Link href="/articles/kin-nobebo-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金の延べ棒・インゴット</Link>
-          <Link href="/articles/kin-bracelet-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金ブレスレット（喜平・テニス）</Link>
+          <Link href="/articles/kin-bracelet-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">金ブレスレット買取（喜平・テニス）</Link>
           <Link href="/articles/k24-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K24（純金）</Link>
           <Link href="/articles/k22-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K22（22金）</Link>
           <Link href="/articles/k14-kaitori/" className="text-sm bg-cream border border-amber/40 text-amber-dark rounded-lg px-3 py-2 hover:bg-amber/10">K14（14金）</Link>
@@ -304,7 +304,7 @@ export default function KinNecklaceKaitoriPage() {
         </div>
         <RelatedArticles
           currentSlug="kin-necklace-kaitori"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-chain-kaitori", "kin-bracelet-kaitori", "kin-yubiwa-kaitori", "kin-pierce-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-chain-kaitori", "kin-bracelet-kaitori", "kin-yubiwa-kaitori", "kin-pierce-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori"]}
         />
 
         <h2>まとめ</h2>

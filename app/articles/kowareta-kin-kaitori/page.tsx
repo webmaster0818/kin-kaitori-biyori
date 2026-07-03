@@ -522,7 +522,7 @@ export default function KowaretaKinKaitoriPage() {
         </div>
           <RelatedArticles
             currentSlug="kowareta-kin-kaitori"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kinba-kaitori", "ihin-seiri-kin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kinba-kaitori", "ihin-seiri-kin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
           />
 
           <h2>まとめ</h2>

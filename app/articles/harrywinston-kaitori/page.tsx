@@ -165,7 +165,7 @@ export default function Page() {
           <ExpertQA category="brand" />
           <RelatedArticles
             currentSlug="harrywinston-kaitori"
-            relatedSlugs={["k18-kaitori", "k18pg-kaitori", "k18wg-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
+            relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
           />
         </article>
       </div>

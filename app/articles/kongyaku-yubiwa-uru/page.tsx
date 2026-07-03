@@ -171,7 +171,7 @@ export default function Page() {
           <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kongyaku-yubiwa-uru"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-yubiwa-kaitori", "diamond-kaitori", "cartier-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-yubiwa-kaitori", "diamond-kaitori", "cartier-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
           />
         </article>
       </div>

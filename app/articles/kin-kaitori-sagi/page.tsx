@@ -222,7 +222,7 @@ export default function KinKaitoriSagiPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-kaitori-sagi"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
         />
 
         <h2>まとめ</h2>

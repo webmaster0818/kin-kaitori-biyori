@@ -301,7 +301,7 @@ export default function KinKakuteiShinkokuPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-kakutei-shinkoku"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-zeikin", "kin-200man-mynumber", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kaitori-zeikin", "kin-200man-mynumber", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

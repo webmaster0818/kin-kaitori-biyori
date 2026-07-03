@@ -21,11 +21,11 @@ const WEIGHTS = [1, 5, 10, 20, 30, 50, 100];
 const yen = (n: number) => Math.round(n).toLocaleString();
 
 const PRODUCT_LINKS: { href: string; label: string }[] = [
-  { href: "/articles/kin-bracelet-kaitori/", label: "金ブレスレット（喜平・テニス）" },
+  { href: "/articles/kin-bracelet-kaitori/", label: "金ブレスレット買取（喜平・テニス）" },
   { href: "/articles/kin-necklace-kaitori/", label: "金ネックレス・チェーン" },
   { href: "/articles/kin-yubiwa-kaitori/", label: "金の指輪・リング" },
   { href: "/articles/k24-kaitori/", label: "K24（純金）" },
-  { href: "/articles/k18-kaitori/", label: "K18（18金）" },
+  { href: "/articles/kinseido-kaitori-guide/", label: "K18（18金）" },
   { href: "/articles/ingot-100g-kaitori/", label: "金インゴット100g" },
 ];
 

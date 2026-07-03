@@ -122,7 +122,7 @@ export default function ViennaKinkaKaitoriPage() {
           <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
           </div>
         </div>
-        <RelatedArticles currentSlug="vienna-kinka-kaitori" relatedSlugs={["maple-leaf-kinka-kaitori", "kinka-ingot-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
+        <RelatedArticles currentSlug="vienna-kinka-kaitori" relatedSlugs={["kinka-kaitori-guide", "kinka-ingot-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
         <DealerComparisonTable heading="ウィーン金貨の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>
         <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が歴史的高値にある今こそ、手元の品を見直す好機です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>

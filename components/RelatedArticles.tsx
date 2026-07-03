@@ -48,6 +48,35 @@ const GROUP_LABEL: Record<ArticleCategory, string> = {
   compare: "比較・解説",
 };
 
+// 全記事共通: 一次データ資産への内部リンク（白書/ダッシュボード/計算機のインデックス・評価促進）
+const DATA_TOOLS = [
+  { href: "/kin-kaitori-hakusho/", label: "金買取 相場白書", note: "日次データの統計・引用歓迎" },
+  { href: "/souba-dashboard/", label: "本日の金買取相場", note: "毎日自動更新のダッシュボード" },
+  { href: "/kin-kaitori-keisanki/", label: "金買取 グラム計算機", note: "純度×重量で今日の目安を計算" },
+];
+
+function DataToolLinks() {
+  return (
+    <section className="mt-8">
+      <h3 className="text-sm font-bold text-accent-dark mb-3 pb-2 border-b border-warm-border">
+        相場データ・ツール（毎日更新）
+      </h3>
+      <div className="flex flex-wrap gap-3">
+        {DATA_TOOLS.map((t) => (
+          <Link
+            key={t.href}
+            href={t.href}
+            className="block bg-gold-bg border border-warm-border rounded-xl px-4 py-3 hover:border-accent/40 hover:shadow-md transition-all"
+          >
+            <span className="font-bold text-sm text-foreground">{t.label}</span>
+            <span className="block text-xs text-warm-gray mt-0.5">{t.note}</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function RelatedArticles({ currentSlug, relatedSlugs }: Props) {
   const seen = new Set<string>();
   const items: ArticleMeta[] = [];
@@ -59,7 +88,12 @@ export default function RelatedArticles({ currentSlug, relatedSlugs }: Props) {
     seen.add(slug);
     items.push(meta);
   }
-  if (items.length === 0) return null;
+  if (items.length === 0)
+    return (
+      <aside className="mt-12 pt-8 border-t border-warm-border not-prose">
+        <DataToolLinks />
+      </aside>
+    );
 
   const grouped: Record<ArticleCategory, ArticleMeta[]> = {
     purity: [],
@@ -108,6 +142,7 @@ export default function RelatedArticles({ currentSlug, relatedSlugs }: Props) {
           );
         })}
       </div>
+      <DataToolLinks />
     </aside>
   );
 }

@@ -66,12 +66,12 @@ const articles = [
     tags: ["店頭買取", "出張買取", "宅配買取", "一括査定"],
   },
   {
-    href: "/articles/k18-kaitori/",
+    href: "/articles/kinseido-kaitori-guide/",
     tag: "品目ガイド",
-    title: "【2026年最新】K18（18金）買取相場と高く売る方法",
+    title: "【2026年7月】金の品位別買取相場ガイド — K10・K18・K18WG・K18PG",
     description:
-      "K18の1gあたりの買取相場、ネックレス・指輪・ブレスレットの製品別価格、刻印の見方、おすすめ買取業者を徹底解説。",
-    tags: ["K18", "18金", "ネックレス", "指輪"],
+      "K10とK18の買取相場の違い、ホワイトゴールド・ピンクゴールドが同価格の理由、刻印の見方、おすすめ買取業者を徹底解説。",
+    tags: ["K18", "K10", "ホワイトゴールド", "刻印"],
   },
   {
     href: "/articles/k24-kaitori/",
@@ -250,12 +250,12 @@ const articles = [
     tags: ["銀", "シルバー", "SV925", "銀食器"],
   },
   {
-    href: "/articles/k10-kaitori/",
+    href: "/articles/kinka-kaitori-guide/",
     tag: "品目ガイド",
-    title: "【2026年最新】K10（10金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    title: "【2026年7月】金貨買取ガイド — メイプルリーフ・イーグル・カンガルー・記念金貨",
     description:
-      "K10の最新買取相場を1gあたりの価格で掲載。K10とK18の違い、製品別価格目安、高く売るコツを解説。",
-    tags: ["K10", "10金", "アクセサリー", "相場"],
+      "主要な地金型金貨と天皇陛下記念金貨の評価基準、地金価値の計算方法、プレミアが付くケース、高く売るコツを解説。",
+    tags: ["金貨", "メイプルリーフ", "記念金貨", "相場"],
   },
   {
     href: "/articles/kin-nobebo-kaitori/",
@@ -554,6 +554,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* データで見る金買取（一次データ資産への導線） */}
+      <section className="bg-gold-bg border-b border-warm-border">
+        <div className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="font-display text-lg md:text-xl font-bold mb-4 text-center">
+            データで見る金買取（毎日自動更新）
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/souba-dashboard/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
+              <span className="font-bold text-sm">📊 本日の金買取相場</span>
+              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">K24〜K10の1g目安と推移グラフ。田中貴金属の公表値をもとに毎朝更新。</span>
+            </Link>
+            <Link href="/kin-kaitori-keisanki/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
+              <span className="font-bold text-sm">🧮 グラム計算機</span>
+              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">純度×重量を選ぶだけで、今日の買取目安をその場で計算。</span>
+            </Link>
+            <Link href="/kin-kaitori-hakusho/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
+              <span className="font-bold text-sm">📖 金買取 相場白書</span>
+              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">日次データの統計と傾向を公開。出典明記での引用を歓迎しています。</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 2026年4月 金は今が売り時？相場高騰の背景 */}
       <section className="max-w-5xl mx-auto px-4 py-14">
         <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
@@ -683,12 +706,12 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
             {[
               { label: "K24（純金）", href: "/articles/k24-kaitori/" },
-              { label: "K18（18金）", href: "/articles/k18-kaitori/" },
+              { label: "K18（18金）", href: "/articles/kinseido-kaitori-guide/" },
               { label: "K14（14金）", href: "/articles/kin-kaitori-souba/#k14" },
               { label: "プラチナ", href: "/articles/platinum-kaitori/" },
               { label: "金歯・金冠", href: "/articles/kinba-kaitori/" },
-              { label: "ネックレス", href: "/articles/k18-kaitori/#necklace" },
-              { label: "指輪・リング", href: "/articles/k18-kaitori/#ring" },
+              { label: "ネックレス", href: "/articles/kin-necklace-kaitori/" },
+              { label: "指輪・リング", href: "/articles/kin-yubiwa-kaitori/" },
               { label: "ダイヤモンド・宝石", href: "/articles/diamond-kaitori/" },
               { label: "金貨・インゴット", href: "/articles/kinka-ingot-kaitori/" },
               { label: "壊れた金・刻印なし", href: "/articles/kowareta-kin-kaitori/" },
@@ -700,13 +723,14 @@ export default function Home() {
               { label: "横浜の金買取", href: "/articles/yokohama-kin-kaitori/" },
               { label: "札幌の金買取", href: "/articles/sapporo-kin-kaitori/" },
               { label: "銀（シルバー）", href: "/articles/gin-kaitori/" },
-              { label: "K10（10金）", href: "/articles/k10-kaitori/" },
+              { label: "K10（10金）", href: "/articles/kinseido-kaitori-guide/" },
               { label: "インゴット", href: "/articles/kin-nobebo-kaitori/" },
               { label: "真珠（パール）", href: "/articles/shinju-kaitori/" },
               { label: "純度の見分け方", href: "/articles/kin-jundo-mikata/" },
               { label: "税金・確定申告", href: "/articles/kin-kaitori-zeikin/" },
               { label: "詐欺・トラブル対策", href: "/articles/kin-kaitori-sagi/" },
               { label: "初めての金買取", href: "/articles/kin-kaitori-hajimete/" },
+              { label: "手続き・持ち物", href: "/articles/kin-kaitori-tetsuzuki-guide/" },
               { label: "売り時 2026", href: "/articles/kin-uridoki-2026/" },
               { label: "カルティエ", href: "/articles/cartier-kaitori/" },
               { label: "ティファニー", href: "/articles/tiffany-kaitori/" },

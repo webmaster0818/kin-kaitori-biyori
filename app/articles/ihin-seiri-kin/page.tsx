@@ -320,7 +320,7 @@ export default function IhinSeiriKinPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="ihin-seiri-kin"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-souzoku-baikyaku", "kowareta-kin-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-souzoku-baikyaku", "kowareta-kin-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

@@ -107,7 +107,7 @@ export default function YondoshiKaitoriPage() {
         </div>
         <GoldPriceTrend />
         <ExpertQA category="brand" />
-        <RelatedArticles currentSlug="4c-kaitori" relatedSlugs={["agete-kaitori", "k10-kaitori", "k18-kaitori", "kin-necklace-kaitori", "kin-takaku-uru"]} />
+        <RelatedArticles currentSlug="4c-kaitori" relatedSlugs={["agete-kaitori", "kinseido-kaitori-guide", "kin-necklace-kaitori", "kin-takaku-uru"]} />
         <DealerComparisonTable heading="4℃（ヨンドシー）の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>
         <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が歴史的高値にある今こそ、手元の品を見直す好機です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>

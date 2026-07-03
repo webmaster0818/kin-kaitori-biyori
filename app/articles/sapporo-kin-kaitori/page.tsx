@@ -334,7 +334,7 @@ export default function SapporoKinKaitoriPage() {
         <NearbyAreas pref="北海道" areas={[{ slug: "asahikawa-kin-kaitori", label: "旭川" }, { slug: "hakodate-kin-kaitori", label: "函館" }, { slug: "kushiro-kin-kaitori", label: "釧路" }, { slug: "obihiro-kin-kaitori", label: "帯広" }, { slug: "tomakomai-kin-kaitori", label: "苫小牧" }, { slug: "sendai-kin-kaitori", label: "仙台" }, { slug: "aomori-kin-kaitori", label: "青森" }, { slug: "morioka-kin-kaitori", label: "盛岡" }]} />
         <RelatedArticles
           currentSlug="sapporo-kin-kaitori"
-          relatedSlugs={["sendai-kin-kaitori", "tokyo-kin-kaitori", "fukuoka-kin-kaitori", "yokohama-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          relatedSlugs={["sendai-kin-kaitori", "tokyo-kin-kaitori", "fukuoka-kin-kaitori", "yokohama-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
         />
 
         <h2>まとめ</h2>

@@ -197,6 +197,8 @@ export default function KinKaitoriSoubaPage() {
             <p><strong>ポイント：</strong>上記はあくまで「素材としての金」の相場です。ブランド品（ティファニー、カルティエなど）の場合は、ブランド価値が上乗せされることがあります。ブランドジュエリーは、金買取専門店だけでなくブランド買取に強い業者にも見積もりを取りましょう。</p>
           </blockquote>
 
+          <p>喜平ブレスレットなど重量のある製品をお持ちの方は、10g・20g・30g・50gの重量帯別に目安を計算できる<Link href="/articles/kin-bracelet-kaitori/" className="text-accent hover:underline">金ブレスレット買取相場ガイド</Link>もあわせてご覧ください。</p>
+
           <h2 id="platinum">プラチナの買取相場一覧（2026年4月）</h2>
 
           <p>金と並んで人気の貴金属がプラチナです。プラチナは工業用途（自動車の触媒など）での需要も大きく、金とは異なる値動きをします。</p>
@@ -449,7 +451,7 @@ export default function KinKaitoriSoubaPage() {
           <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-kaitori-souba"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
           />
 
           <DealerComparisonTable

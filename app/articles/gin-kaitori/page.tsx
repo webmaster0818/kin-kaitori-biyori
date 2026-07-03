@@ -360,7 +360,7 @@ export default function GinKaitoriPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="gin-kaitori"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "platinum-kaitori", "kin-kaitori-souba", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "platinum-kaitori", "kin-kaitori-souba", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
         />
 
         <h2>まとめ</h2>

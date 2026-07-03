@@ -345,7 +345,7 @@ export default function FukuokaKinKaitoriPage() {
         <NearbyAreas pref="福岡県" areas={[{ slug: "fukuoka-ken-kin-kaitori", label: "福岡県" }, { slug: "iizuka-kin-kaitori", label: "飯塚" }, { slug: "kasuga-fukuoka-kin-kaitori", label: "春日" }, { slug: "kitakyushu-kin-kaitori", label: "北九州" }, { slug: "kurume-kin-kaitori", label: "久留米" }, { slug: "omuta-kin-kaitori", label: "大牟田" }, { slug: "kumamoto-kin-kaitori", label: "熊本" }, { slug: "kagoshima-kin-kaitori", label: "鹿児島" }]} />
         <RelatedArticles
           currentSlug="fukuoka-kin-kaitori"
-          relatedSlugs={["hiroshima-kin-kaitori", "osaka-kin-kaitori", "kobe-kin-kaitori", "sapporo-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          relatedSlugs={["hiroshima-kin-kaitori", "osaka-kin-kaitori", "kobe-kin-kaitori", "sapporo-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
         />
 
         <h2>まとめ</h2>

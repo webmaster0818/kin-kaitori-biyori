@@ -300,7 +300,7 @@ export default function HiroshimaKinKaitoriPage() {
         <NearbyAreas pref="広島県" areas={[{ slug: "fukuyama-kin-kaitori", label: "福山" }, { slug: "kure-kin-kaitori", label: "呉" }, { slug: "okayama-kin-kaitori", label: "岡山" }, { slug: "kurashiki-kin-kaitori", label: "倉敷" }, { slug: "takamatsu-kin-kaitori", label: "高松" }, { slug: "matsuyama-kin-kaitori", label: "松山" }, { slug: "matsue-kin-kaitori", label: "松江" }, { slug: "yamaguchi-kin-kaitori", label: "山口" }]} />
         <RelatedArticles
           currentSlug="hiroshima-kin-kaitori"
-          relatedSlugs={["fukuoka-kin-kaitori", "osaka-kin-kaitori", "kobe-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          relatedSlugs={["fukuoka-kin-kaitori", "osaka-kin-kaitori", "kobe-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
         />
 
         <h2>まとめ</h2>

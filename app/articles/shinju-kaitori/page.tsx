@@ -221,7 +221,7 @@ export default function ShinjuKaitoriPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="shinju-kaitori"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "diamond-kaitori", "platinum-kaitori", "kin-yubiwa-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "diamond-kaitori", "platinum-kaitori", "kin-yubiwa-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

@@ -172,7 +172,7 @@ export default function Page() {
         </div>
           <RelatedArticles
             currentSlug="kin-chain-kaitori"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-yubiwa-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-yubiwa-kaitori"]}
           />
         </article>
       </div>

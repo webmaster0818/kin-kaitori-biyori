@@ -169,7 +169,7 @@ export default function KinSouzokuBaikyakuPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-souzoku-baikyaku"
-          relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "ihin-seiri-kin", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "ihin-seiri-kin", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

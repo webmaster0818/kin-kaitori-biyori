@@ -221,7 +221,7 @@ export default function Page() {
           <ul className="space-y-2 text-sm">
             <li>📈 <Link href="/souba-dashboard/" className="text-accent-dark underline">金価格・買取相場ダッシュボード</Link>（本日の相場・チャート・シミュレーターをまとめて確認）</li>
             <li>🧮 <Link href="/kin-kaitori-keisanki/" className="text-accent-dark underline">金買取相場グラム計算機</Link>（純度×重量で買取目安を即計算）</li>
-            <li>💍 製品別の相場：<Link href="/articles/kin-bracelet-kaitori/" className="text-accent-dark underline">金ブレスレット</Link>／<Link href="/articles/k24-kaitori/" className="text-accent-dark underline">K24</Link>／<Link href="/articles/k18-kaitori/" className="text-accent-dark underline">K18</Link></li>
+            <li>💍 製品別の相場：<Link href="/articles/kin-bracelet-kaitori/" className="text-accent-dark underline">金ブレスレット</Link>／<Link href="/articles/k24-kaitori/" className="text-accent-dark underline">K24</Link>／<Link href="/articles/kinseido-kaitori-guide/" className="text-accent-dark underline">K18</Link></li>
           </ul>
         </section>
 

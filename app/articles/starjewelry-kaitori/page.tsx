@@ -107,7 +107,7 @@ export default function StarjewelryKaitoriPage() {
         </div>
         <GoldPriceTrend />
         <ExpertQA category="brand" />
-        <RelatedArticles currentSlug="starjewelry-kaitori" relatedSlugs={["4c-kaitori", "agete-kaitori", "k18-kaitori", "platinum-kaitori", "kin-takaku-uru"]} />
+        <RelatedArticles currentSlug="starjewelry-kaitori" relatedSlugs={["4c-kaitori", "agete-kaitori", "kinseido-kaitori-guide", "platinum-kaitori", "kin-takaku-uru"]} />
         <DealerComparisonTable heading="スタージュエリーの買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>
         <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が歴史的高値にある今こそ、手元の品を見直す好機です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>

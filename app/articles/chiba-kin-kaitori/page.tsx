@@ -300,7 +300,7 @@ export default function ChibaKinKaitoriPage() {
         <NearbyAreas pref="千葉県" areas={[{ slug: "abiko-kin-kaitori", label: "我孫子" }, { slug: "chiba-ken-kin-kaitori", label: "千葉県" }, { slug: "funabashi-kin-kaitori", label: "船橋" }, { slug: "ichihara-kin-kaitori", label: "市原" }, { slug: "ichikawa-chiba-kin-kaitori", label: "市川" }, { slug: "kashiwa-kin-kaitori", label: "柏" }, { slug: "kisarazu-kin-kaitori", label: "木更津" }, { slug: "matsudo-kin-kaitori", label: "松戸" }]} />
         <RelatedArticles
           currentSlug="chiba-kin-kaitori"
-          relatedSlugs={["tokyo-kin-kaitori", "yokohama-kin-kaitori", "omiya-kin-kaitori", "ginza-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          relatedSlugs={["tokyo-kin-kaitori", "yokohama-kin-kaitori", "omiya-kin-kaitori", "ginza-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
         />
 
         <h2>まとめ</h2>

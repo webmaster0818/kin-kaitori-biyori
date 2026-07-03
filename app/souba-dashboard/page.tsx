@@ -82,7 +82,7 @@ export default function SoubaDashboard() {
             <li><Link href="/articles/kin-uridoki-2026/">金の売り時の考え方</Link></li>
             <li><Link href="/articles/kin-kaitori-zeikin/">金売却の税金（譲渡所得・支払調書）</Link></li>
             <li><Link href="/articles/k24-kaitori/">K24（純金）買取ガイド</Link></li>
-            <li><Link href="/articles/k18-kaitori/">K18買取ガイド</Link></li>
+            <li><Link href="/articles/kinseido-kaitori-guide/">品位別買取ガイド（K10〜K18）</Link></li>
           </ul>
 
           <h2>よくある質問</h2>

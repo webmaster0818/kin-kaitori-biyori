@@ -595,7 +595,7 @@ export default function KinkaIngotKaitoriPage() {
         </div>
           <RelatedArticles
             currentSlug="kinka-ingot-kaitori"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-nobebo-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-nobebo-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}
           />
 
           <h2>まとめ</h2>

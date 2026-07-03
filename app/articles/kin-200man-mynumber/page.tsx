@@ -162,7 +162,7 @@ export default function Page() {
           <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-200man-mynumber"
-            relatedSlugs={["k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-kaitori-zeikin", "kin-kakutei-shinkoku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kaitori-zeikin", "kin-kakutei-shinkoku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
           />
         </article>
       </div>

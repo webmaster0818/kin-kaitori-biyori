@@ -104,43 +104,11 @@
     "category": "compare"
   },
   {
-    "slug": "k10-kaitori",
-    "title": "K10（10金）買取相場ガイド",
-    "shortTitle": "K10（10金）買取相場ガイド",
-    "badge": "K10",
-    "description": "金含有率41.7%のK10の買取価格と注意点。",
-    "category": "purity"
-  },
-  {
     "slug": "k14-kaitori",
     "title": "K14（14金）買取相場ガイド",
     "shortTitle": "K14（14金）買取相場ガイド",
     "badge": "K14",
     "description": "海外製アクセサリに多いK14の相場と査定ポイント。",
-    "category": "purity"
-  },
-  {
-    "slug": "k18-kaitori",
-    "title": "K18（18金）買取相場ガイド",
-    "shortTitle": "K18（18金）買取相場ガイド",
-    "badge": "K18",
-    "description": "国内で最も流通量の多いK18の相場と刻印解説。",
-    "category": "purity"
-  },
-  {
-    "slug": "k18pg-kaitori",
-    "title": "K18PG（ピンクゴールド）買取相場",
-    "shortTitle": "K18PG（ピンクゴールド）買取相場",
-    "badge": "K18PG",
-    "description": "カルティエ等で人気のK18PGの相場と特徴。",
-    "category": "purity"
-  },
-  {
-    "slug": "k18wg-kaitori",
-    "title": "K18WG（ホワイトゴールド）買取相場",
-    "shortTitle": "K18WG（ホワイトゴールド）買取相場",
-    "badge": "K18WG",
-    "description": "プラチナと混同されがちなK18WGの査定基準。",
     "category": "purity"
   },
   {
@@ -1096,44 +1064,12 @@
     "description": "スタージュエリーのジュエリーを高く売るコツ。K10・K18・Ptの素材価値とブランド価値、相場の調べ方を解説します。"
   },
   {
-    "slug": "maple-leaf-kinka-kaitori",
-    "title": "メイプルリーフ金貨の買取相場ガイド｜純度99.99%を高く売る",
-    "shortTitle": "メイプルリーフ金貨の買取相場ガイド",
-    "badge": "メイプルリーフ金貨",
-    "category": "product",
-    "description": "カナダのメイプルリーフ金貨を高く売るコツ。純度99.99%の純金としての評価ポイントと、地金型金貨の相場の調べ方を解説します。"
-  },
-  {
     "slug": "vienna-kinka-kaitori",
     "title": "ウィーン金貨ハーモニーの買取相場ガイド",
     "shortTitle": "ウィーン金貨ハーモニーの買取相場ガイド",
     "badge": "ウィーン金貨",
     "category": "product",
     "description": "オーストリアのウィーン金貨ハーモニーを高く売るコツ。純度99.99%の純金としての評価と相場の調べ方を解説します。"
-  },
-  {
-    "slug": "eagle-kinka-kaitori",
-    "title": "イーグル金貨（アメリカ）の買取相場ガイド",
-    "shortTitle": "イーグル金貨（アメリカ）の買取相場ガイド",
-    "badge": "イーグル金貨",
-    "category": "product",
-    "description": "アメリカのイーグル金貨を高く売るコツ。22金（K22相当）の地金型金貨としての評価と相場の調べ方を解説します。"
-  },
-  {
-    "slug": "kangaroo-kinka-kaitori",
-    "title": "カンガルー金貨（オーストラリア）の買取ガイド",
-    "shortTitle": "カンガルー金貨（オーストラリア）の買取ガイド",
-    "badge": "カンガルー金貨",
-    "category": "product",
-    "description": "オーストラリアのカンガルー金貨を高く売るコツ。純度99.99%の純金としての評価と相場の調べ方を解説します。"
-  },
-  {
-    "slug": "tenno-kinka-kaitori",
-    "title": "記念金貨（天皇陛下御在位など）の買取ガイド",
-    "shortTitle": "記念金貨（天皇陛下御在位など）の買取ガイド",
-    "badge": "天皇陛下御在位記念金貨",
-    "category": "product",
-    "description": "天皇陛下御在位記念金貨など日本の記念金貨を高く売るコツ。額面と地金価値、プレミアの考え方を解説します。"
   },
   {
     "slug": "ingot-100g-kaitori",
@@ -1144,28 +1080,12 @@
     "description": "金インゴット（100g）を高く売るコツ。刻印・ブランド（田中貴金属など）の評価と地金相場の調べ方を解説します。"
   },
   {
-    "slug": "ingot-500g-kaitori",
-    "title": "金インゴット500g・1kgの買取ガイド",
-    "shortTitle": "金インゴット500g・1kgの買取ガイド",
-    "badge": "インゴット500g",
-    "category": "product",
-    "description": "金インゴット（500g・1kg）を高く売るコツ。高額地金の安全な売却方法と相場の調べ方を解説します。"
-  },
-  {
     "slug": "kin-kaitori-sokujitsu",
     "title": "金買取で即日現金化する方法｜当日にお金を受け取る手順",
     "shortTitle": "金買取で即日現金化する方法",
     "badge": "即日現金化",
     "category": "howto",
     "description": "金を即日現金化する方法を解説。当日に現金を受け取れる店頭買取の流れ、必要な持ち物、スムーズに進めるコツを紹介します。"
-  },
-  {
-    "slug": "kin-kaitori-mochimono",
-    "title": "金買取に必要な持ち物リスト｜本人確認書類と付属品",
-    "shortTitle": "金買取に必要な持ち物リスト",
-    "badge": "持ち物",
-    "category": "howto",
-    "description": "金買取に必要な持ち物を解説。古物営業法で必須の本人確認書類、査定額アップにつながる付属品まで一覧で紹介します。"
   },
   {
     "slug": "kin-kaitori-tesuryo",
@@ -1192,22 +1112,6 @@
     "description": "金の宅配買取の安全性を解説。郵送時のリスク、補償・本人確認・キャンセル条件など、安全に利用するための確認点を紹介します。"
   },
   {
-    "slug": "kin-kaitori-miseinen",
-    "title": "未成年は金買取できる？｜年齢制限と親권者同意のルール",
-    "shortTitle": "未成年は金買取できる？",
-    "badge": "未成年の売却",
-    "category": "howto",
-    "description": "未成年の金買取について解説。年齢制限の理由、親権者の同意や同伴が必要なケース、トラブルを避けるための注意点を紹介します。"
-  },
-  {
-    "slug": "kin-honnin-kakunin",
-    "title": "金買取の本人確認はなぜ必要？｜古物営業法と使える身分証",
-    "shortTitle": "金買取の本人確認はなぜ必要？",
-    "badge": "本人確認",
-    "category": "howto",
-    "description": "金買取の本人確認を解説。古物営業法で義務付けられる理由、使える本人確認書類、マイナンバーが必要なケースを紹介します。"
-  },
-  {
     "slug": "kin-fuzokuhin-nashi",
     "title": "保証書・箱なしでも金買取できる？｜査定への影響",
     "shortTitle": "保証書・箱なしでも金買取できる？",
@@ -1230,14 +1134,6 @@
     "badge": "金価格の推移",
     "category": "howto",
     "description": "金価格の推移と高騰の要因を解説。インフレ・為替・地政学リスクなど価格を動かす要素と、売り時の考え方を紹介します。"
-  },
-  {
-    "slug": "kin-kaitori-yoyaku",
-    "title": "金買取の予約は必要？｜来店から現金受け取りまでの流れ",
-    "shortTitle": "金買取の予約は必要？",
-    "badge": "予約・来店の流れ",
-    "category": "howto",
-    "description": "金買取の予約要否と来店の流れを解説。予約のメリット、当日の査定手順、現金受け取りまでをステップで紹介します。"
   },
   {
     "slug": "kin-kaitori-soubadori",
@@ -2437,6 +2333,30 @@
     "shortTitle": "マイナンバー",
     "badge": "マイナンバー",
     "description": "200万円超で必要になる支払調書とマイナンバー告知の仕組みを解説。",
+    "category": "howto"
+  },
+  {
+    "slug": "kinseido-kaitori-guide",
+    "title": "金の品位別買取相場ガイド（K10・K18・K18WG・K18PG）",
+    "shortTitle": "金の品位別買取ガイド",
+    "badge": "品位別",
+    "description": "K10/K18/K18WG/K18PGの相場と刻印の見方を1本で網羅。",
+    "category": "purity"
+  },
+  {
+    "slug": "kinka-kaitori-guide",
+    "title": "金貨買取ガイド（メイプルリーフ・イーグル・カンガルー・記念金貨）",
+    "shortTitle": "金貨買取ガイド",
+    "badge": "金貨",
+    "description": "主要な地金型金貨と記念金貨の評価基準・売り方を解説。",
+    "category": "product"
+  },
+  {
+    "slug": "kin-kaitori-tetsuzuki-guide",
+    "title": "金買取の手続き完全ガイド（持ち物・本人確認・未成年・予約）",
+    "shortTitle": "金買取の手続き完全ガイド",
+    "badge": "手続き",
+    "description": "必要な持ち物、本人確認、未成年の可否、当日の流れを網羅。",
     "category": "howto"
   }
 ]

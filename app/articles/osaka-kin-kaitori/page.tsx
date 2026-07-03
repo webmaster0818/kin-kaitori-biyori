@@ -365,7 +365,7 @@ export default function OsakaKinKaitoriPage() {
         <NearbyAreas pref="大阪府" areas={[{ slug: "higashiosaka-kin-kaitori", label: "東大阪" }, { slug: "hirakata-kin-kaitori", label: "枚方" }, { slug: "ibaraki-osaka-kin-kaitori", label: "茨木" }, { slug: "ikeda-osaka-kin-kaitori", label: "池田" }, { slug: "izumi-osaka-kin-kaitori", label: "和泉" }, { slug: "kishiwada-kin-kaitori", label: "岸和田" }, { slug: "moriguchi-kin-kaitori", label: "守口" }, { slug: "namba-kin-kaitori", label: "難波" }]} />
         <RelatedArticles
           currentSlug="osaka-kin-kaitori"
-          relatedSlugs={["umeda-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "k18-kaitori", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
+          relatedSlugs={["umeda-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
         />
 
         <h2>まとめ</h2>

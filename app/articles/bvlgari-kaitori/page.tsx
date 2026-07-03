@@ -327,7 +327,7 @@ export default function BvlgariKaitoriPage() {
         <ExpertQA category="brand" />
         <RelatedArticles
           currentSlug="bvlgari-kaitori"
-          relatedSlugs={["k18-kaitori", "k18pg-kaitori", "k18wg-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "harrywinston-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
+          relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "harrywinston-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
         />
 
         <h2>まとめ</h2>
