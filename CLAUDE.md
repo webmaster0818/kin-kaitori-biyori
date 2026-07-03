@@ -50,3 +50,9 @@ GSC実数診断（4サイト中で最も厳しい）:
 - **⑤税金クラスタ2本**: `/articles/kin-zouyo-zeikin/`(贈与税: 110万控除/速算表/No.3270取得費引き継ぎ/名義財産・定期贈与の罠)＋`/articles/kin-baikyaku-mynumber/`(200万円境界/支払調書/「分割すれば申告不要」の誤解を否定)。既存zeikin記事と重複しないテーマ選定（確定申告手順はzeikin記事が網羅済みのため見送り）
 - articles-metadata.json+3・sitemap+4(/widget/含む)。⑥実査定レポは要相談としてMediaXAIに提示済み
 - ⚠️正規ドメイン: ウリエル=uriel-cuore.co.jp / ティファナ=tifana.net（uriel.co.jp等は存在しない）
+
+### 2026-07-02 ⑤刈り込み・統合の実測＋設計（MediaXAI「進めてください」）
+- **URL Inspection実測**: sitemap96URL中90日表示ゼロ=73。サンプル15検査→**「Discovered - currently not indexed」11/15(73%)**・unknown2・indexed2(ingot-100g/souba-dashboard)。主因=ドメイン権威のしきい値（フュージョン診断どおり）。**未インデックス統合=失う順位なし=最安全**
+- **統合設計(Discord報告済・明日実装)**: A=品位(k10/k18/k18pg/k18wg→品位別ガイド1本+301) / B=金貨(maple/eagle/kangaroo/tenno→金貨ガイド1本+301) / C=ingot-500g→kinka-ingotへ(**ingot-100gはindexedなので触らない**) / D=手続き系(未成年/本人確認/持ち物/予約→手続き完全ガイド1本)。96→約80URL。ブランドジュエリー12本→1本は第2弾提案
+- **副次発見: /kin-kaitori-hakusho/(白書)自体が未インデックス**→トップ・全記事から内部リンク補強を統合とセットで
+- 測定=インデックス済みページ数の増加(先行指標)。実装手順: 統合記事作成→301(_redirects)→sitemap更新→Indexing→本番確認
