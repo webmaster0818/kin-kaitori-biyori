@@ -8,11 +8,30 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
+import goldData from "@/data/gold-spot-prices.json";
+
+const k24Price = goldData.purity_buyback_estimate_per_g.k24;
+const k22Price = goldData.purity_buyback_estimate_per_g.k22;
+const k18Price = goldData.purity_buyback_estimate_per_g.k18;
+const k14Price = goldData.purity_buyback_estimate_per_g.k14;
+const k10Price = goldData.purity_buyback_estimate_per_g.k10;
+// K20/K9はサイト共通の算出式（K24目安×純度比）で算出した参考値
+const k20Price = Math.round((k24Price * 20) / 24);
+const k9Price = Math.round((k24Price * 9) / 24);
+const tanakaBuyback = goldData.tanaka_official.au_buyback_per_g;
+const tanakaSpread = goldData.tanaka_official.au_retail_per_g - goldData.tanaka_official.au_buyback_per_g;
+const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
+const priceDateJa = formatDateJa(goldData.date);
+
+const todayFaq = {
+  q: "今日のK24（純金）の1g買取価格はいくらですか？",
+  a: `本日（${priceDateJa}時点）のK24買取相場の目安は1gあたり${k24Price.toLocaleString()}円です（毎朝自動更新）。田中貴金属公表の店頭買取価格をもとに算出した参考値で、実際の査定額は業者・状態・付属品により異なります。お手持ちの重量での概算は、本ページの重量別早見表とグラム計算機でご確認ください。`,
+};
 
 export const metadata: Metadata = {
-  title: "【2026年6月最新】K24（純金）買取相場ガイド — 1gあたりの価格推移と高く売る方法",
-  description:
-    "K24（純金・純度99.99%）の最新買取相場を1gあたりの価格で掲載。インゴット・金貨・ジュエリーの製品別買取価格、K24とK18・K22の価格差比較、高く売るポイント3つ、おすすめ買取業者4社を徹底解説。",
+  title: `K24（純金）の買取相場 今日1g${k24Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】インゴット・金貨の査定額も`,
+  description: `本日（${priceMonth}月${priceDay}日）のK24（純金・純度99.99%）買取相場は1gあたり${k24Price.toLocaleString()}円（毎朝自動更新）。インゴット・金貨・ジュエリーの製品別査定額、K18・K22との価格差比較、高く売るポイント、おすすめ買取業者4社を徹底解説。`,
 };
 
 function CtaBox() {
@@ -55,10 +74,10 @@ function FaqSchema() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "K24（純金）の買取価格は1gいくらですか？",
+        name: todayFaq.q,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。ただし、国際金価格と為替レートにより毎日変動します。",
+          text: todayFaq.a,
         },
       },
       {
@@ -74,7 +93,7 @@ function FaqSchema() {
         name: "K24とK18はどれくらい価格差がありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "K24は純度99.99%、K18は純度75%なので、同じ重量で比較するとK24はK18の約1.33倍の買取価格になります。金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。",
+          text: `K24は純度99.99%、K18は純度75%なので、同じ重量で比較するとK24はK18の約1.33倍の買取価格になります。10gの製品なら約${((k24Price - k18Price) * 10).toLocaleString()}円の差です（${priceDateJa}時点の目安）。最新の目安は本ページ冒頭の「本日のK24買取相場」と重量別早見表（毎朝自動更新）でご確認ください。`,
         },
       },
       {
@@ -107,9 +126,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年6月最新】K24（純金）買取相場ガイド — 1gあたりの価格推移と高く売る方法",
+    headline: `K24（純金）の買取相場 今日1g${k24Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】インゴット・金貨の査定額も`,
     datePublished: "2026-04-13",
-    dateModified: "2026-06-11",
+    dateModified: goldData.date,
     author: {
       "@type": "Organization",
       name: "金買取びより",
@@ -150,12 +169,14 @@ export default function K24KaitoriPage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K24（純金）買取相場ガイド — 高く売る方法</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">K24（純金）買取相場 — 今日の1g価格と高く売る方法</h1>
+          <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
+
+          <TodayPriceAnswer purity="k24" />
 
           <p>K24（純金）は<strong>純度99.99%</strong>の最も価値が高い金です。金投資の対象としてインゴット（金地金）や金貨を保有している方、あるいは純金ジュエリーをお持ちの方にとって、「今の買取相場はいくらなのか」は最大の関心事でしょう。</p>
 
-          <p>2026年現在、金価格は歴史的な高値圏にあります。国際情勢の不安定化、各国中央銀行の金購入拡大、円安の進行——これらの要因が重なり、<strong>K24の買取価格は1gあたり15,000円を突破</strong>しました。2020年と比較すると約2.3倍の上昇です。</p>
+          <p>2026年現在、金価格は歴史的な高値圏にあります。国際情勢の不安定化、各国中央銀行の金購入拡大、円安の進行——これらの要因が重なり、<strong>K24の買取目安は1gあたり{k24Price.toLocaleString()}円</strong>（{priceDateJa}時点・毎朝自動更新）に達しています。2020年（約6,600円/g）と比較すると約{Math.round((k24Price / 6600) * 10) / 10}倍の上昇です。</p>
 
           <p>この記事では、K24（純金）の買取に関するすべての情報を網羅的に解説します。</p>
 
@@ -170,7 +191,9 @@ export default function K24KaitoriPage() {
 
           <GoldSpotPriceCard purity="k24" />
 
-          <WeightPriceTable purities={["k24"]} />
+          <div id="weight-table">
+            <WeightPriceTable purities={["k24"]} />
+          </div>
 
 
           <h2>K24（純金）とは — 純度99.99%の金</h2>
@@ -232,13 +255,13 @@ export default function K24KaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>田中貴金属 買取価格</strong></td><td>約15,400円/g</td><td>金を「売る」場合の価格</td></tr>
-                <tr><td><strong>スプレッド</strong></td><td>約200円/g</td><td>売買の差額（大手の標準的な水準）</td></tr>
+                <tr><td><strong>田中貴金属 買取価格</strong></td><td>{tanakaBuyback.toLocaleString()}円/g（{priceDateJa}公表）</td><td>金を「売る」場合の価格</td></tr>
+                <tr><td><strong>スプレッド</strong></td><td>約{tanakaSpread.toLocaleString()}円/g（同日時点）</td><td>売買の差額（大手の標準的な水準）</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>田中貴金属は直接の小売・買取を行っているため、スプレッドが非常に小さい（約200円/g）のが特徴です。一方、一般の買取業者は田中貴金属の買取価格よりさらに200〜400円/g程度低いのが一般的です。</p>
+          <p>田中貴金属は直接の小売・買取を行っているため、スプレッドが小さい（{priceDateJa}時点で約{tanakaSpread.toLocaleString()}円/g）のが特徴です。一方、一般の買取業者は田中貴金属の買取価格よりさらに数百円/g程度低いのが一般的です。</p>
 
           <p>ただし、<strong>田中貴金属では持ち込み買取のみ対応</strong>で、出張買取や一括査定には対応していません。利便性を考慮すると、一括査定で複数業者を比較し、最も田中貴金属の価格に近い業者を選ぶのが実践的です。</p>
 
@@ -256,7 +279,7 @@ export default function K24KaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>素材価値</strong></td><td>約472,000円</td><td>約456,000円</td></tr>
+                <tr><td><strong>素材価値（{priceDateJa}時点の目安）</strong></td><td>約{Math.round(31.1 * k24Price).toLocaleString()}円</td><td>約{(30 * k24Price).toLocaleString()}円</td></tr>
                 <tr><td><strong>プレミアム</strong></td><td>あり（数千〜数万円の上乗せ）</td><td>なし（素材価値のみ）</td></tr>
                 <tr><td><strong>流動性</strong></td><td>高い（世界共通の規格品）</td><td>高い（ブランド品なら特に）</td></tr>
                 <tr><td><strong>偽物リスク</strong></td><td>低い（造幣局発行）</td><td>やや高い（ノーブランドの場合）</td></tr>
@@ -310,18 +333,20 @@ export default function K24KaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>K24（24金）</strong></td><td>99.99%</td><td><strong>約15,200円</strong></td><td>100%</td><td>インゴット、金貨</td></tr>
-                <tr><td><strong>K22（22金）</strong></td><td>91.7%</td><td>約13,900円</td><td>約91%</td><td>一部の金貨、高級ジュエリー</td></tr>
-                <tr><td><strong>K20（20金）</strong></td><td>83.3%</td><td>約12,700円</td><td>約84%</td><td>金歯、一部のジュエリー</td></tr>
-                <tr><td><strong>K18（18金）</strong></td><td>75.0%</td><td>約11,400円</td><td>約75%</td><td>ジュエリー全般</td></tr>
-                <tr><td><strong>K14（14金）</strong></td><td>58.5%</td><td>約8,900円</td><td>約59%</td><td>海外ジュエリー、時計</td></tr>
-                <tr><td><strong>K10（10金）</strong></td><td>41.7%</td><td>約6,300円</td><td>約42%</td><td>カジュアルジュエリー</td></tr>
-                <tr><td><strong>K9（9金）</strong></td><td>37.5%</td><td>約5,700円</td><td>約38%</td><td>英国ジュエリー</td></tr>
+                <tr><td><strong>K24（24金）</strong></td><td>99.99%</td><td><strong>約{k24Price.toLocaleString()}円</strong></td><td>100%</td><td>インゴット、金貨</td></tr>
+                <tr><td><strong>K22（22金）</strong></td><td>91.7%</td><td>約{k22Price.toLocaleString()}円</td><td>約92%</td><td>一部の金貨、高級ジュエリー</td></tr>
+                <tr><td><strong>K20（20金）</strong></td><td>83.3%</td><td>約{k20Price.toLocaleString()}円</td><td>約83%</td><td>金歯、一部のジュエリー</td></tr>
+                <tr><td><strong>K18（18金）</strong></td><td>75.0%</td><td>約{k18Price.toLocaleString()}円</td><td>約75%</td><td>ジュエリー全般</td></tr>
+                <tr><td><strong>K14（14金）</strong></td><td>58.5%</td><td>約{k14Price.toLocaleString()}円</td><td>約58%</td><td>海外ジュエリー、時計</td></tr>
+                <tr><td><strong>K10（10金）</strong></td><td>41.7%</td><td>約{k10Price.toLocaleString()}円</td><td>約42%</td><td>カジュアルジュエリー</td></tr>
+                <tr><td><strong>K9（9金）</strong></td><td>37.5%</td><td>約{k9Price.toLocaleString()}円</td><td>約38%</td><td>英国ジュエリー</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>この表から分かるとおり、<strong>買取価格は純度にほぼ比例</strong>します。K24とK18を比べると、K24の方が約33%高い買取価格になります。例えば10gの製品なら、K24は約152,000円、K18は約114,000円で、<strong>約38,000円の差</strong>があります。</p>
+          <p className="text-xs text-warm-gray">※ {priceDateJa}時点。田中貴金属公表のK24店頭買取価格から純度比×業者買取平均係数0.96で算出した参考値（毎朝自動更新）。</p>
+
+          <p>この表から分かるとおり、<strong>買取価格は純度にほぼ比例</strong>します。K24とK18を比べると、K24の方が約33%高い買取価格になります。例えば10gの製品なら、K24は約{(10 * k24Price).toLocaleString()}円、K18は約{(10 * k18Price).toLocaleString()}円で、<strong>約{((k24Price - k18Price) * 10).toLocaleString()}円の差</strong>があります。</p>
 
           <blockquote>
             <p><strong>ポイント：</strong>K22は日本ではあまり馴染みがありませんが、イギリスのソブリン金貨や南アフリカのクルーガーランド金貨はK22（純度91.7%）です。純金ではありませんが、K24に近い高い純度を持っています。</p>
@@ -373,7 +398,7 @@ export default function K24KaitoriPage() {
             </table>
           </div>
 
-          <p>たとえば、10年前に50万円で購入したK24インゴット（約50g）を、2026年に約76万円で売却した場合：</p>
+          <p>たとえば、10年前に50万円で購入したK24インゴットを76万円で売却した場合：</p>
 
           <ul>
             <li>売却益：76万円 - 50万円 = 26万円</li>
@@ -435,17 +460,14 @@ export default function K24KaitoriPage() {
 
           <div className="space-y-3 not-prose">
             {[
-              {
-                q: "K24（純金）の買取価格は1gいくらですか？",
-                a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。ただし、国際金価格と為替レートにより毎日変動します。買取業者のウェブサイトやヒカカク！の一括査定で最新の価格を確認することをおすすめします。",
-              },
+              todayFaq,
               {
                 q: "K24のインゴットと金貨で買取価格は異なりますか？",
                 a: "はい、異なる場合があります。田中貴金属や徳力本店など有名ブランドのインゴットは信頼性が高く、買取単価が高めになる傾向があります。金貨はプレミアム（付加価値）が付く場合もあり、特に記念金貨や発行数が少ないものは額面以上の価格になることがあります。一般的な地金型金貨（メイプルリーフ等）は金の素材価値に近い価格で取引されます。",
               },
               {
                 q: "K24とK18はどれくらい価格差がありますか？",
-                a: "K24は純度99.99%、K18は純度75%なので、同じ重量で比較するとK24はK18の約1.33倍の買取価格になります。金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gの製品なら約38,000円の差があります。",
+                a: `K24は純度99.99%、K18は純度75%なので、同じ重量で比較するとK24はK18の約1.33倍の買取価格になります。10gの製品なら約${((k24Price - k18Price) * 10).toLocaleString()}円の差です（${priceDateJa}時点の目安）。最新の目安は本ページ冒頭の「本日のK24買取相場」と重量別早見表（毎朝自動更新）でご確認ください。`,
               },
               {
                 q: "K24の純金製品はどこで売るのが一番高いですか？",
@@ -496,7 +518,7 @@ export default function K24KaitoriPage() {
 
           <p>K24（純金）は純度99.99%の最も価値が高い金であり、インゴット・金貨・ジュエリーなどさまざまな形で保有されています。</p>
 
-          <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。2020年の約6,600円から約2.3倍に上昇しており、保有している純金製品を売却するには絶好のタイミングと言えます。</p>
+          <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日のK24買取相場」と重量別早見表（毎朝自動更新）でご確認ください。2020年の約6,600円/gから約{Math.round((k24Price / 6600) * 10) / 10}倍に上昇しており、保有している純金製品を売却するには絶好のタイミングと言えます。</p>
 
           <p>K24を最高値で売るためのポイントは以下の3つです。</p>
 

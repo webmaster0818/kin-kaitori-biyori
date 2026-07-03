@@ -8,6 +8,18 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
+import goldData from "@/data/gold-spot-prices.json";
+
+const k18Price = goldData.purity_buyback_estimate_per_g.k18;
+const k10Price = goldData.purity_buyback_estimate_per_g.k10;
+const [priceYear, priceMonth, priceDay] = goldData.date.split("-").map(Number);
+const priceDateJa = formatDateJa(goldData.date);
+
+const todayFaq = {
+  q: "今日のK18（18金）・K10（10金）の1g買取価格はいくらですか？",
+  a: `本日（${priceDateJa}時点）の買取目安は、K18が1gあたり${k18Price.toLocaleString()}円、K10が${k10Price.toLocaleString()}円です（毎朝自動更新。K18WG・K18PGはK18と同額）。田中貴金属公表の店頭買取価格をもとに算出した参考値で、実際の査定額は業者・状態により異なります。お手持ちの重量での概算は、本ページの重量別早見表とグラム計算機でご確認ください。`,
+};
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -26,10 +38,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年7月】金の品位別買取相場ガイド｜K10・K18・K18WG・K18PGの違いと刻印の見方",
-    description: "K10（純度41.7%）・K18（75%）・K18WG（ホワイトゴールド）・K18PG（ピンクゴールド）の買取相場と刻印の見方を1ページで解説。カラーによる価格差、GP/GFメッキの注意点、高く売るコツまで網羅。",
+    headline: `金の品位別買取相場 今日K18は1g${k18Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】K10・K18WG・PGの査定額と刻印の見方`,
+    description: `本日（${priceMonth}月${priceDay}日）の買取相場はK18が1g${k18Price.toLocaleString()}円、K10が${k10Price.toLocaleString()}円（毎朝自動更新）。K18WG・K18PGとの価格差、刻印の見方、GP/GFメッキの注意点、高く売るコツまで1ページで解説。`,
     datePublished: "2026-07-03",
-    dateModified: "2026-07-03",
+    dateModified: goldData.date,
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -41,6 +53,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
+      { "@type": "Question", name: todayFaq.q, acceptedAnswer: { "@type": "Answer", text: todayFaq.a } },
       { "@type": "Question", name: "K18とK10の買取価格はどのくらい違いますか？", acceptedAnswer: { "@type": "Answer", text: "K18は金の純度75%、K10は41.7%です。買取価格は純金含有量に比例するため、同じ重量ならK10はK18の約55%の価格になります。最新の1gあたり目安は本ページの「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。" } },
       { "@type": "Question", name: "K18WGやK18PGはK18（イエロー）より安くなりますか？", acceptedAnswer: { "@type": "Answer", text: "なりません。K18WG（ホワイトゴールド）もK18PG（ピンクゴールド）も純金含有量は同じ75%で、業者の査定基準は「純金含有量×重量」のため、買取価格はK18と同じです。" } },
       { "@type": "Question", name: "ホワイトゴールドの黄ばみやピンクゴールドの変色は減額されますか？", acceptedAnswer: { "@type": "Answer", text: "減額されません。K18WGの黄ばみは表面のロジウムメッキの劣化、K18PGのくすみは銅の酸化が主因で、いずれも内部の金含有量には影響しないため、買取価格は変わりません。" } },
@@ -52,8 +65,8 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年7月】金の品位別買取相場ガイド｜K10・K18・K18WG・K18PGの違いと刻印の見方",
-  description: "K10（純度41.7%）・K18（75%）・K18WG（ホワイトゴールド）・K18PG（ピンクゴールド）の買取相場と刻印の見方を1ページで解説。カラーによる価格差、GP/GFメッキの注意点、高く売るコツまで網羅。",
+  title: `金の品位別買取相場 今日K18は1g${k18Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】K10・K18WG・PGの査定額と刻印の見方`,
+  description: `本日（${priceMonth}月${priceDay}日）の買取相場はK18が1g${k18Price.toLocaleString()}円、K10が${k10Price.toLocaleString()}円（毎朝自動更新）。K18WG・K18PGとの価格差、刻印の見方、GP/GFメッキの注意点、高く売るコツまで1ページで解説。`,
   alternates: { canonical: "https://gold-biyori.com/articles/kinseido-kaitori-guide/" },
 };
 
@@ -93,8 +106,10 @@ export default function KinseidoKaitoriGuidePage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年7月】金の品位別買取相場ガイド — K10・K18・K18WG・K18PG</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月3日</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【{priceYear}年{priceMonth}月】金の品位別買取相場ガイド — K10・K18・K18WG・K18PG</h1>
+          <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
+
+          <TodayPriceAnswer purity="k18" />
 
           <p>金製品の買取価格は<strong>「品位（純度）×重量×当日の金相場」</strong>で決まります。この記事では、日本で最も流通量が多い<strong>K18（18金）</strong>、手頃な価格で人気の<strong>K10（10金）</strong>、そしてカラーバリエーションである<strong>K18WG（ホワイトゴールド）・K18PG（ピンクゴールド）</strong>の買取知識を1ページにまとめました。</p>
 
@@ -109,7 +124,9 @@ export default function KinseidoKaitoriGuidePage() {
 
           <GoldSpotPriceCard purity="k18" />
 
-          <WeightPriceTable purities={["k18", "k18wg", "k18pg", "k10"]} />
+          <div id="weight-table">
+            <WeightPriceTable purities={["k18", "k18wg", "k18pg", "k10"]} />
+          </div>
 
           <h2>品位（純度）と買取価格の関係</h2>
 
@@ -267,6 +284,7 @@ export default function KinseidoKaitoriGuidePage() {
 
           <div className="space-y-3 not-prose">
             {[
+              todayFaq,
               {
                 q: "K18とK10の買取価格はどのくらい違いますか？",
                 a: "K18は金の純度75%、K10は41.7%です。買取価格は純金含有量に比例するため、同じ重量ならK10はK18の約55%の価格になります。最新の1gあたり目安は本ページの「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。",

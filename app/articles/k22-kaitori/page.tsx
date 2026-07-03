@@ -7,6 +7,18 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
+import goldData from "@/data/gold-spot-prices.json";
+
+const k22Price = goldData.purity_buyback_estimate_per_g.k22;
+const k18Price = goldData.purity_buyback_estimate_per_g.k18;
+const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
+const priceDateJa = formatDateJa(goldData.date);
+
+const todayFaq = {
+  q: "今日のK22（22金）の1g買取価格はいくらですか？",
+  a: `本日（${priceDateJa}時点）のK22買取相場の目安は1gあたり${k22Price.toLocaleString()}円です（毎朝自動更新）。田中貴金属公表の店頭買取価格をもとに算出した参考値で、実際の査定額は業者・状態により異なります。お手持ちの重量での概算は、本ページの重量別早見表とグラム計算機でご確認ください。`,
+};
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -31,7 +43,8 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "K22（22金）の買取価格は1gいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。国際金価格と為替レートにより毎日変動します。K24（純金）の約91%の価格水準です。" } },
+      { "@type": "Question", name: todayFaq.q, acceptedAnswer: { "@type": "Answer", text: todayFaq.a } },
+      { "@type": "Question", name: "K22（22金）の買取価格は毎日変わりますか？", acceptedAnswer: { "@type": "Answer", text: "はい、国際金価格と為替レートにより毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。K22はK24（純金）の約92%の価格水準です。" } },
       { "@type": "Question", name: "K22はどんな製品に使われていますか？", acceptedAnswer: { "@type": "Answer", text: "K22は主に金貨（メイプルリーフ金貨、ブリタニア金貨など）や高級ジュエリーに使用されます。日本国内ではK18が主流ですが、海外（特に中東・東南アジア）ではK22のジュエリーが一般的です。" } },
       { "@type": "Question", name: "K22とK24の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K22は金の純度が91.7%（22/24）、K24は99.99%です。K22はK24より硬度が高く、ジュエリーや金貨として加工しやすいというメリットがあります。買取価格はK24の方が高くなります。" } },
       { "@type": "Question", name: "K22の刻印にはどんな種類がありますか？", acceptedAnswer: { "@type": "Answer", text: "K22の刻印は「K22」「22K」「916」「917」などがあります。「916」「917」は千分率表記で、金の含有率が916/1000（91.6%）であることを示しています。海外製品では「22K」「22ct」と刻印されることもあります。" } },
@@ -45,9 +58,9 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年6月最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
+    headline: `K22（22金）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
     datePublished: "2026-04-13",
-    dateModified: "2026-06-11",
+    dateModified: goldData.date,
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -55,9 +68,8 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年6月最新】K22（22金）買取相場ガイド — 1gあたりの価格と高く売る方法",
-  description:
-    "K22（22金・純度91.7%）の最新買取相場を1gあたりの価格で掲載。K22金貨・ジュエリーの製品別買取価格、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。",
+  title: `K22（22金）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
+  description: `本日（${priceMonth}月${priceDay}日）のK22（22金・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
 };
 
 function CtaBox() {
@@ -96,8 +108,10 @@ export default function K22KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】K22（22金）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">K22（22金）買取相場 — 今日の1g価格と高く売る方法</h1>
+        <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
+
+        <TodayPriceAnswer purity="k22" />
 
         <p>K22（22金）は、<strong>純度91.7%</strong>という高い金含有率を持つ金合金です。日本国内ではK18やK24と比べて流通量は少ないものの、<strong>海外製のジュエリーや金貨</strong>に多く使われており、実は買取市場では頻繁に取引されています。</p>
 
@@ -116,7 +130,9 @@ export default function K22KaitoriPage() {
 
         <GoldSpotPriceCard purity="k22" />
 
-        <WeightPriceTable purities={["k22"]} />
+        <div id="weight-table">
+          <WeightPriceTable purities={["k22"]} />
+        </div>
 
 
         <h2>K22（22金）とは — 純度91.7%の高純度金合金</h2>
@@ -129,7 +145,7 @@ export default function K22KaitoriPage() {
           
         </div>
 
-        <p>K22の買取価格は<strong>K24の約92%の水準</strong>です。K18と比べると1gあたり約2,600円以上高く、同じ重量のジュエリーならK22の方がかなり高額な買取になります。</p>
+        <p>K22の買取価格は<strong>K24の約92%の水準</strong>です。K18と比べると1gあたり約{(k22Price - k18Price).toLocaleString()}円高く（{priceDateJa}時点の目安）、同じ重量のジュエリーならK22の方がかなり高額な買取になります。</p>
 
         <h3>K22製品の重量別買取目安</h3>
 
@@ -137,7 +153,7 @@ export default function K22KaitoriPage() {
           
         </div>
 
-        <p>1オンス（31.1g）のK22金貨であれば、<strong>約43万円前後</strong>の買取価格が期待できます。金価格が歴史的高値圏にある現在は、売却に非常に有利な時期です。</p>
+        <p>1オンス（31.1g）のK22金貨であれば、<strong>約{Math.round((31.1 * k22Price) / 10000)}万円前後</strong>（{priceDateJa}時点の目安）の買取価格が期待できます。金価格が歴史的高値圏にある現在は、売却に非常に有利な時期です。</p>
 
         <h3>K22買取価格の推移</h3>
 
@@ -245,9 +261,10 @@ export default function K22KaitoriPage() {
 
         <div className="space-y-3 not-prose">
           {[
+            todayFaq,
             {
-              q: "K22の買取価格は1gいくらですか？",
-              a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。K24（純金）の約92%の価格水準で、K18と比べると1gあたり約2,600円以上高い買取価格です。",
+              q: "K22の買取価格は毎日変わりますか？",
+              a: `はい、国際金価格と為替レートにより毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。K24（純金）の約92%の価格水準で、K18と比べると1gあたり約${(k22Price - k18Price).toLocaleString()}円高い買取目安です（${priceDateJa}時点）。`,
             },
             {
               q: "K22の刻印がない金製品は売れますか？",
@@ -302,7 +319,7 @@ export default function K22KaitoriPage() {
 
         <p>K22（22金）は純度91.7%の高純度金合金で、金貨や海外製ジュエリーに多く使われています。日本国内ではK18が主流のため、K22はやや馴染みが薄いかもしれませんが、<strong>買取市場では高値で取引される人気の純度</strong>です。</p>
 
-        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。6年前（2020年）と比べて約2.4倍に上昇しており、売却を検討している方にとっては好機と言えるでしょう。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。金相場は2020年ごろと比べて2倍を超える水準にあり、売却を検討している方にとっては好機と言えるでしょう。</p>
 
         <p>K22を少しでも高く売るために、以下の3つを必ず実践してください。</p>
 
