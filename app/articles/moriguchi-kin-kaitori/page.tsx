@@ -4,6 +4,7 @@ import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
+import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -53,7 +54,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】守口の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "守口で金を高く売るならどこ？守口の金買取相場、店頭・出張・宅配の方法別比較、大阪府で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 function CtaBox() {
@@ -119,6 +120,8 @@ export default function MoriguchiKinKaitoriPage() {
         <p>京阪守口周辺にも買取店が点在します。守口市駅周辺が混雑している場合の比較先として、見積もりを取っておくとよいでしょう。</p>
         <h3>守口市役所周辺</h3>
         <p>守口市役所周辺方面でも買取に対応する店舗があります。自宅に近い店舗で査定を受けたい方は、こうした周辺エリアも合わせて検討しましょう。</p>
+
+        <LocalStores citySlug="moriguchi-kin-kaitori" cityLabel="守口" pref="大阪府" />
 
         <CtaBox />
 

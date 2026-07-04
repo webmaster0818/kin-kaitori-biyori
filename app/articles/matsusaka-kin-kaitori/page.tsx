@@ -4,6 +4,7 @@ import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
+import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -118,6 +119,8 @@ export default function MatsusakaKinKaitoriPage() {
         <p>松阪市役所周辺周辺にも買取店が点在します。松阪駅周辺が混雑している場合の比較先として、見積もりを取っておくとよいでしょう。</p>
         <h3>大津町</h3>
         <p>大津町方面でも買取に対応する店舗があります。自宅に近い店舗で査定を受けたい方は、こうした周辺エリアも合わせて検討しましょう。</p>
+
+        <LocalStores citySlug="matsusaka-kin-kaitori" cityLabel="松阪" pref="三重県" />
 
         <CtaBox />
 
