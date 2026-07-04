@@ -3,6 +3,7 @@ import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
+import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】名古屋の金買取おすすめ業者ガイド — 名駅・栄・大須エリア別比較",
   description:
     "名古屋で金を高く売るならどこがいい？名駅・栄・大須のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、名古屋の金買取相場と高く売るコツを徹底解説。",
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 function CtaBox() {
@@ -132,6 +133,8 @@ export default function NagoyaKinKaitoriPage() {
         <PurityPriceTable />
 
         <p>名古屋の買取相場は東京・大阪とほぼ同水準です。金の買取価格は国際相場（ロンドン金価格）と為替レートに連動するため、地域差はほとんどありません。ただし、<strong>業者ごとのマージン（手数料）の差</strong>によって数百円程度の違いが出ます。</p>
+
+        <LocalStores citySlug="nagoya-kin-kaitori" cityLabel="名古屋" pref="愛知県" />
 
         <CtaBox />
 

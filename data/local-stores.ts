@@ -461,6 +461,88 @@ export const localStores: Record<string, CityStores> = {
       },
     ],
   },
+  "nagoya-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 名古屋錦店", chain: "買取大吉", address: "愛知県名古屋市中区錦2-6-25", hours: "10:00〜19:00", closed: "年中無休", access: "名古屋市営地下鉄桜通線 丸の内駅より徒歩4分", tel: "0120-02-8268", sourceUrl: "https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" },
+      { name: "なんぼや メルサ栄店", chain: "なんぼや", address: "愛知県名古屋市中区栄3-4-5 メルサ栄本店 4F", postalCode: "460-0008", hours: "10:00〜20:00（最終受付19:30）", closed: "施設に準ずる", access: "地下鉄東山線・名城線 栄駅より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/melsa-sakae-brandshop/" },
+      { name: "バイセル 名古屋栄セントラルパーク店", chain: "BUYSELL（バイセル）", address: "愛知県名古屋市中区錦3-15-13 セントラルパーク地下街 B1F 22番", postalCode: "460-0003", hours: "月〜土 10:00〜21:00／日祝 10:00〜20:00", access: "地下鉄桜通線・名城線 久屋大通駅より徒歩1分", tel: "0120-638-164", sourceUrl: "https://buysell-kaitori.com/store/nagoya/" },
+      { name: "大黒屋ブランド館 名古屋大須店", chain: "大黒屋", address: "愛知県名古屋市中区大須3-26-40 高田ビル", hours: "10:30〜19:30", closed: "年中無休（年末年始を除く）", access: "地下鉄鶴舞線・名城線 上前津駅より徒歩4分", tel: "052-269-0733", sourceUrl: "https://shichi.e-daikoku.com/shop/nagoya/" },
+      { name: "なんぼや 名古屋エスカ店", chain: "なんぼや", address: "愛知県名古屋市中村区椿町6-9 エスカ地下街", postalCode: "453-0015", hours: "10:00〜20:00", closed: "エスカ定休日に準ずる", access: "JR名古屋駅 中央口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/nagoya-esca-brandshop/" },
+      { name: "なんぼや 名古屋サンロード店", chain: "なんぼや", address: "愛知県名古屋市中村区名駅4-7-25先 名駅地下街サンロード", postalCode: "450-0002", hours: "10:00〜20:00", closed: "施設に準ずる", access: "JR名古屋駅 桜通口より徒歩4分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/nagoya-brandshop/" },
+    ],
+  },
+  "ueda-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 上田天神店", chain: "買取大吉", address: "長野県上田市天神3丁目4-25 デンセンショールーム", postalCode: "386-0018", hours: "10:00〜19:00", closed: "毎週日曜日", access: "JR上田駅お城口より徒歩10分", tel: "0268-75-0277", sourceUrl: "https://www.kaitori-daikichi.jp/store/uedatenjin/" },
+      { name: "ザ・ゴールド 上田店", chain: "ザ・ゴールド", address: "長野県上田市中央東2-11", postalCode: "386-0013", hours: "10:00〜18:00", closed: "年中無休（一部夏季・年末年始を除く）", access: "国道18号線沿い（下川原柳バス停より徒歩約10分）", tel: "0268-28-7776", sourceUrl: "https://www.the-gold.jp/shop/nagano/45.html" },
+      { name: "おたからや 上田海野町店", chain: "おたからや", address: "長野県上田市中央2丁目5-10 丸陽ビル2階", postalCode: "386-0012", hours: "10:00〜18:00（土日祝は10:00〜17:00）", closed: "水曜日", access: "しなの鉄道 上田駅お城口より徒歩5分（海野町商店街通り沿い）", tel: "0268-22-2248", sourceUrl: "https://www.otakaraya-shop.jp/ueda/" },
+    ],
+  },
+  "yokkaichi-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 四日市店", chain: "買取大吉", address: "三重県四日市市日永東3丁目8-18", postalCode: "510-0943", hours: "10:00〜19:00", closed: "年中無休", access: "国道1号線・日永五交差点角（イオンタウン四日市泊より徒歩約10分）", tel: "059-328-4466", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-r/" },
+      { name: "買取大吉 四日市新正店", chain: "買取大吉", address: "三重県四日市市新正1丁目1-6", postalCode: "510-0045", hours: "10:00〜19:00", closed: "年中無休", access: "近鉄四日市駅より徒歩13分", tel: "070-8300-1009", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-shinsho/" },
+      { name: "買取大吉 MEGAドン・キホーテ四日市店", chain: "買取大吉", address: "三重県四日市市西日野町1608-1 MEGAドン・キホーテ四日市店内", hours: "10:00〜19:00", closed: "年中無休", access: "MEGAドン・キホーテ四日市店内 正面入口すぐ右手", tel: "059-340-9555", sourceUrl: "https://www.kaitori-daikichi.jp/store/mdq-yokkaichi/" },
+      { name: "買取大吉 四日市生桑店", chain: "買取大吉", address: "三重県四日市市生桑町114-6", hours: "10:00〜19:00", closed: "年中無休", tel: "050-8882-7699", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-ikuwa/" },
+      { name: "おたからや トナリエ四日市店", chain: "おたからや", address: "三重県四日市市安島1丁目3-31", postalCode: "510-0075", hours: "10:00〜19:00", closed: "年中無休", access: "近鉄四日市駅 北改札口より徒歩3分", tel: "059-329-5058", sourceUrl: "https://www.otakaraya-shop.jp/tonarieyokkaichi/" },
+      { name: "おたからや 三滝通り店", chain: "おたからや", address: "三重県四日市市諏訪町15-1 ラヴァンス四日市102", postalCode: "510-0085", tel: "059-390-3318", sourceUrl: "https://mitakidouri.original-otakaraya.net/" },
+    ],
+  },
+  "kakogawa-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "おたからや 加古川ヤマトヤシキ店", chain: "おたからや", address: "兵庫県加古川市加古川町篠原町21-8 加古川ヤマトヤシキ3階", postalCode: "675-0065", closed: "年中無休", access: "JR加古川駅 南口より徒歩2分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kakogawa-yy/" },
+      { name: "買取大吉 加古川カピル店", chain: "買取大吉", address: "兵庫県加古川市加古川町篠原町21-8 加古川カピル1階", postalCode: "675-0065", hours: "10:00〜19:00", closed: "年中無休", access: "JR加古川駅より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kakogawa-kapiru/" },
+      { name: "買取大吉 西加古川店", chain: "買取大吉", address: "兵庫県加古川市米田町船頭200-1 マックスバリュ加古川西店", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", tel: "0120-88-2217", sourceUrl: "https://www.kaitori-daikichi.jp/store/nishikakogawa/" },
+      { name: "買取大吉 神野石守店", chain: "買取大吉", address: "兵庫県加古川市神野町石守323-1", postalCode: "675-0017", hours: "10:00〜19:00", closed: "年中無休", access: "東播磨道 神野ICすぐ", tel: "0120-785-578", sourceUrl: "https://www.kaitori-daikichi.jp/store/kanno-ishimori/" },
+      { name: "買取大吉 アリオ加古川店", chain: "買取大吉", address: "兵庫県加古川市別府町緑町2 アリオ加古川 アネックス館2F", hours: "10:00〜19:00", closed: "年中無休", access: "山陽電鉄 別府駅より徒歩5分", tel: "079-490-5990", sourceUrl: "https://www.kaitori-daikichi.jp/store/gp-befu/" },
+    ],
+  },
+  "ichikawa-chiba-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 本八幡店", chain: "買取大吉", address: "千葉県市川市八幡2-3-15", hours: "10:00〜18:00", closed: "年中無休", access: "京成八幡駅より徒歩1分／JR・都営新宿線 本八幡駅より徒歩3〜4分", tel: "0120-144-114", sourceUrl: "https://www.kaitori-daikichi.jp/store/motoyawata/" },
+      { name: "買取大吉 イオンフードスタイル市川店", chain: "買取大吉", address: "千葉県市川市市川1丁目4-10 ダイエー市川 7階", hours: "10:00〜19:00", closed: "年中無休", access: "JR総武本線 市川駅より徒歩約1分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/ae-ichikawa/" },
+      { name: "おたからや アイアイロード市川店", chain: "おたからや", address: "千葉県市川市市川1丁目2-14 ベレール・サツキ1F", postalCode: "272-0034", hours: "10:00〜19:00", closed: "年中無休", access: "JR市川駅 北口より徒歩1分", tel: "0120-551-797", sourceUrl: "https://www.otakaraya-shop.jp/iiroad/" },
+      { name: "なんぼや 市川店", chain: "なんぼや", address: "千葉県市川市市川1-12-5", postalCode: "272-0034", hours: "11:00〜19:00", access: "JR総武線 市川駅 北口より徒歩5分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/ichikawa-brandshop/" },
+      { name: "大黒屋 市川駅北口店", chain: "大黒屋", address: "千葉県市川市市川1丁目6-9", postalCode: "272-0034", hours: "10:00〜18:00", closed: "木曜日", access: "JR総武線 市川駅 北口より徒歩1分", tel: "047-324-5061", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000208" },
+      { name: "質屋かんてい局 市川インター店", chain: "質屋かんてい局", address: "千葉県市川市東大和田1丁目26-19 石井ビル", hours: "10:00〜19:00", tel: "047-711-2663", sourceUrl: "https://kanteikyoku.jp/store/ichikawa/gold/" },
+    ],
+  },
+  "fuchu-tokyo-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 ぷらりと京王府中店", chain: "買取大吉", address: "東京都府中市府中町1丁目3-6ほか ぷらりと京王府中 東2階", postalCode: "183-0055", hours: "10:00〜20:00", closed: "年中無休", access: "京王線 府中駅より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/purarito-keiofuchu/" },
+      { name: "買取大吉 府中新町店", chain: "買取大吉", address: "東京都府中市新町1丁目67-2", postalCode: "183-0052", hours: "10:00〜19:00", closed: "不定休", access: "京王線 府中駅南口よりバス「新町1丁目東」下車 徒歩3分", tel: "042-318-0420", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-shinmachi/" },
+      { name: "買取大吉 ライフ府中中河原店", chain: "買取大吉", address: "東京都府中市住吉町1-84-1", postalCode: "183-0034", hours: "10:00〜19:00", closed: "年中無休", access: "京王線 中河原駅より徒歩2分", tel: "042-319-1717", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-nakagawara/" },
+      { name: "リサイクルショップ ティファナ FORIS府中店", chain: "ティファナ", address: "東京都府中市宮町1-41-1 FORIS 3F", postalCode: "183-0023", hours: "10:00〜20:00", access: "京王線 府中駅南口より徒歩1分", tel: "042-319-1201", sourceUrl: "https://www.tifana.net/foris_fuchu/" },
+      { name: "おたからや くるる宮町店", chain: "おたからや", address: "東京都府中市宮町1-50 くるる1階", postalCode: "183-0023", hours: "10:00〜18:00", closed: "日曜日", access: "京王線 府中駅南口直結・徒歩1分", tel: "042-404-2854", sourceUrl: "https://www.otakaraya-shop.jp/kururumiyamachi/" },
+      { name: "大黒屋 質府中駅前店", chain: "大黒屋", address: "東京都府中市寿町1-1-32 いつかビル1F", postalCode: "183-0056", hours: "10:00〜19:00", access: "京王線 府中駅より徒歩2分", tel: "042-358-1645", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-fuchu/" },
+    ],
+  },
+  "hiratsuka-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 平塚菫平店", chain: "買取大吉", address: "神奈川県平塚市菫平9-11", hours: "10:00〜19:00", closed: "日曜日", access: "JR東海道本線 平塚駅よりバスと徒歩で6分", tel: "0463-74-5327", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-sumiredaira/" },
+      { name: "買取大吉 OSC湘南シティ店", chain: "買取大吉", address: "神奈川県平塚市代官町33番1号 OSC湘南シティ", postalCode: "254-0807", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "平塚駅北口より徒歩", tel: "0120-550-219", sourceUrl: "https://www.kaitori-daikichi.jp/store/oscshonan-city/" },
+      { name: "ブランド買取「なんぼや」平塚店", chain: "なんぼや", address: "神奈川県平塚市代官町2-10", postalCode: "254-0807", hours: "10:00〜21:00", closed: "定休日なし", access: "JR平塚駅 南出口より徒歩1分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/hiratsuka-brandshop/" },
+      { name: "大黒屋 平塚北口店", chain: "大黒屋", address: "神奈川県平塚市紅谷町2-27 都まんじゅうさん 2階", postalCode: "254-0043", hours: "平日10:00〜18:00／土日祝10:00〜17:00", closed: "不定休", access: "JR東海道線 平塚駅 北口ロータリー内", tel: "0463-25-1521", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000217" },
+      { name: "買取大吉 マックスバリュ平塚四之宮店", chain: "買取大吉", address: "神奈川県平塚市四之宮2-18-26 マックスバリュ平塚四之宮店", hours: "10:00〜19:00", closed: "月曜日", access: "平塚駅より車で11分", tel: "0463-38-4808", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-shinomiya/" },
+    ],
+  },
+  "kichijoji-kin-kaitori": {
+    updated: "2026-07-05",
+    stores: [
+      { name: "買取大吉 吉祥寺店", chain: "買取大吉", address: "東京都武蔵野市吉祥寺南町1丁目1-10", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "JR中央線・京王井の頭線 吉祥寺駅南口より徒歩2分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kichijoji/" },
+      { name: "大黒屋 質吉祥寺買取センター", chain: "大黒屋", address: "東京都武蔵野市吉祥寺本町1-2-5 山利屋ビル2F", postalCode: "180-0004", hours: "10:30〜19:30", closed: "年中無休（年末年始を除く）", access: "JR・京王井の頭線 吉祥寺駅 北口より徒歩2分", tel: "0422-28-4030", sourceUrl: "https://shichi.e-daikoku.com/shop/kichijoji/" },
+      { name: "なんぼや キラリナ京王吉祥寺店", chain: "なんぼや", address: "東京都武蔵野市吉祥寺南町2-1-25 キラリナ京王吉祥寺7F", postalCode: "180-0003", hours: "10:00〜19:00", closed: "年中無休", access: "JR吉祥寺駅 南改札直結、エレベーターで7F", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/tokyo/kirarina-keio-kichijoji-brandshop/" },
+      { name: "ゴールドプラザ吉祥寺店", chain: "ゴールドプラザ", address: "東京都武蔵野市吉祥寺本町1-17-12", hours: "10:00〜19:00", closed: "水曜日", access: "JR吉祥寺駅 北口・中央口より徒歩すぐ", tel: "0422-23-3720", sourceUrl: "https://goldplaza.jp/shop/kichijoji" },
+      { name: "リユースセレクト ティファナ 吉祥寺店", chain: "ティファナ", address: "東京都武蔵野市吉祥寺本町2-12-5", hours: "11:00〜20:00（買取受付は18:00まで）", closed: "年中無休（年末年始を除く）", access: "JR吉祥寺駅 北口より徒歩約5分", tel: "0422-20-3751", sourceUrl: "https://www.tifana.net/kichijoji/" },
+    ],
+  },
 };
 
 export function getLocalStores(citySlug: string): CityStores | undefined {

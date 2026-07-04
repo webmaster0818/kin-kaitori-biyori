@@ -4,6 +4,7 @@ import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
+import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
@@ -53,7 +54,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年7月最新】上田・上田駅の金買取おすすめ｜相場と貴金属を高く売るコツ",
   description: "上田・上田駅で金や貴金属（プラチナ・銀・K18等）を高く売るには？上田の買取相場、店頭・出張・宅配の方法別比較、長野県で高価買取を狙うコツを公開情報ベースで解説します。",
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 function CtaBox() {
@@ -121,6 +122,8 @@ export default function UedaKinKaitoriPage() {
         <p>別所温泉方面でも買取に対応する店舗があります。自宅に近い店舗で査定を受けたい方は、こうした周辺エリアも合わせて検討しましょう。</p>
         <h3>上田駅から探す・貴金属もまとめて</h3>
         <p><strong>「上田駅 金 買取」</strong>で探す場合、上田駅周辺には大手買取チェーンや貴金属店が集まり、徒歩圏で複数店の見積もりを比較しやすいのが利点です。駅から離れている・持ち運びに不安がある場合は、<strong>出張買取</strong>が上田駅エリア（中央・常田・天神など）を含む上田市内をカバーしており、自宅で査定を受けられます。金だけでなく<strong>プラチナ・銀・K18／K14などの貴金属</strong>もまとめて査定に出せるため、手間と送料を抑えられます。相場は毎日変動するので、無料査定で当日の実額を確認するのが確実です。</p>
+
+        <LocalStores citySlug="ueda-kin-kaitori" cityLabel="上田" pref="長野県" />
 
         <CtaBox />
 
