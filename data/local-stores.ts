@@ -543,6 +543,84 @@ export const localStores: Record<string, CityStores> = {
       { name: "リユースセレクト ティファナ 吉祥寺店", chain: "ティファナ", address: "東京都武蔵野市吉祥寺本町2-12-5", hours: "11:00〜20:00（買取受付は18:00まで）", closed: "年中無休（年末年始を除く）", access: "JR吉祥寺駅 北口より徒歩約5分", tel: "0422-20-3751", sourceUrl: "https://www.tifana.net/kichijoji/" },
     ],
   },
+  "kawagoe-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 川越店", chain: "買取大吉", address: "埼玉県川越市脇田町17-6 あすなろビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR川越線・東武東上線 川越駅東口より徒歩4分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe/" },
+      { name: "買取大吉 川越霞ケ関店", chain: "買取大吉", address: "埼玉県川越市霞ケ関北2-1-8", hours: "10:00〜18:00", closed: "水曜日", access: "東武東上線 霞ヶ関駅南口より徒歩9分", tel: "049-292-1533", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe-kasumigaseki/" },
+      { name: "買取大吉 いなげや川越新河岸店", chain: "買取大吉", address: "埼玉県川越市砂新田89-1", postalCode: "350-1137", hours: "10:00〜18:30", closed: "年中無休（年末年始を除く）", access: "東武東上線 新河岸駅より徒歩6分", tel: "049-293-1083", sourceUrl: "https://kaitori-kawagoe.com/access/" },
+      { name: "なんぼや アトレ川越店", chain: "なんぼや", address: "埼玉県川越市脇田町105 アトレ6F", postalCode: "350-1122", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "JR川越線・東武東上線 川越駅東口より徒歩約6分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/atre-kawagoe-brandshop/" },
+    ],
+  },
+  "tokorozawa-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 所沢上安松店", chain: "買取大吉", address: "埼玉県所沢市上安松1116-4", postalCode: "359-0025", hours: "10:00〜18:30", closed: "年中無休（年末年始を除く）", access: "県道179号・6号沿い（山田うどん食堂 本店すぐ近く）", tel: "04-2935-3036", sourceUrl: "https://www.kaitori-daikichi.jp/store/tokorozawa-kamiyasumatsu/" },
+      { name: "買取大吉 所沢中富店", chain: "買取大吉", address: "埼玉県所沢市中富1565-1", hours: "10:00〜19:00", closed: "月曜日（祝日の場合は火曜日）", access: "The Market Place 所沢北原より徒歩6分", tel: "04-2997-8957", sourceUrl: "https://www.kaitori-daikichi.jp/store/tokorozawa-nakatomi/" },
+      { name: "買取大吉 西所沢駅前店", chain: "買取大吉", address: "埼玉県所沢市西所沢1丁目12番7号", hours: "10:00〜19:00", closed: "水曜日", access: "西武線 西所沢駅 東口より徒歩1分", tel: "0120-675-178", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/nishi-tokorozawa/" },
+      { name: "買取大吉 所沢和ケ原店", chain: "買取大吉", address: "埼玉県所沢市和ケ原1丁目121番地1", hours: "10:00〜19:00", closed: "日曜日", access: "西武池袋線 狭山ヶ丘駅より徒歩8分", tel: "04-2968-9111", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/tokorozawa-wagahara/" },
+      { name: "なんぼや 所沢駅西口店", chain: "なんぼや", address: "埼玉県所沢市日吉町2-2 キノシタビルⅡ 1F", postalCode: "359-1123", access: "西武池袋線・西武新宿線 所沢駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/tokorozawa-nishiguchi-brandshop/" },
+    ],
+  },
+  "koshigaya-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 新越谷店", chain: "買取大吉", address: "埼玉県越谷市南越谷1丁目13-7 ハローマートビル 1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR武蔵野線 南越谷駅から徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/shin-koshigaya/" },
+      { name: "買取大吉 北越谷店", chain: "買取大吉", address: "埼玉県越谷市大沢3-21-33", hours: "10:00〜19:00", closed: "日曜日", access: "東武スカイツリーライン 北越谷駅より徒歩5分", tel: "0120-665-800", sourceUrl: "https://www.kaitori-daikichi.jp/store/kitakoshigaya/" },
+      { name: "買取大吉 東越谷店", chain: "買取大吉", address: "埼玉県越谷市東越谷3-1-1 イーストレジデンスII 107", hours: "10:00〜19:00", closed: "月曜日", access: "越谷市役所より徒歩10分（市役所前中央通り沿い）", tel: "048-940-9878", sourceUrl: "https://www.kaitori-daikichi.jp/store/higashi-koshigaya/" },
+      { name: "おたからや ベルクス南越谷店", chain: "おたからや", address: "埼玉県越谷市新越谷1-42-5（ベルクス南越谷店 北側駐車場内）", postalCode: "343-0857", hours: "10:00〜19:00（日曜は18:00まで）", closed: "年中無休", access: "新越谷駅 西口より徒歩6分", tel: "048-989-0100", sourceUrl: "https://belxminamikoshigaya-otakaraya.net/" },
+    ],
+  },
+  "kashiwa-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
+      { name: "買取大吉 モラージュ柏店", chain: "買取大吉", address: "千葉県柏市大山台2-3 モラージュ柏 2階", postalCode: "277-0837", hours: "10:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より無料送迎バス", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/m-kashiwa/" },
+      { name: "なんぼや 柏西口店", chain: "なんぼや", address: "千葉県柏市末広町4-1", postalCode: "277-0842", hours: "11:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/kashiwa-nishiguchi-brandshop/" },
+      { name: "なんぼや 柏東口店", chain: "なんぼや", address: "千葉県柏市柏1-1-11 ファミリかしわ 1F", postalCode: "277-0005", hours: "11:00〜19:00", closed: "施設に準ずる", access: "JR柏駅 東口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba-kashiwa-brandshop/" },
+      { name: "バイセル セブンパークアリオ柏店", chain: "BUYSELL（バイセル）", address: "千葉県柏市大島田1-6-1 セブンパークアリオ柏 3階", postalCode: "277-0922", hours: "10:00〜19:00（施設に準ずる）", access: "「セブンパークアリオ柏前」バス停より徒歩1分", tel: "0120-425-814", sourceUrl: "https://buysell-kaitori.com/store/sevenpark-kashiwa/" },
+    ],
+  },
+  "funabashi-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
+      { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "274-0056", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
+      { name: "大黒屋 質船橋店", chain: "大黒屋", address: "千葉県船橋市本町1-8-1 ケーアイ・フナバシ1F", postalCode: "273-0005", hours: "10:30〜19:30", closed: "定休日なし", access: "京成船橋駅 西口より徒歩10秒、JR船橋駅 徒歩3分", tel: "047-495-5831", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-funabashi/" },
+      { name: "なんぼや 船橋フェイス店", chain: "なんぼや", address: "千葉県船橋市本町1-3-1 船橋フェイスビル 2F", postalCode: "273-0005", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "京成船橋駅東口 徒歩1分、JR船橋駅南口 徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/funabashi-face-brandshop/" },
+      { name: "おたからや 大神宮下駅本店", chain: "おたからや", address: "千葉県船橋市宮本2-13-11 丸商船橋ビル1階", postalCode: "273-0003", hours: "10:00〜18:00", closed: "木曜日", access: "京成本線 大神宮下駅改札右 徒歩1分", tel: "047-778-2014", sourceUrl: "https://www.otakaraya-shop.jp/funabashidaijingu/" },
+    ],
+  },
+  "atsugi-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 厚木ガーデンシティ店", chain: "買取大吉", address: "神奈川県厚木市中町1-5-10 厚木ガーデンシティビル4階", postalCode: "243-0018", hours: "10:00〜20:00", closed: "年中無休", access: "小田急線 本厚木駅から徒歩4分", tel: "046-259-8931", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-gc/" },
+      { name: "買取大吉 厚木妻田店", chain: "買取大吉", address: "神奈川県厚木市妻田北1-13-14", postalCode: "243-0801", hours: "10:00〜19:00", closed: "水曜日", access: "本厚木駅よりバス「中村入口」下車 徒歩1分", tel: "0120-755-206", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-tsumada/" },
+      { name: "なんぼや 本厚木店", chain: "なんぼや", address: "神奈川県厚木市中町3-11-15", postalCode: "243-0018", hours: "11:00〜19:00", closed: "定休日なし", access: "小田急小田原線 本厚木駅北口より徒歩7分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/honatsugi-brandshop/" },
+      { name: "おたからや 本厚木店", chain: "おたからや", address: "神奈川県厚木市中町4丁目14-6 パティオビル1階", postalCode: "243-0018", hours: "10:00〜18:00", closed: "土曜日", access: "小田急線 本厚木駅北口より徒歩3分", tel: "0120-713-753", sourceUrl: "https://honatsugi.originality-otakaraya.net/" },
+      { name: "おたからや ヨークマート厚木インター店", chain: "おたからや", address: "神奈川県厚木市酒井3052 ヨークマート厚木インター", postalCode: "243-0022", hours: "10:00〜20:00", closed: "年中無休", access: "海老名JCTから車で8分", tel: "0120-803-650", sourceUrl: "https://www.otakaraya-shop.jp/atsugi-inter/" },
+    ],
+  },
+  "kumagaya-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "KOMEHYO買取センター 八木橋百貨店", chain: "KOMEHYO（コメ兵）", address: "埼玉県熊谷市仲町74 八木橋百貨店 5F", postalCode: "360-8502", hours: "10:00〜18:30（買取最終受付18:00）", closed: "八木橋百貨店に準ずる", access: "秩父鉄道 上熊谷駅より徒歩約5分／JR熊谷駅北口より徒歩約15分", tel: "048-580-7302", sourceUrl: "https://komehyo.jp/kaitori/shop/kc-yagihashi-hyakkaten" },
+      { name: "大黒屋 質17号熊谷石原店", chain: "大黒屋", address: "埼玉県熊谷市石原3-242-1", postalCode: "360-0816", hours: "10:00〜20:00", closed: "年中無休", access: "秩父鉄道 石原駅より徒歩約10分", tel: "048-599-2301", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000161" },
+      { name: "買取大吉 熊谷ティアラ21店", chain: "買取大吉", address: "埼玉県熊谷市筑波3-202 ティアラ21", hours: "10:00〜19:00", closed: "年中無休", access: "JR高崎線・秩父鉄道 熊谷駅直結（さくら広場口より徒歩1分）", tel: "048-500-9583", sourceUrl: "https://www.kaitori-daikichi.jp/store/kumagaya-tiara21/" },
+      { name: "買取大吉 イオン熊谷店", chain: "買取大吉", address: "埼玉県熊谷市本石2-135 イオン熊谷 3階", postalCode: "360-0014", hours: "10:00〜19:00", closed: "年中無休", access: "秩父鉄道 上熊谷駅より徒歩7分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/am-kumagaya/" },
+      { name: "おたからや 熊谷ニットーモール店", chain: "おたからや", address: "埼玉県熊谷市銀座2-245 ニットーモール1F", postalCode: "360-0032", closed: "年中無休", access: "熊谷駅東口直結の連絡通路よりニットーモールへ", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kumagaya-nittohmall/" },
+    ],
+  },
+  "soka-kin-kaitori": {
+    updated: "2026-07-06",
+    stores: [
+      { name: "買取大吉 草加店", chain: "買取大吉", address: "埼玉県草加市高砂2-18-4 リコメンド草加ビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "東武スカイツリーライン 草加駅より徒歩2分", tel: "048-951-2660", sourceUrl: "https://www.kaitori-daikichi.jp/store/soka/" },
+      { name: "買取大吉 西友草加店", chain: "買取大吉", address: "埼玉県草加市高砂1-6-21", hours: "10:00〜19:00", closed: "年中無休", access: "東武スカイツリーライン 草加駅より徒歩4分", tel: "048-606-3660", sourceUrl: "https://www.kaitori-daikichi.jp/store/seiyu-soka/" },
+      { name: "買取大吉 草加金明店", chain: "買取大吉", address: "埼玉県草加市金明町417-5", hours: "10:00〜17:00", closed: "年中無休（臨時休業を除く）", access: "東武スカイツリーライン 新田駅から徒歩3分", tel: "0120-00-7152", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/soka-kinmei/" },
+      { name: "なんぼや 草加ヴァリエ店", chain: "なんぼや", address: "埼玉県草加市高砂2-5-25 東武草加ヴァリエ「VARIE-1」2F", postalCode: "340-0015", hours: "10:00〜20:00（最終受付19:30）", closed: "施設に準ずる", access: "東武スカイツリーライン 草加駅 中央改札口より徒歩圏内", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/soka-varie-brandshop/" },
+      { name: "大黒屋 草加買取センター", chain: "大黒屋", address: "埼玉県草加市高砂2丁目6-20-1F 並木ビル", postalCode: "340-0015", hours: "10:00〜18:00", closed: "水曜日", access: "東武スカイツリーライン 草加駅 東口より徒歩2分", tel: "048-920-3051", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000118" },
+    ],
+  },
 };
 
 export function getLocalStores(citySlug: string): CityStores | undefined {
