@@ -621,6 +621,86 @@ export const localStores: Record<string, CityStores> = {
       { name: "大黒屋 草加買取センター", chain: "大黒屋", address: "埼玉県草加市高砂2丁目6-20-1F 並木ビル", postalCode: "340-0015", hours: "10:00〜18:00", closed: "水曜日", access: "東武スカイツリーライン 草加駅 東口より徒歩2分", tel: "048-920-3051", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000118" },
     ],
   },
+  "hamamatsu-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "買取大吉 浜松駅前店", chain: "買取大吉", address: "静岡県浜松市中央区鍛冶町140-1", postalCode: "430-0933", hours: "10:00～19:00", closed: "年中無休", access: "JR浜松駅から徒歩5分、遠鉄新浜松駅から徒歩3分", tel: "0120-661-077", sourceUrl: "https://www.kaitori-daikichi.jp/store/hamamatsu/" },
+      { name: "買取大吉 浜松中沢柳通り店", chain: "買取大吉", address: "静岡県浜松市中央区中沢町74-21", hours: "10:00～19:00", closed: "木曜日", access: "遠州鉄道八幡駅より徒歩10分", tel: "053-569-2633", sourceUrl: "https://www.kaitori-daikichi.jp/store/hamamatsu-nakazawa/" },
+      { name: "ザ・ゴールド 浜松若林店", chain: "ザ・ゴールド", address: "静岡県浜松市中央区若林町1232", postalCode: "432-8051", hours: "10:00～18:00", closed: "年中無休（一部除く）", access: "国道257号線沿い、可美小学校東の角", tel: "053-525-7776", sourceUrl: "https://www.the-gold.jp/shop/shizuoka/28.html" },
+      { name: "大黒屋 質浜松買取センター", chain: "大黒屋", address: "静岡県浜松市中央区鴨江3丁目76-12 1階東号室", postalCode: "432-8023", hours: "月水木金 10:00～18:00／土日祝 10:00～17:00", closed: "火曜日", access: "JR浜松駅より西へ車で約10分", tel: "053-489-8751", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000386" },
+      { name: "なんぼや 浜松店", chain: "なんぼや", address: "静岡県浜松市中央区旭町10-7", hours: "11:00～19:00", access: "JR浜松駅北口より約3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/hamamatsu-brandshop/" },
+    ],
+  },
+  "himeji-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "なんぼや 姫路店", chain: "なんぼや", address: "兵庫県姫路市駅前町188-1 グランフェスタ3番街 B1F", postalCode: "670-0927", hours: "10:00～20:00", closed: "年中無休", access: "JR姫路駅北口より徒歩4分、山陽姫路駅より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/himeji-brandshop/" },
+      { name: "おたからや 姫路本店", chain: "おたからや", address: "兵庫県姫路市駅前町342", postalCode: "670-0927", hours: "9:00～19:00", closed: "年中無休", access: "山陽姫路駅より徒歩約3分（みゆき通り商店街）", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/himeji-honten/" },
+      { name: "買取大吉 姫路田寺店", chain: "買取大吉", address: "兵庫県姫路市田寺8-13-52", hours: "10:00～18:00（土曜10:00～15:00）", closed: "日曜", access: "しまむら田寺店の道路向い", tel: "0120-886-681", sourceUrl: "https://www.kaitori-daikichi.jp/store/himeji-tadera/" },
+      { name: "こちら買取本舗 姫路店", chain: "こちら買取本舗", address: "兵庫県姫路市二階町71 丸善姫路ビル1F", postalCode: "670-0922", hours: "10:00～18:00", closed: "水曜", access: "JR・山陽姫路駅徒歩約6分、みゆき通り商店街沿い", tel: "0120-979-399", sourceUrl: "https://www.carbon-gold.com/shop/himeji" },
+      { name: "キンバリー 姫路中地店", chain: undefined, address: "兵庫県姫路市中地", hours: "10:00～19:00", closed: "なし（年始を除く）", access: "姫路バイパス中地ICを北へ、陸上競技場前交差点を西", sourceUrl: "https://www.kinburry-himeji.com/precious-metal" },
+    ],
+  },
+  "fujisawa-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "買取大吉 藤沢店", chain: "買取大吉", address: "神奈川県藤沢市南藤沢22-2 春日ビル1階", postalCode: "251-0055", hours: "10:00～19:00", closed: "年中無休", access: "JR・小田急藤沢駅から徒歩約5分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/fujisawa/" },
+      { name: "大黒屋 質藤沢駅北口店", chain: "大黒屋", address: "神奈川県藤沢市藤沢462 石田屋ビル2階A号室", postalCode: "251-0052", hours: "10:00～18:00", closed: "日曜日", access: "JR藤沢駅北口 徒歩約2分", tel: "0466-55-0531", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000150" },
+      { name: "おたからや 藤沢店", chain: "おたからや", address: "神奈川県藤沢市藤沢484-4 オーク湘南藤沢ビル1階", postalCode: "251-0052", hours: "9:00～19:00", closed: "年中無休", access: "JR藤沢駅北口より徒歩4分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/fujisawa/" },
+      { name: "おたからや 湘南藤沢オーパ店", chain: "おたからや", address: "神奈川県藤沢市南藤沢22-3 湘南藤沢オーパ3階", postalCode: "251-0055", hours: "10:00～21:00", closed: "年中無休", access: "藤沢駅南口すぐ", tel: "0466-90-5900", sourceUrl: "https://www.otakaraya-shop.jp/fujisawa-opa/" },
+      { name: "なんぼや 藤沢ODAKYU湘南GATE店", chain: "なんぼや", address: "神奈川県藤沢市南藤沢21-1 ODAKYU湘南GATE 5F", postalCode: "251-8570", hours: "10:00～20:00", closed: "年中無休", access: "JR藤沢駅南口より徒歩4分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/shonan-brandshop/" },
+    ],
+  },
+  "higashiosaka-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "おたからや イオンタウン東大阪店", chain: "おたからや", address: "大阪府東大阪市東鴻池町1-6-30 イオンタウン東大阪", postalCode: "578-0973", hours: "10:00～20:00", closed: "年中無休", tel: "0120-803-650", sourceUrl: "https://www.otakaraya-shop.jp/aeontown-higashiosaka/" },
+      { name: "おたからや 瓢箪山駅前店", chain: "おたからや", address: "大阪府東大阪市瓢箪山町3-24", postalCode: "579-8051", hours: "10:00～19:00", closed: "年中無休（年末年始除く）", access: "近鉄「瓢箪山駅」南出口より徒歩2分", tel: "0120-359-353", sourceUrl: "https://www.otakaraya-shop.jp/hyotanyama/" },
+      { name: "大黒屋 質東大阪布施買取センター", chain: "大黒屋", address: "大阪府東大阪市足代2-1-4 ブルグリンコート布施駅前1F", postalCode: "577-0841", hours: "10:00～19:00", closed: "月曜日", access: "近鉄布施駅東南出口から徒歩15秒", tel: "06-4308-5033", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000396" },
+      { name: "買取大吉 鴻池新田北口店", chain: "買取大吉", address: "大阪府東大阪市鴻池本町1-22", hours: "10:00～18:00", closed: "水曜日", sourceUrl: "https://www.kaitori-daikichi.jp/open/open-5107318/" },
+      { name: "買取大吉 東大阪日下店", chain: "買取大吉", address: "大阪府東大阪市日下町3丁目6-9", hours: "10:00～19:00", closed: "水曜日", tel: "070-2321-0021", sourceUrl: "https://www.kaitori-daikichi.jp/open/open-5081435/" },
+    ],
+  },
+  "hirakata-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "大黒屋 枚方市駅前店", chain: "大黒屋", address: "大阪府枚方市岡東町17-5 小澤ビル105号室", postalCode: "573-0032", hours: "9:30〜18:00", closed: "年中無休", access: "京阪本線 枚方市駅2番出口より徒歩2分", tel: "072-861-1030", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000358" },
+      { name: "大黒屋 枚方関西外大前買取センター", chain: "大黒屋", address: "大阪府枚方市都丘町2-6 102", postalCode: "573-1165", hours: "10:30〜19:00", closed: "木曜", tel: "072-896-9548", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000378" },
+      { name: "なんぼや くずはモール店", chain: "なんぼや", address: "大阪府枚方市楠葉花園町15-1 くずはモール3F", postalCode: "573-1121", hours: "平日10:00〜20:00／土日祝10:00〜21:00", access: "京阪本線 樟葉駅より徒歩1分", sourceUrl: "https://nanboya.com/shop/osaka/kuzuha-mall-brandshop/" },
+      { name: "おたからや 宮之阪駅前店", chain: "おたからや", address: "大阪府枚方市宮之阪2-2-1", postalCode: "573-0022", hours: "10:00〜19:00", closed: "年中無休", access: "京阪交野線 宮之阪駅より徒歩3分", tel: "0120-120-250", sourceUrl: "https://www.otakaraya-shop.jp/miyanosakaten/" },
+      { name: "買取大吉 枚方長尾元町店", chain: "買取大吉", address: "大阪府枚方市長尾元町5-21-10", hours: "10:00〜19:00", closed: "年中無休", access: "JR学研都市線 長尾駅より徒歩1分", tel: "0120-117-207", sourceUrl: "https://www.kaitori-daikichi.jp/store/nagaomotomachi/" },
+      { name: "エコリング 枚方店", chain: "エコリング", address: "大阪府枚方市大垣内町1-1-3 阪本ビル1階102号室", hours: "11:00〜18:30", access: "京阪本線 枚方市駅南出口より徒歩約3分", tel: "072-807-6731", sourceUrl: "https://www.eco-ring.com/shop/osaka/hirakata" },
+    ],
+  },
+  "hachioji-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "買取大吉 八王子店", chain: "買取大吉", address: "東京都八王子市横山町5-10", hours: "10:00～19:00", closed: "年中無休", access: "JR八王子駅より徒歩9分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/hachioji/" },
+      { name: "大黒屋 質八王子店", chain: "大黒屋", address: "東京都八王子市中町7-9 中町ビル1F", postalCode: "192-0085", hours: "10:00～19:00", closed: "なし", access: "JR八王子駅北口より徒歩5分", tel: "042-620-5223", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000049" },
+      { name: "大黒屋 高尾狭間買取センター", chain: "大黒屋", address: "東京都八王子市狭間町1455-2 宮田ビル1階", postalCode: "193-0941", hours: "月～金 10:00～17:30／土日祝 10:00～16:00", closed: "なし", access: "京王高尾線 狭間駅より徒歩3分", tel: "042-669-5520", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000259" },
+      { name: "なんぼや 八王子オクトーレ店", chain: "なんぼや", address: "東京都八王子市旭町9-1 八王子オクトーレ8F", postalCode: "192-0083", hours: "10:00～20:00", access: "JR八王子駅北口より徒歩2分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/tokyo/hachioji-tokyu-brandshop/" },
+      { name: "おたからや 八王子オーパ店", chain: "おたからや", address: "東京都八王子市旭町1-12 八王子オーパ1F", postalCode: "192-0083", hours: "10:00～21:00", closed: "年中無休", access: "JR八王子駅直結通路よりすぐ", tel: "0120-518-488", sourceUrl: "https://www.otakaraya.jp/shop/hachioji-opa/" },
+    ],
+  },
+  "gifu-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "買取大吉 岐阜早田大通店", chain: "買取大吉", address: "岐阜県岐阜市早田大通1-35-1 松栄ビルC号室", access: "岐阜バス「忠節」バス停徒歩1分", sourceUrl: "https://www.kaitori-daikichi.jp/store/sodenodori/" },
+      { name: "買取大吉 岐阜柳津店", chain: "買取大吉", address: "岐阜県岐阜市柳津町丸野1-71-1", postalCode: "501-6115", hours: "10:00～19:00", closed: "年中無休", tel: "0120-755-025", sourceUrl: "https://www.kaitori-daikichi.jp/store/ct-gifu/" },
+      { name: "おたからや 加納城東店", chain: "おたからや", address: "岐阜県岐阜市東明見町11番地 エレガンシア21 1F", tel: "058-227-3975", sourceUrl: "https://www.otakaraya.jp/shop/gifu/gifu_shi/" },
+      { name: "おたからや 長良店", chain: "おたからや", address: "岐阜県岐阜市福光東2-7-25", access: "岐阜バス「長良上天神」より徒歩2分", tel: "058-377-3892", sourceUrl: "https://www.otakaraya.jp/shop/gifu/gifu_shi/" },
+      { name: "エコリング 岐阜市橋店", chain: "エコリング", address: "岐阜県岐阜市市橋1-14-11 河合ビル1階", hours: "11:00～18:30", closed: "水曜・年末年始", access: "JR西岐阜駅より徒歩6分", tel: "0120-387-850", sourceUrl: "https://www.eco-ring.com/shop/gifu" },
+    ],
+  },
+  "fukuyama-kin-kaitori": {
+    updated: "2026-07-07",
+    stores: [
+      { name: "ザ・ゴールド 福山東店", chain: "ザ・ゴールド", address: "広島県福山市手城町4丁目6-4", postalCode: "721-0966", hours: "10:00～18:00", closed: "年中無休（一部除く）", access: "JR東福山駅より徒歩15分、国道2号線沿い", tel: "084-973-2422", sourceUrl: "https://www.the-gold.jp/shop/okayamahiroshima/23.html" },
+      { name: "ザ・ゴールド 福山神辺店", chain: "ザ・ゴールド", address: "広島県福山市神辺町川南813-8", postalCode: "720-2124", hours: "10:00～18:00", closed: "年中無休（一部除く）", access: "国道182号線沿い", tel: "084-966-3895", sourceUrl: "https://www.the-gold.jp/shop/okayamahiroshima/21.html" },
+      { name: "おたからや 天満屋福山ポートプラザ店", chain: "おたからや", address: "広島県福山市入船町3丁目1-25 天満屋福山ポートプラザ1階", postalCode: "720-0801", hours: "9:00～19:00", closed: "年中無休", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/fukuyama-portplaza/" },
+      { name: "エコリング 福山南蔵王店", chain: "エコリング", address: "広島県福山市南蔵王町3丁目8-30", postalCode: "721-0973", hours: "11:00～18:30", closed: "水曜・年末年始", tel: "0120-594-850", sourceUrl: "https://www.eco-ring.com/shop/hiroshima/fukuyama/fukuyamaminamizaou" },
+    ],
+  },
 };
 
 export function getLocalStores(citySlug: string): CityStores | undefined {
