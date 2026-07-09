@@ -95,6 +95,7 @@ function JsonLd() {
 }
 
 const navLinks = [
+  { href: "/articles/kin-kaitori-osusume/", label: "おすすめ業者" },
   { href: "/souba-dashboard/", label: "本日の相場" },
   { href: "/kin-kaitori-keisanki/", label: "グラム計算機" },
   { href: "/kin-kaitori-hakusho/", label: "相場白書" },

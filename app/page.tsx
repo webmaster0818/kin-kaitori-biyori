@@ -593,6 +593,7 @@ export default function Home() {
           {/* 今日の注目ガイド（機会ページへの内部リンク集中） */}
           <div className="flex flex-wrap justify-center gap-2 mt-5">
             {[
+              { href: "/articles/kin-kaitori-osusume/", label: "⭐ おすすめ業者比較" },
               { href: "/articles/kin-kaitori-souba/", label: "金買取相場一覧" },
               { href: "/articles/k22-kaitori/", label: "K22（22金）の買取" },
               { href: "/articles/k14-kaitori/", label: "K14（14金）の買取" },
