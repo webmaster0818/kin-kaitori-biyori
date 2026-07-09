@@ -52,7 +52,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】新座の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
+  title: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ【2026年7月】",
   description: "新座で金を高く売るならどこ？新座の金買取相場、店頭・出張・宅配の方法別比較、埼玉県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
   robots: { index: true, follow: true },
 };
@@ -95,7 +95,7 @@ export default function NiizaKinKaitoriPage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】新座の金買取おすすめ業者ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">新座市の金買取はどこがいい？おすすめ業者と今日の相場</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
 
         <p>新座は東京に接する県南の住宅都市です。新座市は練馬区に隣接する県南の住宅都市です。東京方面へのアクセスが良く、買い物や通勤の動線上で金製品を売却しやすい地域です。</p>

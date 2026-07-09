@@ -56,7 +56,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】名古屋の金買取おすすめ業者ガイド — 名駅・栄・大須エリア別比較",
+  title: "名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者と今日の相場【2026年7月】",
   description:
     "名古屋で金を高く売るならどこがいい？名駅・栄・大須のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、名古屋の金買取相場と高く売るコツを徹底解説。",
   robots: { index: true, follow: true },
@@ -98,7 +98,7 @@ export default function NagoyaKinKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】名古屋の金買取おすすめ業者ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
 
         <p>名古屋は中部地方最大の金買取マーケットです。名駅（名古屋駅周辺）・栄・大須を中心に多くの買取業者が集まり、<strong>東京・大阪に次ぐ激戦区</strong>として知られています。</p>
