@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】初めての金買取ガイド — 流れ・必要なもの・注意点を完全解説", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。" };
+export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。" };
 
 function CtaBox() {
   return (

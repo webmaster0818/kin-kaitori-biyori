@@ -295,7 +295,7 @@ const articles = [
     tags: ["相続", "遺品", "税金", "売却"],
   },
   {
-    href: "/articles/kin-uru-timing/",
+    href: "/articles/kin-uridoki-2026/",
     tag: "相場分析",
     title: "【2026年最新】金を売るタイミングはいつ？相場分析と売り時の判断基準",
     description:
@@ -601,7 +601,7 @@ export default function Home() {
               { href: "/articles/nagoya-kin-kaitori/", label: "名古屋の金買取" },
               { href: "/articles/niiza-kin-kaitori/", label: "新座市の金買取" },
               { href: "/articles/kowareta-kin-kaitori/", label: "壊れた金の買取" },
-              { href: "/articles/kin-uru-timing/", label: "金の売り時" },
+              { href: "/articles/kin-uridoki-2026/", label: "金の売り時" },
             ].map((c) => (
               <Link key={c.href} href={c.href} className="inline-block bg-white border border-warm-border rounded-full px-4 py-1.5 text-xs text-navy hover:border-accent/50 hover:text-accent-dark transition">
                 {c.label}

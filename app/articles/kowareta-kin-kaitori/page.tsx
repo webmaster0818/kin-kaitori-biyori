@@ -7,7 +7,7 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】壊れた金・刻印なしでも売れる — 金買取の条件と査定方法を徹底解説",
+  title: "壊れた金・刻印なしの金は買取できる？→売れます。条件と査定の仕組み【2026年7月】",
   description:
     "壊れた金製品や刻印なしの金でも買取可能。チェーン切れ・片方のピアス・変色したリング・刻印が消えた金製品の買取条件、X線分析による純度測定の仕組み、持ち込み前の準備、おすすめ買取業者4社を解説。",
   robots: { index: false, follow: true },

@@ -144,7 +144,7 @@ export default function SayamaKinKaitoriPage() {
           <li><strong>純度と重量を事前に把握する</strong><p>刻印（K24・K18など）と重さの目安を知っておくと、提示額が適正か判断しやすくなります。<Link href="/articles/kin-omosa-hakarikata/">重さの量り方</Link>も参考に。</p></li>
           <li><strong>付属品を揃える</strong><p>ブランドジュエリーは保証書・箱があると評価が上がる場合があります。</p></li>
           <li><strong>手数料無料の業者を選ぶ</strong><p>査定料・精錬費などを差し引く業者もあります。当サイト掲載の4社はすべて手数料無料です。</p></li>
-          <li><strong>相場の高いタイミングを狙う</strong><p>金価格は日々変動します。<Link href="/articles/kin-uru-timing/">売り時の見極め方</Link>もチェックしましょう。</p></li>
+          <li><strong>相場の高いタイミングを狙う</strong><p>金価格は日々変動します。<Link href="/articles/kin-uridoki-2026/">売り時の見極め方</Link>もチェックしましょう。</p></li>
         </ol>
 
         <h2>狭山の金買取で利用できる送客先4社</h2>

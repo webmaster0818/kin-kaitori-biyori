@@ -63,7 +63,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金の売り時はいつ？金相場の見通しと売却判断の基準を解説",
+  title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
   description:
     "2026年は金の売り時？K24（純金）1g約15,200円の歴史的高値の背景、今後の金相場予測、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。",
 };
@@ -341,7 +341,7 @@ export default function KinUridoki2026Page() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-uridoki-2026"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-uru-timing", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
+          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-uridoki-2026", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <h2>まとめ</h2>

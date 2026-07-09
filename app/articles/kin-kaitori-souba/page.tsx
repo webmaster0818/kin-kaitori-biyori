@@ -54,10 +54,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金買取相場一覧 — K24/K18/K14の1gあたり価格と推移",
+    headline: `金買取相場 今日のK24は1g${k24Souba.toLocaleString()}円・K18は${k18Souba.toLocaleString()}円`,
     description: "2026年最新の金買取相場を純度別（K24・K22・K18・K14・K10）に一覧で掲載。金相場が動く5つの要因、業者別の買取価格差、過去10年の高値・安値ヒストリカルデータ、今後の見通しを徹底解説。",
     datePublished: "2026-04-15",
-    dateModified: "2026-04-15",
+    dateModified: goldData.date,
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -151,8 +151,8 @@ export default function KinKaitoriSoubaPage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金買取相場一覧 — K24/K18/K14の1gあたり価格と推移</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取相場 今日のK24は1g{k24Souba.toLocaleString()}円【{soubaMonth}月{soubaDay}日更新】</h1>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {soubaMonth}月{soubaDay}日（相場は毎朝自動更新）</p>
 
           <p>「金の買取相場っていくら？」「K18のネックレスを売りたいけど、今の相場がわからない」——そんな疑問をお持ちの方に向けて、この記事では<strong>2026年4月時点の最新の金買取相場を純度別に一覧で掲載</strong>しています。</p>
 
@@ -455,7 +455,7 @@ export default function KinKaitoriSoubaPage() {
           <ExpertQA category="howto" />
           <RelatedArticles
             currentSlug="kin-kaitori-souba"
-            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-uru-timing", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
+            relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-uridoki-2026", "kin-uridoki-2026", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
           />
 
           <DealerComparisonTable
