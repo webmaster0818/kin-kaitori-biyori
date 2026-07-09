@@ -93,3 +93,13 @@ GSC28d(6/4-7/1)=クリック1・表示617(前期546)・pos40.6。**直近1週で
 地域選別再生の第3弾（さらに薄い都市）。GSC残存シグナルは極薄(宇都宮/板橋/海老名/朝霞のみ1-4imp・宇都宮等はページ自体無し)＝地域レイヤーはほぼ出尽くし。方針転換して**未注入のmajor都市の薄いページ8を de-thin**(埼玉/千葉/神奈川): 川越/所沢/越谷/柏/船橋/厚木/熊谷/草加=実在店舗38件注入(並列調査8体・各社公式店舗ページ)。
 - 除外: ティファナ出張のみ/期間限定ポップアップ(ティファナ新越谷VARIE)/住所未確認のおたからや複数店/なんぼや熊谷(公式一覧から消え閉店可能性)
 - LocalStores注入+noindex解除+sitemap再掲載(100→108URL)。build EXIT0・方式B両push・8都市本番200/実店舗/LocalBusiness確認・Indexing 8/8。累計24都市de-thin(第1弾8+第2弾8+第3弾8・計~118店)。効果1-2週GSC。⚠️地域レイヤーのGSC実績都市は概ね刈り尽くしたため、以降の第4弾は「実績」でなく「major都市の面拡大」の性格になる(ROIは逓減・要判断)
+
+### 2026-07-07 P2第4弾（MediaXAI「続行しようよ」）✅本番反映済み（反映は7/8）
+major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/岐阜5/福山4=実在40店注入(各社公式店舗ページ確認・架空ゼロ・住所非公開店は除外)。noindex解除・sitemap 108→116。**🚨方式B手順漏れでsource-onlyのまま丸1日未反映**→[[discord-channel-site-map]]の教訓どおりdeployリポ反映が必須（実際は日次cron 11:05が自動でデプロイして復旧）。正直に原因報告済み。
+
+### 2026-07-09 P3被リンク→G-1/G-2/G-3（MediaXAI「p3進めて」→「被リンク以外で集客」→「進めてください」）✅全て本番反映済み
+- **P3**: widget.js(dofollow被リンク装置)は既存稼働と監査で判明→souba-dashboardに引用/widget導線を追加＋`docs/backlink-outreach-kit.md`新設(6セグメント・文面3種・**社外送信は要承認**)
+- **G-1**: TOP「データで見る金買取」に**今日の実数価格バー**(K24/K22/K18/K14・goldTopData=gold-spot-prices.json・日次cron自動更新)＋注目ガイドチップ8本。**souba(146imp/29.7位)のtitle/descをk22型の動的実数化**(「金買取相場 今日のK24は1g◯円【M月D日更新】」)。niiza/nagoyaを「どこがいい？」意図語title化。⚠️**同一文字列がArticleSchema headlineとmetadata titleの2箇所にあるとreplace(count=1)がschema側だけ置換する**→title/h1/schema三者を必ず個別確認
+- **G-2**: `/articles/kin-kaitori-osusume/`決定版新設(gakki Phase0移植)=結論早見(4社目的別)+今日の相場実数+4社比較表(手数料8社比較と整合)+選び方5基準+純度5/品目7/地域8ハブチップ+FAQ/Article/Breadcrumb schema。**navLinks先頭に「おすすめ業者」＋TOPチップ⭐**=商用ヘッド「金 買取 おすすめ/どこがいい」の受け皿。metadata category=howto・sitemap 117
+- **G-3**: **売り時カニバリ統合**=kin-uru-timing(196行・GSC受け皿だが薄い)→kin-uridoki-2026(367行・内部リンク多)へ301。_redirects+2行・**233ファイルの内部リンク一括差替**・metadata/sitemapから除去・ページ削除。kowareta「→売れます。」/hajimete「必要なものは？」前方化/uridoki「いつ売るべきか」のtitle即答化。soubaのh1/最終更新/ArticleSchema headline+dateModifiedも動的整合(titleだけ動的で本文4月のままだった)
+- Indexing: osusume/souba/niiza/nagoya/uridoki/kowareta/hajimete全送信(クォータは日次で回復する=朝一は枯渇していても夕方再試行の価値あり)
