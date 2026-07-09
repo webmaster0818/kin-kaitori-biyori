@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import goldTopData from "@/data/gold-spot-prices.json";
+
+const goldTop = goldTopData.purity_buyback_estimate_per_g;
+const [, goldTopMonth, goldTopDay] = goldTopData.date.split("-").map(Number);
+
 const services = [
   {
     name: "ヒカカク！",
@@ -560,6 +565,17 @@ export default function Home() {
           <h2 className="font-display text-lg md:text-xl font-bold mb-4 text-center">
             データで見る金買取（毎日自動更新）
           </h2>
+          {/* 今日の実数価格バー（日次cronビルドで自動更新） */}
+          <div className="flex flex-wrap justify-center gap-2 mb-5 text-sm">
+            {([["K24", goldTop.k24], ["K22", goldTop.k22], ["K18", goldTop.k18], ["K14", goldTop.k14]] as const).map(([label, price]) => (
+              <span key={label} className="inline-flex items-baseline gap-1 bg-white border border-accent/30 rounded-full px-4 py-1.5">
+                <span className="font-bold text-navy">{label}</span>
+                <span className="font-semibold text-accent-dark">{price.toLocaleString()}円</span>
+                <span className="text-[10px] text-warm-gray">/g</span>
+              </span>
+            ))}
+            <span className="inline-flex items-center text-xs text-warm-gray px-2">{goldTopMonth}月{goldTopDay}日更新・買取目安</span>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/souba-dashboard/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
               <span className="font-bold text-sm">📊 本日の金買取相場</span>
@@ -573,6 +589,23 @@ export default function Home() {
               <span className="font-bold text-sm">📖 金買取 相場白書</span>
               <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">日次データの統計と傾向を公開。出典明記での引用を歓迎しています。</span>
             </Link>
+          </div>
+          {/* 今日の注目ガイド（機会ページへの内部リンク集中） */}
+          <div className="flex flex-wrap justify-center gap-2 mt-5">
+            {[
+              { href: "/articles/kin-kaitori-souba/", label: "金買取相場一覧" },
+              { href: "/articles/k22-kaitori/", label: "K22（22金）の買取" },
+              { href: "/articles/k14-kaitori/", label: "K14（14金）の買取" },
+              { href: "/articles/kin-bracelet-kaitori/", label: "金ブレスレット買取" },
+              { href: "/articles/nagoya-kin-kaitori/", label: "名古屋の金買取" },
+              { href: "/articles/niiza-kin-kaitori/", label: "新座市の金買取" },
+              { href: "/articles/kowareta-kin-kaitori/", label: "壊れた金の買取" },
+              { href: "/articles/kin-uru-timing/", label: "金の売り時" },
+            ].map((c) => (
+              <Link key={c.href} href={c.href} className="inline-block bg-white border border-warm-border rounded-full px-4 py-1.5 text-xs text-navy hover:border-accent/50 hover:text-accent-dark transition">
+                {c.label}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

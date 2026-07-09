@@ -45,7 +45,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】名古屋の金買取おすすめ業者ガイド — 名駅・栄・大須エリア別比較",
+    headline: "名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者と今日の相場【2026年7月】",
     datePublished: "2026-04-24",
     dateModified: "2026-04-24",
     author: { "@type": "Organization", name: "金買取びより" },
