@@ -147,7 +147,7 @@ export default function KinkaIngotKaitoriPage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金貨・インゴット買取ガイド — 種類別の相場と税金</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金貨・インゴットの買取相場はいくら？今日のK24価格と種類別目安</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
         <TodayPriceAnswer purity="k24" />
