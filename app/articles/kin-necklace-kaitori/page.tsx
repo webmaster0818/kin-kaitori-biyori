@@ -7,6 +7,7 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -45,7 +46,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年6月最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
+    headline: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
     datePublished: "2026-04-13",
     dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
@@ -98,6 +99,8 @@ export default function KinNecklaceKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金ネックレス買取相場ガイド</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
+
+        <TodayPriceAnswer purity="k18" />
 
         <p>金のネックレスは、<strong>最も多く買取に持ち込まれる金製品</strong>の一つです。使わなくなったネックレス、チェーンが切れたネックレス、デザインが古くなったネックレス——いずれも金の素材価値があるため、買取業者で現金化できます。</p>
 

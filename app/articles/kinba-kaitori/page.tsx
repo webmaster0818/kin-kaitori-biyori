@@ -5,9 +5,10 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金歯の買取相場ガイド — 1本いくら？売り方と注意点",
+  title: "金歯の買取相場は1本いくら？今日の金価格から見る目安と売り方【2026年7月】",
   description:
     "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯買取OKのおすすめ業者4社を徹底解説。",
 };
@@ -148,6 +149,8 @@ export default function KinbaKaitoriPage() {
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金歯の買取相場ガイド — 1本いくら？売り方と注意点</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+
+        <TodayPriceAnswer purity="k18" />
 
           <p>「抜いた金歯が引き出しに眠っている」「亡くなった家族の金歯がある」「金歯って売れるの？」——実は、<strong>金歯は買取業者で売却できます</strong>。しかも、2026年の金価格高騰により、想像以上に高値がつくことがあります。</p>
 

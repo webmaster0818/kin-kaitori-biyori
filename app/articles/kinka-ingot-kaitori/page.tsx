@@ -5,9 +5,10 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金貨・インゴット買取ガイド — 種類別の相場と税金の注意点",
+  title: "金貨・インゴットの買取相場はいくら？今日のK24価格と種類別目安・税金【2026年7月】",
   description:
     "金貨（メイプルリーフ・ウィーン・カンガルー・パンダ・天皇陛下記念金貨）とインゴット（田中貴金属・徳力本店・三菱マテリアル）の買取相場を掲載。重量別の買取目安、200万円超の税金対策、おすすめ買取業者4社を徹底解説。",
 };
@@ -148,6 +149,8 @@ export default function KinkaIngotKaitoriPage() {
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金貨・インゴット買取ガイド — 種類別の相場と税金</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+
+        <TodayPriceAnswer purity="k24" />
 
           <p>金貨やインゴット（金地金）は、金の投資・保有手段として最もポピュラーな形態です。2026年4月現在、金価格は歴史的な高値水準にあり、保有している金貨やインゴットを売却するには絶好のタイミングと言えます。</p>
 
