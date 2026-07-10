@@ -103,3 +103,8 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - **G-2**: `/articles/kin-kaitori-osusume/`決定版新設(gakki Phase0移植)=結論早見(4社目的別)+今日の相場実数+4社比較表(手数料8社比較と整合)+選び方5基準+純度5/品目7/地域8ハブチップ+FAQ/Article/Breadcrumb schema。**navLinks先頭に「おすすめ業者」＋TOPチップ⭐**=商用ヘッド「金 買取 おすすめ/どこがいい」の受け皿。metadata category=howto・sitemap 117
 - **G-3**: **売り時カニバリ統合**=kin-uru-timing(196行・GSC受け皿だが薄い)→kin-uridoki-2026(367行・内部リンク多)へ301。_redirects+2行・**233ファイルの内部リンク一括差替**・metadata/sitemapから除去・ページ削除。kowareta「→売れます。」/hajimete「必要なものは？」前方化/uridoki「いつ売るべきか」のtitle即答化。soubaのh1/最終更新/ArticleSchema headline+dateModifiedも動的整合(titleだけ動的で本文4月のままだった)
 - Indexing: osusume/souba/niiza/nagoya/uridoki/kowareta/hajimete全送信(クォータは日次で回復する=朝一は枯渇していても夕方再試行の価値あり)
+
+### 2026-07-10 さらに仕込みS-1/S-2（MediaXAI「さらに仕込み進めたい」）✅本番反映済み
+- **S-1: 品目4ページ(necklace/yubiwa/kinba/ingot)にTodayPriceAnswer配備＋title/h1即答化**(「〜買取相場はいくら？今日の価格【2026年7月】」型・yubiwaに結婚指輪意図語14imp)。🚨**「schema側だけ置換」罠が再発**(necklace/yubiwaでArticleSchema headlineが先出のため置換がそちらに当たりmetadata titleが旧のまま)→out検証で検知しL59直接修正。**title/h1/schemaの三者整合を毎回out HTMLで確認**(2回目)
+- **S-2: RelatedArticles共通DATA_TOOLS先頭に`/articles/kin-kaitori-osusume/`追加**=1変更で全295記事からG-2決定版へ内部リンク一括集約(gakki集約手法の完成形)
+- Indexing 5/5。次候補=ブランドジュエリー12本統合(7/2設計第2弾)・相続×金の税金記事・2-4週の効果測定が本筋
