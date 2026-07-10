@@ -108,3 +108,8 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - **S-1: 品目4ページ(necklace/yubiwa/kinba/ingot)にTodayPriceAnswer配備＋title/h1即答化**(「〜買取相場はいくら？今日の価格【2026年7月】」型・yubiwaに結婚指輪意図語14imp)。🚨**「schema側だけ置換」罠が再発**(necklace/yubiwaでArticleSchema headlineが先出のため置換がそちらに当たりmetadata titleが旧のまま)→out検証で検知しL59直接修正。**title/h1/schemaの三者整合を毎回out HTMLで確認**(2回目)
 - **S-2: RelatedArticles共通DATA_TOOLS先頭に`/articles/kin-kaitori-osusume/`追加**=1変更で全295記事からG-2決定版へ内部リンク一括集約(gakki集約手法の完成形)
 - Indexing 5/5。次候補=ブランドジュエリー12本統合(7/2設計第2弾)・相続×金の税金記事・2-4週の効果測定が本筋
+
+### 2026-07-11 ブランドジュエリー統合（MediaXAI「残りの候補進めたい」）✅本番反映済み
+- 精査: brand category=**18本**(7/2設計の12本より多)・GSC90日で計3imp=死蔵。**2層分離で統合**: 主要5維持(cartier参照22ファイル/tiffany13/bvlgari/vancleef/harrywinston=市場大・将来資産)+弱小13統合(chanel/hermes/gucci/dior/mikimoto/tasaki/chopard/agete/4c/pontevecchio/omega/grandseiko/starjewelry)
+- 新設`/articles/brand-jewelry-kin-kaitori/`=「ブランド価値×地金価値の二重評価」軸・カテゴリ別13ブランド要点・本日K18実数(goldData日次)・維持5チップ・FAQ schema。_redirects+26行・metadata295→283・sitemap104・内部リンク13ファイル差替・**301全13本本番確認**
+- 相続記事は**既存(kin-souzoku-baikyaku)あり+実需1imp**→新設見送り(正直報告)。gold構造仕込みはほぼ完成形→以降は効果測定が本筋
