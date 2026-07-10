@@ -147,7 +147,7 @@ export default function KinbaKaitoriPage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金歯の買取相場ガイド — 1本いくら？売り方と注意点</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金歯の買取相場は1本いくら？今日の金価格から見る目安と売り方</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
 
         <TodayPriceAnswer purity="k18" />

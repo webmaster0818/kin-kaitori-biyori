@@ -56,7 +56,7 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年6月最新】金ネックレス買取相場ガイド — 純度・重さ別の価格と高く売るコツ",
+  title: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
   description:
     "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
 };
@@ -97,7 +97,7 @@ export default function KinNecklaceKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金ネックレス買取相場ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金ネックレスの買取相場はいくら？純度・重さ別の今日の価格</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
 
         <TodayPriceAnswer purity="k18" />
