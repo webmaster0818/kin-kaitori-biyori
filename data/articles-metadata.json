@@ -144,6 +144,38 @@
   "category": "purity"
  },
  {
+  "slug": "k18-kaitori",
+  "title": "K18（18金）買取相場ガイド",
+  "shortTitle": "K18（18金）買取相場ガイド",
+  "badge": "K18",
+  "description": "金製品の主力K18の今日の相場と製品別査定。",
+  "category": "purity"
+ },
+ {
+  "slug": "k10-kaitori",
+  "title": "K10（10金）買取相場ガイド",
+  "shortTitle": "K10（10金）買取相場ガイド",
+  "badge": "K10",
+  "description": "アクセサリーに多いK10の相場とK18との違い。",
+  "category": "purity"
+ },
+ {
+  "slug": "platinum-pt900-kaitori",
+  "title": "プラチナPt900買取相場ガイド",
+  "shortTitle": "プラチナPt900買取相場ガイド",
+  "badge": "Pt900",
+  "description": "指輪定番Pt900の価格の調べ方と査定の基本。",
+  "category": "compare"
+ },
+ {
+  "slug": "silver-kaitori",
+  "title": "シルバー（銀）買取相場ガイド",
+  "shortTitle": "シルバー（銀）買取相場ガイド",
+  "badge": "シルバー",
+  "description": "SV925など銀製品の買取の基本と価格の調べ方。",
+  "category": "compare"
+ },
+ {
   "slug": "kaitori-houhou-hikaku",
   "title": "金の買取方法4種類を徹底比較",
   "shortTitle": "金の買取方法4種類を徹底比較",

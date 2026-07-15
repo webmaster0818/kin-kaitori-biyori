@@ -101,7 +101,7 @@ const navLinks = [
   { href: "/kin-kaitori-hakusho/", label: "相場白書" },
   { href: "/articles/kin-kaitori-souba/", label: "金買取相場" },
   { href: "/articles/kin-takaku-uru/", label: "高く売る方法" },
-  { href: "/articles/kinseido-kaitori-guide/", label: "K18買取" },
+  { href: "/articles/k18-kaitori/", label: "K18買取" },
   { href: "/articles/kaitori-houhou-hikaku/", label: "買取方法比較" },
 ];
 
