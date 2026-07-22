@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -36,6 +37,8 @@ function FaqSchema() {
       { "@type": "Question", name: "名古屋で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルやティファナなど、名古屋市内および愛知県全域で出張買取に対応している業者があります。出張費・査定料は無料で、自宅にいながら金の売却が完結します。" } },
       { "@type": "Question", name: "名古屋と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、名古屋でも東京でもほぼ同じ水準です。ただし業者間の競争度の違いにより、1gあたり数十円〜100円程度の差が出る場合があります。" } },
       { "@type": "Question", name: "名古屋の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により、買取時には身分証の提示が義務付けられています。付属品（保証書・箱）があれば査定額アップの可能性もあります。" } },
+      { "@type": "Question", name: "名鉄名古屋駅や久屋大通駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。" } },
+      { "@type": "Question", name: "金山駅や本陣駅の近くに金買取店がない場合はどうすればいいですか？", acceptedAnswer: { "@type": "Answer", text: "金山駅・本陣駅・ささしまライブ駅の徒歩圏には大手の金買取店を確認できていません。栄・大須の店舗へ足を延ばすか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、複数社に相見積もりを取るのが安全です。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -100,6 +103,17 @@ export default function NagoyaKinKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+
+        <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-8 not-prose">
+          <p className="font-bold text-navy text-lg mb-3">まず結論：名古屋で金を売るなら</p>
+          <ul className="space-y-2 text-sm md:text-base">
+            <li>⏱️ <strong>すぐ売りたい・駅近で探す</strong> → 名駅（なんぼや サンロード/エスカ）・栄・久屋大通・大須に大手が集中。<a href="#stations" className="text-accent-dark underline">駅別に探す</a></li>
+            <li>💰 <strong>1円でも高く売りたい</strong> → 複数社の相見積もりが鉄則。まず<a href="/articles/ikkatsu-satei-hikaku/" className="text-accent-dark underline">一括査定で比較</a>し、地金は大須の専門店も検討。</li>
+            <li>🧾 <strong>手数料で損したくない</strong> → 宅配返送料・振込手数料は業者差あり。<a href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent-dark underline">手数料8社比較</a>で無料の業者を選ぶ。</li>
+          </ul>
+        </div>
+
+        <TodayPriceAnswer purity="k18" />
 
         <p>名古屋は中部地方最大の金買取マーケットです。名駅（名古屋駅周辺）・栄・大須を中心に多くの買取業者が集まり、<strong>東京・大阪に次ぐ激戦区</strong>として知られています。</p>
 
@@ -208,6 +222,28 @@ export default function NagoyaKinKaitoriPage() {
         </div>
 
         <p>大須エリアには池田商店や質ウエダ、質セブンなど、<strong>名古屋の老舗貴金属店</strong>が営業しています。これらの店舗は貴金属問屋としての歴史が長く、地金の売買に精通しているため、大手チェーンよりも<strong>1gあたり数十円〜100円程度高い</strong>買取価格を提示してくれるケースがあります。</p>
+
+        <h2 id="stations">名古屋の駅別に金買取店を探す</h2>
+
+        <p>「名鉄名古屋駅」「久屋大通駅」など<strong>最寄り駅から探したい</strong>方向けに、駅ごとに徒歩圏内の実在店舗をまとめました。店舗が見当たらない駅は、出張買取・宅配買取を利用する選択肢を正直に案内します（掲載は各社公式店舗ページで確認した実在店のみ・確認日 2026年7月）。</p>
+
+        <h3>名鉄名古屋駅・名古屋駅（名駅）・近鉄名古屋駅</h3>
+        <p>名駅は地下街に大手が直結しており、名鉄・JR・近鉄いずれの利用でも徒歩圏です。<strong>なんぼや 名古屋サンロード店</strong>（名鉄名古屋駅直結のサンロード地下街／中村区名駅4-7-25）、<strong>なんぼや 名古屋エスカ店</strong>（JR名古屋駅 新幹線口すぐ／中村区椿町6-9 エスカ地下街）が代表格です。金・プラチナ・貴金属に対応。<a href="https://nanboya.com/gold-kaitori/shop/nagoya-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
+
+        <h3>久屋大通駅</h3>
+        <p>久屋大通駅（桜通線・名城線）直下のセントラルパーク地下街に<strong>バイセル 名古屋栄セントラルパーク店</strong>（中区錦3-15-13 B1F・南改札から徒歩1分）があります。錦エリアには<strong>買取大吉 名古屋錦店</strong>（丸の内駅徒歩4分）も徒歩圏です。<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：バイセル公式</a></p>
+
+        <h3>栄駅・栄町駅</h3>
+        <p><strong>なんぼや メルサ栄店</strong>（栄駅S7出口 徒歩1分／中区栄3-4-5 メルサ栄本店4F）、<strong>大黒屋 質名古屋栄買取センター</strong>（栄駅8番出口 徒歩3分／中区栄3-7-9）が代表。ブランドジュエリーは素材＋ブランドの二重評価が期待できます。<a href="https://nanboya.com/gold-kaitori/shop/sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
+
+        <h3>大須（大須観音駅・上前津駅）</h3>
+        <p>下町の商店街で貴金属専門店・質屋が多く、地金は名古屋市内で最高値が出やすいエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
+
+        <h3>金山駅</h3>
+        <p>金山駅は総合駅ながら、<strong>大手チェーンの駅至近店は確認できていません</strong>（おたからや金山店は熱田区側で徒歩約10分・地場の質店が中心）。確実に比較したい場合は、栄・大須の店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>が便利です。</p>
+
+        <h3>本陣駅・栄生駅・ささしまライブ駅</h3>
+        <p>これらの駅の徒歩圏には金買取の専門店・大手店舗を確認できていません（栄生駅は買取大吉 中村栄生店が徒歩3分圏にあります）。<strong>店舗が近くにない場合は、無料の出張買取・宅配買取を使えば自宅で完結します</strong>。デリケートな品・重量のある地金は、複数社に相見積もりを取るのが安全です。<a href="/articles/tentou-vs-takuhai/" className="text-accent-dark underline">店頭・出張・宅配の違いはこちら</a></p>
 
         <h2>名古屋で金を高く売る5つのコツ</h2>
 
@@ -350,6 +386,14 @@ export default function NagoyaKinKaitoriPage() {
             {
               q: "名古屋で金を売る際に必要な持ち物は？",
               a: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により、金額にかかわらず身分証の提示が義務付けられています。また、200万円を超える取引の場合はマイナンバーの提示も必要です。",
+            },
+            {
+              q: "名鉄名古屋駅や久屋大通駅の近くに金買取店はありますか？",
+              a: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。",
+            },
+            {
+              q: "金山駅や本陣駅の近くに金買取店がない場合はどうすればいいですか？",
+              a: "金山駅・本陣駅・ささしまライブ駅の徒歩圏には大手の金買取店を確認できていません。栄・大須の店舗へ足を延ばすか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、複数社に相見積もりを取るのが安全です。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

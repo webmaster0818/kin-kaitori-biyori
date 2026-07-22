@@ -138,7 +138,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
         <ExpertQA category="compare" />
         <RelatedArticles
           currentSlug="kin-kaitori-tesuryo-hikaku"
-          relatedSlugs={["kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tentou-vs-takuhai", "kin-kaitori-souba", "kin-takaku-uru", "kin-kaitori-hajimete", "kin-baikyaku-mynumber", "kin-kaitori-zeikin"]}
+          relatedSlugs={["nagoya-kin-kaitori", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tentou-vs-takuhai", "kin-kaitori-souba", "kin-takaku-uru", "kin-kaitori-hajimete", "kin-baikyaku-mynumber", "kin-kaitori-zeikin"]}
         />
       </article>
     </div>

@@ -181,7 +181,7 @@ export default function KinKaitoriOsusumePage() {
         <CtaBox />
         <RelatedArticles
           currentSlug="kin-kaitori-osusume"
-          relatedSlugs={["kin-takaku-uru", "kin-kaitori-tesuryo-hikaku", "kaitori-houhou-hikaku", "kin-uridoki-2026", "kin-kaitori-souba", "kin-kaitori-hajimete"]}
+          relatedSlugs={["nagoya-kin-kaitori", "kin-takaku-uru", "kin-kaitori-tesuryo-hikaku", "kaitori-houhou-hikaku", "kin-uridoki-2026", "kin-kaitori-souba", "kin-kaitori-hajimete"]}
         />
       </article>
     </div>
