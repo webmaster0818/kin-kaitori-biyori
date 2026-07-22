@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -153,6 +154,8 @@ export default function KinKaitoriSoubaPage() {
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取相場 今日のK24は1g{k24Souba.toLocaleString()}円【{soubaMonth}月{soubaDay}日更新】</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: {soubaMonth}月{soubaDay}日（相場は毎朝自動更新）</p>
+
+          <TodayPriceAnswer purity="k24" />
 
           <p>「金の買取相場っていくら？」「K18のネックレスを売りたいけど、今の相場がわからない」——そんな疑問をお持ちの方に向けて、この記事では<strong>2026年4月時点の最新の金買取相場を純度別に一覧で掲載</strong>しています。</p>
 
