@@ -113,3 +113,9 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 精査: brand category=**18本**(7/2設計の12本より多)・GSC90日で計3imp=死蔵。**2層分離で統合**: 主要5維持(cartier参照22ファイル/tiffany13/bvlgari/vancleef/harrywinston=市場大・将来資産)+弱小13統合(chanel/hermes/gucci/dior/mikimoto/tasaki/chopard/agete/4c/pontevecchio/omega/grandseiko/starjewelry)
 - 新設`/articles/brand-jewelry-kin-kaitori/`=「ブランド価値×地金価値の二重評価」軸・カテゴリ別13ブランド要点・本日K18実数(goldData日次)・維持5チップ・FAQ schema。_redirects+26行・metadata295→283・sitemap104・内部リンク13ファイル差替・**301全13本本番確認**
 - 相続記事は**既存(kin-souzoku-baikyaku)あり+実需1imp**→新設見送り(正直報告)。gold構造仕込みはほぼ完成形→以降は効果測定が本筋
+
+### 2026-07-22 N1①②③実行（MediaXAI「①②③進めよう」＝フルフュージョン実行順）✅本番反映済み
+- **①Nagoya改修（最優先・サイト全表示の約2割）**: `app/articles/nagoya-kin-kaitori/page.tsx`に(a)結論box(急ぐ/高く売りたい/手数料重視の3意図即答+内部リンク)(b)**TodayPriceAnswer k18**(本日1g16,890円・日次自動更新。従来PurityPriceTableのみでヒーロー価格なかった)(c)**駅別セクション新設**(pos9-13で0clickの駅クエリ受け皿)=名鉄名古屋/名駅・久屋大通・栄・大須は**実在店を一次確認掲載**(なんぼやサンロード/エスカ・バイセルセントラルパーク・大黒屋栄/大須・出典付き)、金山・本陣・ささしまライブは**大手店確認できず→正直に宅配/出張誘導**(架空ゼロ・並列調査2体で駅別実査)(d)駅別FAQ2問(可視+FaqSchema同期)。**内部リンク階層化**=手数料8社比較/一括査定/おすすめ決定版の3ハブ relatedSlugs に nagoya 追加。**上田駅は既に専用ページ存在・index済(pos10.5)→新規不要**。
+- **②pos5-25テコ入れ**: GSC実測で**pos5-25は9本のみ(fusion推定"20本"と乖離=実データで縮小)**・大半は前フェーズで最適化済。genuine gap=**kin-kaitori-souba(215imp/pos24.8=2番目に大)にTodayPriceAnswer k24追加**(1g22,521円・従来titleは動的だがヒーロー価格なかった)。niiza等は既に即答title+LocalStores済。
+- **③手数料調査+運営者情報**: 実データ確認で**両方すでに存在**=手数料8社比較(kin-kaitori-tesuryo-hikaku・pos10.2)＋/about/(運営者情報+サイト概要+編集方針+広告開示・sitemap掲載)。fusion提案は既存資産を知らずの提案→**重複作成せず正直報告**。業者連絡はdocs/backlink-outreach-kit.md既存(社外送信は要承認)。
+- build EXIT0・方式B両push・本番描画確認(nagoya結論box/駅別/16,890円・souba22,521円)・Indexing nagoya4+souba1。効果1-2週GSC(名鉄名古屋駅/久屋大通のclick転換・souba pos24.8→浮上)。**gold N1完了**。次=効果測定 or 残余(金山さてい屋/おたからや金山の電話裏取り後の追加・ブランドジュエリー第2弾)。
