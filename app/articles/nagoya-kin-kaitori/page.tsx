@@ -240,7 +240,7 @@ export default function NagoyaKinKaitoriPage() {
         <p>下町の商店街で貴金属専門店・質屋が多く、地金は名古屋市内で最高値が出やすいエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
 
         <h3>金山駅</h3>
-        <p>金山駅は総合駅ながら、<strong>大手チェーンの駅至近店は確認できていません</strong>（おたからや金山店は熱田区側で徒歩約10分・地場の質店が中心）。確実に比較したい場合は、栄・大須の店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>が便利です。</p>
+        <p>金山駅は総合駅で、大手チェーンの駅至近店は確認できていませんが、地場の買取専門店<strong>「さてい屋」（金山総合駅 東口 徒歩2分）</strong>が金・プラチナの買取に対応しています。査定料・手数料は無料、予約不要で身分証を持参すれば来店買取が可能です（休業日あり・詳細は<a href="http://www.sateiya.net/" target="_blank" rel="noopener noreferrer nofollow">公式サイト</a>でご確認ください）。より多くの業者を比較したい場合は、栄・大須の大手店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>で相見積もりを取るのが確実です。</p>
 
         <h3>本陣駅・栄生駅・ささしまライブ駅</h3>
         <p>これらの駅の徒歩圏には金買取の専門店・大手店舗を確認できていません（栄生駅は買取大吉 中村栄生店が徒歩3分圏にあります）。<strong>店舗が近くにない場合は、無料の出張買取・宅配買取を使えば自宅で完結します</strong>。デリケートな品・重量のある地金は、複数社に相見積もりを取るのが安全です。<a href="/articles/tentou-vs-takuhai/" className="text-accent-dark underline">店頭・出張・宅配の違いはこちら</a></p>
