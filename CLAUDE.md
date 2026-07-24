@@ -119,3 +119,8 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - **②pos5-25テコ入れ**: GSC実測で**pos5-25は9本のみ(fusion推定"20本"と乖離=実データで縮小)**・大半は前フェーズで最適化済。genuine gap=**kin-kaitori-souba(215imp/pos24.8=2番目に大)にTodayPriceAnswer k24追加**(1g22,521円・従来titleは動的だがヒーロー価格なかった)。niiza等は既に即答title+LocalStores済。
 - **③手数料調査+運営者情報**: 実データ確認で**両方すでに存在**=手数料8社比較(kin-kaitori-tesuryo-hikaku・pos10.2)＋/about/(運営者情報+サイト概要+編集方針+広告開示・sitemap掲載)。fusion提案は既存資産を知らずの提案→**重複作成せず正直報告**。業者連絡はdocs/backlink-outreach-kit.md既存(社外送信は要承認)。
 - build EXIT0・方式B両push・本番描画確認(nagoya結論box/駅別/16,890円・souba22,521円)・Indexing nagoya4+souba1。効果1-2週GSC(名鉄名古屋駅/久屋大通のclick転換・souba pos24.8→浮上)。**gold N1完了**。次=効果測定 or 残余(金山さてい屋/おたからや金山の電話裏取り後の追加・ブランドジュエリー第2弾)。
+
+### 2026-07-24 N1残①③（MediaXAI「①③進めて」）✅本番反映済み
+- **①残深部展開**: GSC実測で高需要深部を確認→**最大のk14(263imp/pos38)・k22(253/pos41)は既にTodayPriceAnswer+結論box完備**（P1で最適化済＝pilates同様オンページは打ち切り済・壁はドメイン権威）。genuine gap=価格ヒーロー未搭載の品目ページ→**kin-bracelet-kaitori(57imp/pos31.8)にTodayPriceAnswer k18・kin-nobebo-kaitoriにk24を追加**（kin-yubiwa/necklaceはS-1で搭載済）。
+- **③手数料ページ8→13社（"全国調査"昇格＝被リンク資産化）**: 並列調査1体で追加5社の手数料を各社公式で一次確認→**大黒屋(全項目無料)・ゴールドプラザ・コメ兵(上場・返送/振込店負担)・高山質店(出張なし・返送客負担＝正直なマイナス情報)・銀座パリス**を比較表に追加。**リファスタは手数料が条件分岐・自社矛盾で除外**（1行比較に不適）。**記載なし欄を無料で補完しない**厳守（正確性の要）。title/desc/FAQ/本文の8社→13社・調査月7月に更新。
+- build EXIT0・方式B両push・本番bracelet価格ヒーロー/13社比較 確認・sitemap lastmod更新・Indexing 3/3。効果1-2週GSC。**gold N1は一区切り**（オンページはほぼ完成＝pilates同様、次レバーは被リンク/権威。手数料13社ページが引用資産の核）。
