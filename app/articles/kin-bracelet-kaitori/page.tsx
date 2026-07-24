@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldSimulator } from "@/components/GoldSimulator";
@@ -102,6 +103,8 @@ export default function KinBraceletKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金ブレスレット買取相場｜喜平・テニス・切れた品も今日の価格で計算【2026年7月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月3日</p>
+
+        <TodayPriceAnswer purity="k18" />
 
         <p>金のブレスレットやバングルは、<strong>ネックレスに次いで買取に持ち込まれることの多い金製品</strong>です。特に喜平ブレスレットやバングルは重量があるため、金価格が高騰している現在、<strong>驚くほどの高額買取</strong>が期待できます。</p>
 

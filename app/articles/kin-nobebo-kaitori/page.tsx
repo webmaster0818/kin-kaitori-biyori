@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldSimulator } from "@/components/GoldSimulator";
@@ -73,6 +74,8 @@ export default function KinNobeboKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年6月最新】金の延べ棒・インゴット買取ガイド</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月11日</p>
+
+        <TodayPriceAnswer purity="k24" />
 
         <p>金の延べ棒（インゴット・ゴールドバー）は、金を投資・資産保全目的で保有する最も一般的な形態です。2026年現在、金相場が歴史的な高値を更新し続けており、<strong>インゴットの売却を検討する方が急増</strong>しています。</p>
 

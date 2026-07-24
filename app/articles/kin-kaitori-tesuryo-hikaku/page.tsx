@@ -4,7 +4,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
-const TITLE = "金買取の手数料を8社で徹底比較【2026年6月調査】査定料・出張料・返送料・振込手数料";
+const TITLE = "金買取の手数料を13社で徹底比較【2026年7月調査】査定料・出張料・返送料・振込手数料";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-tesuryo-hikaku/";
 
 function BreadcrumbSchema() {
@@ -18,7 +18,7 @@ function BreadcrumbSchema() {
 
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-    { "@type": "Question", name: "金買取の査定料はどこも無料ですか？", acceptedAnswer: { "@type": "Answer", text: "今回調査した8社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや）はすべて公式サイトで査定料無料と明記しています（2026年6月時点）。" } },
+    { "@type": "Question", name: "金買取の査定料はどこも無料ですか？", acceptedAnswer: { "@type": "Answer", text: "今回調査した13社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス）はすべて公式サイトで査定料無料と明記しています（2026年6月時点）。" } },
     { "@type": "Question", name: "見落としやすい手数料は何ですか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取でキャンセルした場合の「返送料」です。今回の調査では、なんぼや・ティファナは返送料無料、バイセル・福ちゃん・ザ・ゴールドはお客様負担（着払い）と公式に記載されており、各社で差がありました。また「買取相場価格に手数料は含まれていない」と注記する業者もあるため、査定時に差引きの有無を確認するのが確実です。" } },
     { "@type": "Question", name: "手数料無料なら、どこで売っても同じですか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。手数料が無料でも、提示される買取単価（1gあたりの価格）は業者ごとに異なります。手数料の有無と買取単価の両方を見て、手取り額で比較するのが正解です。複数社の査定を取ることをおすすめします。" } },
   ]};
@@ -32,7 +32,7 @@ function ArticleSchema() {
 
 export const metadata: Metadata = {
   title: TITLE,
-  description: "金買取8社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや）の査定料・出張料・宅配送料・キャンセル時返送料・振込手数料を各公式サイトで調査して比較。見落としやすい返送料の差まで一覧表で確認できます。",
+  description: "金買取13社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス）の査定料・出張料・宅配送料・キャンセル時返送料・振込手数料を各公式サイトで調査して比較。見落としやすい返送料の差まで一覧表で確認できます。",
 };
 
 const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: string; hensou: string; cancel: string; furikomi: string; methods: string }> = [
@@ -44,6 +44,11 @@ const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: stri
   { name: "福ちゃん", satei: "無料", shucchou: "無料（全国※一部地域除く）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "ザ・ゴールド", satei: "無料", shucchou: "無料（全国90%以上カバー）", takuhai: "送料無料（着払い発送）", hensou: "客負担", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "おたからや", satei: "無料", shucchou: "無料（全国）", takuhai: "宅配なし", hensou: "—", cancel: "記載なし（査定後キャンセル可とは明記）", furikomi: "記載なし", methods: "店頭・出張" },
+  { name: "大黒屋", satei: "無料", shucchou: "無料", takuhai: "送料無料（往復・店負担）", hensou: "無料", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "ゴールドプラザ", satei: "無料", shucchou: "記載なし（出張あり）", takuhai: "送料無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配" },
+  { name: "コメ兵（KOMEHYO）", satei: "無料", shucchou: "記載なし（出張あり）", takuhai: "送料・キット無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "高山質店", satei: "無料", shucchou: "出張なし", takuhai: "送料無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・宅配・LINE" },
+  { name: "銀座パリス", satei: "無料", shucchou: "無料", takuhai: "送料無料（キット・着払伝票）", hensou: "記載なし", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配・LINE" },
 ];
 
 function CtaBox() {
@@ -71,7 +76,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を8社で徹底比較【2026年6月調査】</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を13社で徹底比較【2026年7月調査】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月12日（各社公式サイトを当サイトが直接確認した時点の情報です）</p>
         <p>金買取で本当に大事なのは「買取単価」だけではありません。<strong>査定料・出張料・キャンセル時の返送料・振込手数料</strong>などの諸費用で、最終的な手取り額が変わります。</p>
         <p>この記事では、主要買取8社の公式サイトを当サイトが直接確認し、手数料と利用条件を一覧にまとめました。公式に記載がない項目は「記載なし」と正直に表記しています。</p>
@@ -93,7 +98,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
 
         <h2>比較からわかった3つのポイント</h2>
         <h3>1. 査定料・出張料・キャンセル料は「無料」が業界標準</h3>
-        <p>8社すべてが査定料無料を明記しており、出張料・キャンセル料もほぼ全社が無料です（おたからやはキャンセル料の明示記載はないものの「査定額に納得できなければキャンセル可能」と記載）。つまり<strong>この3項目では差がつきません</strong>。</p>
+        <p>13社すべてが査定料無料を明記しており、出張料・キャンセル料もほぼ全社が無料です（おたからやはキャンセル料の明示記載はないものの「査定額に納得できなければキャンセル可能」と記載）。つまり<strong>この3項目では差がつきません</strong>。</p>
 
         <h3>2. 差がつくのは宅配買取の「返送料」</h3>
         <p>見落としやすいのが、宅配査定後にキャンセルした場合の<strong>返送料</strong>です。今回の調査では明確に差がありました。</p>
@@ -121,7 +126,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
 
         <h2>よくある質問</h2>
         <h3>Q. 溶解検査の費用を取られることはありますか？</h3>
-        <p>今回調査した8社の公式サイトには、溶解検査や精錬手数料の具体的な記載はありませんでした（ザ・ゴールドとおたからやは比重による検査を記載）。インゴット以外の製品でも、通常は刻印確認・比重計・X線などの非破壊検査が一般的です。検査方法と費用は査定時に確認しましょう。</p>
+        <p>今回調査した13社の公式サイトには、溶解検査や精錬手数料の具体的な記載はありませんでした（ザ・ゴールドとおたからやは比重による検査を記載）。インゴット以外の製品でも、通常は刻印確認・比重計・X線などの非破壊検査が一般的です。検査方法と費用は査定時に確認しましょう。</p>
         <h3>Q. 200万円を超える売却で必要なものは？</h3>
         <p>支払調書の関係でマイナンバーの告知が必要になります。詳しくは<Link href="/articles/kin-baikyaku-mynumber/">金売却とマイナンバーの解説</Link>をご覧ください。</p>
         <h3>Q. 結局どこがおすすめ？</h3>
