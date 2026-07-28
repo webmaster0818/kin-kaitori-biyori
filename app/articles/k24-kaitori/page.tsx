@@ -204,18 +204,21 @@ export default function K24KaitoriPage() {
 
           <h3>K24の特性</h3>
 
-          <div className="table-wrapper">
-            
-          </div>
+        <div className="table-wrapper">
+          <table>
+            <tbody>
+              <tr><th>純度</th><td>99.99%（純金・フォーナイン）</td></tr>
+              <tr><th>主な刻印</th><td>K24・999.9・9999</td></tr>
+              <tr><th>主な用途</th><td>インゴット・投資用金貨（メイプルリーフ等）・純金製品</td></tr>
+              <tr><th>性質</th><td>非常に柔らかく傷つきやすい。地金としての買取単価は最も高い</td></tr>
+            </tbody>
+          </table>
+        </div>
+
 
           <p>買取価格と小売価格の差額（スプレッド）は業者によって異なりますが、一般的に<strong>1gあたり200〜600円程度</strong>です。スプレッドが小さい業者ほど、売り手にとって有利と言えます。</p>
 
-          <h3>K24 1gあたり買取価格の推移（2020年〜2026年）</h3>
-
-          <div className="table-wrapper">
-            
-          </div>
-
+          
           <p><strong>有名ブランドのインゴットは買取に有利です。</strong>以下のブランドは「グッドデリバリーバー」として国際的に認定されており、信頼性が高く、スムーズに買取してもらえます。</p>
 
           <ul>
@@ -236,7 +239,16 @@ export default function K24KaitoriPage() {
           <p>金貨は観賞用・収集用・投資用など多目的に流通しています。K24（純金）の金貨は「地金型金貨」と呼ばれ、金の価値にほぼ連動した価格で取引されます。</p>
 
           <div className="table-wrapper">
-            
+            <table>
+              <thead>
+                <tr><th>金貨</th><th>発行国</th><th>純度</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>メイプルリーフ金貨</td><td>カナダ</td><td>K24（99.99%）</td></tr>
+                <tr><td>ウィーン金貨ハーモニー</td><td>オーストリア</td><td>K24（99.99%）</td></tr>
+                <tr><td>カンガルー金貨</td><td>オーストラリア</td><td>K24（99.99%）</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <p>K24ジュエリーは柔らかいため、使用中に変形したり傷がついたりしていることがありますが、<strong>変形や傷があっても買取価格に影響しません</strong>。金としての素材価値で評価されるためです。</p>

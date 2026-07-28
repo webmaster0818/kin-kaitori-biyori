@@ -45,10 +45,10 @@ function FaqSchema() {
     mainEntity: [
       { "@type": "Question", name: todayFaq.q, acceptedAnswer: { "@type": "Answer", text: todayFaq.a } },
       { "@type": "Question", name: "K22（22金）の買取価格は毎日変わりますか？", acceptedAnswer: { "@type": "Answer", text: "はい、国際金価格と為替レートにより毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。K22はK24（純金）の約92%の価格水準です。" } },
-      { "@type": "Question", name: "K22はどんな製品に使われていますか？", acceptedAnswer: { "@type": "Answer", text: "K22は主に金貨（メイプルリーフ金貨、ブリタニア金貨など）や高級ジュエリーに使用されます。日本国内ではK18が主流ですが、海外（特に中東・東南アジア）ではK22のジュエリーが一般的です。" } },
+      { "@type": "Question", name: "K22はどんな製品に使われていますか？", acceptedAnswer: { "@type": "Answer", text: "K22は主に金貨（クルーガーランド金貨、アメリカン・ゴールド・イーグル金貨、ソブリン金貨など）や海外製ジュエリーに使用されます。日本国内ではK18が主流ですが、海外（特に中東・東南アジア）ではK22のジュエリーが一般的です。なお、メイプルリーフ金貨やウィーン金貨はK24（純度99.99%）です。" } },
       { "@type": "Question", name: "K22とK24の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K22は金の純度が91.7%（22/24）、K24は99.99%です。K22はK24より硬度が高く、ジュエリーや金貨として加工しやすいというメリットがあります。買取価格はK24の方が高くなります。" } },
       { "@type": "Question", name: "K22の刻印にはどんな種類がありますか？", acceptedAnswer: { "@type": "Answer", text: "K22の刻印は「K22」「22K」「916」「917」などがあります。「916」「917」は千分率表記で、金の含有率が916/1000（91.6%）であることを示しています。海外製品では「22K」「22ct」と刻印されることもあります。" } },
-      { "@type": "Question", name: "K22の金貨はどこで売るのがお得ですか？", acceptedAnswer: { "@type": "Answer", text: "金貨の種類によって最適な売却先が異なります。一般的な投資用金貨（メイプルリーフ金貨など）は貴金属買取業者で金の重量ベースで買い取ってもらえます。希少な記念金貨はコイン専門店の方が高値がつく場合があります。複数社で見積もりを取って比較するのがおすすめです。" } },
+      { "@type": "Question", name: "K22の金貨はどこで売るのがお得ですか？", acceptedAnswer: { "@type": "Answer", text: "金貨の種類によって最適な売却先が異なります。一般的な投資用金貨（クルーガーランド金貨など）は貴金属買取業者で金の重量ベースで買い取ってもらえます。希少な記念金貨はコイン専門店の方が高値がつく場合があります。複数社で見積もりを取って比較するのがおすすめです。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -68,8 +68,8 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: `K22（22金）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
-  description: `本日（${priceMonth}月${priceDay}日）のK22（22金・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
+  title: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
+  description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
 };
 
 function CtaBox() {
@@ -108,7 +108,7 @@ export default function K22KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">K22（22金）買取相場 — 今日の1g価格と高く売る方法</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">22金（K22）買取相場 — 今日の1g価格と高く売る方法</h1>
         <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k22" />
@@ -142,28 +142,63 @@ export default function K22KaitoriPage() {
         <h3>K22の特徴</h3>
 
         <div className="table-wrapper">
-          
+          <table>
+            <tbody>
+              <tr><th>純度</th><td>91.7%（22/24・917/1000）</td></tr>
+              <tr><th>主な刻印</th><td>K22・22K・916・917</td></tr>
+              <tr><th>主な用途</th><td>海外発行の金貨（クルーガーランド等）・海外製ジュエリー</td></tr>
+              <tr><th>性質</th><td>K24より硬く、金貨・装飾品への加工に向く</td></tr>
+            </tbody>
+          </table>
         </div>
+
 
         <p>K22の買取価格は<strong>K24の約92%の水準</strong>です。K18と比べると1gあたり約{(k22Price - k18Price).toLocaleString()}円高く（{priceDateJa}時点の目安）、同じ重量のジュエリーならK22の方がかなり高額な買取になります。</p>
 
-        <h3>K22製品の重量別買取目安</h3>
-
-        <div className="table-wrapper">
-          
-        </div>
-
+        
         <p>1オンス（31.1g）のK22金貨であれば、<strong>約{Math.round((31.1 * k22Price) / 10000)}万円前後</strong>（{priceDateJa}時点の目安）の買取価格が期待できます。金価格が歴史的高値圏にある現在は、売却に非常に有利な時期です。</p>
 
-        <h3>K22買取価格の推移</h3>
-
-        <div className="table-wrapper">
-          
-        </div>
-
+        
         <p>金貨は金の素材価値に加えて、<strong>プレミアム（付加価値）</strong>がつく場合があります。特に発行枚数が限られた記念金貨や、年号が古いヴィンテージ金貨は、金の重量以上の価格で取引されることがあります。</p>
 
         <p>ただし、プレミアムの評価は業者によって大きく異なります。金貨に詳しい専門業者と、金の素材価値だけを見る業者の両方に見積もりを取ることで、最高値での売却が可能になります。</p>
+
+        <h2>K22 vs K24 vs K18 — 純度別の買取価格比較</h2>
+
+        <p>「22金とほかの純度でどれくらい買取価格が違うのか」は、売却前に必ず押さえておきたいポイントです。下の表は本日の相場に基づく<strong>K24・K22・K18の重量別買取目安</strong>です（毎朝自動更新）。K22はK24の約92%、K18の約1.22倍の地金価値が目安になります。</p>
+
+        <WeightPriceTable purities={["k24", "k22", "k18"]} />
+
+        <p>同じ重量でも純度によって査定額は大きく変わります。手元の製品の刻印（917・K22等）を確認したうえで、<Link href="/kin-kaitori-keisanki/">買取計算機</Link>で概算を出しておくと、店頭査定額の妥当性をその場で判断できます。</p>
+
+        <h2>K22の代表的な金貨・製品と買取のポイント</h2>
+
+        <p>日本国内でK22が使われる主な製品は<strong>海外発行の金貨と海外製ジュエリー</strong>です。代表的な22金金貨には次のものがあります。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>金貨</th><th>発行国</th><th>純度</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>クルーガーランド金貨</td><td>南アフリカ</td><td>K22（91.67%）</td></tr>
+              <tr><td>アメリカン・ゴールド・イーグル金貨</td><td>アメリカ</td><td>K22（91.67%）</td></tr>
+              <tr><td>ソブリン金貨</td><td>イギリス</td><td>K22（91.67%）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>なお、メイプルリーフ金貨（カナダ）やウィーン金貨（オーストリア）は<strong>K24（純度99.99%）</strong>なので、22金とは査定単価が異なります。金貨は地金価値（重量×純度×相場）に加えて、発行年や状態によって<strong>プレミアム（収集価値）が上乗せされる場合</strong>があります。地金価値だけで手放す前に、金貨の取り扱い実績がある業者で査定を受けるのがおすすめです。</p>
+
+        <h2>K22の偽物・メッキ品の見分け方</h2>
+
+        <p>K22として売られている製品の中には、金メッキ品や純度表記が不正確なものも紛れています。売却前に確認できるポイントは次のとおりです。</p>
+
+        <ul>
+          <li><strong>刻印を確認する</strong>: 本物のK22製品には「K22」「917」などの純度刻印があるのが一般的です。「K22GP」（金メッキ）「K22GF」（金張り）は地金価値がほぼありません。</li>
+          <li><strong>磁石を近づける</strong>: 金は磁石に付きません。強く反応する場合はメッキ品の可能性があります（ただし非磁性の金属を使った偽物もあるため、これだけでは断定できません）。</li>
+          <li><strong>最終判断は専門店の機器で</strong>: 買取店では比重計や蛍光X線分析機で純度を測定します。刻印がない・自信がない場合も、査定自体は無料の業者が多いのでまず持ち込んで確認するのが確実です。</li>
+        </ul>
 
         <h2>K22を高く売る5つのポイント</h2>
 

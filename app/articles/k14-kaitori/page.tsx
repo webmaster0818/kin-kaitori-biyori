@@ -70,8 +70,8 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: `K14（14金）の買取相場 今日1g${k14Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】585刻印・製品別の査定額も`,
-  description: `本日（${priceMonth}月${priceDay}日）のK14（14金・純度58.5%）買取相場は1gあたり${k14Price.toLocaleString()}円（毎朝自動更新）。K14とK18の違い、ネックレス・指輪・ブレスレットの製品別査定額、585刻印の意味、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
+  title: `14金（K14）の買取相場 今日1g${k14Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】585刻印・製品別の査定額も`,
+  description: `本日（${priceMonth}月${priceDay}日）の14金（K14・純度58.5%）買取相場は1gあたり${k14Price.toLocaleString()}円（毎朝自動更新）。K14とK18の違い、ネックレス・指輪・ブレスレットの製品別査定額、585刻印の意味、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
 };
 
 function CtaBox() {
@@ -110,7 +110,7 @@ export default function K14KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">K14（14金）買取相場 — 今日の1g価格と高く売る方法</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">14金（K14）買取相場 — 今日の1g価格と高く売る方法</h1>
         <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k14" />
@@ -144,17 +144,20 @@ export default function K14KaitoriPage() {
         <h3>K14の特徴</h3>
 
         <div className="table-wrapper">
-          
+          <table>
+            <tbody>
+              <tr><th>純度</th><td>58.5%（14/24・585/1000）</td></tr>
+              <tr><th>主な刻印</th><td>K14・14K・585</td></tr>
+              <tr><th>主な用途</th><td>アメリカ・ヨーロッパ製ジュエリー、ホワイト/ピンクゴールド製品</td></tr>
+              <tr><th>性質</th><td>硬度が高く傷つきにくい。金の含有率が低いぶん買取単価はK18より低い</td></tr>
+            </tbody>
+          </table>
         </div>
+
 
         <p>K14の買取価格は<strong>K24の約58%</strong>の水準です。K18と比べると1gあたり約{(k18Price - k14Price).toLocaleString()}円安くなりますが、K10と比べると約{(k14Price - k10Price).toLocaleString()}円高く（いずれも{priceDateJa}時点の目安）、<strong>金の価格高騰により十分な売却価値</strong>があります。</p>
 
-        <h3>K14製品の重量別買取目安</h3>
-
-        <div className="table-wrapper">
-          
-        </div>
-
+        
         <p>「K14だから大した金額にならないのでは？」と思われがちですが、金価格が歴史的高値の現在、<strong>10gのK14ネックレスでも約{Math.round((10 * k14Price) / 10000)}万円前後</strong>（{priceDateJa}時点の目安）の買取が期待できます。タンスに眠っているK14製品があれば、一度査定に出す価値は十分にあります。</p>
 
         <h3>K14買取価格の推移</h3>
@@ -261,6 +264,26 @@ export default function K14KaitoriPage() {
         <h3>金歯</h3>
 
         <p>歯科治療で使われる金合金にはK14〜K20程度の純度が使われています。K14の金歯も買取可能で、歯科用金合金は<strong>不純物が少ないクリーンな金</strong>のため、適正な価格で買い取ってもらえます。</p>
+
+        <h2>K14 vs K18 vs K10 — 純度別の買取価格比較</h2>
+
+        <p>「14金は18金・10金とどれくらい買取価格が違うのか」を、本日の相場に基づく<strong>重量別の買取目安</strong>で比較します（毎朝自動更新）。K14の地金価値はK18の約78%、K10の約1.4倍が目安です。</p>
+
+        <WeightPriceTable purities={["k18", "k14", "k10"]} />
+
+        <p>刻印（585・K14等）で純度を確認したら、<Link href="/kin-kaitori-keisanki/">買取計算機</Link>で概算を出しておくと、店頭での査定額が妥当かをその場で判断できます。</p>
+
+        <h2>14金の「価格」— 購入時の値段と買取価格が大きく違う理由</h2>
+
+        <p>「14金 価格」で調べると、購入時の販売価格と買取価格の差に驚く方が多いはずです。この差には明確な理由があります。</p>
+
+        <ul>
+          <li><strong>販売価格には加工賃・デザイン料・ブランド料が含まれる</strong>: ジュエリーの店頭価格は、地金価値に加えて製作コストや流通マージンが上乗せされています。</li>
+          <li><strong>買取価格は原則「地金価値」ベース</strong>: 一般的な買取店の査定は「重量×純度×当日の金相場」が基本です。購入時に支払ったデザイン料などは、原則として買取価格には反映されません。</li>
+          <li><strong>例外はブランド品・宝石付き</strong>: 有名ブランドのジュエリーや宝石付き製品は、地金価値に加えてブランド・宝石の価値が別途評価される場合があります。該当する場合はブランド買取に強い業者も比較しましょう。</li>
+        </ul>
+
+        <p>つまり14金を売るときに比較すべきは「買ったときの値段」ではなく、<strong>上の表の地金価値目安に対して各社がどこまで近い金額を提示するか</strong>です。この見方を知っているだけで、安すぎる査定を避けられます。</p>
 
         <h2>K14を高く売る5つのポイント</h2>
 
