@@ -119,6 +119,12 @@ export default function KinBaikyakuMynumberPage() {
         <p className="text-sm text-warm-gray">参照: 所得税法225条（支払調書）、国税庁「金地金等の譲渡の対価の支払調書」、犯罪収益移転防止法・古物営業法（本人確認）。制度は改正される場合があります。個別の判断は税務署・税理士にご確認ください。</p>
 
         <ExpertQA category="howto" />
+        {/* d3-kisei-202607 */}
+        <div className="bg-cream border border-accent/40 rounded-lg p-4 my-6 text-sm">
+          <strong>関連:</strong> 「2026年に金の買取が規制される？」という疑問には、
+          <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
+          で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
+        </div>
         <RelatedArticles
           currentSlug="kin-baikyaku-mynumber"
           relatedSlugs={["kin-kaitori-zeikin", "kin-zouyo-zeikin", "kin-souzoku-baikyaku", "kin-kaitori-souba", "k24-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-hajimete"]}

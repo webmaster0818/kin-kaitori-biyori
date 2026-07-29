@@ -596,6 +596,12 @@ export default function KinkaIngotKaitoriPage() {
           <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
           </div>
         </div>
+        {/* d3-kisei-202607 */}
+        <div className="bg-cream border border-accent/40 rounded-lg p-4 my-6 text-sm">
+          <strong>関連:</strong> 「2026年に金の買取が規制される？」という疑問には、
+          <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
+          で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
+        </div>
           <RelatedArticles
             currentSlug="kinka-ingot-kaitori"
             relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-nobebo-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori"]}

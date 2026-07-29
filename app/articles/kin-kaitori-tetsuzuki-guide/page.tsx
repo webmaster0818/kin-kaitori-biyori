@@ -264,6 +264,12 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
             </div>
           </div>
+        {/* d3-kisei-202607 */}
+        <div className="bg-cream border border-accent/40 rounded-lg p-4 my-6 text-sm">
+          <strong>関連:</strong> 「2026年に金の買取が規制される？」という疑問には、
+          <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
+          で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
+        </div>
           <RelatedArticles
             currentSlug="kin-kaitori-tetsuzuki-guide"
             relatedSlugs={["kin-kaitori-hajimete", "kin-kaitori-sokujitsu", "kin-baikyaku-mynumber", "kin-200man-mynumber", "kin-kaitori-zeikin", "kin-kaitori-sagi", "kin-fuzokuhin-nashi", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-souba"]}
