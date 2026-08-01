@@ -26,7 +26,7 @@ function ArticleSchema() {
   const d = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年7月最新】上田・上田駅の金買取おすすめ｜相場と貴金属を高く売るコツ",
+    headline: "上田駅すぐの金買取はどこ？上田市のおすすめ店と今日の相場【2026年8月】",
     description: "上田・上田駅で金や貴金属（プラチナ・銀・K18等）を高く売るには？上田の買取相場、店頭・出張・宅配の方法別比較、長野県で高価買取を狙うコツを公開情報ベースで解説します。",
     datePublished: "2026-06-05",
     dateModified: "2026-07-01",
@@ -52,7 +52,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年7月最新】上田・上田駅の金買取おすすめ｜相場と貴金属を高く売るコツ",
+  title: "上田駅すぐの金買取はどこ？上田市のおすすめ店と今日の相場【2026年8月】",
   description: "上田・上田駅で金や貴金属（プラチナ・銀・K18等）を高く売るには？上田の買取相場、店頭・出張・宅配の方法別比較、長野県で高価買取を狙うコツを公開情報ベースで解説します。",
   robots: { index: true, follow: true },
 };
