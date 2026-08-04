@@ -233,7 +233,7 @@ function Footer() {
         <div className="border-t border-accent/20 mt-8 pt-6 text-center text-xs text-white/50">
           <p>&copy; 2026 {SITE_NAME} All rights reserved.</p>
           <p className="mt-1">
-            ※当サイトはアフィリエイト広告を利用しています。
+            ※本サイトはプロモーション(PR)を含みます。
           </p>
         </div>
       </div>
