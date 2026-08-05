@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】金の純度の見分け方 — K18・K24の違い、刻印の読み方、偽物判別法を解説",
   description:
     "金の純度はどうやって見分ける？K24・K18・K14の違い、刻印（ホールマーク）の読み方、金メッキとの見分け方、自宅でできる簡易判別法から業者によるXRF分析まで徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-jundo-mikata/" },
 };
 
 function CtaBox() {

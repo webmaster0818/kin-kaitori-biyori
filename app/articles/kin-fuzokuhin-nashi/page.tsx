@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "保証書・箱なしでも金買取できる？｜査定への影響",
   description: "付属品なしの金買取を解説。保証書・箱がなくても売れるのか、査定額への影響と、それでも高く売るコツを紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-fuzokuhin-nashi/" },
 };
 
 function CtaBox() {

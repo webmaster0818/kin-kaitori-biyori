@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金買取の手数料を徹底解説｜査定料・精錬費に注意",
   description: "金買取の手数料を解説。査定料・精錬費・送料など差し引かれる費用の種類と、手数料無料の業者を選ぶコツを紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-tesuryo/" },
 };
 
 function CtaBox() {

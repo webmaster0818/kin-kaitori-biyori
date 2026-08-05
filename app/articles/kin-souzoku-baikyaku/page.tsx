@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点", description: "相続した金・遺品の金を売却する際の税金（譲渡所得・相続税）、取得費の計算方法、遺品整理で見つかった金の査定方法、トラブルを避けるポイントを徹底解説。" };
+export const metadata: Metadata = { title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点", description: "相続した金・遺品の金を売却する際の税金（譲渡所得・相続税）、取得費の計算方法、遺品整理で見つかった金の査定方法、トラブルを避けるポイントを徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-souzoku-baikyaku/" } };
 
 function CtaBox() {
   return (

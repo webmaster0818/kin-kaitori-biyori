@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】プラチナ買取相場ガイド — Pt900/Pt950/Pt1000の価格と高く売る方法",
   description:
     "プラチナ（Pt1000/Pt950/Pt900/Pt850）の最新買取相場を純度別に掲載。2026年のプラチナ価格高騰の背景、製品別（指輪・ネックレス・時計）の買取価格目安、金との違い・見分け方、おすすめ買取業者4社比較を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/platinum-kaitori/" },
 };
 
 function CtaBox() {

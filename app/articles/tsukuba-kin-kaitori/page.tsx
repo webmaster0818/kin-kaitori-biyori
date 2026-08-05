@@ -54,6 +54,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】つくばの金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "つくばで金を高く売るならどこ？つくばの金買取相場、店頭・出張・宅配の方法別比較、茨城県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
   robots: { index: false, follow: true },
+  alternates: { canonical: "https://gold-biyori.com/articles/tsukuba-kin-kaitori/" },
 };
 
 function CtaBox() {

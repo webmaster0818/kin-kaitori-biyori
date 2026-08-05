@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金のピアス買取相場｜片方紛失・小さいピアスでも売れるコツ",
   description: "金のピアス（K18・K10等）の買取相場、片方なくしてしまった場合・小さくて軽い場合の買取可否、ブランドピアスの売り方を完全解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-pierce-kaitori/" },
 };
 
 function CtaBox() {

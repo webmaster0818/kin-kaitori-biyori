@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金価格はなぜ上がっている？｜推移の要因と今後の見通し",
   description: "金価格の推移と高騰の要因を解説。インフレ・為替・地政学リスクなど価格を動かす要素と、売り時の考え方を紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kakaku-suii/" },
 };
 
 function CtaBox() {

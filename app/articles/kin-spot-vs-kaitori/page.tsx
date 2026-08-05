@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金スポット価格と買取価格の違い｜なぜ業者の買取は安いのか",
   description: "金スポット価格と業者買取価格の違い・差額の理由を完全解説。田中貴金属の店頭価格、業者手数料、為替の影響、最高値を引き出す業者選びまで。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-spot-vs-kaitori/" },
 };
 
 function CtaBox() {

@@ -35,6 +35,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金インゴット100gの買取相場ガイド",
   description: "金インゴット（100g）を高く売るコツ。刻印・ブランド（田中貴金属など）の評価と地金相場の調べ方を解説します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/ingot-100g-kaitori/" },
 };
 
 function CtaBox() {

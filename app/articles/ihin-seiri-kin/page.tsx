@@ -55,6 +55,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】遺品整理で見つかった金の売り方ガイド — 相続・税金・高く売る方法",
   description: "遺品整理で見つかった金・貴金属の売り方を徹底解説。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者4社を紹介。",
+  alternates: { canonical: "https://gold-biyori.com/articles/ihin-seiri-kin/" },
 };
 
 function CtaBox() {

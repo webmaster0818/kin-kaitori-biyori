@@ -56,6 +56,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】ブルガリ（BVLGARI）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
   description:
     "ブルガリ（BVLGARI）の最新買取相場をモデル別に掲載。ビー・ゼロワン・セルペンティ・ブルガリブルガリの買取価格目安、高く売るコツ、おすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/bvlgari-kaitori/" },
 };
 
 function CtaBox() {

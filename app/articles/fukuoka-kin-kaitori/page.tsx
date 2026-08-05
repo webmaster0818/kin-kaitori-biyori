@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】福岡の金買取おすすめ業者ガイド — 天神・博多・大名エリア別比較",
   description:
     "福岡で金を高く売るならどこがいい？天神・博多・大名のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、福岡の金買取相場と高く売るコツを徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/fukuoka-kin-kaitori/" },
 };
 
 function CtaBox() {

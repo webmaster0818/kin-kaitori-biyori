@@ -59,6 +59,7 @@ export const metadata: Metadata = {
   title: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
   description:
     "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-necklace-kaitori/" },
 };
 
 function CtaBox() {

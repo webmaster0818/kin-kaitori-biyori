@@ -33,6 +33,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: TITLE,
   description: "金買取13社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス）の査定料・出張料・宅配送料・キャンセル時返送料・振込手数料を各公式サイトで調査して比較。見落としやすい返送料の差まで一覧表で確認できます。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-tesuryo-hikaku/" },
 };
 
 const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: string; hensou: string; cancel: string; furikomi: string; methods: string }> = [

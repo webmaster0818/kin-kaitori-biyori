@@ -76,6 +76,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: pageTitle,
   description: `本日（${priceMonth}月${priceDay}日）のK18（18金・純度75.0%）買取相場は1gあたり${k18Price.toLocaleString()}円（毎朝自動更新）。ネックレス・指輪・ブレスレットの製品別査定、K18/750刻印の見分け方、ホワイトゴールド・ピンクゴールドの扱い、K24・K22・K14との価格比較、高く売るコツとおすすめ業者4社を解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/k18-kaitori/" },
 };
 
 function CtaBox() {

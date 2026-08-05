@@ -89,6 +89,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】金買取よくある質問（FAQ）— 相場・純度・方法・税金の疑問を解決",
   description:
     "金買取に関するよくある質問を30問以上まとめました。買取相場、金の純度と刻印、買取方法、売れる製品、業者選び、税金・確定申告まで、金の売却に関するすべての疑問に回答。",
+  alternates: { canonical: "https://gold-biyori.com/faq/" },
 };
 
 export default function FaqPage() {

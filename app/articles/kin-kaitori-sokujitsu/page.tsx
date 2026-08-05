@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金買取で即日現金化する方法｜当日にお金を受け取る手順",
   description: "金を即日現金化する方法を解説。当日に現金を受け取れる店頭買取の流れ、必要な持ち物、スムーズに進めるコツを紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-sokujitsu/" },
 };
 
 function CtaBox() {

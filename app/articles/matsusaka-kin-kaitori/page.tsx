@@ -54,6 +54,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】松阪の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "松阪で金を高く売るならどこ？松阪の金買取相場、店頭・出張・宅配の方法別比較、三重県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/matsusaka-kin-kaitori/" },
 };
 
 function CtaBox() {

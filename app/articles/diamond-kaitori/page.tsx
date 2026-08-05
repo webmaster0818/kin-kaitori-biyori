@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】ダイヤモンド・宝石買取ガイド — 4Cの評価基準と高く売るコツ",
   description:
     "ダイヤモンド買取相場を4C（カラット・カット・クラリティ・カラー）別に解説。鑑定書の有無による価格差、ルビー・サファイア・エメラルド・真珠の買取相場、ブランドジュエリーの高額買取のコツ、おすすめ買取業者4社を比較。",
+  alternates: { canonical: "https://gold-biyori.com/articles/diamond-kaitori/" },
 };
 
 function CtaBox() {

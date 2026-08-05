@@ -56,6 +56,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】銀（シルバー）買取相場ガイド — SV925・SV1000の1gあたり価格と高く売る方法",
   description:
     "銀（シルバー）の最新買取相場を1gあたりの価格で掲載。SV925・SV1000の純度別価格目安、銀食器・アクセサリーの買取、高く売るコツ、おすすめ買取業者4社を比較。",
+  alternates: { canonical: "https://gold-biyori.com/articles/gin-kaitori/" },
 };
 
 function CtaBox() {

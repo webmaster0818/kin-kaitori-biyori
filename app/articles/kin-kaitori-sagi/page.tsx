@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", description: "金買取でよくある詐欺の手口7選と対処法。訪問買取の押し買い、不当な安値査定、偽の純度判定など悪質業者の見分け方とクーリングオフの手順を徹底解説。" };
+export const metadata: Metadata = { title: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", description: "金買取でよくある詐欺の手口7選と対処法。訪問買取の押し買い、不当な安値査定、偽の純度判定など悪質業者の見分け方とクーリングオフの手順を徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-sagi/" } };
 
 function CtaBox() {
   return (

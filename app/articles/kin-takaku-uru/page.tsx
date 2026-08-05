@@ -134,6 +134,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
   description:
     "金・貴金属を少しでも高く売るための実践テクニックを徹底解説。相見積もりの取り方、売却タイミングの見極め方、付属品の重要性、避けるべきNG行動まで、プロが教える5つのコツ。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-takaku-uru/" },
 };
 
 function CtaBox() {

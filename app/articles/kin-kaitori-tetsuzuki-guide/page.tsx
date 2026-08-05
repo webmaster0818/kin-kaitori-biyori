@@ -25,7 +25,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年7月】金買取の手続き完全ガイド｜持ち物・本人確認・未成年の可否・予約から現金化までの流れ",
-    description: "金買取に必要な持ち物リスト、古物営業法で義務付けられる本人確認、未成年の売却可否、予約の要否と当日の流れをまとめて解説。マイナンバーが必要になるケースまで、初めての金買取で迷わないための完全ガイド。",
+    description: "金買取は未成年でも売れるのか、予約は必要か、当日は受付から現金受け取りまでどのくらいかかるのか——手続きまわりの疑問に絞って解説します。持ち物や本人確認書類の詳細は「金買取に必要なもの」ページをご覧ください。",
     datePublished: "2026-07-03",
     dateModified: "2026-07-03",
     author: { "@type": "Organization", name: "金買取びより編集部" },
@@ -51,7 +51,7 @@ function FaqSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "【2026年7月】金買取の手続き完全ガイド｜持ち物・本人確認・未成年の可否・予約から現金化までの流れ",
+  title: "金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間【手続きガイド】",
   description: "金買取に必要な持ち物リスト、古物営業法で義務付けられる本人確認、未成年の売却可否、予約の要否と当日の流れをまとめて解説。マイナンバーが必要になるケースまで、初めての金買取で迷わないための完全ガイド。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-tetsuzuki-guide/" },
 };
@@ -105,6 +105,14 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             <li>未成年が金を売れるかどうか</li>
             <li>予約の要否と、来店から現金受け取りまでのステップ</li>
           </ul>
+
+          {/* necessary-items-split: 「必要なもの/本人確認書類」は kin-kaitori-hajimete が受け皿。
+              同じクエリで両ページが競合していたため、こちらから明示的に送る（2026-08-05 GSC実測で分離） */}
+          <div className="bg-gold-bg border border-accent/30 rounded-xl p-4 my-6 text-sm">
+            🔀 <strong>持ち物・本人確認書類</strong>を詳しく知りたい方は 
+            <Link href="/articles/kin-kaitori-hajimete/" className="text-accent underline font-bold">金買取に必要なもの（初めてガイド）</Link>
+             をご覧ください。このページは<strong>未成年の可否・予約の要否・当日の所要時間</strong>を扱います。
+          </div>
 
           <h2>当日の流れ — 受付から現金受け取りまで</h2>
 

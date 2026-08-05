@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金時計（ロレックス含む）買取相場｜18金無垢・ツートーン・ブランド別徹底解説",
   description: "金時計の買取は金相場とブランドプレミアムの両軸。ロレックス、オメガ、パテック等の18金無垢時計の買取相場、ツートーンの計算方法、高く売るコツを完全解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kintokei-rolex-kaitori/" },
 };
 
 function CtaBox() {

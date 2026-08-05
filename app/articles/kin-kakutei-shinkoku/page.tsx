@@ -55,6 +55,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金の売却と確定申告やり方ガイド — 譲渡所得の計算・節税・申告手順",
   description: "金を売却した時の確定申告のやり方を徹底解説。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇措置、節税対策、確定申告書の書き方まで網羅。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kakutei-shinkoku/" },
 };
 
 function CtaBox() {

@@ -56,6 +56,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金の偽物の見分け方ガイド — 金メッキとの違い・自宅でできる7つの判別方法",
   description: "金の偽物と本物の見分け方を徹底解説。刻印・磁石・比重・色味など自宅でできる7つの判別方法、金メッキ（GP/GF）との違い、買取業者の真贋判定の仕組みを紹介。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-nisemono-mikata/" },
 };
 
 function CtaBox() {

@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】買取大吉 vs なんぼや徹底比較 — 金買取はどちらがお得？", description: "買取大吉となんぼやを店舗数・買取方法・手数料・口コミ・対応品目で徹底比較。金買取でどちらがお得かがわかる2026年最新の比較ガイド。" };
+export const metadata: Metadata = { title: "【2026年最新】買取大吉 vs なんぼや徹底比較 — 金買取はどちらがお得？", description: "買取大吉となんぼやを店舗数・買取方法・手数料・口コミ・対応品目で徹底比較。金買取でどちらがお得かがわかる2026年最新の比較ガイド。", alternates: { canonical: "https://gold-biyori.com/articles/daikichi-vs-nanboya/" } };
 
 function CtaBox() {
   return (

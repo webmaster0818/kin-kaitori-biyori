@@ -69,6 +69,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: pageTitle,
   description: `プラチナPt900（純度90%）の買取相場の確認方法を解説。最新の1g価格は田中貴金属公表の店頭価格を参照（本日の公表値カード掲載）。Pt1000・Pt950との違い、指輪・ネックレスの査定の考え方、金との違い・見分け方、おすすめ業者4社を紹介。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/platinum-pt900-kaitori/" },
 };
 
 function CtaBox() {

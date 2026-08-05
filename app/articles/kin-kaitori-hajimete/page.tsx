@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。" };
+export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
 
 function CtaBox() {
   return (

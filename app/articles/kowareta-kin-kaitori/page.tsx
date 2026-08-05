@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "壊れた金製品や刻印なしの金でも買取可能。チェーン切れ・片方のピアス・変色したリング・刻印が消えた金製品の買取条件、X線分析による純度測定の仕組み、持ち込み前の準備、おすすめ買取業者4社を解説。",
   robots: { index: false, follow: true },
+  alternates: { canonical: "https://gold-biyori.com/articles/kowareta-kin-kaitori/" },
 };
 
 function CtaBox() {

@@ -34,6 +34,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: TITLE,
   description: "金地金・金貨を200万円超で売却するとマイナンバーの告知と支払調書の提出が必要になります。なぜ必要か、出さないとどうなるか、200万円以下なら何が必要か、分割売却の誤解まで仕組みを解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-baikyaku-mynumber/" },
 };
 
 function CtaBox() {

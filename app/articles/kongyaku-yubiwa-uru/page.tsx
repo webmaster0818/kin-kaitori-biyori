@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】婚約指輪を売る方法｜離婚・破談時の買取相場と注意点を完全解説",
   description: "婚約指輪を売る判断基準・買取相場・税金・心理的ハードルの対処法を解説。離婚や破談時に後悔せず売却するための業者選びとタイミングを徹底ガイド。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kongyaku-yubiwa-uru/" },
 };
 
 function CtaBox() {

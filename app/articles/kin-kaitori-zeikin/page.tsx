@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】金買取の税金・確定申告ガイド — 譲渡所得の計算方法と節税対策",
   description:
     "金を売った時の税金はいくら？確定申告は必要？譲渡所得の計算方法、年間50万円の特別控除、5年超保有の優遇措置、200万円超の支払調書、節税対策まで税金の全知識を解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-zeikin/" },
 };
 
 function CtaBox() {

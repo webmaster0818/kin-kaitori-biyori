@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "利用規約",
   description: "金買取びよりの利用規約です。当サイトのご利用にあたっての注意事項をご案内します。",
+  alternates: { canonical: "https://gold-biyori.com/terms-of-service/" },
 };
 
 export default function TermsOfServicePage() {

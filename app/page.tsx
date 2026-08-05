@@ -3,6 +3,13 @@ import Image from "next/image";
 
 import goldTopData from "@/data/gold-spot-prices.json";
 
+import type { Metadata } from "next";
+
+// トップの自己参照canonical。layoutに置くと全ページへ継承されてトップに誤集約するため、ここに置く。
+export const metadata: Metadata = {
+  alternates: { canonical: "https://gold-biyori.com/" },
+};
+
 const goldTop = goldTopData.purity_buyback_estimate_per_g;
 const [, goldTopMonth, goldTopDay] = goldTopData.date.split("-").map(Number);
 

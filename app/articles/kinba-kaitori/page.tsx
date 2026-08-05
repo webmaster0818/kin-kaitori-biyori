@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "金歯の買取相場は1本いくら？今日の金価格から見る目安と売り方【2026年7月】",
   description:
     "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯買取OKのおすすめ業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kinba-kaitori/" },
 };
 
 function CtaBox() {

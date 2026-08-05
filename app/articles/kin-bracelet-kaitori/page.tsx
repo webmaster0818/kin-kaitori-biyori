@@ -63,6 +63,7 @@ export const metadata: Metadata = {
   title: "金ブレスレット買取相場｜喜平・テニス・切れた品も今日の価格で計算【2026年7月】",
   description:
     "金ブレスレットの買取相場を毎日更新。18金喜平ブレスレット10g・20g・30g・50gの目安は「本日のK18 1g買取価格×重量」で即計算。テニスブレスレットのダイヤ評価、切れた・刻印なしでも売れる理由、カルティエ等ブランド品の査定ポイントまで解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-bracelet-kaitori/" },
 };
 
 function CtaBox() {

@@ -37,6 +37,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: TITLE,
   description: `金買取はどこがいい？一括査定・店頭・出張・宅配の4タイプ別におすすめ業者を比較。手数料・対応エリア・向いている人を一覧表で確認できます。本日の相場（K24 1g${P.k24.toLocaleString()}円・${pMonth}月${pDay}日更新）と査定前の準備、純度・品目・地域別ガイドへの入口も。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-osusume/" },
 };
 
 const COMPANIES = [

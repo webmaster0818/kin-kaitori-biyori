@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
   description: "金買取びよりのプライバシーポリシーです。個人情報の取り扱いについてご案内します。",
+  alternates: { canonical: "https://gold-biyori.com/privacy-policy/" },
 };
 
 export default function PrivacyPolicyPage() {

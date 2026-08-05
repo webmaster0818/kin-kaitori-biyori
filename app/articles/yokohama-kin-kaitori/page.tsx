@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
   description:
     "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、横浜の金買取相場と高く売るコツを徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/yokohama-kin-kaitori/" },
 };
 
 function CtaBox() {

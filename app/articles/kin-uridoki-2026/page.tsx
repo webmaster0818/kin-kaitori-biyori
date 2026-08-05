@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
   description:
     "2026年は金の売り時？K24（純金）1g約15,200円の歴史的高値の背景、今後の金相場予測、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-uridoki-2026/" },
 };
 
 function CtaBox() {

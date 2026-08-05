@@ -35,6 +35,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: TITLE,
   description: `シャネル・エルメス・グッチ・ミキモト・オメガなどブランドジュエリー・時計を高く売るコツ。ブランド価値と地金価値（本日K18 1g${P.k18.toLocaleString()}円）の二重評価の仕組み、ブランド別の評価ポイント、付属品の影響を解説します。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/brand-jewelry-kin-kaitori/" },
 };
 
 function CtaBox() {

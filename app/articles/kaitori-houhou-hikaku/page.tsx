@@ -80,6 +80,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ",
   description:
     "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて徹底比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kaitori-houhou-hikaku/" },
 };
 
 function CtaBox() {

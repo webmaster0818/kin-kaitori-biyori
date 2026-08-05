@@ -70,6 +70,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
   description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/k22-kaitori/" },
 };
 
 function CtaBox() {

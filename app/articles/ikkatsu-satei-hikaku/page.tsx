@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金買取の一括査定サイト比較｜ヒカカク・うるココ等の特徴と選び方",
   description: "金買取の一括査定サイト主要5社（ヒカカク、うるココ、買取コネクト等）を徹底比較。提携業者数、対応エリア、利用方法、おすすめ用途別を完全解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/ikkatsu-satei-hikaku/" },
 };
 
 function CtaBox() {

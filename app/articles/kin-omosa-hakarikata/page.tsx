@@ -55,6 +55,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金の重さの測り方ガイド — 自宅でグラムを量る方法と買取価格の計算",
   description: "金の重さを自宅で測る方法を徹底解説。デジタルスケールの使い方、水を使った比重測定法、金製品の重量目安、買取価格の計算方法までわかりやすく紹介。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-omosa-hakarikata/" },
 };
 
 function CtaBox() {

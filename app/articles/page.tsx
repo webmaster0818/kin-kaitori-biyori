@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "金買取の記事一覧｜相場・純度・地域・ブランド別ガイド",
   description:
     "金・貴金属買取に関する記事一覧。金相場、純度別（K24/K18）、地域別の金買取おすすめ、ブランド・金貨買取、高く売るコツまで網羅。あなたの知りたい情報がきっと見つかります。",
+  alternates: { canonical: "https://gold-biyori.com/articles/" },
 };
 
 type ArticleCategory = "purity" | "product" | "brand" | "region" | "howto" | "compare";

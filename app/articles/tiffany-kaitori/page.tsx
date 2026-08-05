@@ -56,6 +56,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】ティファニー（Tiffany）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
   description:
     "ティファニー（Tiffany & Co.）の最新買取相場をモデル別に掲載。Tスマイル・バイザヤード・ハードウェアの買取価格目安、K18とシルバーの価格差、おすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/tiffany-kaitori/" },
 };
 
 function CtaBox() {

@@ -35,6 +35,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "ウィーン金貨ハーモニーの買取相場ガイド",
   description: "オーストリアのウィーン金貨ハーモニーを高く売るコツ。純度99.99%の純金としての評価と相場の調べ方を解説します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/vienna-kinka-kaitori/" },
 };
 
 function CtaBox() {

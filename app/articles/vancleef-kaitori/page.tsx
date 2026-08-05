@@ -56,6 +56,7 @@ export const metadata: Metadata = {
   title: "【2026年最新】ヴァンクリーフ&アーペル買取相場ガイド — アルハンブラの価格と高く売るコツ",
   description:
     "ヴァンクリーフ&アーペル（Van Cleef & Arpels）の最新買取相場をモデル別に掲載。アルハンブラ・フリヴォル・ペルレの買取価格目安、高く売るコツ、おすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/vancleef-kaitori/" },
 };
 
 function CtaBox() {

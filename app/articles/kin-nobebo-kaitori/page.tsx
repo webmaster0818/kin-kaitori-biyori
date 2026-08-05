@@ -44,7 +44,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金、そして2026年の買取規制の最新動向（変わること・変わらないこと）を一次情報ベースで徹底解説。" };
+export const metadata: Metadata = { title: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金、そして2026年の買取規制の最新動向（変わること・変わらないこと）を一次情報ベースで徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-nobebo-kaitori/" } };
 
 function CtaBox() {
   return (

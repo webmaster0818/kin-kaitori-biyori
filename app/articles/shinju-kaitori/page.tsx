@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】真珠（パール）買取相場ガイド — 種類別の価格と高く売る方法", description: "真珠（パール）の最新買取相場を種類別・サイズ別に掲載。アコヤ真珠・南洋真珠・タヒチ黒蝶真珠の価格目安、ミキモトなどブランド真珠の買取、高く売るコツを解説。" };
+export const metadata: Metadata = { title: "【2026年最新】真珠（パール）買取相場ガイド — 種類別の価格と高く売る方法", description: "真珠（パール）の最新買取相場を種類別・サイズ別に掲載。アコヤ真珠・南洋真珠・タヒチ黒蝶真珠の価格目安、ミキモトなどブランド真珠の買取、高く売るコツを解説。", alternates: { canonical: "https://gold-biyori.com/articles/shinju-kaitori/" } };
 
 function CtaBox() {
   return (

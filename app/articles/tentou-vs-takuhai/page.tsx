@@ -39,7 +39,7 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", description: "金買取の店頭・宅配・出張・一括査定を徹底比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの人を解説。あなたに最適な売却方法がわかります。" };
+export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", description: "金買取の店頭・宅配・出張・一括査定を徹底比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの人を解説。あなたに最適な売却方法がわかります。", alternates: { canonical: "https://gold-biyori.com/articles/tentou-vs-takuhai/" } };
 
 function CtaBox() {
   return (

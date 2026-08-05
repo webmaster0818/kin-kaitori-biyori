@@ -74,6 +74,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: pageTitle,
   description: `本日（${priceMonth}月${priceDay}日）のK10（10金・純度41.7%）買取相場は1gあたり${k10Price.toLocaleString()}円（毎朝自動更新）。アクセサリー・指輪の製品別査定、K10/417刻印の見分け方、K18との違い、高く売るコツとおすすめ業者4社を解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/k10-kaitori/" },
 };
 
 function CtaBox() {

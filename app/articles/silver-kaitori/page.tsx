@@ -69,6 +69,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: pageTitle,
   description: `シルバー（銀・SV925）の買取相場の確認方法を解説。最新の1g価格は田中貴金属公表の店頭価格を参照（本日の公表値カード掲載）。SV925・純銀の違い、銀アクセサリー・銀食器の買取の基本、銀メッキの注意点、おすすめ業者4社を紹介。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/silver-kaitori/" },
 };
 
 function CtaBox() {

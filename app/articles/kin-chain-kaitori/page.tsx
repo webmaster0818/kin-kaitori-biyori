@@ -56,6 +56,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金のチェーン買取相場｜切れた・絡まったチェーンでも高く売る方法",
   description: "金のネックレスチェーン（K18・K10等）の買取相場、切れた・絡まった・歪んだチェーンでも売れるか、メンズチェーンの相場、高く売るコツを完全解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-chain-kaitori/" },
 };
 
 function CtaBox() {

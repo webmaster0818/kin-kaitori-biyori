@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金を相場通りに売るには？｜手取りを相場に近づけるコツ",
   description: "金を相場通りに高く売るコツを解説。買取単価と地金相場の差（業者マージン）を理解し、手取りを最大化する方法を紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-soubadori/" },
 };
 
 function CtaBox() {

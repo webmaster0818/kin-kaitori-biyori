@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】ハリーウィンストン買取相場｜婚約指輪・ネックレス・時計のブランド別査定額",
   description: "ハリーウィンストンの買取はブランドプレミアム＋ダイヤモンド・金素材の合算。婚約指輪、ネックレス、時計の買取相場、保証書なしでも売れるか、おすすめ業者を解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/harrywinston-kaitori/" },
 };
 
 function CtaBox() {

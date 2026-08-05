@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "金価格・買取相場ダッシュボード【毎日自動更新】| 純度別価格とシミュレーター",
   description:
     "本日の金買取相場を純度別（K24/K22/K18/K14/K10）に毎日自動更新で掲載。日次の価格推移チャート、重量×純度の買取シミュレーター、重量別早見表で「いま売るといくらか」がすぐ分かります。田中貴金属公表値ベース。",
+  alternates: { canonical: "https://gold-biyori.com/souba-dashboard/" },
 };
 
 function diffBadge() {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "金価格ウィジェット無料配布｜ブログ・サイトに本日の金買取相場を表示",
   description:
     "本日の金買取相場（K24/K18/K14の1gあたり目安・毎日自動更新）をあなたのブログやサイトに無料で埋め込めるウィジェットを配布しています。コピペ1行で設置完了。",
+  alternates: { canonical: "https://gold-biyori.com/widget/" },
 };
 
 const SCRIPT_CODE = `<script src="https://gold-biyori.com/widget.js" async></script>`;

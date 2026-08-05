@@ -55,6 +55,7 @@ export const metadata: Metadata = {
   title: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ【2026年7月】",
   description: "新座で金を高く売るならどこ？新座の金買取相場、店頭・出張・宅配の方法別比較、埼玉県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://gold-biyori.com/articles/niiza-kin-kaitori/" },
 };
 
 function CtaBox() {

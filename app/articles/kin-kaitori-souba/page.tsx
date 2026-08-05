@@ -16,6 +16,7 @@ const [, soubaMonth, soubaDay] = goldData.date.split("-").map(Number);
 export const metadata: Metadata = {
   title: `金買取相場 今日のK24は1g${k24Souba.toLocaleString()}円・K18は${k18Souba.toLocaleString()}円【${soubaMonth}月${soubaDay}日更新】`,
   description: `本日の金買取相場を純度別（K24・K22・K18・K14・K10）に毎朝自動更新で掲載。K24は1g${k24Souba.toLocaleString()}円、K18は${k18Souba.toLocaleString()}円（${soubaMonth}月${soubaDay}日時点の目安）。相場が動く要因、業者別の価格差、過去の推移、今後の見通しも解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-souba/" },
 };
 
 function CtaBox() {

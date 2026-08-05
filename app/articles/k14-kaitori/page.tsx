@@ -72,6 +72,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: `14金（K14）の買取相場 今日1g${k14Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】585刻印・製品別の査定額も`,
   description: `本日（${priceMonth}月${priceDay}日）の14金（K14・純度58.5%）買取相場は1gあたり${k14Price.toLocaleString()}円（毎朝自動更新）。K14とK18の違い、ネックレス・指輪・ブレスレットの製品別査定額、585刻印の意味、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/k14-kaitori/" },
 };
 
 function CtaBox() {

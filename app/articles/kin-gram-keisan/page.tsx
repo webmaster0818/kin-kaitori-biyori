@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金買取の価格はこう決まる｜グラム計算の仕組みと計算方法",
   description: "金買取価格のグラム計算を解説。1gあたりの相場×重量×純度で求める計算式と、自分で概算する方法を紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-gram-keisan/" },
 };
 
 function CtaBox() {

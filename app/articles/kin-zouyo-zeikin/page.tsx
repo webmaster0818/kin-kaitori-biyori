@@ -34,6 +34,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: TITLE,
   description: "金地金・金貨・宝飾品を贈与すると贈与税はどうなる？110万円の基礎控除、贈与税の速算表、相続時精算課税、贈与でもらった金を売却するときの取得費の引き継ぎまで、国税庁の一次情報をもとに解説します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-zouyo-zeikin/" },
 };
 
 function CtaBox() {

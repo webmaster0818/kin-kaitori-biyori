@@ -63,6 +63,7 @@ export const metadata: Metadata = {
   description:
     "名古屋で金を売るならどこがいい？名駅・栄・大須・金山・久屋大通など駅別に実在店舗をまとめ、おすすめ買取業者4社を比較。本日の金相場（毎日更新）と、店頭・出張・宅配の使い分け、高く売る5つのコツまで。",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://gold-biyori.com/articles/nagoya-kin-kaitori/" },
 };
 
 function CtaBox() {

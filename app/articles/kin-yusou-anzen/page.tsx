@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金の宅配買取は安全？｜リスクと安全に売るためのチェック点",
   description: "金の宅配買取の安全性を解説。郵送時のリスク、補償・本人確認・キャンセル条件など、安全に利用するための確認点を紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-yusou-anzen/" },
 };
 
 function CtaBox() {

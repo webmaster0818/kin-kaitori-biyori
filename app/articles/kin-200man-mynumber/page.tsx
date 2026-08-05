@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金の200万円超売却時のマイナンバー提出義務｜法律と業者対応を完全解説",
   description: "金200万円超の売却時に必要なマイナンバー提出義務（犯罪収益移転防止法）。提出を避ける方法はあるか、業者の対応、確定申告との関係を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-200man-mynumber/" },
 };
 
 function CtaBox() {

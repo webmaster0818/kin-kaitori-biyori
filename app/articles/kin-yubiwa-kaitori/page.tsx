@@ -59,6 +59,7 @@ export const metadata: Metadata = {
   title: "金の指輪・結婚指輪の買取相場はいくら？今日の価格と高く売るコツ【2026年7月】",
   description:
     "金の指輪の最新買取相場をK18・K24・K14・Pt900の素材別に掲載。結婚指輪・婚約指輪・ブランドリングの買取価格目安、宝石付きリングの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-yubiwa-kaitori/" },
 };
 
 function CtaBox() {

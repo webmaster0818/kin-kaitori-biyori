@@ -68,6 +68,7 @@ export const metadata: Metadata = {
   description:
     "御徒町は日本最大の貴金属問屋街。問屋直接買取が高く売れる理由、おすすめ業者、相見積もりのコツ、訪問時の注意点を徹底解説。インゴット・K24・ブランドジュエリーの売却に最適なエリアです。",
   robots: { index: false, follow: true },
+  alternates: { canonical: "https://gold-biyori.com/articles/okachimachi-kin-kaitori/" },
 };
 
 function CtaBox() {

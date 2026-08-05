@@ -55,6 +55,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "【2026年最新】金買取のLINE査定・写真査定の精度｜実物査定との差と活用法",
   description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/line-satei-seido/" },
 };
 
 function CtaBox() {

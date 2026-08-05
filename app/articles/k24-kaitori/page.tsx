@@ -32,6 +32,7 @@ const todayFaq = {
 export const metadata: Metadata = {
   title: `K24（純金）の買取相場 今日1g${k24Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】インゴット・金貨の査定額も`,
   description: `本日（${priceMonth}月${priceDay}日）のK24（純金・純度99.99%）買取相場は1gあたり${k24Price.toLocaleString()}円（毎朝自動更新）。インゴット・金貨・ジュエリーの製品別査定額、K18・K22との価格差比較、高く売るポイント、おすすめ買取業者4社を徹底解説。`,
+  alternates: { canonical: "https://gold-biyori.com/articles/k24-kaitori/" },
 };
 
 function CtaBox() {

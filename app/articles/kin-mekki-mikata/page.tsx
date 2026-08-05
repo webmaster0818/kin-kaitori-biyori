@@ -34,6 +34,7 @@ function FaqSchema() {
 export const metadata: Metadata = {
   title: "金メッキと本物の金の見分け方｜刻印・重さ・磁石でチェック",
   description: "金メッキと純金の見分け方を解説。刻印（GP/GFと K)の違い、重さ・磁石・変色によるセルフチェック方法を紹介します。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kin-mekki-mikata/" },
 };
 
 function CtaBox() {

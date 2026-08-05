@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "金貨・インゴットの買取相場はいくら？今日のK24価格と種類別目安・税金【2026年7月】",
   description:
     "金貨（メイプルリーフ・ウィーン・カンガルー・パンダ・天皇陛下記念金貨）とインゴット（田中貴金属・徳力本店・三菱マテリアル）の買取相場を掲載。重量別の買取目安、200万円超の税金対策、おすすめ買取業者4社を徹底解説。",
+  alternates: { canonical: "https://gold-biyori.com/articles/kinka-ingot-kaitori/" },
 };
 
 function CtaBox() {
