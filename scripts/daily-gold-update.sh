@@ -19,6 +19,11 @@ echo "[$(date '+%H:%M:%S')] [1/4] 田中貴金属 本日価格を取得"
 
 /opt/homebrew/bin/python3 scripts/gen-widget.py 2>&1 | tail -1
 
+# 引用用の公開データセット（JSON/CSV/指数）を再生成。
+# ⚠️ここを飛ばすと白書で配布しているファイルだけ日付が止まり、
+#   「毎日自動更新」と書いてある内容と実物が食い違うので必ず実行する。
+/opt/homebrew/bin/python3 scripts/gen-open-dataset.py 2>&1 | tail -2
+
 echo "[$(date '+%H:%M:%S')] [2/4] Next.js ビルド"
 rm -rf .next
 export NODE_OPTIONS="--max-old-space-size=8192"

@@ -37,10 +37,44 @@ function Schemas() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: `金買取相場白書${YEAR}（純度別買取単価・相場推移）`,
-    description: "金（K24/K22/K18/K14/K10）の1gあたり買取単価の目安と相場推移。田中貴金属公表値をもとに日次更新。",
-    creator: { "@type": "Organization", name: "金買取びより" },
+    description:
+      "金（K24/K22/K18/K14/K10）の1gあたり買取単価の目安と、その日次推移。田中貴金属工業が公表する店頭買取価格に純度比と業者買取平均係数0.96を掛けて算出した参考値で、丸め・推定補完は行っていない。JSON/CSVで全期間のデータを無償配布している。",
+    url: "https://gold-biyori.com/kin-kaitori-hakusho/",
+    creator: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     dateModified: date,
-    license: "出典明記で引用可",
+    temporalCoverage: `${series[0]?.date ?? date}/${date}`,
+    isAccessibleForFree: true,
+    license: "https://gold-biyori.com/kin-kaitori-hakusho/",
+    creditText: "金買取びより（gold-biyori.com）",
+    measurementTechnique:
+      "田中貴金属工業の公表する店頭買取価格（税込）を日次取得し、純度比（K22=91.7%/K18=75%/K14=58.5%/K10=41.7%）と業者買取平均係数0.96で純度別に換算",
+    variableMeasured: [
+      { "@type": "PropertyValue", name: "K24買取単価", unitText: "円/g" },
+      { "@type": "PropertyValue", name: "K22買取単価", unitText: "円/g" },
+      { "@type": "PropertyValue", name: "K18買取単価", unitText: "円/g" },
+      { "@type": "PropertyValue", name: "K14買取単価", unitText: "円/g" },
+      { "@type": "PropertyValue", name: "K10買取単価", unitText: "円/g" },
+    ],
+    distribution: [
+      {
+        "@type": "DataDownload",
+        name: "金買取相場データ（日次・純度別）JSON",
+        encodingFormat: "application/json",
+        contentUrl: "https://gold-biyori.com/data/gold-price-history.json",
+      },
+      {
+        "@type": "DataDownload",
+        name: "金買取相場データ（日次・純度別）CSV",
+        encodingFormat: "text/csv",
+        contentUrl: "https://gold-biyori.com/data/gold-price-history.csv",
+      },
+      {
+        "@type": "DataDownload",
+        name: "金買取相場指数（起点日=100）JSON",
+        encodingFormat: "application/json",
+        contentUrl: "https://gold-biyori.com/data/gold-price-index.json",
+      },
+    ],
   };
   return (
     <>
@@ -207,7 +241,30 @@ export default function Page() {
           <p className="text-sm leading-relaxed mb-3">
             本白書の数値・表は、<strong>出典の明記</strong>を条件に、メディア・ブログ・SNS等でご自由に引用いただけます。
           </p>
-          <div className="bg-white border border-warm-border rounded-lg p-3 text-xs text-warm-gray">
+          {/* データ配布: 数字を手で写させないための機械可読ファイル（2026-08-06 追加） */}
+        <div className="bg-white border border-accent/30 rounded-lg p-4 mb-4">
+          <p className="text-sm font-bold text-foreground mb-2">データをそのまま使う（無償・登録不要）</p>
+          <ul className="text-sm space-y-1.5">
+            <li>
+              📄 <a href="/data/gold-price-history.csv" className="text-accent-dark underline">gold-price-history.csv</a>
+              <span className="text-warm-gray text-xs">（全期間・日次・純度別／Excel・スプレッドシートでそのまま開けます）</span>
+            </li>
+            <li>
+              🧩 <a href="/data/gold-price-history.json" className="text-accent-dark underline">gold-price-history.json</a>
+              <span className="text-warm-gray text-xs">（同上のJSON。出典・算出方法のメタ情報つき）</span>
+            </li>
+            <li>
+              📈 <a href="/data/gold-price-index.json" className="text-accent-dark underline">gold-price-index.json</a>
+              <span className="text-warm-gray text-xs">（起点日を100とした推移指数。値動きの比較に）</span>
+            </li>
+          </ul>
+          <p className="text-xs text-warm-gray mt-3 leading-relaxed">
+            いずれも<strong>毎日自動更新</strong>されます。ファイル内に出典・算出方法・注意書きを同梱しているので、
+            引用時の条件がデータ単体で確認できます。丸めや推定による補完は行っていません。
+          </p>
+        </div>
+
+        <div className="bg-white border border-warm-border rounded-lg p-3 text-xs text-warm-gray">
             出典表記の例：「出典：金買取相場白書{YEAR}（金買取びより / gold-biyori.com）」＋本ページへのリンク
           </div>
           <p className="text-sm leading-relaxed mt-3">
