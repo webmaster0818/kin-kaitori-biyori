@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -62,6 +63,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
   description:
@@ -106,7 +110,7 @@ export default function KinUridoki2026Page() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の売り時はいつ？相場の見通しと売却判断</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>「<strong>2026年は金を売るべきタイミングなのか？</strong>」「<strong>金相場は今後どうなる？</strong>」——金価格が歴史的な高値圏にある今、多くの方がこの疑問を抱えています。</p>
 

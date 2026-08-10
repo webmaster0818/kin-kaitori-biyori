@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金の売却と確定申告やり方ガイド — 譲渡所得の計算・節税・申告手順",
   description: "金を売却した時の確定申告のやり方を徹底解説。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇措置、節税対策、確定申告書の書き方まで網羅。",
@@ -95,7 +99,7 @@ export default function KinKakuteiShinkokuPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の売却と確定申告のやり方ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>2026年、金の価格は歴史的高値を記録しています。K24（純金）は1gあたり約15,200円と、10年前の約3.5倍に上昇。金を売却して大きな利益を得る方が増えていますが、<strong>売却益には税金がかかる場合がある</strong>ことをご存知ですか？</p>
 

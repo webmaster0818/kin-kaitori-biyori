@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -39,6 +40,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = { title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点", description: "相続した金・遺品の金を売却する際の税金（譲渡所得・相続税）、取得費の計算方法、遺品整理で見つかった金の査定方法、トラブルを避けるポイントを徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-souzoku-baikyaku/" } };
 
 function CtaBox() {
@@ -68,7 +72,7 @@ export default function KinSouzokuBaikyakuPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】相続した金・遺品の金を売却するガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>親や祖父母から相続した金、遺品整理で見つかった金のアクセサリーやインゴット。「売りたいけれど税金はどうなる？」「取得費がわからない場合は？」「遺産分割協議が必要？」——相続した金の売却には、通常の売却にはない<strong>特有の注意点</strong>があります。</p>
         <p>この記事では、相続した金・遺品の金を売却する際の<strong>税金・手続き・注意点</strong>をわかりやすく解説します。</p>
 

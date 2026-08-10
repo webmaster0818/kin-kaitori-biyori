@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -53,6 +54,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u3067\u571f\u65e5\u3067\u3082\u91d1\u8cb7\u53d6\u3067\u304d\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u591a\u304f\u306e\u5927\u624b\u696d\u8005\uff08\u5927\u9ed2\u5c4b\u3001\u306a\u3093\u307c\u3084\u3001\u5927\u5409\u7b49\uff09\u306f\u571f\u65e5\u3082\u55b6\u696d\u3002\u4e8b\u524d\u306b\u55b6\u696d\u6642\u9593\u3092\u78ba\u8a8d\u63a8\u5968\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u306e\u91d1\u8cb7\u53d6\u3067\u4e00\u756a\u9ad8\u3044\u696d\u8005\u306f\u3069\u3053\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u696d\u8005\u306b\u3088\u308a\u5f97\u610f\u5206\u91ce\u304c\u7570\u306a\u308b\u305f\u3081\u4e00\u6982\u306b\u306f\u8a00\u3048\u307e\u305b\u3093\u3002\u4e00\u62ec\u67fb\u5b9a\uff08\u30d2\u30ab\u30ab\u30af\uff01\uff09\u3067\u8907\u6570\u6bd4\u8f03\u304c\u304a\u3059\u3059\u3081\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u99c5\u304b\u3089\u5f92\u6b69\u4f55\u5206\u306e\u696d\u8005\u304c\u591a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u6771\u53e35\u301c10\u5206\u570f\u5185\u306b\u5927\u624b\u96c6\u4e2d\u3002\u30b5\u30f3\u30b7\u30e3\u30a4\u30f3\u901a\u308a\u6cbf\u3044\u3068\u99c5\u8fd1\u306b\u5206\u6563\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u51fa\u5f35\u8cb7\u53d6\u3067\u6c60\u888b\u4ee5\u5916\u3082\u5bfe\u5fdc\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u591a\u304f\u306e\u696d\u8005\u304c\u90fd\u5185\u5168\u57df\u30fb\u9996\u90fd\u570f\u306b\u5bfe\u5fdc\u3002\u4e8b\u524d\u306b\u30a8\u30ea\u30a2\u78ba\u8a8d\u3092\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u8eab\u5206\u8a3c\u306f\u4f55\u304c\u5fc5\u8981\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53e4\u7269\u55b6\u696d\u6cd5\u306b\u3088\u308a\u672c\u4eba\u78ba\u8a8d\u304c\u5fc5\u8981\u3002\u904b\u8ee2\u514d\u8a31\u8a3c\u3001\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u30ab\u30fc\u30c9\u3001\u30d1\u30b9\u30dd\u30fc\u30c8\u306e\u3044\u305a\u308c\u304b\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】池袋の金買取おすすめ｜大手7店舗の特徴と相場比較",
   description: "池袋エリアで金を高く売るための業者比較ガイド。サンシャイン通り・西口・東口の主要店舗、出張・宅配対応、相場の見方を完全解説。",
@@ -97,7 +101,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">池袋の金買取おすすめ店と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>池袋は東京都内でも金買取業者が集中するエリアです。サンシャインシティ周辺・西口・東口に主要店舗が点在し、競争が活発なため<strong>相場以上の買取が期待できる地域</strong>。</p>

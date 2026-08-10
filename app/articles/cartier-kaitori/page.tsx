@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】カルティエ（Cartier）買取相場ガイド — 人気モデル別の価格と高く売るコツ",
   description:
@@ -96,7 +100,7 @@ export default function CartierKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】カルティエ（Cartier）買取相場と高く売る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>カルティエ（Cartier）は「ジュエリーの王様」と称される世界5大ジュエラーのひとつです。ラブリング、トリニティリング、ジュストアンクルなどの定番モデルは中古市場でも非常に人気が高く、<strong>ブランド価値が大きく上乗せされた高額買取</strong>が期待できます。</p>
 

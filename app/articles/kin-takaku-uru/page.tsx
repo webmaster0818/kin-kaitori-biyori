@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -130,6 +131,9 @@ function FaqSchema() {
   );
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
   description:
@@ -175,7 +179,7 @@ export default function KinTakakuUruPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>「金のアクセサリーを売りたいけど、損したくない」「どうすれば少しでも高く売れる？」——金や貴金属の売却を検討している方にとって、<strong>「いかに高値で売るか」は最大の関心事</strong>です。</p>
 

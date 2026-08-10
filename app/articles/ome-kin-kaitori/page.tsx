@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
@@ -50,6 +51,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】青梅の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "青梅で金を高く売るならどこ？青梅の金買取相場、店頭・出張・宅配の方法別比較、東京都で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
@@ -96,13 +100,13 @@ export default function OmeKinKaitoriPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】青梅の金買取おすすめ業者ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>青梅は多摩西部の自然豊かな都市です。青梅市は多摩西部に位置する自然豊かな都市です。郊外型の店舗や出張買取が中心で、自宅にいながら金製品を査定に出せる方法が便利です。</p>
 
         <p>「青梅で金を売るならどこがいい？」「相場はいくら？」——この記事では、青梅での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を公開情報ベースでまとめました。</p>
         <ul>
-          <li>青梅の金買取相場（2026年6月時点の目安）</li>
+          <li>青梅の金買取相場（{priceDateJa}時点の目安）</li>
           <li>店頭・出張・宅配・一括査定の方法別比較</li>
           <li>青梅で少しでも高く売るための実践ポイント</li>
           <li>送客先4社の特徴と選び方</li>

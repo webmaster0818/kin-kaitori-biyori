@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -53,6 +54,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金の偽物の見分け方ガイド — 金メッキとの違い・自宅でできる7つの判別方法",
   description: "金の偽物と本物の見分け方を徹底解説。刻印・磁石・比重・色味など自宅でできる7つの判別方法、金メッキ（GP/GF）との違い、買取業者の真贋判定の仕組みを紹介。",
@@ -96,7 +100,7 @@ export default function KinNisemonoMikataPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の偽物の見分け方 — 金メッキとの違い・7つの判別方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>金の価格が歴史的高値を記録する2026年、金の偽物（フェイクゴールド）や金メッキ製品が市場に増えています。「これは本物の金？それとも金メッキ？」と疑問に思った経験はありませんか？</p>
 

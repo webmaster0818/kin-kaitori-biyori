@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】銀（シルバー）買取相場ガイド — SV925・SV1000の1gあたり価格と高く売る方法",
   description:
@@ -96,7 +100,7 @@ export default function GinKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】銀（シルバー）買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>銀（シルバー）は金やプラチナに次ぐ代表的な貴金属です。アクセサリー、食器、工芸品、工業用途など幅広く使われており、<strong>不要になった銀製品を売却したい</strong>という方も多いでしょう。</p>
 

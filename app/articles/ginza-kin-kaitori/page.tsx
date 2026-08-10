@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -53,6 +54,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306f\u4ed6\u306e\u30a8\u30ea\u30a2\u3088\u308a\u9ad8\u304f\u58f2\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u30cf\u30a4\u30d6\u30e9\u30f3\u30c9\u30fb\u9ad8\u984d\u54c1\u306f\u9280\u5ea7\u304c\u6709\u5229\u306a\u50be\u5411\u3002\u5c02\u9580\u77e5\u8b58\u306e\u9ad8\u3044\u67fb\u5b9a\u58eb\u3001\u5c02\u9580\u696d\u8005\u306e\u96c6\u4e2d\u3067\u9069\u6b63\u8a55\u4fa1\u304c\u671f\u5f85\u3067\u304d\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306e\u8cb7\u53d6\u5e97\u306f\u4e88\u7d04\u304c\u5fc5\u8981\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u9ad8\u984d\u54c1\u306e\u5834\u5408\u3001\u5c02\u9580\u67fb\u5b9a\u58eb\u306e\u4e8b\u524d\u4e88\u7d04\u304c\u304a\u3059\u3059\u3081\u3002\u4e00\u822c\u54c1\u306f\u4e88\u7d04\u306a\u3057\u3067\u5bfe\u5fdc\u53ef\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306e\u99c5\u304b\u3089\u5f92\u6b69\u4f55\u5206\u306e\u696d\u8005\u304c\u591a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u9280\u5ea7\u99c5\u30fb\u6709\u697d\u753a\u99c5\u30fb\u6771\u9280\u5ea7\u99c5\u304b\u3089\u5f92\u6b695\u301c10\u5206\u570f\u5185\u306b\u96c6\u4e2d\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5c11\u91cf\u3067\u3082\u8cb7\u53d6\u3057\u3066\u304f\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u91d11g\u5358\u4f4d\u304b\u3089\u67fb\u5b9a\u5bfe\u5fdc\u3002\u305f\u3060\u3057\u9ad8\u984d\u91d1\u88fd\u54c1\u304c\u5f97\u610f\u306a\u696d\u8005\u304c\u591a\u3044\u305f\u3081\u3001\u5c11\u91cf\u306a\u3089\u4e00\u62ec\u67fb\u5b9a\u7d4c\u7531\u304c\u304a\u3059\u3059\u3081\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u30a8\u30ea\u30a2\u306e\u67fb\u5b9a\u6599\u30fb\u51fa\u5f35\u6599\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u307b\u307c\u5168\u696d\u8005\u3067\u7121\u6599\u3002\u30ad\u30e3\u30f3\u30bb\u30eb\u6599\u3082\u7121\u6599\u304c\u4e00\u822c\u7684\u3002\u4e8b\u524d\u306bHP\u3067\u78ba\u8a8d\u3092\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】銀座の金買取おすすめ｜ハイブランド対応・富裕層向け店舗を厳選",
   description: "銀座エリアの金買取は富裕層・コレクター向け。ハイブランドジュエリー、希少金製品の専門業者、銀座中央通り・並木通り周辺の店舗を比較解説。",
@@ -97,7 +101,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">銀座の金買取おすすめ店と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>銀座エリアは日本屈指のブランドジュエリー街。<strong>高額品・希少品の買取に強い専門業者</strong>が集中し、ハリーウィンストン、カルティエ、ヴァンクリーフ等の<strong>ハイブランド金製品の最高値買取</strong>が期待できます。</p>

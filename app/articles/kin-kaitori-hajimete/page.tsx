@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -39,6 +40,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
 
 function CtaBox() {
@@ -68,7 +72,7 @@ export default function KinKaitoriHajimetePage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】初めての金買取ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>「金を売りたいけど、何から始めればいいの？」「どんな準備が必要？」「騙されない？」——金を売るのが初めての方は不安が多いものです。</p>
         <p>この記事では、初めて金を売る方のために、<strong>買取の流れ・必要なもの・注意点</strong>をステップごとにわかりやすく解説します。この記事を読めば、安心して金を売却できます。</p>
 

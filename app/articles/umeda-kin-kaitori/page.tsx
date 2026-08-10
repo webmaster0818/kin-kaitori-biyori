@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -53,6 +54,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u6885\u7530\u3068\u5fc3\u658e\u6a4b\u3001\u3069\u3061\u3089\u304c\u9ad8\u304f\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5f97\u610f\u5206\u91ce\u304c\u7570\u306a\u308b\u305f\u3081\u4e00\u6982\u306b\u306f\u8a00\u3048\u306a\u3044\u3002\u4e00\u822c\u91d1\u88fd\u54c1\u306f\u6885\u7530\u3001\u30cf\u30a4\u30d6\u30e9\u30f3\u30c9\u306f\u5fc3\u658e\u6a4b\u306e\u50be\u5411\u3002\u4e21\u65b9\u3067\u898b\u7a4d\u3082\u308a\u6bd4\u8f03\u63a8\u5968\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u306e\u8cb7\u53d6\u5e97\u306f\u4f55\u6642\u307e\u3067\u55b6\u696d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u591a\u304f\u306e\u5927\u624b\u696d\u8005\u306f19\u301c20\u6642\u307e\u3067\u55b6\u696d\u3002\u4f1a\u793e\u5e30\u308a\u306e\u67fb\u5b9a\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u304b\u3089\u51fa\u5f35\u8cb7\u53d6\u306f\u547c\u3079\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u798f\u3061\u3083\u3093\u7b49\u591a\u304f\u306e\u696d\u8005\u304c\u5927\u962a\u5e9c\u5168\u57df\u306b\u51fa\u5f35\u5bfe\u5fdc\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u3067\u571f\u65e5\u3082OK\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u307b\u307c\u5168\u696d\u8005\u304c\u571f\u65e5\u55b6\u696d\u3002\u65e5\u66dc\u306e\u65b9\u304c\u7a7a\u3044\u3066\u3044\u308b\u3053\u3068\u304c\u591a\u3044\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5730\u4e0b\u8857\u306e\u696d\u8005\u3068\u5730\u4e0a\u306e\u696d\u8005\u306e\u5dee\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5730\u4e0b\u8857\u306f\u6885\u7530\u99c5\u304b\u3089\u76f4\u7d50\u3067\u30a2\u30af\u30bb\u30b9\u826f\u597d\u3001\u5730\u4e0a\u306f\u5e97\u8217\u304c\u5e83\u304f\u843d\u3061\u7740\u3044\u3066\u67fb\u5b9a\u53ef\u3002\u4e21\u65b9\u3068\u3082\u4fe1\u983c\u3067\u304d\u308b\u696d\u8005\u304c\u591a\u3044\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】梅田の金買取おすすめ｜大阪駅周辺の主要店舗と相場比較",
   description: "梅田・大阪駅周辺で金を高く売るための業者比較。JR大阪駅・阪急梅田・地下街の主要店舗、相場、出張・宅配の選び方を解説。",
@@ -97,7 +101,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">梅田・大阪駅の金買取おすすめ店と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>梅田エリア（大阪駅・阪急梅田・阪神梅田）は関西最大の商業地区。買取業者の競争が激しく、<strong>相見積もりで高値が出やすい</strong>地域です。</p>

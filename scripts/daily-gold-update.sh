@@ -34,6 +34,10 @@ find out -name "__next*.txt" -type f -delete
 LINT="$HOME/.openclaw/workspace/scaled-content-lint.py"
 [ -f "$LINT" ] && /opt/homebrew/bin/python3 "$LINT" gold "$SRC/out" --glob "articles/*/index.html" --min-unique 100 --dup 0.6 --top 8 2>&1 | sed -n '1,3p' || true
 
+# sitemapを実ページから再生成。
+# ⚠️手書きのままだと記事を増やしても反映されず、実際180記事が載っていなかった。
+/opt/homebrew/bin/python3 scripts/gen-sitemap.py 2>&1 | tail -1
+
 echo "[$(date '+%H:%M:%S')] [3/4] deploy へ rsync & push"
 rsync -a --delete --exclude=.git "$SRC/out/" "$DEPLOY/"
 cd "$DEPLOY"

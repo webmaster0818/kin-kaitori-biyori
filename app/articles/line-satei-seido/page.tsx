@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u984d\u306f\u5b9f\u969b\u306e\u8cb7\u53d6\u984d\u3068\u540c\u3058\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u6982\u7b97\u306e\u305f\u3081\u00b110\u301c20%\u306e\u5dee\u304c\u51fa\u308b\u3053\u3068\u304c\u591a\u3044\u3002\u5b9f\u7269\u67fb\u5b9a\u3067\u78ba\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u306e\u7cbe\u5ea6\u3092\u4e0a\u3052\u308b\u65b9\u6cd5\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u523b\u5370\u304c\u660e\u78ba\u306a\u5199\u771f\u3001\u6b63\u78ba\u306a\u91cd\u91cf\u7533\u544a\u3001\u4ed8\u5c5e\u54c1\u306e\u6709\u7121\u3092\u4f1d\u3048\u308b\u3068\u7cbe\u5ea6\u304c\u4e0a\u304c\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u5f8c\u3001\u5fc5\u305a\u58f2\u3089\u306a\u3044\u3068\u3044\u3051\u306a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5168\u3066\u306e\u696d\u8005\u3067\u30ad\u30e3\u30f3\u30bb\u30eb\u7121\u6599\u3002LINE\u67fb\u5b9a\u3060\u3051\u53d7\u3051\u3066\u58f2\u3089\u306a\u3044\u3053\u3068\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5199\u771f\u306f\u4f55\u679a\u9001\u308b\u3079\u304d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u672c\u4f53\u5168\u4f53\u30fb\u523b\u5370\u90e8\u5206\u30fb\u4ed8\u5c5e\u54c1 \u30673\u301c5\u679a\u304c\u76ee\u5b89\u3002\u591a\u3059\u304e\u3066\u3082\u51e6\u7406\u304c\u9045\u304f\u306a\u308b\u5834\u5408\u3042\u308a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u3067\u5927\u91cf\u306e\u91d1\u88fd\u54c1\u3092\u4e00\u6c17\u306b\u67fb\u5b9a\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3060\u304c\u3001\u696d\u8005\u306b\u3088\u308a\u4e0a\u9650\u3042\u308a\u300210\u70b9\u4ee5\u4e0a\u306e\u5834\u5408\u306f\u51fa\u5f35\u8cb7\u53d6\u306e\u65b9\u304c\u52b9\u7387\u7684\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金買取のLINE査定・写真査定の精度｜実物査定との差と活用法",
   description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を徹底解説。",
@@ -95,7 +99,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取のLINE査定・写真査定はどこまで信頼できる？</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>「LINE査定や写真査定って、本当の買取価格と差はあるの？」——本記事で精度・限界・効率的な活用法を完全解説します。</p>

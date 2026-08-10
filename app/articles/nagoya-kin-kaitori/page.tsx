@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import Link from "next/link";
@@ -58,6 +59,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "名古屋の金買取おすすめ4社を比較｜名駅・栄・大須・駅別の店舗と今日の相場【2026年8月】",
   description:
@@ -103,7 +107,7 @@ export default function NagoyaKinKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月24日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-8 not-prose">
           <p className="font-bold text-navy text-lg mb-3">まず結論：名古屋で金を売るなら</p>

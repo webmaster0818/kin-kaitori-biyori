@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
@@ -65,6 +66,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】東京の金買取おすすめ業者ガイド — エリア別・方法別に徹底比較",
   description:
@@ -110,7 +114,7 @@ export default function TokyoKinKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】東京の金買取おすすめ業者ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月13日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>東京は日本最大の金買取マーケットです。銀座・新宿・上野御徒町を中心に数百の買取業者がひしめき合い、<strong>競争が激しいぶん高値がつきやすい</strong>という特徴があります。</p>
 

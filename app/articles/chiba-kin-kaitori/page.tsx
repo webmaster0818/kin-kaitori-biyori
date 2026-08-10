@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -54,6 +55,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】千葉の金買取おすすめ業者ガイド — 千葉駅・船橋・柏エリア別比較",
   description: "千葉で金を高く売るならどこがいい？千葉駅・船橋・柏のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、千葉の金買取相場と高く売るコツを徹底解説。",
@@ -98,7 +102,7 @@ export default function ChibaKinKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】千葉の金買取おすすめ業者ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>千葉は千葉県地方最大の都市であり、金・貴金属の買取市場も千葉県エリアで最も活発です。千葉駅周辺・船橋エリア一番町を中心に、大手チェーンから地元密着型の専門店まで多くの買取業者が営業しています。</p>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
@@ -31,6 +32,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: TITLE,
   description: "金地金・金貨を200万円超で売却するとマイナンバーの告知と支払調書の提出が必要になります。なぜ必要か、出さないとどうなるか、200万円以下なら何が必要か、分割売却の誤解まで仕組みを解説。",
@@ -61,7 +65,7 @@ export default function KinBaikyakuMynumberPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金を売るとマイナンバーが必要？200万円の境界線と支払調書の仕組み</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月12日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>金地金やインゴットを売却しようとして、買取店で「マイナンバーの提示をお願いします」と言われて戸惑う方は少なくありません。「なぜ番号が必要なの？」「出すと税金を取られる？」——この記事では、金売却とマイナンバーの関係を仕組みから解説します。</p>
 
         <h2>結論: 200万円超の売却でマイナンバーの告知が必要</h2>

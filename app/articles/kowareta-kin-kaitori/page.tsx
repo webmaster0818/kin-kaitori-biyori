@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "壊れた金・刻印なしの金は買取できる？→売れます。条件と査定の仕組み【2026年7月】",
@@ -149,7 +153,7 @@ export default function KowaretaKinKaitoriPage() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】壊れた金・刻印なしでも売れる — 金買取の条件と査定方法</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月15日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
           <p>「チェーンが切れたネックレスは売れる？」「刻印がない金は買い取ってもらえる？」「変色した金は価値が下がる？」——こうした不安から、壊れた金製品を引き出しにしまったままの方は多いのではないでしょうか。</p>
 

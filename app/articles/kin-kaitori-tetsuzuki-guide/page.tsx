@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -50,6 +51,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間【手続きガイド】",
   description: "金買取に必要な持ち物リスト、古物営業法で義務付けられる本人確認、未成年の売却可否、予約の要否と当日の流れをまとめて解説。マイナンバーが必要になるケースまで、初めての金買取で迷わないための完全ガイド。",
@@ -93,7 +97,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年7月】金買取の手続き完全ガイド — 持ち物・本人確認・未成年・予約の流れ</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月3日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
           <p>金を初めて売るとき、「何を持っていけばいい？」「本人確認って何のため？」「予約は必要？」と手続き面の疑問が意外と多いものです。この記事では、金買取の<strong>必要な持ち物・本人確認のルール・未成年の売却可否・予約から現金受け取りまでの流れ</strong>を1ページにまとめました。</p>
 

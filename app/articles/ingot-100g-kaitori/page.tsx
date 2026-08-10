@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -31,6 +32,9 @@ function FaqSchema() {
   ] };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
+
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "金インゴット100gの買取相場ガイド",
@@ -73,7 +77,7 @@ export default function Ingot100gKaitoriPage() {
       </div>
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金インゴット100gの買取相場ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>100gの金インゴットは、純度99.99%の地金として金相場に連動して評価されます。刻印やブランドも信頼性に関わります。</p>
         <h2>ポイント</h2>
         <ul>

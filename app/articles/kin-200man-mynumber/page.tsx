@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u3092\u63d0\u51fa\u3057\u305f\u304f\u306a\u3044\u5834\u5408\u3001\u58f2\u308c\u306a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"200\u4e07\u5186\u8d85\u306e\u53d6\u5f15\u306f\u3067\u304d\u307e\u305b\u3093\u3002200\u4e07\u5186\u4ee5\u4e0b\u306b\u5206\u5272\u3059\u308b\u304b\u3001\u63d0\u51fa\u306b\u540c\u610f\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u63d0\u51fa\u5f8c\u306b\u7a0e\u91d1\u304c\u304b\u304b\u308b\u306e\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u63d0\u51fa\u81ea\u4f53\u306f\u7a0e\u91d1\u3068\u306f\u5225\u3002\u8b72\u6e21\u76ca\u304c\u5e74\u959350\u4e07\u5186\u8d85\u306a\u3089\u78ba\u5b9a\u7533\u544a\u304c\u5fc5\u8981\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5bb6\u65cf\u8907\u6570\u306e\u540d\u7fa9\u3067\u58f2\u5374\u3059\u308c\u3070\u56de\u907f\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5b9f\u969b\u306e\u6240\u6709\u8005\u304c\u7570\u306a\u308b\u5834\u5408\u306f\u5408\u6cd5\u3002\u6240\u6709\u8005\u304c\u540c\u4e00\u4eba\u7269\u306a\u306e\u306b\u540d\u7fa9\u5909\u3048\u306f\u8131\u7a0e\u30ea\u30b9\u30af\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u901a\u77e5\u30ab\u30fc\u30c9\u3067\u3082\u3044\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u696d\u8005\u306b\u3088\u308a\u5bfe\u5fdc\u304c\u7570\u306a\u308b\u3002\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u30ab\u30fc\u30c9\uff08\u9854\u5199\u771f\u4ed8\u304d\uff09\u304c\u78ba\u5b9f\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u8907\u6570\u56de\u306b\u5206\u3051\u3066\u58f2\u308b\u5834\u5408\u306e\u696d\u8005\u306e\u5bfe\u5fdc\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u540c\u3058\u696d\u8005\u3067\u77ed\u671f\u9593\u306b\u8907\u6570\u56de = \u5408\u7b97\u5224\u65ad\u3055\u308c\u308b\u53ef\u80fd\u6027\u3042\u308a\u3002\u4e8b\u524d\u306b\u696d\u8005\u3078\u78ba\u8a8d\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金の200万円超売却時のマイナンバー提出義務｜法律と業者対応を完全解説",
   description: "金200万円超の売却時に必要なマイナンバー提出義務（犯罪収益移転防止法）。提出を避ける方法はあるか、業者の対応、確定申告との関係を徹底解説。",
@@ -95,7 +99,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金200万円超売却時のマイナンバー提出義務｜法令と注意点</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>金製品を<strong>1回の取引で200万円超</strong>売却する場合、業者は犯罪収益移転防止法に基づき、お客様にマイナンバー（個人番号）の提出を求める必要があります。本記事で詳細を解説。</p>

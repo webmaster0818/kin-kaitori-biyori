@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { NearbyAreas } from "@/components/NearbyAreas";
@@ -63,6 +64,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】御徒町の金買取ガイド — 金買取の聖地で高く売るコツ",
   description:
@@ -108,7 +112,7 @@ export default function OkachimachiKinKaitoriPage() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】御徒町の金買取ガイド — 金買取の聖地で高く売るコツ</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月6日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
           <p>「御徒町は金買取の聖地」——金や宝飾品の売却を調べたことがある人なら、一度は耳にしたフレーズだと思います。実際、<strong>御徒町は日本最大の貴金属問屋街</strong>であり、金地金・K24・ブランドジュエリーを売るなら全国でもっとも有利なエリアの一つです。</p>
 

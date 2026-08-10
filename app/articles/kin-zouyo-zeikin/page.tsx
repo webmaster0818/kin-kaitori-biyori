@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
@@ -31,6 +32,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: TITLE,
   description: "金地金・金貨・宝飾品を贈与すると贈与税はどうなる？110万円の基礎控除、贈与税の速算表、相続時精算課税、贈与でもらった金を売却するときの取得費の引き継ぎまで、国税庁の一次情報をもとに解説します。",
@@ -61,7 +65,7 @@ export default function KinZouyoZeikinPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の贈与と税金ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月12日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>金価格の上昇で、「親から金地金をもらった」「子に金貨を渡しておきたい」という生前贈与の相談が増えています。金の贈与には<strong>贈与税</strong>が関わり、さらに<strong>もらった金を将来売却するときの税金（譲渡所得）</strong>にも影響します。</p>
         <p>この記事では、金の贈与にかかる税金の仕組みを国税庁の一次情報（タックスアンサー）をもとに整理します。</p>
 

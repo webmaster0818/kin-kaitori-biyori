@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldSimulator } from "@/components/GoldSimulator";
@@ -53,6 +54,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u5207\u308c\u305f\u91d1\u30c1\u30a7\u30fc\u30f3\u306f\u8cb7\u53d6\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u91cd\u91cf\u3067\u67fb\u5b9a\u3059\u308b\u305f\u3081\u3001\u5207\u308c\u305f\u5834\u6240\u306f\u95a2\u4fc2\u3042\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u7d61\u307e\u3063\u305f\u30c1\u30a7\u30fc\u30f3\u306f\u89e3\u3044\u3066\u304b\u3089\u58f2\u308b\u3079\u304d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u4e0d\u8981\u3002\u7121\u7406\u306b\u89e3\u304f\u3068\u5207\u308c\u308b\u53ef\u80fd\u6027\u304c\u5897\u3048\u308b\u305f\u3081\u3001\u7d61\u307e\u3063\u305f\u307e\u307e\u696d\u8005\u3078\u3002\u67fb\u5b9a\u984d\u306f\u5909\u308f\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30e1\u30f3\u30ba\u592a\u30c1\u30a7\u30fc\u30f3\u306e\u5e73\u5747\u8cb7\u53d6\u984d\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u91cd\u91cf\u306b\u3088\u308b\u3002K18\u559c\u5e7330g\u3067\u7d0460\u4e07\u5186\u304c\u76ee\u5b89\u3002\u8a73\u7d30\u306f\u91cd\u91cf\u3068\u76f8\u5834\u306b\u3088\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30d7\u30ec\u30fc\u30c8\u30fb\u30c8\u30c3\u30d7\u306a\u3057\u306e\u30c1\u30a7\u30fc\u30f3\u3060\u3051\u3067\u3082\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u554f\u984c\u306a\u304f\u58f2\u308c\u307e\u3059\u3002\u30c1\u30a7\u30fc\u30f3\u672c\u4f53\u306e\u91cd\u91cf\u3067\u67fb\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u91d1\u30e1\u30c3\u30ad\u306e\u30c1\u30a7\u30fc\u30f3\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u7d14\u5ea6\u304c\u4f4e\u304f\u3001\u307b\u3068\u3093\u3069\u306e\u696d\u8005\u3067\u8cb7\u53d6\u5bfe\u8c61\u5916\u307e\u305f\u306f\u6570\u5341\u5186\u7a0b\u5ea6\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金のチェーン買取相場｜切れた・絡まったチェーンでも高く売る方法",
   description: "金のネックレスチェーン（K18・K10等）の買取相場、切れた・絡まった・歪んだチェーンでも売れるか、メンズチェーンの相場、高く売るコツを完全解説。",
@@ -96,7 +100,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金のチェーン買取相場と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>金のチェーンネックレスは絡まりや切れがあっても買取可能。本記事で、相場、形状トラブルへの対応、高く売るコツを解説します。</p>

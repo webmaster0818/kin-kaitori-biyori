@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
@@ -51,6 +52,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】半田の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
   description: "半田で金を高く売るならどこ？半田の金買取相場、店頭・出張・宅配の方法別比較、愛知県で高価買取を狙うコツと注意点を公開情報ベースで解説します。",
@@ -97,13 +101,13 @@ export default function HandaKinKaitoriPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】半田の金買取おすすめ業者ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>半田は酢と山車祭りで知られる知多の都市です。半田市は酢醸造と山車祭りで知られる知多半島の中核都市です。郊外店舗や出張買取で、知多一帯の金製品売却に対応しています。</p>
 
         <p>「半田で金を売るならどこがいい？」「相場はいくら？」——この記事では、半田での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を公開情報ベースでまとめました。</p>
         <ul>
-          <li>半田の金買取相場（2026年6月時点の目安）</li>
+          <li>半田の金買取相場（{priceDateJa}時点の目安）</li>
           <li>店頭・出張・宅配・一括査定の方法別比較</li>
           <li>半田で少しでも高く売るための実践ポイント</li>
           <li>送客先4社の特徴と選び方</li>

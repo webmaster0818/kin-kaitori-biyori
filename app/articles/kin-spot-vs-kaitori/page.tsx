@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u30b9\u30dd\u30c3\u30c8\u4fa1\u683c\u3068\u8cb7\u53d6\u4fa1\u683c\u306f\u3069\u308c\u304f\u3089\u3044\u5dee\u304c\u3042\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u696d\u8005\u306b\u3088\u308a2\u301c20%\u7a0b\u5ea6\u3002\u91d1\u5c02\u9580\u696d\u8005\u30672\u301c5%\u3001\u30ea\u30b5\u30a4\u30af\u30eb\u30b7\u30e7\u30c3\u30d7\u306710\u301c20%\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30b9\u30dd\u30c3\u30c8\u4fa1\u683c\u306f\u6bce\u65e5\u5909\u52d5\u3059\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u306f\u3044\u3001\u5e02\u5834\u306e\u53d6\u5f15\u6642\u9593\u4e2d\u306f\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u5909\u52d5\u3002\u7530\u4e2d\u8cb4\u91d1\u5c5e\u306e\u5e97\u982d\u4fa1\u683c\u306f\u671d\u306b\u767a\u8868\u3055\u308c\u3001\u305d\u306e\u65e5\u306e\u3046\u3061\u306f\u56fa\u5b9a\u3055\u308c\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30b9\u30dd\u30c3\u30c8\u4fa1\u683c\u3088\u308a\u9ad8\u304f\u8cb7\u3044\u53d6\u3063\u3066\u304f\u308c\u308b\u696d\u8005\u306f\u3042\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u7279\u6b8a\u4f8b\uff08\u8cb7\u53d6\u30ad\u30e3\u30f3\u30da\u30fc\u30f3\u7b49\uff09\u4ee5\u5916\u3001\u539f\u5247\u306a\u3044\u3002\u30b9\u30dd\u30c3\u30c8\u4fa1\u683c = \u53d6\u5f15\u5e02\u5834\u306e\u4e0a\u9650\u5024\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5c11\u91cf\u3067\u3082\u9ad8\u304f\u58f2\u308b\u65b9\u6cd5\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u91d1\u5c02\u9580\u696d\u8005\u3092\u9078\u3076\u30fb\u8907\u6570\u696d\u8005\u3067\u6bd4\u8f03\u3002\u5c11\u91cf\u306a\u3089\u5b85\u914d\u8cb7\u53d6\uff08\u9001\u6599\u7121\u6599\uff09\u3082\u691c\u8a0e\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30b9\u30dd\u30c3\u30c8\u4fa1\u683c\u306e\u9ad8\u3044\u6642\u671f\u306f\u3044\u3064\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u6b74\u53f2\u7684\u306b\u306f\u7d4c\u6e08\u4e0d\u5b89\u6642\u30fb\u30a4\u30f3\u30d5\u30ec\u5c40\u9762\u3067\u91d1\u4fa1\u683c\u304c\u4e0a\u6607\u3002\u76f4\u8fd1\u306f2024\u301c2026\u5e74\u3067\u6b74\u53f2\u7684\u9ad8\u5024\u570f\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金スポット価格と買取価格の違い｜なぜ業者の買取は安いのか",
   description: "金スポット価格と業者買取価格の違い・差額の理由を完全解説。田中貴金属の店頭価格、業者手数料、為替の影響、最高値を引き出す業者選びまで。",
@@ -95,7 +99,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金スポット価格と買取価格の違いを完全解説</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>「金のスポット価格は1g 25,000円なのに、買取業者だと19,000円しか出ない」——なぜこの差が出るのか？本記事で完全解説します。</p>

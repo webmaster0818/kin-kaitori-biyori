@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldSimulator } from "@/components/GoldSimulator";
@@ -53,6 +54,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u58ca\u308c\u305f\u30ed\u30ec\u30c3\u30af\u30b9\u306e\u91d1\u6642\u8a08\u3067\u3082\u8cb7\u53d6\u3067\u304d\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u52d5\u304b\u306a\u304f\u3066\u3082\u30b1\u30fc\u30b9\u30fb\u30d6\u30ec\u30b9\u306e\u91d1\u90e8\u5206\u306e\u7d20\u6750\u4fa1\u5024+\u30d6\u30e9\u30f3\u30c9\u30d7\u30ec\u30df\u30a2\u30e0\u304c\u3042\u308b\u305f\u3081\u3001\u7121\u57a2\u306e\u5834\u5408\u6570\u5341\u4e07\u5186\u4ee5\u4e0a\u306e\u8cb7\u53d6\u4f8b\u3082\u3002\"}}, {\"@type\": \"Question\", \"name\": \"18\u91d1\u6642\u8a08\u3068\u30b9\u30c6\u30f3\u30ec\u30b9\u6642\u8a08\u306e\u898b\u5206\u3051\u65b9\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u30b1\u30fc\u30b9\u306e\u88cf\u84cb\u3084\u30e9\u30b0\u90e8\u5206\u306e\u523b\u5370\u3092\u78ba\u8a8d\u3002\u300cK18\u300d\u300c750\u300d\u300c18KT\u300d\u304c\u3042\u308c\u307018\u91d1\u3002\u91cd\u91cf\u3082\u5224\u5225\u306e\u76ee\u5b89\uff08\u91d1\u306f\u91cd\u304f\u3001\u30b9\u30c6\u30f3\u30ec\u30b9\u306f\u8efd\u3044\uff09\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30ed\u30ec\u30c3\u30af\u30b9\u306e\u30b3\u30f3\u30d3\u30e2\u30c7\u30eb\u306e\u91d1\u91cd\u91cf\u306f\u3069\u3046\u6e2c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u696d\u8005\u3067\u5c02\u7528\u6e2c\u5b9a\u3002\u4e00\u822c\u7684\u306b\u30c7\u30a4\u30c8\u30b8\u30e3\u30b9\u30c8\u30fb\u30b3\u30f3\u30d3\u306f\u91d1\u90e8\u520620\u301c35g\u7a0b\u5ea6\u3002\u6b63\u78ba\u306a\u5024\u306f\u5c02\u9580\u696d\u8005\u3067\u67fb\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30d6\u30e9\u30f3\u30c9\u4fdd\u8a3c\u66f8\u306a\u3057\u3067\u3082\u91d1\u6642\u8a08\u306f\u58f2\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u58f2\u308c\u307e\u3059\u304c\u3001\u3042\u308b\u5834\u5408\u3068\u6bd4\u3079\u306610\u301c15%\u5b89\u304f\u306a\u308b\u50be\u5411\u3002\u672c\u7269\u78ba\u8a8d\u306e\u8a3c\u660e\u304c\u306a\u3044\u305f\u3081\u696d\u8005\u304c\u614e\u91cd\u306a\u67fb\u5b9a\u3092\u3059\u308b\u3053\u3068\u304c\u7406\u7531\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u91d1\u6642\u8a08\u306e\u8cb7\u53d6\u76f8\u5834\u306f\u3069\u3053\u3067\u78ba\u8a8d\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u30ed\u30ec\u30c3\u30af\u30b9\u5404\u30e2\u30c7\u30eb\u306e\u8cb7\u53d6\u4fa1\u683c\u306f\u30ed\u30c7\u30aa\u30c9\u30e9\u30a4\u30d6\u30fb\u30b3\u30e1\u5175\u30fb\u8cb7\u53d6\u5927\u5409\u7b49\u306e\u696d\u8005\u516c\u5f0f\u30b5\u30a4\u30c8\u3067\u78ba\u8a8d\u53ef\u80fd\u3002\u8907\u6570\u793e\u306e\u6bd4\u8f03\u304c\u304a\u3059\u3059\u3081\u3002\"}}]}" }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金時計（ロレックス含む）買取相場｜18金無垢・ツートーン・ブランド別徹底解説",
   description: "金時計の買取は金相場とブランドプレミアムの両軸。ロレックス、オメガ、パテック等の18金無垢時計の買取相場、ツートーンの計算方法、高く売るコツを完全解説。",
@@ -96,7 +100,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金時計（ロレックス含む）の買取相場と高く売る完全ガイド</h1>
-          <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月18日</p>
+          <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
           <p>金時計、特に<strong>18金無垢のロレックス</strong>は、金相場×ブランドプレミアムの二重の価値があり、高額買取が期待できる代表アイテムです。</p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
@@ -29,6 +30,9 @@ function ArticleSchema() {
   const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取日和" }, publisher: { "@type": "Organization", name: "金買取日和", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
+
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -78,7 +82,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を13社で徹底比較【2026年7月調査】</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月12日（各社公式サイトを当サイトが直接確認した時点の情報です）</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）（各社公式サイトを当サイトが直接確認した時点の情報です）</p>
         <p>金買取で本当に大事なのは「買取単価」だけではありません。<strong>査定料・出張料・キャンセル時の返送料・振込手数料</strong>などの諸費用で、最終的な手取り額が変わります。</p>
         <p>この記事では、主要買取8社の公式サイトを当サイトが直接確認し、手数料と利用条件を一覧にまとめました。公式に記載がない項目は「記載なし」と正直に表記しています。</p>
 

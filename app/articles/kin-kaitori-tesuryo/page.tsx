@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -30,6 +31,9 @@ function FaqSchema() {
   ] };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
+
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "金買取の手数料を徹底解説｜査定料・精錬費に注意",
@@ -72,7 +76,7 @@ export default function KinKaitoriTesuryoPage() {
       </div>
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金買取の手数料を徹底解説</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>「高価買取」と謳いながら、査定料や精錬費の名目で差し引く業者もあります。手数料の仕組みを知って損を防ぎましょう。</p>
         <h2>ポイント</h2>
         <ul>

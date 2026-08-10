@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】遺品整理で見つかった金の売り方ガイド — 相続・税金・高く売る方法",
   description: "遺品整理で見つかった金・貴金属の売り方を徹底解説。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者4社を紹介。",
@@ -95,7 +99,7 @@ export default function IhinSeiriKinPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】遺品整理で見つかった金の売り方ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>遺品整理を進める中で、故人が大切にしていた金のジュエリ��や金製品が見つかることがあります。金のネックレス、指輪、ブレスレット、金歯、金の延べ棒——2026年現在、金の価格は歴史的高値にあり、<strong>遺品の金には想像以上の価値がある</strong>可能性があります。</p>
 

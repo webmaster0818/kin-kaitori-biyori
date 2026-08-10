@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
@@ -52,6 +53,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "【2026年最新】金の重さの測り方ガイド — 自宅でグラムを量る方法と買取価格の計算",
   description: "金の重さを自宅で測る方法を徹底解説。デジタルスケールの使い方、水を使った比重測定法、金製品の重量目安、買取価格の計算方法までわかりやすく紹介。",
@@ -95,7 +99,7 @@ export default function KinOmosaHakrikataPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の重さの測り方ガイド — 自宅でグラムを量る方法</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年4月26日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>金の買取価格は「重量（g）x 1gあたりの相場」で計算されます。つまり、<strong>金の重さを知ることは、買取価格を知る第一歩</strong>です。</p>
 

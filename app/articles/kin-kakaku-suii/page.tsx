@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -30,6 +31,9 @@ function FaqSchema() {
   ] };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
+
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "金価格はなぜ上がっている？｜推移の要因と今後の見通し",
@@ -72,7 +76,7 @@ export default function KinKakakuSuiiPage() {
       </div>
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金価格はなぜ上がっている？</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>金価格は近年歴史的な高値圏で推移しています。価格を動かす要因を知れば、売却タイミングの判断に役立ちます。</p>
         <h2>ポイント</h2>
         <ul>

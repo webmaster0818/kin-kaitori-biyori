@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { PurityPriceTable } from "@/components/PurityPriceTable";
 import Link from "next/link";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
@@ -51,6 +52,9 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = {
   title: "上田駅すぐの金買取はどこ？上田市のおすすめ店と今日の相場【2026年8月】",
   description: "上田・上田駅で金や貴金属（プラチナ・銀・K18等）を高く売るには？上田の買取相場、店頭・出張・宅配の方法別比較、長野県で高価買取を狙うコツを公開情報ベースで解説します。",
@@ -97,13 +101,13 @@ export default function UedaKinKaitoriPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】上田の金買取おすすめ業者ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月1日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>上田は真田氏ゆかりの城下町です。上田市は真田氏ゆかりの城下町として知られる東信の都市です。新幹線も停車し、駅周辺の店舗や出張買取で金製品を売却できます。</p>
 
         <p>「上田で金を売るならどこがいい？」「相場はいくら？」——この記事では、上田での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を公開情報ベースでまとめました。</p>
         <ul>
-          <li>上田の金買取相場（2026年6月時点の目安）</li>
+          <li>上田の金買取相場（{priceDateJa}時点の目安）</li>
           <li>店頭・出張・宅配・一括査定の方法別比較</li>
           <li>上田で少しでも高く売るための実践ポイント</li>
           <li>送客先4社の特徴と選び方</li>

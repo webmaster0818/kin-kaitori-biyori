@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
@@ -44,6 +45,9 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 export const metadata: Metadata = { title: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金、そして2026年の買取規制の最新動向（変わること・変わらないこと）を一次情報ベースで徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-nobebo-kaitori/" } };
 
 function CtaBox() {
@@ -74,7 +78,7 @@ export default function KinNobeboKaitoriPage() {
 
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年7月最新】金の延べ棒・インゴット買取ガイド</h1>
-        <p className="text-warm-gray text-sm mb-8">最終更新: 2026年7月29日</p>
+        <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k24" />
 
