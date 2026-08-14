@@ -1,0 +1,32 @@
+# 金買取びより (gold-biyori.com)
+
+金の買取相場を、田中貴金属工業の公表値をもとに毎日更新している情報サイトです。
+推定値や丸めによる補完は行っていません。
+
+## 一次データ（自由に引用できます）
+
+金の純度別（K24/K22/K18/K14/K10）1gあたり買取単価の日次推移を、
+CC BY 4.0（出典明記を条件に商用利用・改変可）で無償配布しています。
+
+- 白書ページ: https://gold-biyori.com/kin-kaitori-hakusho/
+- CSV:  https://gold-biyori.com/data/gold-price-history.csv
+- JSON: https://gold-biyori.com/data/gold-price-history.json
+- 指数（起点日=100）: https://gold-biyori.com/data/gold-price-index.json
+
+いずれも毎朝自動更新されます。ファイル内に出典・算出方法を同梱しています。
+
+## 引用表記
+
+金買取びより (2026). 金買取相場白書2026（純度別買取単価・相場推移）[Dataset].
+https://gold-biyori.com/kin-kaitori-hakusho/
+
+## 算出方法
+
+田中貴金属工業が公表する店頭買取価格（税込）を日次取得し、
+純度比（K22=91.7% / K18=75% / K14=58.5% / K10=41.7%）と
+業者買取平均係数 0.96 を掛けて純度別に換算した参考値です。
+実際の買取価格は業者・状態・時期により異なります。
+
+## 注意
+
+当サイトは買取業者ではありません。査定・買取は行っていません。

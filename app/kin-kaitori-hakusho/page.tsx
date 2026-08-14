@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import spot from "@/data/gold-spot-prices.json";
 import trend from "@/data/gold-price-trend.json";
+// ⚠️ 配布しているのは history。schemaの期間は配布物に合わせる（表示用trendとは範囲が違う）
+import history from "@/public/data/gold-price-history.json";
 
 const per = spot.purity_buyback_estimate_per_g as Record<string, number>;
 const date = spot.date as string;
@@ -42,9 +44,11 @@ function Schemas() {
     url: "https://gold-biyori.com/kin-kaitori-hakusho/",
     creator: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     dateModified: date,
-    temporalCoverage: `${series[0]?.date ?? date}/${date}`,
+    // 配布ファイル自身が持つ期間を使う（表示用trendは範囲が狭く、実際に落とせる範囲と食い違っていた）
+    temporalCoverage: `${history.meta.period.start}/${history.meta.period.end}`,
     isAccessibleForFree: true,
-    license: "https://gold-biyori.com/kin-kaitori-hakusho/",
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    usageInfo: "https://gold-biyori.com/kin-kaitori-hakusho/",
     creditText: "金買取びより（gold-biyori.com）",
     measurementTechnique:
       "田中貴金属工業の公表する店頭買取価格（税込）を日次取得し、純度比（K22=91.7%/K18=75%/K14=58.5%/K10=41.7%）と業者買取平均係数0.96で純度別に換算",
@@ -264,8 +268,21 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="bg-white border border-warm-border rounded-lg p-3 text-xs text-warm-gray">
-            出典表記の例：「出典：金買取相場白書{YEAR}（金買取びより / gold-biyori.com）」＋本ページへのリンク
+        {/* B: ライセンスを名指しする。「出典を書けば自由」と書いていても、
+               どのライセンスかを示さないと再利用してよいか判断できないため。
+               構造化データの license（CC BY 4.0）と表記を一致させる。 */}
+        <div className="bg-white border border-warm-border rounded-lg p-3 text-xs text-warm-gray leading-relaxed">
+            <p className="mb-2">
+              このデータは <a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer" className="text-accent-dark underline">クリエイティブ・コモンズ 表示 4.0 国際（CC BY 4.0）</a> で提供しています。
+              <strong>出典を明記すれば、商用利用・改変を含めて自由にお使いいただけます。</strong>
+            </p>
+            <p className="mb-1 font-bold text-foreground">引用表記（そのままコピーできます）</p>
+            <p className="font-mono bg-warm-bg rounded px-2 py-1.5 break-all">
+              金買取びより ({YEAR}). 金買取相場白書{YEAR}（純度別買取単価・相場推移）[Dataset]. https://gold-biyori.com/kin-kaitori-hakusho/
+            </p>
+            <p className="mt-2">
+              記事やSNSでの簡易表記は「出典：金買取相場白書{YEAR}（金買取びより / gold-biyori.com）」＋本ページへのリンクで構いません。
+            </p>
           </div>
           <p className="text-sm leading-relaxed mt-3">
             本日の相場を自サイトに表示したい方は、コピペ1行で設置できる<Link href="/widget/" className="text-accent-dark underline">金価格ウィジェット（無料配布）</Link>もご利用ください。

@@ -12,6 +12,9 @@ import goldData from "@/data/gold-spot-prices.json";
 const k24Souba = goldData.purity_buyback_estimate_per_g.k24;
 const k18Souba = goldData.purity_buyback_estimate_per_g.k18;
 const [, soubaMonth, soubaDay] = goldData.date.split("-").map(Number);
+// ⚠️ 見出し・本文の「2026年◯月」が4月のまま固定され、titleだけ動的で食い違っていた。
+//    相場データの日付から組み立てて、毎朝の更新に自動追随させる。
+const soubaYm = `2026年${soubaMonth}月`;
 
 export const metadata: Metadata = {
   title: `金買取相場 今日のK24は1g${k24Souba.toLocaleString()}円・K18は${k18Souba.toLocaleString()}円【${soubaMonth}月${soubaDay}日更新】`,
@@ -158,7 +161,7 @@ export default function KinKaitoriSoubaPage() {
 
           <TodayPriceAnswer purity="k24" />
 
-          <p>「金の買取相場っていくら？」「K18のネックレスを売りたいけど、今の相場がわからない」——そんな疑問をお持ちの方に向けて、この記事では<strong>2026年4月時点の最新の金買取相場を純度別に一覧で掲載</strong>しています。</p>
+          <p>「金の買取相場っていくら？」「K18のネックレスを売りたいけど、今の相場がわからない」——そんな疑問をお持ちの方に向けて、この記事では<strong>{soubaYm}時点の最新の金買取相場を純度別に一覧で掲載</strong>しています。</p>
 
           <p>金の買取価格は、国際的な金価格（ロンドン金価格）と為替レート（ドル円相場）に連動して毎日変動します。そのため、売却を検討している方は<strong>「今がいくらなのか」をリアルタイムで把握することが重要</strong>です。</p>
 
@@ -173,9 +176,9 @@ export default function KinKaitoriSoubaPage() {
             <li>相場を踏まえた最適な売却方法</li>
           </ul>
 
-          <h2 id="k24">純度別 金の買取相場一覧（2026年4月）</h2>
+          <h2 id="k24">純度別 金の買取相場一覧（{soubaYm}）</h2>
 
-          <p>金の買取価格は<strong>「純度」</strong>によって大きく異なります。以下は2026年4月時点の主要な金種の1gあたり買取相場の目安です。</p>
+          <p>金の買取価格は<strong>「純度」</strong>によって大きく異なります。以下は{soubaYm}時点の主要な金種の1gあたり買取相場の目安です。</p>
 
           <p>実際の買取価格は、業者の手数料率やその日のレート反映タイミングにより変動します。複数業者に査定を依頼して比較することをおすすめします。</p>
 
@@ -207,7 +210,23 @@ export default function KinKaitoriSoubaPage() {
 
           <p>喜平ブレスレットなど重量のある製品をお持ちの方は、10g・20g・30g・50gの重量帯別に目安を計算できる<Link href="/articles/kin-bracelet-kaitori/" className="text-accent hover:underline">金ブレスレット買取相場ガイド</Link>もあわせてご覧ください。</p>
 
-          <h2 id="platinum">プラチナの買取相場一覧（2026年4月）</h2>
+          <h2 id="hyoujungai">「20金」「5金」の相場は？ — 日本で流通していない表記への回答</h2>
+          <p>
+            検索では「20金 相場」「5金 買取」といった言葉も使われますが、
+            <strong>日本国内のジュエリーで一般に流通しているのは K24・K22・K18・K14・K10 の5種類</strong>です。
+            20金（K20）や5金（K5）の刻印がある製品は国内ではほとんど見かけません。
+          </p>
+          <ul>
+            <li><strong>K20（20金・純度83.3%）</strong> — 中東や東南アジアの製品に見られます。国内の買取店でも純度を測定して買い取れますが、刻印が「20K」でも実測値で査定されるのが一般的です。</li>
+            <li><strong>「5金」</strong> — 純度を表す規格としては存在しません。<strong>K18ホワイトゴールド等の「5」を含む型番</strong>や、<strong>18金の誤記</strong>である場合が多いです。刻印を確認してください。</li>
+          </ul>
+          <p>
+            いずれの場合も、<strong>刻印より実測の純度で査定される</strong>ため、
+            まずは手元の刻印を確認したうえで、近い純度の相場を目安にしてください。
+            当日の純度別の目安は上の一覧表のとおりです。
+          </p>
+
+          <h2 id="platinum">プラチナの買取相場一覧（{soubaYm}）</h2>
 
           <p>金と並んで人気の貴金属がプラチナです。プラチナは工業用途（自動車の触媒など）での需要も大きく、金とは異なる値動きをします。</p>
 
