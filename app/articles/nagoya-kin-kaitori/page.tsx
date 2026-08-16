@@ -39,7 +39,8 @@ function FaqSchema() {
       { "@type": "Question", name: "名古屋と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、名古屋でも東京でもほぼ同じ水準です。ただし業者間の競争度の違いにより、1gあたり数十円〜100円程度の差が出る場合があります。" } },
       { "@type": "Question", name: "名古屋の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により、買取時には身分証の提示が義務付けられています。付属品（保証書・箱）があれば査定額アップの可能性もあります。" } },
       { "@type": "Question", name: "名鉄名古屋駅や久屋大通駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。" } },
-      { "@type": "Question", name: "金山駅や本陣駅の近くに金買取店がない場合はどうすればいいですか？", acceptedAnswer: { "@type": "Answer", text: "金山駅・本陣駅・ささしまライブ駅の徒歩圏には大手の金買取店を確認できていません。栄・大須の店舗へ足を延ばすか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、複数社に相見積もりを取るのが安全です。" } },
+      { "@type": "Question", name: "栄生駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "あります。買取大吉 中村栄生店が名鉄名古屋本線 栄生駅より徒歩5分（名古屋市中村区佐古前町2番49号）で、営業時間は10:00〜18:00・年中無休（お盆・年末年始を除く）です。金・宝石・時計の買取を強化しています（2026年8月16日に公式店舗ページで確認）。" } },
+      { "@type": "Question", name: "金山駅や本陣駅の近くに金買取店がない場合はどうすればいいですか？", acceptedAnswer: { "@type": "Answer", text: "金山駅・本陣駅・ささしまライブ駅は、駅からの徒歩圏に金買取店を確認できていません（2026年8月16日確認）。1駅ぶん移動して名駅・栄・大須の店舗を使うか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、むしろ出張の方が安全です。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -49,11 +50,11 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者と今日の相場【2026年7月】",
+    headline: "名古屋の金買取はどこがいい？久屋大通・名駅・栄生など駅別の実在店舗と今日の相場【2026年8月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-08-16",
     author: { "@type": "Organization", name: "金買取びより" },
-    publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
+    publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "名古屋で金を高く売るならどこがいい？名駅・栄・大須のエリア別おすすめ買取業者、買取方法の比較、名古屋の金買取相場と高く売るコツを徹底解説。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
@@ -63,7 +64,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "名古屋の金買取おすすめ4社を比較｜名駅・栄・大須・駅別の店舗と今日の相場【2026年8月】",
+  title: "名古屋の金買取はどこがいい？久屋大通・名駅・栄生など駅別の実在店舗と今日の相場【2026年8月】",
   description:
     "名古屋で金を売るならどこがいい？名駅・栄・大須・金山・久屋大通など駅別に実在店舗をまとめ、おすすめ買取業者4社を比較。本日の金相場（毎日更新）と、店頭・出張・宅配の使い分け、高く売る5つのコツまで。",
   robots: { index: true, follow: true },
@@ -106,7 +107,7 @@ export default function NagoyaKinKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金買取はどこがいい？名駅・栄・大須のおすすめ業者</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金買取はどこがいい？久屋大通・名駅・栄生など駅別の実在店舗と今日の相場【2026年8月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-8 not-prose">
@@ -230,13 +231,13 @@ export default function NagoyaKinKaitoriPage() {
 
         <h2 id="stations">名古屋の駅別に金買取店を探す</h2>
 
-        <p>「名鉄名古屋駅」「久屋大通駅」など<strong>最寄り駅から探したい</strong>方向けに、駅ごとに徒歩圏内の実在店舗をまとめました。店舗が見当たらない駅は、出張買取・宅配買取を利用する選択肢を正直に案内します（掲載は各社公式店舗ページで確認した実在店のみ・確認日 2026年7月）。</p>
+        <p>「名鉄名古屋駅」「久屋大通駅」など<strong>最寄り駅から探したい</strong>方向けに、駅ごとに徒歩圏内の実在店舗をまとめました。店舗が見当たらない駅は、出張買取・宅配買取を利用する選択肢を正直に案内します（掲載は各社公式店舗ページで確認した実在店のみ／栄生・久屋大通・本陣・ささしまライブは2026年8月16日に再確認）。</p>
 
         <h3>名鉄名古屋駅・名古屋駅（名駅）・近鉄名古屋駅</h3>
         <p>名駅は地下街に大手が直結しており、名鉄・JR・近鉄いずれの利用でも徒歩圏です。<strong>なんぼや 名古屋サンロード店</strong>（名鉄名古屋駅直結のサンロード地下街／中村区名駅4-7-25）、<strong>なんぼや 名古屋エスカ店</strong>（JR名古屋駅 新幹線口すぐ／中村区椿町6-9 エスカ地下街）が代表格です。金・プラチナ・貴金属に対応。<a href="https://nanboya.com/gold-kaitori/shop/nagoya-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
 
         <h3>久屋大通駅</h3>
-        <p>久屋大通駅（桜通線・名城線）直下のセントラルパーク地下街に<strong>バイセル 名古屋栄セントラルパーク店</strong>（中区錦3-15-13 B1F・南改札から徒歩1分）があります。錦エリアには<strong>買取大吉 名古屋錦店</strong>（丸の内駅徒歩4分）も徒歩圏です。<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：バイセル公式</a></p>
+        <p>久屋大通駅（桜通線・名城線）直下のセントラルパーク地下街に<strong>バイセル 名古屋栄セントラルパーク店</strong>（中区錦3-15-13 B1F・南改札から徒歩1分）があります。錦エリアには<strong>買取大吉 名古屋錦店</strong>（中区錦2-6-25／営業10:00〜19:00・年中無休）もあります。ただし公式が案内している最寄りは<strong>桜通線 丸の内駅から徒歩4分</strong>で、久屋大通駅からは桜通線で1駅です（久屋大通駅からの徒歩分数は公式に記載がないため、そのまま載せています）。<a href="https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" target="_blank" rel="noopener noreferrer nofollow">出典：買取大吉 公式店舗ページ</a>（2026年8月16日確認）。<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：バイセル公式</a></p>
 
         <h3>栄駅・栄町駅</h3>
         <p><strong>なんぼや メルサ栄店</strong>（栄駅S7出口 徒歩1分／中区栄3-4-5 メルサ栄本店4F）、<strong>大黒屋 質名古屋栄買取センター</strong>（栄駅8番出口 徒歩3分／中区栄3-7-9）が代表。ブランドジュエリーは素材＋ブランドの二重評価が期待できます。<a href="https://nanboya.com/gold-kaitori/shop/sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
@@ -250,8 +251,12 @@ export default function NagoyaKinKaitoriPage() {
         <h3>妙音通駅・内田橋・瑞穂エリア（名古屋市南部）</h3>
         <p>名鉄名古屋本線の妙音通駅・堀田駅周辺は住宅エリアで、金買取の大手チェーン店は徒歩圏に確認できていません。南部から利用する場合は、<strong>金山駅（名鉄で2〜3駅）または大須・栄</strong>まで出るのが現実的です。移動が難しい場合は無料の出張買取が使えます（多くの業者が名古屋市全域を対応エリアにしています）。地金・インゴットなど重量物は特に出張が安全です。</p>
 
-        <h3>本陣駅・栄生駅・ささしまライブ駅</h3>
-        <p>これらの駅の徒歩圏には金買取の専門店・大手店舗を確認できていません（栄生駅は買取大吉 中村栄生店が徒歩3分圏にあります）。<strong>店舗が近くにない場合は、無料の出張買取・宅配買取を使えば自宅で完結します</strong>。デリケートな品・重量のある地金は、複数社に相見積もりを取るのが安全です。<a href="/articles/tentou-vs-takuhai/" className="text-accent-dark underline">店頭・出張・宅配の違いはこちら</a></p>
+        <h3>栄生駅</h3>
+        <p>栄生駅から歩ける実店舗があります。<strong>買取大吉 中村栄生店</strong>（名鉄名古屋本線 栄生駅より徒歩5分／名古屋市中村区佐古前町2番49号）。営業時間 10:00〜18:00、年中無休（お盆・年末年始を除く）。金・宝石・時計の買取を強化しており、無料査定・出張買取・無料駐車場に対応しています。改札を出て高架下を右へ進み、直進した右手です。<a href="https://www.kaitori-daikichi.jp/store/nakamura-sako/" target="_blank" rel="noopener noreferrer nofollow">出典：買取大吉 公式店舗ページ</a>（2026年8月16日確認）</p>
+
+        <h3>本陣駅・ささしまライブ駅</h3>
+        <p>この2駅は、<strong>駅からの徒歩圏に金買取店を確認できていません</strong>。各社の公式店舗ページを確認しましたが、この2駅を最寄りとして案内している店舗はありませんでした（2026年8月16日確認）。</p>
+        <p>現実的な選択肢は次の2つです。<strong>①1駅ぶん移動する</strong>——本陣駅からは東山線で名駅へ、ささしまライブ駅からも名駅が近く、名駅なら地下街に大手が直結しています（上の「名鉄名古屋駅・名古屋駅」参照）。<strong>②無料の出張買取・宅配買取を使う</strong>——多くの業者が名古屋市全域を対応エリアにしており、自宅で完結します。重量のある地金やデリケートな品は、むしろ出張の方が安全です。<a href="/articles/tentou-vs-takuhai/" className="text-accent-dark underline">店頭・出張・宅配の違いはこちら</a></p>
 
         <h2>名古屋で金を高く売る5つのコツ</h2>
 
@@ -400,8 +405,12 @@ export default function NagoyaKinKaitoriPage() {
               a: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。",
             },
             {
+              q: "栄生駅の近くに金買取店はありますか？",
+              a: "あります。買取大吉 中村栄生店が名鉄名古屋本線 栄生駅より徒歩5分（名古屋市中村区佐古前町2番49号）で、営業時間は10:00〜18:00・年中無休（お盆・年末年始を除く）です。金・宝石・時計の買取を強化しています（2026年8月16日に公式店舗ページで確認）。",
+            },
+            {
               q: "金山駅や本陣駅の近くに金買取店がない場合はどうすればいいですか？",
-              a: "金山駅・本陣駅・ささしまライブ駅の徒歩圏には大手の金買取店を確認できていません。栄・大須の店舗へ足を延ばすか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、複数社に相見積もりを取るのが安全です。",
+              a: "金山駅・本陣駅・ささしまライブ駅は、駅からの徒歩圏に金買取店を確認できていません（2026年8月16日確認）。1駅ぶん移動して名駅・栄・大須の店舗を使うか、無料の出張買取・宅配買取を使えば自宅で完結します。重量のある地金やデリケートな品は、むしろ出張の方が安全です。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
