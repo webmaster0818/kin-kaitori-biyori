@@ -11,7 +11,10 @@ import re
 import time
 from pathlib import Path
 
-BATCH = 80
+# sitemapが301→111URLに減ったため、80件/日だと同じURLを1.4日ごとに送り直すことになる。
+# 送りすぎても効果はなく、Indexing APIのクォータは全サイト共有なので他サイトを圧迫する。
+# 20件/日＝全URLを約5.5日で一巡する間隔にする。
+BATCH = 20
 ROOT = Path(__file__).resolve().parent.parent
 CURSOR_FILE = Path.home() / ".openclaw" / "workspace" / "gold-indexing-cursor.json"
 TOKEN = Path.home() / ".openclaw" / "workspace" / "secrets" / "gsc-token.json"
