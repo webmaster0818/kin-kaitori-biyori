@@ -44,11 +44,21 @@ def main() -> None:
     lastmod = spot["date"]
 
     paths = []
+    skipped_noindex = 0
     for p in OUT.rglob("index.html"):
         rel = p.parent.relative_to(OUT).as_posix()
         path = "/" if rel == "." else f"/{rel}/"
         # 検索結果に出す必要のないものは載せない
         if re.search(r"^/(404|_not-found)/", path):
+            continue
+        # 🚨 noindex のページを載せてはいけない。
+        #    「登録してください」と送りながらページ自身が「登録しないでください」と言う矛盾になる。
+        #    実測(2026-08-16)で301URL中190本がこれに該当し、
+        #    さらに submit-indexing-rotation.py がこのsitemapを読んで毎日80件送っていたため、
+        #    Indexing APIのクォータの大半を、登録され得ないページに使い続けていた。
+        if re.search(r'<meta name="robots"[^>]*noindex',
+                     p.read_text(encoding="utf-8", errors="replace")):
+            skipped_noindex += 1
             continue
         paths.append(path)
     paths.sort(key=lambda x: (x != "/", x))
@@ -75,7 +85,7 @@ def main() -> None:
     for d in (ROOT / "public", OUT):
         if d.exists():
             (d / "sitemap.xml").write_text(xml, encoding="utf-8")
-    print(f"sitemap: {len(paths)} URLs (lastmod={lastmod})")
+    print(f"sitemap: {len(paths)} URLs (lastmod={lastmod}, noindex除外={skipped_noindex})")
 
 
 if __name__ == "__main__":
