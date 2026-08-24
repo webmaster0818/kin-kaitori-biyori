@@ -238,6 +238,7 @@ export default function NagoyaKinKaitoriPage() {
 
         <h3>久屋大通駅</h3>
         <p>久屋大通駅（桜通線・名城線）直下のセントラルパーク地下街に<strong>バイセル 名古屋栄セントラルパーク店</strong>（中区錦3-15-13 B1F・南改札から徒歩1分）があります。錦エリアには<strong>買取大吉 名古屋錦店</strong>（中区錦2-6-25／営業10:00〜19:00・年中無休）もあります。ただし公式が案内している最寄りは<strong>桜通線 丸の内駅から徒歩4分</strong>で、久屋大通駅からは桜通線で1駅です（久屋大通駅からの徒歩分数は公式に記載がないため、そのまま載せています）。<a href="https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" target="_blank" rel="noopener noreferrer nofollow">出典：買取大吉 公式店舗ページ</a>（2026年8月16日確認）。<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：バイセル公式</a></p>
+        <p><Link href="/articles/hisayaodori-eki-kin-kaitori/" className="text-accent-dark underline">→ 久屋大通駅の金買取（南改札徒歩1分・21時まで）</Link></p>
 
         <h3>栄駅・栄町駅</h3>
         <p><strong>なんぼや メルサ栄店</strong>（栄駅S7出口 徒歩1分／中区栄3-4-5 メルサ栄本店4F）、<strong>大黒屋 質名古屋栄買取センター</strong>（栄駅8番出口 徒歩3分／中区栄3-7-9）が代表。ブランドジュエリーは素材＋ブランドの二重評価が期待できます。<a href="https://nanboya.com/gold-kaitori/shop/sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
@@ -253,6 +254,7 @@ export default function NagoyaKinKaitoriPage() {
 
         <h3>栄生駅</h3>
         <p>栄生駅から歩ける実店舗があります。<strong>買取大吉 中村栄生店</strong>（名鉄名古屋本線 栄生駅より徒歩5分／名古屋市中村区佐古前町2番49号）。営業時間 10:00〜18:00、年中無休（お盆・年末年始を除く）。金・宝石・時計の買取を強化しており、無料査定・出張買取・無料駐車場に対応しています。改札を出て高架下を右へ進み、直進した右手です。<a href="https://www.kaitori-daikichi.jp/store/nakamura-sako/" target="_blank" rel="noopener noreferrer nofollow">出典：買取大吉 公式店舗ページ</a>（2026年8月16日確認）</p>
+        <p><Link href="/articles/sako-eki-kin-kaitori/" className="text-accent-dark underline">→ 栄生駅の金買取（実在店舗・道順・営業時間）</Link></p>
 
         <h3>本陣駅・ささしまライブ駅</h3>
         <p>この2駅は、<strong>駅からの徒歩圏に金買取店を確認できていません</strong>。各社の公式店舗ページを確認しましたが、この2駅を最寄りとして案内している店舗はありませんでした（2026年8月16日確認）。</p>
