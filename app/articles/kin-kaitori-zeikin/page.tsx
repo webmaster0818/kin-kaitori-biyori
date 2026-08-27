@@ -5,6 +5,10 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -201,7 +205,7 @@ export default function KinKaitoriZeikinPage() {
         <h3>例1: K24インゴット100gを売却（短期保有）</h3>
 
         <div className="bg-cream rounded-xl p-5 my-6">
-          <p className="text-sm"><strong>前提：</strong>3年前に100gのK24インゴットを1g=10,000円（合計100万円）で購入。2026年に1g=15,200円（合計152万円）で売却。</p>
+          <p className="text-sm"><strong>前提：</strong>3年前に100gのK24インゴットを1g=10,000円（合計100万円）で購入。{LP_DATE}時点の相場1g={Math.round(_LPP.k24).toLocaleString()}円（合計{Math.round(_LPP.k24 * 100 / 10000).toLocaleString()}万円）で売却。</p>
           <ul className="text-sm mt-3 space-y-1">
             <li>売却価格: 1,520,000円</li>
             <li>取得費: 1,000,000円</li>
@@ -215,7 +219,7 @@ export default function KinKaitoriZeikinPage() {
         <h3>例2: K24インゴット100gを売却（長期保有）</h3>
 
         <div className="bg-cream rounded-xl p-5 my-6">
-          <p className="text-sm"><strong>前提：</strong>8年前に100gのK24インゴットを1g=5,000円（合計50万円）で購入。2026年に1g=15,200円（合計152万円）で売却。</p>
+          <p className="text-sm"><strong>前提：</strong>8年前に100gのK24インゴットを1g=5,000円（合計50万円）で購入。{LP_DATE}時点の相場1g={Math.round(_LPP.k24).toLocaleString()}円（合計{Math.round(_LPP.k24 * 100 / 10000).toLocaleString()}万円）で売却。</p>
           <ul className="text-sm mt-3 space-y-1">
             <li>売却価格: 1,520,000円</li>
             <li>取得費: 500,000円</li>

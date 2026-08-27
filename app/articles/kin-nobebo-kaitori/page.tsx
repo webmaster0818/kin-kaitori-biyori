@@ -9,6 +9,10 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -273,7 +277,7 @@ export default function KinNobeboKaitoriPage() {
         />
 
         <h2>まとめ</h2>
-        <p>2026年現在、金インゴットの買取価格は歴史的な高値を記録しています。100gのインゴットで約152万円、1kgで約1,520万円です。</p>
+        <p>{LP_DATE}時点、金インゴットの買取価格は歴史的な高値を記録しています。100gのインゴットで約{Math.round((_LPP.k24 * 100) / 10000).toLocaleString()}万円、1kgで約{Math.round((_LPP.k24 * 1000) / 10000).toLocaleString()}万円です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
         <p>インゴットは高額取引になるため、<strong>業者選び・手数料の比較・税金対策</strong>が特に重要です。</p>
         <ol>
           <li><strong>複数業者に見積もりを取る（1gあたりの差が大きな金額差になる）</strong></li>

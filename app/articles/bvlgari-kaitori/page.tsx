@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -126,7 +131,7 @@ export default function BvlgariKaitoriPage() {
 
         <h3>金相場高騰による底上げ</h3>
 
-        <p>ブルガリのジュエリーはK18（18金）が主要素材です。2026年4月現在、K18の買取相場は1gあたり約11,200〜11,600円と歴史的高値にあるため、素材価値だけでも高額になります。</p>
+        <p>ブルガリのジュエリーはK18（18金）が主要素材です。{LP_DATE}時点、K18の買取相場は1gあたり約{LP_K18}円と歴史的高値にあるため、素材価値だけでも高額になります。</p>
 
         <h2>ブルガリ人気コレクション別の買取相場（2026年4月）</h2>
 
@@ -339,7 +344,7 @@ export default function BvlgariKaitoriPage() {
 
         <p>ブルガリ（BVLGARI）はイタリアを代表するハイジュエリーブランドであり、セルペンティ・ビー・ゼロワン・ブルガリブルガリなどの人気コレクションは<strong>中古市場でも高い需要と買取相場</strong>を維持しています。</p>
 
-        <p>2026年4月現在、金相場の高騰により素材価値が底上げされ、ブルガリのK18ジュエリーの買取相場は上昇傾向です。セルペンティのパヴェダイヤモデルは100万円以上、ビー・ゼロワンリングは約8万〜18万円の買取が期待できます。</p>
+        <p>2026年4月時点の調査では、金相場の高騰により素材価値が底上げされ、ブルガリのK18ジュエリーの買取相場は上昇傾向です。セルペンティのパヴェダイヤモデルは100万円以上、ビー・ゼロワンリングは約8万〜18万円の買取が期待できます。</p>
 
         <p>ブルガリを最高値で売るために、以下の3つを実践してください。</p>
 

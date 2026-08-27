@@ -15,17 +15,20 @@ function BreadcrumbSchema() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
       { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
-      { "@type": "ListItem", position: 3, name: "金買取の手続き完全ガイド", item: "https://gold-biyori.com/articles/kin-kaitori-tetsuzuki-guide/" },
+      { "@type": "ListItem", position: 3, name: "金買取の手続き（未成年・予約・当日の流れ）", item: "https://gold-biyori.com/articles/kin-kaitori-tetsuzuki-guide/" },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年7月】金買取の手続き完全ガイド｜持ち物・本人確認・未成年の可否・予約から現金化までの流れ",
+    headline: `金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間【${priceDateJa}更新】`,
     description: "金買取は未成年でも売れるのか、予約は必要か、当日は受付から現金受け取りまでどのくらいかかるのか——手続きまわりの疑問に絞って解説します。持ち物や本人確認書類の詳細は「金買取に必要なもの」ページをご覧ください。",
     datePublished: "2026-07-03",
     dateModified: "2026-07-03",
@@ -51,8 +54,6 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
-const [, _pm, _pd] = goldData.date.split("-").map(Number);
-const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間【手続きガイド】",
@@ -86,7 +87,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
           <ol className="flex items-center gap-1">
             <li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li>
             <li className="breadcrumb-sep" />
-            <li><span className="text-foreground">金買取の手続き完全ガイド</span></li>
+            <li><span className="text-foreground">金買取の手続き（未成年・予約・当日の流れ）</span></li>
           </ol>
         </nav>
 
@@ -96,18 +97,16 @@ export default function KinKaitoriTetsuzukiGuidePage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年7月】金買取の手続き完全ガイド — 持ち物・本人確認・未成年・予約の流れ</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-          <p>金を初めて売るとき、「何を持っていけばいい？」「本人確認って何のため？」「予約は必要？」と手続き面の疑問が意外と多いものです。この記事では、金買取の<strong>必要な持ち物・本人確認のルール・未成年の売却可否・予約から現金受け取りまでの流れ</strong>を1ページにまとめました。</p>
+          <p>金買取の手続きで実際に迷いやすいのは、「<strong>未成年でも売れるのか</strong>」「予約は必要か」「当日どのくらい時間がかかるのか」の3点です。この記事はその3点に絞って答えます。</p>
 
           <p>この記事を読めば以下のことがわかります。</p>
           <ul>
-            <li>当日必要な持ち物リスト（必須のもの／あると有利なもの）</li>
-            <li>本人確認が法律で義務付けられている理由と使える書類</li>
-            <li>マイナンバーの提示が必要になるケース</li>
-            <li>未成年が金を売れるかどうか</li>
-            <li>予約の要否と、来店から現金受け取りまでのステップ</li>
+            <li>未成年が金を売れるか（年齢の考え方・親権者の同意／同伴）</li>
+            <li>予約の要否と、予約したほうがよいケース</li>
+            <li>受付から現金受け取りまでの所要時間</li>
           </ul>
 
           {/* necessary-items-split: 「必要なもの/本人確認書類」は kin-kaitori-hajimete が受け皿。
@@ -142,55 +141,17 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <p>提示額に納得できなければ、<strong>その場で売らずに持ち帰って他社と比較して問題ありません</strong>。査定・キャンセルは無料の業者がほとんどです。</p>
 
-          <h2>持ち物リスト — 必須は本人確認書類</h2>
+          <h2 id="mochimono">持ち物は本人確認書類だけ（詳しくは別ページ）</h2>
 
-          <h3>必須の持ち物</h3>
+          <p>当日<strong>必須の持ち物は、有効期限内の本人確認書類1点と売りたい金製品だけ</strong>です。本人確認は古物営業法による義務で、金額にかかわらず求められます。保証書・箱・購入明細があれば査定に有利ですが、無くても売却できます。</p>
 
-          <ul>
-            <li><strong>本人確認書類：</strong>古物営業法により提示が必須（詳細は次章）</li>
-            <li><strong>売りたい金製品：</strong>壊れていても、片方だけでも、変色していても買取可能</li>
-          </ul>
-
-          <h3>あると査定に有利な持ち物</h3>
-
-          <ul>
-            <li><strong>保証書・ギャランティカード：</strong>特にブランドジュエリーで査定額アップにつながる</li>
-            <li><strong>箱・専用ケース・鑑定書：</strong>同上。記念金貨はケース・証明書があると真贋確認がスムーズ</li>
-            <li><strong>購入時の明細・レシート：</strong>真贋確認がスムーズになるほか、高額売却時の税金計算（取得費の証明）で大幅な節税につながる</li>
-          </ul>
-
-          <p>付属品がなくても金は素材価値で査定されるため、売却自体に支障はありません。詳しくは<Link href="/articles/kin-fuzokuhin-nashi/" className="text-accent hover:underline">付属品なしの金買取ガイド</Link>もご覧ください。</p>
-
-          <CtaBox />
-
-          <h2>本人確認 — 古物営業法で義務付けられている</h2>
-
-          <p>金買取の本人確認は、業者が勝手に求めているのではなく、<strong>古物営業法により盗品流通防止の観点から義務付けられています</strong>。本人確認を求めない業者は、むしろ法令順守の面で注意が必要です。</p>
-
-          <h3>使える本人確認書類</h3>
-
-          <div className="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>書類</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>運転免許証</strong></td><td>最も一般的。1点で完結</td></tr>
-                <tr><td><strong>マイナンバーカード</strong></td><td>1点で完結（通知カードは不可の業者が多い）</td></tr>
-                <tr><td><strong>パスポート</strong></td><td>現住所の確認書類を追加で求められる場合あり</td></tr>
-                <tr><td><strong>健康保険証</strong></td><td>業者により補助書類（公共料金領収書など）が必要な場合あり</td></tr>
-              </tbody>
-            </table>
+          <div className="bg-gold-bg border border-accent/30 rounded-xl p-4 my-6 text-sm">
+            使える書類の一覧・宅配買取のときの扱い・200万円超でマイナンバーが要るケースは
+            <Link href="/articles/kin-kaitori-hajimete/" className="text-accent underline font-bold">金買取に必要なもの（本人確認書類と当日の流れ）</Link>
+            にまとめています。
           </div>
 
-          <p>宅配買取の場合は本人確認書類のコピーを同封する方式が一般的です。有効期限切れの書類は使えないため、事前に確認しておきましょう。</p>
-
-          <h3>200万円超の取引はマイナンバーが必要</h3>
-
-          <p>金地金・金貨などで<strong>1回の取引が200万円を超える</strong>場合、買取業者は税務署に「支払調書」を提出する義務があり、売却者の<strong>マイナンバーの提示</strong>が必要になります。これは正常な取引の一部であり、拒否すると買取できない場合があります。詳しくは<Link href="/articles/kin-baikyaku-mynumber/" className="text-accent hover:underline">金売却とマイナンバーの解説記事</Link>と<Link href="/articles/kin-kaitori-zeikin/" className="text-accent hover:underline">税金・確定申告ガイド</Link>をご覧ください。</p>
+          <CtaBox />
 
           <h2>未成年は金を売れる？ — 単独では不可が一般的</h2>
 
@@ -203,6 +164,34 @@ export default function KinKaitoriTetsuzukiGuidePage() {
           </ul>
 
           <p>対応は業者ごとに異なるため、<strong>来店前に電話などで確認</strong>しましょう。なお、親から相続・贈与された金製品を売る場合でも、売却者が未成年であれば同じ制限がかかります。確実なのは、親権者名義で売却することです。</p>
+
+          <h3>何歳から売れる？ — 成年年齢は18歳だが、店の運用はそれより厳しいことがある</h3>
+
+          <p>民法上の成年年齢は2022年4月から<strong>18歳</strong>です。したがって18歳・19歳は法律上は単独で契約でき、金の売却もできます。ただし実務では、<strong>店側が独自に「20歳以上」や「高校生不可」といった条件を設けている</strong>ことがあります。年齢だけで判断せず、店舗の規定を確認してください。</p>
+
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>年齢</th><th>法律上</th><th>実際の買取店の対応（傾向）</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>18歳以上</strong></td><td>成年。単独で契約可</td><td>基本は可。ただし「20歳以上」「高校生不可」と定める店もある</td></tr>
+                <tr><td><strong>18歳未満</strong></td><td>未成年。単独の契約は取り消しうる</td><td>単独は原則不可。親権者の同伴または同意書が必要</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>これは金に限った話ではなく、<strong>宝石・貴金属・ブランド品でも同じ扱い</strong>です。未成年の契約は民法上あとから取り消せるため、買取店はトラブルを避ける目的で一律に制限しているケースが多くあります。</p>
+
+          <h3>親権者の同意書に書いてもらう内容</h3>
+
+          <ul>
+            <li>親権者の氏名・住所・連絡先・続柄</li>
+            <li>売却を認める品物（何を売るか）</li>
+            <li>同意した日付と署名</li>
+          </ul>
+
+          <p>書式は店舗ごとに指定があることが多いので、<strong>先に電話して用紙の有無を聞く</strong>のが確実です。親権者の本人確認書類の写しを合わせて求められることもあります。</p>
 
           <h2>予約は必要？ — 不要が多いが、予約にはメリットも</h2>
 
@@ -223,6 +212,10 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <div className="space-y-3 not-prose">
             {[
+              {
+                q: "何歳から金を売れますか？",
+                a: "民法上の成年年齢は18歳のため、18歳以上であれば法律上は単独で売却できます。ただし買取店が独自に「20歳以上」「高校生不可」と定めている場合があり、年齢だけでは判断できません。来店前に店舗の規定を確認してください。",
+              },
               {
                 q: "金買取に身分証は必要ですか？",
                 a: "必須です。古物営業法により、買取時の本人確認が義務付けられています。運転免許証・マイナンバーカード・パスポート・健康保険証などが使えます。",
@@ -294,11 +287,11 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <h2>まとめ</h2>
 
-          <p>金買取の手続きはシンプルで、<strong>必須の持ち物は本人確認書類だけ</strong>です。本人確認は古物営業法による義務、200万円超の取引ではマイナンバーの提示が必要、未成年は単独では売却できない——この3点を押さえておけば、当日は迷いません。</p>
+          <p>金買取の手続きで押さえるべきは3点です。<strong>18歳未満は単独では売れない</strong>（親権者の同伴か同意書が必要／18歳以上でも店の規定で断られることがある）、<strong>店頭は予約不要が多い</strong>（出張・宅配は日程調整や集荷キットが必要）、<strong>数点なら15〜30分で現金化できる</strong>。持ち物は本人確認書類1点だけです。</p>
 
           <ol>
+            <li><strong>未成年なら、来店前に「親権者の同伴・同意書で対応できるか」を電話で確認する</strong></li>
             <li><strong>本人確認書類（免許証・マイナンバーカード等）を持参する</strong></li>
-            <li><strong>保証書・箱・購入明細があれば一緒に持っていく</strong></li>
             <li><strong>提示額に納得できなければ持ち帰り、複数業者を比較する</strong></li>
           </ol>
 

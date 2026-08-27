@@ -6,6 +6,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 function BreadcrumbSchema() {
   const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -25,7 +30,7 @@ function ArticleSchema() {
 }
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-      { "@type": "Question", name: "金の買取価格はどう計算しますか？", acceptedAnswer: { "@type": "Answer", text: "純度に応じた1gあたりの買取単価に、重量（g）を掛けて算出します。例: K18が1g11,400円なら10gで114,000円が目安です。" } },
+      { "@type": "Question", name: "金の買取価格はどう計算しますか？", acceptedAnswer: { "@type": "Answer", text: `純度に応じた1gあたりの買取単価に、重量（g）を掛けて算出します。例: K18が1g${LP_K18}円なら10gで${Math.round(_LPP.k18 * 10).toLocaleString()}円が目安です（${LP_DATE}時点）。` } },
       { "@type": "Question", name: "自分で重さを量れますか？", acceptedAnswer: { "@type": "Answer", text: "0.1g単位のはかりがあれば概算できます。重さの量り方の記事も参考にしてください。" } },
       { "@type": "Question", name: "純度はどう調べますか？", acceptedAnswer: { "@type": "Answer", text: "刻印（K24・K18など）で確認できます。刻印がない場合は業者の比重・成分検査で判定されます。" } }
   ] };
@@ -90,7 +95,7 @@ export default function KinGramKeisanPage() {
           {[
             {
               q: "金の買取価格はどう計算しますか？",
-              a: "純度に応じた1gあたりの買取単価に、重量（g）を掛けて算出します。例: K18が1g11,400円なら10gで114,000円が目安です。",
+              a: `純度に応じた1gあたりの買取単価に、重量（g）を掛けて算出します。例: K18が1g${LP_K18}円なら10gで${Math.round(_LPP.k18 * 10).toLocaleString()}円が目安です（${LP_DATE}時点）。`,
             },
             {
               q: "自分で重さを量れますか？",

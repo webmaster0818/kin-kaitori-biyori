@@ -6,6 +6,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -221,7 +226,7 @@ export default function KinNisemonoMikataPage() {
               <tr><td><strong>K18GP</strong></td><td>Gold Plated（金メッキ）</td><td>極めて少ない（表面のみ）</td><td>ほぼ0円（買取不可の業者が多い）</td></tr>
               <tr><td><strong>K18GF</strong></td><td>Gold Filled（金張り）</td><td>総重量の1/20以上</td><td>数十円〜数百円</td></tr>
               <tr><td><strong>K18RGP</strong></td><td>Rolled Gold Plated</td><td>極めて少ない</td><td>ほぼ0円</td></tr>
-              <tr><td><strong>K18（刻印のみ）</strong></td><td>K18無垢（ソリッド）</td><td>75%</td><td>1gあたり約11,400円（2026年4月）</td></tr>
+              <tr><td><strong>K18（刻印のみ）</strong></td><td>K18無垢（ソリッド）</td><td>75%</td><td>1gあたり約{LP_K18}円（{LP_DATE}時点）</td></tr>
             </tbody>
           </table>
         </div>
@@ -279,7 +284,7 @@ export default function KinNisemonoMikataPage() {
           {[
             { q: "金と金メッキの簡単な見分け方は？", a: "最も簡単なのは刻印の確認です。本物の金はK24・K18・750などの刻印があり、金メッキはK18GP・K18GFなどGP/GFの表記があります。磁石テストも有効で、本物の金は磁石に反応しません。" },
             { q: "磁石で金の本物と偽物を見分けられますか？", a: "ある程度は見分けられます。本物の金は磁石に反応しません。ただし、タングステンなど磁石に反応しない金属で作られた精巧な偽物も存在するため、磁石テストだけでは完全な判定はできません。" },
-            { q: "金メッキ（K18GP）と本物の金（K18）の違いは？", a: "K18GPは表面に薄い金の膜をコーティングしたもので、金としての価値はほぼゼロです。本物のK18は金が75%含まれた合金で、1gあたり約11,400円（2026年4月時点）の素材価値があります。" },
+            { q: "金メッキ（K18GP）と本物の金（K18）の違いは？", a: `K18GPは表面に薄い金の膜をコーティングしたもので、金としての価値はほぼゼロです。本物のK18は金が75%含まれた合金で、1gあたり約${LP_K18}円（${LP_DATE}時点の目安）の素材価値があります。` },
             { q: "刻印がない金製品は偽物ですか？", a: "必ずしも偽物ではありません。古い製品や一部の海外製品には刻印がないことがあります。買取業者がX線蛍光分析装置（XRF）で正確に判定してくれます。" },
             { q: "自宅で金の真贋を確かめる方法はありますか？", a: "刻印確認、磁石テスト、色味・重さの確認、比重測定などが自宅でできます。ただし、確実な判定が必要な場合は、買取業者のX線蛍光分析（無料）が最も正確です。" },
           ].map((faq) => (

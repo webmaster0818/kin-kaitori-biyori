@@ -9,6 +9,12 @@ import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -281,7 +287,7 @@ export default function NagoyaKinKaitoriPage() {
           </li>
           <li>
             <strong>相場が高いときに売る</strong>
-            <p>2026年4月現在、金価格は歴史的な高値水準にあります。K24で1gあたり約15,200円、K18で約11,400円です。この水準は10年前の約3倍です。価格に納得できるなら、今が売却の好機と言えます。</p>
+            <p>{LP_DATE}時点、金価格は歴史的な高値水準にあります。K24で1gあたり約{LP_K24}円、K18で約{LP_K18}円です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。価格に納得できるなら、今が売却の好機と言えます。</p>
           </li>
         </ol>
 
@@ -439,7 +445,7 @@ export default function NagoyaKinKaitoriPage() {
 
         <p>名古屋は名駅・栄・大須の3大エリアに買取業者が集中しており、<strong>1日で複数店舗を回って比較できる</strong>利便性の高い都市です。</p>
 
-        <p>2026年4月現在、金価格は歴史的な高値水準にあり、K24（純金）で1gあたり約15,200円前後です。売却を検討している方にとっては好機と言えるでしょう。</p>
+        <p>{LP_DATE}時点、金価格は歴史的な高値水準にあり、K24（純金）で1gあたり約{LP_K24}円前後です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。売却を検討している方にとっては好機と言えるでしょう。</p>
 
         <p>名古屋で金を高く売るためのポイントをまとめます。</p>
 

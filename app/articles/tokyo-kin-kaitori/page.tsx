@@ -8,6 +8,11 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -388,7 +393,7 @@ export default function TokyoKinKaitoriPage() {
 
         <p>東京は金買取業者の競争が最も激しいエリアであり、<strong>全国で最も高い買取価格が期待できる</strong>地域です。</p>
 
-        <p>2026年4月現在、K24（純金）の買取相場は1gあたり約15,200円前後と歴史的な高値水準にあります。東京にお住まいの方は、この好条件を最大限に活かしましょう。</p>
+        <p>{LP_DATE}時点、K24（純金）の買取相場は1gあたり約{LP_K24}円前後と歴史的な高値水準にあります（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。東京にお住まいの方は、この好条件を最大限に活かしましょう。</p>
 
         <p>東京で金を高く売るために、以下の3つを実践してください。</p>
 

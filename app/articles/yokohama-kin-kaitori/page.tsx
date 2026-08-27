@@ -7,6 +7,11 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -223,7 +228,7 @@ export default function YokohamaKinKaitoriPage() {
           </li>
           <li>
             <strong>相場が高いときに売る</strong>
-            <p>2026年4月現在、K24で1gあたり約15,200円と歴史的な高値水準です。今が売却の好機です。</p>
+            <p>{LP_DATE}時点、K24で1gあたり約{LP_K24}円と歴史的な高値水準です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
           </li>
         </ol>
 

@@ -5,6 +5,14 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K10 = Math.round(_LPP.k10).toLocaleString();
+const LP_K14 = Math.round(_LPP.k14).toLocaleString();
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -235,7 +243,7 @@ export default function KinOmosaHakrikataPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td>細身のリング</td><td>2〜4g</td><td>約23,000〜46,000円</td></tr>
+              <tr><td>細身のリング</td><td>2〜4g</td><td>約{Math.round(_LPP.k18 * 2).toLocaleString()}〜{Math.round(_LPP.k18 * 4).toLocaleString()}円</td></tr>
               <tr><td>結婚指輪</td><td>3〜6g</td><td>約34,000〜68,000円</td></tr>
               <tr><td>印台リング（メンズ）</td><td>15〜30g</td><td>約171,000〜342,000円</td></tr>
             </tbody>
@@ -276,7 +284,7 @@ export default function KinOmosaHakrikataPage() {
               <tr><td>5gバー</td><td>5g</td><td>約76,000〜77,000円</td></tr>
               <tr><td>10gバー</td><td>10g</td><td>約152,000〜154,000円</td></tr>
               <tr><td>100gバー</td><td>100g</td><td>約1,520,000〜1,540,000円</td></tr>
-              <tr><td>1kgバー</td><td>1,000g</td><td>約15,200,000〜15,400,000円</td></tr>
+              <tr><td>1kgバー</td><td>1,000g</td><td>約{Math.round(_LPP.k24 * 1000).toLocaleString()}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -297,16 +305,16 @@ export default function KinOmosaHakrikataPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K24</strong></td><td>99.99%</td><td>約15,200円</td></tr>
-              <tr><td><strong>K18</strong></td><td>75.0%</td><td>約11,400円</td></tr>
-              <tr><td><strong>K14</strong></td><td>58.5%</td><td>約8,900円</td></tr>
-              <tr><td><strong>K10</strong></td><td>41.7%</td><td>約6,300円</td></tr>
+              <tr><td><strong>K24</strong></td><td>99.99%</td><td>約{LP_K24}円</td></tr>
+              <tr><td><strong>K18</strong></td><td>75.0%</td><td>約{LP_K18}円</td></tr>
+              <tr><td><strong>K14</strong></td><td>58.5%</td><td>約{LP_K14}円</td></tr>
+              <tr><td><strong>K10</strong></td><td>41.7%</td><td>約{LP_K10}円</td></tr>
             </tbody>
           </table>
         </div>
 
         <p><strong>計算例：</strong>K18のネックレス（10g）の場合</p>
-        <p>10g x 11,400円/g = <strong>約114,000円</strong></p>
+        <p>10g x {LP_K18}円/g = <strong>約{Math.round(_LPP.k18 * 10).toLocaleString()}円</strong>（{LP_DATE}時点）</p>
 
         <p>これはあくまで素材としての概算��す。実際の買取価格は業者のマージンや手数料、ブランド品であればブランド価値の上乗せにより変動します。</p>
 

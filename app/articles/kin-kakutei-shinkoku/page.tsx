@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -101,7 +106,7 @@ export default function KinKakuteiShinkokuPage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の売却と確定申告のやり方ガイド</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-        <p>2026年、金の価格は歴史的高値を記録しています。K24（純金）は1gあたり約15,200円と、10年前の約3.5倍に上昇。金を売却して大きな利益を得る方が増えていますが、<strong>売却益には税金がかかる場合がある</strong>ことをご存知ですか？</p>
+        <p>{LP_DATE}時点、金の価格は歴史的高値を記録しています。K24（純金）は1gあたり約{LP_K24}円と、10年前から大きく上昇。金を売却して大きな利益を得る方が増えていますが、<strong>売却益には税金がかかる場合がある</strong>ことをご存知ですか？</p>
 
         <p>この記事では、金を売却した場合の確定申告のやり方を、<strong>計算方法・節税対策・申告手順</strong>まで実践的に解説します。</p>
 

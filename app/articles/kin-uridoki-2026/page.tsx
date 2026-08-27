@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,7 +34,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】金の売り時はいつ？金相場の見通しと売却判断の基準を解説",
-    description: "2026年は金の売り時？K24（純金）1g約15,200円の歴史的高値の背景、今後の金相場予測、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。",
+    description: `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。`,
     datePublished: "2026-04-13",
     dateModified: "2026-04-13",
     author: {
@@ -54,7 +59,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "2026年は金の売り時ですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、K24（純金）の買取価格は1gあたり約15,200円前後と歴史的な高値水準です。10年前（約4,400円）の約3.5倍に上昇しており、売却には非常に好条件と言えます。ただし、さらなる上昇も下落も予測が困難なため、「今の価格に納得できるなら売る」のが最も実践的な判断です。" } },
+      { "@type": "Question", name: "2026年は金の売り時ですか？", acceptedAnswer: { "@type": "Answer", text: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却には非常に好条件と言えます。ただし、さらなる上昇も下落も予測が困難なため、「今の価格に納得できるなら売る」のが最も実践的な判断です。` } },
       { "@type": "Question", name: "金相場は今後さらに上がりますか？", acceptedAnswer: { "@type": "Answer", text: "多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。中央銀行の金購入拡大、地政学リスク、インフレ圧力が支えになっています。ただし、米国の利上げ再開やドル高進行があれば一時的な下落の可能性もあります。" } },
       { "@type": "Question", name: "金の売り時を判断するポイントは？", acceptedAnswer: { "@type": "Answer", text: "主な判断ポイントは3つです。(1)現在の価格が購入時より十分に利益が出ているか、(2)今後使う予定のない金製品か、(3)売却益が生活費や投資に活用できるか。相場のピークを狙うのではなく、自分にとっての「納得価格」で判断するのが賢明です。" } },
       { "@type": "Question", name: "金を売るベストなタイミングはいつですか？", acceptedAnswer: { "@type": "Answer", text: "短期的には、円安が進行している時期や、国際金価格（ドル建て）が上昇している時期が有利です。長期的には、保有5年超で税金が半額になるため、5年を超えてから売却するのが税制面で最もお得です。" } },
@@ -69,7 +74,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
   description:
-    "2026年は金の売り時？K24（純金）1g約15,200円の歴史的高値の背景、今後の金相場予測、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。",
+    `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。`,
   alternates: { canonical: "https://gold-biyori.com/articles/kin-uridoki-2026/" },
 };
 
@@ -114,7 +119,7 @@ export default function KinUridoki2026Page() {
 
         <p>「<strong>2026年は金を売るべきタイミングなのか？</strong>」「<strong>金相場は今後どうなる？</strong>」——金価格が歴史的な高値圏にある今、多くの方がこの疑問を抱えています。</p>
 
-        <p>結論から言うと、2026年4月の金相場は<strong>売却に非常に好条件</strong>です。K24（純金）は1gあたり約15,200円と、10年前（約4,400円）の約3.5倍、5年前（約6,500円）の約2.3倍に上昇しています。</p>
+        <p>結論から言うと、{LP_DATE}時点の金相場は<strong>売却に非常に好条件</strong>です。K24（純金）は1gあたり約{LP_K24}円と、10年前（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍、5年前（約6,500円）の約{Math.round((_LPP.k24 / 6500) * 10) / 10}倍に上昇しています（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
 
         <p>ただし、「さらに上がるかもしれない」「もう少し待った方がいいかもしれない」という迷いもあるでしょう。この記事では、金相場の現状分析と今後の見通し、そして<strong>合理的な売却判断の基準</strong>をお伝えします。</p>
 
@@ -142,7 +147,7 @@ export default function KinUridoki2026Page() {
               <tr><td>2023年</td><td>約8,800円</td><td>+15.8%</td></tr>
               <tr><td>2024年</td><td>約11,800円</td><td>+34.1%</td></tr>
               <tr><td>2025年</td><td>約14,200円</td><td>+20.3%</td></tr>
-              <tr><td>2026年（1〜4月）</td><td>約15,200円</td><td>+7.0%</td></tr>
+              <tr><td>2026年（{LP_DATE}時点）</td><td>約{LP_K24}円</td><td>—</td></tr>
             </tbody>
           </table>
         </div>
@@ -153,7 +158,7 @@ export default function KinUridoki2026Page() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-6">
           <div className="bg-white border border-warm-border rounded-xl p-5">
-            <p className="text-accent font-bold text-2xl mb-1">15,200円/g</p>
+            <p className="text-accent font-bold text-2xl mb-1">{LP_K24}円/g</p>
             <p className="text-sm text-warm-gray">K24（純金）の現在の買取価格目安</p>
           </div>
           <div className="bg-white border border-warm-border rounded-xl p-5">
@@ -210,17 +215,17 @@ export default function KinUridoki2026Page() {
               <tr>
                 <td><strong>強気（上昇継続）</strong></td>
                 <td>中央銀行の金購入継続、地政学リスク持続、インフレ長期化</td>
-                <td>15,500〜17,000円</td>
+                <td>{Math.round(_LPP.k24 * 1.1).toLocaleString()}〜{Math.round(_LPP.k24 * 1.3).toLocaleString()}円</td>
               </tr>
               <tr>
                 <td><strong>中立（高止まり）</strong></td>
                 <td>上昇要因と下落要因が拮抗。現在の高値圏でレンジ相場</td>
-                <td>14,000〜16,000円</td>
+                <td>{Math.round(_LPP.k24 * 0.95).toLocaleString()}〜{Math.round(_LPP.k24 * 1.1).toLocaleString()}円</td>
               </tr>
               <tr>
                 <td><strong>弱気（調整下落）</strong></td>
                 <td>米国の金利高止まり、ドル高再進行、利益確定売り</td>
-                <td>12,000〜14,500円</td>
+                <td>{Math.round(_LPP.k24 * 0.75).toLocaleString()}〜{Math.round(_LPP.k24 * 0.9).toLocaleString()}円</td>
               </tr>
             </tbody>
           </table>
@@ -242,7 +247,7 @@ export default function KinUridoki2026Page() {
         <ol>
           <li>
             <strong>「納得価格」に達しているか</strong>
-            <p>相場のピークを完璧に当てることは不可能です。<strong>「この価格なら満足」</strong>と思える水準であれば、それが売り時です。2026年4月の15,200円/gは歴史的に見て非常に高い水準です。</p>
+            <p>相場のピークを完璧に当てることは不可能です。<strong>「この価格なら満足」</strong>と思える水準であれば、それが売り時です。{LP_DATE}時点の{LP_K24}円/gは歴史的に見て非常に高い水準です。</p>
           </li>
           <li>
             <strong>購入時より十分な利益が出ているか</strong>
@@ -311,7 +316,7 @@ export default function KinUridoki2026Page() {
           {[
             {
               q: "2026年は金の売り時ですか？",
-              a: "2026年4月現在、K24（純金）の買取価格は1gあたり約15,200円前後と歴史的な高値水準です。10年前の約3.5倍に上昇しており、売却には非常に好条件と言えます。「今の価格に納得できるなら売る」のが最も実践的な判断です。",
+              a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です。10年前から大きく上昇しており、売却には非常に好条件と言えます。「今の価格に納得できるなら売る」のが最も実践的な判断です。`,
             },
             {
               q: "金相場は今後さらに上がりますか？",
@@ -358,7 +363,7 @@ export default function KinUridoki2026Page() {
         <p>判断のポイントをまとめます。</p>
 
         <ol>
-          <li><strong>今の価格（K24: 約15,200円/g）に納得できるなら、売り時</strong></li>
+          <li><strong>今の価格（K24: 約{LP_K24}円/g・{LP_DATE}時点）に納得できるなら、売り時</strong></li>
           <li><strong>保有5年超なら税金が半分 — 5年未満なら待つ選択肢も</strong></li>
           <li><strong>迷うなら「半分売却・半分保有」で両取り</strong></li>
           <li><strong>必ず複数業者に見積もりを取る</strong></li>

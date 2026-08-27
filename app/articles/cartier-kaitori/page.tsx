@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -30,7 +35,7 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "カルティエのジュエリーは金の素材価格より高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、カルティエはブランド価値が非常に高いため、金の素材価格の1.5〜3倍以上の買取額が期待できます。特にラブリング、ジュストアンクル、トリニティなど人気モデルは高額査定の対象です。" } },
-      { "@type": "Question", name: "カルティエの買取価格はどのくらいですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、カルティエのラブリングK18（約8g）は約15万〜25万円、トリニティリングは約10万〜18万円、ラブブレスレットは約40万〜80万円が買取相場の目安です。モデル・素材・状態により大きく異なります。" } },
+      { "@type": "Question", name: "カルティエの買取価格はどのくらいですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月時点の調査では、カルティエのラブリングK18（約8g）は約15万〜25万円、トリニティリングは約10万〜18万円、ラブブレスレットは約40万〜80万円が買取相場の目安です。モデル・素材・状態により大きく異なります。" } },
       { "@type": "Question", name: "カルティエの箱や保証書がなくても買取できますか？", acceptedAnswer: { "@type": "Answer", text: "買取は可能です。ただし、箱・保証書・ギャランティカードがあると買取価格が5〜20%アップすることが多いです。特にギャランティカードの有無は大きな差が出ます。" } },
       { "@type": "Question", name: "カルティエの買取で一番高く売れるモデルは何ですか？", acceptedAnswer: { "@type": "Answer", text: "ラブブレスレット、ラブリング、ジュストアンクルブレスレットが最も高値で売れるモデルです。これらは中古市場での需要が非常に高く、定価に対する買取率（リセールバリュー）も高い傾向にあります。" } },
       { "@type": "Question", name: "カルティエを売るなら金買取店とブランド買取店のどちらがいいですか？", acceptedAnswer: { "@type": "Answer", text: "ブランド買取店の方が高く売れる可能性が高いです。金買取店は素材（金）としての価値のみで評価しますが、ブランド買取店はカルティエのブランド価値を上乗せして評価します。ただし、両方に見積もりを取って比較するのが最も確実です。" } },
@@ -129,7 +134,7 @@ export default function CartierKaitoriPage() {
 
         <h3>3. 金価格の高騰による底上げ</h3>
 
-        <p>カルティエのジュエリーの多くはK18（18金）やプラチナで作られています。2026年4月現在、K18の買取相場は1gあたり約11,200〜11,600円と歴史的高値にあるため、<strong>素材価値だけでも高額</strong>です。ブランド価値がさらに上乗せされるため、素材価格の1.5〜3倍以上の買取額になることも珍しくありません。</p>
+        <p>カルティエのジュエリーの多くはK18（18金）やプラチナで作られています。{LP_DATE}時点、K18の買取相場は1gあたり約{LP_K18}円と歴史的高値にあるため、<strong>素材価値だけでも高額</strong>です。ブランド価値がさらに上乗せされるため、素材価格の1.5〜3倍以上の買取額になることも珍しくありません。</p>
 
         <h2>カルティエ人気モデル別の買取相場（2026年4月）</h2>
 
@@ -242,9 +247,9 @@ export default function CartierKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K18YG（イエローゴールド）</strong></td><td>約11,200〜11,600円</td><td>最も定番</td><td>安定した需要。リセールバリューが最も高い傾向</td></tr>
-              <tr><td><strong>K18PG（ピンクゴールド）</strong></td><td>約11,200〜11,600円</td><td>女性に人気</td><td>ラブブレスレットのPGは特に人気が高い</td></tr>
-              <tr><td><strong>K18WG（ホワイトゴールド）</strong></td><td>約11,200〜11,600円</td><td>男女兼用</td><td>ダイヤモデルとの組み合わせが人気</td></tr>
+              <tr><td><strong>K18YG（イエローゴールド）</strong></td><td>約{LP_K18}円</td><td>最も定番</td><td>安定した需要。リセールバリューが最も高い傾向</td></tr>
+              <tr><td><strong>K18PG（ピンクゴールド）</strong></td><td>約{LP_K18}円</td><td>女性に人気</td><td>ラブブレスレットのPGは特に人気が高い</td></tr>
+              <tr><td><strong>K18WG（ホワイトゴールド）</strong></td><td>約{LP_K18}円</td><td>男女兼用</td><td>ダイヤモデルとの組み合わせが人気</td></tr>
               <tr><td><strong>Pt950（プラチナ）</strong></td><td>約4,800〜5,200円</td><td>婚約・結婚指輪向け</td><td>素材価値は金より低いが、ブランド価値で補完</td></tr>
             </tbody>
           </table>
@@ -434,7 +439,7 @@ export default function CartierKaitoriPage() {
 
         <p>カルティエ（Cartier）は世界的なブランド力と中古市場での高い需要により、<strong>非常にリセールバリューが高い</strong>ジュエリーブランドです。</p>
 
-        <p>2026年4月現在、金相場の高騰とカルティエの定価改定により、買取相場は上昇傾向にあります。ラブブレスレットで約40万〜80万円、ラブリングで約15万〜25万円と、高額買取が期待できる状況です。</p>
+        <p>2026年4月時点の調査では、金相場の高騰とカルティエの定価改定により、買取相場は上昇傾向にあります。ラブブレスレットで約40万〜80万円、ラブリングで約15万〜25万円と、高額買取が期待できる状況です。</p>
 
         <p>カルティエを最高値で売るために、以下の3つを必ず実践してください。</p>
 

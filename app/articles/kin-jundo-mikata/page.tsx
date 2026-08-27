@@ -5,6 +5,13 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_K10 = Math.round(_LPP.k10).toLocaleString();
+const LP_K14 = Math.round(_LPP.k14).toLocaleString();
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -134,12 +141,12 @@ export default function KinJundoMikataPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K24</strong></td><td>99.99%</td><td>999</td><td>インゴット・金貨</td><td>約15,200円</td></tr>
+              <tr><td><strong>K24</strong></td><td>99.99%</td><td>999</td><td>インゴット・金貨</td><td>約{LP_K24}円</td></tr>
               <tr><td><strong>K22</strong></td><td>91.7%</td><td>916</td><td>一部のコイン（クルーガーランド等）</td><td>約13,900円</td></tr>
               <tr><td><strong>K20</strong></td><td>83.3%</td><td>833</td><td>金歯・歯科用金合金</td><td>約12,600円</td></tr>
-              <tr><td><strong>K18</strong></td><td>75.0%</td><td>750</td><td>ジュエリー全般</td><td>約11,400円</td></tr>
-              <tr><td><strong>K14</strong></td><td>58.5%</td><td>585</td><td>海外ジュエリー</td><td>約8,900円</td></tr>
-              <tr><td><strong>K10</strong></td><td>41.7%</td><td>417</td><td>カジュアルジュエリー</td><td>約6,300円</td></tr>
+              <tr><td><strong>K18</strong></td><td>75.0%</td><td>750</td><td>ジュエリー全般</td><td>約{LP_K18}円</td></tr>
+              <tr><td><strong>K14</strong></td><td>58.5%</td><td>585</td><td>海外ジュエリー</td><td>約{LP_K14}円</td></tr>
+              <tr><td><strong>K10</strong></td><td>41.7%</td><td>417</td><td>カジュアルジュエリー</td><td>約{LP_K10}円</td></tr>
               <tr><td><strong>K9</strong></td><td>37.5%</td><td>375</td><td>英国ジュエリー</td><td>約5,700円</td></tr>
             </tbody>
           </table>
@@ -220,7 +227,7 @@ export default function KinJundoMikataPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K18（無印）</strong></td><td>K18無垢（ソリッド）</td><td>75%</td><td>高い（1g約11,400円）</td></tr>
+              <tr><td><strong>K18（無印）</strong></td><td>K18無垢（ソリッド）</td><td>75%</td><td>高い（1g約{LP_K18}円）</td></tr>
               <tr><td><strong>K18GP</strong></td><td>Gold Plated（金メッキ）</td><td>ごく微量</td><td>ほぼなし</td></tr>
               <tr><td><strong>K18GF</strong></td><td>Gold Filled（金張り）</td><td>総重量の1/20程度</td><td>ほぼなし</td></tr>
               <tr><td><strong>K18RGP</strong></td><td>Rolled Gold Plate</td><td>ごく微量</td><td>ほぼなし</td></tr>
@@ -306,7 +313,7 @@ export default function KinJundoMikataPage() {
               <tr><td><strong>色</strong></td><td>濃い黄金色</td><td>やや明るい金色（カラーバリエーションあり）</td></tr>
               <tr><td><strong>変色</strong></td><td>しない</td><td>ほとんどしない（WGはメッキ剥がれあり）</td></tr>
               <tr><td><strong>主な用途</strong></td><td>インゴット・金貨・資産保全</td><td>ジュエリー全般</td></tr>
-              <tr><td><strong>買取価格（1g）</strong></td><td>約15,200円</td><td>約11,400円</td></tr>
+              <tr><td><strong>買取価格（1g）</strong></td><td>約{LP_K24}円</td><td>約{LP_K18}円</td></tr>
               <tr><td><strong>価格差</strong></td><td colSpan={2}>K24はK18より1gあたり約3,800円高い</td></tr>
             </tbody>
           </table>

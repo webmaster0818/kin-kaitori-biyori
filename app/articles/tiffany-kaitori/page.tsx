@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -232,7 +237,7 @@ export default function TiffanyKaitoriPage() {
           </li>
           <li>
             <strong>K18素材は金相場が高い時に売る</strong>
-            <p>K18のティファニーは金相場に連動して買取価格が変動します。2026年4月現在、K18は1gあたり約11,400円と歴史的高値。金相場が高いうちにK18製品を売却するのは合理的です。</p>
+            <p>K18のティファニーは金相場に連動して買取価格が変動します。{LP_DATE}時点、K18は1gあたり約{LP_K18}円と歴史的高値。金相場が高いうちにK18製品を売却するのは合理的です。</p>
           </li>
           <li>
             <strong>まとめ売りで交渉する</strong>

@@ -7,6 +7,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K14 = Math.round(_LPP.k14).toLocaleString();
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
@@ -94,7 +100,7 @@ function FaqSchema() {
         name: "金歯1本の買取価格はいくらですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "金歯1本あたりの買取価格は約3,000〜15,000円が目安です。金歯の大きさ（重量）と純度によって価格が異なります。クラウン（被せ物）は約1〜3g、ブリッジは約3〜8gが一般的です。2026年4月現在の金価格高騰により、以前より高値で買い取ってもらえます。",
+          text: `金歯1本あたりの買取価格は約${Math.round(_LPP.k14 * 0.5).toLocaleString()}〜${Math.round(_LPP.k14 * 3).toLocaleString()}円が目安です。金歯の大きさ（重量）と純度によって価格が異なります。クラウン（被せ物）は約1〜3g、ブリッジは約3〜8gが一般的です。金価格の高騰により以前より高値がつきますが、金額はその日の相場で変わります（${LP_DATE}時点でK14は1gあたり約${LP_K14}円）。`,
         },
       },
       {
@@ -201,9 +207,9 @@ export default function KinbaKaitoriPage() {
               </thead>
               <tbody>
                 <tr><td><strong>K20（金歯で高品質）</strong></td><td>83.3%</td><td>約12,700円</td></tr>
-                <tr><td><strong>K18</strong></td><td>75.0%</td><td>約11,400円</td></tr>
+                <tr><td><strong>K18</strong></td><td>75.0%</td><td>約{LP_K18}円</td></tr>
                 <tr><td><strong>K16</strong></td><td>66.6%</td><td>約10,100円</td></tr>
-                <tr><td><strong>K14（最も一般的）</strong></td><td>58.5%</td><td>約8,900円</td></tr>
+                <tr><td><strong>K14（最も一般的）</strong></td><td>58.5%</td><td>約{LP_K14}円</td></tr>
                 <tr><td>金パラ（金12%）</td><td>12.0%</td><td>約1,800円</td></tr>
               </tbody>
             </table>
@@ -243,7 +249,7 @@ export default function KinbaKaitoriPage() {
           <p>金歯と一口に言っても、治療の種類によって形状・大きさ・重量が異なります。それぞれの特徴を理解しておくと、買取価格の目安がわかります。</p>
 
           <h3>インレー（詰め物）</h3>
-          <p>虫歯を削った後に詰める小さな金属片です。歯の一部を覆うだけなので、重量は<strong>0.5〜1.5g程度</strong>と最も軽い。奥歯の咬合面（噛む面）に使われることが多く、外見からは見えにくいものです。K14で0.5gの場合、買取価格は約4,500円です。</p>
+          <p>虫歯を削った後に詰める小さな金属片です。歯の一部を覆うだけなので、重量は<strong>0.5〜1.5g程度</strong>と最も軽い。奥歯の咬合面（噛む面）に使われることが多く、外見からは見えにくいものです。K14で0.5gの場合、買取価格は約{Math.round(_LPP.k14 * 0.5).toLocaleString()}円です（{LP_DATE}時点）。</p>
 
           <h3>クラウン（被せ物）</h3>
           <p>歯全体を覆うキャップ状の金属です。歯の形をしているため、<strong>重量は1.5〜3g程度</strong>と中程度。前歯に使われることは少なく、奥歯に多く見られます。K14で2gの場合、買取価格は約17,800円です。</p>
@@ -458,7 +464,7 @@ export default function KinbaKaitoriPage() {
               },
               {
                 q: "金歯1本の買取価格はいくらですか？",
-                a: "金歯1本あたりの買取価格は約3,000〜15,000円が目安です。金歯の大きさ（重量）と純度によって価格が異なります。クラウン（被せ物）は約1.5〜3gで約13,000〜27,000円、ブリッジ（3本連結）は約3〜8gで約27,000〜71,000円程度です（K14の場合）。2026年4月現在の金価格高騰により、以前より高値で買い取ってもらえます。",
+                a: `金歯1本あたりの買取価格は約${Math.round(_LPP.k14 * 0.5).toLocaleString()}〜${Math.round(_LPP.k14 * 3).toLocaleString()}円が目安です。金歯の大きさ（重量）と純度によって価格が異なります。クラウン（被せ物）は約1.5〜3gで約${Math.round(_LPP.k14 * 1.5).toLocaleString()}〜${Math.round(_LPP.k14 * 3).toLocaleString()}円、ブリッジ（3本連結）は約3〜8gで約${Math.round(_LPP.k14 * 3).toLocaleString()}〜${Math.round(_LPP.k14 * 8).toLocaleString()}円程度です（K14の場合）。金価格の高騰により以前より高値がつきますが、金額はその日の相場で変わります（${LP_DATE}時点でK14は1gあたり約${LP_K14}円）。`,
               },
               {
                 q: "金歯を売るにはどうすればいいですか？",

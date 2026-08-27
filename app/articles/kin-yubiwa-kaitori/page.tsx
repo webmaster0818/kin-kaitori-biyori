@@ -9,6 +9,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_PT900 = Math.round(_LPT.pt_buyback_per_g * 0.9).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -240,7 +246,7 @@ export default function KinYubiwaKaitoriPage() {
             },
             {
               q: "プラチナと金の指輪、どちらが高く売れますか？",
-              a: "2026年現在、K18の方がPt900より高く売れます。K18は1gあたり約11,400円、Pt900は約4,700円で、同じ重量ならK18がプラチナの約2.4倍の価格です。",
+              a: `${LP_DATE}時点、K18の方がPt900より高く売れます。K18は1gあたり約${LP_K18}円、Pt900は約${LP_PT900}円で、同じ重量ならK18がプラチナの約${Math.round((_LPP.k18 / (_LPT.pt_buyback_per_g * 0.9)) * 10) / 10}倍の価格です。`,
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

@@ -6,6 +6,10 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -156,7 +160,7 @@ export default function OkachimachiKinKaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>K24（純金）</strong></td><td>約15,200〜15,500円</td><td>地金・インゴットは高値が出やすい</td></tr>
+                <tr><td><strong>K24（純金）</strong></td><td>約{LP_K24}円</td><td>地金・インゴットは高値が出やすい</td></tr>
                 <tr><td><strong>K22（22金）</strong></td><td>約13,800〜14,200円</td><td>金貨に多い純度</td></tr>
                 <tr><td><strong>K18（18金）</strong></td><td>約11,300〜11,700円</td><td>ジュエリーで最も流通</td></tr>
                 <tr><td><strong>K14（14金）</strong></td><td>約8,800〜9,200円</td><td>輸入ジュエリーに多い</td></tr>

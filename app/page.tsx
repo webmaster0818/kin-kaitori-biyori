@@ -4,6 +4,12 @@ import Image from "next/image";
 import goldTopData from "@/data/gold-spot-prices.json";
 
 import type { Metadata } from "next";
+import goldData from "@/data/gold-spot-prices.json";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 // トップの自己参照canonical。layoutに置くと全ページへ継承されてトップに誤集約するため、ここに置く。
 export const metadata: Metadata = {
@@ -466,7 +472,7 @@ const faqs = [
   },
   {
     q: "2026年は金を売るのに良いタイミングですか？",
-    a: "2026年4月現在、K24（純金）の買取価格は1gあたり約15,200円前後と歴史的な高値圏です。10年前（約4,400円）の3倍以上に上昇しており、売却には好条件と言えます。ただし、短期的な調整は常にあり得ますので、「今の価格に納得できるなら売る」のが実践的な判断です。",
+    a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値圏です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却には好条件と言えます。ただし、短期的な調整は常にあり得ますので、「今の価格に納得できるなら売る」のが実践的な判断です。`,
   },
 ];
 
@@ -524,9 +530,9 @@ export default function Home() {
             <div className="bg-black/40 backdrop-blur-sm border border-accent/30 rounded-xl inline-block px-6 py-3 mb-8">
               <p className="text-xs text-white/60 mb-1">本日の金買取参考相場（K24/1g）</p>
               <p className="text-2xl md:text-3xl font-bold text-accent">
-                &#165;15,200<span className="text-sm text-white/60 font-normal ml-1">前後</span>
+                &#165;{LP_K24}<span className="text-sm text-white/60 font-normal ml-1">前後</span>
               </p>
-              <p className="text-xs text-white/50 mt-1">※2026年4月時点の目安。実際の買取価格は業者・純度により異なります。</p>
+              <p className="text-xs text-white/50 mt-1">※{LP_DATE}時点の目安（毎朝自動更新）。実際の買取価格は業者・純度により異なります。</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -545,7 +551,7 @@ export default function Home() {
                 高く売るコツを読む
               </Link>
             </div>
-            <p className="text-white/40 text-xs mt-4">最終更新: 2026年4月15日</p>
+            <p className="text-white/40 text-xs mt-4">最終更新: {LP_DATE}</p>
           </div>
         </div>
       </section>
@@ -621,10 +627,10 @@ export default function Home() {
       {/* 2026年4月 金は今が売り時？相場高騰の背景 */}
       <section className="max-w-5xl mx-auto px-4 py-14">
         <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          2026年4月｜金は今が売り時？相場高騰の背景
+          {LP_DATE}時点｜金は今が売り時？相場高騰の背景
         </h2>
         <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          金の買取価格は2026年4月時点で歴史的な高値水準にあります。K24（純金）は1gあたり約15,200円前後と、2016年（約4,400円）の約3.5倍に上昇しました。
+          金の買取価格は{LP_DATE}時点で歴史的な高値水準にあります。K24（純金）は1gあたり約{LP_K24}円前後と、2016年（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍に上昇しました（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
           <div className="bg-white border border-warm-border rounded-xl p-5">
@@ -632,8 +638,8 @@ export default function Home() {
             <p className="text-sm text-warm-gray">10年間の金価格上昇率（2016年→2026年）</p>
           </div>
           <div className="bg-white border border-warm-border rounded-xl p-5">
-            <p className="text-accent font-bold text-2xl mb-1">15,200円/g</p>
-            <p className="text-sm text-warm-gray">K24（純金）の買取参考相場（2026年4月）</p>
+            <p className="text-accent font-bold text-2xl mb-1">{LP_K24}円/g</p>
+            <p className="text-sm text-warm-gray">K24（純金）の買取参考相場（{LP_DATE}時点）</p>
           </div>
           <div className="bg-white border border-warm-border rounded-xl p-5">
             <p className="text-accent font-bold text-2xl mb-1">+34%</p>

@@ -5,6 +5,15 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K10 = Math.round(_LPP.k10).toLocaleString();
+const LP_K14 = Math.round(_LPP.k14).toLocaleString();
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
+const LP_PT900 = Math.round(_LPT.pt_buyback_per_g * 0.9).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -13,7 +22,7 @@ function BreadcrumbSchema() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: "https://gold-biyori.com/" },
       { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
-      { "@type": "ListItem", position: 3, name: "初めての金買取ガイド", item: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" },
+      { "@type": "ListItem", position: 3, name: "金買取に必要なもの", item: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" },
     ],
   };
   return (
@@ -35,13 +44,14 @@ function FaqSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】初めての金買取ガイド — 流れ・必要なもの・注意点を完全解説", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: `金買取に必要なものは？本人確認書類と当日の流れ・注意点【${priceDateJa}更新】`, datePublished: "2026-04-24", dateModified: goldData.date, author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
-const [, _pm, _pd] = goldData.date.split("-").map(Number);
-const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
 
@@ -64,17 +74,27 @@ export default function KinKaitoriHajimetePage() {
   return (<><FaqSchema />
       <BreadcrumbSchema /><ArticleSchema />
     <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
-      <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">初めての金買取ガイド</span></li></ol></nav>
+      <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">金買取に必要なもの</span></li></ol></nav>
       <div className="article-hero mb-8">
           <Image src="/images/article-hero-howto.png" alt="金買取ガイドイメージ" width={1200} height={400} className="w-full h-[200px] object-cover rounded-xl" priority />
           <div className="article-hero-overlay rounded-xl" />
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】初めての金買取ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取に必要なものは？本人確認書類と当日の流れ</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
-        <p>「金を売りたいけど、何から始めればいいの？」「どんな準備が必要？」「騙されない？」——金を売るのが初めての方は不安が多いものです。</p>
-        <p>この記事では、初めて金を売る方のために、<strong>買取の流れ・必要なもの・注意点</strong>をステップごとにわかりやすく解説します。この記事を読めば、安心して金を売却できます。</p>
+        <div className="bg-gold-bg border-2 border-accent/40 rounded-xl p-5 my-6 not-prose">
+          <p className="font-bold text-base mb-2">結論：必要なのは「本人確認書類1点」と「売りたい金製品」だけ</p>
+          <ul className="text-sm leading-relaxed space-y-1 list-disc pl-5">
+            <li><strong>必須</strong>：有効期限内の本人確認書類1点（運転免許証／マイナンバーカード／パスポート／在留カード）</li>
+            <li><strong>200万円を超えるとき</strong>：加えてマイナンバーの提示（業者が支払調書を出すため）</li>
+            <li><strong>あると有利</strong>：保証書・鑑定書・箱・購入時のレシート（無くても売れます）</li>
+            <li><strong>不要</strong>：印鑑・通帳・手数料（当サイト掲載4社は査定・出張・キャンセルすべて無料）</li>
+          </ul>
+          <p className="text-xs text-warm-gray mt-3">本人確認は古物営業法による義務で、金額にかかわらず求められます。求めてこない業者はむしろ避けてください。<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent underline">未成年の可否・予約の要否はこちら</Link></p>
+        </div>
+
+        <p>「金を売りたいけど、何から始めればいいの？」「どんな準備が必要？」「騙されない？」——金を売るのが初めての方は不安が多いものです。この記事では<strong>買取の流れ・必要なもの・注意点</strong>をステップごとに解説します。</p>
 
         <h2>金買取の全体の流れ（5ステップ）</h2>
         <div className="table-wrapper">
@@ -155,19 +175,20 @@ export default function KinKaitoriHajimetePage() {
           <li><strong>付属品を捨ててしまう：</strong>保証書やケースがあれば査定額がアップします。捨てずに一緒に持参しましょう。</li>
         </ol>
 
-        <h2>金の買取価格の相場（2026年4月）</h2>
+        <h2>金の買取価格の相場（{LP_DATE}時点）</h2>
         <div className="table-wrapper">
           <table>
             <thead><tr><th>純度</th><th>1gあたり買取価格（目安）</th><th>10gの場合</th></tr></thead>
             <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約15,200円</td><td>約152,000円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,400円</td><td>約114,000円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,900円</td><td>約89,000円</td></tr>
-              <tr><td><strong>K10（10金）</strong></td><td>約6,000円</td><td>約60,000円</td></tr>
-              <tr><td><strong>Pt900</strong></td><td>約4,500円</td><td>約45,000円</td></tr>
+              <tr><td><strong>K24（純金）</strong></td><td>約{LP_K24}円</td><td>約{Math.round(_LPP.k24 * 10).toLocaleString()}円</td></tr>
+              <tr><td><strong>K18（18金）</strong></td><td>約{LP_K18}円</td><td>約{Math.round(_LPP.k18 * 10).toLocaleString()}円</td></tr>
+              <tr><td><strong>K14（14金）</strong></td><td>約{LP_K14}円</td><td>約{Math.round(_LPP.k14 * 10).toLocaleString()}円</td></tr>
+              <tr><td><strong>K10（10金）</strong></td><td>約{LP_K10}円</td><td>約{Math.round(_LPP.k10 * 10).toLocaleString()}円</td></tr>
+              <tr><td><strong>Pt900</strong></td><td>約{LP_PT900}円</td><td>約{Math.round(_LPT.pt_buyback_per_g * 0.9 * 10).toLocaleString()}円</td></tr>
             </tbody>
           </table>
         </div>
+        <p className="text-xs text-warm-gray">※田中貴金属の公表する買取参考価格をもとに純度換算した目安で、毎朝自動更新しています。実際の査定額は業者の手数料・状態により目安を下回ることが一般的です。</p>
 
         <h2>4社比較 — 初心者におすすめの買取業者</h2>
         <div className="table-wrapper">
@@ -187,7 +208,8 @@ export default function KinKaitoriHajimetePage() {
         <h2>初めての金買取 よくある質問</h2>
         <div className="space-y-3 not-prose">
           {[
-            { q: "金を売るのに必要なものは？", a: "本人確認書類（運転免許証・マイナンバーカード等）が必須です。200万円超の取引ではマイナンバーも必要です。" },
+            { q: "金を売るのに必要なものは？", a: "有効期限内の本人確認書類1点（運転免許証・マイナンバーカード・パスポート・在留カード）と、売りたい金製品だけです。古物営業法により金額にかかわらず本人確認が必要です。1回200万円を超える取引ではマイナンバーの提示も求められます。印鑑や通帳は不要です。" },
+            { q: "本人確認書類はコピーでもいいですか？", a: "店頭では原本が必要です。宅配買取のみ、コピーの同封で受け付ける方式が一般的です。有効期限が切れた書類は使えません。" },
             { q: "壊れたアクセサリーでも売れますか？", a: "はい、壊れていても刻印がなくても買取可能です。金は素材価値で評価されるため、状態は問いません。" },
             { q: "手数料はかかりますか？", a: "当サイト掲載の4社は査定料・出張費・キャンセル料すべて無料です。" },
             { q: "税金はかかりますか？", a: "売却益が年間50万円超で譲渡所得として課税対象です。50万円以内なら実質非課税です。" },

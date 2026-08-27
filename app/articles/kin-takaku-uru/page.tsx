@@ -6,6 +6,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function HowToSchema() {
   const howToData = {
@@ -230,7 +236,7 @@ export default function KinTakakuUruPage() {
 
         <h3>2026年現在の状況</h3>
 
-        <p>2026年4月現在、金価格は歴史的な高値圏にあります。K24（純金）は1gあたり約15,200円前後で推移しており、<strong>10年前（約4,400円）の3倍以上</strong>です。多くのアナリストは高止まりを予想していますが、短期的な調整はいつ起きてもおかしくありません。</p>
+        <p>{LP_DATE}時点、金価格は歴史的な高値圏にあります。K24（純金）は1gあたり約{LP_K24}円前後で推移しており（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）、<strong>10年前（約4,400円）の3倍以上</strong>です。多くのアナリストは高止まりを予想していますが、短期的な調整はいつ起きてもおかしくありません。</p>
 
         <p>「もっと上がるかもしれない」と待ち続けるのは投機的です。<strong>今の価格に納得できるなら、それが「あなたにとっての売り時」</strong>です。</p>
 
@@ -275,7 +281,7 @@ export default function KinTakakuUruPage() {
         <blockquote>
           <p><strong>買取概算額 = 純度別1g相場 x 重量（g）x 0.85〜0.95</strong></p>
           <p>（0.85〜0.95は業者の手数料率。大手ほど0.95に近い）</p>
-          <p>例：K18ネックレス10gの場合 → 11,400円 x 10g x 0.9 = 約102,600円</p>
+          <p>例：K18ネックレス10gの場合 → {LP_K18}円 x 10g x 0.9 = 約{Math.round(_LPP.k18 * 10 * 0.9).toLocaleString()}円（{LP_DATE}時点の目安）</p>
         </blockquote>
 
         <p>この概算額を把握した上で査定に臨めば、提示された金額が適正かどうかすぐに判断できます。</p>

@@ -8,6 +8,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_PT850 = Math.round(_LPT.pt_buyback_per_g * 0.85).toLocaleString();
+const LP_PT900 = Math.round(_LPT.pt_buyback_per_g * 0.9).toLocaleString();
 
 const k24Souba = goldData.purity_buyback_estimate_per_g.k24;
 const k18Souba = goldData.purity_buyback_estimate_per_g.k18;
@@ -242,8 +248,8 @@ export default function KinKaitoriSoubaPage() {
               <tbody>
                 <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.99%</td><td>約5,100〜5,400円</td><td>インゴット</td></tr>
                 <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約4,800〜5,100円</td><td>結婚指輪、高級ジュエリー</td></tr>
-                <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約4,500〜4,800円</td><td>指輪、ネックレス</td></tr>
-                <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約4,200〜4,500円</td><td>チェーン、ブレスレット</td></tr>
+                <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約{LP_PT900}円</td><td>指輪、ネックレス</td></tr>
+                <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約{LP_PT850}円</td><td>チェーン、ブレスレット</td></tr>
               </tbody>
             </table>
           </div>
@@ -355,9 +361,9 @@ export default function KinKaitoriSoubaPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>A社（大手チェーン）</td><td>11,200円</td><td>336,000円</td><td>-12,000円</td></tr>
-                <tr><td>B社（一括査定最高値）</td><td>11,600円</td><td><strong>348,000円</strong></td><td>—</td></tr>
-                <tr><td>C社（地域の質屋）</td><td>10,600円</td><td>318,000円</td><td>-30,000円</td></tr>
+                <tr><td>A社（大手チェーン）</td><td>{Math.round(_LPP.k18 * 0.97).toLocaleString()}円</td><td>{Math.round(_LPP.k18 * 0.97 * 30).toLocaleString()}円</td><td>-{Math.round(_LPP.k18 * 0.03 * 30).toLocaleString()}円</td></tr>
+                <tr><td>B社（一括査定最高値）</td><td>{LP_K18}円</td><td><strong>{Math.round(_LPP.k18 * 30).toLocaleString()}円</strong></td><td>—</td></tr>
+                <tr><td>C社（地域の質屋）</td><td>{Math.round(_LPP.k18 * 0.92).toLocaleString()}円</td><td>{Math.round(_LPP.k18 * 0.92 * 30).toLocaleString()}円</td><td>-{Math.round(_LPP.k18 * 0.08 * 30).toLocaleString()}円</td></tr>
               </tbody>
             </table>
           </div>

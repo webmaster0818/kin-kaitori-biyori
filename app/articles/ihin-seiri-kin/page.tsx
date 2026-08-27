@@ -5,6 +5,11 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -133,8 +138,8 @@ export default function IhinSeiriKinPage() {
               <tr><td><strong>K18ブレスレット</strong></td><td>3〜20g</td><td>約34,000〜228,000円</td></tr>
               <tr><td><strong>K18喜平ネックレス</strong></td><td>30〜100g</td><td>約342,000〜1,140,000円</td></tr>
               <tr><td><strong>金歯（K14〜K20相当）</strong></td><td>1〜3g/本</td><td>約6,000〜35,000円/本</td></tr>
-              <tr><td><strong>金の延べ棒（K24）</strong></td><td>5g〜1kg</td><td>約76,000〜15,200,000円</td></tr>
-              <tr><td><strong>金貨（メイプルリーフ等）</strong></td><td>約31.1g（1oz）</td><td>約473,000円</td></tr>
+              <tr><td><strong>金の延べ棒（K24）</strong></td><td>5g〜1kg</td><td>約{Math.round(_LPP.k24 * 5).toLocaleString()}〜{Math.round(_LPP.k24 * 1000).toLocaleString()}円</td></tr>
+              <tr><td><strong>金貨（メイプルリーフ等）</strong></td><td>約31.1g（1oz）</td><td>約{Math.round(_LPP.k24 * 31.1).toLocaleString()}円</td></tr>
               <tr><td><strong>金杯・金盃</strong></td><td>10〜50g</td><td>約114,000〜570,000円</td></tr>
               <tr><td><strong>万年筆の金ペン先</strong></td><td>0.5〜2g</td><td>約3,000〜15,000円</td></tr>
             </tbody>
@@ -272,7 +277,7 @@ export default function IhinSeiriKinPage() {
           </li>
           <li>
             <strong>金相場が高い今が売り時</strong>
-            <p>2026年4月現在、K24の買取相場は1gあたり約15,200円と歴史的高値です。遺品の金を売却するなら、今は非常に好条件です。</p>
+            <p>{LP_DATE}時点、K24の買取相場は1gあたり約{LP_K24}円と歴史的高値です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。遺品の金を売却するなら、今は非常に好条件です。</p>
           </li>
         </ol>
 

@@ -10,6 +10,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+const [, _pm, _pd] = goldData.date.split("-").map(Number);
+const priceDateJa = `2026年${_pm}月${_pd}日`;
+const _BP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const K18_10G = Math.round(_BP.k18 * 10).toLocaleString();
+const K18_30G = Math.round(_BP.k18 * 30).toLocaleString();
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -51,7 +57,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "金ブレスレット買取相場｜喜平・テニス・切れた品も今日の価格で計算【2026年7月】",
+    headline: `金ブレスレット買取相場｜喜平10gは約${K18_10G}円・30gは約${K18_30G}円【${priceDateJa}更新】`,
     datePublished: "2026-04-13",
     dateModified: "2026-07-03",
     author: { "@type": "Organization", name: "金買取びより" },
@@ -60,11 +66,10 @@ function ArticleSchema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
 
-const [, _pm, _pd] = goldData.date.split("-").map(Number);
-const priceDateJa = `2026年${_pm}月${_pd}日`;
+
 
 export const metadata: Metadata = {
-  title: "金ブレスレット買取相場｜喜平・テニス・切れた品も今日の価格で計算【2026年7月】",
+  title: `金ブレスレット買取相場｜喜平10gは約${K18_10G}円・30gは約${K18_30G}円【${priceDateJa}更新】`,
   description:
     "金ブレスレットの買取相場を毎日更新。18金喜平ブレスレット10g・20g・30g・50gの目安は「本日のK18 1g買取価格×重量」で即計算。テニスブレスレットのダイヤ評価、切れた・刻印なしでも売れる理由、カルティエ等ブランド品の査定ポイントまで解説。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-bracelet-kaitori/" },
@@ -106,7 +111,7 @@ export default function KinBraceletKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金ブレスレット買取相場｜喜平・テニス・切れた品も今日の価格で計算【2026年7月】</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金ブレスレット買取相場｜喜平10gは約{K18_10G}円・30gは約{K18_30G}円</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k18" />

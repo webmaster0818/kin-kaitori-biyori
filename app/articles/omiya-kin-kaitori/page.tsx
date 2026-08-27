@@ -7,6 +7,12 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -312,7 +318,7 @@ export default function OmiyaKinKaitoriPage() {
 
         <p>大宮（埼玉）は埼玉エリアの金買取において最も重要な市場です。大宮駅・浦和エリアを中心に多くの買取業者が競合しており、<strong>複数社を比較することで高値売却</strong>が実現できます。</p>
 
-        <p>2026年4月現在、金の買取価格は歴史的高値圏にあります。K24（純金）は1gあたり約15,200円前後、K18は約11,400円前後と、売却を検討している方にとっては好条件です。</p>
+        <p>{LP_DATE}時点、金の買取価格は歴史的な高値圏にあります。K24（純金）は1gあたり約{LP_K24}円前後、K18は約{LP_K18}円前後です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
 
         <p>大宮（埼玉）で金を高く売るために、以下の3つを実践してください。</p>
 

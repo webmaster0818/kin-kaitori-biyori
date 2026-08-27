@@ -5,6 +5,13 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_AG = Math.round(_LPT.ag_buyback_per_g).toLocaleString();
+const LP_AG925 = Math.round(_LPT.ag_buyback_per_g * 0.925).toLocaleString();
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -29,7 +36,7 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "銀（シルバー）の買取相場は1gあたりいくらですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、銀の買取相場は1gあたり約130〜145円です（SV1000/純銀の場合）。SV925（スターリングシルバー）の場合は1gあたり約120〜135円が目安です。金やプラチナに比べて単価は低いですが、重量のある製品ならまとまった金額になります。" } },
+      { "@type": "Question", name: "銀（シルバー）の買取相場は1gあたりいくらですか？", acceptedAnswer: { "@type": "Answer", text: `${LP_DATE}時点、銀の買取相場は1gあたり約${LP_AG}円です（SV1000/純銀の場合）。SV925（スターリングシルバー）の場合は1gあたり約${LP_AG925}円が目安です。金やプラチナに比べて単価は低いですが、重量のある製品ならまとまった金額になります。` } },
       { "@type": "Question", name: "シルバーアクセサリーは買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、SV925やSV950の刻印があるシルバーアクセサリーは買取可能です。ただし、銀は1gあたりの単価が低いため、軽いアクセサリー1点では数百円程度の買取額になることが多いです。まとめて売る方が効率的です。" } },
       { "@type": "Question", name: "銀食器やカトラリーは買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、銀食器やカトラリーも買取可能です。特にクリストフルやティファニーなどのブランド銀食器は、銀の素材価値に加えてブランド価値が上乗せされ、高額買取が期待できます。" } },
       { "@type": "Question", name: "銀の変色（黒ずみ）は買取価格に影響しますか？", acceptedAnswer: { "@type": "Answer", text: "素材買取の場合、変色は価格に影響しません。銀の黒ずみは表面の硫化反応であり、素材としての価値は変わりません。ただし、ブランド買取として評価される場合は、磨いてから持ち込んだ方が印象が良くなることがあります。" } },
@@ -155,15 +162,15 @@ export default function GinKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>SV1000（純銀）</strong></td><td>約130〜145円</td></tr>
+              <tr><td><strong>SV1000（純銀）</strong></td><td>約{LP_AG}円</td></tr>
               <tr><td><strong>SV950</strong></td><td>約125〜140円</td></tr>
-              <tr><td><strong>SV925</strong></td><td>約120〜135円</td></tr>
+              <tr><td><strong>SV925</strong></td><td>約{LP_AG925}円</td></tr>
               <tr><td><strong>SV900</strong></td><td>約115〜130円</td></tr>
             </tbody>
           </table>
         </div>
 
-        <p>銀の国際相場は2026年4月時点で1gあたり約420〜430円（小売価格）で推移しています。買取価格は小売価格の30〜35%程度が一般的です。金やプラチナに比べて<strong>1gあたりの単価は低い</strong>ですが、重量のある銀食器やインゴットであればまとまった金額になります。</p>
+        <p>銀の小売価格は{LP_DATE}時点で1gあたり約{Math.round(_LPT.ag_retail_per_g).toLocaleString()}円、買取参考価格は約{LP_AG}円です（田中貴金属の公表値・毎朝自動更新）。金やプラチナに比べて<strong>1gあたりの単価は低い</strong>ですが、重量のある銀食器やインゴットであればまとまった金額になります。</p>
 
         <h3>銀価格の推移</h3>
 
@@ -252,9 +259,9 @@ export default function GinKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td>メイプルリーフ銀貨（1oz）</td><td>31.1g</td><td>約4,000〜4,500円（+コレクター価値）</td></tr>
-              <tr><td>イーグル銀貨（1oz）</td><td>31.1g</td><td>約4,000〜4,500円（+コレクター価値）</td></tr>
-              <tr><td>銀インゴット（100g）</td><td>100g</td><td>約13,000〜14,500円</td></tr>
+              <tr><td>メイプルリーフ銀貨（1oz）</td><td>31.1g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 31.1).toLocaleString()}円（+コレクター価値）</td></tr>
+              <tr><td>イーグル銀貨（1oz）</td><td>31.1g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 31.1).toLocaleString()}円（+コレクター価値）</td></tr>
+              <tr><td>銀インゴット（100g）</td><td>100g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 100).toLocaleString()}円</td></tr>
               <tr><td>銀インゴット（1kg）</td><td>1,000g</td><td>約130,000〜145,000円</td></tr>
             </tbody>
           </table>
@@ -299,7 +306,7 @@ export default function GinKaitoriPage() {
 
         <h3>少量では買取額が低い</h3>
 
-        <p>銀は1gあたり約130円程度のため、10gのシルバーリング1本では約1,300円程度の買取額です。「わざわざ持ち込む手間に見合わない」と感じる方は、<strong>金やプラチナの製品と一緒にまとめて</strong>査定に出すのがおすすめです。</p>
+        <p>銀は1gあたり約{LP_AG}円程度のため、10gのシルバーリング1本では約{Math.round(_LPT.ag_buyback_per_g * 10).toLocaleString()}円程度の買取額です。「わざわざ持ち込む手間に見合わない」と感じる方は、<strong>金やプラチナの製品と一緒にまとめて</strong>査定に出すのがおすすめです。</p>
 
         <h2>4社比較 — 銀買取におすすめの業者</h2>
 
@@ -330,7 +337,7 @@ export default function GinKaitoriPage() {
           {[
             {
               q: "銀（シルバー）の買取相場は1gあたりいくらですか？",
-              a: "2026年4月現在、純銀（SV1000）で1gあたり約130〜145円、SV925で約120〜135円が目安です。金（K24で約15,200円/g）と比べると単価は低いですが、重量のある銀食器やインゴットならまとまった金額になります。",
+              a: `${LP_DATE}時点、純銀（SV1000）で1gあたり約${LP_AG}円、SV925で約${LP_AG925}円が目安です。金（K24で約${LP_K24}円/g）と比べると単価は低いですが、重量のある銀食器やインゴットならまとまった金額になります。`,
             },
             {
               q: "シルバーアクセサリーは買取できますか？",

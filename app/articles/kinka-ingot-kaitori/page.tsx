@@ -7,6 +7,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
+const LP_OZ = Math.round((_LPP.k24 * 31.1) / 10000).toLocaleString();
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
@@ -86,7 +92,7 @@ function FaqSchema() {
         name: "メイプルリーフ金貨1オンスの買取価格はいくらですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "2026年4月現在、メイプルリーフ金貨1オンス（31.1g、純金K24）の買取価格は約47万〜48万円が目安です。金の国際相場と為替レートにより毎日変動します。",
+          text: `${LP_DATE}時点、メイプルリーフ金貨1オンス（31.1g、純金K24）の買取価格は約${LP_OZ}万円が目安です。金の国際相場と為替レートにより毎日変動します。`,
         },
       },
       {
@@ -296,14 +302,14 @@ export default function KinkaIngotKaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1g</td><td>約15,000〜15,200円</td><td>—</td></tr>
-                <tr><td>5g</td><td>約75,000〜76,000円</td><td>—</td></tr>
+                <tr><td>1g</td><td>約{LP_K24}円</td><td>—</td></tr>
+                <tr><td>5g</td><td>約{Math.round(_LPP.k24 * 5).toLocaleString()}円</td><td>—</td></tr>
                 <tr><td>10g</td><td>約150,000〜152,000円</td><td>—</td></tr>
                 <tr><td>20g</td><td>約300,000〜304,000円</td><td>200万円超で支払調書</td></tr>
                 <tr><td>50g</td><td>約750,000〜760,000円</td><td>200万円超で支払調書</td></tr>
                 <tr><td>100g</td><td>約1,500,000〜1,540,000円</td><td>200万円超で支払調書</td></tr>
                 <tr><td>500g</td><td>約7,500,000〜7,700,000円</td><td>支払調書対象</td></tr>
-                <tr><td><strong>1kg</strong></td><td><strong>約15,000,000〜15,400,000円</strong></td><td>支払調書対象</td></tr>
+                <tr><td><strong>1kg</strong></td><td><strong>約{Math.round(_LPP.k24 * 1000).toLocaleString()}円</strong></td><td>支払調書対象</td></tr>
               </tbody>
             </table>
           </div>
@@ -554,7 +560,7 @@ export default function KinkaIngotKaitoriPage() {
             {[
               {
                 q: "メイプルリーフ金貨1オンスの買取価格はいくらですか？",
-                a: "2026年4月現在、メイプルリーフ金貨1オンス（31.1g、純金K24）の買取価格は約47万〜48万円が目安です。金の国際相場と為替レートにより毎日変動しますので、売却前に最新の価格を確認することをおすすめします。メイプルリーフ金貨は世界で最も流通量が多い金貨の一つであり、どの買取業者でもスムーズに売却できます。",
+                a: `${LP_DATE}時点、メイプルリーフ金貨1オンス（31.1g、純金K24）の買取価格は約${LP_OZ}万円が目安です。金の国際相場と為替レートにより毎日変動しますので、売却前に最新の価格を確認することをおすすめします。メイプルリーフ金貨は世界で最も流通量が多い金貨の一つであり、どの買取業者でもスムーズに売却できます。`,
               },
               {
                 q: "金のインゴットはどこで売るのが一番高いですか？",
@@ -619,7 +625,7 @@ export default function KinkaIngotKaitoriPage() {
           <p>主要な買取価格の目安は以下のとおりです。</p>
 
           <ul>
-            <li><strong>メイプルリーフ金貨 1oz：</strong>約47万〜48万円</li>
+            <li><strong>メイプルリーフ金貨 1oz：</strong>約{LP_OZ}万円（{LP_DATE}時点）</li>
             <li><strong>インゴット 100g：</strong>約150万〜154万円</li>
             <li><strong>インゴット 500g：</strong>約750万〜770万円</li>
             <li><strong>インゴット 1kg：</strong>約1,500万〜1,540万円</li>

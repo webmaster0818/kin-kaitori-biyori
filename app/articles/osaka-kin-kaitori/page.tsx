@@ -6,6 +6,12 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
+const LP_PT900 = Math.round(_LPT.pt_buyback_per_g * 0.9).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -139,10 +145,10 @@ export default function OsakaKinKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K24（純金）</strong></td><td>約14,900〜15,300円</td></tr>
+              <tr><td><strong>K24（純金）</strong></td><td>約{LP_K24}円</td></tr>
               <tr><td><strong>K18（18金）</strong></td><td>約11,100〜11,500円</td></tr>
               <tr><td><strong>K14（14金）</strong></td><td>約8,600〜9,000円</td></tr>
-              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,500〜4,800円</td></tr>
+              <tr><td><strong>Pt900（プラチナ）</strong></td><td>約{LP_PT900}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -377,7 +383,7 @@ export default function OsakaKinKaitoriPage() {
 
         <p>大阪は東京に次ぐ日本第2の金買取マーケットであり、<strong>梅田・難波を中心に高い買取価格が期待できる</strong>エリアです。</p>
 
-        <p>2026年4月現在、K24（純金）の買取相場は1gあたり約15,200円前後と歴史的な高値水準にあります。大阪にお住まいの方は、この好環境を活かして最高値での売却を目指しましょう。</p>
+        <p>{LP_DATE}時点、K24（純金）の買取相場は1gあたり約{LP_K24}円前後と歴史的な高値水準にあります（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。大阪にお住まいの方は、この好環境を活かして最高値での売却を目指しましょう。</p>
 
         <p>大阪で金を高く売るために、以下の3つを実践してください。</p>
 

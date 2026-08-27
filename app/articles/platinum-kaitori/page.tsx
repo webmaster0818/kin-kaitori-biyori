@@ -5,6 +5,15 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+/* live-price-consts */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _LPT = goldData.tanaka_official as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const LP_K18 = Math.round(_LPP.k18).toLocaleString();
+const LP_K24 = Math.round(_LPP.k24).toLocaleString();
+const LP_PT = Math.round(_LPT.pt_buyback_per_g).toLocaleString();
+const LP_PT850 = Math.round(_LPT.pt_buyback_per_g * 0.85).toLocaleString();
+const LP_PT900 = Math.round(_LPT.pt_buyback_per_g * 0.9).toLocaleString();
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
@@ -84,7 +93,7 @@ function FaqSchema() {
         name: "プラチナの買取価格は1gいくらですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "2026年4月現在、Pt1000（純プラチナ）の買取価格は1gあたり約5,200〜5,500円、Pt900は約4,700〜5,000円、Pt850は約4,400〜4,700円が目安です。",
+          text: `${LP_DATE}時点、Pt1000（純プラチナ）の買取価格は1gあたり約${LP_PT}円、Pt900は約${LP_PT900}円、Pt850は約${LP_PT850}円が目安です。`,
         },
       },
       {
@@ -92,7 +101,7 @@ function FaqSchema() {
         name: "プラチナと金ではどちらが高いですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "2026年現在は金の方がプラチナよりも高価です。K24（純金）が1gあたり約15,200円に対し、Pt1000（純プラチナ）は約5,300円と、金の約3分の1の価格です。かつてはプラチナの方が高い時代もありましたが、2015年頃から逆転しています。",
+          text: `${LP_DATE}時点は金の方がプラチナよりも高価です。K24（純金）が1gあたり約${LP_K24}円に対し、Pt1000（純プラチナ）は約${LP_PT}円と、金の約${Math.round((_LPP.k24 / _LPT.pt_buyback_per_g) * 10) / 10}分の1の価格です。かつてはプラチナの方が高い時代もありましたが、2015年頃から逆転しています。`,
         },
       },
       {
@@ -182,10 +191,10 @@ export default function PlatinumKaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.95%以上</td><td><strong>約5,200〜5,500円</strong></td><td>インゴット、一部ジュエリー</td></tr>
+                <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.95%以上</td><td><strong>約{LP_PT}円</strong></td><td>インゴット、一部ジュエリー</td></tr>
                 <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約4,900〜5,200円</td><td>海外ジュエリー、ハイブランド</td></tr>
-                <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約4,700〜5,000円</td><td>日本のジュエリー全般</td></tr>
-                <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約4,400〜4,700円</td><td>ネックレスチェーン</td></tr>
+                <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約{LP_PT900}円</td><td>日本のジュエリー全般</td></tr>
+                <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約{LP_PT850}円</td><td>ネックレスチェーン</td></tr>
               </tbody>
             </table>
           </div>
@@ -212,12 +221,12 @@ export default function PlatinumKaitoriPage() {
                 <tr><td>2023年</td><td>約4,200円</td><td>+10.5%</td></tr>
                 <tr><td>2024年</td><td>約4,600円</td><td>+9.5%</td></tr>
                 <tr><td>2025年</td><td>約5,000円</td><td>+8.7%</td></tr>
-                <tr><td>2026年（1〜4月）</td><td>約5,300円</td><td>+6.0%</td></tr>
+                <tr><td>2026年（{LP_DATE}時点）</td><td>約{LP_PT}円</td><td>—</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>プラチナの買取価格は2020年の約2,800円から2026年の約5,300円へと、<strong>6年間で約1.9倍</strong>に上昇しています。金の2.3倍の上昇率には及びませんが、着実な上昇トレンドが続いています。</p>
+          <p>プラチナの買取価格は2020年の約2,800円から{LP_DATE}時点の約{LP_PT}円へと、<strong>約{Math.round((_LPT.pt_buyback_per_g / 2800) * 10) / 10}倍</strong>に上昇しています（田中貴金属の公表買取価格・毎朝自動更新）。</p>
 
           <h2>2026年プラチナ価格高騰の背景</h2>
 
@@ -283,7 +292,7 @@ export default function PlatinumKaitoriPage() {
               </thead>
               <tbody>
                 <tr><td>チェーンネックレス（細め）</td><td>Pt850</td><td>3〜5g</td><td>約13,000〜22,000円</td></tr>
-                <tr><td>チェーンネックレス（太め）</td><td>Pt850</td><td>8〜15g</td><td>約35,000〜66,000円</td></tr>
+                <tr><td>チェーンネックレス（太め）</td><td>Pt850</td><td>8〜15g</td><td>約{Math.round(_LPT.pt_buyback_per_g * 0.85 * 8).toLocaleString()}〜{Math.round(_LPT.pt_buyback_per_g * 0.85 * 15).toLocaleString()}円</td></tr>
                 <tr><td>ペンダントネックレス</td><td>Pt900</td><td>5〜10g</td><td>約24,000〜48,000円</td></tr>
                 <tr><td>喜平ネックレス</td><td>Pt850</td><td>30〜50g</td><td>約132,000〜220,000円</td></tr>
               </tbody>
@@ -327,7 +336,7 @@ export default function PlatinumKaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>現在の価格（1g）</strong></td><td>約15,200円</td><td>約5,300円</td></tr>
+                <tr><td><strong>現在の価格（1g・{LP_DATE}時点）</strong></td><td>約{LP_K24}円</td><td>約{LP_PT}円</td></tr>
                 <tr><td><strong>過去最高値比</strong></td><td>ほぼ最高値圏</td><td>過去最高値（2008年：約7,500円）の約70%</td></tr>
                 <tr><td><strong>6年間の上昇率</strong></td><td>約2.3倍（2020年比）</td><td>約1.9倍（2020年比）</td></tr>
                 <tr><td><strong>今後の見通し</strong></td><td>高止まり〜緩やかな上昇</td><td>水素社会で中長期的な需要拡大</td></tr>
@@ -387,7 +396,7 @@ export default function PlatinumKaitoriPage() {
                 <tr><td><strong>変色</strong></td><td>金は変色しない / K18WGはメッキ剥がれあり</td><td>変色しない</td></tr>
                 <tr><td><strong>磁石反応</strong></td><td>反応しない</td><td>反応しない</td></tr>
                 <tr><td><strong>刻印</strong></td><td>K24, K18, 750 など</td><td>Pt900, Pt950, Pt850 など</td></tr>
-                <tr><td><strong>価格（2026年4月）</strong></td><td>K24: 約15,200円/g</td><td>Pt1000: 約5,300円/g</td></tr>
+                <tr><td><strong>価格（{LP_DATE}時点）</strong></td><td>K24: 約{LP_K24}円/g</td><td>Pt1000: 約{LP_PT}円/g</td></tr>
               </tbody>
             </table>
           </div>
@@ -402,7 +411,7 @@ export default function PlatinumKaitoriPage() {
             <li><strong>刻印：</strong>K18WGは「K18WG」「750」、プラチナは「Pt900」「Pt950」</li>
             <li><strong>重さ：</strong>プラチナの方がわずかに重い（同じサイズなら持ち比べで違いがわかることも）</li>
             <li><strong>メッキ剥がれ：</strong>K18WGは表面のロジウムメッキが経年で剥がれ、黄色っぽくなることがある。プラチナは変色しない</li>
-            <li><strong>価格差：</strong>2026年4月時点ではK18（約11,400円/g）の方がPt900（約4,800円/g）より高い</li>
+            <li><strong>価格差：</strong>{LP_DATE}時点ではK18（約{LP_K18}円/g）の方がPt900（約{LP_PT900}円/g）より高い</li>
           </ul>
 
           <CtaBox />
@@ -454,11 +463,11 @@ export default function PlatinumKaitoriPage() {
             {[
               {
                 q: "プラチナの買取価格は1gいくらですか？",
-                a: "2026年4月現在、Pt1000（純プラチナ）の買取価格は1gあたり約5,200〜5,500円、Pt900は約4,700〜5,000円、Pt850は約4,400〜4,700円が目安です。ただし、国際プラチナ価格と為替レートにより毎日変動します。",
+                a: `${LP_DATE}時点、Pt1000（純プラチナ）の買取価格は1gあたり約${LP_PT}円、Pt900は約${LP_PT900}円、Pt850は約${LP_PT850}円が目安です。ただし、国際プラチナ価格と為替レートにより毎日変動します。`,
               },
               {
                 q: "プラチナと金ではどちらが高いですか？",
-                a: "2026年現在は金の方がプラチナよりも高価です。K24（純金）が1gあたり約15,200円に対し、Pt1000（純プラチナ）は約5,300円と、金の約3分の1の価格です。かつてはプラチナの方が高い時代もありましたが、2015年頃から逆転しています。ただし、ブランドジュエリーの場合はデザインやブランド価値が加算されるため、単純な素材比較だけでは判断できません。",
+                a: `${LP_DATE}時点は金の方がプラチナよりも高価です。K24（純金）が1gあたり約${LP_K24}円に対し、Pt1000（純プラチナ）は約${LP_PT}円と、金の約${Math.round((_LPP.k24 / _LPT.pt_buyback_per_g) * 10) / 10}分の1の価格です。かつてはプラチナの方が高い時代もありましたが、2015年頃から逆転しています。ただし、ブランドジュエリーの場合はデザインやブランド価値が加算されるため、単純な素材比較だけでは判断できません。`,
               },
               {
                 q: "Pt900とPt950の違いは何ですか？",
@@ -496,7 +505,7 @@ export default function PlatinumKaitoriPage() {
 
           <p>プラチナは結婚指輪やダイヤモンドジュエリーに最も多く使われている貴金属です。純度別にPt1000、Pt950、Pt900、Pt850があり、日本ではPt900とPt850が主流です。</p>
 
-          <p>2026年4月現在、プラチナの買取相場はPt1000で<strong>1gあたり約5,200〜5,500円</strong>と上昇トレンドにあります。水素エネルギー社会への移行に伴う需要拡大が中長期的に価格を支えると見られていますが、現在の価格水準でも2020年比で約1.9倍に上昇しており、売却を検討するには十分な水準です。</p>
+          <p>{LP_DATE}時点、プラチナの買取相場はPt1000で<strong>1gあたり約{LP_PT}円</strong>と上昇トレンドにあります（田中貴金属の公表買取価格・毎朝自動更新）。水素エネルギー社会への移行に伴う需要拡大が中長期的に価格を支えると見られていますが、現在の価格水準でも2020年比で約1.9倍に上昇しており、売却を検討するには十分な水準です。</p>
 
           <p>プラチナを高く売るためには、<strong>複数業者への相見積もり</strong>が最も重要です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>でお手持ちのプラチナ製品の価値を確認してみてください。</p>
         </article>
