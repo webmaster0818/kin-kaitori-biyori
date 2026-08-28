@@ -204,7 +204,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             <li><strong>宅配買取：</strong>宅配キットの取り寄せが必要な場合が多い</li>
           </ul>
 
-          <p>店頭・出張・宅配それぞれの特徴は<Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法4つの徹底比較</Link>で解説しています。即日現金化したい方は<Link href="/articles/kin-kaitori-sokujitsu/" className="text-accent hover:underline">即日買取ガイド</Link>もご覧ください。</p>
+          <p>店頭・出張・宅配それぞれの特徴は<Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法4つの徹底比較</Link>で解説しています。即日現金化したい方は<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent hover:underline">即日買取ガイド</Link>もご覧ください。</p>
 
           <CtaBox />
 
