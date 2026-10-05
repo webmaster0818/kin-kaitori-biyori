@@ -211,7 +211,7 @@ export default function HandaKinKaitoriPage() {
         <GoldPriceTrend />
         <ExpertQA category="region" />
         <NearbyAreas pref="愛知県" areas={[{ slug: "aichi-ken-kin-kaitori", label: "愛知県" }, { slug: "anjo-kin-kaitori", label: "安城" }, { slug: "ichinomiya-kin-kaitori", label: "一宮" }, { slug: "kariya-kin-kaitori", label: "刈谷" }, { slug: "kasugai-kin-kaitori", label: "春日井" }, { slug: "komaki-kin-kaitori", label: "小牧" }, { slug: "nagoya-kin-kaitori", label: "名古屋" }, { slug: "nagoya-sakae-kin-kaitori", label: "名古屋・栄" }]} />
-        <RelatedArticles currentSlug="handa-kin-kaitori" relatedSlugs={["nagoya-kin-kaitori", "kariya-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
+        <RelatedArticles currentSlug="handa-kin-kaitori" relatedSlugs={["nagoya-kin-kaitori", "kariya-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi", "toyokawa-kin-kaitori"]} />
 
         <DealerComparisonTable
           heading="半田の金買取で利用できる主要サービス比較"

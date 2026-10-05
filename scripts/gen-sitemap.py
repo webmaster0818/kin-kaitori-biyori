@@ -63,11 +63,9 @@ def main() -> None:
         paths.append(path)
     paths.sort(key=lambda x: (x != "/", x))
 
-    # D: 配布データもsitemapに載せる。
-    #    白書からリンクしているだけでは発見が遅く、引用してもらう前に見つからない。
-    DATA_FILES = ["/data/gold-price-history.csv",
-                  "/data/gold-price-history.json",
-                  "/data/gold-price-index.json"]
+    # ⚠️ 配布データ（/data/*.csv・*.json）は sitemap に載せない。
+    #    HTMLページではないため、公開前チェック [6d]「sitemap にあるが生成されていないURL」で
+    #    不合格になる（2026-10-05）。ファイル自体・白書からのリンク・Dataset 構造化データは残す。
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -75,10 +73,6 @@ def main() -> None:
         cf, pr = rule(path)
         lines.append(f"  <url><loc>{SITE}{path}</loc><lastmod>{lastmod}</lastmod>"
                      f"<changefreq>{cf}</changefreq><priority>{pr}</priority></url>")
-    for f in DATA_FILES:
-        if (OUT / f.lstrip("/")).exists():
-            lines.append(f"  <url><loc>{SITE}{f}</loc><lastmod>{lastmod}</lastmod>"
-                         f"<changefreq>daily</changefreq><priority>0.6</priority></url>")
     lines += ["</urlset>", ""]
     xml = "\n".join(lines)
 

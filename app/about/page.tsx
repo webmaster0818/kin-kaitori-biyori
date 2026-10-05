@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "運営者情報",
   description: "金買取びよりの運営者情報・サイト概要をご案内します。",
+  alternates: { canonical: "https://gold-biyori.com/about/" },
 };
 
 export default function AboutPage() {
@@ -54,7 +55,7 @@ export default function AboutPage() {
             「金買取びより」は、金・貴金属の売却を検討している方に向けて、公正で分かりやすい買取相場情報と業者比較を提供するWebメディアです。
           </p>
           <p className="mb-3">
-            金の買取市場に精通した編集部メンバーが、最新の相場データ、買取業者の特徴、高く売るためのノウハウを多角的な視点から発信しています。
+            金の買取市場に精通した<Link href="/author/" className="text-accent-dark underline hover:text-accent">編集部メンバー</Link>が、最新の相場データ、買取業者の特徴、高く売るためのノウハウを多角的な視点から発信しています。
           </p>
           <p>
             読者一人ひとりの状況に合った最適な売却方法が見つかるよう、中立的な立場で記事を作成しています。

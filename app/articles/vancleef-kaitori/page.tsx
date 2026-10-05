@@ -359,7 +359,7 @@ export default function VancleefKaitoriPage() {
         <ExpertQA category="brand" />
         <RelatedArticles
           currentSlug="vancleef-kaitori"
-          relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "harrywinston-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
+          relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "tiffany-kaitori", "bvlgari-kaitori", "harrywinston-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "brand-jewelry-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

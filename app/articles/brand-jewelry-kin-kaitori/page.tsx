@@ -134,7 +134,7 @@ export default function BrandJewelryKinKaitoriPage() {
         <CtaBox />
         <RelatedArticles
           currentSlug="brand-jewelry-kin-kaitori"
-          relatedSlugs={["cartier-kaitori", "tiffany-kaitori", "kin-kaitori-osusume", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-kaitori-souba"]}
+          relatedSlugs={["cartier-kaitori", "tiffany-kaitori", "kin-kaitori-osusume", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-kaitori-souba", "kintokei-rolex-kaitori"]}
         />
       </article>
     </div>

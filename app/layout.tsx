@@ -22,6 +22,8 @@ const zenMaruGothic = Zen_Maru_Gothic({
 
 const SITE_NAME = "金買取びより";
 const SITE_URL = "https://gold-biyori.com";
+// 全ページ共通のOG画像（scripts/make-og.py で生成。価格などの数字は入れない）
+const OG_IMAGE = { url: "/og-image.png", width: 1200, height: 630, alt: "金買取びより" };
 const SITE_DESCRIPTION =
   "金買取びよりは、金・貴金属の買取相場や高く売るコツを徹底解説するガイドサイトです。K18・K24・プラチナの最新相場から、ヒカカク！・買取大吉・ティファナ・ウリエルなど人気買取業者を比較し、あなたに最適な売却方法が見つかります。";
 
@@ -37,6 +39,13 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -44,11 +53,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} | 金・貴金属買取の比較ガイド`,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} | 金・貴金属買取の比較ガイド`,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -209,6 +220,22 @@ function Footer() {
                   className="hover:text-white transition-colors"
                 >
                   運営者情報
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/author/"
+                  className="hover:text-white transition-colors"
+                >
+                  編集部メンバー紹介
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq/"
+                  className="hover:text-white transition-colors"
+                >
+                  よくある質問
                 </Link>
               </li>
               <li>

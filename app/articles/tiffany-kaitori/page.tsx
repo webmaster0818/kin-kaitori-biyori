@@ -342,7 +342,7 @@ export default function TiffanyKaitoriPage() {
         <ExpertQA category="brand" />
         <RelatedArticles
           currentSlug="tiffany-kaitori"
-          relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "bvlgari-kaitori", "harrywinston-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]}
+          relatedSlugs={["kinseido-kaitori-guide", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-necklace-kaitori", "cartier-kaitori", "bvlgari-kaitori", "harrywinston-kaitori", "vancleef-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "brand-jewelry-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

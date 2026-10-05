@@ -211,7 +211,7 @@ export default function KawagoeKinKaitoriPage() {
         <GoldPriceTrend />
         <ExpertQA category="region" />
         <NearbyAreas pref="埼玉県" areas={[{ slug: "ageo-kin-kaitori", label: "上尾" }, { slug: "asaka-kin-kaitori", label: "朝霞" }, { slug: "fukaya-kin-kaitori", label: "深谷" }, { slug: "kasukabe-kin-kaitori", label: "春日部" }, { slug: "kawaguchi-kin-kaitori", label: "川口" }, { slug: "koshigaya-kin-kaitori", label: "越谷" }, { slug: "kuki-kin-kaitori", label: "久喜" }, { slug: "kumagaya-kin-kaitori", label: "熊谷" }]} />
-        <RelatedArticles currentSlug="kawagoe-kin-kaitori" relatedSlugs={["omiya-kin-kaitori", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
+        <RelatedArticles currentSlug="kawagoe-kin-kaitori" relatedSlugs={["omiya-kin-kaitori", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi", "soka-kin-kaitori"]} />
 
         <DealerComparisonTable
           heading="川越の金買取で利用できる主要サービス比較"

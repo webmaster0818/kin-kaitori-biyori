@@ -211,7 +211,7 @@ export default function HiratsukaKinKaitoriPage() {
         <GoldPriceTrend />
         <ExpertQA category="region" />
         <NearbyAreas pref="神奈川県" areas={[{ slug: "atsugi-kin-kaitori", label: "厚木" }, { slug: "chigasaki-kin-kaitori", label: "茅ヶ崎" }, { slug: "ebina-kin-kaitori", label: "海老名" }, { slug: "fujisawa-kin-kaitori", label: "藤沢" }, { slug: "hadano-kin-kaitori", label: "秦野" }, { slug: "isehara-kin-kaitori", label: "伊勢原" }, { slug: "kamakura-kin-kaitori", label: "鎌倉" }, { slug: "kanagawa-ken-kin-kaitori", label: "神奈川県" }]} />
-        <RelatedArticles currentSlug="hiratsuka-kin-kaitori" relatedSlugs={["fujisawa-kin-kaitori", "yokohama-kin-kaitori", "kaitori-houhou-hikaku", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
+        <RelatedArticles currentSlug="hiratsuka-kin-kaitori" relatedSlugs={["fujisawa-kin-kaitori", "yokohama-kin-kaitori", "kaitori-houhou-hikaku", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi", "odawara-kin-kaitori"]} />
 
         <DealerComparisonTable
           heading="平塚の金買取で利用できる主要サービス比較"

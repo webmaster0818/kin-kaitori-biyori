@@ -204,3 +204,8 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 検証: **lint THIN=5→0（PASS）**・sitemap 110→105・本番で**10本すべて301＋統合先5本すべて200**を確認・Indexing（統合先5=URL_UPDATED／削除5=URL_DELETED）・sitemap再送信OK。
 - ✅ **8/27の30ファイル改修は日次cronで正常稼働**（8/28 11:05のログでビルド成功・K24=24,689に更新・deploy/src両push・エラーログ空）。**モジュール直下に `LP_*` 定数を置いた影響で日次ビルドが壊れる懸念があったが問題なし。**
 - **次に見るもの**: 9月中旬に①②③を再測定。あわせて、統合した5URLがGSCの「リダイレクトあり」に移行するか。
+
+### 2026-10-05 公開前チェック(site-precheck.py)不合格5項目の修正 ✅本番反映済み
+- [1a] /about/ に canonical 追加。[7] 全ページ共通 og:image=`public/og-image.png`（`scripts/make-og.py` で生成・数字なし。layout の openGraph.images。**openGraph を自前で持つページ(author)は継承されないので個別に images 指定**）。[8] `public/favicon.ico`・`public/icon.png`（ヘッダーロゴ縮小）+ layout の icons。
+- [6d] `scripts/gen-sitemap.py` から配布データ3ファイル(/data/*.csv,json)の掲載を削除（日次ジョブがこのスクリプトでsitemapを再生成するため、ここを直さないと翌日戻る）。ファイル本体・白書のリンク・Dataset構造化データは残置。sitemap 108→105。
+- [14] 孤立8ページ解消: フッター「サイト情報」に /author/・/faq/ 追加、/about/ 本文から /author/ へリンク。記事6本は同県・同ブランド・同テーマの記事の relatedSlugs に追加（豊川←名古屋/半田、小田原←藤沢/平塚/厚木、草加←越谷/川越/新座、brand-jewelry←主要5ブランド+金時計、金時計←brand-jewelry/cartier、金メッキ←偽物/純度の見分け方/品位ガイド）。
