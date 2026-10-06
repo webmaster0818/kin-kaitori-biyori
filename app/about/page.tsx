@@ -31,7 +31,7 @@ export default function AboutPage() {
               </tr>
               <tr>
                 <th className="py-3 pr-4 text-left font-medium align-top">URL</th>
-                <td className="py-3">https://kin-kaitori-biyori.pages.dev</td>
+                <td className="py-3">https://gold-biyori.com</td>
               </tr>
               <tr>
                 <th className="py-3 pr-4 text-left font-medium align-top">運営者</th>
@@ -40,10 +40,6 @@ export default function AboutPage() {
               <tr>
                 <th className="py-3 pr-4 text-left font-medium align-top">設立</th>
                 <td className="py-3">2026年4月</td>
-              </tr>
-              <tr>
-                <th className="py-3 pr-4 text-left font-medium align-top">お問い合わせ</th>
-                <td className="py-3">サイト内のお問い合わせフォームよりご連絡ください。</td>
               </tr>
             </tbody>
           </table>
