@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const PAGE_TITLE = "編集部メンバー紹介";
+const PAGE_TITLE = "運営方針とデータの確認手順";
 const PAGE_DESC =
-  "金買取びより編集部の体制と専門領域をご紹介します。貴金属相場・買取業界・金市場分析に精通したスタッフが、相場データの監修・記事のファクトチェック・業者比較を担当しています。";
+  "金買取びよりの運営方針と、掲載している相場・業者・店舗データをどこから取得し、いつ・どのように更新しているかをご説明します。";
 const PAGE_URL = "https://gold-biyori.com/author/";
 const SITE_NAME = "金買取びより";
 const SITE_URL = "https://gold-biyori.com";
@@ -21,63 +21,13 @@ export const metadata: Metadata = {
   },
 };
 
-const AUTHORS = [
-  {
-    role: "編集長 / 監修統括",
-    title: "貴金属相場アナリスト",
-    bio: "金・プラチナ・銀の国際相場と国内買取相場の動向を日次で追跡。田中貴金属・三菱マテリアル・徳力本店など大手地金商の小売・買取価格を継続観測し、各記事の価格データと市場分析を最終監修。",
-    credentials: [
-      "貴金属市場分析 10年以上",
-      "国内主要地金商の小売・買取価格を継続観測",
-      "国際金価格（COMEX / LBMA）と為替動向の連動分析",
-    ],
-  },
-  {
-    role: "買取業者リサーチ担当",
-    title: "シニアリサーチャー",
-    bio: "ヒカカク！・買取大吉・なんぼや・ティファナ・ウリエルなど、国内主要買取業者の店舗網・買取方法・キャンペーン情報・買取実績を継続的に調査。業者比較データを編集部に提供。",
-    credentials: [
-      "国内買取業者 30社以上の継続調査",
-      "店頭・出張・宅配・LINE査定など全買取方式の検証",
-      "口コミ・評判データの収集と精査",
-    ],
-  },
-  {
-    role: "品目・純度ガイド担当",
-    title: "ジュエリー・地金エディター",
-    bio: "K24・K22・K18・K14・K10、プラチナ、銀、ホワイトゴールド、ピンクゴールドなど純度別の特性と買取価格差を解説。インゴット・金貨・ジュエリー・時計などの製品別ガイドを担当。",
-    credentials: [
-      "金製品の刻印・純度判定の実務経験",
-      "ハイブランドジュエリー（カルティエ・ティファニー・ハリーウィンストン等）の市場分析",
-      "金貨・インゴット（メイプルリーフ・ウィーン金貨・田中貴金属バー等）の流通データ精査",
-    ],
-  },
-  {
-    role: "ファクトチェック責任者",
-    title: "シニアエディター",
-    bio: "全記事の数値情報（買取相場・税制・法律情報）を二重チェック。国税庁・財務省・金融庁・大手地金商の公式情報を参照し、誤情報の混入を防止。譲渡所得・支払調書・マイナンバー提出義務等の税務情報を継続フォロー。",
-    credentials: [
-      "編集・校正経験 15年以上",
-      "貴金属関連の税制・法令の継続フォロー",
-      "公式一次情報（国税庁・地金商）の参照徹底",
-    ],
-  },
-];
+const h2Style = {
+  fontSize: "1.375rem",
+  borderLeft: "4px solid var(--accent)",
+  borderBottom: "2px solid var(--accent)",
+} as const;
 
 export default function AuthorPage() {
-  const personSchemas = AUTHORS.map((author) => ({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: `${SITE_NAME}編集部 ${author.role}`,
-    jobTitle: author.title,
-    description: author.bio,
-    worksFor: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
-  }));
-
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -89,11 +39,6 @@ export default function AuthorPage() {
       url: SITE_URL,
     },
     description: PAGE_DESC,
-    member: personSchemas.map((p) => ({
-      "@type": "Person",
-      name: p.name,
-      jobTitle: p.jobTitle,
-    })),
   };
 
   const breadcrumbSchema = {
@@ -101,7 +46,7 @@ export default function AuthorPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "編集部メンバー紹介", item: PAGE_URL },
+      { "@type": "ListItem", position: 2, name: PAGE_TITLE, item: PAGE_URL },
     ],
   };
 
@@ -115,13 +60,6 @@ export default function AuthorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {personSchemas.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
 
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">
@@ -132,155 +70,149 @@ export default function AuthorPage() {
           </li>
           <li className="breadcrumb-sep" />
           <li>
-            <span className="text-foreground">編集部メンバー紹介</span>
+            <span className="text-foreground">{PAGE_TITLE}</span>
           </li>
         </ol>
       </nav>
 
       <h1 className="text-2xl md:text-3xl font-bold mb-2">
-        金買取びより 編集部メンバー紹介
+        {SITE_NAME} {PAGE_TITLE}
       </h1>
-      <p className="text-warm-gray text-sm mb-8">最終更新: 2026年5月27日</p>
-
-      <section className="space-y-6 text-sm leading-relaxed mb-10">
-        <p>
-          「金買取びより」は、金・貴金属の売却を検討している方に向けて、
-          公正で分かりやすい買取相場情報と業者比較を提供するWebメディアです。
-          編集部は、貴金属市場・買取業界・税制・ブランドジュエリーなどの
-          各専門領域を担当する複数のスタッフで構成されています。
-        </p>
-        <p>
-          記事は<strong className="text-accent-dark">編集部全体の合議制</strong>で作成・公開しています。
-          貴金属相場は国際情勢・為替・需給バランスで日々変動するため、個人の判断より複数視点での相互レビューを重視しています。
-        </p>
-      </section>
-
-      <h2
-        className="font-bold mb-6 pb-2 pl-4"
-        style={{
-          fontSize: "1.375rem",
-          borderLeft: "4px solid var(--accent)",
-          borderBottom: "2px solid var(--accent)",
-        }}
-      >
-        編集部メンバー
-      </h2>
-
-      <div className="space-y-5 mb-10">
-        {AUTHORS.map((author, idx) => (
-          <article
-            key={author.role}
-            className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm"
-          >
-            <div className="flex items-start gap-4 mb-4">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0"
-                style={{
-                  background: "linear-gradient(135deg, #C9A84C 0%, #8B6914 100%)",
-                  color: "#FFFEF7",
-                }}
-              >
-                {String(idx + 1).padStart(2, "0")}
-              </div>
-              <div className="flex-1">
-                <h3 className="text-base md:text-lg font-bold mb-1">{author.role}</h3>
-                <p className="text-xs text-accent-dark font-medium">{author.title}</p>
-              </div>
-            </div>
-            <p className="text-sm text-foreground/85 leading-relaxed mb-4">{author.bio}</p>
-            <div className="bg-gold-bg rounded-lg p-4 border border-accent/20">
-              <p className="text-xs font-bold text-warm-gray mb-2">担当領域・実績</p>
-              <ul className="list-disc pl-5 space-y-1 text-xs md:text-sm text-foreground/80">
-                {author.credentials.map((c, i) => (
-                  <li key={i}>{c}</li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <h2
-        className="font-bold mb-4 pb-2 pl-4"
-        style={{
-          fontSize: "1.375rem",
-          borderLeft: "4px solid var(--accent)",
-          borderBottom: "2px solid var(--accent)",
-        }}
-      >
-        編集体制と品質管理
-      </h2>
+      <p className="text-warm-gray text-sm mb-8">最終更新: 2026年10月7日</p>
 
       <section className="space-y-4 text-sm leading-relaxed mb-10">
         <p>
-          各記事は以下の3段階チェックを経て公開しています。
+          「{SITE_NAME}」は、金・貴金属の売却を検討している方に向けて、買取相場の目安と買取業者の比較情報を提供するWebメディアです。
+          運営者は<Link href="/about/" className="text-accent-dark underline hover:text-accent">運営者情報</Link>に記載のとおりです。
         </p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong>リサーチ担当</strong>が買取業者の最新情報・相場データを収集
-          </li>
-          <li>
-            <strong>編集長</strong>が市場分析・価格データの妥当性を監修
-          </li>
-          <li>
-            <strong>ファクトチェック責任者</strong>が数値情報・税制情報を最終確認
-          </li>
-        </ol>
         <p>
-          価格・税制情報は時間とともに変動するため、各記事末尾の「最終更新日」と公式情報（田中貴金属サイト・国税庁・買取業者公式ページ等）を併せてご参照ください。
+          このページでは、個人の執筆者や経歴ではなく、
+          <strong className="text-accent-dark">当サイトが実際に行っている運営方針と、掲載データの取得・更新の手順</strong>
+          を公開しています。記事は編集部名義で作成し、個人名・肩書・経歴は掲載していません。
         </p>
       </section>
 
-      <h2
-        className="font-bold mb-4 pb-2 pl-4"
-        style={{
-          fontSize: "1.375rem",
-          borderLeft: "4px solid var(--accent)",
-          borderBottom: "2px solid var(--accent)",
-        }}
-      >
+      <h2 className="font-bold mb-4 pb-2 pl-4" style={h2Style}>
+        運営方針
+      </h2>
+
+      <section className="space-y-4 text-sm leading-relaxed mb-10">
+        <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-base font-bold mb-2">1. 相場は公表値をもとに算出し、取得日を明記する</h3>
+          <p className="text-foreground/85">
+            金・プラチナ・銀の相場は、田中貴金属が公表している店頭買取価格を取得し、純度別（K24 / K22 / K18 / K14 / K10 など）の1gあたり買取目安を算出しています。
+            相場を表示している箇所には取得日（「○月○日時点」「取得日」）を併記します。
+            算出した目安は「公表値 × 純度の比率」による理論値で、業者ごとの手数料・買取係数・製品の状態は加味していません。実際の査定額とは異なります。
+          </p>
+        </div>
+
+        <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-base font-bold mb-2">2. 業者情報は各社の公式サイトの公開情報のみを使う</h3>
+          <p className="text-foreground/85">
+            買取業者の店舗数・買取方法・対応エリア・手数料などは、各社の公式サイトで確認できる情報だけを掲載し、取得元のURLを出典として保持しています。
+            推測で埋めることはせず、公式に明記がない項目は「不明（要問合せ）」と表記します。
+          </p>
+        </div>
+
+        <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-base font-bold mb-2">3. 店舗情報は公式の店舗ページで実在を確認したものだけを載せる</h3>
+          <p className="text-foreground/85">
+            地域ページの店舗一覧は、各社公式の店舗ページで実在を確認できた店舗のみを掲載し、出典URLと確認日を記録しています。
+            住所が公開されていない店舗や、確認できない店舗は掲載しません。営業時間などは変動するため、来店前に各公式ページをご確認ください。
+          </p>
+        </div>
+
+        <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-base font-bold mb-2">4. 税制・法令は一般的な説明にとどめ、公式情報の確認を案内する</h3>
+          <p className="text-foreground/85">
+            譲渡所得・支払調書・本人確認などの税制・法令に関する記述は、一般的な制度の説明です。個別の申告・手続きの判断には用いず、
+            国税庁などの公式情報をご確認ください。制度は変わることがあるため、記事の最終更新日もあわせてご覧ください。
+          </p>
+        </div>
+
+        <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-base font-bold mb-2">5. 広告と評価を分ける</h3>
+          <p className="text-foreground/85">
+            当サイトはアフィリエイトプログラムに参加しており、記事内のリンク経由でお申し込みがあった場合に紹介報酬が発生することがあります。
+            広告報酬の有無で比較表の内容や評価を変えることはありません。詳細は
+            <Link href="/about/" className="text-accent-dark underline hover:text-accent">運営者情報</Link>
+            をご覧ください。
+          </p>
+        </div>
+      </section>
+
+      <h2 className="font-bold mb-4 pb-2 pl-4" style={h2Style}>
+        データの更新手順
+      </h2>
+
+      <section className="space-y-4 text-sm leading-relaxed mb-10">
+        <p>相場データは、以下の手順で毎日自動更新しています。</p>
+        <div className="bg-gold-bg rounded-lg p-4 border border-accent/20">
+          <p className="text-xs font-bold text-warm-gray mb-2">毎日 11:05 に実行する処理</p>
+          <ol className="list-decimal pl-6 space-y-2 text-foreground/85">
+            <li>田中貴金属の公表ページから、金・プラチナ・銀の店頭買取価格を取得する</li>
+            <li>純度別の1gあたり買取目安を算出し、本日分として保存する（月別の履歴にも追記）</li>
+            <li>サイト全体を再生成し、相場カード・純度別早見表・重量別早見表・トップページの価格表示を本日分に更新する</li>
+            <li>
+              <Link href="/kin-kaitori-hakusho/" className="text-accent-dark underline hover:text-accent">金買取白書</Link>
+              で配布している公開データ（JSON / CSV / 推移指数）と相場ウィジェットを同じ数値で再生成する
+            </li>
+            <li>サイトマップを実際のページ構成から再生成し、公開する</li>
+          </ol>
+        </div>
+        <ul className="list-disc pl-6 space-y-2 text-foreground/85">
+          <li>
+            取得に失敗した日は前回取得分の表示が残ります。表示されている取得日が当日でない場合は、その日付時点の値です。
+          </li>
+          <li>
+            店舗情報は自動更新の対象外です。確認日を記録し、追加・修正のたびに手動で更新しています。
+          </li>
+          <li>
+            各記事には「最終更新日」を表示しています。相場以外の本文（業者情報・税制など）はこの日付を基準に見直しています。
+          </li>
+        </ul>
+      </section>
+
+      <h2 className="font-bold mb-4 pb-2 pl-4" style={h2Style}>
+        掲載していないもの
+      </h2>
+
+      <section className="space-y-2 text-sm leading-relaxed mb-10">
+        <ul className="list-disc pl-6 space-y-2 text-foreground/85">
+          <li>執筆者・監修者の個人名、肩書、経歴、顔写真</li>
+          <li>公式サイトで確認できない買取条件や店舗</li>
+          <li>当サイトが独自に推定した相場（表示している相場はすべて公表値からの算出）</li>
+        </ul>
+      </section>
+
+      <h2 className="font-bold mb-4 pb-2 pl-4" style={h2Style}>
         関連ページ
       </h2>
 
       <ul className="space-y-2 text-sm mb-10">
         <li>
-          <Link
-            href="/about/"
-            className="text-accent-dark hover:text-accent underline"
-          >
+          <Link href="/about/" className="text-accent-dark hover:text-accent underline">
             運営者情報・サイト概要
           </Link>
         </li>
         <li>
-          <Link
-            href="/privacy-policy/"
-            className="text-accent-dark hover:text-accent underline"
-          >
+          <Link href="/privacy-policy/" className="text-accent-dark hover:text-accent underline">
             プライバシーポリシー
           </Link>
         </li>
         <li>
-          <Link
-            href="/terms-of-service/"
-            className="text-accent-dark hover:text-accent underline"
-          >
+          <Link href="/terms-of-service/" className="text-accent-dark hover:text-accent underline">
             利用規約
           </Link>
         </li>
         <li>
-          <Link
-            href="/articles/kin-kaitori-souba/"
-            className="text-accent-dark hover:text-accent underline"
-          >
-            金買取相場一覧 — K24/K18/K14の1gあたり価格
+          <Link href="/kin-kaitori-hakusho/" className="text-accent-dark hover:text-accent underline">
+            金買取白書 — 算出方法と公開データ
           </Link>
         </li>
         <li>
-          <Link
-            href="/articles/kin-takaku-uru/"
-            className="text-accent-dark hover:text-accent underline"
-          >
-            金を高く売る5つのコツ
+          <Link href="/articles/kin-kaitori-souba/" className="text-accent-dark hover:text-accent underline">
+            金買取相場一覧 — K24/K18/K14の1gあたり価格
           </Link>
         </li>
       </ul>
