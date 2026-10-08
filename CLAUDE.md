@@ -209,3 +209,10 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - [1a] /about/ に canonical 追加。[7] 全ページ共通 og:image=`public/og-image.png`（`scripts/make-og.py` で生成・数字なし。layout の openGraph.images。**openGraph を自前で持つページ(author)は継承されないので個別に images 指定**）。[8] `public/favicon.ico`・`public/icon.png`（ヘッダーロゴ縮小）+ layout の icons。
 - [6d] `scripts/gen-sitemap.py` から配布データ3ファイル(/data/*.csv,json)の掲載を削除（日次ジョブがこのスクリプトでsitemapを再生成するため、ここを直さないと翌日戻る）。ファイル本体・白書のリンク・Dataset構造化データは残置。sitemap 108→105。
 - [14] 孤立8ページ解消: フッター「サイト情報」に /author/・/faq/ 追加、/about/ 本文から /author/ へリンク。記事6本は同県・同ブランド・同テーマの記事の relatedSlugs に追加（豊川←名古屋/半田、小田原←藤沢/平塚/厚木、草加←越谷/川越/新座、brand-jewelry←主要5ブランド+金時計、金時計←brand-jewelry/cartier、金メッキ←偽物/純度の見分け方/品位ガイド）。
+
+### 2026-10-08 「ヒカカク 金買取 口コミ／貴金属 評判」受け皿 新規（MediaXAI指示・3サイト横断） ✅本番反映済み
+- title検索で `ikkatsu-satei-hikaku`（一括査定サイト5社比較）がヒットしたが、主題は複数サービス比較で「ヒカカク 口コミ」とは意図が別＝強化ではなく**新規** `/articles/hikakaku-kin-kaitori-kuchikomi/`（category=compare）を作り、比較記事と相互リンク（重複ではない）
+- 一次情報は hikakaku.com 生HTML（使い方・FAQ・規約・運営者・古物表記・公式クチコミ・貴金属カテゴリ=1,082社/16,406点・買取実績10円〜15,000,000円）。口コミは公式クチコミページの評価分布＋傾向のみ（総合3.4・1,083件）。金特有の切り口=刻印/重量の入力、相場連動なので差は係数・手数料、200万円超マイナンバー、出張時の身分証確認
+- 内部リンク元6本: ikkatsu-satei-hikaku / kin-kaitori-osusume / kaitori-houhou-hikaku / kin-takaku-uru / kin-kaitori-hajimete / kin-kaitori-sagi（`<CtaBox />`直後1文＋relatedSlugs先頭）。gen-sitemap.py 106 URL
+- precheck ✅全項目OK（descは149字に短縮済・og:image明示）。deploy 3e43ac73b
+- 注意: ikkatsu-satei-hikaku の比較表「ヒカカク 700社以上」は公式カテゴリ表記（貴金属1,082社・全体はカテゴリ毎）と整合していない。今回は触っていない＝別途見直し候補
