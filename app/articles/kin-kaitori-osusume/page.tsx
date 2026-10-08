@@ -121,6 +121,7 @@ export default function KinKaitoriOsusumePage() {
         <p className="text-sm text-warm-gray">※手数料・エリアは各社公式サイトの記載を当サイトが直接確認したものです（2026年7月時点）。8社のより詳しい手数料比較は<Link href="/articles/kin-kaitori-tesuryo-hikaku/">手数料8社比較</Link>、買取方法自体の違いは<Link href="/articles/kaitori-houhou-hikaku/">方法4つの比較</Link>をご覧ください。</p>
 
         <CtaBox />
+          <p>一括査定サービスそのものの評判や注意点（キャンセル方法・電話連絡・個人情報）は <Link href="/articles/hikakaku-kin-kaitori-kuchikomi/">ヒカカクの金買取 口コミ・評判</Link> で公式クチコミの傾向を出典付きで整理しています。</p>
 
         <h2 id="how-to-choose">失敗しない金買取業者の選び方 5つの基準</h2>
         <ol>
@@ -182,7 +183,7 @@ export default function KinKaitoriOsusumePage() {
         <CtaBox />
         <RelatedArticles
           currentSlug="kin-kaitori-osusume"
-          relatedSlugs={["nagoya-kin-kaitori", "kin-takaku-uru", "kin-kaitori-tesuryo-hikaku", "kaitori-houhou-hikaku", "kin-uridoki-2026", "kin-kaitori-souba", "kin-kaitori-hajimete"]}
+          relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "nagoya-kin-kaitori", "kin-takaku-uru", "kin-kaitori-tesuryo-hikaku", "kaitori-houhou-hikaku", "kin-uridoki-2026", "kin-kaitori-souba", "kin-kaitori-hajimete"]}
         />
       </article>
     </div>

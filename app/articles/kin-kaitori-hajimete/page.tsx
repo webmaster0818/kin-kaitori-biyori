@@ -159,6 +159,7 @@ export default function KinKaitoriHajimetePage() {
         <p>信頼できる業者は、計算の根拠を<strong>すべて説明</strong>してくれます。根拠を示さず金額だけ提示する業者は避けましょう。</p>
 
         <CtaBox />
+          <p>一括査定サービスそのものの評判や注意点（キャンセル方法・電話連絡・個人情報）は <Link href="/articles/hikakaku-kin-kaitori-kuchikomi/">ヒカカクの金買取 口コミ・評判</Link> で公式クチコミの傾向を出典付きで整理しています。</p>
 
         <h2>ステップ4：売却の判断</h2>
         <h3>売る場合</h3>
@@ -226,7 +227,7 @@ export default function KinKaitoriHajimetePage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kin-kaitori-hajimete"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-sagi", "kin-kaitori-souba", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
+          relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-sagi", "kin-kaitori-souba", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>

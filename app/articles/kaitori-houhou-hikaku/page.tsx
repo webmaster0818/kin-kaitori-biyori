@@ -346,6 +346,7 @@ export default function KaitoriHouhouHikakuPage() {
         </div>
 
         <CtaBox />
+          <p>一括査定サービスそのものの評判や注意点（キャンセル方法・電話連絡・個人情報）は <Link href="/articles/hikakaku-kin-kaitori-kuchikomi/">ヒカカクの金買取 口コミ・評判</Link> で公式クチコミの傾向を出典付きで整理しています。</p>
 
         <h2>出張買取のトラブル事例と対策</h2>
 
@@ -446,7 +447,7 @@ export default function KaitoriHouhouHikakuPage() {
         <ExpertQA category="howto" />
         <RelatedArticles
           currentSlug="kaitori-houhou-hikaku"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
+          relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
         />
 
         <DealerComparisonTable
