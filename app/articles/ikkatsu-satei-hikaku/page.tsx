@@ -31,7 +31,7 @@ function ArticleSchema() {
     headline: "【2026年最新】金買取の一括査定サイト比較｜ヒカカク・うるココ等の特徴と選び方",
     description: "金買取の一括査定サイト主要5社（ヒカカク、うるココ、買取コネクト等）を徹底比較。提携業者数、対応エリア、利用方法、おすすめ用途別を完全解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-10-09",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -112,7 +112,7 @@ export default function Page() {
             <table>
               <thead><tr><th>サイト名</th><th>提携業者数</th><th>強み</th></tr></thead>
               <tbody>
-                <tr><td>ヒカカク！</td><td>700社以上</td><td>業界最大級、ジュエリー専門業者も多数</td></tr>
+                <tr><td>ヒカカク！</td><td>貴金属・宝石カテゴリ 1,082社（公式表記・2026年10月9日確認）</td><td>業界最大級、ジュエリー専門業者も多数</td></tr>
                 <tr><td>うるココ</td><td>150社以上</td><td>専門査定士が多く、丁寧な対応</td></tr>
                 <tr><td>買取コネクト</td><td>100社以上</td><td>金専門業者にフォーカス</td></tr>
                 <tr><td>サイトポリス</td><td>50社以上</td><td>店頭・宅配・出張すべて対応</td></tr>
@@ -120,6 +120,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
+          <p className="text-xs text-warm-gray">※ ヒカカク！の社数は公式の「貴金属・宝石の買取価格を比較」ページのタイトル表記（16,409点・1,082社、2026年10月9日確認）。ヒカカク！はカテゴリごとに掲載社数を表示しており、サイト全体の提携社数は公表されていません。</p>
 
           <h2>3. 一括査定のメリット・デメリット</h2>
           <p><strong>メリット:</strong></p>
