@@ -216,3 +216,10 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 内部リンク元6本: ikkatsu-satei-hikaku / kin-kaitori-osusume / kaitori-houhou-hikaku / kin-takaku-uru / kin-kaitori-hajimete / kin-kaitori-sagi（`<CtaBox />`直後1文＋relatedSlugs先頭）。gen-sitemap.py 106 URL
 - precheck ✅全項目OK（descは149字に短縮済・og:image明示）。deploy 3e43ac73b
 - 注意: ikkatsu-satei-hikaku の比較表「ヒカカク 700社以上」は公式カテゴリ表記（貴金属1,082社・全体はカテゴリ毎）と整合していない。今回は触っていない＝別途見直し候補
+
+### 2026-10-09 /author/ 差し替え（10/8 宣言の既定案を回答なしのため実行） ✅本番反映済み
+- `wip/author-policy`（1c278b6）を main に cherry-pick → d4ad71b。main 側は author/page.tsx・layout.tsx を触っていなかったため競合なし
+- 内容: 実在確認できない編集部メンバー4名分の肩書・経歴・Person構造化データを削除。/author/ は「運営方針とデータの確認手順」（Organization＋BreadcrumbList のみ）に差し替え。フッター「サイト情報」のリンク文言も「編集部メンバー紹介」→「運営方針・データの確認手順」
+- ビルド後 out/ 全体 grep（実数）: `Person` 0 / `jobTitle` 0 / `knowsAbout` 0 / `市場分析` 0 / 旧肩書4種（監修統括・貴金属相場アナリスト・買取業者リサーチ担当・品目・純度ガイド担当）0。残ヒットは `10年以上` 2件=kin-takaku-uru の「業者の運営歴」の話、`編集部メンバー` 2件=/about/（P3・未着手）、`経歴` 6件=新 /author/ の「掲載していません」の否定文のみ
+- precheck ✅全項目OK（296ページ・Organization 297/Article 285・Person なし）。sitemap 106（変化なし）。deploy 5095daa9f（09:19 push・09:20 に本番反映確認: title/Person 0/監修統括 0/フッター）
+- 未着手（判断待ち）: P3=/about/ の「金の買取市場に精通した編集部メンバー」文言、法人名の追加
