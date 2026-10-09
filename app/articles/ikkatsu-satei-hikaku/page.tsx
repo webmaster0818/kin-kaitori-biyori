@@ -50,7 +50,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u4e00\u62ec\u67fb\u5b9a\u306e\u5229\u7528\u306b\u8cbb\u7528\u306f\u304b\u304b\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5b8c\u5168\u7121\u6599\u3002\u8907\u6570\u696d\u8005\u306e\u898b\u7a4d\u3082\u308a\u3082\u3001\u6700\u7d42\u7684\u306b\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u3066\u3082\u6599\u91d1\u306f\u767a\u751f\u3057\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u4e00\u62ec\u67fb\u5b9a\u306e\u898b\u7a4d\u3082\u308a\u306f\u6b63\u78ba\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Web\u67fb\u5b9a\u306e\u305f\u3081\u6982\u7b97\u3002\u5b9f\u7269\u67fb\u5b9a\u3067\u91d1\u984d\u304c\u5909\u308f\u308b\u53ef\u80fd\u6027\u304c\u3042\u308b\u65e8\u3092\u7406\u89e3\u3057\u3066\u304a\u304f\u3068\u5b89\u5fc3\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u3069\u306e\u30b5\u30a4\u30c8\u3092\u4f7f\u3046\u306e\u304c\u4e00\u756a\u304a\u3059\u3059\u3081\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u63d0\u643a\u696d\u8005\u6570\u304c\u591a\u3044\u30d2\u30ab\u30ab\u30af\uff01\u304c\u521d\u5fc3\u8005\u5411\u3051\u3002\u5c02\u9580\u67fb\u5b9a\u91cd\u8996\u306a\u3089\u3046\u308b\u30b3\u30b3\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u898b\u7a4d\u3082\u308a\u5f8c\u3001\u5fc5\u305a\u58f2\u3089\u306a\u3044\u3068\u3044\u3051\u306a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5168\u3066\u306e\u4e00\u62ec\u67fb\u5b9a\u30b5\u30a4\u30c8\u3067\u30ad\u30e3\u30f3\u30bb\u30eb\u7121\u6599\u3002\u898b\u7a4d\u3082\u308a\u3060\u3051\u53d6\u5f97\u3057\u58f2\u3089\u306a\u3044\u3053\u3068\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u8907\u6570\u306e\u30b5\u30a4\u30c8\u306b\u540c\u6642\u306b\u4f9d\u983c\u3057\u3066\u3082\u3044\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u3080\u3057\u308d\u8907\u6570\u30b5\u30a4\u30c8\u3067\u91cd\u8907\u3057\u306a\u3044\u696d\u8005\u306e\u898b\u7a4d\u3082\u308a\u3092\u96c6\u3081\u308b\u65b9\u304c\u52b9\u679c\u7684\u3002\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u4e00\u62ec\u67fb\u5b9a\u306e\u5229\u7528\u306b\u8cbb\u7528\u306f\u304b\u304b\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5b8c\u5168\u7121\u6599\u3002\u8907\u6570\u696d\u8005\u306e\u898b\u7a4d\u3082\u308a\u3082\u3001\u6700\u7d42\u7684\u306b\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u3066\u3082\u6599\u91d1\u306f\u767a\u751f\u3057\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u4e00\u62ec\u67fb\u5b9a\u306e\u898b\u7a4d\u3082\u308a\u306f\u6b63\u78ba\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Web\u67fb\u5b9a\u306e\u305f\u3081\u6982\u7b97\u3002\u5b9f\u7269\u67fb\u5b9a\u3067\u91d1\u984d\u304c\u5909\u308f\u308b\u53ef\u80fd\u6027\u304c\u3042\u308b\u65e8\u3092\u7406\u89e3\u3057\u3066\u304a\u304f\u3068\u5b89\u5fc3\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u3069\u306e\u30b5\u30a4\u30c8\u3092\u4f7f\u3046\u306e\u304c\u4e00\u756a\u304a\u3059\u3059\u3081\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u8cb4\u91d1\u5c5e\u30ab\u30c6\u30b4\u30ea\u306e\u63b2\u8f09\u793e\u6570\u3092\u516c\u5f0f\u306b\u793a\u3057\u3066\u3044\u308b\u30d2\u30ab\u30ab\u30af\uff01\uff081,082\u793e\u30fb2026\u5e7410\u67089\u65e5\u78ba\u8a8d\uff09\u304c\u6bd4\u3079\u3084\u3059\u3044\u9078\u629e\u80a2\u3067\u3059\u3002\u4ed6\u306e\u30b5\u30fc\u30d3\u30b9\u306f\u63b2\u8f09\u793e\u6570\u306e\u516c\u5f0f\u8868\u8a18\u3092\u78ba\u8a8d\u3067\u304d\u3066\u3044\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u898b\u7a4d\u3082\u308a\u5f8c\u3001\u5fc5\u305a\u58f2\u3089\u306a\u3044\u3068\u3044\u3051\u306a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5168\u3066\u306e\u4e00\u62ec\u67fb\u5b9a\u30b5\u30a4\u30c8\u3067\u30ad\u30e3\u30f3\u30bb\u30eb\u7121\u6599\u3002\u898b\u7a4d\u3082\u308a\u3060\u3051\u53d6\u5f97\u3057\u58f2\u3089\u306a\u3044\u3053\u3068\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u8907\u6570\u306e\u30b5\u30a4\u30c8\u306b\u540c\u6642\u306b\u4f9d\u983c\u3057\u3066\u3082\u3044\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u3080\u3057\u308d\u8907\u6570\u30b5\u30a4\u30c8\u3067\u91cd\u8907\u3057\u306a\u3044\u696d\u8005\u306e\u898b\u7a4d\u3082\u308a\u3092\u96c6\u3081\u308b\u65b9\u304c\u52b9\u679c\u7684\u3002\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -113,14 +113,14 @@ export default function Page() {
               <thead><tr><th>サイト名</th><th>提携業者数</th><th>強み</th></tr></thead>
               <tbody>
                 <tr><td>ヒカカク！</td><td>貴金属・宝石カテゴリ 1,082社（公式表記・2026年10月9日確認）</td><td>業界最大級、ジュエリー専門業者も多数</td></tr>
-                <tr><td>うるココ</td><td>150社以上</td><td>専門査定士が多く、丁寧な対応</td></tr>
-                <tr><td>買取コネクト</td><td>100社以上</td><td>金専門業者にフォーカス</td></tr>
-                <tr><td>サイトポリス</td><td>50社以上</td><td>店頭・宅配・出張すべて対応</td></tr>
-                <tr><td>ウリドキ</td><td>200社以上</td><td>口コミレビューが充実</td></tr>
+                <tr><td>うるココ</td><td>公式に記載なし（一括査定サービスとしての公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
+                <tr><td>買取コネクト</td><td>公式に記載なし（公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
+                <tr><td>サイトポリス</td><td>公式に記載なし（公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
+                <tr><td>ウリドキ</td><td>公式に記載なし（提携社数の表記なし。1商品の査定は「最大10社」と公式表記・2026年10月9日確認）</td><td>口コミレビューが充実</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-warm-gray">※ ヒカカク！の社数は公式の「貴金属・宝石の買取価格を比較」ページのタイトル表記（16,409点・1,082社、2026年10月9日確認）。ヒカカク！はカテゴリごとに掲載社数を表示しており、サイト全体の提携社数は公表されていません。</p>
+          <p className="text-xs text-warm-gray">※ 社数は2026年10月9日に各社の公式サイトで確認しました。ヒカカク！は公式の「貴金属・宝石の買取価格を比較」ページのタイトル表記（16,409点・1,082社）で、カテゴリごとに掲載社数を表示しており、サイト全体の提携社数は公表されていません。ウリドキは公式の金・ジュエリー買取ページに提携社数の記載がなく、「最大10社」（2024年4月〜2026年3月の実績に基づく、と注記）が1商品あたりの査定社数です。うるココ・買取コネクト・サイトポリスは一括査定サービスとしての公式サイトを確認できなかったため、以前載せていた社数（150社以上・100社以上・50社以上）と特徴を削除しました。</p>
 
           <h2>3. 一括査定のメリット・デメリット</h2>
           <p><strong>メリット:</strong></p>
@@ -162,7 +162,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>どのサイトを使うのが一番おすすめ？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">提携業者数が多いヒカカク！が初心者向け。専門査定重視ならうるココ。</p>
+  <p className="mt-3 text-sm leading-relaxed">貴金属カテゴリの掲載社数を公式に示しているヒカカク！（1,082社・2026年10月9日確認）が比べやすい選択肢です。他のサービスは掲載社数の公式表記を確認できていません。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>見積もり後、必ず売らないといけない？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>

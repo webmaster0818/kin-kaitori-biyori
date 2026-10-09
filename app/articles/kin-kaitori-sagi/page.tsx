@@ -27,7 +27,7 @@ function BreadcrumbSchema() {
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金買取で最も多い詐欺の手口は？", acceptedAnswer: { "@type": "Answer", text: "最も多いのは突然の訪問買取です。「不用品を買い取ります」と訪問し、貴金属を相場より大幅に安い価格で買い取る手口です。国民生活センターにも多くの相談が寄せられています。" } },
-    { "@type": "Question", name: "訪問買取で売ってしまった場合、取り消せますか？", acceptedAnswer: { "@type": "Answer", text: "はい、クーリングオフ制度を利用できます。訪問買取の場合、契約日から8日以内であれば無条件で契約を撤回し、品物を返してもらえます。書面で通知する必要があります。" } },
+    { "@type": "Question", name: "訪問買取で売ってしまった場合、取り消せますか？", acceptedAnswer: { "@type": "Answer", text: "はい、自宅などに来てもらって売った場合（訪問購入）は、自分で業者を呼んだときも含めてクーリング・オフの対象です。法律で決められた書面を受け取った日から数えて8日以内なら、書面または電子メール等の電磁的記録で契約を解除でき、品物と代金は業者の負担で返し合います。金・貴金属は対象外の品目に入っていません。" } },
     { "@type": "Question", name: "金買取業者が信頼できるか見分ける方法は？", acceptedAnswer: { "@type": "Answer", text: "古物商許可番号を提示しているか、査定料・手数料が明確か、買取価格の根拠を説明してくれるか、を確認しましょう。大手チェーン（買取大吉、おたからや等）や一括査定サービス（ヒカカク！）を利用するのが安全です。" } },
     { "@type": "Question", name: "金の買取価格が相場より安いと感じたらどうすべき？", acceptedAnswer: { "@type": "Answer", text: "その場で売却せず、複数の業者に見積もりを取りましょう。田中貴金属など地金商のWebサイトで当日の相場を確認し、提示された価格が相場の90%以上かどうかをチェックしてください。" } },
     { "@type": "Question", name: "宅配買取のトラブルで多いケースは？", acceptedAnswer: { "@type": "Answer", text: "宅配買取では、安い査定額を提示された上で「キャンセルの場合は返送料をご負担ください」と言われるケースがあります。事前にキャンセル時の返送料が無料かどうかを確認しましょう。" } },
@@ -36,7 +36,7 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", datePublished: "2026-04-24", dateModified: "2026-10-09", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -187,13 +187,16 @@ export default function KinKaitoriSagiPage() {
         <h2>被害に遭ったときの対処法</h2>
 
         <h3>クーリングオフ（訪問買取の場合）</h3>
-        <p>訪問買取（出張買取で自分から依頼したものを除く）で売却してしまった場合、<strong>契約日から8日以内</strong>であればクーリングオフが可能です。</p>
+        <p>自宅などに来てもらって売った場合（特定商取引法の「訪問購入」）は、<strong>法律で決められた書面を受け取った日から数えて8日以内</strong>であればクーリング・オフができます。<strong>自分でネットや電話で出張買取を頼んだ場合も対象</strong>です。法律の適用除外は、営業として売る場合や、引っ越しなどで住居を退去する際に自分から取引を持ちかけた場合などに限られ、「自分で呼んだかどうか」では外れません（消費者庁「特定商取引法ガイド 訪問購入」）。国民生活センターにも、ネットで探した出張買取業者に金のネックレスを売り、クーリング・オフできるかという相談が寄せられています。</p>
+        <p>対象外になるのは品目で、<strong>自動車（二輪を除く）・家電（持ち運びが容易なものを除く）・家具・書籍・有価証券・CD/DVD/ゲームソフト</strong>などは政令で訪問購入のルールから除かれています。<strong>金・貴金属・宝石は除外品目に入っていない</strong>ので、出張買取で売った金製品は対象です。店頭に自分で持ち込んだ買取と、宅配買取は訪問購入に当たらず対象外です。書面を受け取っていない場合や、業者がうそを言ったり脅したりしてクーリング・オフを妨げた場合は、8日を過ぎても可能です。</p>
         <ol>
-          <li>契約書に記載された業者の住所宛に<strong>書面（ハガキまたは内容証明郵便）</strong>で通知する</li>
+          <li>受け取った書面に記載された業者宛に、<strong>書面（特定記録郵便・簡易書留・内容証明郵便など）または電子メール等の電磁的記録</strong>で通知する（送った証拠を残す）</li>
           <li>書面には「契約を解除します」と明記し、契約日・品名・金額を記載する</li>
-          <li>業者は品物を返還する義務がある</li>
-          <li>クーリングオフ期間中、業者は品物を転売してはならない</li>
+          <li>業者の負担で品物が返され、受け取った代金は返す（利息・違約金は不要）</li>
+          <li>クーリング・オフ期間中は<strong>品物の引き渡しを拒める</strong>。業者が期間中に第三者へ渡したときは売り手に通知する義務があり、解除の効果は原則としてその第三者にも及ぶ</li>
         </ol>
+
+        <p className="text-xs text-warm-gray">出典（2026年10月9日確認）：<a href="https://www.no-trouble.caa.go.jp/what/doortodoorpurchases/" target="_blank" rel="noopener noreferrer">消費者庁「特定商取引法ガイド 訪問購入」</a>（定義・適用除外・クーリング・オフ・引渡しの拒絶）／<a href="https://www.no-trouble.caa.go.jp/pdf/20230421la02_10.pdf" target="_blank" rel="noopener noreferrer">消費者庁「特定商取引に関する法律施行令第34条で規定する物品の具体例」</a>（対象外の品目）／<a href="https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html" target="_blank" rel="noopener noreferrer">国民生活センター「訪問購入（各種相談の件数や傾向）」</a>（相談事例）</p>
 
         <h3>相談窓口</h3>
         <div className="table-wrapper">
@@ -211,7 +214,7 @@ export default function KinKaitoriSagiPage() {
         <div className="space-y-3 not-prose">
           {[
             { q: "金買取で最も多い詐欺の手口は？", a: "突然の訪問買取（押し買い）が最も多いです。不用品回収を名目に訪問し、金を相場より大幅に安い価格で買い取る手口です。" },
-            { q: "訪問買取で売ってしまった場合、取り消せますか？", a: "はい、クーリングオフ制度で契約日から8日以内であれば無条件で撤回できます。書面で業者に通知する必要があります。" },
+            { q: "訪問買取で売ってしまった場合、取り消せますか？", a: "はい、自宅などに来てもらって売った場合は、自分で業者を呼んだときも含めてクーリング・オフの対象です。法律で決められた書面を受け取った日から8日以内に、書面または電子メール等で通知します。金・貴金属は対象外の品目に入っていません。" },
             { q: "信頼できる業者の見分け方は？", a: "古物商許可番号の明示、手数料の透明性、査定価格の根拠説明、口コミ・評判の確認がポイントです。" },
             { q: "相場より安い価格を提示されたらどうすべき？", a: "その場で売らず、必ず複数の業者に見積もりを取りましょう。田中貴金属のWebサイト等で当日の相場を確認してください。" },
             { q: "宅配買取は安全ですか？", a: "大手業者であれば安全です。ただし、キャンセル時の返送料が無料かどうかを事前に確認しましょう。" },
