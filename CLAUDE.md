@@ -243,3 +243,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - nagoya-kin-kaitori:「名古屋市消費生活センターにもこうした相談が寄せられています」→ 名古屋市消費生活センター「なごや見守り情報」R6.10.25（不用品買取の電話→来訪業者が「貴金属はないか」→指輪・ネックレスまで買取、相談が後を絶たない）を出典リンク付きで記載
 - 同種表現 grep: 「押し買いはありません／コンプライアンスが徹底」0件。エリア208本の「押し買いのトラブルが各地で報告」は国民生活センターの相談件数で裏付けがあるため据え置き
 - precheck ✅（296頁）。source cc848f3 / deploy 8d03e65dd。本番で旧文言0・新文言反映。⚠️Indexing API は 429（当日クォータ超過）＝翌日再送が必要
+
+### 2026-10-10 業者紹介記事 GSC表示上位5本の業者事実を公式生HTMLと突合（朝ルーチン） ✅本番反映済み
+- 対象（GSC 28日 表示・業者紹介セクション/比較表を持つ記事）: k22-kaitori 264 / k14-kaitori 235 / kin-kaitori-hajimete 174 / kin-kaitori-tetsuzuki-guide 128（DealerComparisonTable=data/dealers.ts 7社）/ kin-bracelet-kaitori 73
+- 一次情報（10/10 取得の生HTML）: kaitori-daikichi.jp（TOP・/company/・/list/gold/・/syuttyou-kaitori/）、uriel-cuore.co.jp（TOP・/company/・/gold/）、tifana.net（TOP・/faq/・/metals/・/company/）、hikakaku.com（よくあるご質問・貴金属カテゴリ）、nanboya.com、sanoya.co.jp/gold/、kinkaimasu.jp、otakaraya.jp、kaitori.brandrevalue.jp/flow/、kikinzokukaitori.jp（TOP・/shop/）
+- 訂正: ①買取大吉「全国600店舗以上」→**2,400店舗以上**（公式全ページ表記）k22/k14/bracelet/hajimete ②ウリエル「出張買取に特化」→出張中心＋宅配対応、出張は沖縄県など対象外あり ③ティファナに出張エリア（東京・埼玉・神奈川の一部、公式FAQ）を追記 ④hajimete FAQ「4社とも査定料・出張費・キャンセル料無料」→大吉・ティファナ・ウリエルは公式明記／ヒカカク！は一括査定が無料で、査定・キャンセルは各業者と直接（公式FAQ）（JSON-LD＋本文＋持ち物欄の3箇所） ⑤dealers.ts: 大吉 1,900→2,400（出張は離島等対象外の場合あり）、おたからや 1,780→世界約2,060（2026年10月時点）、七福神 16→17店舗（千葉2）※DealerComparisonTable は223ページで使用＝全ページに波及
+- 確認不可（値は変えず）: ヒカカク「K22・K21.6対応」「K14WG/PG全カラー対応」、大吉「蛍光X線で純度測定」（公式は「比重などを用いて品位を特定」）、bracelet 大吉「喜平・バングル実績豊富」、dealers.ts の店頭査定時間（大吉/なんぼや10〜15分・さのや数分・おたからや最短5分）、おたからや出張費、七福神/ブラリバのキャンセル料、さのやの出張エリア
+- 範囲外で同じ問題（未修正・件数のみ）: 「600店舗」残り **23箇所/16ファイル**（トップ・k18/k10/k24・osusume・各ブランド等）、「ウリエルは出張買取に特化」**6ファイル**、「4社とも無料」型の記述 **4ファイル**（トップ・/faq/・nobebo・sagi）、tetsuzuki-guide の身分証に「健康保険証」（大吉公式は 2025-12-02 以降の従来の保険証を身分証として不可と告知）2箇所
+- precheck ✅全項目OK（296頁）。source e4ee2b8 / deploy 2941ca61b
