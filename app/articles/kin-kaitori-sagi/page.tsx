@@ -49,7 +49,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">安心・安全な買取業者はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">以下の4社は査定料・手数料すべて無料。信頼できる大手業者です。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">買取大吉・ティファナ・ウリエルは査定料・手数料の無料を公式に明記。ヒカカク！は一括査定の利用が無料で、手数料は申し込み先の業者ごとに確認してください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>

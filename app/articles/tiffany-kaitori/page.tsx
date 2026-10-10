@@ -267,7 +267,7 @@ export default function TiffanyKaitoriPage() {
               <tr>
                 <td><strong>買取大吉</strong></td>
                 <td>店頭買取</td>
-                <td>全国600店舗以上。ティファニーのシルバーからK18まで幅広く対応</td>
+                <td>全国2,400店舗以上。ティファニーのシルバーからK18まで幅広く対応</td>
                 <td>即現金化したい</td>
               </tr>
               <tr>

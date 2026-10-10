@@ -351,7 +351,7 @@ export default function CartierKaitoriPage() {
               <tr>
                 <td><strong>買取大吉</strong></td>
                 <td>店頭買取</td>
-                <td>全国600店舗以上でカルティエの査定OK。その場で現金化できる即日対応</td>
+                <td>全国2,400店舗以上でカルティエの査定OK。その場で現金化できる即日対応</td>
                 <td>即現金化したい</td>
               </tr>
               <tr>

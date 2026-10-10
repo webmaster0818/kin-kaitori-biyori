@@ -215,11 +215,11 @@ export default function KinYubiwaKaitoriPage() {
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数業者に一括査定。指輪の写真を送るだけで概算査定を受けられます。宝石付き・ブランドリングも対応。</p>
 
-        <h3>買取大吉 — 全国600店舗で即現金化</h3>
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国600店舗以上で予約不要。その場で計量・査定し即現金化。ブランドリングの査定にも対応しています。</p>
+        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上で予約不要。その場で計量・査定し即現金化。ブランドリングの査定にも対応しています。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
-        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取に特化。遺品整理で見つかった指輪の大量査定にも便利です。出張費・査定料・キャンセル料すべて無料。</p>
+        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（宅配買取にも対応。出張買取は沖縄県など一部対象外の地域あり）。遺品整理で見つかった指輪の大量査定にも便利です。出張費・査定料・キャンセル料すべて無料。</p>
 
         <h3>ティファナ — 3つの方法から選べる</h3>
         <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法対応。忙しくて店に行けない方は宅配買取が便利です。</p>

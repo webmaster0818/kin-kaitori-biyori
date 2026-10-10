@@ -254,19 +254,19 @@ export default function K10KaitoriPage() {
           <li>査定料・利用料すべて無料</li>
         </ul>
 
-        <h3>買取大吉 — 全国600店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
 
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国に600店舗以上を展開する大手買取チェーンです。店頭に持ち込めば、その場で査定・即現金化できます。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国に2,400店舗以上を展開する大手買取チェーンです。店頭に持ち込めば、その場で査定・即現金化できます。</p>
 
         <ul>
-          <li>全国600店舗以上（予約不要）</li>
+          <li>全国2,400店舗以上（予約不要）</li>
           <li>蛍光X線分析装置で正確な純度測定</li>
           <li>査定料・出張費すべて無料</li>
         </ul>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
-        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取に特化したサービスです。自宅にいながらプロの査定を受けられるため、量が多い場合や外出が難しい場合に便利です。</p>
+        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（宅配買取にも対応。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられるため、量が多い場合や外出が難しい場合に便利です。</p>
 
         <ul>
           <li>出張費・査定料すべて無料</li>

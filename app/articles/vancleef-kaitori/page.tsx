@@ -297,7 +297,7 @@ export default function VancleefKaitoriPage() {
               <tr>
                 <td><strong>買取大吉</strong></td>
                 <td>店頭買取</td>
-                <td>全国600店舗以上。即日現金化可能</td>
+                <td>全国2,400店舗以上。即日現金化可能</td>
                 <td>即現金化したい</td>
               </tr>
               <tr>

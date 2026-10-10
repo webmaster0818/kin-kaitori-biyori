@@ -446,7 +446,7 @@ export default function K24KaitoriPage() {
                 <tr>
                   <td><strong>買取大吉</strong></td>
                   <td>店頭買取</td>
-                  <td>目の前で重量測定・純度検査。その場で現金支払い。全国600店舗以上</td>
+                  <td>目の前で重量測定・純度検査。その場で現金支払い。全国2,400店舗以上</td>
                   <td>即現金化したい</td>
                 </tr>
                 <tr>
