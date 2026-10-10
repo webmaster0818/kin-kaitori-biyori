@@ -322,17 +322,17 @@ export default function K14KaitoriPage() {
           <li>査定料・利用料すべて無料</li>
         </ul>
 
-        <h3>買取大吉 — 全国600店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
 
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国に600店舗以上を展開。K14の刻印がある製品はもちろん、刻印なしの製品もX線分析で純度を測定してくれます。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開。K14の刻印がある製品はもちろん、刻印なしの製品もX線分析で純度を測定してくれます。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
-        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取に特化。自宅にいながらプロの査定を受けられます。大量のアクセサリーをまとめて売りたい場合に便利です。</p>
+        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（宅配買取にも対応。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられます。大量のアクセサリーをまとめて売りたい場合に便利です。</p>
 
         <h3>ティファナ — 3つの方法から選べる</h3>
 
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応。忙しくて店舗に行けない方でも、宅配や出張で気軽に査定を依頼できます。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応（出張買取は東京・埼玉・神奈川の一部地域、宅配買取は全国）。忙しくて店舗に行けない方でも、宅配や出張で気軽に査定を依頼できます。</p>
 
         <h2>K14の売却に関する税金</h2>
 
