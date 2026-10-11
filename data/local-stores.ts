@@ -473,11 +473,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "ueda-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-10-11",
     stores: [
       { name: "買取大吉 上田天神店", chain: "買取大吉", address: "長野県上田市天神3丁目4-25 デンセンショールーム", postalCode: "386-0018", hours: "10:00〜19:00", closed: "毎週日曜日", access: "JR上田駅お城口より徒歩10分", tel: "0268-75-0277", sourceUrl: "https://www.kaitori-daikichi.jp/store/uedatenjin/" },
-      { name: "ザ・ゴールド 上田店", chain: "ザ・ゴールド", address: "長野県上田市中央東2-11", postalCode: "386-0013", hours: "10:00〜18:00", closed: "年中無休（一部夏季・年末年始を除く）", access: "国道18号線沿い（下川原柳バス停より徒歩約10分）", tel: "0268-28-7776", sourceUrl: "https://www.the-gold.jp/shop/nagano/45.html" },
+      { name: "ザ・ゴールド 上田店", chain: "ザ・ゴールド", address: "長野県上田市中央東2-11", postalCode: "386-0013", hours: "10:00〜18:00", closed: "年中無休（年末年始を除く）", access: "国道18号線産業道路沿い（下川原柳バス停から中央東交差点方面へ徒歩10分）", tel: "0268-28-7776", sourceUrl: "https://www.the-gold.jp/item/metal/shop/45.html" },
       { name: "おたからや 上田海野町店", chain: "おたからや", address: "長野県上田市中央2丁目5-10 丸陽ビル2階", postalCode: "386-0012", hours: "10:00〜18:00（土日祝は10:00〜17:00）", closed: "水曜日", access: "しなの鉄道 上田駅お城口より徒歩5分（海野町商店街通り沿い）", tel: "0268-22-2248", sourceUrl: "https://www.otakaraya-shop.jp/ueda/" },
+      { name: "買取専門店さすがや アリオ上田店", chain: "さすがや", address: "長野県上田市天神3-5-1 アリオ上田 2F", postalCode: "386-0025", hours: "10:00〜20:00", closed: "アリオ上田に準ずる", access: "JR上田駅 温泉口から徒歩5分", sourceUrl: "https://sasugaya.jp/shop/ueda/" },
+      { name: "キングラム 上田インター店", chain: "キングラム", address: "長野県上田市住吉277-17", postalCode: "386-0002", hours: "平日10:00〜18:00／土日祝10:00〜17:00", closed: "年中無休（年末年始・特別休業を除く）", access: "上田菅平インターから上田市街方面・長島の交差点（車で上田駅から約10分）", sourceUrl: "https://kingram.jp/shop/uedainter/" },
     ],
   },
   "yokkaichi-kin-kaitori": {
