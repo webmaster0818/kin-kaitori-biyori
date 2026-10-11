@@ -136,7 +136,7 @@ export default function TsuchiuraKinKaitoriPage() {
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>買取大吉</td><td>即日現金化・目の前で計量</td><td>すぐ現金が欲しい人</td></tr>
               <tr><td><strong>出張買取</strong></td><td>ウリエル</td><td>自宅で完結・大量品も楽</td><td>外出が難しい人</td></tr>
-              <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・24時間発送OK</td><td>忙しい人</td></tr>
+              <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・送料無料（公式表記）</td><td>忙しい人</td></tr>
               <tr><td><strong>一括査定</strong></td><td>ヒカカク！</td><td>複数業者を一度に比較</td><td>最高値で売りたい人</td></tr>
             </tbody>
           </table>

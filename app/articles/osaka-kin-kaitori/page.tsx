@@ -250,7 +250,7 @@ export default function OsakaKinKaitoriPage() {
               <tr>
                 <td><strong>宅配買取</strong></td>
                 <td>ティファナ</td>
-                <td>24時間発送OK。送料無料</td>
+                <td>全国対応・送料無料（公式表記）</td>
                 <td>現金化まで数日</td>
                 <td>忙しい人</td>
               </tr>
