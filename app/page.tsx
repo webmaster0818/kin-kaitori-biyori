@@ -49,7 +49,7 @@ const services = [
   },
   {
     name: "ウリエル",
-    method: "出張買取専門",
+    method: "出張買取中心",
     description: "自宅にいながら完結。出張費・査定料すべて無料",
     target: "自宅で完結したい人",
     url: "https://uriel-cuore.co.jp",

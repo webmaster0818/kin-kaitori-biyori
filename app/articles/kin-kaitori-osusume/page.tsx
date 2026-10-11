@@ -20,7 +20,7 @@ function BreadcrumbSchema() {
 
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-    { "@type": "Question", name: "金買取はどこがいいですか？", acceptedAnswer: { "@type": "Answer", text: "目的によって最適な業者は変わります。最高値を狙うなら複数社の一括査定（ヒカカク！）、その場で現金化したいなら全国店舗網のある店頭買取（買取大吉）、自宅で完結したいなら出張買取専門（ウリエル）、店頭・出張・宅配から選びたいならティファナが候補です。いずれも査定は無料なので、2社以上の査定額を比べてから売るのが失敗しないコツです。" } },
+    { "@type": "Question", name: "金買取はどこがいいですか？", acceptedAnswer: { "@type": "Answer", text: "目的によって最適な業者は変わります。最高値を狙うなら複数社の一括査定（ヒカカク！）、その場で現金化したいなら全国店舗網のある店頭買取（買取大吉）、自宅で完結したいなら出張買取が中心のウリエル、店頭・出張・宅配から選びたいならティファナが候補です。いずれも査定は無料なので、2社以上の査定額を比べてから売るのが失敗しないコツです。" } },
     { "@type": "Question", name: "金買取の業者選びで最も重要なポイントは何ですか？", acceptedAnswer: { "@type": "Answer", text: "「複数社の査定額を比較すること」です。査定料はどこも無料ですが、提示される1gあたりの買取単価は業者ごとに異なります。売る前に当日の相場（本日のK24買取目安は1g" + P.k24.toLocaleString() + "円）を把握し、相場に近い単価を提示する業者を選びましょう。" } },
     { "@type": "Question", name: "査定だけ受けて売らなくても大丈夫ですか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルは査定無料・キャンセル無料を公式サイトで明記しています。ヒカカク！は一括査定の利用が無料で、キャンセルは申し込み先の業者へ直接連絡します（2026年10月確認）。査定額に納得できなければ売らなくて問題ありません。ただし宅配買取は業者によってキャンセル時の返送料負担が異なるため、事前確認をおすすめします。" } },
     { "@type": "Question", name: "壊れた金製品や刻印のない金でも売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。金は素材そのものに価値があるため、チェーンが切れたネックレス、片方だけのピアス、変色した指輪でも重量×純度で査定されます。刻印がなくても比重検査やX線分析で純度を確認できます。詳しくは「壊れた金・刻印なしでも売れる」の記事をご覧ください。" } },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const COMPANIES = [
   { name: "ヒカカク！", method: "一括査定", url: "https://hikakaku.com", point: "複数業者にまとめて査定依頼し、最高値を比較できる", fee: "無料", area: "全国（Web完結）", fit: "とにかく最高値で売りたい人・相見積もりの手間を省きたい人" },
   { name: "買取大吉", method: "店頭買取", url: "https://kaitori-daikichi.jp", point: "全国2,400店舗以上。その場で査定・即現金化", fee: "査定・キャンセル無料", area: "全国47都道府県（店頭・出張）", fit: "近くの店舗でその場で現金化したい人" },
-  { name: "ウリエル", method: "出張買取", url: "https://uriel-cuore.co.jp", point: "出張買取専門。出張費・査定料すべて無料で自宅完結", fee: "査定・出張・キャンセル無料", area: "関東・中部・近畿・岡山", fit: "自宅にいながら売却を完結したい人・量が多い人" },
+  { name: "ウリエル", method: "出張買取", url: "https://uriel-cuore.co.jp", point: "出張買取が中心（宅配にも対応）。出張費・査定料すべて無料で自宅完結", fee: "査定・出張・キャンセル無料", area: "関東・中部・近畿・岡山", fit: "自宅にいながら売却を完結したい人・量が多い人" },
   { name: "ティファナ", method: "店頭・出張・宅配", url: "https://tifana.net", point: "3つの買取方法から選べる。宅配は送料・キット無料", fee: "査定・キャンセル無料（宅配返送は対象外品のみ客負担）", area: "店頭=東京中心／宅配=全国", fit: "ライフスタイルに合わせて方法を選びたい人" },
 ];
 
@@ -86,7 +86,7 @@ export default function KinKaitoriOsusumePage() {
             <tbody>
               <tr><td>とにかく<strong>最高値</strong>で売りたい</td><td><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow">ヒカカク！</a>（一括査定）</td><td>複数業者の査定額をまとめて比較でき、相見積もりの手間が省ける</td></tr>
               <tr><td><strong>今日中に現金化</strong>したい</td><td><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow">買取大吉</a>（店頭）</td><td>全国2,400店舗以上。その場で査定・即現金化</td></tr>
-              <tr><td><strong>自宅で完結</strong>したい・量が多い</td><td><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow">ウリエル</a>（出張）</td><td>出張費・査定料すべて無料の出張買取専門</td></tr>
+              <tr><td><strong>自宅で完結</strong>したい・量が多い</td><td><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow">ウリエル</a>（出張）</td><td>出張費・査定料すべて無料の出張買取が中心</td></tr>
               <tr><td>買取<strong>方法を選びたい</strong></td><td><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow">ティファナ</a>（店頭/出張/宅配）</td><td>3つの方法から都合に合わせて選べる。宅配は送料・キット無料</td></tr>
             </tbody>
           </table>

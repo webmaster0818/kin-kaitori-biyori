@@ -273,7 +273,7 @@ export default function KinseidoKaitoriGuidePage() {
               </thead>
               <tbody>
                 <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の買取価格を一括比較。品位を問わず最高値が見つかりやすい</td><td>最高値で売りたい</td></tr>
-                <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全品位対応。刻印なしでもX線分析で純度測定。即日現金化</td><td>即現金化したい</td></tr>
+                <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全品位対応。刻印なしでも比重などで品位を確認（公式表記）。即日現金化</td><td>即現金化したい</td></tr>
                 <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で完結。出張費無料。まとめ売りに便利</td><td>自宅で完結したい</td></tr>
                 <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>3つの方法から選択可能。貴金属まとめて査定OK</td><td>方法を選びたい</td></tr>
               </tbody>

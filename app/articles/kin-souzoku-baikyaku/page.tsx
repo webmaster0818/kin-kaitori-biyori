@@ -144,7 +144,7 @@ export default function KinSouzokuBaikyakuPage() {
             <thead><tr><th>業者名</th><th>方式</th><th>相続金の買取特徴</th><th>こんな人に</th></tr></thead>
             <tbody>
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の価格を一括比較</td><td>最高値で売りたい</td></tr>
-              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>純度不明の遺品もX線分析で査定</td><td>即現金化したい</td></tr>
+              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>純度不明の遺品も比重などで品位を確認して査定（公式表記）</td><td>即現金化したい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>遺品が大量でも自宅で完結</td><td>遺品が多い方</td></tr>
               <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>幅広い品目に対応</td><td>方法を選びたい</td></tr>
             </tbody>

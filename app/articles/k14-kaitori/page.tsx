@@ -318,13 +318,13 @@ export default function K14KaitoriPage() {
 
         <ul>
           <li>複数業者の査定価格を一度に比較</li>
-          <li>K14・K14WG・K14PGなど全カラー対応</li>
+          <li>貴金属・宝石カテゴリの参加業者は1,082社（公式表記・2026年10月11日確認）。K14WG・K14PGなどの扱いは申込先の業者ごとに確認</li>
           <li>査定料・利用料すべて無料</li>
         </ul>
 
         <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
 
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開。K14の刻印がある製品はもちろん、刻印なしの製品もX線分析で純度を測定してくれます。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開。K14の刻印がある製品はもちろん、刻印なしの製品も比重などで品位を確認したうえで査定します（公式表記）。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 

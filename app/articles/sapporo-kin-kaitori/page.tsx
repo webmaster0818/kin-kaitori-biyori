@@ -35,7 +35,7 @@ function FaqSchema() {
       { "@type": "Question", name: "札幌の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。買取大吉やなんぼやなど大手チェーンが札幌市内に多数あり、予約不要で即日対応しています。" } },
       { "@type": "Question", name: "札幌と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、札幌でも東京でもほぼ同じ水準です。ただし、地方は業者数が少ないぶん競争が弱い場合があり、一括査定で全国の業者と比較することをおすすめします。" } },
       { "@type": "Question", name: "北海道の地方都市からでも金を高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取を利用すれば、北海道のどこからでも全国の高価買取業者に売却できます。ヒカカク！の一括査定なら、札幌の業者だけでなく全国の業者と価格を比較可能です。" } },
-      { "@type": "Question", name: "札幌で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルやティファナが札幌市内で出張買取に対応しています。出張費・査定料は無料です。ただし北海道の郊外エリアは対応外の場合があるため、事前に確認しましょう。" } },
+      { "@type": "Question", name: "札幌で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "北海道は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）を検討してください。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -220,7 +220,7 @@ export default function SapporoKinKaitoriPage() {
           </li>
           <li>
             <strong>冬場は出張買取を活用する</strong>
-            <p>積雪期は外出が困難になるため、ウリエルやティファナの出張買取を利用しましょう。出張費は無料です。</p>
+            <p>積雪期は外出が困難になるため、宅配買取（ティファナは全国対応・送料無料）を利用しましょう。なお、北海道はウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。</p>
           </li>
           <li>
             <strong>地元の専門店にも見積もりを取る</strong>
@@ -282,7 +282,7 @@ export default function SapporoKinKaitoriPage() {
               <tr>
                 <td><strong>ウリエル</strong></td>
                 <td>出張買取</td>
-                <td>札幌市内で出張対応。出張費無料</td>
+                <td>北海道は公式の出張対応エリア外（2026年10月11日確認）</td>
                 <td>自宅で完結したい</td>
               </tr>
               <tr>

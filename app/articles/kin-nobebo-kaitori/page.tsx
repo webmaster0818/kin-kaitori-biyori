@@ -247,7 +247,7 @@ export default function KinNobeboKaitoriPage() {
             { q: "インゴットの買取に手数料はかかりますか？", a: "地金商では500g未満のインゴットにバーチャージがかかる場合があります。買取専門店は基本的に手数料無料です。" },
             { q: "インゴットを売ったら税金はかかりますか？", a: "売却益は譲渡所得として課税対象です。年間50万円の特別控除があり、5年超保有なら課税額が半減します。" },
             { q: "刻印がないインゴットでも売れますか？", a: "X線分析で純度を判定できるため売却可能です。ただしLBMA認定ブランドの刻印がある方がスムーズです。" },
-            { q: "インゴットを持ち歩くのが怖いのですが？", a: "出張買取を利用すれば自宅で安全に売却できます。ウリエルやティファナの出張買取は無料です。" },
+            { q: "インゴットを持ち歩くのが怖いのですが？", a: "出張買取を利用すれば自宅で安全に売却できます。ウリエルやティファナの出張買取は無料です（対応エリアはウリエルが沖縄県・北海道・東北などを除く地域、ティファナが東京・埼玉・神奈川の一部地域）。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm"><span>{faq.q}</span><svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></summary>

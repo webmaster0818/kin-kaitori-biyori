@@ -34,7 +34,7 @@ function FaqSchema() {
       { "@type": "Question", name: "福岡で金買取の価格が高いエリアはどこですか？", acceptedAnswer: { "@type": "Answer", text: "天神・博多駅周辺・大名エリアが福岡の金買取激戦区です。特に天神は大手買取チェーンが集中しており、競争による高値が期待できます。" } },
       { "@type": "Question", name: "福岡の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。買取大吉やなんぼやなどの大手チェーンは天神・博多に複数店舗があり、予約不要で即日対応しています。" } },
       { "@type": "Question", name: "福岡と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、福岡でも東京でもほぼ同じ水準です。ただし業者間の競争度の差で、1gあたり数十円〜100円程度の差が出る場合があります。" } },
-      { "@type": "Question", name: "福岡で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルやティファナが福岡県全域で出張買取に対応しています。出張費・査定料は無料です。" } },
+      { "@type": "Question", name: "福岡で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに福岡県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、福岡県は対象外です。出張費・査定料は無料です。" } },
       { "@type": "Question", name: "福岡の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により、買取時には身分証の提示が義務付けられています。" } },
     ],
   };
@@ -246,7 +246,7 @@ export default function FukuokaKinKaitoriPage() {
             </thead>
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>可能</td><td>不可</td><td>しやすい</td><td>買取大吉、おたからや</td></tr>
-              <tr><td><strong>出張買取</strong></td><td>可能（当日〜翌日）</td><td>可能</td><td>対面で可能</td><td>ウリエル、ティファナ</td></tr>
+              <tr><td><strong>出張買取</strong></td><td>可能（当日〜翌日）</td><td>可能</td><td>対面で可能</td><td>ウリエル</td></tr>
               <tr><td><strong>宅配買取</strong></td><td>不可（数日〜1週間）</td><td>可能</td><td>難しい</td><td>ティファナ</td></tr>
               <tr><td><strong>一括査定</strong></td><td>不可</td><td>可能</td><td>複数社比較で高値</td><td>ヒカカク！</td></tr>
             </tbody>
@@ -293,7 +293,7 @@ export default function FukuokaKinKaitoriPage() {
               <tr>
                 <td><strong>ウリエル</strong></td>
                 <td>出張買取</td>
-                <td>福岡県全域で出張対応。出張費無料</td>
+                <td>福岡県は出張対応エリア（一部市町村を除く）。出張費無料</td>
                 <td>自宅で完結したい</td>
               </tr>
               <tr>
@@ -326,7 +326,7 @@ export default function FukuokaKinKaitoriPage() {
             },
             {
               q: "福岡で出張買取に対応している業者はありますか？",
-              a: "ウリエルやティファナが福岡県全域で出張買取に対応しています。出張費・査定料・キャンセル料はすべて無料です。",
+              a: "ウリエルは公式の出張対応エリアに福岡県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、福岡県は対象外です。出張費・査定料・キャンセル料はすべて無料です。",
             },
             {
               q: "福岡で金を売る際に必要な持ち物は？",

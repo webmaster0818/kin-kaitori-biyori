@@ -288,7 +288,7 @@ export default function K18KaitoriPage() {
 
         <ul>
           <li>全国2,400店舗以上（予約不要）</li>
-          <li>蛍光X線分析装置で正確な純度測定</li>
+          <li>刻印がなくても比重などで品位を確認して査定（公式表記）</li>
           <li>査定料・出張費すべて無料</li>
         </ul>
 
