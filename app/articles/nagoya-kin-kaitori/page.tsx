@@ -58,7 +58,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金買取｜栄生・名駅・本陣・ささしまライブなど駅別の実在店舗と営業時間【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-10-11",
+    dateModified: "2026-10-12",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅・近鉄/名鉄名古屋駅・栄・矢場町など駅別に、公式サイトで確認した金買取店の住所・駅からの徒歩分・営業時間を一覧に（2026年10月11日確認）。本陣・ささしまライブ・堀田など徒歩圏に店がない駅の選択肢と本日の金相場も。",
@@ -187,7 +187,7 @@ export default function NagoyaKinKaitoriPage() {
           </table>
         </div>
 
-        <p>名駅エリアでは、なんぼや名古屋サンロード店が地下街に直結しておりアクセスが抜群です。おたからや、買取大吉、大黒屋なども名古屋駅徒歩圏内に店舗を構えています。</p>
+        <p>名駅エリアでは、なんぼやが地下街に名古屋サンロード店（東山線 名古屋駅 南改札より徒歩1分程度）と名古屋エスカ店の2店舗を構えています（下の駅別早見表）。大黒屋の愛知県内の店舗は大須・栄・豊田の3店で、名古屋駅周辺にはありません（<a href="https://shichi.e-daikoku.com/shop/" target="_blank" rel="noopener noreferrer nofollow">大黒屋公式の店舗一覧</a>・2026年10月12日確認）。</p>
 
         <h3>栄エリア</h3>
 
@@ -287,7 +287,7 @@ export default function NagoyaKinKaitoriPage() {
         <p><strong>なんぼや メルサ栄店</strong>（栄駅 S7a・S7b出口より徒歩1分程度／中区栄3-4-5 メルサ栄本店4F／10:00〜20:00）、<strong>大黒屋 質名古屋栄買取センター</strong>（栄駅8番出口 徒歩3分／中区栄3-7-9 新鏡栄ビル2F／10:30〜19:30）、栄地下街の<strong>堀田商事 栄地下店</strong>（栄駅 南改札口・中改札口すぐ／10:00〜19:00・年中無休）が代表です。矢場町駅側には<strong>おたからや 名古屋本店</strong>（矢場町駅5出入口より徒歩4分／10:00〜19:00）もあります（2026年10月11日確認）。ブランドジュエリーは素材＋ブランドの二重評価が期待できます。<a href="https://nanboya.com/gold-kaitori/shop/melsa-sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
 
         <h3>大須（大須観音駅・上前津駅）</h3>
-        <p>下町の商店街で貴金属専門店・質屋が多く、地金は名古屋市内で最高値が出やすいエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
+        <p>大須商店街のエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
 
         <h3>金山駅</h3>
         <p>金山駅は総合駅で、大手チェーンの駅至近店は確認できていませんが、地場の買取専門店<strong>「さてい屋」（金山総合駅 東口 徒歩2分）</strong>が金・プラチナの買取に対応しています。査定料・手数料は無料、予約不要で身分証を持参すれば来店買取が可能です（休業日あり・詳細は<a href="http://www.sateiya.net/" target="_blank" rel="noopener noreferrer nofollow">公式サイト</a>でご確認ください）。より多くの業者を比較したい場合は、栄・大須の大手店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>で相見積もりを取るのが確実です。</p>
@@ -404,9 +404,9 @@ export default function NagoyaKinKaitoriPage() {
               </tr>
               <tr>
                 <td><strong>ティファナ</strong></td>
-                <td>出張/店頭/宅配</td>
-                <td>3つの方法から選べる柔軟対応</td>
-                <td>方法を選びたい</td>
+                <td>宅配</td>
+                <td>愛知県は出張エリア外で店舗もなし（出張は東京・埼玉・神奈川の一部、店舗は東京・埼玉のみ）。宅配は全国・送料無料</td>
+                <td>自宅から送って売りたい</td>
               </tr>
             </tbody>
           </table>

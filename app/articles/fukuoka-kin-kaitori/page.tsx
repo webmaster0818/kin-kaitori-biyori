@@ -47,7 +47,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年最新】福岡の金買取おすすめ業者ガイド — 天神・博多・大名エリア別比較",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-10-12",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
     description: "福岡で金を高く売るならどこがいい？天神・博多・大名のエリア別おすすめ買取業者、買取方法の比較、福岡の金買取相場と高く売るコツを徹底解説。",
@@ -298,9 +298,9 @@ export default function FukuokaKinKaitoriPage() {
               </tr>
               <tr>
                 <td><strong>ティファナ</strong></td>
-                <td>出張/店頭/宅配</td>
-                <td>3つの方法から選べる柔軟対応</td>
-                <td>方法を選びたい</td>
+                <td>宅配</td>
+                <td>福岡県は出張エリア外で店舗もなし（出張は東京・埼玉・神奈川の一部、店舗は東京・埼玉のみ）。宅配は全国・送料無料</td>
+                <td>自宅から送って売りたい</td>
               </tr>
             </tbody>
           </table>

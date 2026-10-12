@@ -37,7 +37,7 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "横浜で金買取の価格が高いエリアはどこですか？", acceptedAnswer: { "@type": "Answer", text: "横浜駅周辺・元町中華街エリアが横浜の金買取激戦区です。横浜駅周辺は大手買取チェーンが集中しており、元町エリアにはジュエリー専門店が多く、ブランド買取に強い業者も揃っています。" } },
-      { "@type": "Question", name: "横浜の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。横浜駅周辺にはゴールドプラザ、おたからや、買取大吉など大手チェーンが多数あり、予約不要で即日対応しています。" } },
+      { "@type": "Question", name: "横浜の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。横浜駅周辺にはゴールドプラザ横浜店（JR横浜駅東口より徒歩2分。当面の間は毎週水曜定休）やおたからや横浜本店（横浜駅西口より徒歩5分）があります（2026年10月12日 公式確認）。" } },
       { "@type": "Question", name: "横浜と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "ほぼ同じです。金の買取価格は国際相場に連動しているため地域差はほとんどありません。横浜は東京に近いため、都内の業者との競争もあり、価格水準は東京と遜色ありません。" } },
       { "@type": "Question", name: "横浜で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエル（公式の出張対応エリアに神奈川県を含む。一部対応できない市町村あり）やティファナ（出張エリアは東京・埼玉・神奈川の一部地域）が出張買取に対応しています。出張費・査定料は無料です。" } },
       { "@type": "Question", name: "横浜の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により買取時の身分証提示は義務です。" } },
@@ -52,7 +52,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-10-12",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
     description: "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、買取方法の比較、横浜の金買取相場と高く売るコツを徹底解説。",
@@ -132,7 +132,7 @@ export default function YokohamaKinKaitoriPage() {
 
         <h3>横浜駅周辺の充実した買取インフラ</h3>
 
-        <p>横浜駅はJR・私鉄・地下鉄が乗り入れる巨大ターミナルで、駅周辺にはゴールドプラザ横浜店（駅徒歩2分）、おたからや横浜本店、ブランディア横浜店など、<strong>主要な買取業者が徒歩圏内に集中</strong>しています。</p>
+        <p>横浜駅はJR・私鉄・地下鉄が乗り入れる巨大ターミナルで、駅周辺にはゴールドプラザ横浜店（JR横浜駅東口より徒歩2分）やおたからや横浜本店（横浜駅西口より徒歩5分）など、<strong>駅から歩ける買取店</strong>があります。</p>
 
         <h3>横浜の金買取相場（毎日自動更新）</h3>
 
@@ -146,7 +146,8 @@ export default function YokohamaKinKaitoriPage() {
 
         <h3>横浜駅周辺エリア</h3>
 
-        <p>横浜駅周辺は<strong>横浜で最も買取業者が集中</strong>しているエリアです。ゴールドプラザ横浜店はJR横浜駅から徒歩2分、年中無休で営業しており、気軽に査定を受けられます。</p>
+        <p>横浜駅周辺は<strong>横浜で最も買取業者が集中</strong>しているエリアです。ゴールドプラザ横浜店（横浜市西区高島2-14-13 エストビル6F）はJR横浜駅東口から徒歩2分、営業時間は10:00〜19:00で、当面の間は毎週水曜が定休日です。おたからや横浜本店は横浜駅西口から徒歩5分、受付9:00〜19:00・年中無休（年末年始を除く）です（2026年10月12日確認）。</p>
+        <p className="text-xs text-warm-gray">出典：<a href="https://goldplaza.jp/shop/yokohama/" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 横浜店</a>／<a href="https://www.otakaraya.jp/shop/yokohama-honten/" target="_blank" rel="noopener noreferrer nofollow">おたからや 横浜本店</a></p>
 
         <div className="table-wrapper">
           <table>
@@ -288,8 +289,8 @@ export default function YokohamaKinKaitoriPage() {
               </tr>
               <tr>
                 <td><strong>ティファナ</strong></td>
-                <td>出張/店頭/宅配</td>
-                <td>3つの方法から選べる柔軟対応</td>
+                <td>出張/宅配</td>
+                <td>出張は東京・埼玉・神奈川の一部地域。店舗は東京・埼玉のみ。宅配は全国・送料無料</td>
                 <td>方法を選びたい</td>
               </tr>
             </tbody>
@@ -316,7 +317,7 @@ export default function YokohamaKinKaitoriPage() {
             },
             {
               q: "横浜の金買取で即日現金化できますか？",
-              a: "はい、店頭買取であればその場で現金を受け取れます。横浜駅周辺のゴールドプラザやおたからやなど、予約不要で即日対応しています。",
+              a: "はい、店頭買取であればその場で現金を受け取れます。横浜駅周辺にはゴールドプラザ横浜店（JR横浜駅東口より徒歩2分。当面の間は毎週水曜定休）やおたからや横浜本店（横浜駅西口より徒歩5分）があります（2026年10月12日 公式確認）。",
             },
             {
               q: "横浜で金を売る際に必要なものは？",

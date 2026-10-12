@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "【2026年最新】梅田の金買取おすすめ｜大阪駅周辺の主要店舗と相場比較",
     description: "梅田・大阪駅周辺で金を高く売るための業者比較。JR大阪駅・阪急梅田・地下街の主要店舗、相場、出張・宅配の選び方を解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-10-12",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -51,7 +51,18 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u6885\u7530\u3068\u5fc3\u658e\u6a4b\u3001\u3069\u3061\u3089\u304c\u9ad8\u304f\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5f97\u610f\u5206\u91ce\u304c\u7570\u306a\u308b\u305f\u3081\u4e00\u6982\u306b\u306f\u8a00\u3048\u306a\u3044\u3002\u4e00\u822c\u91d1\u88fd\u54c1\u306f\u6885\u7530\u3001\u30cf\u30a4\u30d6\u30e9\u30f3\u30c9\u306f\u5fc3\u658e\u6a4b\u306e\u50be\u5411\u3002\u4e21\u65b9\u3067\u898b\u7a4d\u3082\u308a\u6bd4\u8f03\u63a8\u5968\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u306e\u8cb7\u53d6\u5e97\u306f\u4f55\u6642\u307e\u3067\u55b6\u696d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u591a\u304f\u306e\u5927\u624b\u696d\u8005\u306f19\u301c20\u6642\u307e\u3067\u55b6\u696d\u3002\u4f1a\u793e\u5e30\u308a\u306e\u67fb\u5b9a\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u304b\u3089\u51fa\u5f35\u8cb7\u53d6\u306f\u547c\u3079\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u30a6\u30ea\u30a8\u30eb\u306f\u516c\u5f0f\u306e\u51fa\u5f35\u5bfe\u5fdc\u30a8\u30ea\u30a2\u306b\u5927\u962a\u5e9c\u3092\u542b\u3081\u3066\u3044\u307e\u3059\uff08\u4e00\u90e8\u5bfe\u5fdc\u3067\u304d\u306a\u3044\u5e02\u753a\u6751\u3042\u308a\uff09\u3002\u5927\u962a\u306b\u672c\u793e\u304c\u3042\u308b\u798f\u3061\u3083\u3093\u3082\u51fa\u5f35\u8cb7\u53d6\u3092\u884c\u3063\u3066\u3044\u307e\u3059\u304c\u3001\u5bfe\u5fdc\u5730\u57df\u306f\u516c\u5f0f\u30b5\u30a4\u30c8\u306b\u8a18\u8f09\u304c\u306a\u3044\u305f\u3081\u3001\u7533\u3057\u8fbc\u307f\u6642\u306b\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6885\u7530\u3067\u571f\u65e5\u3082OK\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u307b\u307c\u5168\u696d\u8005\u304c\u571f\u65e5\u55b6\u696d\u3002\u65e5\u66dc\u306e\u65b9\u304c\u7a7a\u3044\u3066\u3044\u308b\u3053\u3068\u304c\u591a\u3044\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5730\u4e0b\u8857\u306e\u696d\u8005\u3068\u5730\u4e0a\u306e\u696d\u8005\u306e\u5dee\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5730\u4e0b\u8857\u306f\u6885\u7530\u99c5\u304b\u3089\u76f4\u7d50\u3067\u30a2\u30af\u30bb\u30b9\u826f\u597d\u3001\u5730\u4e0a\u306f\u5e97\u8217\u304c\u5e83\u304f\u843d\u3061\u7740\u3044\u3066\u67fb\u5b9a\u53ef\u3002\u4e21\u65b9\u3068\u3082\u4fe1\u983c\u3067\u304d\u308b\u696d\u8005\u304c\u591a\u3044\u3002\"}}]}" }} />;
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "梅田と心斎橋、どちらが高く売れる？", acceptedAnswer: { "@type": "Answer", text: "業者ごとに得意分野や査定基準が異なるため、エリアで一概には言えません。梅田・心斎橋の両方で見積もりを取って比較するのがおすすめです。" } },
+      { "@type": "Question", name: "梅田の買取店は何時まで営業？", acceptedAnswer: { "@type": "Answer", text: "店によって異なります。公式で確認できた梅田の3店では、ゴールドプラザ 大阪梅田本店が19時、大黒屋ブランド館 梅田店が19時30分、なんぼや 梅田本店が21時（最終受付20時30分）までです（2026年10月12日確認）。" } },
+      { "@type": "Question", name: "梅田から出張買取は呼べる？", acceptedAnswer: { "@type": "Answer", text: "可能。ウリエルは公式の出張対応エリアに大阪府を含めています（一部対応できない市町村あり）。大阪に本社がある福ちゃんも出張買取を行っていますが、対応地域は公式サイトに記載がないため、申し込み時に確認してください。" } },
+      { "@type": "Question", name: "梅田で土日もOK？", acceptedAnswer: { "@type": "Answer", text: "なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前に確認してください（2026年10月12日確認）。" } },
+      { "@type": "Question", name: "地下街の業者と地上の業者の差は？", acceptedAnswer: { "@type": "Answer", text: "地下街は梅田駅から直結でアクセス良好、地上は店舗が広く落ち着いて査定可。" } },
+    ],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -112,12 +123,12 @@ export default function Page() {
           <h2>2. 梅田の主要金買取店</h2>
           <ul>
             <li><strong>福ちゃん</strong>: 本社は大阪市東成区（運営 株式会社REGATE）。公式の店舗一覧は全国11店舗で、大阪府内は豊中店（2026年10月11日確認。梅田に店舗はなし）</li>
-            <li><strong>大黒屋 梅田店</strong>: 質屋系列、即現金化、阪急東通商店街</li>
-            <li><strong>なんぼや 梅田店</strong>: ハイブランド対応</li>
-            <li><strong>ゴールドプラザ 大阪本店</strong>: 金・プラチナ専門</li>
-            <li><strong>リファスタ 大阪心斎橋店</strong>: 業界最高水準（梅田から地下鉄1本）</li>
-            <li><strong>ジュエルカフェ 梅田店</strong>: ファッション系ジュエリー</li>
+            <li><strong>大黒屋ブランド館 梅田店</strong>: 大阪市北区芝田2-2-4 合同屋ビル1F（地下鉄梅田駅5番出口より徒歩2分・阪急大阪梅田駅 茶屋町口より徒歩3分）。10:30〜19:30、年中無休（年末年始を除く）。質預かり・買取の店で、金・プラチナ・記念金貨も取り扱い</li>
+            <li><strong>なんぼや 梅田本店</strong>: 大阪市北区茶屋町1-27 ABC-MART梅田ビルB2F。10:00〜21:00（最終受付20:30）、定休日なし。ブランド品のほか金・貴金属も買取</li>
+            <li><strong>ゴールドプラザ 大阪梅田本店</strong>: 大阪市北区梅田1-12-17 JRE梅田スクエアビル8F（JR大阪駅から徒歩3分）。10:00〜19:00（定休日は公式の店舗ページに記載なし）。金・プラチナ・ダイヤ・宝石のほか、ブランド品・時計も買取</li>
           </ul>
+          <p>ジュエルカフェは公式の店舗一覧で大阪府内が堺市・富田林市の2店舗のみで、梅田に店舗はありません。</p>
+          <p className="text-xs text-warm-gray">出典：<a href="https://shichi.e-daikoku.com/shop/umeda/" target="_blank" rel="noopener noreferrer nofollow">大黒屋ブランド館 梅田店</a>／<a href="https://nanboya.com/shop/osaka/umeda-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 梅田本店</a>／<a href="https://goldplaza.jp/shop/osaka/" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 大阪梅田本店</a>／<a href="https://www.jewel-cafe.jp/shop/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ 店舗案内</a>（いずれも2026年10月12日確認）</p>
 
           <h2>3. 梅田で高く売る5つのコツ</h2>
           <ol>
@@ -134,11 +145,11 @@ export default function Page() {
           <h2>よくある質問</h2>
           <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田と心斎橋、どちらが高く売れる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">得意分野が異なるため一概には言えない。一般金製品は梅田、ハイブランドは心斎橋の傾向。両方で見積もり比較推奨。</p>
+  <p className="mt-3 text-sm leading-relaxed">業者ごとに得意分野や査定基準が異なるため、エリアで一概には言えません。梅田・心斎橋の両方で見積もりを取って比較するのがおすすめです。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田の買取店は何時まで営業？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">多くの大手業者は19〜20時まで営業。会社帰りの査定も可能。</p>
+  <p className="mt-3 text-sm leading-relaxed">店によって異なります。公式で確認できた梅田の3店では、ゴールドプラザ 大阪梅田本店が19時、大黒屋ブランド館 梅田店が19時30分、なんぼや 梅田本店が21時（最終受付20時30分）までです（2026年10月12日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田から出張買取は呼べる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
@@ -146,11 +157,11 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田で土日もOK？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">ほぼ全業者が土日営業。日曜の方が空いていることが多い。</p>
+  <p className="mt-3 text-sm leading-relaxed">なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前に確認してください（2026年10月12日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>地下街の業者と地上の業者の差は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">地下街は梅田駅から直結でアクセス良好、地上は店舗が広く落ち着いて査定可。両方とも信頼できる業者が多い。</p>
+  <p className="mt-3 text-sm leading-relaxed">地下街は梅田駅から直結でアクセス良好、地上は店舗が広く落ち着いて査定可。</p>
 </details>
 
           <GoldPriceTrend />
