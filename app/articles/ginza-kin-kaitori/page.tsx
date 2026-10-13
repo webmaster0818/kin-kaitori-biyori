@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "【2026年最新】銀座の金買取おすすめ｜ハイブランド対応・富裕層向け店舗を厳選",
     description: "銀座エリアの金買取は富裕層・コレクター向け。ハイブランドジュエリー、希少金製品の専門業者、銀座中央通り・並木通り周辺の店舗を比較解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-10-13",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -51,7 +51,18 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306f\u4ed6\u306e\u30a8\u30ea\u30a2\u3088\u308a\u9ad8\u304f\u58f2\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u30cf\u30a4\u30d6\u30e9\u30f3\u30c9\u30fb\u9ad8\u984d\u54c1\u306f\u9280\u5ea7\u304c\u6709\u5229\u306a\u50be\u5411\u3002\u5c02\u9580\u77e5\u8b58\u306e\u9ad8\u3044\u67fb\u5b9a\u58eb\u3001\u5c02\u9580\u696d\u8005\u306e\u96c6\u4e2d\u3067\u9069\u6b63\u8a55\u4fa1\u304c\u671f\u5f85\u3067\u304d\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306e\u8cb7\u53d6\u5e97\u306f\u4e88\u7d04\u304c\u5fc5\u8981\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u9ad8\u984d\u54c1\u306e\u5834\u5408\u3001\u5c02\u9580\u67fb\u5b9a\u58eb\u306e\u4e8b\u524d\u4e88\u7d04\u304c\u304a\u3059\u3059\u3081\u3002\u4e00\u822c\u54c1\u306f\u4e88\u7d04\u306a\u3057\u3067\u5bfe\u5fdc\u53ef\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u306e\u99c5\u304b\u3089\u5f92\u6b69\u4f55\u5206\u306e\u696d\u8005\u304c\u591a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u9280\u5ea7\u99c5\u30fb\u6709\u697d\u753a\u99c5\u30fb\u6771\u9280\u5ea7\u99c5\u304b\u3089\u5f92\u6b695\u301c10\u5206\u570f\u5185\u306b\u96c6\u4e2d\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5c11\u91cf\u3067\u3082\u8cb7\u53d6\u3057\u3066\u304f\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u91d11g\u5358\u4f4d\u304b\u3089\u67fb\u5b9a\u5bfe\u5fdc\u3002\u305f\u3060\u3057\u9ad8\u984d\u91d1\u88fd\u54c1\u304c\u5f97\u610f\u306a\u696d\u8005\u304c\u591a\u3044\u305f\u3081\u3001\u5c11\u91cf\u306a\u3089\u4e00\u62ec\u67fb\u5b9a\u7d4c\u7531\u304c\u304a\u3059\u3059\u3081\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u9280\u5ea7\u30a8\u30ea\u30a2\u306e\u67fb\u5b9a\u6599\u30fb\u51fa\u5f35\u6599\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u307b\u307c\u5168\u696d\u8005\u3067\u7121\u6599\u3002\u30ad\u30e3\u30f3\u30bb\u30eb\u6599\u3082\u7121\u6599\u304c\u4e00\u822c\u7684\u3002\u4e8b\u524d\u306bHP\u3067\u78ba\u8a8d\u3092\u3002\"}}]}" }} />;
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "銀座は他のエリアより高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "ハイブランド・高額品は銀座が有利な傾向。専門知識の高い査定士、専門業者の集中で適正評価が期待できる。" } },
+      { "@type": "Question", name: "銀座の買取店は予約が必要？", acceptedAnswer: { "@type": "Answer", text: "高額品は来店予約を使うと待ち時間を減らせます。なんぼや・大黒屋・KOMEHYOは公式サイトに来店（買取）予約の窓口があります。" } },
+      { "@type": "Question", name: "銀座の駅から徒歩何分の業者が多い？", acceptedAnswer: { "@type": "Answer", text: "公式の表記では、おたからや 銀座本店が銀座駅A13・A8出口から徒歩0分、なんぼや 銀座本店が銀座駅A2出口から徒歩1分程度、大黒屋 質銀座買取センターが銀座駅C8出口から徒歩1分、KOMEHYO GINZAが銀座一丁目駅8番出口から徒歩1分です（2026年10月13日確認）。" } },
+      { "@type": "Question", name: "少量でも買取してくれますか？", acceptedAnswer: { "@type": "Answer", text: "店や品物によって異なります。少量の場合は来店前に電話やLINE査定で確認するか、一括査定（ヒカカク！）で複数社の反応を見るのがおすすめです。" } },
+      { "@type": "Question", name: "銀座エリアの査定料・出張料は？", acceptedAnswer: { "@type": "Answer", text: "店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトで確認してください。" } },
+    ],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -111,13 +122,14 @@ export default function Page() {
 
           <h2>2. 銀座の主要金買取店</h2>
           <ul>
-            <li><strong>なんぼや 銀座本店</strong>: ハイブランドジュエリーの最大手、中央通り</li>
-            <li><strong>コメ兵 銀座店</strong>: ブランド時計・ジュエリー専門</li>
-            <li><strong>ゴールドプラザ 銀座店</strong>: 金・プラチナ専門、中央通り</li>
-            <li><strong>大黒屋 銀座本店</strong>: 質屋系列、即現金化</li>
-            <li><strong>リファスタ 銀座店</strong>: 業界最高水準査定</li>
-            <li><strong>おたからや 銀座店</strong>: 全国700店舗ネットワーク</li>
+            <li><strong>なんぼや 銀座本店</strong>: 東京都中央区銀座5-7-4 鳩居堂ビルB1F（銀座駅A2出口より徒歩1分程度）。10:00〜19:30、定休日なし。ブランド品のほか金・貴金属・プラチナも買取。銀座には「銀座レンガ通り店」もあります</li>
+            <li><strong>KOMEHYO GINZA</strong>（コメ兵）: 東京都中央区銀座2-7-18 藤田ビル（買取は2F。銀座一丁目駅8番出口より徒歩1分）。11:00〜20:00（臨時休業・営業内容の変更が店舗ページで告知されるため来店前に確認を）。ジュエリー・時計・バッグ等のブランド品買取店（地金の買取可否は店舗ページに記載なし）</li>
+            <li><strong>ゴールドプラザ 東京銀座本店</strong>: 東京都中央区銀座5-8-17 銀座プラザ58ビル4F。10:00〜19:00（定休日は公式の店舗ページに記載なし）。金・プラチナ・ダイヤ・宝石のほか、ブランド品・時計も買取</li>
+            <li><strong>大黒屋 質銀座買取センター</strong>: 東京都中央区銀座3-3-7 サカイリ9ビル1F-B1F（銀座駅C8出口より徒歩1分）。10:30〜19:30、年中無休（年末年始を除く）。質預かり・買取の店で、金・プラチナ・記念金貨も取り扱い。銀座には大黒屋の店舗がほかに2店（質銀座松屋通り店・質銀座並木通り買取センター）あります</li>
+            <li><strong>おたからや 銀座本店</strong>: 東京都中央区銀座4-6-18 ギンザアクトビル3階（銀座駅A13・A8出口より徒歩0分）。10:00〜19:00、年中無休（年末年始を除く）。おたからやは公式表記で店舗数2,070店舗以上</li>
           </ul>
+          <p>以前この記事で紹介していた「リファスタ 銀座店」は、リファスタ公式の店舗が東京池袋本店と大阪心斎橋店の2店のみで銀座に店舗がないため削除しました。</p>
+          <p className="text-xs text-warm-gray">出典：<a href="https://nanboya.com/shop/tokyo/ginza-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 銀座本店</a>／<a href="https://komehyo.jp/kaitori/shop/ginza" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO GINZA</a>／<a href="https://goldplaza.jp/shop/ginza" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 東京銀座本店</a>／<a href="https://shichi.e-daikoku.com/shop/ginza-kaitori/" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質銀座買取センター</a>／<a href="https://www.otakaraya.jp/shop/tokyo/" target="_blank" rel="noopener noreferrer nofollow">おたからや 東京都の店舗一覧</a>／<a href="https://kinkaimasu.jp/accessmap/tokyo/" target="_blank" rel="noopener noreferrer nofollow">リファスタ 店舗アクセス</a>（いずれも2026年10月13日確認）</p>
 
           <h2>3. 銀座で高額買取が期待できる金製品</h2>
           <ul>
@@ -147,19 +159,19 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>銀座の買取店は予約が必要？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">高額品の場合、専門査定士の事前予約がおすすめ。一般品は予約なしで対応可。</p>
+  <p className="mt-3 text-sm leading-relaxed">高額品は来店予約を使うと待ち時間を減らせます。なんぼや・大黒屋・KOMEHYOは公式サイトに来店（買取）予約の窓口があります。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>銀座の駅から徒歩何分の業者が多い？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">銀座駅・有楽町駅・東銀座駅から徒歩5〜10分圏内に集中。</p>
+  <p className="mt-3 text-sm leading-relaxed">公式の表記では、おたからや 銀座本店が銀座駅A13・A8出口から徒歩0分、なんぼや 銀座本店が銀座駅A2出口から徒歩1分程度、大黒屋 質銀座買取センターが銀座駅C8出口から徒歩1分、KOMEHYO GINZAが銀座一丁目駅8番出口から徒歩1分です（2026年10月13日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>少量でも買取してくれますか？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">可能。金1g単位から査定対応。ただし高額金製品が得意な業者が多いため、少量なら一括査定経由がおすすめ。</p>
+  <p className="mt-3 text-sm leading-relaxed">店や品物によって異なります。少量の場合は来店前に電話やLINE査定で確認するか、一括査定（ヒカカク！）で複数社の反応を見るのがおすすめです。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>銀座エリアの査定料・出張料は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">ほぼ全業者で無料。キャンセル料も無料が一般的。事前にHPで確認を。</p>
+  <p className="mt-3 text-sm leading-relaxed">店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトで確認してください。</p>
 </details>
 
           <GoldPriceTrend />

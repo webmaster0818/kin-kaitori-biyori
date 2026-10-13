@@ -29,10 +29,10 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】池袋の金買取おすすめ｜大手7店舗の特徴と相場比較",
+    headline: "【2026年最新】池袋の金買取おすすめ｜公式で確認した4店舗と相場比較",
     description: "池袋エリアで金を高く売るための業者比較ガイド。サンシャイン通り・西口・東口の主要店舗、出張・宅配対応、相場の見方を完全解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-10-13",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -51,14 +51,25 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u3067\u571f\u65e5\u3067\u3082\u91d1\u8cb7\u53d6\u3067\u304d\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u591a\u304f\u306e\u5927\u624b\u696d\u8005\uff08\u5927\u9ed2\u5c4b\u3001\u306a\u3093\u307c\u3084\u3001\u5927\u5409\u7b49\uff09\u306f\u571f\u65e5\u3082\u55b6\u696d\u3002\u4e8b\u524d\u306b\u55b6\u696d\u6642\u9593\u3092\u78ba\u8a8d\u63a8\u5968\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u306e\u91d1\u8cb7\u53d6\u3067\u4e00\u756a\u9ad8\u3044\u696d\u8005\u306f\u3069\u3053\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u696d\u8005\u306b\u3088\u308a\u5f97\u610f\u5206\u91ce\u304c\u7570\u306a\u308b\u305f\u3081\u4e00\u6982\u306b\u306f\u8a00\u3048\u307e\u305b\u3093\u3002\u4e00\u62ec\u67fb\u5b9a\uff08\u30d2\u30ab\u30ab\u30af\uff01\uff09\u3067\u8907\u6570\u6bd4\u8f03\u304c\u304a\u3059\u3059\u3081\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u6c60\u888b\u99c5\u304b\u3089\u5f92\u6b69\u4f55\u5206\u306e\u696d\u8005\u304c\u591a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u6771\u53e35\u301c10\u5206\u570f\u5185\u306b\u5927\u624b\u96c6\u4e2d\u3002\u30b5\u30f3\u30b7\u30e3\u30a4\u30f3\u901a\u308a\u6cbf\u3044\u3068\u99c5\u8fd1\u306b\u5206\u6563\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u51fa\u5f35\u8cb7\u53d6\u3067\u6c60\u888b\u4ee5\u5916\u3082\u5bfe\u5fdc\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u591a\u304f\u306e\u696d\u8005\u304c\u90fd\u5185\u5168\u57df\u30fb\u9996\u90fd\u570f\u306b\u5bfe\u5fdc\u3002\u4e8b\u524d\u306b\u30a8\u30ea\u30a2\u78ba\u8a8d\u3092\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u8eab\u5206\u8a3c\u306f\u4f55\u304c\u5fc5\u8981\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53e4\u7269\u55b6\u696d\u6cd5\u306b\u3088\u308a\u672c\u4eba\u78ba\u8a8d\u304c\u5fc5\u8981\u3002\u904b\u8ee2\u514d\u8a31\u8a3c\u3001\u30de\u30a4\u30ca\u30f3\u30d0\u30fc\u30ab\u30fc\u30c9\u3001\u30d1\u30b9\u30dd\u30fc\u30c8\u306e\u3044\u305a\u308c\u304b\u3002\"}}]}" }} />;
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "池袋で土日でも金買取できますか？", acceptedAnswer: { "@type": "Answer", text: "できます。公式で確認できた店では、大黒屋 質池袋東口買取センター（年中無休・年末年始を除く）、なんぼや 池袋店（定休日なし）、買取大吉 池袋西口店（年中無休）が土日も営業しています。リファスタ 東京池袋本店は水曜・日曜が定休で完全予約制です（2026年10月13日確認）。" } },
+      { "@type": "Question", name: "池袋の金買取で一番高い業者はどこ？", acceptedAnswer: { "@type": "Answer", text: "業者により得意分野が異なるため一概には言えません。一括査定（ヒカカク！）で複数比較がおすすめ。" } },
+      { "@type": "Question", name: "池袋駅から徒歩何分の業者が多い？", acceptedAnswer: { "@type": "Answer", text: "公式の表記では、大黒屋 質池袋東口買取センターが池袋駅東口（中央）から徒歩1分、なんぼや 池袋店がJR池袋駅東口から徒歩2分程度、買取大吉 池袋西口店がJR池袋駅西口から徒歩2分、リファスタ 東京池袋本店が池袋駅35番出口から徒歩7分です（2026年10月13日確認）。" } },
+      { "@type": "Question", name: "出張買取で池袋以外も対応できる？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川の一部地域です。申し込み時に対象エリアか確認してください。" } },
+      { "@type": "Question", name: "身分証は何が必要？", acceptedAnswer: { "@type": "Answer", text: "古物営業法により本人確認が必要。運転免許証、マイナンバーカード、パスポートのいずれか。" } },
+    ],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年最新】池袋の金買取おすすめ｜大手7店舗の特徴と相場比較",
+  title: "【2026年最新】池袋の金買取おすすめ｜公式で確認した4店舗と相場比較",
   description: "池袋エリアで金を高く売るための業者比較ガイド。サンシャイン通り・西口・東口の主要店舗、出張・宅配対応、相場の見方を完全解説。",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/ikebukuro-kin-kaitori/" },
@@ -104,21 +115,20 @@ export default function Page() {
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
-          <p>池袋は東京都内でも金買取業者が集中するエリアです。サンシャインシティ周辺・西口・東口に主要店舗が点在し、競争が活発なため<strong>相場以上の買取が期待できる地域</strong>。</p>
+          <p>池袋は東京都内でも金買取業者が集中するエリアです。東口・西口、サンシャイン方面に買取店があり、<strong>徒歩圏で複数店の見積もりを比べやすいエリア</strong>です。</p>
 
           <h2>1. 池袋エリアの金買取事情</h2>
-          <p>JR池袋駅は1日240万人以上が利用する東京北部最大のターミナル。富裕層も多く居住し、買取需要も活発です。</p>
+          <p>池袋駅は複数路線が乗り入れるターミナル駅で、東口・西口とも駅から数分の場所に買取店があります。下の店舗情報は各社の公式店舗ページで確認したものです。</p>
 
           <h2>2. 池袋の主要金買取店</h2>
           <ul>
-            <li><strong>大黒屋 池袋本店</strong>: 質屋系列、即現金化、JR東口5分</li>
-            <li><strong>なんぼや 池袋店</strong>: ジュエリー専門査定、東口</li>
-            <li><strong>ゴールドプラザ 池袋店</strong>: 金・プラチナ専門、東口</li>
-            <li><strong>大吉 池袋本店</strong>: 全国700店舗、東口</li>
-            <li><strong>買取大臣 池袋店</strong>: 西口、地域密着</li>
-            <li><strong>ジュエルカフェ 池袋店</strong>: ハイブランド対応</li>
-            <li><strong>リファスタ 池袋本店</strong>: 業界最高水準を謳う専門店</li>
+            <li><strong>大黒屋 質池袋東口買取センター</strong>: 東京都豊島区南池袋1-22-1 アサヒ薬局ビルB1F（池袋駅東口〔中央〕より徒歩1分）。10:00〜19:00、年中無休（年末年始を除く）。質預かり・買取の店で、金・プラチナ・記念金貨も取り扱い。池袋には大黒屋の店舗がほかに2店（質池袋買取センター・質池袋西口駅前店）あります</li>
+            <li><strong>なんぼや 池袋店</strong>: 東京都豊島区東池袋1-2-7 OKビル（JR池袋駅東口より徒歩2分程度）。10:00〜21:00（最終受付20:30）、定休日なし。ブランド品のほか金・貴金属・プラチナも買取</li>
+            <li><strong>買取大吉 池袋西口店</strong>: 東京都豊島区西池袋1-17-6 新光ビル1階（JR池袋駅西口から徒歩2分）。10:00〜19:00、年中無休。金買取強化店。買取大吉は全国2,400店舗以上</li>
+            <li><strong>リファスタ 東京池袋本店</strong>: 東京都豊島区東池袋1-25-14 アルファビルディング4F（池袋駅35番出口よりサンシャイン方面へ徒歩7分）。10:00〜13:00／14:00〜17:00（店頭最終受付16:00・完全予約制）、水曜・日曜定休（臨時休業あり）。金・プラチナ・ダイヤ・宝石の買取店</li>
           </ul>
+          <p>以前この記事で紹介していた「ゴールドプラザ 池袋店」「ジュエルカフェ 池袋店」は、各社の公式店舗一覧に池袋の店舗がないため削除しました（ゴールドプラザの関東の店舗は銀座・町田・吉祥寺・錦糸町・西新宿・千葉・横浜・大宮・志木）。「買取大臣 池袋店」は公式の店舗情報を確認できなかったため掲載していません。</p>
+          <p className="text-xs text-warm-gray">出典：<a href="https://shichi.e-daikoku.com/shop/ikebukuro-higashiguchi/" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質池袋東口買取センター</a>／<a href="https://nanboya.com/shop/tokyo/ikebukuro-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 池袋店</a>／<a href="https://www.kaitori-daikichi.jp/store/ikebukuro-nishiguchi/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 池袋西口店</a>／<a href="https://kinkaimasu.jp/accessmap/tokyo/" target="_blank" rel="noopener noreferrer nofollow">リファスタ 東京池袋本店</a>／<a href="https://goldplaza.jp/shop" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 店舗一覧</a>／<a href="https://www.jewel-cafe.jp/shop/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ 店舗案内</a>（いずれも2026年10月13日確認）</p>
 
           <h2>3. 店頭・出張・宅配の比較</h2>
           <div className="table-wrapper">
@@ -147,7 +157,7 @@ export default function Page() {
           <h2>よくある質問</h2>
           <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>池袋で土日でも金買取できますか？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">可能。多くの大手業者（大黒屋、なんぼや、大吉等）は土日も営業。事前に営業時間を確認推奨。</p>
+  <p className="mt-3 text-sm leading-relaxed">できます。公式で確認できた店では、大黒屋 質池袋東口買取センター（年中無休・年末年始を除く）、なんぼや 池袋店（定休日なし）、買取大吉 池袋西口店（年中無休）が土日も営業しています。リファスタ 東京池袋本店は水曜・日曜が定休で完全予約制です（2026年10月13日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>池袋の金買取で一番高い業者はどこ？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
@@ -155,11 +165,11 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>池袋駅から徒歩何分の業者が多い？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">東口5〜10分圏内に大手集中。サンシャイン通り沿いと駅近に分散。</p>
+  <p className="mt-3 text-sm leading-relaxed">公式の表記では、大黒屋 質池袋東口買取センターが池袋駅東口（中央）から徒歩1分、なんぼや 池袋店がJR池袋駅東口から徒歩2分程度、買取大吉 池袋西口店がJR池袋駅西口から徒歩2分、リファスタ 東京池袋本店が池袋駅35番出口から徒歩7分です（2026年10月13日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>出張買取で池袋以外も対応できる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">可能。多くの業者が都内全域・首都圏に対応。事前にエリア確認を。</p>
+  <p className="mt-3 text-sm leading-relaxed">ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川の一部地域です。申し込み時に対象エリアか確認してください。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>身分証は何が必要？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
