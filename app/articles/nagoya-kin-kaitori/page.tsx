@@ -58,7 +58,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金買取｜栄生・名駅・本陣・ささしまライブなど駅別の実在店舗と営業時間【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-10-12",
+    dateModified: "2026-10-14",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅・近鉄/名鉄名古屋駅・栄・矢場町など駅別に、公式サイトで確認した金買取店の住所・駅からの徒歩分・営業時間を一覧に（2026年10月11日確認）。本陣・ささしまライブ・堀田など徒歩圏に店がない駅の選択肢と本日の金相場も。",
@@ -210,7 +210,7 @@ export default function NagoyaKinKaitoriPage() {
           </table>
         </div>
 
-        <p>栄エリアでは、コメ兵本店やブランドオフ名古屋栄店など、ブランド品と貴金属の両方を評価できる業者が充実しています。K18やプラチナのブランドジュエリーは、素材価値に加えてブランド価値も上乗せされるため、ブランド買取に強い業者に見積もりを取ることが重要です。</p>
+        <p>ブランド品と貴金属の両方を扱う大手のうち、<strong>KOMEHYO 名古屋本店 本館</strong>（中区大須3-25-31／10:30〜19:00）と<strong>ブランドオフ 名古屋大須店</strong>（中区大須3-24-44 大須セントラルスクウェア B1F/1F／大須観音駅 徒歩5分／10:30〜19:30・定休日なし）は、どちらも栄ではなく大須にあります。ブランドオフに「名古屋栄店」はなく、愛知県内の店舗は名古屋大須店とタスクール吹上店の2店です（<a href="https://komehyo.jp/kaitori/shop/kc-nagoya-honkan" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO公式</a>／<a href="https://kaitori.brandoff.co.jp/shop/tokai/aichi/" target="_blank" rel="noopener noreferrer nofollow">ブランドオフ公式の店舗一覧</a>・2026年10月14日確認）。栄駅の近くなら、下の駅別早見表のなんぼや メルサ栄店・大黒屋 質名古屋栄買取センターが候補です。K18やプラチナのブランドジュエリーは、素材価値に加えてブランド価値も上乗せされるため、ブランド買取に強い業者に見積もりを取ることが重要です。</p>
 
         <h3>大須エリア</h3>
 

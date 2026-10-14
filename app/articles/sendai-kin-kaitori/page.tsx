@@ -53,7 +53,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年最新】仙台の金買取おすすめ業者ガイド — 仙台駅・一番町・青葉通エリア別比較",
     datePublished: "2026-04-26",
-    dateModified: "2026-04-26",
+    dateModified: "2026-10-14",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "仙台で金を高く売るならどこがいい？仙台駅・一番町・青葉通のエリア別おすすめ買取業者、買取方法の比較、仙台の金買取相場と高く売るコツを徹底解説。",
@@ -143,7 +143,7 @@ export default function SendaiKinKaitoriPage() {
 
         <h3>仙台駅周辺エリア</h3>
 
-        <p>JR仙台駅の西口・東口ともに買取店が集中しています。BiVi仙台駅東口には銀座屋が、仙台パルコには大黒屋が入っており、買い物ついでに立ち寄れる便利さが魅力です。</p>
+        <p>JR仙台駅の西口・東口ともに買取店があります。東口のBiVi仙台駅東口1階には銀座屋が、西口側のクリスロード商店街近くには大黒屋の買取センターがあります（各社公式の店舗ページ・2026年10月14日確認）。</p>
 
         <div className="table-wrapper">
           <table>
@@ -157,11 +157,13 @@ export default function SendaiKinKaitoriPage() {
             <tbody>
               <tr><td><strong>買取大吉</strong></td><td>全国チェーン。査定料・手数料無料。仙台市内に複数店舗</td><td>店頭・出張</td></tr>
               <tr><td><strong>なんぼや</strong></td><td>仙台クリスロード店。金・貴金属専門の査定士が対応</td><td>店頭</td></tr>
-              <tr><td><strong>大黒屋</strong></td><td>仙台パルコ店。質屋の老舗で信頼性が高い</td><td>店頭</td></tr>
-              <tr><td><strong>銀座屋</strong></td><td>BiVi仙台駅東口店。金買取に特化</td><td>店頭</td></tr>
+              <tr><td><strong>大黒屋</strong></td><td>質仙台クリスロード買取センター。青葉区中央2-1-15（JR仙台駅西口 徒歩5分・あおば通駅 徒歩2分）／10:00〜19:00（月〜日・祝。公式に定休日の記載なし）</td><td>店頭</td></tr>
+              <tr><td><strong>銀座屋</strong></td><td>BiVi仙台駅東口店。宮城野区榴岡2-1-25 BiVi仙台駅東口1階（JR仙台駅東口を出て左手）／10:00〜19:00・不定休</td><td>店頭</td></tr>
             </tbody>
           </table>
         </div>
+
+        <p className="text-sm">※大黒屋・銀座屋の住所と営業時間は各社公式の店舗ページによります（<a href="https://shop.e-daikoku.com/info/spot/detail?code=0000000135" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質仙台クリスロード買取センター</a>／<a href="https://www.ginzaya.co.jp/shop/shop-20283/" target="_blank" rel="noopener noreferrer nofollow">銀座屋 BiVi仙台駅東口店</a>・2026年10月14日確認）。以前この表に載せていた「大黒屋 仙台パルコ店」は、大黒屋公式の店舗検索（宮城県4店：質仙台クリスロード買取センター・仙台一番町藤崎前買取センター・質北仙台買取センター・南仙台買取センター）に無く、実在を確認できなかったため外しました。</p>
 
         <h3>一番町・青葉通エリア</h3>
 
