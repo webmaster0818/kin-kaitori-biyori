@@ -38,10 +38,10 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "仙台で金買取の価格が高いエリアはどこですか？", acceptedAnswer: { "@type": "Answer", text: "仙台駅周辺・一番町・クリスロード商店街エリアが金買取の激戦区です。大手買取チェーンが集中しており、競争による高値が期待できます。" } },
-      { "@type": "Question", name: "仙台の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。買取大吉やなんぼやなど大手チェーンが仙台市内に多数あり、予約不要で即日対応しています。" } },
+      { "@type": "Question", name: "仙台の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。仙台市内には買取大吉・なんぼや・おたからやなどの店舗があります。混雑や査定時間は店舗ごとに違うため、急ぐ場合は来店前に電話で確認してください。" } },
       { "@type": "Question", name: "仙台と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、仙台でも東京でもほぼ同じ水準です。ただし、一括査定で全国の業者と比較することをおすすめします。" } },
       { "@type": "Question", name: "東北の地方都市からでも金を高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取を利用すれば、東北のどこからでも全国の高価買取業者に売却できます。ヒカカク！の一括査定なら、仙台の業者だけでなく全国の業者と価格を比較可能です。" } },
-      { "@type": "Question", name: "仙台で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "宮城県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）を検討してください。" } },
+      { "@type": "Question", name: "仙台で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "あります。この記事の店舗表のうち、買取大吉・ブラリバ・ザ・ゴールド・おたからやは公式サイトで出張買取を案内しています（対応地域は申込時に各社へ確認してください）。一方、ウリエル・ティファナは宮城県が公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。宅配買取ならティファナが全国対応・送料無料です。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -53,7 +53,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年最新】仙台の金買取おすすめ業者ガイド — 仙台駅・一番町・青葉通エリア別比較",
     datePublished: "2026-04-26",
-    dateModified: "2026-10-14",
+    dateModified: "2026-10-15",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "仙台で金を高く売るならどこがいい？仙台駅・一番町・青葉通のエリア別おすすめ買取業者、買取方法の比較、仙台の金買取相場と高く売るコツを徹底解説。",
@@ -127,7 +127,7 @@ export default function SendaiKinKaitoriPage() {
 
         <h3>東北最大の買取激戦区</h3>
 
-        <p>仙台市には買取大吉、なんぼや、おたからや、大黒屋、ブランドジャック、銀座屋などの<strong>全国チェーンと地元専門店が多数</strong>集結しています。仙台駅東口のBiVi仙台や、一番町のクリスロード商店街には買取店が密集しており、競争が激しいエリアです。</p>
+        <p>仙台市には買取大吉、なんぼや、おたからや、大黒屋、ブランド・ジャック、銀座屋などの<strong>全国チェーンと地元専門店が多数</strong>集結しています。仙台駅東口のBiVi仙台や、駅西口のクリスロード商店街（青葉区中央）から一番町にかけては買取店が密集しており、競争が激しいエリアです。</p>
 
         <p>東北全域（青森・岩手・秋田・山形・福島）からの利用者が仙台に集まるため、買取量が多く、業者も積極的な価格提示をする傾向にあります。</p>
 
@@ -179,16 +179,16 @@ export default function SendaiKinKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ブラリバ</strong></td><td>金の査定知識が豊富。口コミ評価が高い</td><td>店頭・宅配・出張</td></tr>
-              <tr><td><strong>おたからや</strong></td><td>仙台市内に複数店舗。フランチャイズの大手</td><td>店頭・出張</td></tr>
-              <tr><td><strong>ブランドジャック</strong></td><td>貴金属・高額商品メインの買取専門店。口コミ評価が高い</td><td>店頭</td></tr>
+              <tr><td><strong>ブラリバ</strong></td><td>仙台一番町店。青葉区一番町3-4-26 よろづ園ビル1階（青葉通一番町駅 徒歩2分）／11:00〜20:00。金・貴金属も買取対象</td><td>店頭・宅配・出張</td></tr>
+              <tr><td><strong>おたからや</strong></td><td>仙台市内18店。一番町には仙台本店（一番町4-8-15 仙台三越 本館1階）と仙台一番町店（一番町3-5-7・マーブルロード）／いずれも10:00〜19:00・年中無休（年末年始除く）</td><td>店頭・出張</td></tr>
+              <tr><td><strong>ブランド・ジャック</strong></td><td>ブランド品・時計・貴金属の専門店（仙台市内3店）。仙台一番町店＝一番町4-5-22 1階（勾当台公園駅 徒歩2分）／10:00〜19:00・駐車場なし</td><td>店頭</td></tr>
             </tbody>
           </table>
         </div>
 
         <h3>郊外エリア（泉・長町・利府）</h3>
 
-        <p>仙台市郊外のイオンモールやショッピングセンター内にも買取店が出店しています。車でのアクセスが便利で、駐車場完備の店舗が多いのが特徴です。</p>
+        <p>仙台市郊外のイオンやショッピングセンター内、幹線道路沿いにも買取店があります。車で行く場合は、駐車場の有無を各店舗ページで確認してください。</p>
 
         <div className="table-wrapper">
           <table>
@@ -200,11 +200,13 @@ export default function SendaiKinKaitoriPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>買取大吉</strong></td><td>イオンモール系列に出店。駐車場完備</td><td>店頭・出張</td></tr>
-              <tr><td><strong>ザ・ゴールド</strong></td><td>東北に強い買取チェーン。貴金属・ジュエリーに特化</td><td>店頭・出張・宅配</td></tr>
+              <tr><td><strong>買取大吉</strong></td><td>宮城県内40店。郊外はイオンタウン仙台泉大沢店（泉区大沢1-5-1）・イオンモール新利府南館店（利府町新中道3-1-1）・太白長町店（太白区長町3-7-7）・イオンタウン仙台富沢店（太白区大野田5-30-6）など</td><td>店頭・出張</td></tr>
+              <tr><td><strong>ザ・ゴールド</strong></td><td>宮城県内8店。泉インター店（泉区大沢2-3-1）・利府店（利府町中央3-20-5）など／10:00〜18:00</td><td>店頭・出張・宅配</td></tr>
             </tbody>
           </table>
         </div>
+
+        <p className="text-sm">※一番町エリアと郊外エリアの店舗・住所・営業時間は各社公式の店舗ページによります（<a href="https://brandrevalue.com/sendai-ichibancho" target="_blank" rel="noopener noreferrer nofollow">ブラリバ 仙台一番町店</a>／<a href="https://www.otakaraya.jp/shop/miyagi/sendai_shi/" target="_blank" rel="noopener noreferrer nofollow">おたからや 仙台市の店舗一覧</a>／<a href="https://www.brandjack.jp/kaitori-shop/sendai-ichibancho/" target="_blank" rel="noopener noreferrer nofollow">ブランド・ジャック 仙台一番町店</a>／<a href="https://www.kaitori-daikichi.jp/store/hokkaido-tohoku/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 北海道・東北の店舗一覧</a>／<a href="https://www.the-gold.jp/shop/" target="_blank" rel="noopener noreferrer nofollow">ザ・ゴールド 店舗を探す</a>・2026年10月15日確認）。店舗数・営業時間は変わることがあるため、来店前に公式でご確認ください。</p>
 
         <h2>仙台で金を高く売るための5つのコツ</h2>
 
@@ -215,7 +217,7 @@ export default function SendaiKinKaitoriPage() {
           </li>
           <li>
             <strong>大手チェーンと地元専門店を比較する</strong>
-            <p>全国チェーン（買取大吉、なんぼや等）と地元の専門店（ブランドジャック等）では価格設定が異なることがあります。両方に見積もりを取ることで、最高値を見つけやすくなります。</p>
+            <p>全国チェーン（買取大吉、なんぼや等）と地元の専門店（ブランド・ジャック等）では価格設定が異なることがあります。両方に見積もりを取ることで、最高値を見つけやすくなります。</p>
           </li>
           <li>
             <strong>宅配買取で全国の業者とも比較する</strong>
@@ -291,10 +293,10 @@ export default function SendaiKinKaitoriPage() {
         <div className="space-y-3 not-prose">
           {[
             { q: "仙台で金買取の価格が高いエリアはどこですか？", a: "仙台駅周辺・一番町・クリスロード商店街エリアが金買取の激戦区です。大手買取チェーンが集中しており、競争による高値が期待できます。" },
-            { q: "仙台の金買取で即日現金化できますか？", a: "はい、店頭買取であればその場で現金を受け取れます。買取大吉やなんぼやなど大手チェーンが仙台市内に多数あり、予約不要で即日対応しています。" },
+            { q: "仙台の金買取で即日現金化できますか？", a: "はい、店頭買取であればその場で現金を受け取れます。仙台市内には買取大吉・なんぼや・おたからやなどの店舗があります。混雑や査定時間は店舗ごとに違うため、急ぐ場合は来店前に電話で確認してください。" },
             { q: "仙台と東京で金の買取価格に差はありますか？", a: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、仙台でも東京でもほぼ同じ水準です。ただし、一括査定で全国の業者と比較することをおすすめします。" },
             { q: "東北の地方都市からでも金を高く売れますか？", a: "宅配買取を利用すれば、東北のどこからでも全国の高価買取業者に売却できます。ヒカカク！の一括査定なら、仙台の業者だけでなく全国の業者と価格を比較可能です。" },
-            { q: "仙台で出張買取に対応している業者はありますか？", a: "宮城県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）を検討してください。" },
+            { q: "仙台で出張買取に対応している業者はありますか？", a: "あります。この記事の店舗表のうち、買取大吉・ブラリバ・ザ・ゴールド・おたからやは公式サイトで出張買取を案内しています（対応地域は申込時に各社へ確認してください）。一方、ウリエル・ティファナは宮城県が公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。宅配買取ならティファナが全国対応・送料無料です。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm">
