@@ -4,8 +4,8 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 
 const PUBLISHED = "2026-10-08";
-const UPDATED = "2026-10-09";
-const UPDATED_JA = "2026年10月9日";
+const UPDATED = "2026-10-15";
+const UPDATED_JA = "2026年10月15日";
 const URL = "https://gold-biyori.com/articles/hikakaku-kin-kaitori-kuchikomi/";
 const TITLE = "ヒカカクの金買取 口コミ・評判は？貴金属を一括査定に出す流れと注意点【2026年10月最新】";
 const DESC =
@@ -123,14 +123,14 @@ export default function Page() {
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">ヒカカクの金買取 口コミ・評判は？貴金属を一括査定に出す流れと注意点</h1>
           <p className="text-warm-gray text-sm mb-8">
-            最終更新: {UPDATED_JA}（公式サイト・公式クチコミページを同日に確認。本記事は広告（PR）リンクを含みます）
+            最終更新: {UPDATED_JA}（掲載点数・クチコミ件数・利用規約・FAQ・使い方ガイドを同日に公式サイトで再確認。本記事は広告（PR）リンクを含みます）
           </p>
 
           <div className="not-prose bg-gold-bg border-2 border-accent/30 rounded-xl p-5 my-6">
             <p className="font-bold mb-2">この記事の結論（30秒）</p>
             <ul className="text-sm space-y-1 list-disc pl-5">
               <li>ヒカカク！は<strong>買取店を紹介する比較サイト</strong>で、自社では査定も買取もしない。利用は<strong>完全無料</strong>、最大20社から査定結果がメールで届く。</li>
-              <li>貴金属・宝石カテゴリは<strong>1,082社・16,409点</strong>の掲載、直近1年の買取実績は「最低10円〜最高15,000,000円」（2026年10月9日時点の公式カテゴリページ表記）。</li>
+              <li>貴金属・宝石カテゴリは<strong>1,082社・16,432点</strong>の掲載、直近1年の買取実績は「最低10円〜最高15,000,000円」（2026年10月15日時点の公式カテゴリページ表記）。</li>
               <li>公式クチコミは<strong>総合3.4・1,083件</strong>。良い声は「一度の入力で複数社から返事」「買取不可でも丁寧」、気になる声は「電話が多い」「見積もり業者が少ない」。投稿は2021〜2023年に集中し、最新は2026年3月（当サイトが一覧1,078件を年別に集計）。</li>
               <li>金・貴金属を売った人の投稿は<strong>5件だけで、うち4件が星1〜2</strong>。別の品を頼んだのに「貴金属はないか」と聞かれたという投稿も6件ある。</li>
               <li>向いているのは<strong>刻印・重量が分かる金製品で複数社の相見積もりを取りたい人</strong>。金は相場連動で地金価格の差が小さいため、<strong>手数料・買取係数・デザイン評価の差</strong>を比べる用途に向く。電話連絡を避けたい人や、今日中に現金化したい人には向かない。</li>
@@ -154,12 +154,12 @@ export default function Page() {
                 <tr><th>料金</th><td>完全無料（利用規約第6条「当社がユーザーに対して請求する費用は原則無料」）</td></tr>
                 <tr><th>査定社数</th><td>最大20社から査定結果（買取不可の場合は返信が無いこともある）</td></tr>
                 <tr><th>買取方法</th><td>宅配・出張・店頭から最大3つを希望として選択</td></tr>
-                <tr><th>貴金属・宝石カテゴリ</th><td>掲載 16,409点・1,082社。直近1年の買取実績は「最低10円〜最高15,000,000円」と表示。絞り込みは「貴金属」「宝石」。相場表の先頭に金インゴットの最高買取相場が掲載</td></tr>
+                <tr><th>貴金属・宝石カテゴリ</th><td>掲載 16,432点・1,082社。直近1年の買取実績は「最低10円〜最高15,000,000円」と表示。絞り込みは「貴金属」「宝石」。相場表の先頭に金インゴットの最高買取相場が掲載</td></tr>
                 <tr><th>利用規模</th><td>「月間300万人以上が利用する買取比較サイト」（使い方ガイドの記載）</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-warm-gray">※ 数値はいずれも2026年10月9日に公式サイトの各ページを確認したもの（前日10月8日は16,406点）。掲載点数・社数は日々変動します。</p>
+          <p className="text-xs text-warm-gray">※ 掲載点数・社数・買取実績は2026年10月15日に公式カテゴリページで確認したもの（10月9日は16,409点、10月8日は16,406点）。それ以外の数値は2026年10月9日に公式サイトの各ページで確認したものです。掲載点数・社数は日々変動します。</p>
           <p>
             押さえておきたいのは、<strong>ヒカカク！自身は査定も買取もしない</strong>点です。公式FAQに「買取業者のご紹介のみ行っており、査定や買取に関しましては直接買取業者よりご連絡」とあり、利用規約第5条でも「一切の買取業務は行わず、金銭の授受には関与しない」「取引の成立・内容について保証しない」と定められています。
             査定額の妥当性や対応の良し悪しは<strong>紹介先の買取店ごとに違う</strong>ため、届いた査定を比べて選ぶ作業が利用者側に残ります。ヒカカク！以外の一括査定サイトとの違いは<Link href="/articles/ikkatsu-satei-hikaku/">金買取の一括査定サイト比較</Link>に、店頭・出張型の業者との使い分けは<Link href="/articles/kin-kaitori-osusume/">金買取おすすめ業者4社の比較</Link>にまとめています。
@@ -211,11 +211,11 @@ export default function Page() {
 
           <h2>4. 良い評判・気になる評判（出典付き）</h2>
           <p>
-            口コミは、ヒカカク！が自社サイトで公開している「ヒカカク！のクチコミ・評判」ページ（2026年10月8日確認・10月9日に全ページを再確認）を出典にしています。本文の転載はせず、評価分布と内容の傾向だけを整理しました。
+            口コミは、ヒカカク！が自社サイトで公開している「ヒカカク！のクチコミ・評判」ページ（2026年10月8日確認・10月9日に全ページを再確認・10月15日に総合評価と件数内訳を再確認）を出典にしています。本文の転載はせず、評価分布と内容の傾向だけを整理しました。
           </p>
           <div className="table-wrapper">
             <table>
-              <thead><tr><th>項目</th><th>公式クチコミページの表示（2026年10月9日時点・前日から変化なし）</th></tr></thead>
+              <thead><tr><th>項目</th><th>公式クチコミページの表示（2026年10月15日時点・10月8日から変化なし）</th></tr></thead>
               <tbody>
                 <tr><td>総合評価</td><td>3.4（5点満点）</td></tr>
                 <tr><td>件数の内訳</td><td>星5：425件／星4：200件／星3：106件／星2：86件／星1：266件（合計1,083件）</td></tr>
@@ -334,7 +334,7 @@ export default function Page() {
             <li><a href="https://hikakaku.com/pages/company/" target="_blank" rel="noopener noreferrer nofollow">運営者情報</a>／<a href="https://hikakaku.com/pages/kobutsu_hyoki/" target="_blank" rel="noopener noreferrer nofollow">古物営業法に基づく表記</a></li>
             <li><a href="https://www2.jpx.co.jp/disc/36790/140120240826576688.pdf" target="_blank" rel="noopener noreferrer nofollow">株式会社じげん「株式会社ヒカカクの株式取得（連結子会社化）及び吸収合併（簡易合併）に関するお知らせ」（2024年8月26日・適時開示）</a></li>
           </ul>
-          <p className="text-xs text-warm-gray">※ いずれも{UPDATED_JA}に公式サイトの生ページを確認して記載しています。サービス内容・件数は変更されることがあるため、最新情報は公式サイトでご確認ください。本記事はPRリンクを含みます。</p>
+          <p className="text-xs text-warm-gray">※ いずれも2026年10月9日に公式サイトの生ページを確認して記載しています（クチコミ件数・カテゴリの掲載点数・利用規約・FAQ・使い方ガイドは10月15日に再確認）。サービス内容・件数は変更されることがあるため、最新情報は公式サイトでご確認ください。本記事はPRリンクを含みます。</p>
 
           <ExpertQA category="compare" />
           <RelatedArticles
