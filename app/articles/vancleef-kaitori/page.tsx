@@ -31,7 +31,7 @@ function FaqSchema() {
     mainEntity: [
       { "@type": "Question", name: "ヴァンクリーフ&アーペルのアルハンブラはどのくらいで売れますか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月時点の買取相場目安として、ヴィンテージアルハンブラネックレス（K18YG/オニキス）で約25万〜35万円、ヴィンテージアルハンブラブレスレット5モチーフで約55万〜75万円、マジックアルハンブラネックレスで約40万〜60万円です。素材・石の種類・状態により変動します。" } },
       { "@type": "Question", name: "ヴァンクリーフの買取価格は定価の何割ですか？", acceptedAnswer: { "@type": "Answer", text: "ヴァンクリーフ&アーペルは5大ジュエラーの中でもリセールバリューが非常に高く、人気モデルは定価の50〜70%前後の買取率です。特にアルハンブラシリーズは需要が供給を大きく上回っており、高い買取率を維持しています。" } },
-      { "@type": "Question", name: "ヴァンクリーフの箱や保証書がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "買取は可能ですが、ヴァンクリーフ&アーペルの証明書（ギャランティカード）と専用ケースの有無は査定額に大きく影響します。特にギャランティカードがあると10〜20%の査定額アップが期待できます。" } },
+      { "@type": "Question", name: "ヴァンクリーフの箱や保証書がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "買取は可能ですが、ヴァンクリーフ&アーペルの証明書（ギャランティカード）と専用ケースの有無は査定額に大きく影響します。特にギャランティカードがあると10〜20%の査定額の上乗せが期待できます。" } },
       { "@type": "Question", name: "ヴァンクリーフの定価改定は買取価格に影響しますか？", acceptedAnswer: { "@type": "Answer", text: "はい、ヴァンクリーフ&アーペルは毎年のように定価改定（値上げ）を行っています。定価が上がるたびに中古品の相対価格が高まるため、買取相場も連動して上昇する傾向にあります。" } },
       { "@type": "Question", name: "ヴァンクリーフのジュエリーはどこで売るのが一番高いですか？", acceptedAnswer: { "@type": "Answer", text: "ヴァンクリーフ&アーペルはブランド価値が非常に高いため、金の素材買取店よりもブランドジュエリーの買取に強い専門店の方が高値がつきます。一括査定サービスで複数業者を比較し、最高値の業者に売却するのが最も確実です。" } },
     ],
@@ -59,7 +59,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "【2026年最新】ヴァンクリーフ&アーペル買取相場ガイド — アルハンブラの価格と高く売るコツ",
   description:
-    "ヴァンクリーフ&アーペル（Van Cleef & Arpels）の最新買取相場をモデル別に掲載。アルハンブラ・フリヴォル・ペルレの買取価格目安、高く売るコツ、おすすめ買取業者4社を徹底解説。",
+    "ヴァンクリーフ&アーペル（Van Cleef & Arpels）の最新買取相場をモデル別に掲載。アルハンブラ・フリヴォル・ペルレの買取価格目安、高く売るコツ、おすすめ買取業者4社を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/vancleef-kaitori/" },
 };
 
@@ -67,7 +67,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">ヴァンクリーフ&アーペルの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">ヴァンクリーフは業者によって査定額に大きな差が出ます。複数社比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">ヴァンクリーフは業者によって査定額に大きな差が出ます。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -104,9 +104,9 @@ export default function VancleefKaitoriPage() {
 
         <p>ヴァンクリーフ&アーペル（Van Cleef & Arpels）は1906年にパリで創業した世界5大ジュエラーのひとつです。アルハンブラに代表される四つ葉のクローバーモチーフは世界的に愛されており、<strong>リセールバリュー（再販価値）が極めて高い</strong>ことで知られています。</p>
 
-        <p>「ヴァンクリーフのアルハンブラを売りたい」「Van Cleefの買取相場はいくら？」「フリヴォルの買取価格は？」——この記事では、ヴァンクリーフ&アーペルの買取相場をモデル別に徹底解説します。</p>
+        <p>「ヴァンクリーフのアルハンブラを売りたい」「Van Cleefの買取相場はいくら？」「フリヴォルの買取価格は？」——この記事では、ヴァンクリーフ&アーペルの買取相場をモデル別に解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>アルハンブラ・フリヴォル・ペルレの最新買取相場</li>
           <li>ヴァンクリーフのリセールバリューが高い理由</li>
@@ -255,7 +255,7 @@ export default function VancleefKaitoriPage() {
         <ol>
           <li>
             <strong>ヴァンクリーフに強いブランド買取店を選ぶ</strong>
-            <p>ヴァンクリーフ&アーペルはブランド価値が買取価格の大部分を占めます。<strong>5大ジュエラーの査定経験が豊富な専門店</strong>に依頼することで、適正な高額査定が期待できます。金の素材買取店では素材価値のみの評価になるため注意してください。</p>
+            <p>ヴァンクリーフ&アーペルはブランド価値が買取価格の大部分を占めます。<strong>5大ジュエラーの査定経験が豊富な専門店</strong>に依頼することで、適正な高額査定が期待できます。金の素材買取店では素材価値のみの評価になるためご注意ください。</p>
           </li>
           <li>
             <strong>ギャランティカード（証明書）を必ず揃える</strong>
@@ -263,7 +263,7 @@ export default function VancleefKaitoriPage() {
           </li>
           <li>
             <strong>天然石の状態を保護する</strong>
-            <p>マザーオブパール・カーネリアン・ターコイズなどの天然石は、衝撃や温度変化に弱い素材です。保管時は専用ケースに入れ、他のジュエリーと接触しないようにしましょう。</p>
+            <p>マザーオブパール・カーネリアン・ターコイズなどの天然石は、衝撃や温度変化に弱い素材です。保管時は専用ケースに入れ、他のジュエリーと接触しないようにすることをおすすめします。</p>
           </li>
           <li>
             <strong>定価改定前に売却を検討する</strong>
@@ -284,7 +284,7 @@ export default function VancleefKaitoriPage() {
                 <th>業者名</th>
                 <th>方式</th>
                 <th>ヴァンクリーフ買取の特徴</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
@@ -332,7 +332,7 @@ export default function VancleefKaitoriPage() {
             },
             {
               q: "ヴァンクリーフの箱や保証書がなくても売れますか？",
-              a: "買取は可能ですが、ギャランティカード（証明書）と専用ケースの有無は査定額に大きく影響します。特にギャランティカードがあると10〜20%の査定額アップが期待できます。高額モデルほど影響が大きくなります。",
+              a: "買取は可能ですが、ギャランティカード（証明書）と専用ケースの有無は査定額に大きく影響します。特にギャランティカードがあると10〜20%の査定額の上乗せが期待できます。高額モデルほど影響が大きくなります。",
             },
             {
               q: "マザーオブパールが欠けているのですが、買取できますか？",

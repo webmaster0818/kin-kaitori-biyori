@@ -38,7 +38,7 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "京都で金買取の価格が高いエリアはどこですか？", acceptedAnswer: { "@type": "Answer", text: "公式の店舗一覧で確認できた範囲では、京都駅・四条河原町・三条大宮・丹波口に買取店があります（2026年10月13日確認・店名と営業時間は本文の一覧を参照）。金の買取価格は店ごとに異なるため、複数店で見積もりを取って比べるのがおすすめです。" } },
-      { "@type": "Question", name: "京都の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。京都には買取大吉・なんぼやの店舗があります（公式店舗一覧で確認）。来店予約の要否や営業時間は店ごとに異なるため、事前に確認してください。" } },
+      { "@type": "Question", name: "京都の金買取で即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であればその場で現金を受け取れます。京都には買取大吉・なんぼやの店舗があります（公式店舗一覧で確認）。来店予約の要否や営業時間は店ごとに異なるため、事前にご確認ください。" } },
       { "@type": "Question", name: "京都と東京で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、京都でも東京でもほぼ同じ水準です。ただし、一括査定で全国の業者と比較することをおすすめします。" } },
       { "@type": "Question", name: "関西の地方都市からでも金を高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取を利用すれば、関西のどこからでも全国の高価買取業者に売却できます。ヒカカク！の一括査定なら、京都の業者だけでなく全国の業者と価格を比較可能です。" } },
       { "@type": "Question", name: "京都で出張買取に対応している業者はありますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに京都府を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、京都府は対象外です。出張費・査定料は無料です。京都市外の関西エリアも対応可能な場合がありますので、事前にご確認ください。" } },
@@ -56,7 +56,7 @@ function ArticleSchema() {
     dateModified: "2026-10-13",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
-    description: "京都で金を高く売るならどこがいい？公式で確認した買取店の一覧、買取方法の比較、京都の金買取相場と高く売るコツを徹底解説。",
+    description: "京都で金を高く売るならどこがいい？公式で確認した買取店の一覧、買取方法の比較、京都の金買取相場と高く売るコツを解説します。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
@@ -66,7 +66,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】京都の金買取おすすめ業者ガイド — 京都駅・四条河原町などの店舗一覧と相場",
-  description: "京都で金を高く売るならどこがいい？公式で確認した買取店の一覧、店頭・出張・宅配の方法別比較、京都の金買取相場と高く売るコツを徹底解説。",
+  description: "京都で金を高く売るならどこがいい？公式で確認した買取店の一覧、店頭・出張・宅配の方法別比較、京都の金買取相場と高く売るコツを解説します。",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/kyoto-kin-kaitori/" },
 };
@@ -75,7 +75,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">京都で金の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">京都にも多くの買取業者があります。複数社を比較して最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">京都にも多くの買取業者があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -114,7 +114,7 @@ export default function KyotoKinKaitoriPage() {
 
         <p>「京都で金を売るならどこがいい？」「関西の地方からでも高く売れる？」「京都の買取相場は東京と違う？」——この記事では、京都での金買取に特化した<strong>店舗一覧と売り方のガイド</strong>をお届けします。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>京都の金買取マーケットの特徴</li>
           <li>京都で公式に確認できた買取店</li>
@@ -146,7 +146,7 @@ export default function KyotoKinKaitoriPage() {
           <li><strong>買取大吉 丹波口駅前店</strong>: 京都市下京区中堂寺坊城町17-2。10:00〜18:30、年中無休</li>
         </ul>
 
-        <p>以前この記事に載せていた店舗表は、別の都市の記述が混入しており公式で確認できなかったため削除しました。</p>
+        <p>以前この記事に掲載していた店舗表は、別の都市の記述が混入しており公式で確認できなかったため削除しました。</p>
         <p className="text-xs text-warm-gray">出典：<a href="https://nanboya.com/shop/kyoto/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 京都府の店舗一覧</a>／<a href="https://www.kaitori-daikichi.jp/store/kinki-tiku/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 近畿の店舗一覧</a>（いずれも2026年10月13日確認）</p>
 
         <h2>京都で金を高く売るための5つのコツ</h2>
@@ -154,7 +154,7 @@ export default function KyotoKinKaitoriPage() {
         <ol>
           <li>
             <strong>複数業者に見積もりを取る</strong>
-            <p>京都には多くの買取業者があります。同じ金製品でも業者によって1gあたり数百円の差が出ることがあるため、<strong>最低3社には見積もり</strong>を取りましょう。一括査定サービスを使えば効率的です。</p>
+            <p>京都には多くの買取業者があります。同じ金製品でも業者によって1gあたり数百円の差が出ることがあるため、<strong>最低3社には見積もり</strong>を取ることをおすすめします。一括査定サービスを使えば効率的です。</p>
           </li>
           <li>
             <strong>大手チェーンと地元専門店を比較する</strong>
@@ -170,7 +170,7 @@ export default function KyotoKinKaitoriPage() {
           </li>
           <li>
             <strong>付属品を揃える</strong>
-            <p>ブランドジュエリーの場合は保証書・箱があると査定額アップ。金地金（インゴット）の場合は品位証明書が重要です。</p>
+            <p>ブランドジュエリーの場合は保証書・箱があると、査定額が上がる場合があります。金地金（インゴット）の場合は品位証明書が重要です。</p>
           </li>
         </ol>
 
@@ -194,12 +194,12 @@ export default function KyotoKinKaitoriPage() {
                 <th>方法</th>
                 <th>メリット</th>
                 <th>デメリット</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>即日現金化。目の前で計量・査定</td><td>店舗に出向く必要がある</td><td>即日現金が欲しい人</td></tr>
-              <tr><td><strong>出張買取</strong></td><td>自宅で完結。大量の品もOK</td><td>日程調整が必要</td><td>外出が難しい人</td></tr>
+              <tr><td><strong>出張買取</strong></td><td>自宅で完結。量が多い場合も依頼しやすい</td><td>日程調整が必要</td><td>外出が難しい方</td></tr>
               <tr><td><strong>宅配買取</strong></td><td>全国の業者と比較可能</td><td>発送の手間。現金化に数日</td><td>最高値を追求したい人</td></tr>
               <tr><td><strong>一括査定</strong></td><td>複数業者に一度で見積もり</td><td>実物査定まで時間がかかる</td><td>効率的に比較したい人</td></tr>
             </tbody>
@@ -215,7 +215,7 @@ export default function KyotoKinKaitoriPage() {
                 <th>業者名</th>
                 <th>方式</th>
                 <th>京都での特徴</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
@@ -234,7 +234,7 @@ export default function KyotoKinKaitoriPage() {
         <div className="space-y-3 not-prose">
           {[
             { q: "京都で金買取の価格が高いエリアはどこですか？", a: "公式の店舗一覧で確認できた範囲では、京都駅・四条河原町・三条大宮・丹波口に買取店があります（2026年10月13日確認・店名と営業時間は本文の一覧を参照）。金の買取価格は店ごとに異なるため、複数店で見積もりを取って比べるのがおすすめです。" },
-            { q: "京都の金買取で即日現金化できますか？", a: "はい、店頭買取であればその場で現金を受け取れます。京都には買取大吉・なんぼやの店舗があります（公式店舗一覧で確認）。来店予約の要否や営業時間は店ごとに異なるため、事前に確認してください。" },
+            { q: "京都の金買取で即日現金化できますか？", a: "はい、店頭買取であればその場で現金を受け取れます。京都には買取大吉・なんぼやの店舗があります（公式店舗一覧で確認）。来店予約の要否や営業時間は店ごとに異なるため、事前にご確認ください。" },
             { q: "京都と東京で金の買取価格に差はありますか？", a: "基本的に大きな差はありません。金の買取価格は国際相場に連動しているため、京都でも東京でもほぼ同じ水準です。ただし、一括査定で全国の業者と比較することをおすすめします。" },
             { q: "関西の地方都市からでも金を高く売れますか？", a: "宅配買取を利用すれば、関西のどこからでも全国の高価買取業者に売却できます。ヒカカク！の一括査定なら、京都の業者だけでなく全国の業者と価格を比較可能です。" },
             { q: "京都で出張買取に対応している業者はありますか？", a: "ウリエルは公式の出張対応エリアに京都府を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、京都府は対象外です。出張費・査定料は無料です。京都市外の関西エリアも対応可能な場合がありますので、事前にご確認ください。" },

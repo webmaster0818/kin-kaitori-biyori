@@ -58,7 +58,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u7247\u65b9\u3057\u304b\u306a\u3044\u30d4\u30a2\u30b9\u3067\u3082\u8cb7\u53d6\u3067\u304d\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u696d\u8005\u306f\u91d1\u3068\u3057\u3066\u91cd\u91cf\u3067\u67fb\u5b9a\u3059\u308b\u305f\u3081\u3001\u30da\u30a2\u3067\u306a\u304f\u3066\u3082\u4fa1\u683c\u306f\u540c\u3058\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u53e4\u304f\u3066\u5909\u8272\u3057\u3066\u3044\u308b\u30d4\u30a2\u30b9\u3067\u3082\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u58f2\u308c\u307e\u3059\u3002\u8868\u9762\u306e\u5909\u8272\u306f\u8cb7\u53d6\u4fa1\u683c\u306b\u5f71\u97ff\u3057\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5b50\u4f9b\u7528\u306e\u5c0f\u3055\u3044\u30d4\u30a2\u30b9\u3067\u3082\u67fb\u5b9a\u5bfe\u8c61\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5bfe\u8c61\u3067\u3059\u30021g\u672a\u6e80\u3067\u3082\u91d1\u3068\u3057\u3066\u67fb\u5b9a\u53ef\u80fd\u3002\u8907\u6570\u307e\u3068\u3081\u308b\u3068\u52b9\u7387\u7684\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30e1\u30c3\u30ad\u30d4\u30a2\u30b9\uff08K18GP\uff09\u306f\u8cb7\u53d6\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u91d1\u542b\u6709\u91cf\u304c\u6975\u3081\u3066\u5c11\u306a\u3044\u305f\u3081\u3001\u307b\u3068\u3093\u3069\u306e\u696d\u8005\u3067\u8cb7\u53d6\u4e0d\u53ef\u307e\u305f\u306f\u6570\u5341\u5186\u7a0b\u5ea6\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u58ca\u308c\u305f\u30d4\u30a2\u30b9\uff08\u91dd\u304c\u66f2\u304c\u3063\u305f\u7b49\uff09\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u554f\u984c\u306a\u304f\u8cb7\u53d6\u53ef\u3002\u7d20\u6750\u3068\u3057\u3066\u306e\u4fa1\u5024\u3067\u5224\u65ad\u3059\u308b\u305f\u3081\u3001\u5f62\u72b6\u306f\u95a2\u4fc2\u3042\u308a\u307e\u305b\u3093\u3002\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"片方しかないピアスでも買取できますか？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能です。業者は金として重量で査定するため、ペアでなくても価格は同じ。\"}}, {\"@type\": \"Question\", \"name\": \"古くて変色しているピアスでも売れる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"売れます。表面の変色は買取価格に影響しません。\"}}, {\"@type\": \"Question\", \"name\": \"子供用の小さいピアスでも査定対象？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"対象です。1g未満でも金として査定可能。複数まとめると効率的。\"}}, {\"@type\": \"Question\", \"name\": \"メッキピアス（K18GP）は買取できる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"金含有量が極めて少ないため、ほとんどの業者で買取不可または数十円程度。\"}}, {\"@type\": \"Question\", \"name\": \"壊れたピアス（針が曲がった等）は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"問題なく買取可。素材としての価値で判断するため、形状は関係ありません。\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -74,7 +74,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">金のピアスの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">金のピアスの買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">金のピアスの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -110,7 +110,7 @@ export default function Page() {
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
-          <p>金のピアスは小ぶりで軽いことが多く、「売れるの？」と不安に思う方も多いはず。本記事で、片方紛失でも売れる方法、相場、高く売るコツを徹底解説します。</p>
+          <p>金のピアスは小ぶりで軽いことが多く、「売れるの？」と不安に思う方も多いはず。本記事で、片方紛失でも売れる方法、相場、高く売るコツを解説します。</p>
 
           <h2>1. 金のピアスの買取価格の決まり方</h2>
           <p>純度 × 重量 × 金相場 - 業者手数料</p>

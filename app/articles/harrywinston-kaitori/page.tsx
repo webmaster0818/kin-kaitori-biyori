@@ -50,7 +50,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u306e\u7d50\u5a5a\u6307\u8f2a\u3001\u4fdd\u8a3c\u66f8\u306a\u3057\u3067\u3082\u8cb7\u53d6\u53ef\u80fd\u3067\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u9451\u5b9a\u66f8\u306a\u3057\u306e\u5834\u540810\u301c20%\u6e1b\u984d\u3055\u308c\u307e\u3059\u304c\u3001\u672c\u7269\u3068\u78ba\u8a8d\u3067\u304d\u308c\u3070\u8cb7\u53d6\u3055\u308c\u307e\u3059\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30c0\u30a4\u30e4\u90e8\u5206\u3068\u5730\u91d1\u90e8\u5206\u306f\u5225\u3005\u306b\u8a55\u4fa1\u3055\u308c\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u306f\u3044\u3001\u5408\u7b97\u8a55\u4fa1\u3002\u30c0\u30a4\u30e4\u30e2\u30f3\u30c9\u306fGIA\u7b49\u306e\u9451\u5b9a\u66f8\u306b\u57fa\u3065\u304f\u8a55\u4fa1\u3001\u5730\u91d1\u306f\u91d1\u30fb\u30d7\u30e9\u30c1\u30ca\u306e\u5e02\u5834\u4fa1\u5024\u3067\u67fb\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u306e\u8cb7\u53d6\u76f8\u5834\u306e\u76ee\u5b89\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u65b0\u54c1\u5b9a\u4fa1\u306e30\u301c50%\u304c\u4e00\u822c\u7684\u3002\u72b6\u614b\u30fb\u4ed8\u5c5e\u54c1\u306b\u3088\u308a\u5909\u52d5\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u58ca\u308c\u305f\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u88fd\u54c1\u306f\u8cb7\u53d6\u3067\u304d\u307e\u3059\u304b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3002\u30c0\u30a4\u30e4\u30e2\u30f3\u30c9\u3068\u5730\u91d1\u306e\u7d20\u6750\u4fa1\u5024\u304c\u6b8b\u308b\u305f\u3081\u3001\u4fee\u7406\u53ef\u80fd\u30fb\u4e0d\u53ef\u80fd\u306b\u95a2\u308f\u3089\u305a\u67fb\u5b9a\u5bfe\u8c61\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u3068\u4ed6\u30d6\u30e9\u30f3\u30c9\uff08\u30ab\u30eb\u30c6\u30a3\u30a8\u30fb\u30c6\u30a3\u30d5\u30a1\u30cb\u30fc\uff09\u306e\u8cb7\u53d6\u5dee\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u304c\u6700\u9ad8\u5cf0\u3002\u540c\u7a0b\u5ea6\u306e\u30b9\u30da\u30c3\u30af\u3067\u3082\u3001\u30cf\u30ea\u30fc\u30a6\u30a3\u30f3\u30b9\u30c8\u30f3\u306e\u65b9\u304c\u30d6\u30e9\u30f3\u30c9\u30d7\u30ec\u30df\u30a2\u30e0\u304c\u9ad8\u3044\u50be\u5411\u3002\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"ハリーウィンストンの結婚指輪、保証書なしでも買取可能ですか？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能です。鑑定書なしの場合10〜20%減額されますが、本物と確認できれば買取されます。\"}}, {\"@type\": \"Question\", \"name\": \"ダイヤ部分と地金部分は別々に評価されますか？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"はい、合算評価。ダイヤモンドはGIA等の鑑定書に基づく評価、地金は金・プラチナの市場価値で査定。\"}}, {\"@type\": \"Question\", \"name\": \"ハリーウィンストンの買取相場の目安は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"新品定価の30〜50%が一般的。状態・付属品により変動。\"}}, {\"@type\": \"Question\", \"name\": \"壊れたハリーウィンストン製品は買取できますか？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能。ダイヤモンドと地金の素材価値が残るため、修理可能・不可能に関わらず査定対象。\"}}, {\"@type\": \"Question\", \"name\": \"ハリーウィンストンと他ブランド（カルティエ・ティファニー）の買取差は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"ハリーウィンストンが最高峰。同程度のスペックでも、ハリーウィンストンの方がブランドプレミアムが高い傾向。\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -66,7 +66,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">ハリーウィンストンの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">ハリーウィンストンの買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">ハリーウィンストンの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -124,7 +124,7 @@ export default function Page() {
             <li>箱・保証書・鑑定書をすべて揃える</li>
             <li>ブランドジュエリーの買取を扱う業者で査定（コメ兵、なんぼや、リファスタ等）</li>
             <li>複数業者で相見積もり（業者差が大きい）</li>
-            <li>クリーニングはプロに任せる（自己流NG）</li>
+            <li>クリーニングは専門業者に依頼する（ご自身での洗浄は避ける）</li>
             <li>金・プラチナ相場の高い時期を狙う</li>
           </ol>
 

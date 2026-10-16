@@ -45,20 +45,20 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで徹底解説", datePublished: "2026-04-24", dateModified: "2026-07-29", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで解説", datePublished: "2026-04-24", dateModified: "2026-07-29", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
-export const metadata: Metadata = { title: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで徹底解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金、そして2026年の買取規制の最新動向（変わること・変わらないこと）を一次情報ベースで徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-nobebo-kaitori/" } };
+export const metadata: Metadata = { title: "【2026年7月最新】金の延べ棒・インゴット買取ガイド — 相場・税金・2026年の買取規制まで解説", description: "金の延べ棒（インゴット・ゴールドバー）の最新買取相場、重量別の買取価格目安、売却時の税金、そして2026年の買取規制の最新動向（変わること・変わらないこと）を一次情報にもとづいて解説します。", alternates: { canonical: "https://gold-biyori.com/articles/kin-nobebo-kaitori/" } };
 
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">インゴットの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">インゴットの買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">インゴットの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -90,7 +90,7 @@ export default function KinNobeboKaitoriPage() {
 
         <p>「金の延べ棒はどこで売れる？」「インゴットの買取価格はいくら？」「売却時の税金はどうなる？」——この記事では、金インゴットの売却に関する<strong>相場・税金・おすすめ売却先</strong>をすべて解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>金インゴットの最新買取相場（重量別の価格目安）</li>
           <li>インゴットを売る方法と売却先の選び方</li>
@@ -182,7 +182,7 @@ export default function KinNobeboKaitoriPage() {
 
         <h2 id="kisei-2026">金インゴットの買取規制【2026年の最新動向】— 変わること・変わらないこと</h2>
 
-        <p><strong>結論: 2026年に「個人の金売却」を新たに規制する制度は、政府の一次情報では確認されていません。</strong>令和8年度(2026年度)税制改正の大綱(2025年12月26日閣議決定)で金地金に関わる項目は、買取事業者側の本人確認書類の範囲に特定在留カード等を加えるという事務的な変更のみです。売却時の支払調書の基準額(200万円)や譲渡所得の課税ルールに変更はありません。</p>
+        <p><strong>2026年に「個人の金売却」を新たに規制する制度は、政府の一次情報では確認されていません。</strong>令和8年度(2026年度)税制改正の大綱(2025年12月26日閣議決定)で金地金に関わる項目は、買取事業者側の本人確認書類の範囲に特定在留カード等を加えるという事務的な変更のみです。売却時の支払調書の基準額(200万円)や譲渡所得の課税ルールに変更はありません。</p>
 
         <p>一方で、金価格の高騰を背景に周辺の制度は動いています。売る人に関係する順に整理します。</p>
 
@@ -230,9 +230,9 @@ export default function KinNobeboKaitoriPage() {
 
         <ol>
           <li><strong>複数業者に見積もりを取る：</strong>インゴットは高額なので、1gあたり数十円の差が数万円〜数十万円の差になります。</li>
-          <li><strong>手数料を比較する：</strong>地金商のバーチャージと買取専門店の無料査定、トータルでどちらが有利か計算しましょう。</li>
+          <li><strong>手数料を比較する：</strong>地金商のバーチャージと買取専門店の無料査定、トータルでどちらが有利か計算することをおすすめします。</li>
           <li><strong>出張買取を活用する：</strong>高額なインゴットを持ち歩くのはリスクがあります。出張買取なら自宅で安全に売却できます。</li>
-          <li><strong>税金を考慮して売却タイミングを決める：</strong>年をまたいだ分割売却で特別控除を最大限活用しましょう。</li>
+          <li><strong>税金を考慮して売却タイミングを決める：</strong>年をまたいだ分割売却で特別控除を最大限活用することをおすすめします。</li>
           <li><strong>付属品を保管しておく：</strong>保証書、品質保証カード、購入時の箱を保管しておくと、スムーズに売却できます。</li>
         </ol>
 
@@ -243,7 +243,7 @@ export default function KinNobeboKaitoriPage() {
         <div className="space-y-3 not-prose">
           {[
             { q: "2026年に金インゴットの買取は規制されますか？", a: "個人の売却を新たに規制する制度は確認されていません。200万円超の支払調書・マイナンバー告知など従来ルールは継続。2027年4月からは犯収法改正で買取店の本人確認がIC読み取り原則になります（詳細は本文の規制セクション参照）。" },
-            { q: "金の延べ棒はどこで売れますか？", a: "田中貴金属などの地金商、買取大吉やおたからやなどの買取専門店、ヒカカク！の一括査定など、複数の売却先があります。手数料の有無を比較して選びましょう。" },
+            { q: "金の延べ棒はどこで売れますか？", a: "田中貴金属などの地金商、買取大吉やおたからやなどの買取専門店、ヒカカク！の一括査定など、複数の売却先があります。手数料の有無を比較して選ぶことをおすすめします。" },
             { q: "インゴットの買取に手数料はかかりますか？", a: "地金商では500g未満のインゴットにバーチャージがかかる場合があります。買取専門店は基本的に手数料無料です。" },
             { q: "インゴットを売ったら税金はかかりますか？", a: "売却益は譲渡所得として課税対象です。年間50万円の特別控除があり、5年超保有なら課税額が半減します。" },
             { q: "刻印がないインゴットでも売れますか？", a: "X線分析で純度を判定できるため売却可能です。ただしLBMA認定ブランドの刻印がある方がスムーズです。" },

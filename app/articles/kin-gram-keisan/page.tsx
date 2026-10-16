@@ -31,7 +31,7 @@ function ArticleSchema() {
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
       { "@type": "Question", name: "金の買取価格はどう計算しますか？", acceptedAnswer: { "@type": "Answer", text: `純度に応じた1gあたりの買取単価に、重量（g）を掛けて算出します。例: K18が1g${LP_K18}円なら10gで${Math.round(_LPP.k18 * 10).toLocaleString()}円が目安です（${LP_DATE}時点）。` } },
-      { "@type": "Question", name: "自分で重さを量れますか？", acceptedAnswer: { "@type": "Answer", text: "0.1g単位のはかりがあれば概算できます。重さの量り方の記事も参考にしてください。" } },
+      { "@type": "Question", name: "自分で重さを量れますか？", acceptedAnswer: { "@type": "Answer", text: "0.1g単位のはかりがあれば概算できます。重さの量り方の記事もご参照ください。" } },
       { "@type": "Question", name: "純度はどう調べますか？", acceptedAnswer: { "@type": "Answer", text: "刻印（K24・K18など）で確認できます。刻印がない場合は業者の比重・成分検査で判定されます。" } }
   ] };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
@@ -50,7 +50,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">グラム計算の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">複数社を比較して最高値を狙いましょう。査定はすべて無料です。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">複数社の査定額を比較することをおすすめします。査定はいずれも無料です。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -99,7 +99,7 @@ export default function KinGramKeisanPage() {
             },
             {
               q: "自分で重さを量れますか？",
-              a: "0.1g単位のはかりがあれば概算できます。重さの量り方の記事も参考にしてください。",
+              a: "0.1g単位のはかりがあれば概算できます。重さの量り方の記事もご参照ください。",
             },
             {
               q: "純度はどう調べますか？",
@@ -120,7 +120,7 @@ export default function KinGramKeisanPage() {
         <RelatedArticles currentSlug="kin-gram-keisan" relatedSlugs={["kin-omosa-hakarikata", "kin-kaitori-souba", "kin-jundo-mikata", "kinseido-kaitori-guide", "kin-takaku-uru"]} />
         <DealerComparisonTable heading="グラム計算の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>
-        <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が歴史的高値にある今こそ、手元の品を見直す好機です。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>
+        <p>金・貴金属を高く売る最大のコツは<strong>複数業者の比較</strong>です。金相場が金相場は歴史的な高値圏にあるため、お手元の品を見直す機会としてご活用ください。まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で買取価格を確認してみてください。査定は完全無料です。</p>
       </article>
     </div>
     </>

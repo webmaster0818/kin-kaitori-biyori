@@ -29,7 +29,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "【2026年最新】プラチナ買取相場ガイド — Pt900/Pt950/Pt1000の価格と高く売る方法",
   description:
-    "プラチナ（Pt1000/Pt950/Pt900/Pt850）の最新買取相場を純度別に掲載。2026年のプラチナ価格高騰の背景、製品別（指輪・ネックレス・時計）の買取価格目安、金との違い・見分け方、おすすめ買取業者4社比較を徹底解説。",
+    "プラチナ（Pt1000/Pt950/Pt900/Pt850）の最新買取相場を純度別に掲載。2026年のプラチナ価格高騰の背景、製品別（指輪・ネックレス・時計）の買取価格目安、金との違い・見分け方、おすすめ買取業者4社比較を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/platinum-kaitori/" },
 };
 
@@ -37,7 +37,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">プラチナ製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">プラチナの買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">プラチナの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -71,7 +71,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】プラチナ買取相場ガイド — Pt900/Pt950/Pt1000の価格と高く売る方法",
-    description: "プラチナ（Pt1000/Pt950/Pt900/Pt850）の最新買取相場を純度別に掲載。2026年のプラチナ価格高騰の背景、製品別（指輪・ネックレス・時計）の買取価格目安、金との違い・見分け方、おすすめ買取業者4社比較を徹底解説。",
+    description: "プラチナ（Pt1000/Pt950/Pt900/Pt850）の最新買取相場を純度別に掲載。2026年のプラチナ価格高騰の背景、製品別（指輪・ネックレス・時計）の買取価格目安、金との違い・見分け方、おすすめ買取業者4社比較を解説します。",
     datePublished: "2026-04-15",
     dateModified: "2026-04-15",
     author: {
@@ -174,7 +174,7 @@ export default function PlatinumKaitoriPage() {
 
           <p>2026年現在、プラチナ価格は上昇トレンドにあります。水素エネルギー社会への移行に伴う産業需要の拡大、南アフリカの鉱山供給の制約、投資需要の増加が価格を押し上げています。</p>
 
-          <p>この記事を読めば以下のことがわかります。</p>
+          <p>この記事では、以下の内容をご説明します。</p>
 
           <ul>
             <li>プラチナの純度別（Pt1000/Pt950/Pt900/Pt850）買取相場</li>
@@ -284,7 +284,7 @@ export default function PlatinumKaitoriPage() {
             </table>
           </div>
 
-          <p>ダイヤモンドが付いたプラチナリングの場合、プラチナの素材価値に加えて<strong>ダイヤモンドの価値が上乗せ</strong>されます。ダイヤモンドの評価は4C（カラット・カット・クラリティ・カラー）によって大きく異なるため、鑑定書があれば持参しましょう。</p>
+          <p>ダイヤモンドが付いたプラチナリングの場合、プラチナの素材価値に加えて<strong>ダイヤモンドの価値が上乗せ</strong>されます。ダイヤモンドの評価は4C（カラット・カット・クラリティ・カラー）によって大きく異なるため、鑑定書があれば持参することをおすすめします。</p>
 
           <h3>プラチナネックレス</h3>
 
@@ -328,7 +328,7 @@ export default function PlatinumKaitoriPage() {
             </table>
           </div>
 
-          <p>ブランド時計の場合は、金属買取業者よりも<strong>時計専門の買取業者の方が高値</strong>がつくことが多いです。両方に見積もりを取って比較しましょう。</p>
+          <p>ブランド時計の場合は、金属買取業者よりも<strong>時計専門の買取業者の方が高値</strong>がつくことが多いです。両方に見積もりを取って比較することをおすすめします。</p>
 
           <h2>金 vs プラチナ: 2026年、どちらを売るべきか</h2>
 
@@ -348,12 +348,12 @@ export default function PlatinumKaitoriPage() {
                 <tr><td><strong>過去最高値比</strong></td><td>ほぼ最高値圏</td><td>過去最高値（2008年：約7,500円）の約70%</td></tr>
                 <tr><td><strong>6年間の上昇率</strong></td><td>約2.3倍（2020年比）</td><td>約1.9倍（2020年比）</td></tr>
                 <tr><td><strong>今後の見通し</strong></td><td>高止まり〜緩やかな上昇</td><td>水素社会で中長期的な需要拡大</td></tr>
-                <tr><td><strong>売り時の評価</strong></td><td>歴史的高値で好機</td><td>上昇余地あり、急がなくてもよい</td></tr>
+                <tr><td><strong>売り時の評価</strong></td><td>歴史的な高値圏にあり、売却を検討しやすい</td><td>上昇余地あり、急がなくてもよい</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p><strong>結論：</strong>「今すぐ現金化したい」場合は、歴史的高値にある<strong>金を先に売却</strong>するのが合理的です。プラチナは水素社会への移行に伴う需要拡大が見込まれるため、もう少し待つ余地があります。ただし、「両方とも高値にあるうちに売りたい」のであれば、まとめて売却しても問題ありません。</p>
+          <p><strong>まとめ：</strong>「今すぐ現金化したい」場合は、歴史的高値にある<strong>金を先に売却</strong>するのが合理的です。プラチナは水素社会への移行に伴う需要拡大が見込まれるため、もう少し待つ余地があります。ただし、「両方とも高値にあるうちに売りたい」のであれば、まとめて売却しても問題ありません。</p>
 
           <h2>Pt刻印の読み方ガイド</h2>
 
@@ -433,7 +433,7 @@ export default function PlatinumKaitoriPage() {
                   <th>業者名</th>
                   <th>方式</th>
                   <th>プラチナ買取の特徴</th>
-                  <th>こんな人に</th>
+                  <th>おすすめの方</th>
                 </tr>
               </thead>
               <tbody>
@@ -446,7 +446,7 @@ export default function PlatinumKaitoriPage() {
                 <tr>
                   <td><strong>買取大吉</strong></td>
                   <td>店頭買取</td>
-                  <td>プラチナの純度をその場で測定。即現金化。Pt850からOK</td>
+                  <td>プラチナの純度をその場で測定。即現金化。Pt850から対応</td>
                   <td>即現金化したい</td>
                 </tr>
                 <tr>
@@ -458,7 +458,7 @@ export default function PlatinumKaitoriPage() {
                 <tr>
                   <td><strong>ティファナ</strong></td>
                   <td>出張/店頭/宅配</td>
-                  <td>3つの方法から選択可能。プラチナ＋金をまとめて査定OK</td>
+                  <td>3つの方法から選択可能。プラチナ＋金をまとめて査定可能</td>
                   <td>方法を選びたい</td>
                 </tr>
               </tbody>

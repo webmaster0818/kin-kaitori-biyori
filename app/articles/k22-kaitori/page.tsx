@@ -69,7 +69,7 @@ function ArticleSchema() {
 
 export const metadata: Metadata = {
   title: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
-  description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を徹底解説。`,
+  description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を解説します。`,
   alternates: { canonical: "https://gold-biyori.com/articles/k22-kaitori/" },
 };
 
@@ -77,7 +77,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">K22製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">K22は純度が高く高値が期待できます。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">K22は純度が高く高値が期待できます。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -114,11 +114,11 @@ export default function K22KaitoriPage() {
 
         <TodayPriceAnswer purity="k22" />
 
-        <p>K22（22金）は、<strong>純度91.7%</strong>という高い金含有率を持つ金合金です。日本国内ではK18やK24と比べて流通量は少ないものの、<strong>海外製のジュエリーや金貨</strong>に多く使われており、実は買取市場では頻繁に取引されています。</p>
+        <p>K22（22金）は、<strong>純度91.7%</strong>という高い金含有率を持つ金合金です。日本国内ではK18やK24と比べて流通量は少ないものの、<strong>海外製のジュエリーや金貨</strong>に多く使われており、買取市場でも多く取引されています。</p>
 
-        <p>「K22の金貨を売りたい」「22金のジュエリーの相場は？」「K22とK24の価格差はどれくらい？」——この記事では、K22に特化した<strong>買取相場・売却方法・高く売るコツ</strong>を徹底解説します。</p>
+        <p>「K22の金貨を売りたい」「22金のジュエリーの相場は？」「K22とK24の価格差はどれくらい？」——この記事では、K22に特化した<strong>買取相場・売却方法・高く売るコツ</strong>を解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>K22（22金）の最新買取相場（1gあたりの価格）</li>
           <li>K22が使われる製品の種類と特徴</li>
@@ -205,17 +205,17 @@ export default function K22KaitoriPage() {
 
         <h3>1. 複数の買取業者に見積もりを取る</h3>
 
-        <p>K22の買取価格は業者によって1gあたり数百円の差が出ます。30gの金貨なら、1gあたり200円の差で<strong>6,000円もの差額</strong>になります。必ず3社以上に見積もりを取りましょう。</p>
+        <p>K22の買取価格は業者によって1gあたり数百円の差が出ます。30gの金貨なら、1gあたり200円の差で<strong>6,000円もの差額</strong>になります。必ず3社以上に見積もりを取ることをおすすめします。</p>
 
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定サービスを使えば、一度の申し込みで複数業者の見積もりが取れます。</p>
 
         <h3>2. 金貨はコイン専門店にも見積もりを取る</h3>
 
-        <p>投資用金貨であれば貴金属買取業者でも適正な価格が出ますが、<strong>記念金貨や限定金貨</strong>はコイン専門店の方が高値をつける場合があります。両方に見積もりを取って比較しましょう。</p>
+        <p>投資用金貨であれば貴金属買取業者でも適正な価格が出ますが、<strong>記念金貨や限定金貨</strong>はコイン専門店の方が高値をつける場合があります。両方に見積もりを取って比較することをおすすめします。</p>
 
         <h3>3. 付属品を揃える</h3>
 
-        <p>金貨であれば<strong>ケース・証明書（COA）</strong>、ジュエリーであれば<strong>保証書・箱</strong>があると査定額がアップする可能性があります。売却前に付属品を探しておきましょう。</p>
+        <p>金貨であれば<strong>ケース・証明書（COA）</strong>、ジュエリーであれば<strong>保証書・箱</strong>があると査定額がアップする可能性があります。売却前に付属品を探しておくことをおすすめします。</p>
 
         <h3>4. 相場が高いタイミングを狙う</h3>
 
@@ -355,7 +355,7 @@ export default function K22KaitoriPage() {
 
         <p>K22（22金）は純度91.7%の高純度金合金で、金貨や海外製ジュエリーに多く使われています。日本国内ではK18が主流のため、K22はやや馴染みが薄いかもしれませんが、<strong>買取市場では高値で取引される人気の純度</strong>です。</p>
 
-        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。金相場は2020年ごろと比べて2倍を超える水準にあり、売却を検討している方にとっては好機と言えるでしょう。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。金相場は2020年ごろと比べて2倍を超える水準にあり、売却を検討している方にとっては売却を検討しやすい時期といえます。</p>
 
         <p>K22を少しでも高く売るために、以下の3つを必ず実践してください。</p>
 

@@ -4,9 +4,9 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import goldData from "@/data/gold-spot-prices.json";
 
 export const metadata: Metadata = {
-  title: "金買取相場グラム計算機｜純度×重量で本日の買取目安を即計算【日次更新】",
+  title: "金買取相場グラム計算機｜純度×重量で本日の買取目安を計算【日次更新】",
   description:
-    "金の買取価格をグラムから計算。K24/K22/K18/K14など純度×重量を入れると、本日の田中貴金属公表値ベースで買取目安を即算出します。喜平・テニスブレスレットの30g・50gなどグラム別の早見表も掲載（毎日自動更新）。",
+    "金の買取価格をグラムから計算。K24/K22/K18/K14など純度と重量を入力すると、本日の田中貴金属公表値をもとに買取目安を算出します。喜平・テニスブレスレットの30g・50gなどグラム別の早見表も掲載（毎日自動更新）。",
   alternates: { canonical: "https://gold-biyori.com/kin-kaitori-keisanki/" },
 };
 
@@ -101,8 +101,8 @@ export default function KeisankiPage() {
             金買取相場グラム計算機｜純度×重量で本日の買取目安を計算
           </h1>
           <p className="text-warm-gray leading-relaxed">
-            <span className="font-bold text-accent-dark">{goldData.date}時点</span>の田中貴金属公表値ベースで、K24・K22・K18・K14などの純度と重さ（グラム）から金の買取目安を即計算できます。
-            数値は<strong>毎日自動更新</strong>。下の計算機に純度と重量を入れるか、グラム別早見表からも確認できます。
+            <span className="font-bold text-accent-dark">{goldData.date}時点</span>の田中貴金属公表値ベースで、K24・K22・K18・K14などの純度と重さ（グラム）から、金の買取目安を計算できます。
+            数値は<strong>毎日自動で更新</strong>しています。下の計算機に純度と重量を入力するか、グラム別早見表にてご確認ください。
           </p>
         </header>
 
@@ -160,7 +160,7 @@ export default function KeisankiPage() {
         {/* 製品別の送客 */}
         <section className="my-10">
           <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3">製品ごとの詳しい買取相場を見る</h2>
-          <p className="text-sm text-warm-gray mb-4">計算した金額の背景や、製品別の高く売るコツはこちらで詳しく解説しています。</p>
+          <p className="text-sm text-warm-gray mb-4">製品別の買取相場と、高く売るためのポイントを解説しています。</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {PRODUCT_LINKS.map((l) => (
               <Link key={l.href} href={l.href} className="flex items-center justify-between bg-white border border-accent/20 rounded-xl px-4 py-3 hover:border-accent/50 hover:shadow-sm transition">
@@ -170,7 +170,7 @@ export default function KeisankiPage() {
             ))}
           </div>
           <p className="text-sm text-warm-gray mt-4">
-            日々の相場推移は<Link href="/souba-dashboard/" className="text-accent-dark font-medium underline">金相場ダッシュボード</Link>、計算の仕組みは<Link href="/articles/kin-gram-keisan/" className="text-accent-dark font-medium underline">金買取の価格はこう決まる</Link>で確認できます。
+            日々の相場推移は<Link href="/souba-dashboard/" className="text-accent-dark font-medium underline">金相場ダッシュボード</Link>、計算の仕組みは<Link href="/articles/kin-gram-keisan/" className="text-accent-dark font-medium underline">金買取の価格の決まり方</Link>にてご確認いただけます。
           </p>
         </section>
 
@@ -181,7 +181,7 @@ export default function KeisankiPage() {
             金の買取価格は、<strong>純度に応じた1gあたりの買取単価 × 重量（g）</strong>で概算できます。たとえばK18が1g{yen(per.k18)}円なら、10gで約{yen(per.k18 * 10)}円が目安です。
           </p>
           <p className="text-warm-gray leading-relaxed text-sm">
-            純度は刻印（K24・K18など）で確認でき、重さは0.1g単位のはかりがあれば自分でも概算できます。本ツールの単価は田中貴金属の公表値から純度換算したもので、毎日自動で更新しています。
+            純度は刻印（K24・K18など）で確認でき、重さは0.1g単位のはかりでご自身でも計測できます。本ツールの単価は田中貴金属の公表値から純度換算したもので、毎日自動で更新しています。
           </p>
         </section>
 
@@ -202,8 +202,8 @@ export default function KeisankiPage() {
         <section className="my-10 border-t border-accent/20 pt-6">
           <h2 className="font-display text-lg font-bold text-foreground mb-2">この計算機・相場データの引用について</h2>
           <p className="text-sm text-warm-gray leading-relaxed">
-            本ページの相場目安は出典を明記いただければ引用歓迎です（出典：金買取びより / gold-biyori.com）。
-            本日の相場を自サイトに表示したい方は、コピペ1行で設置できる<Link href="/widget/" className="text-accent-dark font-medium underline">金価格ウィジェット（無料配布）</Link>もご利用ください。
+            本ページの相場目安は、出典を明記いただければ引用いただけます（出典：金買取びより / gold-biyori.com）。
+            本日の相場をご自身のサイトに表示する場合は、コードを1行貼り付けるだけで設置できる<Link href="/widget/" className="text-accent-dark font-medium underline">金価格ウィジェット（無料配布）</Link>もご利用ください。
           </p>
         </section>
       </main>

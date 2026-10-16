@@ -81,7 +81,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">K10製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">K10も金製品として買取可能です。まとめて出すと効率的。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">K10も金製品として買取可能です。まとめて出すと効率的。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -122,7 +122,7 @@ export default function K10KaitoriPage() {
 
         <p>「K10のアクセサリーはいくらで売れる？」「K18とどれくらい価格が違う？」「刻印の417って何？」——この記事では、K10に特化した<strong>買取相場・製品別の考え方・高く売るコツ</strong>を、毎朝更新の実勢データとともに解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>K10（10金）の最新買取相場（1gあたりの価格）</li>
           <li>K10とK18・K14の買取価格の違い</li>
@@ -230,11 +230,11 @@ export default function K10KaitoriPage() {
 
         <h3>2. 複数の買取業者を比較する</h3>
 
-        <p>K10の買取単価は業者によって差が出ます。少額でも複数社を比較することで手取りが変わります。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定なら一度の申し込みで複数業者を比較できます。業者選びは<Link href="/articles/kin-kaitori-osusume/" className="text-accent hover:underline">おすすめ業者比較</Link>も参考にしてください。</p>
+        <p>K10の買取単価は業者によって差が出ます。少額でも複数社を比較することで手取りが変わります。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定なら一度の申し込みで複数業者を比較できます。業者選びは<Link href="/articles/kin-kaitori-osusume/" className="text-accent hover:underline">おすすめ業者比較</Link>もご参照ください。</p>
 
         <h3>3. 手数料・最低重量の条件を確認する</h3>
 
-        <p>少額の買取では、手数料や最低重量の条件によって手取りが目減りすることがあります。査定料・出張費・宅配返送料などを事前に確認しましょう。<Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent hover:underline">手数料の比較記事</Link>で各社の条件を整理しています。</p>
+        <p>少額の買取では、手数料や最低重量の条件によって手取りが目減りすることがあります。査定料・出張費・宅配返送料などを事前にご確認ください。<Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent hover:underline">手数料の比較記事</Link>で各社の条件を整理しています。</p>
 
         <h3>4. 相場が高いタイミングを狙う</h3>
 
@@ -281,7 +281,7 @@ export default function K10KaitoriPage() {
         <ul>
           <li>店頭・出張・宅配の3方法対応</li>
           <li>すべての方法で査定料無料</li>
-          <li>金・プラチナ・宝石をまとめて査定OK</li>
+          <li>金・プラチナ・宝石をまとめて査定可能</li>
         </ul>
 
         <h2>K10の売却に関する税金</h2>

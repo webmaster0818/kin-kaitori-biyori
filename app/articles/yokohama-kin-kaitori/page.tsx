@@ -55,7 +55,7 @@ function ArticleSchema() {
     dateModified: "2026-10-12",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
-    description: "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、買取方法の比較、横浜の金買取相場と高く売るコツを徹底解説。",
+    description: "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、買取方法の比較、横浜の金買取相場と高く売るコツを解説します。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
@@ -66,7 +66,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
   description:
-    "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、横浜の金買取相場と高く売るコツを徹底解説。",
+    "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、横浜の金買取相場と高く売るコツを解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/yokohama-kin-kaitori/" },
 };
 
@@ -74,7 +74,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">横浜で金の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">横浜には多くの買取業者があります。複数社を比較して最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">横浜には多くの買取業者があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -109,11 +109,11 @@ export default function YokohamaKinKaitoriPage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】横浜の金買取おすすめ業者ガイド</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-        <p>横浜は人口約375万人を擁する日本第2の都市であり、金・貴金属の買取市場も非常に活発です。横浜駅周辺から元町・関内エリアまで、多くの買取業者が営業しています。</p>
+        <p>横浜駅周辺から元町・関内エリアまで、多くの買取業者が営業しています。</p>
 
         <p>「横浜で金を売るならどこがいい？」「横浜駅と元町どちらが高い？」「東京まで行かなくても高く売れる？」——この記事では、横浜での金買取に特化した<strong>エリア別・業者別の完全ガイド</strong>をお届けします。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>横浜の金買取マーケットの特徴と東京との比較</li>
           <li>横浜駅・元町・関内のエリア別おすすめ買取業者</li>
@@ -161,7 +161,7 @@ export default function YokohamaKinKaitoriPage() {
               <tr><td><strong>エリアの強み</strong></td><td>大手チェーン密集、アクセス抜群</td></tr>
               <tr><td><strong>アクセス</strong></td><td>JR・私鉄・地下鉄横浜駅から徒歩圏内</td></tr>
               <tr><td><strong>価格傾向</strong></td><td>競争が激しく高値が出やすい</td></tr>
-              <tr><td><strong>こんな人に</strong></td><td>効率よく複数店舗を回りたい人</td></tr>
+              <tr><td><strong>おすすめの方</strong></td><td>効率よく複数店舗を回りたい人</td></tr>
             </tbody>
           </table>
         </div>
@@ -182,7 +182,7 @@ export default function YokohamaKinKaitoriPage() {
               <tr><td><strong>エリアの強み</strong></td><td>ジュエリー専門店が多い、ブランド買取に強い</td></tr>
               <tr><td><strong>アクセス</strong></td><td>みなとみらい線元町・中華街駅から徒歩圏内</td></tr>
               <tr><td><strong>価格傾向</strong></td><td>ブランドジュエリーでプラス査定が期待できる</td></tr>
-              <tr><td><strong>こんな人に</strong></td><td>ブランドジュエリーを売りたい人</td></tr>
+              <tr><td><strong>おすすめの方</strong></td><td>ブランドジュエリーを売りたい人</td></tr>
             </tbody>
           </table>
         </div>
@@ -203,7 +203,7 @@ export default function YokohamaKinKaitoriPage() {
               <tr><td><strong>エリアの強み</strong></td><td>地元密着型の質屋・専門店がある</td></tr>
               <tr><td><strong>アクセス</strong></td><td>JR関内駅・地下鉄伊勢佐木長者町駅から徒歩圏内</td></tr>
               <tr><td><strong>価格傾向</strong></td><td>大手と比較することで好条件を引き出せる</td></tr>
-              <tr><td><strong>こんな人に</strong></td><td>個別に相談しながら売りたい人</td></tr>
+              <tr><td><strong>おすすめの方</strong></td><td>個別に相談しながら売りたい人</td></tr>
             </tbody>
           </table>
         </div>
@@ -265,7 +265,7 @@ export default function YokohamaKinKaitoriPage() {
                 <th>業者名</th>
                 <th>方式</th>
                 <th>横浜エリアの特徴</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
@@ -309,7 +309,7 @@ export default function YokohamaKinKaitoriPage() {
             },
             {
               q: "横浜と東京で金の買取価格に差はありますか？",
-              a: "ほぼ同じです。金の買取価格は国際相場に連動するため地域差はほとんどありません。横浜から東京の業者に宅配で送ることも可能なので、両方を比較するのがベストです。",
+              a: "ほぼ同じです。金の買取価格は国際相場に連動するため地域差はほとんどありません。横浜から東京の業者に宅配で送ることも可能なので、両方を比較することをおすすめします。",
             },
             {
               q: "横浜で出張買取に対応している業者はありますか？",

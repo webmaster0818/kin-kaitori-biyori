@@ -25,7 +25,7 @@ const SITE_URL = "https://gold-biyori.com";
 // 全ページ共通のOG画像（scripts/make-og.py で生成。価格などの数字は入れない）
 const OG_IMAGE = { url: "/og-image.png", width: 1200, height: 630, alt: "金買取びより" };
 const SITE_DESCRIPTION =
-  "金買取びよりは、金・貴金属の買取相場や高く売るコツを徹底解説するガイドサイトです。K18・K24・プラチナの最新相場から、ヒカカク！・買取大吉・ティファナ・ウリエルなど人気買取業者を比較し、あなたに最適な売却方法が見つかります。";
+  "金買取びよりは、金・貴金属の買取相場と売却方法を解説する情報サイトです。K18・K24・プラチナの相場を毎日更新し、ヒカカク！・買取大吉・ティファナ・ウリエルなどの買取サービスを公式情報にもとづいて比較しています。";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -191,9 +191,9 @@ function Footer() {
               {SITE_NAME}
             </p>
             <p className="text-sm text-white/70 leading-relaxed">
-              金・貴金属の買取相場を徹底比較。
+              金・貴金属の買取相場と買取サービスを、
               <br />
-              あなたに最適な売却方法が見つかります。
+              公式情報にもとづいて掲載しています。
             </p>
           </div>
           <div>
@@ -260,7 +260,7 @@ function Footer() {
         <div className="border-t border-accent/20 mt-8 pt-6 text-center text-xs text-white/50">
           <p>&copy; 2026 {SITE_NAME} All rights reserved.</p>
           <p className="mt-1">
-            ※本サイトはプロモーション(PR)を含みます。
+            ※当サイトはプロモーション（PR）を含みます。
           </p>
         </div>
       </div>

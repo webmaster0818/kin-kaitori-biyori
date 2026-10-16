@@ -21,13 +21,13 @@ function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金買取の査定料はどこも無料ですか？", acceptedAnswer: { "@type": "Answer", text: "今回調査した13社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス）はすべて公式サイトで査定料無料と明記しています（2026年6月時点）。" } },
     { "@type": "Question", name: "見落としやすい手数料は何ですか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取でキャンセルした場合の「返送料」です。今回の調査では、なんぼや・ティファナは返送料無料、バイセル・福ちゃん・ザ・ゴールドはお客様負担（着払い）と公式に記載されており、各社で差がありました。また「買取相場価格に手数料は含まれていない」と注記する業者もあるため、査定時に差引きの有無を確認するのが確実です。" } },
-    { "@type": "Question", name: "手数料無料なら、どこで売っても同じですか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。手数料が無料でも、提示される買取単価（1gあたりの価格）は業者ごとに異なります。手数料の有無と買取単価の両方を見て、手取り額で比較するのが正解です。複数社の査定を取ることをおすすめします。" } },
+    { "@type": "Question", name: "手数料無料なら、どこで売っても同じですか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。手数料が無料でも、提示される買取単価（1gあたりの価格）は業者ごとに異なります。手数料の有無と買取単価の両方を見て、手取り額で比較することをおすすめします。複数社の査定を取ることをおすすめします。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取日和" }, publisher: { "@type": "Organization", name: "金買取日和", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -60,7 +60,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">手数料を確認したら、次は買取単価の比較</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">手取り額＝買取単価×重量−手数料。複数社の無料査定で単価を比べましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">手取り額＝買取単価×重量−手数料。複数社の無料査定で単価を比べることをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -84,9 +84,9 @@ export default function KinKaitoriTesuryoHikakuPage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を13社で徹底比較【2026年7月調査】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）（各社公式サイトを当サイトが直接確認した時点の情報です）</p>
         <p>金買取で本当に大事なのは「買取単価」だけではありません。<strong>査定料・出張料・キャンセル時の返送料・振込手数料</strong>などの諸費用で、最終的な手取り額が変わります。</p>
-        <p>この記事では、主要買取8社の公式サイトを当サイトが直接確認し、手数料と利用条件を一覧にまとめました。公式に記載がない項目は「記載なし」と正直に表記しています。</p>
+        <p>この記事では、主要買取13社の公式サイトを当サイトが直接確認し、手数料と利用条件を一覧にまとめました。公式に記載がない項目は「記載なし」と表記しています。</p>
 
-        <h2>8社の手数料 比較一覧表</h2>
+        <h2>13社の手数料 比較一覧表</h2>
         <div className="table-wrapper">
           <table>
             <thead><tr><th>業者</th><th>査定料</th><th>出張料</th><th>宅配送料</th><th>キャンセル時返送料</th><th>キャンセル料</th><th>振込手数料</th><th>買取方法</th></tr></thead>
@@ -116,7 +116,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
 
         <h3>3. 「手数料無料」でも買取単価から差し引かれる場合がある</h3>
         <p>なんぼやは金買取ページに「<strong>買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内</strong>」と注記しています（2026年6月確認）。これは誠実な開示ですが、裏を返せば「Web掲載の相場単価＝手取り単価とは限らない」ということです。</p>
-        <p>どの業者でも、査定時に<strong>「この金額から差し引かれるものはありますか？」と一言確認</strong>し、目減り・精錬費等の控除がないかをチェックしましょう。</p>
+        <p>どの業者でも、査定時に<strong>「この金額から差し引かれるものはありますか？」と一言確認</strong>し、目減り・精錬費等の控除がないかをご確認ください。</p>
 
         <h2>手取り額で比較する手順</h2>
         <ol>
@@ -131,7 +131,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
 
         <h2>よくある質問</h2>
         <h3>Q. 溶解検査の費用を取られることはありますか？</h3>
-        <p>今回調査した13社の公式サイトには、溶解検査や精錬手数料の具体的な記載はありませんでした（ザ・ゴールドとおたからやは比重による検査を記載）。インゴット以外の製品でも、通常は刻印確認・比重計・X線などの非破壊検査が一般的です。検査方法と費用は査定時に確認しましょう。</p>
+        <p>今回調査した13社の公式サイトには、溶解検査や精錬手数料の具体的な記載はありませんでした（ザ・ゴールドとおたからやは比重による検査を記載）。インゴット以外の製品でも、通常は刻印確認・比重計・X線などの非破壊検査が一般的です。検査方法と費用は査定時にご確認ください。</p>
         <h3>Q. 200万円を超える売却で必要なものは？</h3>
         <p>支払調書の関係でマイナンバーの告知が必要になります。詳しくは<Link href="/articles/kin-baikyaku-mynumber/">金売却とマイナンバーの解説</Link>をご覧ください。</p>
         <h3>Q. 結局どこがおすすめ？</h3>

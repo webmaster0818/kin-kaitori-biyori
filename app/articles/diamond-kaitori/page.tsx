@@ -27,7 +27,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">ダイヤモンド・宝石の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">ダイヤモンドの価値は素人には判断が難しいもの。プロの査定で正確な価値を確認しましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">ダイヤモンドの価値は素人には判断が難しいもの。プロの査定で正確な価値をご確認ください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -330,7 +330,7 @@ export default function DiamondKaitoriPage() {
 
           <p>メレダイヤ自体は高額にはなりませんが、<strong>台座の金やプラチナの素材価値</strong>が主な買取価格の構成要素になります。例えば、メレダイヤが20石付いたK18リング（5g）なら、金の素材価値（{GP_DATE}時点の目安で約{_gy(Math.round(_GP.k18) * 5)}円）+ メレダイヤ（数千円）が目安になります。</p>
 
-          <p><strong>ポイント：</strong>「メレダイヤだから値段がつかない」とあきらめず、台座の金属価値を含めて査定してもらいましょう。</p>
+          <p><strong>ポイント：</strong>「メレダイヤだから値段がつかない」とあきらめず、台座の金属価値を含めて査定してもらうことをおすすめします。</p>
 
           <h2>フリマ・ヤフオク vs 買取業者 — ダイヤモンドはどこで売る？</h2>
 
@@ -388,7 +388,7 @@ export default function DiamondKaitoriPage() {
 
           <h2>鑑定書を再発行してから売るべきか — 損得計算</h2>
 
-          <p>「鑑定書を紛失したけど、再発行してから売った方がいい？」という質問は多いです。結論は<strong>ダイヤモンドのサイズと品質による</strong>です。</p>
+          <p>「鑑定書を紛失したけど、再発行してから売った方がいい？」という質問を多くいただきます。<strong>ダイヤモンドのサイズと品質による</strong>です。</p>
 
           <div className="table-wrapper">
             <table>
@@ -507,14 +507,14 @@ export default function DiamondKaitoriPage() {
                   <th>業者名</th>
                   <th>方式</th>
                   <th>ダイヤ・宝石買取の特徴</th>
-                  <th>こんな人に</th>
+                  <th>おすすめの方</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>ヒカカク！</strong></td>
                   <td>一括査定</td>
-                  <td>ダイヤモンド対応の複数業者を一括比較。鑑定書なしでもOK</td>
+                  <td>ダイヤモンド対応の複数業者を一括比較。鑑定書がなくても利用可能</td>
                   <td>最高値で売りたい</td>
                 </tr>
                 <tr>
@@ -539,7 +539,7 @@ export default function DiamondKaitoriPage() {
             </table>
           </div>
 
-          <p><strong>ブランドジュエリーの場合は、金属買取専門店よりもブランド買取に強い業者の方が高値がつくことが多いです。</strong>両方に見積もりを取って比較しましょう。</p>
+          <p><strong>ブランドジュエリーの場合は、金属買取専門店よりもブランド買取に強い業者の方が高値がつくことが多いです。</strong>両方に見積もりを取って比較することをおすすめします。</p>
 
           <h2>ダイヤモンド・宝石買取に関するFAQ</h2>
 
@@ -559,7 +559,7 @@ export default function DiamondKaitoriPage() {
               },
               {
                 q: "ブランドジュエリーは高く買い取ってもらえますか？",
-                a: "はい、ハリーウィンストン、カルティエ、ティファニー、ヴァンクリーフ＆アーペルなどのブランドジュエリーは、素材価値に加えてブランドプレミアムが上乗せされます。付属品（ケース、保証書、購入証明書など）が揃っていると、さらに高値がつきやすくなります。金属買取専門店とブランド買取専門店の両方に見積もりを取りましょう。",
+                a: "はい、ハリーウィンストン、カルティエ、ティファニー、ヴァンクリーフ＆アーペルなどのブランドジュエリーは、素材価値に加えてブランドプレミアムが上乗せされます。付属品（ケース、保証書、購入証明書など）が揃っていると、さらに高値がつきやすくなります。金属買取専門店とブランド買取専門店の両方に見積もりを取ることをおすすめします。",
               },
               {
                 q: "ダイヤモンド以外の宝石も買取できますか？",

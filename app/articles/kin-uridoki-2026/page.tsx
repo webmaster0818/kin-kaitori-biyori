@@ -34,7 +34,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】金の売り時はいつ？金相場の見通しと売却判断の基準を解説",
-    description: `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。`,
+    description: `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮した売り方を解説します。`,
     datePublished: "2026-04-13",
     dateModified: "2026-04-13",
     author: {
@@ -59,10 +59,10 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "2026年は金の売り時ですか？", acceptedAnswer: { "@type": "Answer", text: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却には非常に好条件と言えます。ただし、さらなる上昇も下落も予測が困難なため、「今の価格に納得できるなら売る」のが最も実践的な判断です。` } },
+      { "@type": "Question", name: "2026年は金の売り時ですか？", acceptedAnswer: { "@type": "Answer", text: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却には非常に好条件と言えます。ただし、さらなる上昇も下落も予測が困難なため、現在の価格に納得できるかどうかを判断の基準とすることをおすすめします。` } },
       { "@type": "Question", name: "金相場は今後さらに上がりますか？", acceptedAnswer: { "@type": "Answer", text: "多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。中央銀行の金購入拡大、地政学リスク、インフレ圧力が支えになっています。ただし、米国の利上げ再開やドル高進行があれば一時的な下落の可能性もあります。" } },
       { "@type": "Question", name: "金の売り時を判断するポイントは？", acceptedAnswer: { "@type": "Answer", text: "主な判断ポイントは3つです。(1)現在の価格が購入時より十分に利益が出ているか、(2)今後使う予定のない金製品か、(3)売却益が生活費や投資に活用できるか。相場のピークを狙うのではなく、自分にとっての「納得価格」で判断するのが賢明です。" } },
-      { "@type": "Question", name: "金を売るベストなタイミングはいつですか？", acceptedAnswer: { "@type": "Answer", text: "短期的には、円安が進行している時期や、国際金価格（ドル建て）が上昇している時期が有利です。長期的には、保有5年超で税金が半額になるため、5年を超えてから売却するのが税制面で最もお得です。" } },
+      { "@type": "Question", name: "金を売るのに適したタイミングはいつですか？", acceptedAnswer: { "@type": "Answer", text: "短期的には、円安が進行している時期や、国際金価格（ドル建て）が上昇している時期が有利です。長期的には、保有5年超で税金が半額になるため、5年を超えてから売却するのが税制面で有利です。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -74,7 +74,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
   description:
-    `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮したベストな売り方を徹底解説。`,
+    `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮した売り方を解説します。`,
   alternates: { canonical: "https://gold-biyori.com/articles/kin-uridoki-2026/" },
 };
 
@@ -82,7 +82,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">今の金の価値を無料で確認</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">売り時の判断は、まず今の買取価格を知ることから。無料査定で確認しましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">売り時の判断は、まず今の買取価格を知ることから。無料査定でご確認ください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -119,7 +119,7 @@ export default function KinUridoki2026Page() {
 
         <p>「<strong>2026年は金を売るべきタイミングなのか？</strong>」「<strong>金相場は今後どうなる？</strong>」——金価格が歴史的な高値圏にある今、多くの方がこの疑問を抱えています。</p>
 
-        <p>結論から言うと、{LP_DATE}時点の金相場は<strong>売却に非常に好条件</strong>です。K24（純金）は1gあたり約{LP_K24}円と、10年前（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍、5年前（約6,500円）の約{Math.round((_LPP.k24 / 6500) * 10) / 10}倍に上昇しています（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
+        <p>{LP_DATE}時点の金相場は<strong>売却に非常に好条件</strong>です。K24（純金）は1gあたり約{LP_K24}円と、10年前（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍、5年前（約6,500円）の約{Math.round((_LPP.k24 / 6500) * 10) / 10}倍に上昇しています（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。</p>
 
         <p>ただし、「さらに上がるかもしれない」「もう少し待った方がいいかもしれない」という迷いもあるでしょう。この記事では、金相場の現状分析と今後の見通し、そして<strong>合理的な売却判断の基準</strong>をお伝えします。</p>
 
@@ -316,7 +316,7 @@ export default function KinUridoki2026Page() {
           {[
             {
               q: "2026年は金の売り時ですか？",
-              a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です。10年前から大きく上昇しており、売却には非常に好条件と言えます。「今の価格に納得できるなら売る」のが最も実践的な判断です。`,
+              a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値水準です。10年前から大きく上昇しており、売却には非常に好条件と言えます。現在の価格に納得できるかどうかを判断の基準とすることをおすすめします。`,
             },
             {
               q: "金相場は今後さらに上がりますか？",
@@ -324,11 +324,11 @@ export default function KinUridoki2026Page() {
             },
             {
               q: "金の売り時を判断するポイントは？",
-              a: "主な判断ポイントは、(1)現在の価格で利益が十分出ているか、(2)今後使う予定のない金製品か、(3)売却資金の使い道があるか、の3つです。相場のピークを狙うのではなく、自分の「納得価格」で判断しましょう。",
+              a: "主な判断ポイントは、(1)現在の価格で利益が十分出ているか、(2)今後使う予定のない金製品か、(3)売却資金の使い道があるか、の3つです。相場のピークを狙うのではなく、自分の「納得価格」で判断することをおすすめします。",
             },
             {
-              q: "金を売るベストなタイミングはいつですか？",
-              a: "短期的には円安・国際金価格上昇のタイミングが有利です。長期的には保有5年超で税金が半額になるため、税制面も考慮しましょう。完璧なタイミングは誰にもわからないため、「納得できる価格の時に売る」が正解です。",
+              q: "金を売るのに適したタイミングはいつですか？",
+              a: "短期的には円安・国際金価格上昇のタイミングが有利です。長期的には保有5年超で税金が半額になるため、税制面も考慮することをおすすめします。完璧なタイミングは誰にもわからないため、納得できる価格の時に売却することをおすすめします。",
             },
             {
               q: "金相場が下がるのを待って買い直す戦略はありですか？",

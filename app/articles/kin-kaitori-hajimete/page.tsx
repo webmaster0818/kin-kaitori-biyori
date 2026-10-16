@@ -38,7 +38,7 @@ function FaqSchema() {
     { "@type": "Question", name: "金を売るのに必要なものは何ですか？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートのいずれか1点）が必須です。古物営業法により、金額にかかわらず身分証の提示が義務付けられています。200万円超の取引ではマイナンバーの提示も必要です。" } },
     { "@type": "Question", name: "金買取の流れはどうなりますか？", acceptedAnswer: { "@type": "Answer", text: "店頭買取の場合、来店→受付→純度測定（X線分析）→重量計量→買取価格提示→承諾→本人確認→現金受け取り、という流れです。所要時間は15〜30分程度です。" } },
     { "@type": "Question", name: "壊れたアクセサリーや刻印がない金でも売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、壊れていても、刻印がなくても買取可能です。金の買取は素材価値がベースなので、チェーン切れや変色があっても金としての価値は変わりません。刻印がない場合はX線分析で純度を判定します。" } },
-    { "@type": "Question", name: "金買取に手数料はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルの3社は、公式サイトで査定料・出張費・キャンセル料の無料を明記しています。ヒカカク！は一括査定の利用が無料ですが、査定・買取は申し込み先の各業者が行い、キャンセルも業者へ直接連絡する仕組みです。手数料・返送料は申し込み先の業者ごとに確認し、手数料がかかる業者は避けましょう。" } },
+    { "@type": "Question", name: "金買取に手数料はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルの3社は、公式サイトで査定料・出張費・キャンセル料の無料を明記しています。ヒカカク！は一括査定の利用が無料ですが、査定・買取は申し込み先の各業者が行い、キャンセルも業者へ直接連絡する仕組みです。手数料・返送料は申し込み先の業者ごとに確認し、手数料がかかる業者は避けることをおすすめします。" } },
     { "@type": "Question", name: "金を売った場合、税金はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "売却益が年間50万円を超えると譲渡所得として課税対象になります。ただし50万円以内なら実質非課税です。また、保有5年超なら課税額が半減します。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -53,13 +53,13 @@ function ArticleSchema() {
 }
 
 
-export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初心者が失敗しないための完全ガイド。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
+export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初めての方に向けて、売却の手順と注意点をまとめています。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
 
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
-      <h3 className="font-bold text-base mb-3 text-center">初めてでも安心！無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">査定は無料、キャンセルも無料。まずは価値を知ることから始めましょう。</p>
+      <h3 className="font-bold text-base mb-3 text-center">初めての方向けの無料査定のご案内</h3>
+      <p className="text-sm text-warm-gray text-center mb-4">査定は無料、キャンセルも無料。まずは価値を知ることから始めることをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -84,7 +84,7 @@ export default function KinKaitoriHajimetePage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取に必要なものは？本人確認書類と当日の流れ</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <div className="bg-gold-bg border-2 border-accent/40 rounded-xl p-5 my-6 not-prose">
-          <p className="font-bold text-base mb-2">結論：必要なのは「本人確認書類1点」と「売りたい金製品」だけ</p>
+          <p className="font-bold text-base mb-2">必要なものは「本人確認書類1点」と「売却する金製品」です</p>
           <ul className="text-sm leading-relaxed space-y-1 list-disc pl-5">
             <li><strong>必須</strong>：有効期限内の本人確認書類1点（運転免許証／マイナンバーカード／パスポート／在留カード）</li>
             <li><strong>200万円を超えるとき</strong>：加えてマイナンバーの提示（業者が支払調書を出すため）</li>
@@ -121,12 +121,12 @@ export default function KinKaitoriHajimetePage() {
           <li>在留カード</li>
           <li>住民基本台帳カード（写真付き）</li>
         </ul>
-        <p><strong>有効期限が切れているものは使えません。</strong>事前に確認しておきましょう。</p>
+        <p><strong>有効期限が切れているものは使えません。</strong>事前にご確認ください。</p>
 
         <h3>200万円超の場合：マイナンバー</h3>
         <p>1回の取引で200万円を超える金地金（インゴット）の売却では、マイナンバーの提示が必要です。マイナンバーカードまたは通知カード+身分証を持参してください。</p>
 
-        <h3>あると査定額アップ：付属品</h3>
+        <h3>査定額に影響する付属品</h3>
         <ul>
           <li>保証書・ギャランティカード</li>
           <li>鑑定書・鑑別書</li>
@@ -156,7 +156,7 @@ export default function KinKaitoriHajimetePage() {
           <li><strong>価格計算：</strong>当日の相場 x 純度 x 重量 で買取価格を算出</li>
           <li><strong>価格提示：</strong>「今日の相場は○○円/gで、お品物は○g、K18なので○○円です」と説明</li>
         </ol>
-        <p>信頼できる業者は、計算の根拠を<strong>すべて説明</strong>してくれます。根拠を示さず金額だけ提示する業者は避けましょう。</p>
+        <p>信頼できる業者は、計算の根拠を<strong>すべて説明</strong>してくれます。根拠を示さず金額だけ提示する業者は避けることをおすすめします。</p>
 
         <CtaBox />
           <p>一括査定サービスそのものの評判や注意点（キャンセル方法・電話連絡・個人情報）は <Link href="/articles/hikakaku-kin-kaitori-kuchikomi/">ヒカカクの金買取 口コミ・評判</Link> で公式クチコミの傾向を出典付きで整理しています。</p>
@@ -165,15 +165,15 @@ export default function KinKaitoriHajimetePage() {
         <h3>売る場合</h3>
         <p>価格に納得できれば、身分証の確認後に売買契約書にサインし、現金を受け取ります。</p>
         <h3>売らない場合</h3>
-        <p>価格に納得できなければ、<strong>キャンセルしてOKです</strong>。信頼できる業者はキャンセル料を請求しません。「他の業者にも見積もりを取りたい」と正直に伝えましょう。</p>
+        <p>価格に納得できなければ、<strong>キャンセルすることも可能です</strong>。信頼できる業者はキャンセル料を請求しません。「他の業者にも見積もりを取りたい」とお伝えいただいて問題ありません。</p>
 
         <h2>初心者がやりがちな5つの失敗</h2>
         <ol>
-          <li><strong>1社だけで売ってしまう：</strong>最低3社に見積もりを取りましょう。同じ金製品でも業者間で10〜30%の差が出ることがあります。</li>
-          <li><strong>相場を確認せずに売る：</strong>田中貴金属のWebサイト等で当日の金相場を確認してから来店しましょう。</li>
-          <li><strong>突然の訪問買取に応じる：</strong>突然訪問してくる買取業者は相場の10分の1以下の価格を提示することがあります。絶対に応じないでください。</li>
-          <li><strong>手数料を確認しない：</strong>「査定料3,000円」「精錬費5%」など、手数料を後から差し引く業者があります。事前に確認しましょう。</li>
-          <li><strong>付属品を捨ててしまう：</strong>保証書やケースがあれば査定額がアップします。捨てずに一緒に持参しましょう。</li>
+          <li><strong>1社だけで売ってしまう：</strong>最低3社に見積もりを取ることをおすすめします。同じ金製品でも業者間で10〜30%の差が出ることがあります。</li>
+          <li><strong>相場を確認せずに売る：</strong>田中貴金属のWebサイト等で当日の金相場を確認してから来店することをおすすめします。</li>
+          <li><strong>突然の訪問買取に応じる：</strong>突然訪問してくる買取業者は相場の10分の1以下の価格を提示することがあります。応じないようご注意ください。</li>
+          <li><strong>手数料を確認しない：</strong>「査定料3,000円」「精錬費5%」など、手数料を後から差し引く業者があります。事前にご確認ください。</li>
+          <li><strong>付属品を捨ててしまう：</strong>保証書やケースがあれば査定額がアップします。捨てずに一緒に持参することをおすすめします。</li>
         </ol>
 
         <h2>金の買取価格の相場（{LP_DATE}時点）</h2>
@@ -196,7 +196,7 @@ export default function KinKaitoriHajimetePage() {
           <table>
             <thead><tr><th>業者名</th><th>方式</th><th>初心者へのおすすめポイント</th></tr></thead>
             <tbody>
-              <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者を比較できるので初心者でも損しにくい</td></tr>
+              <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者を比較できるので初めての方でも比較しやすい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,400店舗以上（公式表記・2026年10月確認）。予約不要で店頭査定</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で対面査定。持ち運びの心配なし</td></tr>
               <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>好きな方法を選べる。初めてでも安心</td></tr>
@@ -212,7 +212,7 @@ export default function KinKaitoriHajimetePage() {
             { q: "金を売るのに必要なものは？", a: "有効期限内の本人確認書類1点（運転免許証・マイナンバーカード・パスポート・在留カード）と、売りたい金製品だけです。古物営業法により金額にかかわらず本人確認が必要です。1回200万円を超える取引ではマイナンバーの提示も求められます。印鑑や通帳は不要です。" },
             { q: "本人確認書類はコピーでもいいですか？", a: "店頭では原本が必要です。宅配買取のみ、コピーの同封で受け付ける方式が一般的です。有効期限が切れた書類は使えません。" },
             { q: "壊れたアクセサリーでも売れますか？", a: "はい、壊れていても刻印がなくても買取可能です。金は素材価値で評価されるため、状態は問いません。" },
-            { q: "手数料はかかりますか？", a: "買取大吉・ティファナ・ウリエルは査定料・出張費・キャンセル料すべて無料と公式に明記しています。ヒカカク！は一括査定の利用が無料で、査定・買取・キャンセルは申し込み先の各業者とのやり取りになるため、手数料や返送料はその業者の条件を確認してください。" },
+            { q: "手数料はかかりますか？", a: "買取大吉・ティファナ・ウリエルは査定料・出張費・キャンセル料すべて無料と公式に明記しています。ヒカカク！は一括査定の利用が無料で、査定・買取・キャンセルは申し込み先の各業者とのやり取りになるため、手数料や返送料はその業者の条件をご確認ください。" },
             { q: "税金はかかりますか？", a: "売却益が年間50万円超で譲渡所得として課税対象です。50万円以内なら実質非課税です。" },
             { q: "どのくらい時間がかかりますか？", a: "店頭買取の場合、来店から現金受け取りまで約30分です。" },
           ].map((faq) => (

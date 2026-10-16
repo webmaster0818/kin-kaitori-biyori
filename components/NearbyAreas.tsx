@@ -13,7 +13,7 @@ export function NearbyAreas({ areas, pref }: { areas: Area[]; pref?: string }) {
         近隣エリアの金買取を探す
       </h2>
       <p className="text-xs text-warm-gray mb-4">
-        {pref ? `${pref}を中心に、` : ""}お近くのエリアでも相場・業者を比較できます。
+        {pref ? `${pref}を中心に、` : ""}近隣エリアの相場・業者情報も掲載しています。
       </p>
       <ul className="flex flex-wrap gap-2">
         {areas.map((a) => (

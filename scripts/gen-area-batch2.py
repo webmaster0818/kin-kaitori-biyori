@@ -46,7 +46,7 @@ AREAS2 = [
   ["tokyo-kin-kaitori","tachikawa-kin-kaitori","hachioji-kin-kaitori"]),
  ("chofu-kin-kaitori","調布","東京都","kanto","映画の街・京王沿線の住宅都市",
   ["調布駅周辺","つつじヶ丘","仙川"],
-  "調布市は映画スタジオで知られる京王線沿線の住宅都市です。新宿へのアクセスが良く、駅前の買取店や出張買取で気軽に金を売却できます。",
+  "調布市は映画スタジオで知られる京王線沿線の住宅都市です。新宿へのアクセスが良く、駅前の買取店や出張買取で金を売却できます。",
   ["tokyo-kin-kaitori","fuchu-tokyo-kin-kaitori","kichijoji-kin-kaitori"]),
  ("mitaka-kin-kaitori","三鷹","東京都","kanto","ジブリ美術館と井の頭の住宅地",
   ["三鷹駅周辺","下連雀","井の頭"],

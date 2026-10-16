@@ -41,7 +41,7 @@ PRODUCT_SLUGS: dict[str, dict] = {
     "kin-bracelet-kaitori":     {"badge": "金ブレスレット", "shortTitle": "金ブレスレット買取相場ガイド", "description": "喜平・バングルなど金ブレスレットの査定相場。"},
     "kin-yubiwa-kaitori":       {"badge": "金の指輪", "shortTitle": "金の指輪・リング買取相場ガイド", "description": "K18・K24リングの重量別買取価格目安。"},
     "kin-chain-kaitori":        {"badge": "金チェーン", "shortTitle": "金チェーン買取相場ガイド", "description": "喜平・あずきなどチェーン種類別の相場一覧。"},
-    "kin-pierce-kaitori":       {"badge": "金ピアス", "shortTitle": "金ピアス買取相場ガイド", "description": "片方だけでもOK。金ピアスの査定相場と注意点。"},
+    "kin-pierce-kaitori":       {"badge": "金ピアス", "shortTitle": "金ピアス買取相場ガイド", "description": "片方だけでも買取可能です。金ピアスの査定相場と注意点を解説します。"},
     "kin-nobebo-kaitori":       {"badge": "延べ棒", "shortTitle": "金の延べ棒（インゴット）買取ガイド", "description": "ブランド別・重量別の延べ棒買取価格を解説。"},
     "kinka-ingot-kaitori":      {"badge": "金貨・インゴット", "shortTitle": "金貨・インゴット買取相場ガイド", "description": "メイプル・カンガルー等の金貨買取目安。"},
     "kinba-kaitori":            {"badge": "金歯", "shortTitle": "金歯（インレー・クラウン）買取ガイド", "description": "歯科用金合金の純度と買取の進め方。"},
@@ -106,7 +106,7 @@ HOWTO_SLUGS: dict[str, dict] = {
     "kin-200man-mynumber":      {"badge": "200万円超", "shortTitle": "金200万円超売却とマイナンバー", "description": "200万円ルールと法定調書の仕組みを解説。"},
     "kin-souzoku-baikyaku":     {"badge": "相続", "shortTitle": "相続した金の売却ガイド", "description": "相続税評価額と売却時の税金関係を整理。"},
     "ihin-seiri-kin":           {"badge": "遺品整理", "shortTitle": "遺品の金製品 整理・売却ガイド", "description": "遺品の金製品を整理・売却する進め方。"},
-    "kongyaku-yubiwa-uru":      {"badge": "婚約指輪", "shortTitle": "婚約指輪・結婚指輪の売却ガイド", "description": "婚約・結婚指輪を売る前に知っておきたい注意点。"},
+    "kongyaku-yubiwa-uru":      {"badge": "婚約指輪", "shortTitle": "婚約指輪・結婚指輪の売却ガイド", "description": "婚約・結婚指輪を売る前に確認したい注意点を解説します。"},
     "gin-kaitori":              {"badge": "銀買取", "shortTitle": "銀（シルバー）買取相場ガイド", "description": "純銀・SV925の買取相場と高く売るコツ。"},
     "shinju-kaitori":           {"badge": "真珠買取", "shortTitle": "真珠（パール）買取相場ガイド", "description": "あこや・南洋真珠の買取相場と評価ポイント。"},
 }

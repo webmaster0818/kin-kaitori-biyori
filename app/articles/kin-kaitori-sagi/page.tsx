@@ -28,9 +28,9 @@ function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金買取で最も多い詐欺の手口は？", acceptedAnswer: { "@type": "Answer", text: "最も多いのは突然の訪問買取です。「不用品を買い取ります」と訪問し、貴金属を相場より大幅に安い価格で買い取る手口です。国民生活センターにも多くの相談が寄せられています。" } },
     { "@type": "Question", name: "訪問買取で売ってしまった場合、取り消せますか？", acceptedAnswer: { "@type": "Answer", text: "はい、自宅などに来てもらって売った場合（訪問購入）は、自分で業者を呼んだときも含めてクーリング・オフの対象です。法律で決められた書面を受け取った日から数えて8日以内なら、書面または電子メール等の電磁的記録で契約を解除でき、品物と代金は業者の負担で返し合います。金・貴金属は対象外の品目に入っていません。" } },
-    { "@type": "Question", name: "金買取業者が信頼できるか見分ける方法は？", acceptedAnswer: { "@type": "Answer", text: "古物商許可番号を提示しているか、査定料・手数料が明確か、買取価格の根拠を説明してくれるか、を確認しましょう。大手チェーン（買取大吉、おたからや等）や一括査定サービス（ヒカカク！）を利用するのが安全です。" } },
-    { "@type": "Question", name: "金の買取価格が相場より安いと感じたらどうすべき？", acceptedAnswer: { "@type": "Answer", text: "その場で売却せず、複数の業者に見積もりを取りましょう。田中貴金属など地金商のWebサイトで当日の相場を確認し、提示された価格が相場の90%以上かどうかをチェックしてください。" } },
-    { "@type": "Question", name: "宅配買取のトラブルで多いケースは？", acceptedAnswer: { "@type": "Answer", text: "宅配買取では、安い査定額を提示された上で「キャンセルの場合は返送料をご負担ください」と言われるケースがあります。事前にキャンセル時の返送料が無料かどうかを確認しましょう。" } },
+    { "@type": "Question", name: "金買取業者が信頼できるか見分ける方法は？", acceptedAnswer: { "@type": "Answer", text: "古物商許可番号を提示しているか、査定料・手数料が明確か、買取価格の根拠を説明してくれるか、ご確認ください。大手チェーン（買取大吉、おたからや等）や一括査定サービス（ヒカカク！）を利用するのが安全です。" } },
+    { "@type": "Question", name: "金の買取価格が相場より安いと感じたらどうすべき？", acceptedAnswer: { "@type": "Answer", text: "その場で売却せず、複数の業者に見積もりを取ることをおすすめします。田中貴金属など地金商のWebサイトで当日の相場を確認し、提示された価格が相場の90%以上かどうかをチェックしてください。" } },
+    { "@type": "Question", name: "宅配買取のトラブルで多いケースは？", acceptedAnswer: { "@type": "Answer", text: "宅配買取では、安い査定額を提示された上で「キャンセルの場合は返送料をご負担ください」と言われるケースがあります。事前にキャンセル時の返送料が無料かどうかをご確認ください。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
@@ -43,13 +43,13 @@ function ArticleSchema() {
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
-export const metadata: Metadata = { title: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", description: "金買取でよくある詐欺の手口7選と対処法。訪問買取の押し買い、不当な安値査定、偽の純度判定など悪質業者の見分け方とクーリングオフの手順を徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-sagi/" } };
+export const metadata: Metadata = { title: "【2026年最新】金買取の詐欺・トラブル完全対策ガイド — 悪質手口と対処法", description: "金買取でよくある詐欺の手口7選と対処法。訪問買取の押し買い、不当な安値査定、偽の純度判定など悪質業者の見分け方とクーリング・オフの手順を解説します。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-sagi/" } };
 
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">安心・安全な買取業者はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">買取大吉・ティファナ・ウリエルは査定料・手数料の無料を公式に明記。ヒカカク！は一括査定の利用が無料で、手数料は申し込み先の業者ごとに確認してください。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">買取大吉・ティファナ・ウリエルは査定料・手数料の無料を公式に明記。ヒカカク！は一括査定の利用が無料で、手数料は申し込み先の業者ごとにご確認ください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -77,7 +77,7 @@ export default function KinKaitoriSagiPage() {
 
         <p>金価格が歴史的な高値を更新し続ける2026年、金の売却を検討する人が急増しています。それに伴い、<strong>悪質な買取業者によるトラブルや詐欺被害も増加</strong>しています。</p>
 
-        <p>「訪問買取で安く買い叩かれた」「純度を偽って安い価格を提示された」「キャンセルしようとしたら高額な違約金を請求された」——こうした被害に遭わないために、この記事では<strong>金買取でよくある詐欺の手口と対策法</strong>を徹底解説します。</p>
+        <p>「訪問買取で安く買い叩かれた」「純度を偽って安い価格を提示された」「キャンセルしようとしたら高額な違約金を請求された」——こうした被害に遭わないために、この記事では<strong>金買取でよくある詐欺の手口と対策法</strong>を解説します。</p>
 
         <h2>金買取でよくある詐欺・トラブル7選</h2>
 
@@ -88,7 +88,7 @@ export default function KinKaitoriSagiPage() {
         <div className="bg-red-50 border border-red-200 rounded-xl p-4 my-4 not-prose">
           <p className="text-sm font-bold text-red-800 mb-2">対策</p>
           <ul className="text-sm text-red-700 space-y-1 list-disc pl-4">
-            <li>突然の訪問買取には絶対に応じない</li>
+            <li>突然の訪問買取には応じない</li>
             <li>ドアを開けない。インターホン越しに断る</li>
             <li>「今は考えていません」とはっきり断る</li>
           </ul>
@@ -147,7 +147,7 @@ export default function KinKaitoriSagiPage() {
         <div className="bg-red-50 border border-red-200 rounded-xl p-4 my-4 not-prose">
           <p className="text-sm font-bold text-red-800 mb-2">対策</p>
           <ul className="text-sm text-red-700 space-y-1 list-disc pl-4">
-            <li>急かす業者からは絶対に買わない</li>
+            <li>契約を急がせる業者とは取引しない</li>
             <li>「検討します」と言って持ち帰る</li>
             <li>信頼できる業者は即決を迫らない</li>
           </ul>
@@ -172,7 +172,7 @@ export default function KinKaitoriSagiPage() {
 
         <div className="table-wrapper">
           <table>
-            <thead><tr><th>チェックポイント</th><th>信頼できる業者</th><th>要注意な業者</th></tr></thead>
+            <thead><tr><th>チェックポイント</th><th>信頼できる業者</th><th>注意が必要な業者</th></tr></thead>
             <tbody>
               <tr><td><strong>古物商許可番号</strong></td><td>Webサイトや店頭に明示</td><td>表示がない</td></tr>
               <tr><td><strong>手数料</strong></td><td>査定料・出張費・キャンセル料すべて無料</td><td>手数料が不明瞭</td></tr>
@@ -186,7 +186,7 @@ export default function KinKaitoriSagiPage() {
 
         <h2>被害に遭ったときの対処法</h2>
 
-        <h3>クーリングオフ（訪問買取の場合）</h3>
+        <h3>クーリング・オフ（訪問買取の場合）</h3>
         <p>自宅などに来てもらって売った場合（特定商取引法の「訪問購入」）は、<strong>法律で決められた書面を受け取った日から数えて8日以内</strong>であればクーリング・オフができます。<strong>自分でネットや電話で出張買取を頼んだ場合も対象</strong>です。法律の適用除外は、営業として売る場合や、引っ越しなどで住居を退去する際に自分から取引を持ちかけた場合などに限られ、「自分で呼んだかどうか」では外れません（消費者庁「特定商取引法ガイド 訪問購入」）。国民生活センターにも、ネットで探した出張買取業者に金のネックレスを売り、クーリング・オフできるかという相談が寄せられています。</p>
         <p>対象外になるのは品目で、<strong>自動車（二輪を除く）・家電（持ち運びが容易なものを除く）・家具・書籍・有価証券・CD/DVD/ゲームソフト</strong>などは政令で訪問購入のルールから除かれています。<strong>金・貴金属・宝石は除外品目に入っていない</strong>ので、出張買取で売った金製品は対象です。店頭に自分で持ち込んだ買取と、宅配買取は訪問購入に当たらず対象外です。書面を受け取っていない場合や、業者がうそを言ったり脅したりしてクーリング・オフを妨げた場合は、8日を過ぎても可能です。</p>
         <ol>
@@ -216,8 +216,8 @@ export default function KinKaitoriSagiPage() {
             { q: "金買取で最も多い詐欺の手口は？", a: "突然の訪問買取（押し買い）が最も多いです。不用品回収を名目に訪問し、金を相場より大幅に安い価格で買い取る手口です。" },
             { q: "訪問買取で売ってしまった場合、取り消せますか？", a: "はい、自宅などに来てもらって売った場合は、自分で業者を呼んだときも含めてクーリング・オフの対象です。法律で決められた書面を受け取った日から8日以内に、書面または電子メール等で通知します。金・貴金属は対象外の品目に入っていません。" },
             { q: "信頼できる業者の見分け方は？", a: "古物商許可番号の明示、手数料の透明性、査定価格の根拠説明、口コミ・評判の確認がポイントです。" },
-            { q: "相場より安い価格を提示されたらどうすべき？", a: "その場で売らず、必ず複数の業者に見積もりを取りましょう。田中貴金属のWebサイト等で当日の相場を確認してください。" },
-            { q: "宅配買取は安全ですか？", a: "大手業者であれば安全です。ただし、キャンセル時の返送料が無料かどうかを事前に確認しましょう。" },
+            { q: "相場より安い価格を提示されたらどうすべき？", a: "その場で売らず、必ず複数の業者に見積もりを取ることをおすすめします。田中貴金属のWebサイト等で当日の相場をご確認ください。" },
+            { q: "宅配買取は安全ですか？", a: "大手業者であれば安全です。ただし、キャンセル時の返送料が無料かどうかを事前にご確認ください。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm"><span>{faq.q}</span><svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></summary>
@@ -236,7 +236,7 @@ export default function KinKaitoriSagiPage() {
         <h2>まとめ</h2>
         <p>金買取の詐欺・トラブルは、<strong>知識と準備で防げるもの</strong>がほとんどです。以下の3つを守れば、安全に金を売却できます。</p>
         <ol>
-          <li><strong>突然の訪問買取には絶対に応じない</strong></li>
+          <li><strong>突然の訪問買取には応じない</strong></li>
           <li><strong>事前に相場を確認し、複数業者で比較する</strong></li>
           <li><strong>手数料無料・査定根拠を説明してくれる業者を選ぶ</strong></li>
         </ol>

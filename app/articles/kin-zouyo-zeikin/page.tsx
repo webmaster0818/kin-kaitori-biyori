@@ -28,7 +28,7 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取日和" }, publisher: { "@type": "Organization", name: "金買取日和", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -112,14 +112,14 @@ export default function KinZouyoZeikinPage() {
         <p>ここが金の贈与でもっとも見落とされやすいポイントです。贈与で取得した資産を売却する場合、譲渡所得の計算では<strong>贈与した人の取得費と取得時期をそのまま引き継ぎます</strong>（国税庁タックスアンサー No.3270）。</p>
         <ul>
           <li>親が30年前に購入した金なら、子が売るときも「30年前の購入価格」が取得費、保有期間も30年（＝<Link href="/articles/kin-kaitori-zeikin/">長期譲渡所得</Link>で課税半減）</li>
-          <li>購入時の領収書・計算書がないと取得費は売却額の5%とされ、大幅に不利になります。<strong>贈与時に必ず購入時の書類も一緒に受け取りましょう</strong></li>
+          <li>購入時の領収書・計算書がないと取得費は売却額の5%とされ、大幅に不利になります。<strong>贈与の際は、購入時の書類も一緒に受け取ることをおすすめします</strong></li>
         </ul>
 
         <h2>注意したい3つの落とし穴</h2>
         <h3>1. 名義変更だけの「名義財産」</h3>
         <p>名義を子どもにしても、実際には親が保管・管理しているなら実質は親の財産（名義財産）とみなされ、相続時に相続財産へ算入されることがあります。<strong>贈与契約書の作成</strong>と、<strong>受贈者自身による管理</strong>が大切です。</p>
         <h3>2. 定期贈与とみなされるリスク</h3>
-        <p>「毎年110万円ずつ10年間贈与する」と最初に約束すると、総額1,100万円の定期金贈与として一括課税されるおそれがあります。毎年その都度、贈与契約を交わす形にしましょう。</p>
+        <p>「毎年110万円ずつ10年間贈与する」と最初に約束すると、総額1,100万円の定期金贈与として一括課税されるおそれがあります。毎年その都度、贈与契約を交わす形にすることをおすすめします。</p>
         <h3>3. 相続開始前の贈与の持ち戻し</h3>
         <p>相続または遺贈で財産を取得した人への生前贈与は、相続開始前一定期間（段階的に7年へ延長中）の分が相続財産に加算されます。直前の駆け込み贈与は相続税対策にならない場合があります。</p>
 
@@ -139,7 +139,7 @@ export default function KinZouyoZeikinPage() {
         <h2>まとめ</h2>
         <ul>
           <li>金の贈与は年間110万円超で贈与税の対象。評価は贈与日の時価</li>
-          <li>もらった金を売るときは、贈与者の取得費・取得時期を引き継ぐ — <strong>購入時の領収書も一緒にもらう</strong>のが鉄則</li>
+          <li>もらった金を売るときは、贈与者の取得費・取得時期を引き継ぐ — <strong>購入時の領収書も一緒にもらう</strong>ことをおすすめします</li>
           <li>名義財産・定期贈与・持ち戻しの3つの落とし穴に注意。金額が大きい場合は税理士へ</li>
         </ul>
         <p className="text-sm text-warm-gray">参照: 国税庁タックスアンサー No.4402（贈与税がかかる場合）・No.4408（贈与税の計算と税率）・No.4103（相続時精算課税）・No.3270（相続や贈与によって取得した資産の取得費）。税制は改正される場合があります。個別の判断は税理士・税務署にご確認ください。</p>

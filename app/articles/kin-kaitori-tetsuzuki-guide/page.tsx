@@ -45,7 +45,7 @@ function FaqSchema() {
     mainEntity: [
       { "@type": "Question", name: "金買取に身分証は必要ですか？", acceptedAnswer: { "@type": "Answer", text: "必須です。古物営業法により、買取時の本人確認が義務付けられています。運転免許証・マイナンバーカード・パスポートなどが使えます。従来の健康保険証は、買取大吉が「令和7年12月2日（2025年12月2日）より身分証明書として認められなくなった」と公式に告知しています。" } },
       { "@type": "Question", name: "マイナンバーの提出が必要になるのはどんなときですか？", acceptedAnswer: { "@type": "Answer", text: "金地金・金貨などで1回200万円を超える取引では、業者が税務署に支払調書を提出するため、マイナンバーの提示が必要になる場合があります。" } },
-      { "@type": "Question", name: "未成年でも金を売れますか？", acceptedAnswer: { "@type": "Answer", text: "多くの業者では未成年単独の買取はできません。古物営業法やトラブル防止の観点から制限されており、親権者の同意書や同伴があれば対応可能な場合があります。事前に業者へ確認しましょう。" } },
+      { "@type": "Question", name: "未成年でも金を売れますか？", acceptedAnswer: { "@type": "Answer", text: "多くの業者では未成年単独の買取はできません。古物営業法やトラブル防止の観点から制限されており、親権者の同意書や同伴があれば対応可能な場合があります。事前に業者へご確認ください。" } },
       { "@type": "Question", name: "金買取に予約は必要ですか？", acceptedAnswer: { "@type": "Answer", text: "予約不要の店舗も多いですが、混雑時は予約すると待ち時間を減らせます。出張買取は日程調整が必要です。" } },
       { "@type": "Question", name: "査定にどれくらい時間がかかりますか？", acceptedAnswer: { "@type": "Answer", text: "点数にもよりますが、数点なら15〜30分程度が目安です。受付→本人確認→査定→金額提示→同意で現金受け取り、という流れが一般的です。" } },
       { "@type": "Question", name: "保証書や箱がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。金は素材価値で査定されるため付属品なしでも問題ありません。ただし保証書・箱・鑑定書があると、特にブランド品で査定額が上がる場合があります。" } },
@@ -65,7 +65,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">金製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">手続きはどの業者もシンプルです。複数社を比較して最高値を狙いましょう。査定はすべて無料です。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">手続きはどの業者もシンプルです。複数社の査定額を比較することをおすすめします。査定はいずれも無料です。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -102,7 +102,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <p>金買取の手続きで実際に迷いやすいのは、「<strong>未成年でも売れるのか</strong>」「予約は必要か」「当日どのくらい時間がかかるのか」の3点です。この記事はその3点に絞って答えます。</p>
 
-          <p>この記事を読めば以下のことがわかります。</p>
+          <p>この記事では、以下の内容をご説明します。</p>
           <ul>
             <li>未成年が金を売れるか（年齢の考え方・親権者の同意／同伴）</li>
             <li>予約の要否と、予約したほうがよいケース</li>
@@ -133,7 +133,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
                 <tr><td><strong>1. 受付</strong></td><td>売りたい品物を渡す（予約不要の店舗も多い）</td></tr>
                 <tr><td><strong>2. 本人確認</strong></td><td>本人確認書類を提示（古物営業法で義務）</td></tr>
                 <tr><td><strong>3. 査定</strong></td><td>刻印確認・計量・純度測定（X線分析など）</td></tr>
-                <tr><td><strong>4. 金額提示</strong></td><td>純度×重量×当日相場を基に買取額を提示。根拠の説明を求めましょう</td></tr>
+                <tr><td><strong>4. 金額提示</strong></td><td>純度×重量×当日相場を基に買取額を提示。根拠の説明を求めることをおすすめします</td></tr>
                 <tr><td><strong>5. 同意・現金受け取り</strong></td><td>金額に同意すればその場で現金化（宅配買取は振込）</td></tr>
               </tbody>
             </table>
@@ -155,7 +155,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <h2>未成年は金を売れる？ — 単独では不可が一般的</h2>
 
-          <p>結論から言うと、<strong>多くの業者では未成年単独の買取はできません</strong>。古物営業法や各都道府県の青少年保護条例、トラブル防止の観点から、未成年との取引は制限されています。</p>
+          <p><strong>多くの業者では未成年単独の買取はできません</strong>。古物営業法や各都道府県の青少年保護条例、トラブル防止の観点から、未成年との取引は制限されています。</p>
 
           <ul>
             <li><strong>未成年単独：</strong>ほとんどの業者で買取不可</li>
@@ -163,11 +163,11 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             <li><strong>親権者の同伴あり：</strong>対応可能な業者が比較的多い</li>
           </ul>
 
-          <p>対応は業者ごとに異なるため、<strong>来店前に電話などで確認</strong>しましょう。なお、親から相続・贈与された金製品を売る場合でも、売却者が未成年であれば同じ制限がかかります。確実なのは、親権者名義で売却することです。</p>
+          <p>対応は業者ごとに異なるため、<strong>来店前に電話などで確認</strong>すことをおすすめします。なお、親から相続・贈与された金製品を売る場合でも、売却者が未成年であれば同じ制限がかかります。確実なのは、親権者名義で売却することです。</p>
 
           <h3>何歳から売れる？ — 成年年齢は18歳だが、店の運用はそれより厳しいことがある</h3>
 
-          <p>民法上の成年年齢は2022年4月から<strong>18歳</strong>です。したがって18歳・19歳は法律上は単独で契約でき、金の売却もできます。ただし実務では、<strong>店側が独自に「20歳以上」や「高校生不可」といった条件を設けている</strong>ことがあります。年齢だけで判断せず、店舗の規定を確認してください。</p>
+          <p>民法上の成年年齢は2022年4月から<strong>18歳</strong>です。したがって18歳・19歳は法律上は単独で契約でき、金の売却もできます。ただし実務では、<strong>店側が独自に「20歳以上」や「高校生不可」といった条件を設けている</strong>ことがあります。年齢だけで判断せず、店舗の規定をご確認ください。</p>
 
           <div className="table-wrapper">
             <table>
@@ -214,7 +214,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             {[
               {
                 q: "何歳から金を売れますか？",
-                a: "民法上の成年年齢は18歳のため、18歳以上であれば法律上は単独で売却できます。ただし買取店が独自に「20歳以上」「高校生不可」と定めている場合があり、年齢だけでは判断できません。来店前に店舗の規定を確認してください。",
+                a: "民法上の成年年齢は18歳のため、18歳以上であれば法律上は単独で売却できます。ただし買取店が独自に「20歳以上」「高校生不可」と定めている場合があり、年齢だけでは判断できません。来店前に店舗の規定をご確認ください。",
               },
               {
                 q: "金買取に身分証は必要ですか？",
@@ -226,7 +226,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
               },
               {
                 q: "未成年でも金を売れますか？",
-                a: "多くの業者では未成年単独の買取はできません。古物営業法やトラブル防止の観点から制限されており、親権者の同意書や同伴があれば対応可能な場合があります。事前に業者へ確認しましょう。",
+                a: "多くの業者では未成年単独の買取はできません。古物営業法やトラブル防止の観点から制限されており、親権者の同意書や同伴があれば対応可能な場合があります。事前に業者へご確認ください。",
               },
               {
                 q: "金買取に予約は必要ですか？",

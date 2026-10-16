@@ -39,9 +39,9 @@ function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "相続した金を売却すると税金はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "はい、売却益は譲渡所得として所得税の課税対象です。ただし年間50万円の特別控除があり、被相続人の購入時から5年超経過していれば課税額が半減します。また、相続時に相続税を支払っている場合は取得費に加算できる特例もあります。" } },
     { "@type": "Question", name: "遺品整理で見つかった金の価値がわからない場合は？", acceptedAnswer: { "@type": "Answer", text: "買取業者に持ち込めば無料で査定してもらえます。刻印の確認やX線分析で純度を判定し、当日の相場で買取価格を算出してくれます。複数業者で査定を受けて比較するのがおすすめです。" } },
-    { "@type": "Question", name: "相続した金の取得費（購入価格）がわからない場合は？", acceptedAnswer: { "@type": "Answer", text: "購入時の領収書がない場合、売却額の5%が取得費として計算されます。例えば100万円で売却した場合、取得費は5万円として計算され、売却益95万円に課税されます。領収書があれば大幅に税金を減らせるため、故人の書類をよく探しましょう。" } },
+    { "@type": "Question", name: "相続した金の取得費（購入価格）がわからない場合は？", acceptedAnswer: { "@type": "Answer", text: "購入時の領収書がない場合、売却額の5%が取得費として計算されます。例えば100万円で売却した場合、取得費は5万円として計算され、売却益95万円に課税されます。領収書があれば大幅に税金を減らせるため、故人の書類をよく探すことをおすすめします。" } },
     { "@type": "Question", name: "相続した金は相続税の申告に含める必要がありますか？", acceptedAnswer: { "@type": "Answer", text: "はい、金・貴金属も相続財産に含まれます。相続税の評価は、相続開始日（死亡日）の金相場で行います。申告漏れがあると追徴課税の対象になるため、税理士に相談することをおすすめします。" } },
-    { "@type": "Question", name: "遺品の金をすぐに売らず保有し続けるべきですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、金価格は歴史的な高値水準にあります。今後の値動きは予測できませんが、現在の価格に納得できるなら売却のタイミングとしては好適です。保有し続ける場合は盗難・紛失リスクに注意し、適切に保管しましょう。" } },
+    { "@type": "Question", name: "遺品の金をすぐに売らず保有し続けるべきですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、金価格は歴史的な高値水準にあります。今後の値動きは予測できませんが、現在の価格に納得できるなら売却のタイミングとしては好適です。保有し続ける場合は盗難・紛失リスクに注意し、適切に保管することをおすすめします。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
@@ -54,7 +54,7 @@ function ArticleSchema() {
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
-export const metadata: Metadata = { title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点", description: "相続した金・遺品の金を売却する際の税金（譲渡所得・相続税）、取得費の計算方法、遺品整理で見つかった金の査定方法、トラブルを避けるポイントを徹底解説。", alternates: { canonical: "https://gold-biyori.com/articles/kin-souzoku-baikyaku/" } };
+export const metadata: Metadata = { title: "【2026年最新】相続した金・遺品の金を売却するガイド — 税金・手続き・注意点", description: "相続した金・遺品の金を売却する際の税金（譲渡所得・相続税）、取得費の計算方法、遺品整理で見つかった金の査定方法、トラブルを避けるポイントを解説します。", alternates: { canonical: "https://gold-biyori.com/articles/kin-souzoku-baikyaku/" } };
 
 function CtaBox() {
   return (
@@ -125,7 +125,7 @@ export default function KinSouzokuBaikyakuPage() {
           領収書なし（取得費5%）：課税対象額 = ({_man(SZ_SALE)}万 - {_man(SZ_GAIRYAKU)}万 - 50万) x 1/2 = 約{_man(SZ_TAX_B)}万円<br />
           <strong>差額：約{_man(SZ_DIFF)}万円</strong>（税率30%なら約{_man(SZ_DIFF * 0.3)}万円の税金差。購入時の価格が高いほど差は大きくなります）</p>
         </blockquote>
-        <p>故人の書類をよく探し、領収書・契約書・金融機関の取引明細などを見つけましょう。</p>
+        <p>故人の書類をよく探し、領収書・契約書・金融機関の取引明細などを見つけることをおすすめします。</p>
 
         <CtaBox />
 
@@ -141,7 +141,7 @@ export default function KinSouzokuBaikyakuPage() {
 
         <h2>相続した金を売る際の注意点</h2>
         <h3>遺産分割協議が必要</h3>
-        <p>相続人が複数いる場合、金の売却は<strong>遺産分割協議</strong>で合意を得てから行いましょう。協議が完了する前に一人の判断で売却すると、後からトラブルになることがあります。</p>
+        <p>相続人が複数いる場合、金の売却は<strong>遺産分割協議</strong>で合意を得てから行うことをおすすめします。協議が完了する前に一人の判断で売却すると、後からトラブルになることがあります。</p>
 
         <h3>相続税の取得費加算の特例</h3>
         <p>相続税を支払った方が、<strong>相続開始日から3年10ヶ月以内</strong>に相続した金を売却した場合、支払った相続税の一部を取得費に加算できる特例があります。この特例を使えば譲渡所得税を大幅に減らせる可能性があります。</p>
@@ -152,7 +152,7 @@ export default function KinSouzokuBaikyakuPage() {
         <h2>4社比較 — 相続した金の買取におすすめの業者</h2>
         <div className="table-wrapper">
           <table>
-            <thead><tr><th>業者名</th><th>方式</th><th>相続金の買取特徴</th><th>こんな人に</th></tr></thead>
+            <thead><tr><th>業者名</th><th>方式</th><th>相続金の買取特徴</th><th>おすすめの方</th></tr></thead>
             <tbody>
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の価格を一括比較</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>純度不明の遺品も比重などで品位を確認して査定（公式表記）</td><td>即現金化したい</td></tr>
@@ -169,9 +169,9 @@ export default function KinSouzokuBaikyakuPage() {
           {[
             { q: "相続した金を売却すると税金はかかりますか？", a: "売却益は譲渡所得として課税対象です。年間50万円の特別控除があり、被相続人の購入時から5年超なら課税額が半減します。" },
             { q: "取得費（購入価格）がわからない場合は？", a: "売却額の5%が取得費として計算されます。非常に不利なので、購入時の領収書を探すことが重要です。" },
-            { q: "遺品整理で見つかった金の価値がわからない場合は？", a: "買取業者に持ち込めば無料で査定してもらえます。複数業者で比較しましょう。" },
+            { q: "遺品整理で見つかった金の価値がわからない場合は？", a: "買取業者に持ち込めば無料で査定してもらえます。複数業者で比較することをおすすめします。" },
             { q: "相続人が複数いる場合、誰が売却すべき？", a: "遺産分割協議で合意を得てから、代表者が売却するのが一般的です。売却金は協議に従って分配します。" },
-            { q: "相続した金をすぐに売るべきですか？", a: "2026年4月現在は歴史的な高値水準なので売却の好機です。ただし税金を考慮して最適な時期を判断しましょう。税理士への相談をおすすめします。" },
+            { q: "相続した金をすぐに売るべきですか？", a: "2026年4月現在は歴史的な高値水準にあり、売却を検討しやすい時期といえます。ただし税金を考慮して最適な時期を判断することをおすすめします。税理士への相談をおすすめします。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm"><span>{faq.q}</span><svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></summary>

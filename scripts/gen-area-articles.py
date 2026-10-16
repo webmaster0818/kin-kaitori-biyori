@@ -487,33 +487,40 @@ PRICE_TABLE = """        <div className=\"table-wrapper\">
 URIEL_VISIT_PREFS={"茨城県","栃木県","埼玉県","千葉県","東京都","神奈川県","岐阜県","静岡県","愛知県","兵庫県","京都府","滋賀県","大阪府","奈良県","和歌山県","三重県","島根県","鳥取県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","長崎県","大分県","佐賀県","熊本県","宮崎県","鹿児島県"}
 TIFANA_VISIT_PREFS={"東京都","埼玉県","神奈川県"}
 def visit_answer(pref):
-    std="出張費・査定料は無料で、自宅にいながら金製品の売却が完結します。外出が難しい方や量が多い方に便利です。"
+    std="出張費・査定料は無料で、自宅で金製品の売却が完了するため、外出が難しい方や量が多い方に適しています。"
     if pref in TIFANA_VISIT_PREFS:
         return f"ウリエル（公式の出張対応エリアに{pref}を含む。一部対応できない市町村あり）やティファナ（出張エリアは東京・埼玉・神奈川の一部地域）が出張買取に対応しています。"+std
     if pref in URIEL_VISIT_PREFS:
         return f"ウリエルは公式の出張対応エリアに{pref}を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、{pref}は対象外です。"+std
-    return f"{pref}は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）を検討してください。"
+    return f"{pref}は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）をご検討ください。"
 
 def pascal(slug):
     return "".join(p.capitalize() for p in slug.split("-"))+"Page"
 
+def _suffix(name, suf):
+    # 「〇〇駅周辺」に「周辺」を重ねない（2026-10-16 周辺/方面 191+44ページの修正）
+    return name if name.endswith(suf) else name + suf
+
+
 def gen(slug, city, pref, region, hook, districts, intro, related):
     title=f"【2026年最新】{city}の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ"
-    desc=f"{city}で金を高く売るならどこ？{city}の金買取相場、店頭・出張・宅配の方法別比較、{pref}で高価買取を狙うコツと注意点を公開情報ベースで解説します。"
+    desc=f"{city}で金を高く売るならどこ？{city}の金買取相場、店頭・出張・宅配の方法別比較、{pref}で高く売るポイントと注意点を公開情報をもとに解説します。"
     crumb=f"{city}の金買取おすすめ"
     rel_js=", ".join(f'"{r}"' for r in (related+["kin-kaitori-souba","kin-takaku-uru","daikichi-vs-nanboya","kin-kaitori-sagi"]))
     d=districts
+    # intro が都市名から始まる場合（batch2）は「{city}は{hook}です。」を付けない（同じ内容の2文が並んでいた）
+    lead = intro if intro.startswith(city) else f"{city}は{hook}です。{intro}"
     faqs=[
       (f"{city}で金買取の価格が高い業者の選び方は？",
-       f"{city}では複数の買取業者を比較することが最も重要です。同じ純度・重量でも業者間で1gあたり数百円の差が出ます。まずヒカカク！の一括査定で複数社の見積もりを取り、最高値の業者を選びましょう。"),
+       f"{city}では複数の買取業者を比較することが重要です。同じ純度・重量でも、業者によって1gあたりの査定額が異なる場合があります。ヒカカク！の一括査定などで複数社から見積もりを取り、査定額を比較したうえで業者を選ぶことをおすすめします。"),
       (f"{city}で金を即日現金化できますか？",
-       f"はい、店頭買取であれば査定後その場で現金を受け取れます。買取大吉など大手チェーンは予約不要で対応しており、{d[0]}周辺の店舗で即日現金化が可能です。"),
+       f"はい、店頭買取であれば査定後その場で現金を受け取れます。買取大吉などの大手チェーンは予約不要で対応しており、{_suffix(d[0], '周辺')}の店舗で即日現金化が可能です。"),
       (f"{city}で出張買取は利用できますか？",
        visit_answer(pref)),
       (f"{city}の金買取で必要な持ち物は？",
-       "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法で買取時の身分証提示が義務付けられています。保証書や箱などの付属品があれば査定額アップにつながることもあります。"),
+       "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法で買取時の身分証提示が義務付けられています。保証書や箱などの付属品があれば、査定額が上がる場合があります。"),
       (f"{city}と都心部で金の買取価格に差はありますか？",
-       "純度・重量が同じなら金の地金価値は全国共通ですが、業者の経費や競争状況により提示額に差が出ます。一括査定や宅配買取を使えば、地域差を気にせず全国の高値業者と取引できます。"),
+       "純度・重量が同じなら金の地金価値は全国共通ですが、業者の経費や競争状況により提示額に差が出ます。一括査定や宅配買取を利用すれば、地域を問わず複数の業者の査定額を比較できます。"),
     ]
     faq_schema_items=",\n      ".join(
       '{ "@type": "Question", name: %s, acceptedAnswer: { "@type": "Answer", text: %s } }'%(json.dumps(q,ensure_ascii=False),json.dumps(a,ensure_ascii=False)) for q,a in faqs)
@@ -574,7 +581,7 @@ function CtaBox() {{
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">{city}で金の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">複数社を比較して最高値を狙いましょう。査定はすべて無料です。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">複数社の査定額を比較することをおすすめします。査定はいずれも無料です。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -611,13 +618,13 @@ export default function {pascal(slug)}() {{
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】{city}の金買取おすすめ業者ガイド</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: 2026年6月5日</p>
 
-        <p>{city}は{hook}です。{intro}</p>
+        <p>{lead}</p>
 
-        <p>「{city}で金を売るならどこがいい？」「相場はいくら？」——この記事では、{city}での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を公開情報ベースでまとめました。</p>
+        <p>「{city}で金を売るならどこがいい？」「相場はいくら？」——この記事では、{city}での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を、公開情報にもとづいてまとめました。</p>
         <ul>
           <li>{city}の金買取相場（2026年6月時点の目安）</li>
           <li>店頭・出張・宅配・一括査定の方法別比較</li>
-          <li>{city}で少しでも高く売るための実践ポイント</li>
+          <li>{city}で金を高く売るためのポイント</li>
           <li>送客先4社の特徴と選び方</li>
         </ul>
 
@@ -628,11 +635,11 @@ export default function {pascal(slug)}() {{
 
         <h2>{city}の主な金買取エリア</h2>
         <h3>{d[0]}</h3>
-        <p><strong>{d[0]}</strong>は{city}の中心的な買取スポットです。大手買取チェーンや貴金属店が集まり、アクセスも良いため、まず候補に入れたいエリアです。</p>
+        <p><strong>{d[0]}</strong>は{city}の中心的な買取スポットです。大手買取チェーンや貴金属店が集まり、アクセスも良いエリアです。</p>
         <h3>{d[1]}</h3>
-        <p>{d[1]}周辺にも買取店が点在します。{d[0]}が混雑している場合の比較先として、見積もりを取っておくとよいでしょう。</p>
+        <p>{_suffix(d[1], '周辺')}にも買取店が点在します。{d[0]}とあわせて、比較先として見積もりを取ることも可能です。</p>
         <h3>{d[2]}</h3>
-        <p>{d[2]}方面でも買取に対応する店舗があります。自宅に近い店舗で査定を受けたい方は、こうした周辺エリアも合わせて検討しましょう。</p>
+        <p>{_suffix(d[2], '方面')}でも買取に対応する店舗があります。ご自宅に近い店舗で査定を受けたい場合は、周辺エリアもあわせてご検討ください。</p>
 
         <CtaBox />
 
@@ -640,32 +647,32 @@ export default function {pascal(slug)}() {{
         <div className="table-wrapper">
           <table>
             <thead>
-              <tr><th>方法</th><th>おすすめ業者</th><th>メリット</th><th>こんな人に</th></tr>
+              <tr><th>方法</th><th>おすすめ業者</th><th>メリット</th><th>おすすめの方</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>店頭買取</strong></td><td>買取大吉</td><td>即日現金化・目の前で計量</td><td>すぐ現金が欲しい人</td></tr>
-              <tr><td><strong>出張買取</strong></td><td>ウリエル</td><td>自宅で完結・大量品も楽</td><td>外出が難しい人</td></tr>
-              <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・送料無料（公式表記）</td><td>忙しい人</td></tr>
-              <tr><td><strong>一括査定</strong></td><td>ヒカカク！</td><td>複数業者を一度に比較</td><td>最高値で売りたい人</td></tr>
+              <tr><td><strong>店頭買取</strong></td><td>買取大吉</td><td>即日現金化・目の前で計量</td><td>すぐに現金化したい方</td></tr>
+              <tr><td><strong>出張買取</strong></td><td>ウリエル</td><td>自宅で完結・量が多い場合も依頼しやすい</td><td>外出が難しい方</td></tr>
+              <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・送料無料（公式表記）</td><td>店舗へ行く時間がない方</td></tr>
+              <tr><td><strong>一括査定</strong></td><td>ヒカカク！</td><td>複数業者を一度に比較</td><td>複数社の査定額を比較したい方</td></tr>
             </tbody>
           </table>
         </div>
-        <p>{city}にお住まいの方は<strong>「一括査定で相場を把握 → 最高値の店舗・出張で売却」</strong>の流れが効率的です。まず<Link href="/articles/kaitori-houhou-hikaku/">買取方法の比較</Link>も参考にしてください。</p>
+        <p>{city}にお住まいの方は<strong>「一括査定で相場を把握 → 最高値の店舗・出張で売却」</strong>の流れをおすすめします。あわせて<Link href="/articles/kaitori-houhou-hikaku/">買取方法の比較</Link>もご参照ください。</p>
 
         <h2>{city}で金を高く売る5つのポイント</h2>
         <ol>
-          <li><strong>最低3社に見積もりを取る</strong><p>1社だけで決めず、相見積もりで最高値を引き出しましょう。一括査定なら一度で複数社を比較できます。</p></li>
-          <li><strong>純度と重量を事前に把握する</strong><p>刻印（K24・K18など）と重さの目安を知っておくと、提示額が適正か判断しやすくなります。<Link href="/articles/kin-omosa-hakarikata/">重さの量り方</Link>も参考に。</p></li>
+          <li><strong>最低3社に見積もりを取る</strong><p>1社だけで決めず、複数社から見積もりを取ることをおすすめします。一括査定を利用すれば、一度に複数社の査定額を比較できます。</p></li>
+          <li><strong>純度と重量を事前に把握する</strong><p>刻印（K24・K18など）と重さの目安を知っておくと、提示額が適正か判断しやすくなります。<Link href="/articles/kin-omosa-hakarikata/">重さの量り方</Link>もご参照ください。</p></li>
           <li><strong>付属品を揃える</strong><p>ブランドジュエリーは保証書・箱があると評価が上がる場合があります。</p></li>
-          <li><strong>手数料無料の業者を選ぶ</strong><p>査定料・精錬費などを差し引く業者もあります。買取大吉・ティファナ・ウリエルは査定料・手数料の無料を公式に明記しています。ヒカカク！経由の場合は、手数料・返送料を申し込み先の業者ごとに確認してください。</p></li>
-          <li><strong>相場の高いタイミングを狙う</strong><p>金価格は日々変動します。<Link href="/articles/kin-uru-timing/">売り時の見極め方</Link>もチェックしましょう。</p></li>
+          <li><strong>手数料無料の業者を選ぶ</strong><p>査定料・精錬費などを差し引く業者もあります。買取大吉・ティファナ・ウリエルは査定料・手数料の無料を公式に明記しています。ヒカカク！経由の場合は、手数料・返送料を申し込み先の業者ごとにご確認ください。</p></li>
+          <li><strong>相場の高いタイミングを狙う</strong><p>金価格は日々変動します。<Link href="/articles/kin-uru-timing/">売り時の見極め方</Link>もあわせてご確認ください。</p></li>
         </ol>
 
         <h2>{city}の金買取で利用できる送客先4社</h2>
         <p>当サイトでは、{pref}でも利用できる以下の4サービスをおすすめしています。</p>
         <ul>
-          <li><strong>ヒカカク！</strong>：複数業者へ一括査定。最高値を効率よく探せる</li>
-          <li><strong>買取大吉</strong>：全国展開の大手チェーン。予約不要で即日現金化</li>
+          <li><strong>ヒカカク！</strong>：複数の業者へ一括で査定を依頼でき、査定額を比較できる</li>
+          <li><strong>買取大吉</strong>：全国展開の大手チェーン。予約不要で即日現金化に対応</li>
           <li><strong>ウリエル</strong>：出張買取が中心（宅配買取にも対応）。出張費・査定料すべて無料</li>
           <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応</li>
         </ul>
@@ -674,9 +681,9 @@ export default function {pascal(slug)}() {{
 
         <h2>{city}の金買取 注意点</h2>
         <h3>押し買いに注意</h3>
-        <p>アポなしで自宅を訪問し強引に買い取る「押し買い」のトラブルが各地で報告されています。信頼できる業者は必ず事前予約・連絡があります。</p>
-        <h3>クーリングオフ制度</h3>
-        <p>出張買取には特定商取引法によりクーリングオフ（8日間）が適用されます。店頭持ち込みは適用外のため、高額品は慎重に判断しましょう。詳しくは<Link href="/articles/kin-kaitori-sagi/">買取詐欺・トラブル対策</Link>を参照してください。</p>
+        <p>事前の約束なく自宅を訪問し、強引に買い取る「押し買い」のトラブルが各地で報告されています。訪問を約束していない業者による勧誘は、特定商取引法で禁止されています。</p>
+        <h3>クーリング・オフ制度</h3>
+        <p>出張買取には、特定商取引法によりクーリング・オフ（8日間）が適用されます。店頭への持ち込みは適用外のため、高額品の売却は慎重にご判断ください。詳しくは<Link href="/articles/kin-kaitori-sagi/">買取詐欺・トラブル対策</Link>をご参照ください。</p>
 
         <h2>{city}の金買取に関するFAQ</h2>
         <div className="space-y-3 not-prose">
@@ -703,8 +710,8 @@ export default function {pascal(slug)}() {{
         />
 
         <h2>まとめ</h2>
-        <p>{city}で金を高く売るには、<strong>複数業者の比較</strong>が何より重要です。金相場が歴史的高値にある今は、手元の金製品を見直す好機といえます。</p>
-        <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で、お手持ちの金の買取価格を確認してみてください。査定は完全無料です。</p>
+        <p>{city}で金を高く売るには、<strong>複数業者の比較</strong>が重要です。金相場は歴史的な高値圏にあるため、お手元の金製品を見直す機会としてご活用ください。</p>
+        <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で、お手持ちの金の買取価格をご確認いただけます。査定は無料です。</p>
       </article>
     </div>
     </>

@@ -35,10 +35,10 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "金を売った場合、確定申告は必要ですか？", acceptedAnswer: { "@type": "Answer", text: "金の売却益が年間50万円を超える場合は確定申告が必要です。ただし、給与所得者で他の雑所得等が20万円以下の場合は所得税の確定申告は不要（住民税の申告は必要）です。生活用金製品（1点30万円以下のジュエリーなど）の売却は非課税です。" } },
-      { "@type": "Question", name: "金の売却益の計算方法は？", acceptedAnswer: { "@type": "Answer", text: "売却益 = 売却価格 - （取得費 + 売却費用）で計算します。取得費は購入時の価格、売却費用は売却にかかった手数料等です。取得費が不明な場合は、売却価格の5%を取得費として計算できますが、課税額が大幅に増えるため購入時のレシートは保管しておきましょう。" } },
+      { "@type": "Question", name: "金の売却益の計算方法は？", acceptedAnswer: { "@type": "Answer", text: "売却益 = 売却価格 - （取得費 + 売却費用）で計算します。取得費は購入時の価格、売却費用は売却にかかった手数料等です。取得費が不明な場合は、売却価格の5%を取得費として計算できますが、課税額が大幅に増えるため購入時のレシートは保管しておくことをおすすめします。" } },
       { "@type": "Question", name: "金の売却で節税する方法はありますか？", acceptedAnswer: { "@type": "Answer", text: "主な節税方法は、5年超保有してから売却する（長期譲渡所得で課税額が半分になる）、年間の売却益を50万円以内に抑える（特別控除の範囲内）、家族名義で分散して売却する、などがあります。" } },
       { "@type": "Question", name: "金の売却で200万円超の場合、何が起きますか？", acceptedAnswer: { "@type": "Answer", text: "1回の取引で200万円を超える金地金・金貨の売却は、買取業者が税務署に支払調書を提出する義務があります。マイナンバーの提示も求められます。なお、ジュエリーの売却は支払調書の対象外ですが、確定申告の義務自体は金額に関係なく発生します。" } },
-      { "@type": "Question", name: "取得費（購入価格）がわからない場合はどうなりますか？", acceptedAnswer: { "@type": "Answer", text: "取得費が不明な場合は、売却価格の5%を取得費として計算します。例えば100万円で売却した場合、取得費は5万円とみなされ、95万円が売却益になります。非常に不利な計算になるため、購入時のレシートや領収書は必ず保管しておきましょう。" } },
+      { "@type": "Question", name: "取得費（購入価格）がわからない場合はどうなりますか？", acceptedAnswer: { "@type": "Answer", text: "取得費が不明な場合は、売却価格の5%を取得費として計算します。例えば100万円で売却した場合、取得費は5万円とみなされ、95万円が売却益になります。非常に不利な計算になるため、購入時のレシートや領収書は必ず保管しておくことをおすすめします。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -53,7 +53,7 @@ function ArticleSchema() {
     dateModified: "2026-04-26",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
-    description: "金を売却した時の確定申告のやり方を徹底解説。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇、節税対策、確定申告書の書き方まで網羅。",
+    description: "金を売却した時の確定申告のやり方を解説します。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇、節税対策、確定申告書の書き方まで網羅。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
@@ -63,7 +63,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】金の売却と確定申告やり方ガイド — 譲渡所得の計算・節税・申告手順",
-  description: "金を売却した時の確定申告のやり方を徹底解説。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇措置、節税対策、確定申告書の書き方まで網羅。",
+  description: "金を売却した時の確定申告のやり方を解説します。譲渡所得の計算方法、50万円の特別控除、5年超保有の優遇措置、節税対策、確定申告書の書き方まで網羅。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-kakutei-shinkoku/" },
 };
 
@@ -71,7 +71,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">金の売却を検討中の方へ</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">まずは無料査定で売却額の目安を確認。税金を考慮した売却計画を立てましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">まずは無料査定で売却額の目安を確認。税金を考慮した売却計画を立てることをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -110,7 +110,7 @@ export default function KinKakuteiShinkokuPage() {
 
         <p>この記事では、金を売却した場合の確定申告のやり方を、<strong>計算方法・節税対策・申告手順</strong>まで実践的に解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>金の売却で確定申告が必要になる条件</li>
           <li>譲渡所得の計算方法（具体例付き）</li>
@@ -238,7 +238,7 @@ export default function KinKakuteiShinkokuPage() {
         <ul>
           <li>支払調書には、売却者の氏名・住所・マイナンバー・売却金額が記載される</li>
           <li>マイナンバーの提示も求められる</li>
-          <li>支払調書が提出されると、税務署はあなたの金の売却を把握している</li>
+          <li>支払調書が提出されると、税務署は金の売却を把握できる</li>
           <li>確定申告をしないと「無申告」として追徴課税のリスクがある</li>
         </ul>
 
@@ -292,7 +292,7 @@ export default function KinKakuteiShinkokuPage() {
             { q: "金を売った場合、確定申告は必要ですか？", a: "金の売却益が年間50万円を超える場合は確定申告が必要です。ただし、生活用金製品（1点30万円以下のジュエリーなど）の売却は非課税です。給与所得者で他の雑所得等が20万円以下の場合は所得税の確定申告は不要ですが、住民税の申告は必要です。" },
             { q: "金の売却益の計算方法は？", a: "売却益 = 売却価格 - （取得費 + 売却費用）で計算します。ここから年間50万円の特別控除を差し引き、保有期間5年超なら課税対象額がさらに半分になります。" },
             { q: "金の売却で節税する方法はありますか？", a: "5年超保有してから売却する（課税額が半分）、年間の売却益を50万円以内に抑える、取得費の証拠を保管する、などが効果的です。高額な売却の場合は税理士への相談もおすすめです。" },
-            { q: "金の売却で200万円超の場合、何が起きますか？", a: "1回の取引で200万円を超える金地金・金貨の売却は、買取業者が税務署に支払調書を提出します。マイナンバーの提示も必要です。税務署があなたの売却を把握するため、確定申告は忘れずに行いましょう。" },
+            { q: "金の売却で200万円超の場合、何が起きますか？", a: "1回の取引で200万円を超える金地金・金貨の売却は、買取業者が税務署に支払調書を提出します。マイナンバーの提示も必要です。税務署が売却を把握できるため、確定申告は忘れずに行ってください。" },
             { q: "取得費がわからない場合はどうなりますか？", a: "売却価格の5%を取得費として計算します。例えば100万円で売却した場合、取得費は5万円、売却益は95万円になります。非常に不利な計算なので、購入時のレシートは必ず保管してください。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
@@ -318,7 +318,7 @@ export default function KinKakuteiShinkokuPage() {
         <p>金の売却益は「譲渡所得」として課税対象になりますが、<strong>年間50万円の特別控除</strong>と<strong>5年超保有の半額軽減</strong>を活用することで税負担を大幅に抑えられます。</p>
         <p>最も重要なのは<strong>取得費の証拠（購入レシート等）を保管すること</strong>です。不明な場合は売却額の5%しか認められず、税金が大幅に増えます。</p>
         <p>※この記事は一般的な情報提供であり、税務アドバイスではありません。具体的な税務判断は税理士にご相談ください。</p>
-        <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で売却額の目安を確認し、税金を考慮した売却計画を立てましょう。</p>
+        <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で売却額の目安を確認し、税金を考慮した売却計画を立てることをおすすめします。</p>
       </article>
     </div>
     </>

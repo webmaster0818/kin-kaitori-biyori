@@ -22,13 +22,13 @@ function FaqSchema() {
     { "@type": "Question", name: "金を売るとき、いくらからマイナンバーが必要ですか？", acceptedAnswer: { "@type": "Answer", text: "金地金・金貨の売却額が200万円を超えると、買取業者は税務署へ支払調書を提出する義務があり、その記載のために売主のマイナンバーの告知が必要になります。200万円以下の取引ではマイナンバーの提供は不要です（本人確認書類は別途必要）。" } },
     { "@type": "Question", name: "マイナンバーを提示すると税金が増えますか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。マイナンバーの提示自体で税金が増えることはありません。売却益への課税（譲渡所得）は提示の有無に関係なく従来から発生するもので、支払調書は税務署が取引を把握するための書類です。" } },
     { "@type": "Question", name: "200万円以下に分けて売れば申告しなくていい？", acceptedAnswer: { "@type": "Answer", text: "いいえ。支払調書が提出されないことと、納税義務がないことは別問題です。年間の売却益が特別控除50万円を超えれば、調書の有無に関係なく確定申告が必要です。意図的な分割売却でも申告義務は変わりません。" } },
-    { "@type": "Question", name: "マイナンバーカードを持っていない場合は？", acceptedAnswer: { "@type": "Answer", text: "通知カードやマイナンバー記載の住民票と、運転免許証などの本人確認書類の組み合わせで対応できる業者が一般的です。必要書類は業者により異なるため、事前に確認しましょう。" } },
+    { "@type": "Question", name: "マイナンバーカードを持っていない場合は？", acceptedAnswer: { "@type": "Answer", text: "通知カードやマイナンバー記載の住民票と、運転免許証などの本人確認書類の組み合わせで対応できる業者が一般的です。必要書類は業者により異なるため、事前にご確認ください。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取日和" }, publisher: { "@type": "Organization", name: "金買取日和", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -68,7 +68,7 @@ export default function KinBaikyakuMynumberPage() {
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
         <p>金地金やインゴットを売却しようとして、買取店で「マイナンバーの提示をお願いします」と言われて戸惑う方は少なくありません。「なぜ番号が必要なの？」「出すと税金を取られる？」——この記事では、金売却とマイナンバーの関係を仕組みから解説します。</p>
 
-        <h2>結論: 200万円超の売却でマイナンバーの告知が必要</h2>
+        <h2>200万円超の売却ではマイナンバーの告知が必要です</h2>
         <p>金地金・金貨の売却代金が<strong>200万円を超える</strong>場合、買取業者は「<strong>金地金等の譲渡の対価の支払調書</strong>」を税務署に提出する義務があります（所得税法225条）。この調書には売主のマイナンバー（個人番号）を記載する必要があるため、売主は業者へマイナンバーを告知することになります。</p>
         <div className="table-wrapper">
           <table>

@@ -28,7 +28,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "金歯の買取相場は1本いくら？今日の金価格から見る目安と売り方【2026年7月】",
   description:
-    "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯買取OKのおすすめ業者4社を徹底解説。",
+    "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯の買取に対応したおすすめ業者4社を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kinba-kaitori/" },
 };
 
@@ -36,7 +36,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">金歯の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">金歯も立派な金製品。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">金歯も立派な金製品。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -70,7 +70,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】金歯の買取相場ガイド — 1本いくら？売り方と注意点",
-    description: "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯買取OKのおすすめ業者4社を徹底解説。",
+    description: "金歯は買取業者に売れます。金歯1本あたりの買取相場（約3,000〜15,000円）、金歯の純度（K14〜K20）、売り方の手順、衛生面の注意点、金歯の買取に対応したおすすめ業者4社を解説します。",
     datePublished: "2026-04-15",
     dateModified: "2026-04-15",
     author: {
@@ -171,22 +171,22 @@ export default function KinbaKaitoriPage() {
 
         <TodayPriceAnswer purity="k18" />
 
-          <p>「抜いた金歯が引き出しに眠っている」「亡くなった家族の金歯がある」「金歯って売れるの？」——実は、<strong>金歯は買取業者で売却できます</strong>。しかも、2026年の金価格高騰により、想像以上に高値がつくことがあります。</p>
+          <p>「抜いた金歯が引き出しに眠っている」「亡くなった家族の金歯がある」「金歯って売れるの？」——<strong>金歯は買取業者で売却できます</strong>。しかも、2026年の金価格高騰により、想像以上に高値がつくことがあります。</p>
 
           <p>金歯はジュエリーと同じ金合金で作られており、K14〜K20（純度58.5%〜83.3%）の金が含まれています。見た目は歯の形をしていますが、買取業者は<strong>「金としての素材価値」</strong>で査定するため、状態や見た目は関係ありません。</p>
 
           <p>この記事では以下の内容を解説します。</p>
 
           <ul>
-            <li>金歯は売れるのか（結論：売れる）</li>
+            <li>金歯は売却できるのか</li>
             <li>金歯の買取相場（1本あたり・重量あたり）</li>
             <li>金歯の純度（K14〜K20が多い理由）</li>
             <li>金歯の売り方（具体的な手順）</li>
-            <li>金歯買取OKの業者4社比較</li>
+            <li>金歯の買取に対応した業者4社の比較</li>
             <li>売却時の注意点</li>
           </ul>
 
-          <h2>金歯は売れるのか？ — 結論：売れる</h2>
+          <h2>金歯は買取の対象です</h2>
 
           <p><strong>金歯は間違いなく売れます。</strong>大手買取業者のほとんどが金歯の買取に対応しています。</p>
 
@@ -225,7 +225,7 @@ export default function KinbaKaitoriPage() {
 
           <p>歯科用金合金で最も多いのは<strong>K14〜K16クラス</strong>です。ただし、古い時代の金歯にはK18やK20が使われていることもあり、思わぬ高値がつくことがあります。</p>
 
-          <p>なお、「金パラ（金銀パラジウム合金）」は金の含有率が12%と低いため、1gあたりの買取価格はかなり低くなります。銀歯に見えるけど実は金パラ、というケースも多いです。</p>
+          <p>なお、「金パラ（金銀パラジウム合金）」は金の含有率が12%と低いため、1gあたりの買取価格はかなり低くなります。銀歯に見えても、金パラ（金銀パラジウム合金）である場合があります。</p>
 
           <h3>1本あたりの買取価格目安</h3>
 
@@ -298,7 +298,7 @@ export default function KinbaKaitoriPage() {
 
           <h2>亡くなった家族の金歯を売る場合の手続き</h2>
 
-          <p>故人の金歯を売却するケースは珍しくありません。特別な法的手続きは基本的に不要ですが、以下の点を確認しておきましょう。</p>
+          <p>故人の金歯を売却するケースは珍しくありません。特別な法的手続きは基本的に不要ですが、以下の点をご確認ください。</p>
 
           <h3>火葬後に金歯が残る場合</h3>
           <p>金の融点は約1,064度Cで、火葬の温度（800〜1,200度C）によっては溶けずに残ることがあります。火葬後、遺骨とともに金歯が見つかった場合は、遺族が引き取れます。</p>
@@ -307,7 +307,7 @@ export default function KinbaKaitoriPage() {
           <ul>
             <li><strong>本人確認書類：</strong>売却する方（遺族）の運転免許証やマイナンバーカード</li>
             <li><strong>故人との関係の確認：</strong>業者によっては戸籍謄本や住民票を求められることがある（稀）</li>
-            <li><strong>金歯そのもの：</strong>そのままの状態でOK。洗浄は軽く水洗い程度で十分</li>
+            <li><strong>金歯そのもの：</strong>そのままの状態で問題ありません。洗浄は軽く水洗い程度で十分</li>
           </ul>
 
           <p>多くの場合、<strong>遺族の本人確認書類だけで売却可能</strong>です。「故人のものですが買取できますか？」と事前に電話確認しておくとスムーズです。</p>
@@ -359,7 +359,7 @@ export default function KinbaKaitoriPage() {
 
           <h3>ステップ1：金歯を手元に用意する</h3>
 
-          <p>金歯が既に外れている場合は、そのままでOKです。まだ口の中にある場合は、以下の方法で外します。</p>
+          <p>金歯が既に外れている場合は、そのままお持ち込みいただけます。口の中にある場合は、以下の方法で外します。</p>
 
           <ul>
             <li><strong>治療のついでに外す：</strong>歯科医院で再治療（新しい被せ物に交換するなど）の際に、古い金歯を返してもらいます。「金歯を持ち帰りたい」と伝えれば、ほとんどの歯科医院で対応してくれます。</li>
@@ -367,7 +367,7 @@ export default function KinbaKaitoriPage() {
           </ul>
 
           <blockquote>
-            <p><strong>重要：</strong>金歯を売る目的だけで健康な歯の金歯を外すのはおすすめしません。あくまで「治療のついで」や「既に外れたもの」を売却しましょう。</p>
+            <p><strong>重要：</strong>金歯を売る目的だけで健康な歯の金歯を外すのはおすすめしません。あくまで「治療のついで」や「既に外れたもの」を売却することをおすすめします。</p>
           </blockquote>
 
           <h3>ステップ2：軽く洗浄する</h3>
@@ -391,7 +391,7 @@ export default function KinbaKaitoriPage() {
                   <th>業者名</th>
                   <th>方式</th>
                   <th>金歯買取の特徴</th>
-                  <th>こんな人に</th>
+                  <th>おすすめの方</th>
                 </tr>
               </thead>
               <tbody>
@@ -416,7 +416,7 @@ export default function KinbaKaitoriPage() {
                 <tr>
                   <td><strong>ティファナ</strong></td>
                   <td>出張/店頭/宅配</td>
-                  <td>金歯・金パラも査定可能。他の貴金属とまとめて査定OK</td>
+                  <td>金歯・金パラも査定可能。他の貴金属とまとめて査定可能</td>
                   <td>方法を選びたい</td>
                 </tr>
               </tbody>
@@ -454,11 +454,11 @@ export default function KinbaKaitoriPage() {
             </table>
           </div>
 
-          <p>見た目が金色であれば金歯の可能性が高いですが、正確な判別は買取業者に任せましょう。持ち込めば無料で判定してもらえます。</p>
+          <p>見た目が金色であれば金歯の可能性が高いですが、正確な判別は買取業者に任せることをおすすめします。持ち込めば無料で判定してもらえます。</p>
 
           <h3>3. 身分証明書が必要</h3>
 
-          <p>古物営業法により、買取時には<strong>本人確認書類</strong>（運転免許証、マイナンバーカード、パスポートなど）の提示が必要です。忘れずに持参しましょう。</p>
+          <p>古物営業法により、買取時には<strong>本人確認書類</strong>（運転免許証、マイナンバーカード、パスポートなど）の提示が必要です。忘れずに持参することをおすすめします。</p>
 
           <h3>4. 故人の金歯の売却</h3>
 

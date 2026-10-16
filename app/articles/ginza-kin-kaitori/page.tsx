@@ -59,7 +59,7 @@ function FaqSchema() {
       { "@type": "Question", name: "銀座の買取店は予約が必要？", acceptedAnswer: { "@type": "Answer", text: "高額品は来店予約を使うと待ち時間を減らせます。なんぼや・大黒屋・KOMEHYOは公式サイトに来店（買取）予約の窓口があります。" } },
       { "@type": "Question", name: "銀座の駅から徒歩何分の業者が多い？", acceptedAnswer: { "@type": "Answer", text: "公式の表記では、おたからや 銀座本店が銀座駅A13・A8出口から徒歩0分、なんぼや 銀座本店が銀座駅A2出口から徒歩1分程度、大黒屋 質銀座買取センターが銀座駅C8出口から徒歩1分、KOMEHYO GINZAが銀座一丁目駅8番出口から徒歩1分です（2026年10月13日確認）。" } },
       { "@type": "Question", name: "少量でも買取してくれますか？", acceptedAnswer: { "@type": "Answer", text: "店や品物によって異なります。少量の場合は来店前に電話やLINE査定で確認するか、一括査定（ヒカカク！）で複数社の反応を見るのがおすすめです。" } },
-      { "@type": "Question", name: "銀座エリアの査定料・出張料は？", acceptedAnswer: { "@type": "Answer", text: "店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトで確認してください。" } },
+      { "@type": "Question", name: "銀座エリアの査定料・出張料は？", acceptedAnswer: { "@type": "Answer", text: "店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトでご確認ください。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -79,7 +79,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">金製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -146,7 +146,7 @@ export default function Page() {
             <li>保証書・鑑定書・箱を揃える</li>
             <li>複数業者で相見積もり</li>
             <li>金相場の高い時期を狙う</li>
-            <li>当日中の決定は急がない、複数オファー比較が鉄則</li>
+            <li>当日中の決定は急がない、複数社の査定額を比較することをおすすめします</li>
           </ol>
 
 
@@ -171,7 +171,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>銀座エリアの査定料・出張料は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトで確認してください。</p>
+  <p className="mt-3 text-sm leading-relaxed">店によって異なります。KOMEHYO GINZAは公式の店舗ページで査定・キャンセル・手数料が無料と明記しています。そのほかの店は来店前に各社の公式サイトでご確認ください。</p>
 </details>
 
           <GoldPriceTrend />

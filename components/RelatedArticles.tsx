@@ -50,8 +50,8 @@ const GROUP_LABEL: Record<ArticleCategory, string> = {
 
 // 全記事共通: 一次データ資産への内部リンク（白書/ダッシュボード/計算機のインデックス・評価促進）
 const DATA_TOOLS = [
-  { href: "/articles/kin-kaitori-osusume/", label: "金買取 おすすめ業者比較", note: "どこがいい？4社を目的別に比較" },
-  { href: "/kin-kaitori-hakusho/", label: "金買取 相場白書", note: "日次データの統計・引用歓迎" },
+  { href: "/articles/kin-kaitori-osusume/", label: "金買取 おすすめ業者比較", note: "4社を目的別に比較" },
+  { href: "/kin-kaitori-hakusho/", label: "金買取 相場白書", note: "日次データの統計（出典明記で引用可）" },
   { href: "/souba-dashboard/", label: "本日の金買取相場", note: "毎日自動更新のダッシュボード" },
   { href: "/kin-kaitori-keisanki/", label: "金買取 グラム計算機", note: "純度×重量で今日の目安を計算" },
 ];

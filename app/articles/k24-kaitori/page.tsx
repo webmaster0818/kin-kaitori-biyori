@@ -31,7 +31,7 @@ const todayFaq = {
 
 export const metadata: Metadata = {
   title: `K24（純金）の買取相場 今日1g${k24Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】インゴット・金貨の査定額も`,
-  description: `本日（${priceMonth}月${priceDay}日）のK24（純金・純度99.99%）買取相場は1gあたり${k24Price.toLocaleString()}円（毎朝自動更新）。インゴット・金貨・ジュエリーの製品別査定額、K18・K22との価格差比較、高く売るポイント、おすすめ買取業者4社を徹底解説。`,
+  description: `本日（${priceMonth}月${priceDay}日）のK24（純金・純度99.99%）買取相場は1gあたり${k24Price.toLocaleString()}円（毎朝自動更新）。インゴット・金貨・ジュエリーの製品別査定額、K18・K22との価格差比較、高く売るポイント、おすすめ買取業者4社を解説します。`,
   alternates: { canonical: "https://gold-biyori.com/articles/k24-kaitori/" },
 };
 
@@ -39,7 +39,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">K24純金の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">K24は最も高値で取引される金製品です。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">K24は最も高値で取引される金製品です。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -139,7 +139,7 @@ function ArticleSchema() {
       name: "金買取びより",
     },
     description:
-      "K24（純金・純度99.99%）の最新買取相場を1gあたりの価格で掲載。インゴット・金貨・ジュエリーの製品別買取価格、高く売るポイント、おすすめ買取業者4社を徹底解説。",
+      "K24（純金・純度99.99%）の最新買取相場を1gあたりの価格で掲載。インゴット・金貨・ジュエリーの製品別買取価格、高く売るポイント、おすすめ買取業者4社を解説します。",
   };
   return (
     <script
@@ -175,7 +175,7 @@ export default function K24KaitoriPage() {
 
           <TodayPriceAnswer purity="k24" />
 
-          <p>K24（純金）は<strong>純度99.99%</strong>の最も価値が高い金です。金投資の対象としてインゴット（金地金）や金貨を保有している方、あるいは純金ジュエリーをお持ちの方にとって、「今の買取相場はいくらなのか」は最大の関心事でしょう。</p>
+          <p>K24（純金）は<strong>純度99.99%</strong>の最も価値が高い金です。金投資の対象としてインゴット（金地金）や金貨を保有している方、あるいは純金ジュエリーをお持ちの方にとって、現在の買取相場は重要な判断材料です。</p>
 
           <p>{priceDateJa}時点、金価格は歴史的な高値圏にあります。国際情勢の不安定化、各国中央銀行の金購入拡大、円安の進行——これらの要因が重なり、<strong>K24の買取目安は1gあたり{k24Price.toLocaleString()}円</strong>（{priceDateJa}時点・毎朝自動更新）に達しています。2020年（約6,600円/g）と比較すると約{Math.round((k24Price / 6600) * 10) / 10}倍の上昇です。</p>
 
@@ -305,7 +305,7 @@ export default function K24KaitoriPage() {
 
           <p>一方、インゴットは重量が大きいほど効率的（1gあたりの単価が高い）ですが、ブランド（田中貴金属、PAMP等）がないノーブランドのインゴットは分析手数料がかかる場合があります。</p>
 
-          <p><strong>結論：</strong>1オンス程度の小口であれば純金コインの方がやや有利。大口（100g以上）であればブランドインゴットの方が取引効率が良いです。</p>
+          <p><strong>まとめ：</strong>1オンス程度の小口であれば純金コインの方がやや有利。大口（100g以上）であればブランドインゴットの方が取引効率が良いです。</p>
 
           <h2>K24偽物・メッキ品の見分け方</h2>
 
@@ -315,7 +315,7 @@ export default function K24KaitoriPage() {
 
           <ol>
             <li><strong>磁石テスト：</strong>金は磁石に反応しません。磁石に付く場合は鉄やニッケルが含まれた偽物の可能性大</li>
-            <li><strong>重さの確認：</strong>金は非常に重い金属（比重19.3）です。同じサイズの他の金属と比べて明らかに軽い場合は要注意</li>
+            <li><strong>重さの確認：</strong>金は非常に重い金属（比重19.3）です。同じサイズの他の金属と比べて明らかに軽い場合は注意が必要</li>
             <li><strong>刻印の確認：</strong>「K24」「999.9」「FINE GOLD」などの刻印があるか。刻印が不鮮明だったり、「K24GP」「K24GF」と書かれている場合はメッキ・金張り</li>
             <li><strong>変色の確認：</strong>K24（純金）は一切変色しません。黒ずみや緑青（ろくしょう）が出ている場合は純金ではない</li>
           </ol>
@@ -383,7 +383,7 @@ export default function K24KaitoriPage() {
             <li>
               <strong>売却タイミングを見極める</strong>
               <p>金価格は日々変動します。国際金価格の動向と為替レートの両方を確認し、<strong>金価格が高く、円安が進んでいるタイミング</strong>が最も有利です。</p>
-              <p>ただし、相場の天井を予測することは困難です。「今の価格で十分な利益が出る」と感じたら、無理に待たずに売却するのも賢明な判断です。2026年現在の相場は歴史的高値圏にあり、売却の好機と言えます。</p>
+              <p>ただし、相場の天井を予測することは困難です。「今の価格で十分な利益が出る」と感じたら、無理に待たずに売却するのも賢明な判断です。2026年現在の相場は歴史的高値圏にあり、売却を検討しやすい時期といえます。</p>
             </li>
           </ol>
 
@@ -421,7 +421,7 @@ export default function K24KaitoriPage() {
           <p>この場合、特別控除の範囲内のため<strong>税金はかかりません</strong>。しかし、大きな利益が出る場合は、保有期間が5年を超えているか確認し、長期譲渡所得の優遇を受けるのが有利です。</p>
 
           <blockquote>
-            <p><strong>注意：</strong>購入時のレシートや明細がないと取得費が証明できず、売却額の5%を取得費とみなされる場合があります。購入時の書類は必ず保管しておきましょう。</p>
+            <p><strong>注意：</strong>購入時のレシートや明細がないと取得費が証明できず、売却額の5%を取得費とみなされる場合があります。購入時の書類は必ず保管しておくことをおすすめします。</p>
           </blockquote>
 
           <h2>4社比較 — K24買取におすすめの業者</h2>
@@ -433,7 +433,7 @@ export default function K24KaitoriPage() {
                   <th>業者名</th>
                   <th>方式</th>
                   <th>K24買取の特徴</th>
-                  <th>こんな人に</th>
+                  <th>おすすめの方</th>
                 </tr>
               </thead>
               <tbody>
@@ -458,7 +458,7 @@ export default function K24KaitoriPage() {
                 <tr>
                   <td><strong>ティファナ</strong></td>
                   <td>出張/店頭/宅配</td>
-                  <td>3つの方法から選択可能。K24以外の貴金属もまとめて査定OK</td>
+                  <td>3つの方法から選択可能。K24以外の貴金属もまとめて査定可能</td>
                   <td>方法を選びたい</td>
                 </tr>
               </tbody>
@@ -525,7 +525,7 @@ export default function K24KaitoriPage() {
 
           <DealerComparisonTable
           heading="K24（純金）買取に強い業者 7社比較"
-          intro="K24・純金製品の買取依頼前に、各業者の対応範囲・手数料を公式情報で比較しましょう。"
+          intro="K24・純金製品の買取依頼前に、各業者の対応範囲・手数料を公式情報で比較することをおすすめします。"
           />
           <h2>まとめ</h2>
 

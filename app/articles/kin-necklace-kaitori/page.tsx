@@ -44,7 +44,7 @@ function FaqSchema() {
       { "@type": "Question", name: "切れたネックレスでも買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、チェーンが切れたネックレスでも問題なく買取できます。金の買取は素材の重量と純度がベースなので、破損していても金としての価値は変わりません。" } },
       { "@type": "Question", name: "金のネックレスの重さの目安は？", acceptedAnswer: { "@type": "Answer", text: "K18ネックレスの一般的な重量は、細いチェーンで2〜5g、標準的なチェーンで5〜10g、太めのチェーンで10〜20g、喜平ネックレスで20〜100g程度です。" } },
       { "@type": "Question", name: "喜平ネックレスは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、喜平ネックレスは金の含有量（重量）が多いため、高額買取が期待できます。50gのK18六面ダブル喜平なら約" + _gm(_GP.k18 * 50) + "万円前後（" + GP_DATE + "時点の目安）です。喜平はデザイン性も評価されやすいチェーンです。" } },
-      { "@type": "Question", name: "ペンダントトップの宝石も評価してもらえますか？", acceptedAnswer: { "@type": "Answer", text: "はい、ペンダントトップにダイヤモンドや宝石がセットされている場合は、金の素材価値に加えて宝石の価値も評価されます。鑑定書がある場合は必ず持参しましょう。" } },
+      { "@type": "Question", name: "ペンダントトップの宝石も評価してもらえますか？", acceptedAnswer: { "@type": "Answer", text: "はい、ペンダントトップにダイヤモンドや宝石がセットされている場合は、金の素材価値に加えて宝石の価値も評価されます。鑑定書がある場合は必ず持参することをおすすめします。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -69,7 +69,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
   description:
-    "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を徹底解説。",
+    "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-necklace-kaitori/" },
 };
 
@@ -77,7 +77,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">金ネックレスの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">ネックレスの買取価格は業者によって差があります。複数社で比較して最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">ネックレスの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -116,9 +116,9 @@ export default function KinNecklaceKaitoriPage() {
 
         <p>金のネックレスは、<strong>最も多く買取に持ち込まれる金製品</strong>の一つです。使わなくなったネックレス、チェーンが切れたネックレス、デザインが古くなったネックレス——いずれも金の素材価値があるため、買取業者で現金化できます。</p>
 
-        <p>「金のネックレスっていくらで売れる？」「切れたチェーンでも大丈夫？」「喜平ネックレスの相場は？」——この記事では、金ネックレスの<strong>純度別・重量別の買取相場、チェーンの種類別の特徴、高く売るコツ</strong>を徹底解説します。</p>
+        <p>「金のネックレスっていくらで売れる？」「切れたチェーンでも大丈夫？」「喜平ネックレスの相場は？」——この記事では、金ネックレスの<strong>純度別・重量別の買取相場、チェーンの種類別の特徴、高く売るコツ</strong>を解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>金ネックレスの純度別・重量別の最新買取相場</li>
           <li>喜平・あずき・ベネチアンなどチェーン種類別の特徴</li>
@@ -181,7 +181,7 @@ export default function KinNecklaceKaitoriPage() {
           <li>刻印が消えている・読めない</li>
         </ul>
 
-        <p>金の買取は<strong>「素材としての価値」</strong>がベースです。チェーンが切れていても、金としての重量と純度は変わらないため、買取価格に影響はありません。「壊れているから売れない」と諦めずに、まず査定に出してみましょう。</p>
+        <p>金の買取は<strong>「素材としての価値」</strong>がベースです。チェーンが切れていても、金としての重量と純度は変わらないため、買取価格に影響はありません。「壊れているから売れない」と諦めずに、まず査定に出してみることをおすすめします。</p>
 
         <p>詳しくは<Link href="/articles/kowareta-kin-kaitori/" className="text-accent hover:underline">壊れた金・刻印なしの買取ガイド</Link>をご確認ください。</p>
 
@@ -220,7 +220,7 @@ export default function KinNecklaceKaitoriPage() {
         <h3>ブランドネックレスの査定で重要なポイント</h3>
 
         <ul>
-          <li><strong>付属品:</strong> 箱・保証書・ショッパー（紙袋）が揃っていると査定額アップ</li>
+          <li><strong>付属品:</strong> 箱・保証書・ショッパー（紙袋）が揃っていると査定額が上乗せされる場合がある</li>
           <li><strong>状態:</strong> 傷・くすみが少ないほど高評価</li>
           <li><strong>人気モデル:</strong> 定番人気モデルは中古市場での需要が高く、高額買取になりやすい</li>
           <li><strong>サイズ:</strong> 一般的なサイズ（40〜45cm）は需要が高い</li>
@@ -230,11 +230,11 @@ export default function KinNecklaceKaitoriPage() {
 
         <h3>1. 複数の買取業者に見積もりを取る</h3>
 
-        <p>金ネックレスの買取価格は業者によって1gあたり数百円の差が出ます。20gのネックレスなら1gあたり200円の差で<strong>4,000円もの差額</strong>になります。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>の一括査定で効率的に比較しましょう。</p>
+        <p>金ネックレスの買取価格は業者によって1gあたり数百円の差が出ます。20gのネックレスなら1gあたり200円の差で<strong>4,000円もの差額</strong>になります。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>の一括査定で効率的に比較することをおすすめします。</p>
 
         <h3>2. ブランド品は専門店にも見積もりを取る</h3>
 
-        <p>カルティエやティファニーなどのブランドネックレスは、金の素材価値だけでなく<strong>ブランド価値</strong>も大きいです。金買取店とブランド買取店の両方で見積もりを取り、高い方に売却しましょう。</p>
+        <p>カルティエやティファニーなどのブランドネックレスは、金の素材価値だけでなく<strong>ブランド価値</strong>も大きいです。金買取店とブランド買取店の両方で見積もりを取り、高い方に売却することをおすすめします。</p>
 
         <h3>3. ペンダントトップと一緒に売る</h3>
 
@@ -242,11 +242,11 @@ export default function KinNecklaceKaitoriPage() {
 
         <h3>4. 付属品を揃える</h3>
 
-        <p>保証書、箱、ケースがあると査定額アップにつながります。購入時の領収書も、取得費の証明（税金計算時）に役立ちます。</p>
+        <p>保証書、箱、ケースがあると査定額が上がる場合があります。購入時の領収書も、取得費の証明（税金計算時）に役立ちます。</p>
 
         <h3>5. 軽く清掃してから査定に出す</h3>
 
-        <p>柔らかい布で軽く拭いてから査定に出しましょう。見た目の印象が良くなり、査定員の心証も良くなります。ただし、<strong>研磨剤や化学薬品は使わない</strong>でください。金を傷つけたり、メッキを剥がしてしまう恐れがあります。</p>
+        <p>柔らかい布で軽く拭いてから査定に出すことをおすすめします。見た目の印象が良くなり、査定員の心証も良くなります。ただし、<strong>研磨剤や化学薬品は使わない</strong>でください。金を傷つけたり、メッキを剥がしてしまう恐れがあります。</p>
 
         <CtaBox />
 
@@ -286,7 +286,7 @@ export default function KinNecklaceKaitoriPage() {
             },
             {
               q: "ネックレスの純度がわからない場合はどうすればいい？",
-              a: "刻印を確認してください。チェーンの留め具付近に「K18」「K14」「750」「585」などの刻印があります。刻印がない・読めない場合は、買取業者でX線分析により正確な純度を測定してもらえます。",
+              a: "刻印をご確認ください。チェーンの留め具付近に「K18」「K14」「750」「585」などの刻印があります。刻印がない・読めない場合は、買取業者でX線分析により正確な純度を測定してもらえます。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

@@ -45,7 +45,7 @@ export function LocalStores({
       <h2 className="text-xl md:text-2xl font-bold mb-1">{cityLabel}にある金・貴金属の買取店</h2>
       <p className="text-sm text-warm-gray mb-5">
         {cityLabel}に店舗を構える主な買取店を、各社の公式店舗情報をもとにまとめました（{updated}時点）。
-        営業時間・買取条件・在庫は変わることがあるため、来店前に各公式ページで最新をご確認ください。
+        営業時間・買取条件は変更される場合がありますので、ご来店前に各公式ページにて最新情報をご確認ください。
       </p>
       <div className="grid grid-cols-1 gap-4">
         {stores.map((s) => (

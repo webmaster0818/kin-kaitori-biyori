@@ -82,7 +82,7 @@ export function TodayPriceAnswer({ purity }: { purity: Purity }) {
           href="#weight-table"
           className="text-sm bg-white border border-accent/50 text-accent-dark font-medium rounded-lg px-3 py-2 hover:bg-accent/10 transition-colors"
         >
-          5g・10g・30gはいくら？ 重量別早見表へ
+          重量別早見表（5g・10g・30gなど）
         </a>
         <Link
           href="/kin-kaitori-keisanki/"

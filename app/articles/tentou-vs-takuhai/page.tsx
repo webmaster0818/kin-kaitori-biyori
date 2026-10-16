@@ -30,7 +30,7 @@ function FaqSchema() {
     { "@type": "Question", name: "店頭買取のメリットは？", acceptedAnswer: { "@type": "Answer", text: "最大のメリットは即日現金化できることです。来店から30分程度で現金を受け取れます。また、目の前で純度測定・重量計量を見られるため安心感があり、価格交渉もしやすいです。" } },
     { "@type": "Question", name: "宅配買取のメリットは？", acceptedAnswer: { "@type": "Answer", text: "自宅から一歩も出ずに完結できることです。近くに買取店がない地方の方や、忙しくて来店する時間がない方に最適です。また、全国の業者と比較できるため、地域の制約を受けずに最高値を探せます。" } },
     { "@type": "Question", name: "出張買取は店頭・宅配とどう違いますか？", acceptedAnswer: { "@type": "Answer", text: "出張買取は査定員が自宅に来てくれる方式です。対面で査定を見られる安心感は店頭と同じで、自宅から出なくてよい便利さは宅配と同じです。ただし日程調整が必要で、断りにくいと感じる方もいます。" } },
-    { "@type": "Question", name: "初心者はどの方法がおすすめですか？", acceptedAnswer: { "@type": "Answer", text: "初めての方には店頭買取がおすすめです。目の前で査定の全工程を見られるため安心感があり、その場で質問もできます。慣れてきたら宅配や一括査定で全国の業者と比較するのがベストです。" } },
+    { "@type": "Question", name: "初心者はどの方法がおすすめですか？", acceptedAnswer: { "@type": "Answer", text: "初めての方には店頭買取がおすすめです。目の前で査定の全工程を見られるため安心感があり、その場で質問もできます。慣れてきたら宅配や一括査定で全国の業者と比較することをおすすめします。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
@@ -43,12 +43,12 @@ function ArticleSchema() {
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
-export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", description: "金買取の店頭・宅配・出張・一括査定を徹底比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの人を解説。あなたに最適な売却方法がわかります。", alternates: { canonical: "https://gold-biyori.com/articles/tentou-vs-takuhai/" } };
+export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", description: "金買取の店頭・宅配・出張・一括査定を徹底比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの方を解説します。", alternates: { canonical: "https://gold-biyori.com/articles/tentou-vs-takuhai/" } };
 
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
-      <h3 className="font-bold text-base mb-3 text-center">まずは無料査定で比較してみましょう</h3>
+      <h3 className="font-bold text-base mb-3 text-center">無料査定で査定額を比較できます</h3>
       <p className="text-sm text-warm-gray text-center mb-4">方法選びに迷ったら、一括査定で最高値を探すのが確実です。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
@@ -171,8 +171,8 @@ export default function TentouVsTakuhaiPage() {
           </table>
         </div>
 
-        <h2>ベストな方法：「複数の方法を組み合わせる」</h2>
-        <p>実は最も賢い方法は、<strong>複数の方法を組み合わせる</strong>ことです。</p>
+        <h2>複数の方法を組み合わせる</h2>
+        <p>状況によっては、<strong>複数の方法を組み合わせる</strong>ことです。</p>
         <ol>
           <li><strong>まずヒカカク！の一括査定</strong>で全国の業者の価格感を把握する</li>
           <li><strong>近隣の店頭買取店2〜3社に行き</strong>、対面で査定を受ける</li>
@@ -183,10 +183,10 @@ export default function TentouVsTakuhaiPage() {
         <h2>方法別比較のFAQ</h2>
         <div className="space-y-3 not-prose">
           {[
-            { q: "金買取は店頭と宅配どっちが高い？", a: "一般的に宅配がやや高い傾向ですが、店頭は価格交渉が可能です。両方に見積もりを取って比較するのがベストです。" },
+            { q: "金買取は店頭と宅配どっちが高い？", a: "一般的に宅配がやや高い傾向ですが、店頭は価格交渉が可能です。両方に見積もりを取って比較することをおすすめします。" },
             { q: "初心者はどの方法がおすすめ？", a: "店頭買取がおすすめです。目の前で査定を見られるため安心感があります。" },
             { q: "出張買取は断れますか？", a: "はい、信頼できる業者はキャンセル無料です。「検討します」と断って問題ありません。" },
-            { q: "宅配買取は安全ですか？", a: "大手業者であれば安全です。キャンセル時の返送料が無料かを事前に確認しましょう。" },
+            { q: "宅配買取は安全ですか？", a: "大手業者であれば安全です。キャンセル時の返送料が無料かを事前にご確認ください。" },
             { q: "一括査定は本当に無料ですか？", a: "はい、ヒカカク！などの一括査定サービスは完全無料です。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
@@ -204,13 +204,13 @@ export default function TentouVsTakuhaiPage() {
         />
 
         <h2>まとめ</h2>
-        <p>金買取の方法は一長一短があり、<strong>「この方法が絶対に正解」というものはありません</strong>。あなたの状況に合った方法を選びましょう。</p>
+        <p>金買取の方法は一長一短があり、<strong>どの方法が適しているかは状況によって異なります</strong>。状況に応じた方法を選ぶことをおすすめします。</p>
         <ul>
           <li><strong>即日現金化なら → 店頭買取</strong></li>
           <li><strong>最高値を追求するなら → 一括査定 + 宅配</strong></li>
           <li><strong>大量の金やインゴットなら → 出張買取</strong></li>
         </ul>
-        <p>迷ったら、まず<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で金の価格感を把握してから、最適な方法を選びましょう。査定は無料です。</p>
+        <p>迷ったら、まず<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で金の価格感を把握してから、最適な方法を選ぶことをおすすめします。査定は無料です。</p>
       </article>
     </div>
   </>);

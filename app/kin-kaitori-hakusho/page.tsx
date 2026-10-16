@@ -22,7 +22,7 @@ const WEIGHTS = [5, 10, 20, 30, 50, 100];
 
 export const metadata: Metadata = {
   title: `金買取相場白書${YEAR}｜純度別の買取単価・相場推移を公開【日次更新】`,
-  description: `金（K24/K22/K18/K14）の1gあたり買取単価の目安と、直近の相場推移を当サイト独自にまとめた資料です。田中貴金属の公表値をもとに毎日自動更新。出典明記での引用を歓迎します。`,
+  description: `金（K24/K22/K18/K14）の1gあたり買取単価の目安と、直近の相場推移を当サイト独自にまとめた資料です。田中貴金属の公表値をもとに毎日自動で更新しています。出典を明記いただければ引用いただけます。`,
   alternates: { canonical: "https://gold-biyori.com/kin-kaitori-hakusho/" },
 };
 
@@ -115,7 +115,7 @@ export default function Page() {
           最終更新: {date}（毎日自動更新） ／ 出典: 田中貴金属 公表値ベース ／ 編集: 金買取びより
         </p>
         <p className="leading-relaxed mb-8 text-foreground/90">
-          金（K24/K22/K18/K14/K10）の<strong>1gあたり買取単価の目安</strong>と、直近の<strong>相場推移</strong>を、田中貴金属の公表値をもとに当サイトが独自にまとめた資料です。数値は毎日自動で更新しています。メディア・ブログでの<strong>引用は出典明記を条件に歓迎</strong>します（本ページ末尾参照）。
+          金（K24/K22/K18/K14/K10）の<strong>1gあたり買取単価の目安</strong>と、直近の<strong>相場推移</strong>を、田中貴金属の公表値をもとに当サイトが独自にまとめた資料です。数値は毎日自動で更新しています。メディア・ブログでの<strong>引用は、出典の明記を条件にお受けしています</strong>（本ページ末尾参照）。
         </p>
 
         {/* ヘッドライン */}
@@ -224,7 +224,7 @@ export default function Page() {
             金の買取価格は、おおまかに<strong>「純度に応じた1gあたりの買取単価 × 重量（g）」</strong>で求められます。純度（K24＝純金、K18＝18金など）が高いほど1gあたりの単価は高くなり、K18は純金の約75%、K14は約58.5%といった割合が単価に反映されます。
           </p>
           <p className="text-warm-gray leading-relaxed text-sm">
-            実際の買取額は、地金（インゴット）か装飾品か、留め具や石の有無、業者の手数料・査定基準などによって、上記の理論目安を下回ることが一般的です。相場は田中貴金属などの公表値を基準に日々変動するため、売却時は本白書の目安で当たりをつけたうえで、複数業者の無料査定で確定額を確認するのが確実です。
+            実際の買取額は、地金（インゴット）か装飾品か、留め具や石の有無、業者の手数料・査定基準などによって、上記の理論目安を下回ることが一般的です。相場は田中貴金属などの公表値を基準に日々変動するため、売却時は本白書の目安を参考にしたうえで、複数業者の無料査定で確定額をご確認ください。
           </p>
         </section>
 
@@ -251,19 +251,19 @@ export default function Page() {
           <ul className="text-sm space-y-1.5">
             <li>
               📄 <a href="/data/gold-price-history.csv" className="text-accent-dark underline">gold-price-history.csv</a>
-              <span className="text-warm-gray text-xs">（全期間・日次・純度別／Excel・スプレッドシートでそのまま開けます）</span>
+              <span className="text-warm-gray text-xs">（全期間・日次・純度別／Excel・スプレッドシートで開くことができます）</span>
             </li>
             <li>
               🧩 <a href="/data/gold-price-history.json" className="text-accent-dark underline">gold-price-history.json</a>
-              <span className="text-warm-gray text-xs">（同上のJSON。出典・算出方法のメタ情報つき）</span>
+              <span className="text-warm-gray text-xs">（同上のJSON。出典・算出方法のメタ情報付き）</span>
             </li>
             <li>
               📈 <a href="/data/gold-price-index.json" className="text-accent-dark underline">gold-price-index.json</a>
-              <span className="text-warm-gray text-xs">（起点日を100とした推移指数。値動きの比較に）</span>
+              <span className="text-warm-gray text-xs">（起点日を100とした推移指数。値動きの比較にご利用いただけます）</span>
             </li>
           </ul>
           <p className="text-xs text-warm-gray mt-3 leading-relaxed">
-            いずれも<strong>毎日自動更新</strong>されます。ファイル内に出典・算出方法・注意書きを同梱しているので、
+            いずれも<strong>毎日自動更新</strong>されます。ファイル内に出典・算出方法・注意書きを同梱しているため、
             引用時の条件がデータ単体で確認できます。丸めや推定による補完は行っていません。
           </p>
         </div>
@@ -281,11 +281,11 @@ export default function Page() {
               金買取びより ({YEAR}). 金買取相場白書{YEAR}（純度別買取単価・相場推移）[Dataset]. https://gold-biyori.com/kin-kaitori-hakusho/
             </p>
             <p className="mt-2">
-              記事やSNSでの簡易表記は「出典：金買取相場白書{YEAR}（金買取びより / gold-biyori.com）」＋本ページへのリンクで構いません。
+              記事やSNSでの簡易表記は、「出典：金買取相場白書{YEAR}（金買取びより / gold-biyori.com）」と本ページへのリンクで差し支えありません。
             </p>
           </div>
           <p className="text-sm leading-relaxed mt-3">
-            本日の相場を自サイトに表示したい方は、コピペ1行で設置できる<Link href="/widget/" className="text-accent-dark underline">金価格ウィジェット（無料配布）</Link>もご利用ください。
+            本日の相場をご自身のサイトに表示する場合は、コードを1行貼り付けるだけで設置できる<Link href="/widget/" className="text-accent-dark underline">金価格ウィジェット（無料配布）</Link>もご利用ください。
           </p>
         </section>
 
@@ -294,7 +294,7 @@ export default function Page() {
           <h2 className="font-display text-lg font-bold text-foreground mb-3">関連ページ</h2>
           <ul className="space-y-2 text-sm">
             <li>📈 <Link href="/souba-dashboard/" className="text-accent-dark underline">金価格・買取相場ダッシュボード</Link>（本日の相場・チャート・シミュレーターをまとめて確認）</li>
-            <li>🧮 <Link href="/kin-kaitori-keisanki/" className="text-accent-dark underline">金買取相場グラム計算機</Link>（純度×重量で買取目安を即計算）</li>
+            <li>🧮 <Link href="/kin-kaitori-keisanki/" className="text-accent-dark underline">金買取相場グラム計算機</Link>（純度×重量で買取目安を計算）</li>
             <li>💍 製品別の相場：<Link href="/articles/kin-bracelet-kaitori/" className="text-accent-dark underline">金ブレスレット</Link>／<Link href="/articles/k24-kaitori/" className="text-accent-dark underline">K24</Link>／<Link href="/articles/kinseido-kaitori-guide/" className="text-accent-dark underline">K18</Link></li>
           </ul>
         </section>

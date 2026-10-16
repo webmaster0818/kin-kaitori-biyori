@@ -30,7 +30,7 @@ function FaqSchema() {
     { "@type": "Question", name: "買取大吉の特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に950店舗以上を展開する業界最大級のチェーンです。店舗数が多くアクセスしやすいのが最大の強み。査定料・手数料は無料で、金・プラチナ・ブランド品・時計など幅広い品目に対応しています。" } },
     { "@type": "Question", name: "なんぼやの特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に139店舗以上を展開し、ビデオ通話による正確な事前査定が特徴です。LINE査定やビデオ査定で来店前に価格がわかるため、効率的に売却できます。貴金属・ブランド品に強い買取チェーンです。" } },
     { "@type": "Question", name: "どちらも手数料は無料ですか？", acceptedAnswer: { "@type": "Answer", text: "はい、買取大吉・なんぼやともに査定料・手数料は無料です。キャンセルしても費用はかかりません。" } },
-    { "@type": "Question", name: "この2社以外も比較すべきですか？", acceptedAnswer: { "@type": "Answer", text: "はい、必ず3社以上を比較しましょう。ヒカカク！の一括査定を使えば、買取大吉やなんぼや以外の業者とも価格を比較できます。" } },
+    { "@type": "Question", name: "この2社以外も比較すべきですか？", acceptedAnswer: { "@type": "Answer", text: "はい、必ず3社以上を比較することをおすすめします。ヒカカク！の一括査定を使えば、買取大吉やなんぼや以外の業者とも価格を比較できます。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
@@ -48,8 +48,8 @@ export const metadata: Metadata = { title: "【2026年最新】買取大吉 vs �
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
-      <h3 className="font-bold text-base mb-3 text-center">まずは無料査定で比較してみましょう</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">2社だけでなく、一括査定で幅広く比較するのがベストです。</p>
+      <h3 className="font-bold text-base mb-3 text-center">無料査定で査定額を比較できます</h3>
+      <p className="text-sm text-warm-gray text-center mb-4">2社だけでなく、一括査定で幅広く比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">買取大吉で査定する</a>
@@ -170,10 +170,10 @@ export default function DaikichiVsNanboyaPage() {
 
         <CtaBox />
 
-        <h2>結論：あなたにおすすめなのは？</h2>
+        <h2>目的別のおすすめ</h2>
         <div className="table-wrapper">
           <table>
-            <thead><tr><th>こんな人は</th><th>おすすめ</th></tr></thead>
+            <thead><tr><th>目的</th><th>おすすめ</th></tr></thead>
             <tbody>
               <tr><td>地方在住で近くに店舗がほしい</td><td><strong>買取大吉</strong></td></tr>
               <tr><td>金以外にもまとめて売りたい</td><td><strong>買取大吉</strong></td></tr>
@@ -189,10 +189,10 @@ export default function DaikichiVsNanboyaPage() {
         <h2>比較記事のFAQ</h2>
         <div className="space-y-3 not-prose">
           {[
-            { q: "買取大吉となんぼやではどちらが高い？", a: "日によって異なるため一概に言えません。両社に査定を依頼し、さらに一括査定で他社とも比較するのがベストです。" },
+            { q: "買取大吉となんぼやではどちらが高い？", a: "日によって異なるため一概に言えません。両社に査定を依頼し、さらに一括査定で他社とも比較することをおすすめします。" },
             { q: "両社とも手数料は無料ですか？", a: "はい、査定料・手数料・キャンセル料ともに無料です。" },
             { q: "どちらが接客が良い？", a: "なんぼやは接客の丁寧さで高評価の口コミが多いです。買取大吉はフランチャイズのため店舗差がありますが、良い店舗は非常に好評です。" },
-            { q: "2社だけで比較すれば十分？", a: "いいえ、最低3社以上の比較を推奨します。ヒカカク！の一括査定で幅広く比較しましょう。" },
+            { q: "2社だけで比較すれば十分？", a: "いいえ、最低3社以上の比較を推奨します。ヒカカク！の一括査定で幅広く比較することをおすすめします。" },
             { q: "どちらも出張買取に対応していますか？", a: "なんぼやは出張買取に対応しています。買取大吉は一部店舗で対応しています。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

@@ -23,8 +23,8 @@ const services = [
   {
     name: "ヒカカク！",
     method: "一括査定",
-    description: "複数業者に一括で査定依頼。最高値を簡単に比較できる",
-    target: "最高値で売りたい人",
+    description: "複数の業者へ一括で査定を依頼でき、査定額を比較できる",
+    target: "複数社の査定額を比較したい方",
     url: "https://hikakaku.com",
     color: "bg-white border-accent/30 hover:border-accent",
     iconSrc: "/images/icon-compare.png",
@@ -32,8 +32,8 @@ const services = [
   {
     name: "買取大吉",
     method: "店頭買取",
-    description: "全国2,400店舗以上。その場で査定、即現金化",
-    target: "店頭で即現金化したい人",
+    description: "全国2,400店舗以上。店頭で査定を受け、その場で現金化できる",
+    target: "店頭ですぐに現金化したい方",
     url: "https://kaitori-daikichi.jp",
     color: "bg-white border-accent/30 hover:border-accent",
     iconSrc: "/images/icon-gold-bar.png",
@@ -41,8 +41,8 @@ const services = [
   {
     name: "ティファナ",
     method: "出張/店頭/宅配",
-    description: "3つの方法から選べる。ライフスタイルに合わせた柔軟対応",
-    target: "選択肢が欲しい人",
+    description: "店頭・出張・宅配の3つの方法に対応（出張・店頭は対応地域に限りあり）",
+    target: "売却方法を選びたい方",
     url: "https://tifana.net",
     color: "bg-white border-accent/30 hover:border-accent",
     iconSrc: "/images/icon-jewelry.png",
@@ -50,8 +50,8 @@ const services = [
   {
     name: "ウリエル",
     method: "出張買取中心",
-    description: "自宅にいながら完結。出張費・査定料すべて無料",
-    target: "自宅で完結したい人",
+    description: "自宅で査定・売却が完了する。出張費・査定料は無料",
+    target: "自宅で売却を完了したい方",
     url: "https://uriel-cuore.co.jp",
     color: "bg-white border-accent/30 hover:border-accent",
     iconSrc: "/images/icon-price.png",
@@ -72,7 +72,7 @@ const articles = [
     tag: "売却ガイド",
     title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選び",
     description:
-      "金・貴金属を少しでも高く売るための実践テクニック。相見積もり、売却タイミング、付属品の有無、避けるべきNG行動まで徹底解説。",
+      "金・貴金属を少しでも高く売るための方法。相見積もり、売却タイミング、付属品の有無、避けるべき行動まで解説します。",
     tags: ["高く売る", "コツ", "相見積もり", "タイミング"],
   },
   {
@@ -80,7 +80,7 @@ const articles = [
     tag: "方法比較",
     title: "【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定",
     description:
-      "店頭買取・出張買取・宅配買取・一括査定のメリット・デメリットを表で比較。あなたに合った売却方法がわかります。",
+      "店頭買取・出張買取・宅配買取・一括査定のメリット・デメリットを表で比較。目的に沿った売却方法を選ぶ際の参考としてご活用ください。",
     tags: ["店頭買取", "出張買取", "宅配買取", "一括査定"],
   },
   {
@@ -88,7 +88,7 @@ const articles = [
     tag: "品目ガイド",
     title: "【2026年7月】金の品位別買取相場ガイド — K10・K18・K18WG・K18PG",
     description:
-      "K10とK18の買取相場の違い、ホワイトゴールド・ピンクゴールドが同価格の理由、刻印の見方、おすすめ買取業者を徹底解説。",
+      "K10とK18の買取相場の違い、ホワイトゴールド・ピンクゴールドが同価格の理由、刻印の見方、おすすめ買取業者を解説します。",
     tags: ["K18", "K10", "ホワイトゴールド", "刻印"],
   },
   {
@@ -120,7 +120,7 @@ const articles = [
     tag: "品目ガイド",
     title: "【2026年最新】プラチナ買取相場ガイド — 純度別の価格と高く売る方法",
     description:
-      "Pt1000/Pt950/Pt900/Pt850の純度別買取相場、プラチナ価格高騰の背景、金との違い・見分け方を徹底解説。",
+      "Pt1000/Pt950/Pt900/Pt850の純度別買取相場、プラチナ価格高騰の背景、金との違い・見分け方を解説します。",
     tags: ["プラチナ", "Pt900", "Pt950", "指輪"],
   },
   {
@@ -208,7 +208,7 @@ const articles = [
     tag: "知識ガイド",
     title: "【2026年最新】金の純度の見分け方 — K18・K24の違いと刻印の読み方",
     description:
-      "金の純度はどうやって見分ける？K24・K18・K14の違い、刻印の読み方、金メッキとの見分け方を徹底解説。",
+      "金の純度はどうやって見分ける？K24・K18・K14の違い、刻印の読み方、金メッキとの見分け方を解説します。",
     tags: ["純度", "刻印", "K18", "K24"],
   },
   {
@@ -312,7 +312,7 @@ const articles = [
     tag: "相場分析",
     title: "【2026年最新】金を売るタイミングはいつ？相場分析と売り時の判断基準",
     description:
-      "金を売るベストなタイミングを解説。2026年の金相場の見通し、売り時の判断基準、分割売却のメリットを解説。",
+      "金を売るタイミングの考え方を解説します。2026年の金相場の見通し、売り時の判断基準、分割売却のメリットを解説。",
     tags: ["タイミング", "売り時", "相場分析", "2026年"],
   },
   {
@@ -328,7 +328,7 @@ const articles = [
     tag: "比較ガイド",
     title: "【2026年最新】買取大吉 vs なんぼや徹底比較 — 金買取はどちらがお得？",
     description:
-      "買取大吉となんぼやを店舗数・手数料・口コミ・対応品目で徹底比較。どちらがお得かがわかります。",
+      "買取大吉となんぼやを店舗数・手数料・口コミ・対応品目で徹底比較。両社の違いをご説明します。",
     tags: ["買取大吉", "なんぼや", "比較", "口コミ"],
   },
   {
@@ -456,15 +456,15 @@ const articles = [
 const faqs = [
   {
     q: "金の買取価格は毎日変わりますか？",
-    a: "はい、金の買取価格は国際相場（ロンドン金価格）と為替レートに連動して毎日変動します。相場をチェックして、高いタイミングで売却するのがおすすめです。",
+    a: "はい、金の買取価格は国際相場（ロンドン金価格）と為替レートに連動して毎日変動します。売却前に、当日の相場をご確認いただくことをおすすめします。",
   },
   {
     q: "壊れたアクセサリーや片方だけのピアスも買い取ってもらえますか？",
-    a: "買い取ってもらえます。金・貴金属の買取は「素材としての価値」がベースなので、壊れていても、片方だけでも、刻印が消えていても査定対象になります。",
+    a: "はい、買取の対象です。金・貴金属の買取は素材としての価値を基準とするため、壊れていても、片方だけでも、刻印が消えていても査定対象になります。",
   },
   {
     q: "買取に手数料はかかりますか？",
-    a: "買取大吉・ティファナ・ウリエルの3社は、公式サイトで査定料・出張費・キャンセル料の無料を明記しています。ヒカカク！は一括査定の利用が無料ですが、査定・買取は申し込み先の各業者が行い、キャンセルも業者へ直接連絡する仕組みです。手数料・返送料は申し込み先の業者ごとに確認してください。",
+    a: "買取大吉・ティファナ・ウリエルの3社は、公式サイトで査定料・出張費・キャンセル料の無料を明記しています。ヒカカク！は一括査定の利用が無料ですが、査定・買取は申し込み先の各業者が行い、キャンセルも業者へ直接連絡する仕組みです。手数料・返送料は、申し込み先の業者ごとにご確認ください。",
   },
   {
     q: "金を売った場合、税金はかかりますか？",
@@ -472,7 +472,7 @@ const faqs = [
   },
   {
     q: "2026年は金を売るのに良いタイミングですか？",
-    a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値圏です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却には好条件と言えます。ただし、短期的な調整は常にあり得ますので、「今の価格に納得できるなら売る」のが実践的な判断です。`,
+    a: `${LP_DATE}時点、K24（純金）の買取価格は1gあたり約${LP_K24}円前後と歴史的な高値圏です（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。10年前（約4,400円）から大きく上昇しており、売却を検討しやすい水準といえます。ただし、短期的に相場が下落する可能性もあるため、現在の価格に納得できるかどうかを基準にご判断ください。`,
   },
 ];
 
@@ -518,14 +518,14 @@ export default function Home() {
               Gold &amp; Precious Metals
             </p>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-              大切な金・貴金属を、
+              金・貴金属の買取相場と
               <br />
-              <span className="text-accent">最高価格</span>で。
+              <span className="text-accent">買取サービス</span>の比較情報
             </h1>
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-              K24（純金）・K18・プラチナの最新買取相場をチェック。
+              K24（純金）・K18・プラチナの買取相場を毎日更新しています。
               <br className="hidden md:block" />
-              4つの人気買取サービスを比較して、あなたに最適な売却方法が見つかります。
+              4つの買取サービスを公式情報にもとづいて比較し、売却方法の検討を支援します。
             </p>
             <div className="bg-black/40 backdrop-blur-sm border border-accent/30 rounded-xl inline-block px-6 py-3 mb-8">
               <p className="text-xs text-white/60 mb-1">本日の金買取参考相場（K24/1g）</p>
@@ -560,7 +560,7 @@ export default function Home() {
       <section className="border-y border-warm-border bg-white">
         <div className="max-w-5xl mx-auto px-4 py-5">
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-xs md:text-sm text-warm-gray">
-            {["査定料・出張費すべて無料", "4社の買取業者を徹底比較", "2026年最新相場対応", "利用者の声500件以上"].map((text) => (
+            {["査定料・出張費すべて無料", "4社の買取サービスを比較", "相場を毎日更新", "公式情報にもとづく掲載"].map((text) => (
               <span key={text} className="flex items-center gap-1.5">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -600,7 +600,7 @@ export default function Home() {
             </Link>
             <Link href="/kin-kaitori-hakusho/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
               <span className="font-bold text-sm">📖 金買取 相場白書</span>
-              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">日次データの統計と傾向を公開。出典明記での引用を歓迎しています。</span>
+              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">日次データの統計と傾向を公開。出典を明記いただければ引用いただけます。</span>
             </Link>
           </div>
           {/* 今日の注目ガイド（機会ページへの内部リンク集中） */}
@@ -627,7 +627,7 @@ export default function Home() {
       {/* 2026年4月 金は今が売り時？相場高騰の背景 */}
       <section className="max-w-5xl mx-auto px-4 py-14">
         <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          {LP_DATE}時点｜金は今が売り時？相場高騰の背景
+          {LP_DATE}時点の金相場と高騰の背景
         </h2>
         <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
           金の買取価格は{LP_DATE}時点で歴史的な高値水準にあります。K24（純金）は1gあたり約{LP_K24}円前後と、2016年（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍に上昇しました（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。
@@ -662,7 +662,7 @@ export default function Home() {
             ))}
           </div>
           <p className="text-sm text-warm-gray mt-4 leading-relaxed">
-            多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。ただし、短期的な調整は常にあり得るため、<strong>「今の価格に納得できるなら売る」</strong>のが最も実践的な判断基準です。
+            多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。ただし、短期的に相場が下落する可能性もあるため、<strong>現在の価格に納得できるかどうか</strong>を判断の基準とすることをおすすめします。
           </p>
         </div>
       </section>
@@ -674,7 +674,7 @@ export default function Home() {
             買取方法で選ぶ おすすめ4社
           </h2>
           <p className="text-warm-gray text-sm text-center mb-8">
-            あなたの希望する売却スタイルに合わせて、最適な買取業者を選べます
+            ご希望の売却方法に応じて、買取業者をお選びいただけます
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {services.map((svc) => (
@@ -714,28 +714,28 @@ export default function Home() {
           金買取業者の選び方 3つのポイント
         </h2>
         <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          買取業者は数多くありますが、すべてが信頼できるとは限りません。以下のポイントを確認して安全な売却を。
+          買取業者を選ぶ際は、以下の3点をご確認いただくことをおすすめします。
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className="bg-white border border-warm-border rounded-xl p-6">
             <div className="text-accent font-bold text-2xl mb-2">1</div>
             <h3 className="font-bold text-base mb-2">査定料・手数料が無料か</h3>
             <p className="text-sm text-warm-gray leading-relaxed">
-              信頼できる業者は査定料・出張費・キャンセル料がすべて無料です。「査定料3,000円」「手数料10%」のような業者は避けましょう。当サイト掲載の4社はすべて査定無料です。
+              査定料・出張費・キャンセル料が無料かどうかをご確認ください。「査定料3,000円」「手数料10%」など、査定額から費用を差し引く業者もあります。当サイトで紹介している4社は、いずれも査定を無料としています。
             </p>
           </div>
           <div className="bg-white border border-warm-border rounded-xl p-6">
             <div className="text-accent font-bold text-2xl mb-2">2</div>
             <h3 className="font-bold text-base mb-2">買取価格の根拠を説明してくれるか</h3>
             <p className="text-sm text-warm-gray leading-relaxed">
-              「なぜこの金額なのか」を純度・重量・当日のレートを基に説明してくれる業者は信頼できます。金額の根拠を示さず即決を迫る業者には注意が必要です。
+              査定額の根拠を、純度・重量・当日の相場にもとづいて説明する業者を選ぶことをおすすめします。金額の根拠を示さずに即決を求める業者にはご注意ください。
             </p>
           </div>
           <div className="bg-white border border-warm-border rounded-xl p-6">
             <div className="text-accent font-bold text-2xl mb-2">3</div>
             <h3 className="font-bold text-base mb-2">複数業者を比較しているか</h3>
             <p className="text-sm text-warm-gray leading-relaxed">
-              1社だけで売却を決めるのは最もやってはいけない行動です。同じ金製品でも業者間で10〜30%の価格差が出ることがあります。最低3社に見積もりを取りましょう。
+              1社の査定だけで売却を決めることはおすすめしません。同じ金製品でも、業者によって査定額が異なります。3社以上から見積もりを取ることをおすすめします。
             </p>
           </div>
         </div>
@@ -810,10 +810,10 @@ export default function Home() {
       {/* 税金・確定申告の注意点 */}
       <section className="max-w-5xl mx-auto px-4 py-14">
         <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          金を売る前に知っておきたい — 税金・確定申告の注意点
+          金の売却にかかる税金・確定申告について
         </h2>
         <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          金の売却益は「譲渡所得」として課税対象になる場合があります。基本ルールを押さえておきましょう。
+          金の売却益は「譲渡所得」として課税対象になる場合があります。主な制度は以下のとおりです。
         </p>
         <div className="bg-white border border-warm-border rounded-xl p-6 md:p-8 max-w-3xl mx-auto">
           <div className="space-y-4 text-sm">
@@ -828,7 +828,7 @@ export default function Home() {
               <span className="text-accent font-bold flex-shrink-0">2.</span>
               <div>
                 <p className="font-bold mb-1">5年超保有で税額が半分に</p>
-                <p className="text-warm-gray">保有期間5年超の金は「長期譲渡所得」となり、課税対象額が1/2に軽減されます。売り急がない場合は5年を超えてから売却するのも手です。</p>
+                <p className="text-warm-gray">保有期間5年超の金は「長期譲渡所得」となり、課税対象額が1/2に軽減されます。売却を急がない場合は、保有期間が5年を超えてから売却する方法もあります。</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -841,7 +841,7 @@ export default function Home() {
           </div>
           <div className="mt-6 pt-4 border-t border-warm-border">
             <p className="text-xs text-warm-gray">
-              ※詳しい税金の計算方法や節税対策は <Link href="/articles/kin-kaitori-zeikin/" className="text-accent hover:underline">金買取の税金・確定申告ガイド</Link> で解説しています。不明点は税理士に相談することをおすすめします。
+              ※詳しい税金の計算方法や節税対策は <Link href="/articles/kin-kaitori-zeikin/" className="text-accent hover:underline">金買取の税金・確定申告ガイド</Link> で解説しています。個別のご判断にあたっては、税理士または税務署にご相談ください。
             </p>
           </div>
         </div>
@@ -921,12 +921,12 @@ export default function Home() {
       <section className="bg-gradient-to-b from-cream to-background py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-display text-xl md:text-2xl font-bold mb-4">
-            まずは無料査定から始めましょう
+            無料査定のご案内
           </h2>
           <p className="text-warm-gray mb-8 text-sm md:text-base leading-relaxed">
-            金・貴金属の買取価格は業者によって大きく異なります。
+            金・貴金属の買取価格は、業者によって異なります。
             <br className="md:hidden" />
-            複数社を比較して、最高値での売却を目指しましょう。
+            複数社の査定額を比較したうえでの売却をおすすめします。
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

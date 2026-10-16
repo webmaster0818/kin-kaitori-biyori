@@ -83,7 +83,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">K18製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">K18は最も流通量が多く、どの業者でも買取可能です。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">K18は最も流通量が多く、どの業者でも買取可能です。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -124,7 +124,7 @@ export default function K18KaitoriPage() {
 
         <p>「K18ネックレスはいくらで売れる？」「K18とK24の価格差は？」「ホワイトゴールドは安くなる？」——この記事では、K18に特化した<strong>買取相場・製品別の査定額・高く売るコツ</strong>を、毎朝更新の実勢データとともに解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>K18（18金）の最新買取相場（1gあたりの価格）</li>
           <li>ネックレス・指輪・ブレスレットなど製品別の査定の考え方</li>
@@ -184,7 +184,7 @@ export default function K18KaitoriPage() {
 
         <h3>K18リング・指輪</h3>
 
-        <p>指輪は内側に「K18」「750」の刻印があります。<strong>ダイヤなどの宝石が付いている場合</strong>は、金の素材価値に宝石の価値が上乗せされます。鑑定書があれば持参しましょう。結婚指輪・ファッションリングいずれも金の重量ベースで査定されます。詳しくは<Link href="/articles/kin-yubiwa-kaitori/" className="text-accent hover:underline">金の指輪・リング買取ガイド</Link>をご覧ください。</p>
+        <p>指輪は内側に「K18」「750」の刻印があります。<strong>ダイヤなどの宝石が付いている場合</strong>は、金の素材価値に宝石の価値が上乗せされます。鑑定書があれば持参することをおすすめします。結婚指輪・ファッションリングいずれも金の重量ベースで査定されます。詳しくは<Link href="/articles/kin-yubiwa-kaitori/" className="text-accent hover:underline">金の指輪・リング買取ガイド</Link>をご覧ください。</p>
 
         <h3>K18ブレスレット・バングル</h3>
 
@@ -192,7 +192,7 @@ export default function K18KaitoriPage() {
 
         <h3>K18時計・その他</h3>
 
-        <p>K18ケースの高級時計は、<strong>ブランド価値が金の素材価値を大きく上回る</strong>ことが多く、金属買取業者よりも時計専門店の方が高値になる場合があります。両方に見積もりを取って比較しましょう。ピアス・カフス・メガネフレームなどもK18製品として買取対象です。</p>
+        <p>K18ケースの高級時計は、<strong>ブランド価値が金の素材価値を大きく上回る</strong>ことが多く、金属買取業者よりも時計専門店の方が高値になる場合があります。両方に見積もりを取って比較することをおすすめします。ピアス・カフス・メガネフレームなどもK18製品として買取対象です。</p>
 
         <CtaBox />
 
@@ -244,21 +244,21 @@ export default function K18KaitoriPage() {
           </table>
         </div>
 
-        <p>K18WGは表面のロジウムメッキが経年で剥がれて黄ばむことがありますが、これは<strong>表面のメッキの劣化であり内部の金含有量には影響しない</strong>ため、査定額は下がりません。K18PGの銅の酸化によるくすみも同様です。安心して査定に出しましょう。</p>
+        <p>K18WGは表面のロジウムメッキが経年で剥がれて黄ばむことがありますが、これは<strong>表面のメッキの劣化であり内部の金含有量には影響しない</strong>ため、査定額は下がりません。K18PGの銅の酸化によるくすみも同様です。安心して査定に出すことをおすすめします。</p>
 
         <h2>K18を高く売る5つのポイント</h2>
 
         <h3>1. 複数の買取業者に見積もりを取る</h3>
 
-        <p>K18の買取価格は業者によって1gあたり数百円の差が出ます。20gのネックレスなら、1gあたり300円の差で<strong>6,000円もの差額</strong>になります。必ず3社以上に見積もりを取りましょう。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定なら一度の申し込みで複数業者を比較できます。業者選びは<Link href="/articles/kin-kaitori-osusume/" className="text-accent hover:underline">おすすめ業者比較</Link>も参考にしてください。</p>
+        <p>K18の買取価格は業者によって1gあたり数百円の差が出ます。20gのネックレスなら、1gあたり300円の差で<strong>6,000円もの差額</strong>になります。必ず3社以上に見積もりを取ることをおすすめします。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定なら一度の申し込みで複数業者を比較できます。業者選びは<Link href="/articles/kin-kaitori-osusume/" className="text-accent hover:underline">おすすめ業者比較</Link>もご参照ください。</p>
 
         <h3>2. 手数料・条件を事前に確認する</h3>
 
-        <p>「1gの買取単価が高くても、手数料が引かれて手取りが減る」ケースがあります。査定料・出張費・宝石取り外し料・宅配返送料などの条件を事前に確認しましょう。<Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent hover:underline">手数料の比較記事</Link>で各社の条件を整理しています。</p>
+        <p>「1gの買取単価が高くても、手数料が引かれて手取りが減る」ケースがあります。査定料・出張費・宝石取り外し料・宅配返送料などの条件を事前にご確認ください。<Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent hover:underline">手数料の比較記事</Link>で各社の条件を整理しています。</p>
 
         <h3>3. 宝石付きは鑑定書を用意する</h3>
 
-        <p>ダイヤなどの宝石が付いたK18製品は、<strong>鑑定書・保証書</strong>があると宝石部分の評価がスムーズになり、査定額アップにつながります。売却前に付属品を探しておきましょう。</p>
+        <p>ダイヤなどの宝石が付いたK18製品は、<strong>鑑定書・保証書</strong>があると宝石部分の評価がスムーズになり、査定額が上がる場合があります。売却前に付属品を探しておくことをおすすめします。</p>
 
         <h3>4. 相場が高いタイミングを狙う</h3>
 
@@ -274,7 +274,7 @@ export default function K18KaitoriPage() {
 
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
 
-        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K18は流通量が多く多くの業者が扱うため、一括査定で価格を比較するメリットが大きい品目です。</p>
+        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K18は流通量が多く、多くの業者が扱うため、一括査定で価格を比較するメリットが大きい品目です。</p>
 
         <ul>
           <li>複数業者の査定価格を一度に比較</li>
@@ -309,7 +309,7 @@ export default function K18KaitoriPage() {
         <ul>
           <li>店頭・出張・宅配の3方法対応</li>
           <li>すべての方法で査定料無料</li>
-          <li>金・プラチナ・宝石をまとめて査定OK</li>
+          <li>金・プラチナ・宝石をまとめて査定可能</li>
         </ul>
 
         <h2>K18の売却に関する税金</h2>

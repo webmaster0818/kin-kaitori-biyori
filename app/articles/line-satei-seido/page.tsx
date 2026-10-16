@@ -29,7 +29,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】金買取のLINE査定・写真査定の精度｜実物査定との差と活用法",
-    description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を徹底解説。",
+    description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を解説します。",
     datePublished: "2026-05-18",
     dateModified: "2026-05-18",
     author: {
@@ -50,7 +50,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u984d\u306f\u5b9f\u969b\u306e\u8cb7\u53d6\u984d\u3068\u540c\u3058\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u6982\u7b97\u306e\u305f\u3081\u00b110\u301c20%\u306e\u5dee\u304c\u51fa\u308b\u3053\u3068\u304c\u591a\u3044\u3002\u5b9f\u7269\u67fb\u5b9a\u3067\u78ba\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u306e\u7cbe\u5ea6\u3092\u4e0a\u3052\u308b\u65b9\u6cd5\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u523b\u5370\u304c\u660e\u78ba\u306a\u5199\u771f\u3001\u6b63\u78ba\u306a\u91cd\u91cf\u7533\u544a\u3001\u4ed8\u5c5e\u54c1\u306e\u6709\u7121\u3092\u4f1d\u3048\u308b\u3068\u7cbe\u5ea6\u304c\u4e0a\u304c\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u5f8c\u3001\u5fc5\u305a\u58f2\u3089\u306a\u3044\u3068\u3044\u3051\u306a\u3044\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u5168\u3066\u306e\u696d\u8005\u3067\u30ad\u30e3\u30f3\u30bb\u30eb\u7121\u6599\u3002LINE\u67fb\u5b9a\u3060\u3051\u53d7\u3051\u3066\u58f2\u3089\u306a\u3044\u3053\u3068\u3082\u53ef\u80fd\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u5199\u771f\u306f\u4f55\u679a\u9001\u308b\u3079\u304d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u672c\u4f53\u5168\u4f53\u30fb\u523b\u5370\u90e8\u5206\u30fb\u4ed8\u5c5e\u54c1 \u30673\u301c5\u679a\u304c\u76ee\u5b89\u3002\u591a\u3059\u304e\u3066\u3082\u51e6\u7406\u304c\u9045\u304f\u306a\u308b\u5834\u5408\u3042\u308a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"LINE\u67fb\u5b9a\u3067\u5927\u91cf\u306e\u91d1\u88fd\u54c1\u3092\u4e00\u6c17\u306b\u67fb\u5b9a\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3060\u304c\u3001\u696d\u8005\u306b\u3088\u308a\u4e0a\u9650\u3042\u308a\u300210\u70b9\u4ee5\u4e0a\u306e\u5834\u5408\u306f\u51fa\u5f35\u8cb7\u53d6\u306e\u65b9\u304c\u52b9\u7387\u7684\u3002\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"LINE査定額は実際の買取額と同じ？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"概算のため±10〜20%の差が出ることが多い。実物査定で確定。\"}}, {\"@type\": \"Question\", \"name\": \"LINE査定の精度を上げる方法は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"刻印が明確な写真、正確な重量申告、付属品の有無を伝えると精度が上がる。\"}}, {\"@type\": \"Question\", \"name\": \"LINE査定後、必ず売らないといけない？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"全ての業者でキャンセル無料。LINE査定だけ受けて売らないことも可能。\"}}, {\"@type\": \"Question\", \"name\": \"写真は何枚送るべき？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"本体全体・刻印部分・付属品 で3〜5枚が目安。多すぎても処理が遅くなる場合あり。\"}}, {\"@type\": \"Question\", \"name\": \"LINE査定で大量の金製品を一気に査定できる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能だが、業者により上限あり。10点以上の場合は出張買取の方が効率的。\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -58,7 +58,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】金買取のLINE査定・写真査定の精度｜実物査定との差と活用法",
-  description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を徹底解説。",
+  description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/line-satei-seido/" },
 };
 
@@ -66,7 +66,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">金製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -138,9 +138,9 @@ export default function Page() {
           <h2>5. LINE査定 vs 一括査定 vs 店頭査定</h2>
           <div className="table-wrapper">
             <table>
-              <thead><tr><th>方法</th><th>所要時間</th><th>精度</th><th>こんな人向け</th></tr></thead>
+              <thead><tr><th>方法</th><th>所要時間</th><th>精度</th><th>おすすめの方</th></tr></thead>
               <tbody>
-                <tr><td>LINE査定</td><td>即日〜数時間</td><td>±10〜20%</td><td>気軽に相場を知りたい</td></tr>
+                <tr><td>LINE査定</td><td>即日〜数時間</td><td>±10〜20%</td><td>手軽に相場を知りたい方</td></tr>
                 <tr><td>一括査定</td><td>1〜3日</td><td>±5〜15%</td><td>複数業者を比較したい</td></tr>
                 <tr><td>店頭査定</td><td>当日</td><td>確定</td><td>すぐ売りたい</td></tr>
               </tbody>

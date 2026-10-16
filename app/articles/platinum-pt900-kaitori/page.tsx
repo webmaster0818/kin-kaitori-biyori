@@ -76,7 +76,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">プラチナPt900製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">プラチナの買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">プラチナの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -153,7 +153,7 @@ export default function PlatinumPt900KaitoriPage() {
           <p className="!my-0"><strong>ご案内：</strong>プラチナ全般（Pt1000/Pt950/Pt900/Pt850）の純度別相場・製品別の詳しい価格目安・価格推移は、<Link href="/articles/platinum-kaitori/" className="text-accent hover:underline">プラチナ買取相場ガイド（純度別まとめ）</Link>で網羅的に解説しています。本ページはPt900に絞った要点版です。</p>
         </div>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>Pt900の今日の買取価格を正しく確認する方法</li>
           <li>Pt900とPt1000・Pt950・Pt850の違い</li>
@@ -201,7 +201,7 @@ export default function PlatinumPt900KaitoriPage() {
 
         <h3>Pt900リング・指輪</h3>
 
-        <p>結婚指輪・婚約指輪はPt900が主流です。指輪の内側に「Pt900」「PT900」の刻印があります。<strong>ダイヤなどの宝石が付いている場合</strong>は、プラチナの素材価値に宝石の価値が上乗せされます。鑑定書があれば持参しましょう。</p>
+        <p>結婚指輪・婚約指輪はPt900が主流です。指輪の内側に「Pt900」「PT900」の刻印があります。<strong>ダイヤなどの宝石が付いている場合</strong>は、プラチナの素材価値に宝石の価値が上乗せされます。鑑定書があれば持参することをおすすめします。</p>
 
         <h3>Pt900ネックレス・その他</h3>
 
@@ -230,14 +230,14 @@ export default function PlatinumPt900KaitoriPage() {
                 <th>業者名</th>
                 <th>方式</th>
                 <th>特徴</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者のプラチナ買取価格を一括比較</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>純度をその場で測定・即現金化</td><td>即現金化したい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で査定が完結・出張費無料</td><td>自宅で完結したい</td></tr>
-              <tr><td><strong>ティファナ</strong></td><td>店頭/出張/宅配</td><td>3つの方法から選択・金とまとめて査定OK</td><td>方法を選びたい</td></tr>
+              <tr><td><strong>ティファナ</strong></td><td>店頭/出張/宅配</td><td>3つの方法から選択・金とまとめて査定可能</td><td>方法を選びたい</td></tr>
             </tbody>
           </table>
         </div>

@@ -58,7 +58,7 @@ function FaqSchema() {
       { "@type": "Question", name: "K18WGやK18PGはK18（イエロー）より安くなりますか？", acceptedAnswer: { "@type": "Answer", text: "なりません。K18WG（ホワイトゴールド）もK18PG（ピンクゴールド）も純金含有量は同じ75%で、業者の査定基準は「純金含有量×重量」のため、買取価格はK18と同じです。" } },
       { "@type": "Question", name: "ホワイトゴールドの黄ばみやピンクゴールドの変色は減額されますか？", acceptedAnswer: { "@type": "Answer", text: "減額されません。K18WGの黄ばみは表面のロジウムメッキの劣化、K18PGのくすみは銅の酸化が主因で、いずれも内部の金含有量には影響しないため、買取価格は変わりません。" } },
       { "@type": "Question", name: "「750」「417」という刻印は何ですか？", acceptedAnswer: { "@type": "Answer", text: "千分率表記です。「750」は金750/1000（75%）＝K18相当、「417」（または416）は金417/1000（41.7%）＝K10相当を意味します。海外製品に多い表記です。" } },
-      { "@type": "Question", name: "K18GPやK10GPの製品も買取できますか？", acceptedAnswer: { "@type": "Answer", text: "GP（Gold Plated＝金メッキ）やGF（Gold Filled＝金張り）は金の含有量が非常に少ないため、ほとんどの業者で買取不可または数十円程度です。刻印にGP・GFが付いていないか必ず確認してください。" } },
+      { "@type": "Question", name: "K18GPやK10GPの製品も買取できますか？", acceptedAnswer: { "@type": "Answer", text: "GP（Gold Plated＝金メッキ）やGF（Gold Filled＝金張り）は金の含有量が非常に少ないため、ほとんどの業者で買取不可または数十円程度です。刻印にGP・GFが付いていないか必ずご確認ください。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
@@ -74,7 +74,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">K10・K18製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">品位を問わず、金製品の買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">品位を問わず、金製品の買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -113,7 +113,7 @@ export default function KinseidoKaitoriGuidePage() {
 
           <p>金製品の買取価格は<strong>「品位（純度）×重量×当日の金相場」</strong>で決まります。この記事では、日本で最も流通量が多い<strong>K18（18金）</strong>、手頃な価格で人気の<strong>K10（10金）</strong>、そしてカラーバリエーションである<strong>K18WG（ホワイトゴールド）・K18PG（ピンクゴールド）</strong>の買取知識を1ページにまとめました。</p>
 
-          <p>この記事を読めば以下のことがわかります。</p>
+          <p>この記事では、以下の内容をご説明します。</p>
           <ul>
             <li>品位（K10/K18など）ごとの純度と買取価格の関係</li>
             <li>K18WG・K18PGがK18（イエロー）と同価格で買い取られる理由</li>
@@ -166,7 +166,7 @@ export default function KinseidoKaitoriGuidePage() {
           <ul>
             <li><strong>切れたネックレス・壊れた留め具：</strong>問題なく買取可能。金の買取は素材価値がベースのため、状態は価格に影響しません</li>
             <li><strong>宝石付きの指輪：</strong>金の素材価値＋宝石の価値で査定。宝石の評価は業者差が大きいため、宝石鑑定に強い業者にも見積もりを</li>
-            <li><strong>ブランドジュエリー：</strong>ティファニー・カルティエ・ブルガリなどは素材価格の1.5〜3倍以上になることも。ブランド買取店にも見積もりを取りましょう</li>
+            <li><strong>ブランドジュエリー：</strong>ティファニー・カルティエ・ブルガリなどは素材価格の1.5〜3倍以上になることも。ブランド買取店にも見積もりを取ることをおすすめします</li>
             <li><strong>ピアス片方のみ：</strong>重量ベースなので片方だけでも買取可能</li>
           </ul>
 
@@ -215,7 +215,7 @@ export default function KinseidoKaitoriGuidePage() {
               </thead>
               <tbody>
                 <tr><td><strong>K18 / 750</strong></td><td>18金（純度75%）</td><td>K18は日本式、750は国際式</td></tr>
-                <tr><td><strong>18K / 18KT</strong></td><td>18金（海外式表記）</td><td>正規品にも使われるが、品質管理が不十分な製品もあり要注意</td></tr>
+                <tr><td><strong>18K / 18KT</strong></td><td>18金（海外式表記）</td><td>正規品にも使われるが、品質管理が不十分な製品もあるため注意が必要</td></tr>
                 <tr><td><strong>K10 / 417 / 416</strong></td><td>10金（純度41.7%）</td><td>417・416は千分率表記</td></tr>
                 <tr><td><strong>K18WG / K10WG</strong></td><td>ホワイトゴールド</td><td>買取価格は同品位のイエローと同じ</td></tr>
                 <tr><td><strong>K18PG / K10PG</strong></td><td>ピンクゴールド</td><td>同上</td></tr>
@@ -228,7 +228,7 @@ export default function KinseidoKaitoriGuidePage() {
 
           <h3>最重要の注意点 — GP・GFはメッキ製品</h3>
 
-          <p>刻印に<strong>「GP」「GF」が含まれる製品は金メッキ・金張り</strong>であり、K18やK10の無垢（ソリッド）製品とは全く別物です。金の含有量が極めて少ないため、ほとんどの業者で買取不可または数十円程度になります。売却前に必ずGP・GFの有無を確認しましょう。</p>
+          <p>刻印に<strong>「GP」「GF」が含まれる製品は金メッキ・金張り</strong>であり、K18やK10の無垢（ソリッド）製品とは全く別物です。金の含有量が極めて少ないため、ほとんどの業者で買取不可または数十円程度になります。売却前に必ずGP・GFの有無をご確認ください。</p>
 
           <p>刻印がない古い製品や海外製品でも、金であれば買取可能です。大手買取業者ならX線蛍光分析（XRF）や比重計で純度を無料測定してくれます。判断に迷ったら、そのまま査定に出すのが確実です。</p>
 
@@ -239,11 +239,11 @@ export default function KinseidoKaitoriGuidePage() {
           <ol>
             <li>
               <strong>複数業者に見積もりを取る</strong>
-              <p>買取価格は業者によって1gあたり数百円の差が出ます。重量のあるネックレスやまとめ売りでは数千円〜数万円の差になるため、最低3社は比較しましょう。</p>
+              <p>買取価格は業者によって1gあたり数百円の差が出ます。重量のあるネックレスやまとめ売りでは数千円〜数万円の差になるため、最低3社は比較することをおすすめします。</p>
             </li>
             <li>
               <strong>ブランド品はブランド買取にも見積もりを取る</strong>
-              <p>ティファニー、カルティエ、4℃などのジュエリーは、金の素材価値以上のブランド価格がつくことがあります。金買取専門店とブランド買取店の両方に査定を依頼し、高い方に売却しましょう。</p>
+              <p>ティファニー、カルティエ、4℃などのジュエリーは、金の素材価値以上のブランド価格がつくことがあります。金買取専門店とブランド買取店の両方に査定を依頼し、高い方に売却することをおすすめします。</p>
             </li>
             <li>
               <strong>まとめて売る</strong>
@@ -251,11 +251,11 @@ export default function KinseidoKaitoriGuidePage() {
             </li>
             <li>
               <strong>付属品を揃える</strong>
-              <p>保証書、鑑定書、専用ケース、購入レシートがあれば、特にブランド品の査定額アップにつながります。</p>
+              <p>保証書、鑑定書、専用ケース、購入レシートがあれば、特にブランド品の査定額が上がる場合があります。</p>
             </li>
             <li>
               <strong>相場が高いタイミングで売る</strong>
-              <p>金の買取相場は毎日変動します。本ページ冒頭の相場カードや<Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金買取相場ページ</Link>で最新価格を確認し、納得できる水準で売却しましょう。</p>
+              <p>金の買取相場は毎日変動します。本ページ冒頭の相場カードや<Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金買取相場ページ</Link>で最新価格を確認し、納得できる水準で売却することをおすすめします。</p>
             </li>
           </ol>
 
@@ -268,14 +268,14 @@ export default function KinseidoKaitoriGuidePage() {
                   <th>業者名</th>
                   <th>方式</th>
                   <th>特徴</th>
-                  <th>こんな人に</th>
+                  <th>おすすめの方</th>
                 </tr>
               </thead>
               <tbody>
                 <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の買取価格を一括比較。品位を問わず最高値が見つかりやすい</td><td>最高値で売りたい</td></tr>
                 <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全品位対応。刻印なしでも比重などで品位を確認（公式表記）。即日現金化</td><td>即現金化したい</td></tr>
                 <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で完結。出張費無料。まとめ売りに便利</td><td>自宅で完結したい</td></tr>
-                <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>3つの方法から選択可能。貴金属まとめて査定OK</td><td>方法を選びたい</td></tr>
+                <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>3つの方法から選択可能。貴金属まとめて査定可能</td><td>方法を選びたい</td></tr>
               </tbody>
             </table>
           </div>
@@ -295,7 +295,7 @@ export default function KinseidoKaitoriGuidePage() {
               },
               {
                 q: "ホワイトゴールドの黄ばみやピンクゴールドの変色は減額されますか？",
-                a: "減額されません。K18WGの黄ばみは表面のロジウムメッキの劣化、K18PGのくすみは銅の酸化が主因で、いずれも内部の金含有量には影響しないため、買取価格は変わりません。無理に磨くと傷を増やすリスクがあるため、そのまま査定に出しましょう。",
+                a: "減額されません。K18WGの黄ばみは表面のロジウムメッキの劣化、K18PGのくすみは銅の酸化が主因で、いずれも内部の金含有量には影響しないため、買取価格は変わりません。無理に磨くと傷を増やすリスクがあるため、そのまま査定に出すことをおすすめします。",
               },
               {
                 q: "「750」「417」という刻印は何ですか？",
@@ -303,7 +303,7 @@ export default function KinseidoKaitoriGuidePage() {
               },
               {
                 q: "K18GPやK10GPの製品も買取できますか？",
-                a: "GP（Gold Plated＝金メッキ）やGF（Gold Filled＝金張り）は金の含有量が非常に少ないため、ほとんどの業者で買取不可または数十円程度です。刻印にGP・GFが付いていないか必ず確認してください。判断が難しい場合は買取業者のX線分析で正確に判定してもらえます。",
+                a: "GP（Gold Plated＝金メッキ）やGF（Gold Filled＝金張り）は金の含有量が非常に少ないため、ほとんどの業者で買取不可または数十円程度です。刻印にGP・GFが付いていないか必ずご確認ください。判断が難しい場合は買取業者のX線分析で正確に判定してもらえます。",
               },
             ].map((faq) => (
               <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

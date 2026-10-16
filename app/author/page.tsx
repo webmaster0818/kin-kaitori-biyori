@@ -78,17 +78,17 @@ export default function AuthorPage() {
       <h1 className="text-2xl md:text-3xl font-bold mb-2">
         {SITE_NAME} {PAGE_TITLE}
       </h1>
-      <p className="text-warm-gray text-sm mb-8">最終更新: 2026年10月7日</p>
+      <p className="text-warm-gray text-sm mb-8">最終更新: 2026年10月16日</p>
 
       <section className="space-y-4 text-sm leading-relaxed mb-10">
         <p>
-          「{SITE_NAME}」は、金・貴金属の売却を検討している方に向けて、買取相場の目安と買取業者の比較情報を提供するWebメディアです。
+          「{SITE_NAME}」は、金・貴金属の売却を検討している方に向けて、買取相場の目安と買取業者の比較情報を提供する情報サイトです。
           運営者は<Link href="/about/" className="text-accent-dark underline hover:text-accent">運営者情報</Link>に記載のとおりです。
         </p>
         <p>
-          このページでは、個人の執筆者や経歴ではなく、
-          <strong className="text-accent-dark">当サイトが実際に行っている運営方針と、掲載データの取得・更新の手順</strong>
-          を公開しています。記事は編集部名義で作成し、個人名・肩書・経歴は掲載していません。
+          このページでは、
+          <strong className="text-accent-dark">当サイトの運営方針と、掲載データの取得・更新の手順</strong>
+          をご説明します。記事は編集部名義で作成し、個人名・肩書・経歴は掲載していません。
         </p>
       </section>
 
@@ -98,40 +98,40 @@ export default function AuthorPage() {
 
       <section className="space-y-4 text-sm leading-relaxed mb-10">
         <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
-          <h3 className="text-base font-bold mb-2">1. 相場は公表値をもとに算出し、取得日を明記する</h3>
+          <h3 className="text-base font-bold mb-2">1. 相場は公表値をもとに算出し、取得日を明記しています</h3>
           <p className="text-foreground/85">
             金・プラチナ・銀の相場は、田中貴金属が公表している店頭買取価格を取得し、純度別（K24 / K22 / K18 / K14 / K10 など）の1gあたり買取目安を算出しています。
-            相場を表示している箇所には取得日（「○月○日時点」「取得日」）を併記します。
+            相場を表示している箇所には、取得日（「○月○日時点」「取得日」）を併記しています。
             算出した目安は「公表値 × 純度の比率」による理論値で、業者ごとの手数料・買取係数・製品の状態は加味していません。実際の査定額とは異なります。
           </p>
         </div>
 
         <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
-          <h3 className="text-base font-bold mb-2">2. 業者情報は各社の公式サイトの公開情報のみを使う</h3>
+          <h3 className="text-base font-bold mb-2">2. 業者情報は、各社公式サイトの公開情報のみを掲載しています</h3>
           <p className="text-foreground/85">
             買取業者の店舗数・買取方法・対応エリア・手数料などは、各社の公式サイトで確認できる情報だけを掲載し、取得元のURLを出典として保持しています。
-            推測で埋めることはせず、公式に明記がない項目は「不明（要問合せ）」と表記します。
+            推測による補完は行わず、公式に明記がない項目は「不明（要問合せ）」と表記しています。
           </p>
         </div>
 
         <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
-          <h3 className="text-base font-bold mb-2">3. 店舗情報は公式の店舗ページで実在を確認したものだけを載せる</h3>
+          <h3 className="text-base font-bold mb-2">3. 店舗情報は、公式の店舗ページで実在を確認したもののみを掲載しています</h3>
           <p className="text-foreground/85">
             地域ページの店舗一覧は、各社公式の店舗ページで実在を確認できた店舗のみを掲載し、出典URLと確認日を記録しています。
-            住所が公開されていない店舗や、確認できない店舗は掲載しません。営業時間などは変動するため、来店前に各公式ページをご確認ください。
+            住所が公開されていない店舗や、実在を確認できない店舗は掲載していません。営業時間などは変更される場合がありますので、ご来店前に各公式ページにてご確認ください。
           </p>
         </div>
 
         <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
-          <h3 className="text-base font-bold mb-2">4. 税制・法令は一般的な説明にとどめ、公式情報の確認を案内する</h3>
+          <h3 className="text-base font-bold mb-2">4. 税制・法令は一般的な説明にとどめ、公式情報の確認をご案内しています</h3>
           <p className="text-foreground/85">
-            譲渡所得・支払調書・本人確認などの税制・法令に関する記述は、一般的な制度の説明です。個別の申告・手続きの判断には用いず、
-            国税庁などの公式情報をご確認ください。制度は変わることがあるため、記事の最終更新日もあわせてご覧ください。
+            譲渡所得・支払調書・本人確認などの税制・法令に関する記述は、一般的な制度の説明です。個別の申告・手続きの判断にあたっては、
+            国税庁などの公式情報をご確認ください。制度は改正される場合があるため、記事の最終更新日もあわせてご確認ください。
           </p>
         </div>
 
         <div className="bg-white border border-warm-border rounded-2xl p-6 shadow-sm">
-          <h3 className="text-base font-bold mb-2">5. 広告と評価を分ける</h3>
+          <h3 className="text-base font-bold mb-2">5. 広告と評価を区別しています</h3>
           <p className="text-foreground/85">
             当サイトはアフィリエイトプログラムに参加しており、記事内のリンク経由でお申し込みがあった場合に紹介報酬が発生することがあります。
             広告報酬の有無で比較表の内容や評価を変えることはありません。詳細は
@@ -150,22 +150,22 @@ export default function AuthorPage() {
         <div className="bg-gold-bg rounded-lg p-4 border border-accent/20">
           <p className="text-xs font-bold text-warm-gray mb-2">毎日 11:05 に実行する処理</p>
           <ol className="list-decimal pl-6 space-y-2 text-foreground/85">
-            <li>田中貴金属の公表ページから、金・プラチナ・銀の店頭買取価格を取得する</li>
-            <li>純度別の1gあたり買取目安を算出し、本日分として保存する（月別の履歴にも追記）</li>
-            <li>サイト全体を再生成し、相場カード・純度別早見表・重量別早見表・トップページの価格表示を本日分に更新する</li>
+            <li>田中貴金属の公表ページから、金・プラチナ・銀の店頭買取価格を取得します</li>
+            <li>純度別の1gあたり買取目安を算出し、本日分として保存します（月別の履歴にも追記）</li>
+            <li>サイト全体を再生成し、相場カード・純度別早見表・重量別早見表・トップページの価格表示を本日分に更新します</li>
             <li>
               <Link href="/kin-kaitori-hakusho/" className="text-accent-dark underline hover:text-accent">金買取白書</Link>
-              で配布している公開データ（JSON / CSV / 推移指数）と相場ウィジェットを同じ数値で再生成する
+              で配布している公開データ（JSON / CSV / 推移指数）と相場ウィジェットを、同じ数値で再生成します
             </li>
-            <li>サイトマップを実際のページ構成から再生成し、公開する</li>
+            <li>サイトマップを実際のページ構成から再生成し、公開します</li>
           </ol>
         </div>
         <ul className="list-disc pl-6 space-y-2 text-foreground/85">
           <li>
-            取得に失敗した日は前回取得分の表示が残ります。表示されている取得日が当日でない場合は、その日付時点の値です。
+            取得に失敗した日は、前回取得分を表示しています。表示されている取得日が当日でない場合は、その日付時点の値となります。
           </li>
           <li>
-            店舗情報は自動更新の対象外です。確認日を記録し、追加・修正のたびに手動で更新しています。
+            店舗情報は自動更新の対象外です。確認日を記録したうえで、追加・修正のたびに手動で更新しています。
           </li>
           <li>
             各記事には「最終更新日」を表示しています。相場以外の本文（業者情報・税制など）はこの日付を基準に見直しています。

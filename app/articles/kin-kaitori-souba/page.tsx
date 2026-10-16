@@ -40,7 +40,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">今すぐ査定してみませんか？</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">相場を知ったら、次は実際の買取価格を確認。無料査定で損なく売却しましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">相場を知ったら、次は実際の買取価格を確認。無料査定で査定額を確認したうえで売却することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -74,7 +74,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: `金買取相場 今日のK24は1g${k24Souba.toLocaleString()}円・K18は${k18Souba.toLocaleString()}円`,
-    description: "2026年最新の金買取相場を純度別（K24・K22・K18・K14・K10）に一覧で掲載。金相場が動く5つの要因、業者別の買取価格差、過去10年の高値・安値ヒストリカルデータ、今後の見通しを徹底解説。",
+    description: "2026年最新の金買取相場を純度別（K24・K22・K18・K14・K10）に一覧で掲載。金相場が動く5つの要因、業者別の買取価格差、過去10年の高値・安値ヒストリカルデータ、今後の見通しを解説します。",
     datePublished: "2026-04-15",
     dateModified: goldData.date,
     author: {
@@ -219,7 +219,7 @@ export default function KinKaitoriSoubaPage() {
           <PurityPriceTable />
 
           <blockquote>
-            <p><strong>ポイント：</strong>上記はあくまで「素材としての金」の相場です。ブランド品（ティファニー、カルティエなど）の場合は、ブランド価値が上乗せされることがあります。ブランドジュエリーは、金買取専門店だけでなくブランド買取に強い業者にも見積もりを取りましょう。</p>
+            <p><strong>ポイント：</strong>上記はあくまで「素材としての金」の相場です。ブランド品（ティファニー、カルティエなど）の場合は、ブランド価値が上乗せされることがあります。ブランドジュエリーは、金買取専門店だけでなくブランド買取に強い業者にも見積もりを取ることをおすすめします。</p>
           </blockquote>
 
           <p>喜平ブレスレットなど重量のある製品をお持ちの方は、10g・20g・30g・50gの重量帯別に目安を計算できる<Link href="/articles/kin-bracelet-kaitori/" className="text-accent hover:underline">金ブレスレット買取相場ガイド</Link>もあわせてご覧ください。</p>
@@ -232,7 +232,7 @@ export default function KinKaitoriSoubaPage() {
           </p>
           <ul>
             <li><strong>K20（20金・純度83.3%）</strong> — 中東や東南アジアの製品に見られます。国内の買取店でも純度を測定して買い取れますが、刻印が「20K」でも実測値で査定されるのが一般的です。</li>
-            <li><strong>「5金」</strong> — 純度を表す規格としては存在しません。<strong>K18ホワイトゴールド等の「5」を含む型番</strong>や、<strong>18金の誤記</strong>である場合が多いです。刻印を確認してください。</li>
+            <li><strong>「5金」</strong> — 純度を表す規格としては存在しません。<strong>K18ホワイトゴールド等の「5」を含む型番</strong>や、<strong>18金の誤記</strong>である場合が多いです。刻印をご確認ください。</li>
           </ul>
           <p>
             いずれの場合も、<strong>刻印より実測の純度で査定される</strong>ため、
@@ -376,11 +376,11 @@ export default function KinKaitoriSoubaPage() {
             </table>
           </div>
 
-          <p>最安値と最高値で<strong>3万円の差</strong>があります。たった数分の手間で3万円は大きいです。<strong>複数業者への相見積もりは絶対に省略しないでください。</strong></p>
+          <p>最安値と最高値で<strong>3万円の差</strong>があります。数分の手間で、手取り額に3万円の差が生じる場合があります。<strong>複数業者から見積もりを取ることをおすすめします。</strong></p>
 
           <h2>過去10年の金価格推移（高値・安値ヒストリカルデータ）</h2>
 
-          <p>金価格は過去20年間で大きく上昇しています。過去10年の詳細な高値・安値データを見てみましょう。</p>
+          <p>金価格は過去20年間で大きく上昇しています。過去10年の詳細な高値・安値データを見てみることをおすすめします。</p>
 
           <div className="table-wrapper">
             <table>
@@ -503,7 +503,7 @@ export default function KinKaitoriSoubaPage() {
 
           <p>金の買取相場は高値圏で推移しています。最新の1gあたりの目安は、本ページ冒頭の自動更新表をご確認ください。</p>
 
-          <p>金価格は今後も高止まりが予想されていますが、短期的な調整はいつ起きてもおかしくありません。「今の価格で納得できるなら売る」というのが、最も合理的な判断基準です。</p>
+          <p>金価格は今後も高止まりが予想されていますが、短期的に相場が下落する可能性もあります。現在の価格に納得できるかどうかを、売却の判断基準とすることをおすすめします。</p>
 
           <p>売却を検討している方は、<strong>必ず複数の業者に査定を依頼</strong>してください。同じ金製品でも、業者によって買取価格に数千円〜数万円の差が出ることがあります。一括査定サービスを使えば、手間なく最高値の業者が見つかります。</p>
 

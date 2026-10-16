@@ -97,7 +97,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">金の無料査定で売却額を確認</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">税金の計算には売却額の把握が第一歩。まずは無料査定で金の価値を確認しましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">税金の計算には売却額の把握が第一歩。まずは無料査定で金の価値をご確認ください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -134,7 +134,7 @@ export default function KinKaitoriZeikinPage() {
 
         <p>金の買取価格が歴史的な高値水準にある2026年、金の売却を検討する方が増えています。しかし、「<strong>金を売った時の税金はどうなるの？</strong>」「<strong>確定申告は必要？</strong>」という疑問を持つ方も多いでしょう。</p>
 
-        <p>結論から言うと、金の売却益は<strong>「譲渡所得」</strong>として課税対象になりますが、<strong>年間50万円の特別控除</strong>があり、多くの場合は非課税または少額の税負担で済みます。</p>
+        <p>金の売却益は<strong>「譲渡所得」</strong>として課税対象になりますが、<strong>年間50万円の特別控除</strong>があり、多くの場合は非課税または少額の税負担で済みます。</p>
 
         <p>この記事では、金の売却に関する税金の全知識を<strong>具体的な計算例付き</strong>で解説します。</p>
 
@@ -273,10 +273,10 @@ export default function KinKaitoriZeikinPage() {
             <li>特別控除: -500,000円</li>
             <li><strong>課税対象額: {_yen(EX5_TAXABLE)}円</strong>（短期の場合）</li>
           </ul>
-          <p className="text-sm mt-2 text-red-700 font-bold">取得費不明だと税負担が非常に大きくなります！</p>
+          <p className="text-sm mt-2 text-red-700 font-bold">取得費が不明な場合、税負担が大きくなります。</p>
         </div>
 
-        <p><strong>対策：</strong>金を購入したら<strong>購入時のレシート・明細書・契約書を必ず保管</strong>しましょう。相続で受け取った場合は、被相続人の購入記録を探しましょう。</p>
+        <p><strong>対策：</strong>金を購入したら<strong>購入時のレシート・明細書・契約書を必ず保管</strong>すことをおすすめします。相続で受け取った場合は、被相続人の購入記録を探すことをおすすめします。</p>
 
         <h2>200万円超の取引と支払調書</h2>
 
@@ -300,10 +300,10 @@ export default function KinKaitoriZeikinPage() {
           </table>
         </div>
 
-        <p>支払調書が提出されると、税務署は売却の事実を把握します。確定申告をしないと<strong>税務調査の対象になる可能性</strong>がありますので、正しく申告しましょう。</p>
+        <p>支払調書が提出されると、税務署は売却の事実を把握します。確定申告をしないと<strong>税務調査の対象になる可能性</strong>がありますので、正しく申告することをおすすめします。</p>
 
         <blockquote>
-          <p><strong>注意：</strong>200万円以下に分割して売却すれば支払調書を回避できるという情報がありますが、これは<strong>脱税に該当する可能性</strong>があります。適正な申告を行いましょう。</p>
+          <p><strong>注意：</strong>200万円以下に分割して売却すれば支払調書を回避できるという情報がありますが、これは<strong>脱税に該当する可能性</strong>があります。適正な申告を行ってください。</p>
         </blockquote>
 
         <h2>確定申告の手順</h2>
@@ -335,7 +335,7 @@ export default function KinKaitoriZeikinPage() {
 
         <h3>2. 5年超保有で長期譲渡所得に</h3>
 
-        <p>保有期間が5年を超えると「長期譲渡所得」となり、課税額が<strong>1/2に軽減</strong>されます。売り急がない場合は5年超を待ちましょう。</p>
+        <p>保有期間が5年を超えると「長期譲渡所得」となり、課税額が<strong>1/2に軽減</strong>されます。売り急がない場合は5年超を待つことをおすすめします。</p>
 
         <h3>3. 取得費の証明書類を保管する</h3>
 
@@ -365,7 +365,7 @@ export default function KinKaitoriZeikinPage() {
             },
             {
               q: "金の売却で200万円を超えるとどうなりますか？",
-              a: "1回の取引で200万円を超える金地金・金貨の売却では、買取業者が税務署に支払調書を提出します。マイナンバーの提示も求められます。確定申告を忘れないようにしましょう。",
+              a: "1回の取引で200万円を超える金地金・金貨の売却では、買取業者が税務署に支払調書を提出します。マイナンバーの提示も求められます。確定申告を忘れないようにすることをおすすめします。",
             },
             {
               q: "金のジュエリーを売っても税金はかかりますか？",
@@ -373,7 +373,7 @@ export default function KinKaitoriZeikinPage() {
             },
             {
               q: "相続した金を売った場合の税金は？",
-              a: "相続した金を売却した場合も譲渡所得の対象です。取得費は被相続人（故人）の購入価格を引き継ぎます。購入記録がない場合は売却価格の5%が概算取得費となり、税負担が大きくなるため、遺品整理時に購入記録を探しましょう。",
+              a: "相続した金を売却した場合も譲渡所得の対象です。取得費は被相続人（故人）の購入価格を引き継ぎます。購入記録がない場合は売却価格の5%が概算取得費となり、税負担が大きくなるため、遺品整理時に購入記録を探すことをおすすめします。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
@@ -413,7 +413,7 @@ export default function KinKaitoriZeikinPage() {
           <li><strong>購入記録がないと税負担が大幅に増える</strong>（5%ルール）</li>
         </ol>
 
-        <p>金の売却を検討中の方は、まず<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で売却額を把握し、税金の影響を計算した上で売却時期を判断しましょう。具体的な税務相談は税理士にご確認ください。</p>
+        <p>金の売却を検討中の方は、まず<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>で売却額を把握し、税金の影響を計算した上で売却時期を判断することをおすすめします。具体的な税務相談は税理士にご確認ください。</p>
       </article>
     </div>
     </>

@@ -161,7 +161,7 @@ export function GoldPriceTrend() {
       ) : (
         <div className="rounded-xl bg-cream/50 border border-amber/20 p-4 text-sm text-foreground/80">
           相場推移グラフは、毎営業日の記録を積み上げて表示します（現在
-          {data.length}日分を記録済み）。日を追うごとに推移がご覧いただけます。
+          {data.length}日分を記録済み）。記録日数の増加に応じて、推移を確認いただけます。
         </div>
       )}
 

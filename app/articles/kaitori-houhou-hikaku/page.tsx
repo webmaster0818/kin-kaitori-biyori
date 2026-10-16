@@ -62,8 +62,8 @@ function FaqSchema() {
       },
       {
         "@type": "Question",
-        name: "出張買取のクーリングオフは何日ですか？",
-        acceptedAnswer: { "@type": "Answer", text: "出張買取はクーリングオフの対象であり、契約書面を受け取った日から8日以内であれば無条件で契約を解除できます。" },
+        name: "出張買取のクーリング・オフは何日ですか？",
+        acceptedAnswer: { "@type": "Answer", text: "出張買取はクーリング・オフの対象であり、契約書面を受け取った日から8日以内であれば無条件で契約を解除できます。" },
       },
       {
         "@type": "Question",
@@ -90,8 +90,8 @@ export const metadata: Metadata = {
 function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
-      <h3 className="font-bold text-base mb-3 text-center">あなたに合った方法で無料査定</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">どの方法でも査定料は無料。気軽に試してみましょう。</p>
+      <h3 className="font-bold text-base mb-3 text-center">ご希望の方法で無料査定</h3>
+      <p className="text-sm text-warm-gray text-center mb-4">いずれの方法も査定料は無料です。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -128,10 +128,10 @@ export default function KaitoriHouhouHikakuPage() {
 
         <p>金・貴金属を売りたいと思ったとき、「どの方法で売ればいいの？」と迷う方は多いはずです。金の買取方法は大きく分けて<strong>4つ</strong>あり、それぞれにメリット・デメリットがあります。</p>
 
-        <p>この記事では、4つの買取方法を詳しく解説し、<strong>あなたの状況に最も合った売却方法</strong>を見つけるお手伝いをします。</p>
+        <p>この記事では、4つの買取方法を詳しく解説し、<strong>状況に応じた売却方法</strong>を見つけるお手伝いをします。</p>
 
         <ul>
-          <li><strong>一括査定</strong> — 複数業者を一度に比較して最高値を狙う</li>
+          <li><strong>一括査定</strong> — 複数業者の査定額を一度に比較できる</li>
           <li><strong>店頭買取</strong> — 店舗に持ち込んで即日現金化</li>
           <li><strong>出張買取</strong> — 自宅に査定員が来てくれる</li>
           <li><strong>宅配買取</strong> — 郵送で完結、対面不要</li>
@@ -166,7 +166,7 @@ export default function KaitoriHouhouHikakuPage() {
         </ul>
 
         <blockquote>
-          <p><strong>こんな人におすすめ：</strong>「時間に余裕がある」「とにかく最高値で売りたい」「相場感を掴みたい」という方。特に高額品（10万円以上）の場合は、業者間の差額が大きくなるため一括査定が効果的です。</p>
+          <p><strong>おすすめの方：</strong>「時間に余裕がある」「とにかく最高値で売りたい」「相場感を掴みたい」という方。特に高額品（10万円以上）の場合は、業者間の差額が大きくなるため一括査定が効果的です。</p>
         </blockquote>
 
         <h2>方法2：店頭買取 — その場で査定、即現金化</h2>
@@ -180,7 +180,7 @@ export default function KaitoriHouhouHikakuPage() {
           <li>金製品と本人確認書類（運転免許証等）を持参</li>
           <li>店頭で査定（通常10〜30分）</li>
           <li>査定額に納得すれば、その場で現金受取</li>
-          <li>納得できなければ、キャンセルして持ち帰りOK</li>
+          <li>納得できなければ、キャンセルして持ち帰ることも可能</li>
         </ol>
 
         <h3>メリット</h3>
@@ -200,7 +200,7 @@ export default function KaitoriHouhouHikakuPage() {
         </ul>
 
         <blockquote>
-          <p><strong>こんな人におすすめ：</strong>「今日中に現金が欲しい」「目の前で査定してもらいたい」「近くに買取店舗がある」という方。急ぎの場合は店頭買取が最適です。</p>
+          <p><strong>おすすめの方：</strong>「今日中に現金が欲しい」「目の前で査定してもらいたい」「近くに買取店舗がある」という方。急ぎの場合は店頭買取が最適です。</p>
         </blockquote>
 
         <h2>方法3：出張買取 — 自宅にいながら完結</h2>
@@ -215,7 +215,7 @@ export default function KaitoriHouhouHikakuPage() {
           <li>査定員が自宅に訪問</li>
           <li>目の前で査定（通常20〜40分）</li>
           <li>査定額に納得すれば、その場で現金受取</li>
-          <li>納得できなければ、キャンセルOK（無料）</li>
+          <li>納得できなければ、キャンセル可能（無料）</li>
         </ol>
 
         <h3>メリット</h3>
@@ -235,7 +235,7 @@ export default function KaitoriHouhouHikakuPage() {
         </ul>
 
         <blockquote>
-          <p><strong>こんな人におすすめ：</strong>「外出が難しい」「大量の金製品がある」「自宅でゆっくり査定してほしい」という方。特に高齢者や体調に不安がある方に人気です。</p>
+          <p><strong>おすすめの方：</strong>「外出が難しい」「大量の金製品がある」「自宅でゆっくり査定してほしい」という方。特に高齢者や体調に不安がある方に人気です。</p>
         </blockquote>
 
         <h2>方法4：宅配買取 — 郵送で完結、対面不要</h2>
@@ -270,7 +270,7 @@ export default function KaitoriHouhouHikakuPage() {
         </ul>
 
         <blockquote>
-          <p><strong>こんな人におすすめ：</strong>「対面が苦手」「近くに買取店がない」「急いでいない」「自分のペースで進めたい」という方。</p>
+          <p><strong>おすすめの方：</strong>「対面が苦手」「近くに買取店がない」「急いでいない」「自分のペースで進めたい」という方。</p>
         </blockquote>
 
         <h2>4つの方法をメリデメ比較表で一覧</h2>
@@ -313,7 +313,7 @@ export default function KaitoriHouhouHikakuPage() {
             </thead>
             <tbody>
               <tr><td>金インゴット（100g以上）</td><td>一括査定 → 店頭</td><td>高額なので複数比較が重要。持ち運びリスクを避けるなら出張も</td></tr>
-              <tr><td>K18ネックレス・指輪</td><td>一括査定 or 店頭</td><td>一般的な品目なので、どの方法でもOK。高く売りたいなら一括査定</td></tr>
+              <tr><td>K18ネックレス・指輪</td><td>一括査定 or 店頭</td><td>一般的な品目なので、どの方法でも対応可能です。高く売りたいなら一括査定</td></tr>
               <tr><td>金歯・歯科用金属</td><td>店頭 or 宅配</td><td>見た目で判断しにくいため、分析設備のある業者が安心</td></tr>
               <tr><td>ブランドジュエリー</td><td>一括査定 → 店頭</td><td>ブランド価値が加味されるため、専門性の高い業者に複数見積もり</td></tr>
               <tr><td>大量の金製品</td><td>出張買取</td><td>持ち運びの手間とリスクを回避。まとめて査定してもらえる</td></tr>
@@ -356,14 +356,14 @@ export default function KaitoriHouhouHikakuPage() {
         <p>金の査定を依頼したはずが、「ついでに他の貴金属やブランド品も見せてください」と言われ、安値で買い叩かれるケース。<strong>対策：</strong>事前に「金製品のみ査定希望」と伝えておく。依頼していないものは見せない。</p>
 
         <h3>トラブル事例2：「今日決めないと価格が下がる」と急かされる</h3>
-        <p>その場で即決を迫られるケース。金相場は1日で大きく変わることはほぼありません。<strong>対策：</strong>「他社にも見積もりを取りたい」と伝え、持ち帰る。まともな業者は快く応じてくれます。</p>
+        <p>その場で即決を迫られるケース。金相場は1日で大きく変わることはほぼありません。<strong>対策：</strong>「他社にも見積もりを取りたい」と伝え、持ち帰る。信頼できる業者であれば、通常は応じます。</p>
 
         <h3>トラブル事例3：査定後に「やっぱり売りたくない」と言いにくい</h3>
         <p>わざわざ来てもらった手前、断りにくいと感じる方が多いです。<strong>対策：</strong>キャンセル無料を事前に確認。「検討します」と言えば問題ありません。買取大吉・ティファナ・ウリエルはキャンセル料無料を公式に明記しています（ヒカカク！経由の場合、キャンセルは申し込み先の業者へ直接連絡）。</p>
 
-        <h2>クーリングオフ制度 — 8日間なら無条件で取り消し可能</h2>
+        <h2>クーリング・オフ制度 — 8日間なら無条件で取り消し可能</h2>
 
-        <p>出張買取は<strong>特定商取引法の「訪問購入」</strong>に該当し、クーリングオフの対象です。以下のルールを覚えておきましょう。</p>
+        <p>出張買取は<strong>特定商取引法の「訪問購入」</strong>に該当し、クーリング・オフの対象です。以下のルールを覚えておくことをおすすめします。</p>
 
         <div className="table-wrapper">
           <table>
@@ -375,15 +375,15 @@ export default function KaitoriHouhouHikakuPage() {
             </thead>
             <tbody>
               <tr><td><strong>対象取引</strong></td><td>出張買取（訪問購入）</td></tr>
-              <tr><td><strong>クーリングオフ期間</strong></td><td>契約書面を受け取った日から<strong>8日以内</strong></td></tr>
+              <tr><td><strong>クーリング・オフ期間</strong></td><td>契約書面を受け取った日から<strong>8日以内</strong></td></tr>
               <tr><td><strong>手続き方法</strong></td><td>書面（はがき・内容証明郵便など）または電子メール等の電磁的記録で通知</td></tr>
               <tr><td><strong>費用負担</strong></td><td>返金・返品の送料等は業者負担</td></tr>
-              <tr><td><strong>注意点</strong></td><td>店頭買取・宅配買取にはクーリングオフは適用されない</td></tr>
+              <tr><td><strong>注意点</strong></td><td>店頭買取・宅配買取にはクーリング・オフは適用されない</td></tr>
             </tbody>
           </table>
         </div>
 
-        <p><strong>重要：</strong>クーリングオフ期間中は、売り手は<strong>品物の引き渡しを拒むことができます</strong>（その場で渡さなくてよい）。業者が期間中に品物を第三者へ渡した場合は売り手に通知する義務があり、クーリングオフの効果は原則としてその第三者にも及びます（第三者が善意・無過失の場合を除く）。確実に取り戻すには、期間中は渡さないのがいちばんです。契約書面（クーリングオフについて記載された書面）を受け取っていない場合は、8日を過ぎてもクーリングオフが可能です。自分で出張買取を頼んだ場合も対象です（消費者庁「特定商取引法ガイド 訪問購入」）。</p>
+        <p><strong>重要：</strong>クーリング・オフ期間中は、売り手は<strong>品物の引き渡しを拒むことができます</strong>（その場で渡さなくてよい）。業者が期間中に品物を第三者へ渡した場合は売り手に通知する義務があり、クーリング・オフの効果は原則としてその第三者にも及びます（第三者が善意・無過失の場合を除く）。確実に取り戻すには、期間中は品物を引き渡さないことをおすすめします。契約書面（クーリング・オフについて記載された書面）を受け取っていない場合は、8日を過ぎてもクーリング・オフが可能です。自分で出張買取を頼んだ場合も対象です（消費者庁「特定商取引法ガイド 訪問購入」）。</p>
 
         <h2>女性査定員への対応について</h2>
 
@@ -395,7 +395,7 @@ export default function KaitoriHouhouHikakuPage() {
           <li><strong>ティファナ：</strong>宅配買取なら完全非対面で安心。対面不要で売却が完結</li>
         </ul>
 
-        <p>いずれの場合も、<strong>予約時に「女性の査定員を希望」と伝える</strong>ことが重要です。対応できない場合もありますが、まずは相談してみましょう。</p>
+        <p>いずれの場合も、<strong>予約時に「女性の査定員を希望」と伝える</strong>ことが重要です。対応できない場合もありますが、まずは相談してみることをおすすめします。</p>
 
         <h2>査定に納得できないときの「断り方」</h2>
 
@@ -408,10 +408,10 @@ export default function KaitoriHouhouHikakuPage() {
           <li>「検討させてください」</li>
         </ul>
 
-        <p>いずれも問題なく断れるフレーズです。まともな買取業者であれば、断られることは日常的であり、嫌な顔をされることはありません。<strong>買取大吉・ティファナ・ウリエルはキャンセル料無料を公式に明記</strong>しています。ヒカカク！経由の場合、キャンセルは申し込み先の業者へ直接連絡します。</p>
+        <p>いずれも問題なく断れるフレーズです。信頼できる買取業者であれば、断られることは日常的であり、嫌な顔をされることはありません。<strong>買取大吉・ティファナ・ウリエルはキャンセル料無料を公式に明記</strong>しています。ヒカカク！経由の場合、キャンセルは申し込み先の業者へ直接連絡します。</p>
 
         <blockquote>
-          <p><strong>ポイント：</strong>「断るのが苦手」という方は、宅配買取（ティファナ）を利用するのも手です。メールで査定結果が届くので、断る場合も「お見送りします」と返信するだけでOKです。</p>
+          <p><strong>ポイント：</strong>「断るのが苦手」という方は、宅配買取（ティファナ）を利用するのも手です。メールで査定結果が届くので、断る場合も「お見送りします」と返信すれば問題ありません。</p>
         </blockquote>
 
         <h2>買取方法に関するFAQ</h2>

@@ -23,14 +23,14 @@ JS = f"""(function() {{
   box.innerHTML = '<div style="font-size:11px;color:#8a7a55;margin-bottom:4px;">本日の金買取相場の目安（{date}・田中貴金属公表値より純度換算）</div>'
     + '<div style="font-size:22px;font-weight:700;color:#9a7b2d;">K24 {fmt(k24)}円<span style="font-size:12px;font-weight:400;">/g</span></div>'
     + '<div style="font-size:13px;margin-top:2px;">K18 {fmt(k18)}円/g ・ K14 {fmt(k14)}円/g</div>'
-    + '<div style="font-size:11px;margin-top:8px;"><a href="https://gold-biyori.com/souba-dashboard/" target="_blank" rel="noopener" style="color:#9a7b2d;text-decoration:underline;">金買取日和｜金価格ダッシュボード</a>（毎日自動更新）</div>'
+    + '<div style="font-size:11px;margin-top:8px;"><a href="https://gold-biyori.com/souba-dashboard/" target="_blank" rel="noopener" style="color:#9a7b2d;text-decoration:underline;">金買取びより｜金価格ダッシュボード</a>（毎日自動更新）</div>'
     + '<div style="font-size:10px;color:#9b8e6e;margin-top:4px;">※理論上の目安。実際の買取額は業者・状態により異なります。</div>';
   s.parentNode.insertBefore(box, s);
 }})();
 """
 
 HTML = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex">
-<title>本日の金買取相場ウィジェット | 金買取日和</title></head>
+<title>本日の金買取相場ウィジェット | 金買取びより</title></head>
 <body style="margin:0;padding:8px;background:transparent;">
 <script src="https://gold-biyori.com/widget.js"></script>
 </body></html>

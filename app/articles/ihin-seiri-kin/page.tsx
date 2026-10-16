@@ -61,7 +61,7 @@ function ArticleSchema() {
     dateModified: "2026-04-26",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
-    description: "遺品整理で見つかった金・貴金属の売り方を徹底解説。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者を紹介。",
+    description: "遺品整理で見つかった金・貴金属の売り方を解説します。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者を紹介。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
@@ -71,7 +71,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】遺品整理で見つかった金の売り方ガイド — 相続・税金・高く売る方法",
-  description: "遺品整理で見つかった金・貴金属の売り方を徹底解説。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者4社を紹介。",
+  description: "遺品整理で見つかった金・貴金属の売り方を解説します。相続税の取り扱い、遺産分割の注意点、遺品の金を高く売る方法、おすすめ買取業者4社を紹介。",
   alternates: { canonical: "https://gold-biyori.com/articles/ihin-seiri-kin/" },
 };
 
@@ -79,7 +79,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">遺品の金・貴金属の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">純度不明でも壊れていても査定OK。まずは価値を確認しましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">純度不明でも壊れていても査定可能。まずは価値をご確認ください。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -118,7 +118,7 @@ export default function IhinSeiriKinPage() {
 
         <p>「遺品で見つかった金はどうすればいい？」「相続税はかかる？」「誰が売っていいの？」——この記事では、遺品整理で見つかった金の売り方を、<strong>相続の手続き・税金・高く売る方法</strong>まで実践的に解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>遺品整理で見つかりやすい金製品の種類と価値</li>
           <li>遺品の金の相続税の取り扱い</li>
@@ -213,7 +213,7 @@ export default function IhinSeiriKinPage() {
         </ul>
 
         <blockquote>
-          <p><strong>重要：</strong>相続した金の「取得費」は、���相続人（故人）が購入した時の価格を引き継ぎます。購入時のレシートが見つからない場合は、売却価格の5%が取得費とみなされ、税金が大幅に増える可能性があります。故人の書類の中に購入レシートがないか、必ず確認してください。</p>
+          <p><strong>重要：</strong>相続した金の「取得費」は、���相続人（故人）が購入した時の価格を引き継ぎます。購入時のレシートが見つからない場合は、売却価格の5%が取得費とみなされ、税金が大幅に増える可能性があります。故人の書類の中に購入レシートがないか、必ずご確認ください。</p>
         </blockquote>
 
         <h2>遺品の金を売却する前にやるべきこと</h2>
@@ -229,11 +229,11 @@ export default function IhinSeiriKinPage() {
           </li>
           <li>
             <strong>金製品をリストアップする</strong>
-            <p>見つかった金製品をすべてリストアップし、写真を撮っておきましょう。重量がわかれば概算価値も計算できます。このリストは遺産分割協議の資料にもなります。</p>
+            <p>見つかった金製品をすべてリストアップし、写真を撮っておくことをおすすめします。重量がわかれば概算価値も計算できます。このリストは遺産分割協議の資料にもなります。</p>
           </li>
           <li>
             <strong>購入時のレシートを探す</strong>
-            <p>故人の書類（通帳、レシート、保証書、金の品位証明���など）の中に購入記録がないか確認してください。取得費の証明になり、売却時の税金を大幅に抑えられます。</p>
+            <p>故人の書類（通帳、レシート、保証書、金の品位証明���など）の中に購入記録がないかご確認ください。取得費の証明になり、売却時の税金を大幅に抑えられます。</p>
           </li>
           <li>
             <strong>査定だけ先に受ける</strong>
@@ -269,19 +269,19 @@ export default function IhinSeiriKinPage() {
         <ol>
           <li>
             <strong>金買取の専門業者に依頼する</strong>
-            <p>遺品整理業者やリサイクルショップではなく、<strong>金買取に特化した専門業者</strong>に査定を依頼しましょう。専門業者は正確な相場で査定してくれます。</p>
+            <p>遺品整理業者やリサイクルショップではなく、<strong>金買取に特化した専門業者</strong>に査定を依頼することをおすすめします。専門業者は正確な相場で査定してくれます。</p>
           </li>
           <li>
             <strong>複数業者に見積もりを取る</strong>
-            <p>同じ金製品でも業者によって買取価格に差があります。<strong>最低3社には見積もり</strong>を取りましょう。一括査定サービスを使えば効率的です。</p>
+            <p>同じ金製品でも業者によって買取価格に差があります。<strong>最低3社には見積もり</strong>を取ることをおすすめします。一括査定サービスを使えば効率的です。</p>
           </li>
           <li>
             <strong>すべての金製���をまとめて査定に出す</strong>
-            <p>ネックレス、指輪、金歯など、見つかった金製品はすべてまとめて査定に出しましょう。まとめ売りで買取額が上がることがあります。</p>
+            <p>ネックレス、指輪、金歯など、見つかった金製品はすべてまとめて査定に出すことをおすすめします。まとめ売りで買取額が上がることがあります。</p>
           </li>
           <li>
             <strong>ブランドジュエリーは別途査定する</strong>
-            <p>カルティエ、ティファニー、ブルガリなどのブランドジュエリーは、金の素材価値以上のブランド価値があります。ブランド買取にも見積もりを取りましょう。</p>
+            <p>カルティエ、ティファニー、ブルガリなどのブランドジュエリーは、金の素材価値以上のブランド価値があります。ブランド買取にも見積もりを取ることをおすすめします。</p>
           </li>
           <li>
             <strong>金相場が高い今が売り時</strong>
@@ -298,12 +298,12 @@ export default function IhinSeiriKinPage() {
                 <th>業者名</th>
                 <th>方式</th>
                 <th>遺品買取の特徴</th>
-                <th>こんな人に</th>
+                <th>おすすめの方</th>
               </tr>
             </thead>
             <tbody>
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の買取価格を一括比較。最高値が見つかりやすい</td><td>最高値で売りたい</td></tr>
-              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,400店舗以上。遺品のまとめ査定OK</td><td>近くの店舗で売りたい</td></tr>
+              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,400店舗以上。遺品のまとめ査定に対応</td><td>近くの店舗で売りたい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅に出張して査定。大量の遺品もその場で対応</td><td>自宅で完結したい</td></tr>
               <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>3つの方法から選択。遺品のまとめ買取に対応</td><td>方法を選びたい</td></tr>
             </tbody>
@@ -318,9 +318,9 @@ export default function IhinSeiriKinPage() {
           {[
             { q: "遺品整理で見つかった金は売れますか？", a: "はい、売れます。金のネックレス、指輪、金歯、金の延べ棒、金貨など、金を含む製品はすべて買取対��です。壊れていても、刻印が消えていても買取可能です。" },
             { q: "遺品の金���売る場合、相続税の申告は必要ですか？", a: "遺産総額が基礎控除額（3,000万円 + 600万円 x 法定相続人の数）を超える場合は相続税の申告が必要です。基礎控除の範囲内であれば申告不要です。" },
-            { q: "遺品の金は誰が売っていいのですか？", a: "遺産分割協議で金の帰属が決まってから売却するのが原則です。他の相続人に無断で売却しないでください。トラブル防止のため、全員の同意を得てから進めましょう。" },
+            { q: "遺品の金は誰が売っていいのですか？", a: "遺産分割協議で金の帰属が決まってから売却するのが原則です。他の相続人に無断で売却しないでください。トラブル防止のため、全員の同意を得てから進めることをおすすめします。" },
             { q: "遺品整理で金の純度がわからない場合は？", a: "買取業者に持ち込めば、X線蛍光分析装置で無料で純度を判定してくれます。刻印がなくても、変色し��いても正確に判定可能です。" },
-            { q: "遺品整理業者と金買��業者、どちらに売った方が高い？", a: "金・貴金属は��買取の専門業者に売った方が高値がつきます。遺品整理業者は整理が本業のため、金の査定が相場より低くなることがあります。金だけは分けて専門業者に依頼しましょう。" },
+            { q: "遺品整理業者と金買��業者、どちらに売った方が高い？", a: "金・貴金属は��買取の専門業者に売った方が高値がつきます。遺品整理業者は整理が本業のため、金の査定が相場より低くなることがあります。金だけは分けて専門業者に依頼することをおすすめします。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm">

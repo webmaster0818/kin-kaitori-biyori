@@ -43,7 +43,7 @@ function FaqSchema() {
       { "@type": "Question", name: "金のブレスレットの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金ブレスレットの買取価格は「純度（K18・K24など）× 重量 × 本日の金相場」でほぼ決まります。相場は毎日変動するため、本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）で最新の目安をご確認ください。" } },
       { "@type": "Question", name: "喜平ブレスレットは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい。喜平は装飾が少なく地金価値がほぼそのまま評価される定番の製品で、重量もあるため高額買取が期待できます。目安は「本日の1gあたり買取価格 × 重量」で計算でき、面数（2面・6面・8面）による価格差はほとんどありません。" } },
       { "@type": "Question", name: "切れた・片方だけ・刻印なしのブレスレットでも売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、売れます。金の買取は地金としての「重量 × 純度」で評価されるため、チェーン切れ・留め具の破損・変形・部品の欠けがあっても買取可能です。刻印がない場合も、買取店が比重検査や試金石検査で純度を判定して買い取ります。" } },
-      { "@type": "Question", name: "金メッキ（GP・GF）のブレスレットは売れますか？", acceptedAnswer: { "@type": "Answer", text: "GP（金メッキ）は表面のごく薄い金膜のみで地金価値がほぼないため、金としての買取は基本的にできません。GF（金張り）も金の含有量がわずかで、買取対象外か少額になるのが一般的です。刻印が「K18GP」「K18GF」「1/20 K18」などの場合は本物のK18とは評価が異なる点に注意してください。" } },
+      { "@type": "Question", name: "金メッキ（GP・GF）のブレスレットは売れますか？", acceptedAnswer: { "@type": "Answer", text: "GP（金メッキ）は表面のごく薄い金膜のみで地金価値がほぼないため、金としての買取は基本的にできません。GF（金張り）も金の含有量がわずかで、買取対象外か少額になるのが一般的です。刻印が「K18GP」「K18GF」「1/20 K18」などの場合は本物のK18とは評価が異なる点にご注意ください。" } },
       { "@type": "Question", name: "工賃・デザイン料は買取額に含まれますか？", acceptedAnswer: { "@type": "Answer", text: "地金としての金買取では、購入時に支払った工賃・デザイン料・加工賃は買取額に含まれず、評価されるのは金の重量と純度のみです。例外はカルティエなどのブランド品や有名デザイナーズジュエリーで、ブランド買取店ならデザイン・ブランド価値が上乗せされることがあります。" } },
       { "@type": "Question", name: "テニスブレスレットのダイヤも評価されますか？", acceptedAnswer: { "@type": "Answer", text: "はい、テニスブレスレットは金の地金部分とダイヤモンド部分が別々に評価されます。金部分は「重量 × 本日の相場」で概算できますが、ダイヤ部分は4C（カラット・カラー・クラリティ・カット）と鑑定書の有無で大きく変わるため、実際の査定が必須です。" } },
       { "@type": "Question", name: "バングルとブレスレットで買取価格は違いますか？", acceptedAnswer: { "@type": "Answer", text: "買取価格は純度と重量で決まるため、バングルかブレスレットかは関係ありません。ただしバングルは構造上、チェーンブレスレットより重い傾向があるため、結果的に高額になることが多いです。" } },
@@ -71,7 +71,7 @@ function ArticleSchema() {
 export const metadata: Metadata = {
   title: `金ブレスレット買取相場｜喜平10gは約${K18_10G}円・30gは約${K18_30G}円【${priceDateJa}更新】`,
   description:
-    "金ブレスレットの買取相場を毎日更新。18金喜平ブレスレット10g・20g・30g・50gの目安は「本日のK18 1g買取価格×重量」で即計算。テニスブレスレットのダイヤ評価、切れた・刻印なしでも売れる理由、カルティエ等ブランド品の査定ポイントまで解説。",
+    "金ブレスレットの買取相場を毎日更新。18金喜平ブレスレット10g・20g・30g・50gの目安は「本日のK18 1g買取価格×重量」で計算できます。テニスブレスレットのダイヤ評価、切れた・刻印なしでも売れる理由、カルティエ等ブランド品の査定ポイントまで解説。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-bracelet-kaitori/" },
 };
 
@@ -79,7 +79,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8">
       <h3 className="font-bold text-base mb-3 text-center">金ブレスレットの無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">ブレスレットの買取価格は業者によって差があります。複数社で比較して最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">ブレスレットの買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -118,9 +118,9 @@ export default function KinBraceletKaitoriPage() {
 
         <p>金のブレスレットやバングルは、<strong>ネックレスに次いで買取に持ち込まれることの多い金製品</strong>です。特に喜平ブレスレットやバングルは重量があるため、金価格が高騰している現在、<strong>驚くほどの高額買取</strong>が期待できます。</p>
 
-        <p>「金のブレスレットっていくらで売れる？」「喜平ブレスの相場は？」「壊れたバングルでも売れる？」——この記事では、金ブレスレット・バングルの<strong>種類別・純度別の買取相場、高く売るコツ</strong>を徹底解説します。</p>
+        <p>「金のブレスレットっていくらで売れる？」「喜平ブレスの相場は？」「壊れたバングルでも売れる？」——この記事では、金ブレスレット・バングルの<strong>種類別・純度別の買取相場、高く売るコツ</strong>を解説します。</p>
 
-        <p>この記事を読めば以下のことがわかります。</p>
+        <p>この記事では、以下の内容をご説明します。</p>
         <ul>
           <li>金ブレスレット・バングルの純度別・重量別の最新買取相場（毎日自動更新）</li>
           <li>喜平ブレスレット10g・20g・30g・50gの重量帯別の目安の計算方法</li>
@@ -189,11 +189,11 @@ export default function KinBraceletKaitoriPage() {
           <li><strong>ダイヤ部分</strong>: 総カラット数と品質（4C = カラット・カラー・クラリティ・カット）で査定額が大きく変わり、<strong>鑑定書（グレーディングレポート）の有無</strong>でも評価が変わります。事前の自己計算は困難で、実際の査定が必須です</li>
         </ul>
 
-        <p>正直なところ、テニスブレスレットは「金部分は今日の相場で読める・ダイヤ部分は査定してみないとわからない」というのが実態です。メレダイヤ（小粒ダイヤ）中心の場合はダイヤの評価が控えめになることも多い一方、1粒が大きい場合は金の価値を上回ることもあります。ダイヤの査定基準は<Link href="/articles/diamond-kaitori/" className="text-accent hover:underline">ダイヤモンド買取ガイド</Link>で詳しく解説しています。</p>
+        <p>テニスブレスレットは「金部分は今日の相場で読める・ダイヤ部分は査定してみないとわからない」というのが実態です。メレダイヤ（小粒ダイヤ）中心の場合はダイヤの評価が控えめになることも多い一方、1粒が大きい場合は金の価値を上回ることもあります。ダイヤの査定基準は<Link href="/articles/diamond-kaitori/" className="text-accent hover:underline">ダイヤモンド買取ガイド</Link>で詳しく解説しています。</p>
 
         <h2>切れた・片方だけ・刻印なしでも売れる？</h2>
 
-        <p>結論から言うと、<strong>すべて売れます</strong>。金の買取は地金としての「重量 × 純度」で評価されるため、製品としての完成度は査定額にほぼ影響しません。</p>
+        <p><strong>すべて売れます</strong>。金の買取は地金としての「重量 × 純度」で評価されるため、製品としての完成度は査定額にほぼ影響しません。</p>
 
         <ul>
           <li><strong>チェーンが切れた・留め具が壊れた</strong>: 問題なく買取可能。修理せずそのまま売る方が、修理代の分だけ手元に残る額が多くなるのが普通です</li>
@@ -207,15 +207,15 @@ export default function KinBraceletKaitoriPage() {
 
         <p>カルティエやティファニーなどのブランドブレスレットは、<strong>「地金価値」＋「ブランド価値」の二重評価</strong>になります。金買取専門店に持ち込むと地金価値（重量 × 純度）だけで査定されがちですが、人気モデルはそれを大きく上回る価格で取引されます。</p>
 
-        <p>カルティエのラブブレスレットなどは、<strong>金の素材価値の3〜5倍以上</strong>で取引されることもあります。ブランドブレスレットを売る場合は、金買取専門店だけでなく、<strong>ブランド買取専門店にも必ず見積もり</strong>を取りましょう。カルティエ製品の相場感は<Link href="/articles/cartier-kaitori/" className="text-accent hover:underline">カルティエ買取ガイド</Link>も参考にしてください。</p>
+        <p>カルティエのラブブレスレットなどは、<strong>金の素材価値の3〜5倍以上</strong>で取引されることもあります。ブランドブレスレットを売る場合は、金買取専門店だけでなく、<strong>ブランド買取専門店にも必ず見積もり</strong>を取ることをおすすめします。カルティエ製品の相場感は<Link href="/articles/cartier-kaitori/" className="text-accent hover:underline">カルティエ買取ガイド</Link>もご参照ください。</p>
 
         <h2>金ブレスレットを高く売る5つのコツ</h2>
 
         <h3>1. 複数の買取業者に見積もりを取る</h3>
-        <p>喜平ブレスレットのような高額品は、業者間の差が数万円になることも。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>の一括査定で効率的に比較しましょう。</p>
+        <p>喜平ブレスレットのような高額品は、業者間の差が数万円になることも。<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>の一括査定で効率的に比較することをおすすめします。</p>
 
         <h3>2. ブランド品は専門店にも見積もりを</h3>
-        <p>カルティエやティファニーのブレスレットは、ブランド買取店の方が圧倒的に高値です。金買取店とブランド買取店の両方に見積もりを取りましょう。</p>
+        <p>カルティエやティファニーのブレスレットは、ブランド買取店の方が高値となる傾向があります。金買取店とブランド買取店の両方に見積もりを取ることをおすすめします。</p>
 
         <h3>3. 付属品を揃える</h3>
         <p>保証書、箱、ケース、ドライバー（カルティエのラブブレスレットの場合）があると査定額が大幅にアップします。</p>
@@ -224,7 +224,7 @@ export default function KinBraceletKaitoriPage() {
         <p>デジタルスケール（0.1g単位）で重量を測っておくと、査定額の目安がわかり、<strong>不当に安い査定を出す業者を見抜けます</strong>。</p>
 
         <h3>5. 金相場が高いタイミングを狙う</h3>
-        <p>金の買取価格は毎日変動します。<Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金買取相場ページ</Link>で最新価格をチェックし、高いタイミングで売却しましょう。</p>
+        <p>金の買取価格は毎日変動します。<Link href="/articles/kin-kaitori-souba/" className="text-accent hover:underline">金買取相場ページ</Link>で最新価格をチェックし、高いタイミングで売却することをおすすめします。</p>
 
         <CtaBox />
 

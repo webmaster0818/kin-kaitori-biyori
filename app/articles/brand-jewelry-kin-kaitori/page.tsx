@@ -20,15 +20,15 @@ function BreadcrumbSchema() {
 
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-    { "@type": "Question", name: "ブランドジュエリーは地金として売るのと、ブランド品として売るのはどちらが得ですか？", acceptedAnswer: { "@type": "Answer", text: "ブランド・モデル・状態によります。人気ブランドの定番ライン（美品・付属品あり）はブランド価値評価の方が高くなることが多く、廃番品・傷みが強い品・マイナーラインは地金価値（重量×純度×当日相場）が下限の目安になります。両方の評価ができる業者で査定を受け、高い方で売るのが正解です。" } },
-    { "@type": "Question", name: "箱や保証書がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。ただしブランド価値評価では付属品（箱・保証書・鑑別書）の有無が査定額に影響します。付属品が無い場合でも、K18やPt製品なら地金価値が下支えになるため、価値がゼロになることはありません。" } },
+    { "@type": "Question", name: "ブランドジュエリーは地金として売るのと、ブランド品として売るのはどちらが得ですか？", acceptedAnswer: { "@type": "Answer", text: "ブランド・モデル・状態によります。人気ブランドの定番ライン（美品・付属品あり）はブランド価値評価の方が高くなることが多く、廃番品・傷みが強い品・マイナーラインは地金価値（重量×純度×当日相場）が下限の目安になります。両方の評価ができる業者で査定を受け、査定額の高い業者に売却することをおすすめします。" } },
+    { "@type": "Question", name: "箱や保証書がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。ただしブランド価値評価では付属品（箱・保証書・鑑別書）の有無が査定額に影響します。付属品がない場合でも、K18やPt製品なら地金価値が下支えになるため、価値がゼロになることはありません。" } },
     { "@type": "Question", name: "刻印が薄れたブランドジュエリーでも買取できますか？", acceptedAnswer: { "@type": "Answer", text: "できます。買取店は比重検査やX線分析で素材の純度を確認できるため、刻印が読めなくても地金として査定可能です。ブランドの真贋判定は刻印以外の要素（作り・仕上げ・付属品）も含めて行われます。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "ブランドジュエリー・時計の金買取ガイド", datePublished: "2026-07-11", dateModified: goldData.date, author: { "@type": "Organization", name: "金買取日和" }, publisher: { "@type": "Organization", name: "金買取日和", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "ブランドジュエリー・時計の金買取ガイド", datePublished: "2026-07-11", dateModified: goldData.date, author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -96,7 +96,7 @@ export default function BrandJewelryKinKaitoriPage() {
           <li><strong>ポンテヴェキオ</strong> — K18のカラーストーンジュエリー。地金価値＋宝石評価</li>
           <li><strong>スタージュエリー</strong> — K10・K18・Pt。素材価値＋ブランド価値</li>
         </ul>
-        <p>国産ブランドは海外ハイブランドに比べ中古ブランド市場が小さいため、<strong>K18・Ptの地金価値が査定の実質的な基準</strong>になるケースが多いです。当日の1g相場（<Link href="/articles/kin-kaitori-souba/">相場一覧</Link>）を確認してから売りましょう。</p>
+        <p>国産ブランドは海外ハイブランドに比べ中古ブランド市場が小さいため、<strong>K18・Ptの地金価値が査定の実質的な基準</strong>になるケースが多いです。当日の1g相場（<Link href="/articles/kin-kaitori-souba/">相場一覧</Link>）を確認してから売ることをおすすめします。</p>
 
         <h2 id="pearl">真珠ブランド（ミキモト・タサキ）</h2>
         <ul>

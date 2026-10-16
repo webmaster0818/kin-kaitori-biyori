@@ -57,8 +57,8 @@ function FaqSchema() {
     mainEntity: [
       { "@type": "Question", name: "梅田と心斎橋、どちらが高く売れる？", acceptedAnswer: { "@type": "Answer", text: "業者ごとに得意分野や査定基準が異なるため、エリアで一概には言えません。梅田・心斎橋の両方で見積もりを取って比較するのがおすすめです。" } },
       { "@type": "Question", name: "梅田の買取店は何時まで営業？", acceptedAnswer: { "@type": "Answer", text: "店によって異なります。公式で確認できた梅田の3店では、ゴールドプラザ 大阪梅田本店が19時、大黒屋ブランド館 梅田店が19時30分、なんぼや 梅田本店が21時（最終受付20時30分）までです（2026年10月12日確認）。" } },
-      { "@type": "Question", name: "梅田から出張買取は呼べる？", acceptedAnswer: { "@type": "Answer", text: "可能。ウリエルは公式の出張対応エリアに大阪府を含めています（一部対応できない市町村あり）。大阪に本社がある福ちゃんも出張買取を行っていますが、対応地域は公式サイトに記載がないため、申し込み時に確認してください。" } },
-      { "@type": "Question", name: "梅田で土日もOK？", acceptedAnswer: { "@type": "Answer", text: "なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前に確認してください（2026年10月12日確認）。" } },
+      { "@type": "Question", name: "梅田から出張買取は呼べる？", acceptedAnswer: { "@type": "Answer", text: "可能。ウリエルは公式の出張対応エリアに大阪府を含めています（一部対応できない市町村あり）。大阪に本社がある福ちゃんも出張買取を行っていますが、対応地域は公式サイトに記載がないため、申し込み時にご確認ください。" } },
+      { "@type": "Question", name: "梅田で土日に利用できる店舗はありますか？", acceptedAnswer: { "@type": "Answer", text: "なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前にご確認ください（2026年10月12日確認）。" } },
       { "@type": "Question", name: "地下街の業者と地上の業者の差は？", acceptedAnswer: { "@type": "Answer", text: "地下街は梅田駅から直結でアクセス良好、地上は店舗が広く落ち着いて査定可。" } },
     ],
   };
@@ -79,7 +79,7 @@ function CtaBox() {
   return (
     <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-6 my-8 not-prose">
       <h3 className="font-bold text-base mb-3 text-center">金製品の無料査定はこちら</h3>
-      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の比較で最高値を狙いましょう。</p>
+      <p className="text-sm text-warm-gray text-center mb-4">金製品の買取価格は業者によって差があります。複数社の査定額を比較することをおすすめします。</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
@@ -153,11 +153,11 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田から出張買取は呼べる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">可能。ウリエルは公式の出張対応エリアに大阪府を含めています（一部対応できない市町村あり）。大阪に本社がある福ちゃんも出張買取を行っていますが、対応地域は公式サイトに記載がないため、申し込み時に確認してください。</p>
+  <p className="mt-3 text-sm leading-relaxed">可能。ウリエルは公式の出張対応エリアに大阪府を含めています（一部対応できない市町村あり）。大阪に本社がある福ちゃんも出張買取を行っていますが、対応地域は公式サイトに記載がないため、申し込み時にご確認ください。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
-  <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田で土日もOK？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前に確認してください（2026年10月12日確認）。</p>
+  <summary className="font-bold cursor-pointer flex justify-between items-center"><span>梅田で土日に利用できる店舗はありますか？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
+  <p className="mt-3 text-sm leading-relaxed">なんぼや 梅田本店（定休日なし）と大黒屋ブランド館 梅田店（年中無休・年末年始を除く）は土日も営業しています。ゴールドプラザ 大阪梅田本店は公式の店舗ページに定休日の記載がないため、来店前にご確認ください（2026年10月12日確認）。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>地下街の業者と地上の業者の差は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
