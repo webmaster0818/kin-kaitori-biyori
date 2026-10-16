@@ -346,3 +346,9 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 ### 2026-10-17 copy-audit 指摘の残り（完全ガイド・徹底比較）
 - 本番 copy-audit で「完全ガイド」7/61・「ズバリ」2（サイズバリエーション／コレクターズバリューの誤検出）。「〜と高く売る完全ガイド」→「〜と高く売る方法」、「完全ガイド」→「ガイド」、「徹底比較」→「比較」、「徹底解説」「徹底ガイド」→「解説」、「メリデメ」→「メリット・デメリット」。articles-metadata.json の手数料「8社」→「13社」（ページ本体は13社）。生成器 generate-top15-articles.py / phase2-add-related-articles.py / phase3-add-dealer-table.py も同じ文言に。
 - out/ の §8 NG 0・precheck 全項目OK・copy-audit --n 60 で NG 0。source 8f76ff4 / deploy 5ea14c1f5。
+
+### 2026-10-17 形容詞＋「です」の文末を言い換え（〜が多いです／〜が高いです／〜しやすいです 等）
+- 対象: 記事31本（nisemono/jundo/shinju/daikichi-vs-nanboya/k10/k14/k18/k22/k24/cartier/diamond/necklace/bracelet/kowareta/okachimachi ほか）・components/ExpertQA.tsx・生成器 generate-top15-articles.py / gen-more-articles.py。「〜ことが多いです」→「〜のが一般的です／〜ケースが多く見られます／〜傾向があります」、「〜の可能性が高いです」→「〜である可能性が高いと考えられます／といえます」、「〜に弱いです」→「〜に弱い性質があります」等、文ごとに書き換え（数値・事実は不変）。「望ましいです」→「おすすめします」、「銀座くらいです」→「銀座に限られます」も同時に。引用（口コミ・公式文言）の該当は 0 件。
+- 計測（out/・html+index.txt・JSON-LD の \u は復号して集計）: 前 186 件（60 ファイル）→ 後 0。広い (い|しい)です も 0（幸いです 以外）。precheck ✅全項目OK（296頁）。href・外部 src は本番（deploy repo）と完全一致、ASP 計測コード 0。
+- ⚠️ deploy 5ea14c1f5 で `__next*.txt` 2,066 件が deploy repo に入っていた → 今回の rsync --delete で除去（日次スクリプトと同じ状態に戻した）。
+- source aa991ff ／ deploy d0c115ff0。
