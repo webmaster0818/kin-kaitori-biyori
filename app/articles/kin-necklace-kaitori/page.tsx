@@ -10,6 +10,13 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -33,10 +40,10 @@ function FaqSchema() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "金のネックレスの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ネックレスなら約11万円前後の買取額になります。" } },
+      { "@type": "Question", name: "金のネックレスの買取相場はいくらですか？", acceptedAnswer: { "@type": "Answer", text: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ネックレスなら約" + _gm(_GP.k18 * 10) + "万円前後（" + GP_DATE + "時点の目安）です。" } },
       { "@type": "Question", name: "切れたネックレスでも買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、チェーンが切れたネックレスでも問題なく買取できます。金の買取は素材の重量と純度がベースなので、破損していても金としての価値は変わりません。" } },
       { "@type": "Question", name: "金のネックレスの重さの目安は？", acceptedAnswer: { "@type": "Answer", text: "K18ネックレスの一般的な重量は、細いチェーンで2〜5g、標準的なチェーンで5〜10g、太めのチェーンで10〜20g、喜平ネックレスで20〜100g程度です。" } },
-      { "@type": "Question", name: "喜平ネックレスは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、喜平ネックレスは金の含有量（重量）が多いため、高額買取が期待できます。50gのK18六面ダブル喜平なら約57万円前後の買取目安です。喜平はデザイン性も評価されやすいチェーンです。" } },
+      { "@type": "Question", name: "喜平ネックレスは高く売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、喜平ネックレスは金の含有量（重量）が多いため、高額買取が期待できます。50gのK18六面ダブル喜平なら約" + _gm(_GP.k18 * 50) + "万円前後（" + GP_DATE + "時点の目安）です。喜平はデザイン性も評価されやすいチェーンです。" } },
       { "@type": "Question", name: "ペンダントトップの宝石も評価してもらえますか？", acceptedAnswer: { "@type": "Answer", text: "はい、ペンダントトップにダイヤモンドや宝石がセットされている場合は、金の素材価値に加えて宝石の価値も評価されます。鑑定書がある場合は必ず持参しましょう。" } },
     ],
   };
@@ -263,7 +270,7 @@ export default function KinNecklaceKaitoriPage() {
           {[
             {
               q: "金のネックレスの買取相場はいくらですか？",
-              a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。10gのK18ネックレスなら約114,000円、50gの喜平ネックレスなら約570,000円の買取額になります。純度（K24/K18/K14/K10）と重量で価格が決まります。",
+              a: "金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。" + GP_DATE + "時点の目安では、10gのK18ネックレスなら約" + _gy(Math.round(_GP.k18) * 10) + "円、50gのK18喜平ネックレスなら約" + _gy(Math.round(_GP.k18) * 50) + "円です。純度（K24/K18/K14/K10）と重量で価格が決まります。",
             },
             {
               q: "チェーンが切れたネックレスでも売れますか？",
@@ -319,7 +326,7 @@ export default function KinNecklaceKaitoriPage() {
 
         <p>金のネックレスは、最も身近で最も多く買取に出される金製品です。チェーンが切れていても、デザインが古くても、刻印が消えていても——<strong>金の素材としての価値は変わりません</strong>。</p>
 
-        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>10gのネックレスなら約11万円</strong>、<strong>50gの喜平ネックレスなら約57万円</strong>の買取が期待できます。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。{GP_DATE}時点の目安では、<strong>10gのK18ネックレスなら約{_gm(_GP.k18 * 10)}万円</strong>、<strong>50gのK18喜平ネックレスなら約{_gm(_GP.k18 * 50)}万円</strong>です。</p>
 
         <p>金ネックレスを少しでも高く売るために、以下のポイントを実践してください。</p>
 

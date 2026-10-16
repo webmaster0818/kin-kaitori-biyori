@@ -6,6 +6,13 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -218,7 +225,7 @@ export default function KinTakakuUruPage() {
         <p>手間を省きたい場合は、<strong>一括査定サービス</strong>の利用が最も効率的です。一度の入力で複数業者に同時に査定依頼を出せるため、最短で最高値の業者が見つかります。</p>
 
         <blockquote>
-          <p><strong>実例：</strong>K18ネックレス（30g）を3社に見積もりした場合、最安値318,000円・最高値348,000円と、<strong>3万円もの差</strong>が出ることがあります。たった数分の手間で3万円の差は大きいです。</p>
+          <p><strong>例：</strong>K18ネックレス（30g）は{GP_DATE}時点の目安で約{_gm(_GP.k18 * 30)}万円。業者間で1gあたり1,000円の差があれば、<strong>3万円もの差</strong>になります。たった数分の手間で3万円の差は大きいです。</p>
         </blockquote>
 
         <h2>コツ2：金相場が高いタイミングで売る</h2>

@@ -9,6 +9,14 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -141,7 +149,7 @@ export default function KinYubiwaKaitoriPage() {
           
         </div>
 
-        <p>メンズの印台リングは<strong>10〜30gと重量がある</strong>ため、K18であれば10万円以上の高額買取が期待できます。逆にK10のピンキーリングは1〜3gと軽いため、1本の買取額は6,000〜18,000円程度です。</p>
+        <p>メンズの印台リングは<strong>10〜30gと重量がある</strong>ため、K18であれば10万円以上の高額買取が期待できます。逆にK10のピンキーリングは1〜3gと軽いため、1本の買取額は約{_gy(_GP.k10 * 1)}〜{_gy(_GP.k10 * 3)}円（{GP_DATE}時点の目安）です。</p>
 
         <h2>結婚指輪・婚約指輪の買取</h2>
 
@@ -149,7 +157,7 @@ export default function KinYubiwaKaitoriPage() {
 
         <p>結婚指輪はK18またはPt900が一般的です。シンプルなデザインが多く、重量は3〜5g程度。<strong>ペア（2本セット）で売却</strong>すると合計重量が増えるため、まとまった買取額になります。</p>
 
-        <p>K18の結婚指輪をペアで売る場合（合計8g程度）、<strong>約91,200円</strong>の買取目安です。Pt900の場合は約37,600円です。現在は金がプラチナより高値のため、K18の方が高額になります。</p>
+        <p>K18の結婚指輪をペアで売る場合（合計8g程度）、<strong>約{_gy(Math.round(_GP.k18) * 8)}円</strong>の買取目安です（{GP_DATE}時点）。Pt900の場合は約{_gy(_GT.pt_buyback_per_g * 0.9 * 8)}円です。現在は金がプラチナより高値のため、K18の方が高額になります。</p>
 
         <h3>婚約指輪（エンゲージリング）</h3>
 
@@ -230,7 +238,7 @@ export default function KinYubiwaKaitoriPage() {
           {[
             {
               q: "結婚指輪は1本いくらで売れますか？",
-              a: "K18の結婚指輪（4g程度）なら約45,600円、Pt900（4g程度）なら約18,800円が直近の買取目安です。ペア（2本）で売ると合計額は倍になります。",
+              a: "K18の結婚指輪（4g程度）なら約" + _gy(Math.round(_GP.k18) * 4) + "円（" + GP_DATE + "時点の目安）です。Pt900はプラチナ相場で決まるため、当日のプラチナ買取価格×純度×重量で確認してください。ペア（2本）で売ると合計額は倍になります。",
             },
             {
               q: "名前や日付の刻印が入っていても売れますか？",
@@ -285,7 +293,7 @@ export default function KinYubiwaKaitoriPage() {
 
         <p>金の指輪は、サイズが合わなくなっても、デザインが古くなっても、宝石が取れてしまっても——<strong>金の素材としての価値は変わりません</strong>。</p>
 
-        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>5gの指輪なら約57,000円</strong>、<strong>ダイヤ付きのブランドリングなら10万円以上</strong>の買取が期待できます。</p>
+        <p>金の買取相場は毎日変動します。最新の目安は本ページ冒頭の「本日の買取相場」カードと重量別早見表（毎日自動更新）でご確認ください。<strong>5gのK18指輪なら約{_gy(Math.round(_GP.k18) * 5)}円</strong>（{GP_DATE}時点の目安）、<strong>ダイヤ付きのブランドリングなら10万円以上</strong>の買取が期待できます。</p>
 
         <p>指輪を少しでも高く売るために、以下のポイントを実践してください。</p>
 

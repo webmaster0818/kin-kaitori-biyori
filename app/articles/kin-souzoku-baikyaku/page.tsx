@@ -6,6 +6,17 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 計算例（取得費の有無）: 売却額は日次の純度換算値×100gから毎朝再計算。取得費45万円は仮定 */
+const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _man = (n: number) => (Math.round(n / 1000) / 10).toLocaleString();
+const SZ_SALE = Math.round(_LPP.k24) * 100;
+const SZ_COST = 450000;
+const SZ_GAIRYAKU = Math.round(SZ_SALE * 0.05);
+const SZ_TAX_A = Math.max(0, (SZ_SALE - SZ_COST - 500000) / 2);
+const SZ_TAX_B = Math.max(0, (SZ_SALE - SZ_GAIRYAKU - 500000) / 2);
+const SZ_DIFF = SZ_TAX_B - SZ_TAX_A;
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -109,10 +120,10 @@ export default function KinSouzokuBaikyakuPage() {
         <h3>取得費がわからない場合の注意</h3>
         <p>故人が金を購入した際の<strong>領収書や契約書</strong>が見つからない場合、売却額の5%が取得費として計算されます。これは非常に不利です。</p>
         <blockquote>
-          <p><strong>具体例：</strong>相続した100gのインゴットを1,520万円で売却した場合<br />
-          領収書あり（取得費500万円）：課税対象額 = (1,520万 - 500万 - 50万) x 1/2 = 485万円<br />
-          領収書なし（取得費5%）：課税対象額 = (1,520万 - 76万 - 50万) x 1/2 = 697万円<br />
-          <strong>差額：212万円</strong>（税率30%なら約64万円の税金差）</p>
+          <p><strong>具体例：</strong>相続した100gのインゴットを、{LP_DATE}時点の相場（1g={Math.round(_LPP.k24).toLocaleString()}円・合計約{_man(SZ_SALE)}万円）で売却した場合。故人は15年前に1g=4,500円（100gで45万円）で購入していたと仮定します（保有5年超）。<br />
+          領収書あり（取得費45万円）：課税対象額 = ({_man(SZ_SALE)}万 - 45万 - 50万) x 1/2 = 約{_man(SZ_TAX_A)}万円<br />
+          領収書なし（取得費5%）：課税対象額 = ({_man(SZ_SALE)}万 - {_man(SZ_GAIRYAKU)}万 - 50万) x 1/2 = 約{_man(SZ_TAX_B)}万円<br />
+          <strong>差額：約{_man(SZ_DIFF)}万円</strong>（税率30%なら約{_man(SZ_DIFF * 0.3)}万円の税金差。購入時の価格が高いほど差は大きくなります）</p>
         </blockquote>
         <p>故人の書類をよく探し、領収書・契約書・金融機関の取引明細などを見つけましょう。</p>
 

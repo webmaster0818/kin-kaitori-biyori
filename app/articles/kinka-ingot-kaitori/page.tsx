@@ -7,12 +7,29 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
 const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 const LP_K24 = Math.round(_LPP.k24).toLocaleString();
 const LP_OZ = Math.round((_LPP.k24 * 31.1) / 10000).toLocaleString();
+/* 重量別の目安と税金シミュレーション: 日次の純度換算値から毎朝再計算（購入額は仮定） */
+const _manI = (n: number) => Math.round(n / 10000).toLocaleString();
+const IG_100 = Math.round(_LPP.k24) * 100;
+const IG_500 = Math.round(_LPP.k24) * 500;
+const IG_1K = Math.round(_LPP.k24) * 1000;
+const IG_C1_GAIN = IG_100 - 500000;
+const IG_C1_AFTER = Math.max(0, IG_C1_GAIN - 500000);
+const IG_C2_GAIN = IG_500 - 5000000;
+const IG_C2_AFTER = Math.max(0, IG_C2_GAIN - 500000);
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
@@ -124,7 +141,7 @@ function FaqSchema() {
         name: "記念金貨は額面以上で買い取ってもらえますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい、多くの記念金貨は額面を大きく上回る価格で買い取ってもらえます。天皇陛下御在位記念金貨（額面1万円、純金20g）は約30万円以上、天皇陛下御即位記念金貨（額面10万円、純金30g）は約45万円以上で取引されています。金の素材価値に加え、コレクターズプレミアムが付く場合もあります。",
+          text: "はい、多くの記念金貨は額面を大きく上回る価格で買い取ってもらえます。天皇陛下御在位60年記念10万円金貨（純金20g）は地金価値だけで約" + _gm(_GP.k24 * 20) + "万円、天皇陛下御即位記念10万円金貨（純金30g）は約" + _gm(_GP.k24 * 30) + "万円が目安です（" + GP_DATE + "時点）。金の素材価値に加え、コレクターズプレミアムが付く場合もあります。",
         },
       },
     ],
@@ -191,17 +208,17 @@ export default function KinkaIngotKaitoriPage() {
                   <th>発行国</th>
                   <th>純度</th>
                   <th>重量</th>
-                  <th>買取価格の目安（2026年4月）</th>
+                  <th>地金価値の目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>メイプルリーフ金貨</strong></td><td>カナダ</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約470,000〜480,000円</td></tr>
-                <tr><td><strong>ウィーン金貨ハーモニー</strong></td><td>オーストリア</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約470,000〜480,000円</td></tr>
-                <tr><td><strong>カンガルー金貨</strong></td><td>オーストラリア</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約470,000〜480,000円</td></tr>
-                <tr><td><strong>パンダ金貨</strong></td><td>中国</td><td>K24（99.99%）</td><td>30g</td><td>約455,000〜465,000円</td></tr>
-                <tr><td><strong>アメリカンイーグル金貨</strong></td><td>アメリカ</td><td>K22（91.67%）</td><td>1oz（33.93g）※金含有量は31.1g</td><td>約470,000〜480,000円</td></tr>
-                <tr><td><strong>クルーガーランド金貨</strong></td><td>南アフリカ</td><td>K22（91.67%）</td><td>1oz（33.93g）※金含有量は31.1g</td><td>約465,000〜475,000円</td></tr>
-                <tr><td><strong>ブリタニア金貨</strong></td><td>イギリス</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約470,000〜480,000円</td></tr>
+                <tr><td><strong>メイプルリーフ金貨</strong></td><td>カナダ</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td><strong>ウィーン金貨ハーモニー</strong></td><td>オーストリア</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td><strong>カンガルー金貨</strong></td><td>オーストラリア</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td><strong>パンダ金貨</strong></td><td>中国</td><td>K24（99.99%）</td><td>30g</td><td>約{_gy(_GP.k24 * 30)}円</td></tr>
+                <tr><td><strong>アメリカンイーグル金貨</strong></td><td>アメリカ</td><td>K22（91.67%）</td><td>1oz（33.93g）※金含有量は31.1g</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td><strong>クルーガーランド金貨</strong></td><td>南アフリカ</td><td>K22（91.67%）</td><td>1oz（33.93g）※金含有量は31.1g</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td><strong>ブリタニア金貨</strong></td><td>イギリス</td><td>K24（99.99%）</td><td>1oz（31.1g）</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
               </tbody>
             </table>
           </div>
@@ -218,15 +235,15 @@ export default function KinkaIngotKaitoriPage() {
                 <tr>
                   <th>サイズ</th>
                   <th>重量</th>
-                  <th>買取価格の目安（K24金貨の場合）</th>
+                  <th>買取価格の目安（K24金貨・{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1/20oz</td><td>約1.56g</td><td>約23,000〜24,000円</td></tr>
-                <tr><td>1/10oz</td><td>約3.11g</td><td>約47,000〜48,000円</td></tr>
-                <tr><td>1/4oz</td><td>約7.78g</td><td>約118,000〜120,000円</td></tr>
-                <tr><td>1/2oz</td><td>約15.55g</td><td>約235,000〜240,000円</td></tr>
-                <tr><td><strong>1oz</strong></td><td><strong>約31.1g</strong></td><td><strong>約470,000〜480,000円</strong></td></tr>
+                <tr><td>1/20oz</td><td>約1.56g</td><td>約{_gy(_GP.k24 * 1.56)}円</td></tr>
+                <tr><td>1/10oz</td><td>約3.11g</td><td>約{_gy(_GP.k24 * 3.11)}円</td></tr>
+                <tr><td>1/4oz</td><td>約7.78g</td><td>約{_gy(_GP.k24 * 7.78)}円</td></tr>
+                <tr><td>1/2oz</td><td>約15.55g</td><td>約{_gy(_GP.k24 * 15.55)}円</td></tr>
+                <tr><td><strong>1oz</strong></td><td><strong>約31.1g</strong></td><td><strong>約{_gy(_GP.k24 * 31.1)}円</strong></td></tr>
               </tbody>
             </table>
           </div>
@@ -242,15 +259,15 @@ export default function KinkaIngotKaitoriPage() {
                   <th>金貨名</th>
                   <th>額面</th>
                   <th>重量・純度</th>
-                  <th>買取価格の目安</th>
+                  <th>地金価値の目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>天皇陛下御在位60年記念10万円金貨</strong></td><td>10万円</td><td>20g・K24</td><td>約300,000〜320,000円</td></tr>
-                <tr><td><strong>天皇陛下御即位記念10万円金貨</strong></td><td>10万円</td><td>30g・K24</td><td>約455,000〜475,000円</td></tr>
-                <tr><td><strong>皇太子殿下御成婚記念5万円金貨</strong></td><td>5万円</td><td>18g・K24</td><td>約270,000〜290,000円</td></tr>
-                <tr><td><strong>長野オリンピック記念1万円金貨</strong></td><td>1万円</td><td>15.6g・K24</td><td>約235,000〜250,000円</td></tr>
-                <tr><td><strong>2002FIFAワールドカップ記念1万円金貨</strong></td><td>1万円</td><td>15.6g・K24</td><td>約235,000〜250,000円</td></tr>
+                <tr><td><strong>天皇陛下御在位60年記念10万円金貨</strong></td><td>10万円</td><td>20g・K24</td><td>約{_gy(_GP.k24 * 20)}円</td></tr>
+                <tr><td><strong>天皇陛下御即位記念10万円金貨</strong></td><td>10万円</td><td>30g・K24</td><td>約{_gy(_GP.k24 * 30)}円</td></tr>
+                <tr><td><strong>皇太子殿下御成婚記念5万円金貨</strong></td><td>5万円</td><td>18g・K24</td><td>約{_gy(_GP.k24 * 18)}円</td></tr>
+                <tr><td><strong>長野オリンピック記念1万円金貨</strong></td><td>1万円</td><td>15.6g・K24</td><td>約{_gy(_GP.k24 * 15.6)}円</td></tr>
+                <tr><td><strong>2002FIFAワールドカップ記念1万円金貨</strong></td><td>1万円</td><td>15.6g・K24</td><td>約{_gy(_GP.k24 * 15.6)}円</td></tr>
               </tbody>
             </table>
           </div>
@@ -297,24 +314,24 @@ export default function KinkaIngotKaitoriPage() {
               <thead>
                 <tr>
                   <th>重量</th>
-                  <th>買取価格の目安（2026年4月）</th>
+                  <th>買取価格の目安（{GP_DATE}時点）</th>
                   <th>税金の注意点</th>
                 </tr>
               </thead>
               <tbody>
                 <tr><td>1g</td><td>約{LP_K24}円</td><td>—</td></tr>
                 <tr><td>5g</td><td>約{Math.round(_LPP.k24 * 5).toLocaleString()}円</td><td>—</td></tr>
-                <tr><td>10g</td><td>約150,000〜152,000円</td><td>—</td></tr>
-                <tr><td>20g</td><td>約300,000〜304,000円</td><td>200万円超で支払調書</td></tr>
-                <tr><td>50g</td><td>約750,000〜760,000円</td><td>200万円超で支払調書</td></tr>
-                <tr><td>100g</td><td>約1,500,000〜1,540,000円</td><td>200万円超で支払調書</td></tr>
-                <tr><td>500g</td><td>約7,500,000〜7,700,000円</td><td>支払調書対象</td></tr>
+                <tr><td>10g</td><td>約{_gy(_GP.k24 * 10)}円</td><td>—</td></tr>
+                <tr><td>20g</td><td>約{_gy(_GP.k24 * 20)}円</td><td>200万円超で支払調書</td></tr>
+                <tr><td>50g</td><td>約{_gy(_GP.k24 * 50)}円</td><td>200万円超で支払調書</td></tr>
+                <tr><td>100g</td><td>約{_gy(_GP.k24 * 100)}円</td><td>200万円超で支払調書</td></tr>
+                <tr><td>500g</td><td>約{_gy(_GP.k24 * 500)}円</td><td>支払調書対象</td></tr>
                 <tr><td><strong>1kg</strong></td><td><strong>約{Math.round(_LPP.k24 * 1000).toLocaleString()}円</strong></td><td>支払調書対象</td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>インゴットの買取は重量が大きいほど高額になります。100gのインゴットで約150万円、500gで約750万円、1kgで約1,500万円です。<strong>業者間で1gあたり数百円の差があれば、合計で数万円〜数十万円の差</strong>になるため、必ず複数業者に見積もりを取りましょう。</p>
+          <p>インゴットの買取は重量が大きいほど高額になります。{LP_DATE}時点の目安では、100gのインゴットで約{_manI(IG_100)}万円、500gで約{_manI(IG_500)}万円、1kgで約{_manI(IG_1K)}万円です（田中貴金属の公表値をもとに純度換算・毎朝自動更新）。<strong>業者間で1gあたり数百円の差があれば、合計で数万円〜数十万円の差</strong>になるため、必ず複数業者に見積もりを取りましょう。</p>
 
           <blockquote>
             <p><strong>アッセイカード（品質保証書）について：</strong>インゴットには通常、製造元が発行するアッセイカード（品質保証書）が付属しています。これがあると純度が保証されるため、スムーズに買取が進みます。紛失した場合でも買取は可能ですが、X線分析が必要になることがあります。</p>
@@ -478,22 +495,22 @@ export default function KinkaIngotKaitoriPage() {
 
           <h3>具体的な税金シミュレーション</h3>
 
-          <p><strong>ケース1：</strong>10年前に100gのインゴットを50万円で購入し、2026年に150万円で売却した場合</p>
+          <p><strong>ケース1：</strong>10年前に100gのインゴットを50万円で購入し（仮定）、{LP_DATE}時点の目安（約{_manI(IG_100)}万円）で売却した場合</p>
 
           <ul>
-            <li>売却益：150万円 - 50万円 = 100万円</li>
-            <li>特別控除：100万円 - 50万円 = 50万円</li>
-            <li>長期譲渡所得（5年超）：50万円 x 1/2 = 25万円が他の所得に合算</li>
-            <li>所得税率20%の場合：25万円 x 20% = <strong>約5万円の税金</strong></li>
+            <li>売却益：{_manI(IG_100)}万円 - 50万円 = {_manI(IG_C1_GAIN)}万円</li>
+            <li>特別控除：{_manI(IG_C1_GAIN)}万円 - 50万円 = {_manI(IG_C1_AFTER)}万円</li>
+            <li>長期譲渡所得（5年超）：{_manI(IG_C1_AFTER)}万円 x 1/2 = 約{_manI(IG_C1_AFTER / 2)}万円が他の所得に合算</li>
+            <li>所得税率20%の場合：約{_manI(IG_C1_AFTER / 2)}万円 x 20% = <strong>約{_manI(IG_C1_AFTER / 2 * 0.2)}万円の税金</strong></li>
           </ul>
 
-          <p><strong>ケース2：</strong>3年前に500gのインゴットを600万円で購入し、2026年に750万円で売却した場合</p>
+          <p><strong>ケース2：</strong>3年前に500gのインゴットを500万円（1g=10,000円）で購入し（仮定）、{LP_DATE}時点の目安（約{_manI(IG_500)}万円）で売却した場合</p>
 
           <ul>
-            <li>売却益：750万円 - 600万円 = 150万円</li>
-            <li>特別控除：150万円 - 50万円 = 100万円</li>
-            <li>短期譲渡所得（5年以内）：100万円が他の所得に合算</li>
-            <li>所得税率20%の場合：100万円 x 20% = <strong>約20万円の税金</strong></li>
+            <li>売却益：{_manI(IG_500)}万円 - 500万円 = {_manI(IG_C2_GAIN)}万円</li>
+            <li>特別控除：{_manI(IG_C2_GAIN)}万円 - 50万円 = {_manI(IG_C2_AFTER)}万円</li>
+            <li>短期譲渡所得（5年以内）：{_manI(IG_C2_AFTER)}万円が他の所得に合算</li>
+            <li>所得税率20%の場合：{_manI(IG_C2_AFTER)}万円 x 20% = <strong>約{_manI(IG_C2_AFTER * 0.2)}万円の税金</strong></li>
           </ul>
 
           <blockquote>
@@ -576,7 +593,7 @@ export default function KinkaIngotKaitoriPage() {
               },
               {
                 q: "記念金貨は額面以上で買い取ってもらえますか？",
-                a: "はい、多くの記念金貨は額面を大きく上回る価格で買い取ってもらえます。例えば天皇陛下御在位60年記念10万円金貨（純金20g）は約30万円以上、天皇陛下御即位記念10万円金貨（純金30g）は約45万円以上で取引されています。未使用品でケースや証明書が揃っている場合は、さらにコレクターズプレミアムが付くことがあります。",
+                a: "はい、多くの記念金貨は額面を大きく上回る価格で買い取ってもらえます。例えば天皇陛下御在位60年記念10万円金貨（純金20g）は地金価値だけで約" + _gm(_GP.k24 * 20) + "万円、天皇陛下御即位記念10万円金貨（純金30g）は約" + _gm(_GP.k24 * 30) + "万円が目安です（" + GP_DATE + "時点）。未使用品でケースや証明書が揃っている場合は、さらにコレクターズプレミアムが付くことがあります。",
               },
             ].map((faq) => (
               <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
@@ -626,9 +643,9 @@ export default function KinkaIngotKaitoriPage() {
 
           <ul>
             <li><strong>メイプルリーフ金貨 1oz：</strong>約{LP_OZ}万円（{LP_DATE}時点）</li>
-            <li><strong>インゴット 100g：</strong>約150万〜154万円</li>
-            <li><strong>インゴット 500g：</strong>約750万〜770万円</li>
-            <li><strong>インゴット 1kg：</strong>約1,500万〜1,540万円</li>
+            <li><strong>インゴット 100g：</strong>約{_gm(_GP.k24 * 100)}万円</li>
+            <li><strong>インゴット 500g：</strong>約{_gm(_GP.k24 * 500)}万円</li>
+            <li><strong>インゴット 1kg：</strong>約{_gm(_GP.k24 * 1000)}万円</li>
           </ul>
 
           <p>金貨・インゴットの売却で気を付けるべきポイントは以下の3つです。</p>

@@ -5,6 +5,13 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -255,7 +262,7 @@ export default function CartierKaitoriPage() {
           </table>
         </div>
 
-        <p>K18素材のカルティエは、<strong>金相場の高騰</strong>により素材価値が底上げされています。例えば、ラブブレスレット（約30g）の場合、K18の素材価値だけで約33万〜35万円あり、そこにブランド価値が加わる形です。</p>
+        <p>K18素材のカルティエは、<strong>金相場の高騰</strong>により素材価値が底上げされています。例えば、ラブブレスレット（約30g）の場合、K18の素材価値だけで約{_gm(_GP.k18 * 30)}万円（{GP_DATE}時点の目安）あり、そこにブランド価値が加わる形です。</p>
 
         <h2>カルティエを高く売るための5つのポイント</h2>
 
@@ -295,7 +302,7 @@ export default function CartierKaitoriPage() {
             </thead>
             <tbody>
               <tr><td><strong>評価基準</strong></td><td>金の重量 x 相場のみ</td><td>ブランド価値 + 素材価値</td></tr>
-              <tr><td><strong>カルティエの場合</strong></td><td>素材価格のみ（ラブリング8gなら約9万円程度）</td><td>素材 + ブランド（同じリングで15〜25万円）</td></tr>
+              <tr><td><strong>カルティエの場合</strong></td><td>素材価格のみ（ラブリング8gなら約{_gm(_GP.k18 * 8)}万円程度）</td><td>素材 + ブランド（同じリングで15〜25万円）</td></tr>
               <tr><td><strong>付属品の影響</strong></td><td>ほぼなし</td><td>大きい（ギャランティカードで+5〜20%）</td></tr>
               <tr><td><strong>状態の影響</strong></td><td>ほぼなし（溶かすため）</td><td>大きい（傷・変色は減額対象）</td></tr>
               <tr><td><strong>向いているケース</strong></td><td>ノーブランドの金製品と一緒に売る場合</td><td>カルティエ単体で売る場合</td></tr>

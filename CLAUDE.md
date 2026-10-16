@@ -328,3 +328,6 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 ### 2026-10-16 仙台「なんぼや＝金・貴金属専門」・一括査定 title・業者の「専門」断定（朝ルーチン P3） ✅本番反映済み
 - sendai: なんぼや行を公式店舗ページ（nanboya.com/shop/miyagi/sendai-brandshop/・取扱ジャンル=ブランド総合/時計/金・貴金属/宝石/バッグ/食器/服/骨董品、営業時間は notice-status JSON で 10:00〜19:00 定休日なし）に合わせ「金・貴金属の専門店ではなく総合買取店」＋住所・徒歩分に。ブランド・ジャック「ブランド品・時計・貴金属の専門店（3店）」は公式表記どおりで据え置き。ikkatsu-satei-hikaku: title/desc「【2026年最新】主要5社…うるココ等の特徴・対応エリア」→「【2026年10月】ヒカカク！とウリドキの公式表記」（本文は3社が公式未確認・対応エリアの記載なし）、「業界最大級の提携業者数」「3〜5社」→公式表記「国内最大級」「最大20社」。sitewide grep: harrywinston リファスタ「金・プラチナ・ダイヤすべて専門査定」→公式「貴金属・宝石買取専門店」、kin-nobebo の固定価格「100g約152万円」（実勢の約7割）→日次の純度換算値に。generate-top15 も同期
 - 未対応: kin-souzoku-baikyaku「100gのインゴットを1,520万円で売却」・kin-kaitori-zeikin「100gを152万円」の計算例（重量と金額が実勢と合わない）
+
+### 2026-10-16（続き）重さ×金額の固定値をサイト全体で日次値に（朝ルーチン P1） ✅本番反映済み
+- souzoku「100gを1,520万円」→当日K24×100g（約220万円）＋取得費45万円（仮定と明記）で再計算／zeikin 例1・例2・5%ルールの売却額・税額を当日値から計算（例1・2は見出しだけ動的で明細が152万円固定＝食い違っていた）、例3 K18「20g 228,000円」は実勢だと30万円超で結論が崩れるため10gに。sitewide grep で同種（K18=11,400円/g・K24=15,200円/g 前提の4月値＝実勢の約7割、chain/pierce/rolex は逆に過大）を kinka-ingot（金貨・記念金貨・インゴット表・税金ケース）/souba/omosa/ihin/necklace/yubiwa/diamond/cartier/takaku-uru/chain/pierce/rolex/jundo/kowareta・kinba（「実査定事例」→計算例）/platinum/gin を `_GP`（purity_buyback_estimate_per_g）・`_GT`（pt/ag）で動的化。generate-top15 / gen-more も数値を外す・現水準に同期。⚠️JSON-LD が \u エスケープ文字列のページ（kin-chain）は rendered out で旧値を確認すること

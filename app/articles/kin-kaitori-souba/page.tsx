@@ -8,6 +8,14 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -289,15 +297,15 @@ export default function KinKaitoriSoubaPage() {
                 <tr>
                   <th>種類</th>
                   <th>重量</th>
-                  <th>買取相場の目安</th>
+                  <th>買取相場の目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>メイプルリーフ金貨（1oz）</td><td>31.1g</td><td>約470,000〜480,000円</td></tr>
-                <tr><td>ウィーン金貨ハーモニー（1oz）</td><td>31.1g</td><td>約470,000〜480,000円</td></tr>
-                <tr><td>カンガルー金貨（1oz）</td><td>31.1g</td><td>約470,000〜480,000円</td></tr>
-                <tr><td>金インゴット（100g）</td><td>100g</td><td>約1,510,000〜1,540,000円</td></tr>
-                <tr><td>金インゴット（500g）</td><td>500g</td><td>約7,550,000〜7,700,000円</td></tr>
+                <tr><td>メイプルリーフ金貨（1oz）</td><td>31.1g</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td>ウィーン金貨ハーモニー（1oz）</td><td>31.1g</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td>カンガルー金貨（1oz）</td><td>31.1g</td><td>約{_gy(_GP.k24 * 31.1)}円</td></tr>
+                <tr><td>金インゴット（100g）</td><td>100g</td><td>約{_gy(_GP.k24 * 100)}円</td></tr>
+                <tr><td>金インゴット（500g）</td><td>500g</td><td>約{_gy(_GP.k24 * 500)}円</td></tr>
               </tbody>
             </table>
           </div>

@@ -7,6 +7,13 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -139,7 +146,7 @@ export default function Page() {
             <li>ベゼル（金）: 約5〜10g</li>
             <li>センターリンク（金）: 約15〜25g</li>
             <li>合計金重量: 約20〜35g</li>
-            <li>金部分の素材価値: 20〜35g × ¥25,000/g = 約50〜85万円</li>
+            <li>金部分の素材価値: 20〜35g × K18 約{_gy(_GP.k18)}円/g（{GP_DATE}時点の目安） = 約{_gm(_GP.k18 * 20)}〜{_gm(_GP.k18 * 35)}万円</li>
             <li>ブランドプレミアム加算: モデルにより異なる</li>
           </ul>
 

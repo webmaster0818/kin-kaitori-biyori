@@ -5,6 +5,14 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -219,14 +227,14 @@ export default function KinOmosaHakrikataPage() {
               <tr>
                 <th>種類</th>
                 <th>���量の目安</th>
-                <th>買取価格の目安（2026年4月）</th>
+                <th>買取価格の目安（K18・{GP_DATE}時点・毎朝更新）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>細いチェーンネックレス</td><td>3〜5g</td><td>約34,000〜57,000円</td></tr>
-              <tr><td>太めのチェーンネックレス</td><td>8〜15g</td><td>約91,000〜171,000円</td></tr>
-              <tr><td>ペンダントネックレス</td><td>5〜10g</td><td>約57,000〜114,000円</td></tr>
-              <tr><td>喜平ネックレス（50cm）</td><td>30〜50g</td><td>約342,000〜570,000円</td></tr>
+              <tr><td>細いチェーンネックレス</td><td>3〜5g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 5)}円</td></tr>
+              <tr><td>太めのチェーンネックレス</td><td>8〜15g</td><td>約{_gy(_GP.k18 * 8)}〜{_gy(_GP.k18 * 15)}円</td></tr>
+              <tr><td>ペンダントネックレス</td><td>5〜10g</td><td>約{_gy(_GP.k18 * 5)}〜{_gy(_GP.k18 * 10)}円</td></tr>
+              <tr><td>喜平ネックレス（50cm）</td><td>30〜50g</td><td>約{_gy(_GP.k18 * 30)}〜{_gy(_GP.k18 * 50)}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -239,13 +247,13 @@ export default function KinOmosaHakrikataPage() {
               <tr>
                 <th>種類</th>
                 <th>重量の目安</th>
-                <th>買取価格の目安（2026年4月）</th>
+                <th>買取価格の目安（K18・{GP_DATE}時点・毎朝更新）</th>
               </tr>
             </thead>
             <tbody>
               <tr><td>細身のリング</td><td>2〜4g</td><td>約{Math.round(_LPP.k18 * 2).toLocaleString()}〜{Math.round(_LPP.k18 * 4).toLocaleString()}円</td></tr>
-              <tr><td>結婚指輪</td><td>3〜6g</td><td>約34,000〜68,000円</td></tr>
-              <tr><td>印台リング（メンズ）</td><td>15〜30g</td><td>約171,000〜342,000円</td></tr>
+              <tr><td>結婚指輪</td><td>3〜6g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 6)}円</td></tr>
+              <tr><td>印台リング（メンズ）</td><td>15〜30g</td><td>約{_gy(_GP.k18 * 15)}〜{_gy(_GP.k18 * 30)}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -258,13 +266,13 @@ export default function KinOmosaHakrikataPage() {
               <tr>
                 <th>種類</th>
                 <th>重量の目安</th>
-                <th>買取価格の目安（2026年4月）</th>
+                <th>買取価格の目安（K18・{GP_DATE}時点・毎朝更新）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>細めチェーンブレスレット</td><td>3〜5g</td><td>約34,000〜57,000円</td></tr>
-              <tr><td>喜平ブレスレット</td><td>20〜50g</td><td>約228,000〜570,000円</td></tr>
-              <tr><td>バングル</td><td>10〜30g</td><td>約114,000〜342,000円</td></tr>
+              <tr><td>細めチェーンブレスレット</td><td>3〜5g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 5)}円</td></tr>
+              <tr><td>喜平ブレスレット</td><td>20〜50g</td><td>約{_gy(_GP.k18 * 20)}〜{_gy(_GP.k18 * 50)}円</td></tr>
+              <tr><td>バングル</td><td>10〜30g</td><td>約{_gy(_GP.k18 * 10)}〜{_gy(_GP.k18 * 30)}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -277,13 +285,13 @@ export default function KinOmosaHakrikataPage() {
               <tr>
                 <th>サイズ</th>
                 <th>重量</th>
-                <th>買取価格の目安（2026年4月）</th>
+                <th>買取価格の目安（K24・{GP_DATE}時点・毎朝更新）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>5gバー</td><td>5g</td><td>約76,000〜77,000円</td></tr>
-              <tr><td>10gバー</td><td>10g</td><td>約152,000〜154,000円</td></tr>
-              <tr><td>100gバー</td><td>100g</td><td>約1,520,000〜1,540,000円</td></tr>
+              <tr><td>5gバー</td><td>5g</td><td>約{_gy(_GP.k24 * 5)}円</td></tr>
+              <tr><td>10gバー</td><td>10g</td><td>約{_gy(_GP.k24 * 10)}円</td></tr>
+              <tr><td>100gバー</td><td>100g</td><td>約{_gy(_GP.k24 * 100)}円</td></tr>
               <tr><td>1kgバー</td><td>1,000g</td><td>約{Math.round(_LPP.k24 * 1000).toLocaleString()}円</td></tr>
             </tbody>
           </table>

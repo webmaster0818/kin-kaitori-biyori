@@ -6,6 +6,13 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
@@ -321,7 +328,7 @@ export default function DiamondKaitoriPage() {
             </table>
           </div>
 
-          <p>メレダイヤ自体は高額にはなりませんが、<strong>台座の金やプラチナの素材価値</strong>が主な買取価格の構成要素になります。例えば、メレダイヤが20石付いたK18リング（5g）なら、金の素材価値（約57,000円）+ メレダイヤ（数千円）= 約6万円前後になります。</p>
+          <p>メレダイヤ自体は高額にはなりませんが、<strong>台座の金やプラチナの素材価値</strong>が主な買取価格の構成要素になります。例えば、メレダイヤが20石付いたK18リング（5g）なら、金の素材価値（{GP_DATE}時点の目安で約{_gy(Math.round(_GP.k18) * 5)}円）+ メレダイヤ（数千円）が目安になります。</p>
 
           <p><strong>ポイント：</strong>「メレダイヤだから値段がつかない」とあきらめず、台座の金属価値を含めて査定してもらいましょう。</p>
 

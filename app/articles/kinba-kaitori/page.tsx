@@ -7,6 +7,14 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -202,13 +210,13 @@ export default function KinbaKaitoriPage() {
                 <tr>
                   <th>金歯の純度</th>
                   <th>金含有率</th>
-                  <th>1gあたり買取価格（2026年4月目安）</th>
+                  <th>1gあたり買取価格（{GP_DATE}時点の目安）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>K20（金歯で高品質）</strong></td><td>83.3%</td><td>約12,700円</td></tr>
+                <tr><td><strong>K20（金歯で高品質）</strong></td><td>83.3%</td><td>約{_gy(_GP.k24 * 20 / 24)}円</td></tr>
                 <tr><td><strong>K18</strong></td><td>75.0%</td><td>約{LP_K18}円</td></tr>
-                <tr><td><strong>K16</strong></td><td>66.6%</td><td>約10,100円</td></tr>
+                <tr><td><strong>K16</strong></td><td>66.6%</td><td>約{_gy(_GP.k24 * 16 / 24)}円</td></tr>
                 <tr><td><strong>K14（最も一般的）</strong></td><td>58.5%</td><td>約{LP_K14}円</td></tr>
                 <tr><td>金パラ（金12%）</td><td>12.0%</td><td>約1,800円</td></tr>
               </tbody>
@@ -232,10 +240,10 @@ export default function KinbaKaitoriPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>インレー（詰め物）</td><td>0.5〜1.5g</td><td>約4,500〜13,000円</td><td>約5,700〜17,000円</td></tr>
-                <tr><td>クラウン（被せ物）</td><td>1.5〜3g</td><td>約13,000〜27,000円</td><td>約17,000〜34,000円</td></tr>
-                <tr><td>ブリッジ（3本連結）</td><td>3〜8g</td><td>約27,000〜71,000円</td><td>約34,000〜91,000円</td></tr>
-                <tr><td>ブリッジ（大型）</td><td>8〜15g</td><td>約71,000〜134,000円</td><td>約91,000〜171,000円</td></tr>
+                <tr><td>インレー（詰め物）</td><td>0.5〜1.5g</td><td>約{_gy(_GP.k14 * 0.5)}〜{_gy(_GP.k14 * 1.5)}円</td><td>約{_gy(_GP.k18 * 0.5)}〜{_gy(_GP.k18 * 1.5)}円</td></tr>
+                <tr><td>クラウン（被せ物）</td><td>1.5〜3g</td><td>約{_gy(_GP.k14 * 1.5)}〜{_gy(_GP.k14 * 3)}円</td><td>約{_gy(_GP.k18 * 1.5)}〜{_gy(_GP.k18 * 3)}円</td></tr>
+                <tr><td>ブリッジ（3本連結）</td><td>3〜8g</td><td>約{_gy(_GP.k14 * 3)}〜{_gy(_GP.k14 * 8)}円</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 8)}円</td></tr>
+                <tr><td>ブリッジ（大型）</td><td>8〜15g</td><td>約{_gy(_GP.k14 * 8)}〜{_gy(_GP.k14 * 15)}円</td><td>約{_gy(_GP.k18 * 8)}〜{_gy(_GP.k18 * 15)}円</td></tr>
               </tbody>
             </table>
           </div>
@@ -307,30 +315,32 @@ export default function KinbaKaitoriPage() {
           <h3>相続税について</h3>
           <p>金歯は相続財産に含まれる可能性がありますが、少額であれば実務上は問題になることはほとんどありません。高額（数十万円以上）になる場合は、相続財産に含めて申告することが望ましいです。</p>
 
-          <h2>実査定事例 — 金歯はいくらで売れた？</h2>
+          <h2>計算例 — 金歯はいくらになる？</h2>
+
+          <p>下の表は{GP_DATE}時点の相場で、純度×重量から計算した目安です（実際の査定額は業者・含有金属により異なります）。</p>
 
           <div className="table-wrapper">
             <table>
               <thead>
                 <tr>
-                  <th>事例</th>
+                  <th>例</th>
                   <th>金歯の種類</th>
                   <th>重量</th>
-                  <th>測定された純度</th>
-                  <th>買取価格</th>
+                  <th>純度</th>
+                  <th>買取目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>事例1</td><td>クラウン1本</td><td>2.1g</td><td>K18相当</td><td><strong>23,940円</strong></td></tr>
-                <tr><td>事例2</td><td>インレー2個</td><td>1.8g（合計）</td><td>K14相当</td><td><strong>16,020円</strong></td></tr>
-                <tr><td>事例3</td><td>ブリッジ（3本連結）</td><td>5.3g</td><td>K16相当</td><td><strong>53,530円</strong></td></tr>
-                <tr><td>事例4</td><td>クラウン2本+インレー1個</td><td>6.5g（合計）</td><td>K14〜K18混在</td><td><strong>65,000円</strong></td></tr>
-                <tr><td>事例5</td><td>大型ブリッジ（5本連結）</td><td>12.8g</td><td>K16相当</td><td><strong>129,280円</strong></td></tr>
+                <tr><td>例1</td><td>クラウン1本</td><td>2.1g</td><td>K18相当</td><td><strong>約{_gy(_GP.k18 * 2.1)}円</strong></td></tr>
+                <tr><td>例2</td><td>インレー2個</td><td>1.8g（合計）</td><td>K14相当</td><td><strong>約{_gy(_GP.k14 * 1.8)}円</strong></td></tr>
+                <tr><td>例3</td><td>ブリッジ（3本連結）</td><td>5.3g</td><td>K16相当</td><td><strong>約{_gy(_GP.k24 * 16 / 24 * 5.3)}円</strong></td></tr>
+                <tr><td>例4</td><td>クラウン2本+インレー1個</td><td>6.5g（合計）</td><td>K14〜K18混在</td><td><strong>約{_gy(_GP.k14 * 6.5)}〜{_gy(_GP.k18 * 6.5)}円</strong></td></tr>
+                <tr><td>例5</td><td>大型ブリッジ（5本連結）</td><td>12.8g</td><td>K16相当</td><td><strong>約{_gy(_GP.k24 * 16 / 24 * 12.8)}円</strong></td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>事例5のように、大型ブリッジは<strong>1つで10万円以上</strong>になることがあります。「たかが金歯」と思わず、まずは査定に出してみることをおすすめします。</p>
+          <p>例5のように、大型ブリッジは<strong>1つで10万円以上</strong>になることがあります。「たかが金歯」と思わず、まずは査定に出してみることをおすすめします。</p>
 
           <h2>金歯の純度 — なぜK14〜K20が使われるのか</h2>
 

@@ -7,6 +7,13 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -108,8 +115,8 @@ export default function Page() {
           <h2>1. 金のピアスの買取価格の決まり方</h2>
           <p>純度 × 重量 × 金相場 - 業者手数料</p>
           <ul>
-            <li>K18（純度75%）の場合: 1g約19,000〜25,000円（2026年5月時点）</li>
-            <li>K10（純度41.67%）の場合: 1g約11,000〜14,000円</li>
+            <li>K18（純度75%）の場合: 1g約{_gy(_GP.k18)}円（{GP_DATE}時点の目安・毎朝更新）</li>
+            <li>K10（純度41.67%）の場合: 1g約{_gy(_GP.k10)}円</li>
             <li>ピアスの平均重量: 1g前後（片耳）〜3g（ペア）</li>
           </ul>
 

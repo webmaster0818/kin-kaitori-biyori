@@ -5,6 +5,14 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -263,15 +271,15 @@ export default function PlatinumKaitoriPage() {
                   <th>種類</th>
                   <th>純度</th>
                   <th>重量の目安</th>
-                  <th>買取価格の目安</th>
+                  <th>買取価格の目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>結婚指輪（細め）</td><td>Pt900</td><td>3〜5g</td><td>約14,000〜24,000円</td></tr>
-                <tr><td>結婚指輪（標準）</td><td>Pt900</td><td>5〜8g</td><td>約24,000〜38,000円</td></tr>
-                <tr><td>婚約指輪（ダイヤ付）</td><td>Pt900</td><td>4〜6g（枠のみ）</td><td>約19,000〜29,000円＋ダイヤの価値</td></tr>
-                <tr><td>ファッションリング</td><td>Pt900</td><td>5〜15g</td><td>約24,000〜72,000円</td></tr>
-                <tr><td>メンズリング</td><td>Pt900</td><td>10〜25g</td><td>約48,000〜120,000円</td></tr>
+                <tr><td>結婚指輪（細め）</td><td>Pt900</td><td>3〜5g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 3)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 5)}円</td></tr>
+                <tr><td>結婚指輪（標準）</td><td>Pt900</td><td>5〜8g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 5)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 8)}円</td></tr>
+                <tr><td>婚約指輪（ダイヤ付）</td><td>Pt900</td><td>4〜6g（枠のみ）</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 4)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 6)}円＋ダイヤの価値</td></tr>
+                <tr><td>ファッションリング</td><td>Pt900</td><td>5〜15g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 5)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 15)}円</td></tr>
+                <tr><td>メンズリング</td><td>Pt900</td><td>10〜25g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 10)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 25)}円</td></tr>
               </tbody>
             </table>
           </div>
@@ -287,14 +295,14 @@ export default function PlatinumKaitoriPage() {
                   <th>種類</th>
                   <th>純度</th>
                   <th>重量の目安</th>
-                  <th>買取価格の目安</th>
+                  <th>買取価格の目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>チェーンネックレス（細め）</td><td>Pt850</td><td>3〜5g</td><td>約13,000〜22,000円</td></tr>
+                <tr><td>チェーンネックレス（細め）</td><td>Pt850</td><td>3〜5g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.85 * 3)}〜{_gy(_GT.pt_buyback_per_g * 0.85 * 5)}円</td></tr>
                 <tr><td>チェーンネックレス（太め）</td><td>Pt850</td><td>8〜15g</td><td>約{Math.round(_LPT.pt_buyback_per_g * 0.85 * 8).toLocaleString()}〜{Math.round(_LPT.pt_buyback_per_g * 0.85 * 15).toLocaleString()}円</td></tr>
-                <tr><td>ペンダントネックレス</td><td>Pt900</td><td>5〜10g</td><td>約24,000〜48,000円</td></tr>
-                <tr><td>喜平ネックレス</td><td>Pt850</td><td>30〜50g</td><td>約132,000〜220,000円</td></tr>
+                <tr><td>ペンダントネックレス</td><td>Pt900</td><td>5〜10g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.9 * 5)}〜{_gy(_GT.pt_buyback_per_g * 0.9 * 10)}円</td></tr>
+                <tr><td>喜平ネックレス</td><td>Pt850</td><td>30〜50g</td><td>約{_gy(_GT.pt_buyback_per_g * 0.85 * 30)}〜{_gy(_GT.pt_buyback_per_g * 0.85 * 50)}円</td></tr>
               </tbody>
             </table>
           </div>

@@ -5,6 +5,13 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -121,7 +128,7 @@ export default function KinJundoMikataPage() {
 
         <p>「手元の金製品は本物？」「K18とK24は何が違う？」「刻印の数字の意味がわからない」——金を売る前に最も気になるのが<strong>純度</strong>です。</p>
 
-        <p>金の純度によって買取価格は大きく変わります。K24（純金）とK18では<strong>1gあたり約4,000円の差</strong>があり、10gのネックレスなら約4万円もの差額になります。</p>
+        <p>金の純度によって買取価格は大きく変わります。K24（純金）とK18では<strong>1gあたり約{_gy(_GP.k24 - _GP.k18)}円の差</strong>（{GP_DATE}時点の目安）があり、10gのネックレスなら約{_gm((_GP.k24 - _GP.k18) * 10)}万円もの差額になります。</p>
 
         <p>この記事では、金の純度の基本から刻印の読み方、自宅でできる簡易判別法、偽物の見分け方まで<strong>徹底解説</strong>します。</p>
 
@@ -152,7 +159,7 @@ export default function KinJundoMikataPage() {
           </table>
         </div>
 
-        <p><strong>ポイント：</strong>K24とK18では1gあたり約3,800円の差があります。10gのネックレスなら38,000円、50gの喜平チェーンなら190,000円もの差額になります。純度の確認は非常に重要です。</p>
+        <p><strong>ポイント：</strong>K24とK18では1gあたり約{_gy(_GP.k24 - _GP.k18)}円の差があります（{GP_DATE}時点の目安）。10gのネックレスなら約{_gy(Math.round(_GP.k24 - _GP.k18) * 10)}円、50gの喜平チェーンなら約{_gy(Math.round(_GP.k24 - _GP.k18) * 50)}円もの差額になります。純度の確認は非常に重要です。</p>
 
         <h2>金の刻印（ホールマーク）の読み方</h2>
 
@@ -314,7 +321,7 @@ export default function KinJundoMikataPage() {
               <tr><td><strong>変色</strong></td><td>しない</td><td>ほとんどしない（WGはメッキ剥がれあり）</td></tr>
               <tr><td><strong>主な用途</strong></td><td>インゴット・金貨・資産保全</td><td>ジュエリー全般</td></tr>
               <tr><td><strong>買取価格（1g）</strong></td><td>約{LP_K24}円</td><td>約{LP_K18}円</td></tr>
-              <tr><td><strong>価格差</strong></td><td colSpan={2}>K24はK18より1gあたり約3,800円高い</td></tr>
+              <tr><td><strong>価格差</strong></td><td colSpan={2}>K24はK18より1gあたり約{_gy(_GP.k24 - _GP.k18)}円高い（{GP_DATE}時点の目安）</td></tr>
             </tbody>
           </table>
         </div>
@@ -365,7 +372,7 @@ export default function KinJundoMikataPage() {
 
         <h2>まとめ</h2>
 
-        <p>金の純度は買取価格を左右する最も重要な要素です。K24とK18では<strong>1gあたり約3,800円の差</strong>があり、製品の重量が増えるほどその差額は大きくなります。</p>
+        <p>金の純度は買取価格を左右する最も重要な要素です。K24とK18では<strong>1gあたり約{_gy(_GP.k24 - _GP.k18)}円の差</strong>があり、製品の重量が増えるほどその差額は大きくなります。</p>
 
         <p>純度の確認方法を優先順位でまとめます。</p>
 

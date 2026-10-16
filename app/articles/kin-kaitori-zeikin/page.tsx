@@ -9,6 +9,22 @@ import Image from "next/image";
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
 const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+/* 計算例（譲渡所得）: 売却額は日次の純度換算値×100gから毎朝再計算 */
+const _yen = (n: number) => Math.round(n).toLocaleString();
+const EX_SALE = Math.round(_LPP.k24) * 100;
+const EX1_COST = 1000000;
+const EX1_GAIN = EX_SALE - EX1_COST;
+const EX1_TAXABLE = Math.max(0, EX1_GAIN - 500000);
+const EX2_COST = 500000;
+const EX2_GAIN = EX_SALE - EX2_COST;
+const EX2_AFTER = Math.max(0, EX2_GAIN - 500000);
+const EX2_TAXABLE = Math.round(EX2_AFTER / 2);
+const EX3_GRAM = 10;
+const EX3_SALE = Math.round(_LPP.k18) * EX3_GRAM;
+const EX5_COST = Math.round(EX_SALE * 0.05);
+const EX5_GAIN = EX_SALE - EX5_COST;
+const EX5_TAXABLE = Math.max(0, EX5_GAIN - 500000);
+const _taxApprox = (n: number) => (Math.round((n * 0.3) / 1000) * 1000).toLocaleString();
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -207,13 +223,13 @@ export default function KinKaitoriZeikinPage() {
         <div className="bg-cream rounded-xl p-5 my-6">
           <p className="text-sm"><strong>前提：</strong>3年前に100gのK24インゴットを1g=10,000円（合計100万円）で購入。{LP_DATE}時点の相場1g={Math.round(_LPP.k24).toLocaleString()}円（合計{Math.round(_LPP.k24 * 100 / 10000).toLocaleString()}万円）で売却。</p>
           <ul className="text-sm mt-3 space-y-1">
-            <li>売却価格: 1,520,000円</li>
-            <li>取得費: 1,000,000円</li>
-            <li>売却益: 520,000円</li>
+            <li>売却価格: {_yen(EX_SALE)}円</li>
+            <li>取得費: {_yen(EX1_COST)}円</li>
+            <li>売却益: {_yen(EX1_GAIN)}円</li>
             <li>特別控除: -500,000円</li>
-            <li><strong>課税対象額: 20,000円</strong>（短期のため全額）</li>
+            <li><strong>課税対象額: {_yen(EX1_TAXABLE)}円</strong>（短期のため全額）</li>
           </ul>
-          <p className="text-sm mt-2">所得税率20%+住民税10%の場合: <strong>税額 約6,000円</strong></p>
+          <p className="text-sm mt-2">所得税率20%+住民税10%の場合: <strong>税額 約{_taxApprox(EX1_TAXABLE)}円</strong></p>
         </div>
 
         <h3>例2: K24インゴット100gを売却（長期保有）</h3>
@@ -221,20 +237,20 @@ export default function KinKaitoriZeikinPage() {
         <div className="bg-cream rounded-xl p-5 my-6">
           <p className="text-sm"><strong>前提：</strong>8年前に100gのK24インゴットを1g=5,000円（合計50万円）で購入。{LP_DATE}時点の相場1g={Math.round(_LPP.k24).toLocaleString()}円（合計{Math.round(_LPP.k24 * 100 / 10000).toLocaleString()}万円）で売却。</p>
           <ul className="text-sm mt-3 space-y-1">
-            <li>売却価格: 1,520,000円</li>
-            <li>取得費: 500,000円</li>
-            <li>売却益: 1,020,000円</li>
+            <li>売却価格: {_yen(EX_SALE)}円</li>
+            <li>取得費: {_yen(EX2_COST)}円</li>
+            <li>売却益: {_yen(EX2_GAIN)}円</li>
             <li>特別控除: -500,000円</li>
-            <li>控除後: 520,000円</li>
-            <li><strong>課税対象額: 260,000円</strong>（長期のため1/2）</li>
+            <li>控除後: {_yen(EX2_AFTER)}円</li>
+            <li><strong>課税対象額: {_yen(EX2_TAXABLE)}円</strong>（長期のため1/2）</li>
           </ul>
-          <p className="text-sm mt-2">所得税率20%+住民税10%の場合: <strong>税額 約78,000円</strong></p>
+          <p className="text-sm mt-2">所得税率20%+住民税10%の場合: <strong>税額 約{_taxApprox(EX2_TAXABLE)}円</strong></p>
         </div>
 
         <h3>例3: K18ネックレスを売却（30万円以下）</h3>
 
         <div className="bg-cream rounded-xl p-5 my-6">
-          <p className="text-sm"><strong>前提：</strong>K18ネックレス（20g）を買取業者に査定してもらい、228,000円で売却。</p>
+          <p className="text-sm"><strong>前提：</strong>K18ネックレス（{EX3_GRAM}g）を、{LP_DATE}時点の目安1g={_yen(_LPP.k18)}円で売却（約{_yen(EX3_SALE)}円）。</p>
           <p className="text-sm mt-2"><strong>結果: 非課税</strong>（1点30万円以下の生活用動産のため）</p>
         </div>
 
@@ -249,13 +265,13 @@ export default function KinKaitoriZeikinPage() {
         <p>取得費が不明の場合、<strong>売却価格の5%を取得費とみなす</strong>ことができます（概算取得費）。</p>
 
         <div className="bg-cream rounded-xl p-5 my-6">
-          <p className="text-sm"><strong>例：</strong>取得費不明のK24インゴット100gを152万円で売却</p>
+          <p className="text-sm"><strong>例：</strong>取得費不明のK24インゴット100gを、{LP_DATE}時点の相場1g={_yen(_LPP.k24)}円（合計約{Math.round(EX_SALE / 10000).toLocaleString()}万円）で売却</p>
           <ul className="text-sm mt-3 space-y-1">
-            <li>売却価格: 1,520,000円</li>
-            <li>概算取得費（5%）: 76,000円</li>
-            <li>売却益: 1,444,000円</li>
+            <li>売却価格: {_yen(EX_SALE)}円</li>
+            <li>概算取得費（5%）: {_yen(EX5_COST)}円</li>
+            <li>売却益: {_yen(EX5_GAIN)}円</li>
             <li>特別控除: -500,000円</li>
-            <li><strong>課税対象額: 944,000円</strong>（短期の場合）</li>
+            <li><strong>課税対象額: {_yen(EX5_TAXABLE)}円</strong>（短期の場合）</li>
           </ul>
           <p className="text-sm mt-2 text-red-700 font-bold">取得費不明だと税負担が非常に大きくなります！</p>
         </div>

@@ -7,6 +7,14 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
@@ -322,30 +330,32 @@ export default function KowaretaKinKaitoriPage() {
 
           <p>壊れた金製品をメルカリに出品しても、「壊れている」というだけで買い手がつきにくく、相場以下でしか売れないことが多いです。<strong>壊れた金の売却は買取業者一択</strong>と考えてよいでしょう。</p>
 
-          <h2>実査定事例 — 壊れた金製品はいくらで売れた？</h2>
+          <h2>計算例 — 壊れた金製品はいくらになる？</h2>
+
+          <p>壊れていても、純度×重量×その日の相場で買取額の目安が決まります。下の表は{GP_DATE}時点の相場で計算した目安です（実際の査定額は業者・状態により異なります）。</p>
 
           <div className="table-wrapper">
             <table>
               <thead>
                 <tr>
-                  <th>事例</th>
+                  <th>例</th>
                   <th>製品</th>
                   <th>状態</th>
                   <th>純度・重量</th>
-                  <th>買取価格</th>
+                  <th>買取目安（{GP_DATE}時点）</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>事例1</td><td>K18ネックレス</td><td>チェーン切れ</td><td>K18 / 8.2g</td><td><strong>93,480円</strong></td></tr>
-                <tr><td>事例2</td><td>K18指輪</td><td>石取れ・変形</td><td>K18 / 4.5g（枠のみ）</td><td><strong>51,300円</strong></td></tr>
-                <tr><td>事例3</td><td>K14ブレスレット</td><td>留め具破損・絡まり</td><td>K14 / 12.0g</td><td><strong>106,800円</strong></td></tr>
-                <tr><td>事例4</td><td>K18ピアス</td><td>片方のみ</td><td>K18 / 1.2g</td><td><strong>13,680円</strong></td></tr>
-                <tr><td>事例5</td><td>K24金杯</td><td>変色・刻印不鮮明</td><td>K24 / 35.0g</td><td><strong>532,000円</strong></td></tr>
+                <tr><td>例1</td><td>K18ネックレス</td><td>チェーン切れ</td><td>K18 / 8.2g</td><td><strong>約{_gy(_GP.k18 * 8.2)}円</strong></td></tr>
+                <tr><td>例2</td><td>K18指輪</td><td>石取れ・変形</td><td>K18 / 4.5g（枠のみ）</td><td><strong>約{_gy(_GP.k18 * 4.5)}円</strong></td></tr>
+                <tr><td>例3</td><td>K14ブレスレット</td><td>留め具破損・絡まり</td><td>K14 / 12.0g</td><td><strong>約{_gy(_GP.k14 * 12)}円</strong></td></tr>
+                <tr><td>例4</td><td>K18ピアス</td><td>片方のみ</td><td>K18 / 1.2g</td><td><strong>約{_gy(_GP.k18 * 1.2)}円</strong></td></tr>
+                <tr><td>例5</td><td>K24金杯</td><td>変色・刻印不鮮明</td><td>K24 / 35.0g</td><td><strong>約{_gy(_GP.k24 * 35)}円</strong></td></tr>
               </tbody>
             </table>
           </div>
 
-          <p>事例5のように、変色して古びた金杯でもK24であれば<strong>50万円以上</strong>の買取価格になります。「こんなもの売れるわけない」と決めつけず、まずは査定に出してみましょう。</p>
+          <p>例5のように、変色して古びた金杯でもK24・35gなら<strong>約{_gm(_GP.k24 * 35)}万円</strong>の目安になります。「こんなもの売れるわけない」と決めつけず、まずは査定に出してみましょう。</p>
 
           <h2>買取対象になるもの一覧</h2>
 

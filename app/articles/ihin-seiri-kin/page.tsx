@@ -5,6 +5,14 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -129,19 +137,19 @@ export default function IhinSeiriKinPage() {
               <tr>
                 <th>金製品の種類</th>
                 <th>重量の目安</th>
-                <th>買取価格の目安</th>
+                <th>買取価格の目安（表記の純度・{GP_DATE}時点）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>K18ネックレス（チェーン）</strong></td><td>3〜15g</td><td>約34,000〜171,000円</td></tr>
-              <tr><td><strong>K18指輪</strong></td><td>2〜10g</td><td>約23,000〜114,000円</td></tr>
-              <tr><td><strong>K18ブレスレット</strong></td><td>3〜20g</td><td>約34,000〜228,000円</td></tr>
-              <tr><td><strong>K18喜平ネックレス</strong></td><td>30〜100g</td><td>約342,000〜1,140,000円</td></tr>
+              <tr><td><strong>K18ネックレス（チェーン）</strong></td><td>3〜15g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 15)}円</td></tr>
+              <tr><td><strong>K18指輪</strong></td><td>2〜10g</td><td>約{_gy(_GP.k18 * 2)}〜{_gy(_GP.k18 * 10)}円</td></tr>
+              <tr><td><strong>K18ブレスレット</strong></td><td>3〜20g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 20)}円</td></tr>
+              <tr><td><strong>K18喜平ネックレス</strong></td><td>30〜100g</td><td>約{_gy(_GP.k18 * 30)}〜{_gy(_GP.k18 * 100)}円</td></tr>
               <tr><td><strong>金歯（K14〜K20相当）</strong></td><td>1〜3g/本</td><td>約6,000〜35,000円/本</td></tr>
               <tr><td><strong>金の延べ棒（K24）</strong></td><td>5g〜1kg</td><td>約{Math.round(_LPP.k24 * 5).toLocaleString()}〜{Math.round(_LPP.k24 * 1000).toLocaleString()}円</td></tr>
               <tr><td><strong>金貨（メイプルリーフ等）</strong></td><td>約31.1g（1oz）</td><td>約{Math.round(_LPP.k24 * 31.1).toLocaleString()}円</td></tr>
-              <tr><td><strong>金杯・金盃</strong></td><td>10〜50g</td><td>約114,000〜570,000円</td></tr>
-              <tr><td><strong>万年筆の金ペン先</strong></td><td>0.5〜2g</td><td>約3,000〜15,000円</td></tr>
+              <tr><td><strong>金杯・金盃</strong></td><td>10〜50g</td><td>約{_gy(_GP.k24 * 10)}〜{_gy(_GP.k24 * 50)}円（K24の場合）</td></tr>
+              <tr><td><strong>万年筆の金ペン先</strong></td><td>0.5〜2g</td><td>約{_gy(_GP.k14 * 0.5)}〜{_gy(_GP.k14 * 2)}円</td></tr>
             </tbody>
           </table>
         </div>

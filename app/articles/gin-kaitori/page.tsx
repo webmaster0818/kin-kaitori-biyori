@@ -5,6 +5,14 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const _GT = goldData.tanaka_official as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -207,15 +215,15 @@ export default function GinKaitoriPage() {
               <tr>
                 <th>製品</th>
                 <th>重量の目安</th>
-                <th>素材買取価格の目安</th>
+                <th>素材買取価格の目安（Sv925換算・{GP_DATE}時点）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>シルバーリング（細め）</td><td>5〜10g</td><td>約600〜1,350円</td></tr>
-              <tr><td>シルバーリング（太め）</td><td>15〜30g</td><td>約1,800〜4,050円</td></tr>
-              <tr><td>シルバーネックレス</td><td>20〜50g</td><td>約2,400〜6,750円</td></tr>
-              <tr><td>シルバーブレスレット</td><td>30〜80g</td><td>約3,600〜10,800円</td></tr>
-              <tr><td>シルバーバングル</td><td>40〜100g</td><td>約4,800〜13,500円</td></tr>
+              <tr><td>シルバーリング（細め）</td><td>5〜10g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 5)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 10)}円</td></tr>
+              <tr><td>シルバーリング（太め）</td><td>15〜30g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 15)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 30)}円</td></tr>
+              <tr><td>シルバーネックレス</td><td>20〜50g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 20)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 50)}円</td></tr>
+              <tr><td>シルバーブレスレット</td><td>30〜80g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 30)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 80)}円</td></tr>
+              <tr><td>シルバーバングル</td><td>40〜100g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 40)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 100)}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -232,15 +240,15 @@ export default function GinKaitoriPage() {
               <tr>
                 <th>製品</th>
                 <th>重量の目安</th>
-                <th>素材買取価格の目安</th>
+                <th>素材買取価格の目安（Sv925換算・{GP_DATE}時点）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>スプーン（1本）</td><td>30〜60g</td><td>約3,600〜8,100円</td></tr>
-              <tr><td>フォーク（1本）</td><td>30〜50g</td><td>約3,600〜6,750円</td></tr>
-              <tr><td>カトラリーセット（6組）</td><td>500〜1,000g</td><td>約60,000〜135,000円</td></tr>
-              <tr><td>銀のティーポット</td><td>300〜800g</td><td>約36,000〜108,000円</td></tr>
-              <tr><td>銀のトレー</td><td>200〜500g</td><td>約24,000〜67,500円</td></tr>
+              <tr><td>スプーン（1本）</td><td>30〜60g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 30)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 60)}円</td></tr>
+              <tr><td>フォーク（1本）</td><td>30〜50g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 30)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 50)}円</td></tr>
+              <tr><td>カトラリーセット（6組）</td><td>500〜1,000g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 500)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 1000)}円</td></tr>
+              <tr><td>銀のティーポット</td><td>300〜800g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 300)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 800)}円</td></tr>
+              <tr><td>銀のトレー</td><td>200〜500g</td><td>約{_gy(_GT.ag_buyback_per_g * 0.925 * 200)}〜{_gy(_GT.ag_buyback_per_g * 0.925 * 500)}円</td></tr>
             </tbody>
           </table>
         </div>

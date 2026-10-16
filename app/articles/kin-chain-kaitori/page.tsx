@@ -7,6 +7,13 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
+const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
+const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+const _gy = (n: number) => Math.round(n).toLocaleString();
+const _gm = (n: number) => Math.round(n / 10000).toLocaleString();
+
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -51,7 +58,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u5207\u308c\u305f\u91d1\u30c1\u30a7\u30fc\u30f3\u306f\u8cb7\u53d6\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u91cd\u91cf\u3067\u67fb\u5b9a\u3059\u308b\u305f\u3081\u3001\u5207\u308c\u305f\u5834\u6240\u306f\u95a2\u4fc2\u3042\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u7d61\u307e\u3063\u305f\u30c1\u30a7\u30fc\u30f3\u306f\u89e3\u3044\u3066\u304b\u3089\u58f2\u308b\u3079\u304d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u4e0d\u8981\u3002\u7121\u7406\u306b\u89e3\u304f\u3068\u5207\u308c\u308b\u53ef\u80fd\u6027\u304c\u5897\u3048\u308b\u305f\u3081\u3001\u7d61\u307e\u3063\u305f\u307e\u307e\u696d\u8005\u3078\u3002\u67fb\u5b9a\u984d\u306f\u5909\u308f\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30e1\u30f3\u30ba\u592a\u30c1\u30a7\u30fc\u30f3\u306e\u5e73\u5747\u8cb7\u53d6\u984d\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u91cd\u91cf\u306b\u3088\u308b\u3002K18\u559c\u5e7330g\u3067\u7d0460\u4e07\u5186\u304c\u76ee\u5b89\u3002\u8a73\u7d30\u306f\u91cd\u91cf\u3068\u76f8\u5834\u306b\u3088\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30d7\u30ec\u30fc\u30c8\u30fb\u30c8\u30c3\u30d7\u306a\u3057\u306e\u30c1\u30a7\u30fc\u30f3\u3060\u3051\u3067\u3082\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u554f\u984c\u306a\u304f\u58f2\u308c\u307e\u3059\u3002\u30c1\u30a7\u30fc\u30f3\u672c\u4f53\u306e\u91cd\u91cf\u3067\u67fb\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u91d1\u30e1\u30c3\u30ad\u306e\u30c1\u30a7\u30fc\u30f3\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u7d14\u5ea6\u304c\u4f4e\u304f\u3001\u307b\u3068\u3093\u3069\u306e\u696d\u8005\u3067\u8cb7\u53d6\u5bfe\u8c61\u5916\u307e\u305f\u306f\u6570\u5341\u5186\u7a0b\u5ea6\u3002\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"\u5207\u308c\u305f\u91d1\u30c1\u30a7\u30fc\u30f3\u306f\u8cb7\u53d6\u3067\u304d\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u53ef\u80fd\u3067\u3059\u3002\u91cd\u91cf\u3067\u67fb\u5b9a\u3059\u308b\u305f\u3081\u3001\u5207\u308c\u305f\u5834\u6240\u306f\u95a2\u4fc2\u3042\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u7d61\u307e\u3063\u305f\u30c1\u30a7\u30fc\u30f3\u306f\u89e3\u3044\u3066\u304b\u3089\u58f2\u308b\u3079\u304d\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u4e0d\u8981\u3002\u7121\u7406\u306b\u89e3\u304f\u3068\u5207\u308c\u308b\u53ef\u80fd\u6027\u304c\u5897\u3048\u308b\u305f\u3081\u3001\u7d61\u307e\u3063\u305f\u307e\u307e\u696d\u8005\u3078\u3002\u67fb\u5b9a\u984d\u306f\u5909\u308f\u308a\u307e\u305b\u3093\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30e1\u30f3\u30ba\u592a\u30c1\u30a7\u30fc\u30f3\u306e\u5e73\u5747\u8cb7\u53d6\u984d\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u91cd\u91cf\u306b\u3088\u308b\u3002K18\u559c\u5e7330g\u3067\u7d04" + _gm(_GP.k18 * 30) + "\u4e07\u5186\u304c\u76ee\u5b89\uff08" + GP_DATE + "\u6642\u70b9\uff09\u3002\u8a73\u7d30\u306f\u91cd\u91cf\u3068\u76f8\u5834\u306b\u3088\u308b\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u30d7\u30ec\u30fc\u30c8\u30fb\u30c8\u30c3\u30d7\u306a\u3057\u306e\u30c1\u30a7\u30fc\u30f3\u3060\u3051\u3067\u3082\u58f2\u308c\u308b\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u554f\u984c\u306a\u304f\u58f2\u308c\u307e\u3059\u3002\u30c1\u30a7\u30fc\u30f3\u672c\u4f53\u306e\u91cd\u91cf\u3067\u67fb\u5b9a\u3002\"}}, {\"@type\": \"Question\", \"name\": \"\u91d1\u30e1\u30c3\u30ad\u306e\u30c1\u30a7\u30fc\u30f3\u306f\uff1f\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"\u7d14\u5ea6\u304c\u4f4e\u304f\u3001\u307b\u3068\u3093\u3069\u306e\u696d\u8005\u3067\u8cb7\u53d6\u5bfe\u8c61\u5916\u307e\u305f\u306f\u6570\u5341\u5186\u7a0b\u5ea6\u3002\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -108,9 +115,9 @@ export default function Page() {
           <h2>1. 金チェーンの買取価格</h2>
           <p>純度×重量×金相場 - 業者手数料</p>
           <ul>
-            <li>K18（純度75%）の場合: 1gあたり 約19,000〜25,000円</li>
-            <li>K14（純度58.5%）の場合: 1gあたり 約15,000〜18,000円</li>
-            <li>K10（純度41.67%）の場合: 1gあたり 約11,000〜14,000円</li>
+            <li>K18（純度75%）の場合: 1gあたり 約{_gy(_GP.k18)}円（{GP_DATE}時点の目安・毎朝更新）</li>
+            <li>K14（純度58.5%）の場合: 1gあたり 約{_gy(_GP.k14)}円</li>
+            <li>K10（純度41.67%）の場合: 1gあたり 約{_gy(_GP.k10)}円</li>
             <li>チェーン平均重量: 5〜30g（細チェーン〜メンズ太チェーン）</li>
           </ul>
 
@@ -119,10 +126,10 @@ export default function Page() {
 
           <h2>3. メンズ太チェーンの相場</h2>
           <ul>
-            <li>K18 喜平 10g: 約20万円</li>
-            <li>K18 喜平 30g: 約60万円</li>
-            <li>K18 喜平 50g: 約100万円</li>
-            <li>K24 純金チェーン 20g: 約56万円</li>
+            <li>K18 喜平 10g: 約{_gm(_GP.k18 * 10)}万円</li>
+            <li>K18 喜平 30g: 約{_gm(_GP.k18 * 30)}万円</li>
+            <li>K18 喜平 50g: 約{_gm(_GP.k18 * 50)}万円</li>
+            <li>K24 純金チェーン 20g: 約{_gm(_GP.k24 * 20)}万円</li>
           </ul>
 
           <h2>4. 金チェーンを高く売る5つのコツ</h2>
@@ -148,7 +155,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>メンズ太チェーンの平均買取額は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">重量による。K18喜平30gで約60万円が目安。詳細は重量と相場による。</p>
+  <p className="mt-3 text-sm leading-relaxed">重量による。K18喜平30gで約{_gm(_GP.k18 * 30)}万円が目安（{GP_DATE}時点）。詳細は重量と相場による。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>プレート・トップなしのチェーンだけでも売れる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
