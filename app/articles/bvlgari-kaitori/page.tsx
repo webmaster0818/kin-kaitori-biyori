@@ -38,7 +38,7 @@ function FaqSchema() {
       { "@type": "Question", name: "ブルガリの買取価格は定価の何割くらいですか？", acceptedAnswer: { "@type": "Answer", text: "モデルや素材によりますが、ブルガリのジュエリーの買取率は定価の3〜6割が目安です。セルペンティなどの人気モデルは定価の4〜6割、ビー・ゼロワンなどの定番モデルは3〜5割程度です。" } },
       { "@type": "Question", name: "ブルガリの箱や保証書がなくても買取できますか？", acceptedAnswer: { "@type": "Answer", text: "買取は可能です。ただし、ブルガリの専用ケース・保証書・購入レシートがあると5〜15%程度の査定額の上乗せが期待できます。特にセルペンティなどの高額モデルでは付属品の影響が大きくなります。" } },
       { "@type": "Question", name: "ブルガリの腕時計は買取できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、ブルガリの腕時計も高額買取の対象です。ブルガリ・ブルガリ、オクト、セルペンティなどの人気モデルは10万〜40万円以上の買取が期待できます。保証書や箱があると査定額がアップします。" } },
-      { "@type": "Question", name: "ブルガリのバッグや財布も買取できますか？", acceptedAnswer: { "@type": "Answer", text: "買取可能です。セルペンティフォーエバーなどの人気バッグは数万円〜十数万円の買取が期待できます。財布は使用感があると数千円程度になることが多いです。" } },
+      { "@type": "Question", name: "ブルガリのバッグや財布も買取できますか？", acceptedAnswer: { "@type": "Answer", text: "買取可能です。セルペンティフォーエバーなどの人気バッグは数万円〜十数万円の買取が期待できます。財布は使用感があると数千円程度の査定になる傾向があります。" } },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;

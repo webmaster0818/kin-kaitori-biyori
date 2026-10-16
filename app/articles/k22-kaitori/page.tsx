@@ -231,7 +231,7 @@ export default function K22KaitoriPage() {
 
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
 
-        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K22のように流通量が少ない純度の場合、業者によって買取価格に差が出やすいため、一括査定で比較するメリットは大きいです。</p>
+        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K22のように流通量が少ない純度の場合、業者によって買取価格に差が出やすいため、一括査定で比較するメリットが大きくなります。</p>
 
         <ul>
           <li>複数業者の査定価格を一度に比較</li>
@@ -316,7 +316,7 @@ export default function K22KaitoriPage() {
             },
             {
               q: "K22はK18より変色しやすいですか？",
-              a: "いいえ、K22はK18より変色しにくいです。金の含有率が高い（91.7% vs 75%）ため、酸化や変色が起こりにくいという特徴があります。ただし、完全に変色しないわけではないので、保管時は湿気を避けることをおすすめします。",
+              a: "いいえ、K22はK18より変色しにくい性質があります。金の含有率が高い（91.7% vs 75%）ため、酸化や変色が起こりにくいという特徴があります。ただし、完全に変色しないわけではないので、保管時は湿気を避けることをおすすめします。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

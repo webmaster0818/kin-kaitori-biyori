@@ -27,7 +27,7 @@ function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
       { "@type": "Question", name: "金メッキはどう見分けますか？", acceptedAnswer: { "@type": "Answer", text: "刻印に GP（金メッキ）・GF（金張り）とあればメッキ系です。K18 などの刻印は純度を示します。" } },
       { "@type": "Question", name: "磁石で分かりますか？", acceptedAnswer: { "@type": "Answer", text: "金は磁石に付きません。付く場合は金以外の素材が多く含まれます（簡易判定）。" } },
-      { "@type": "Question", name: "メッキでも売れますか？", acceptedAnswer: { "@type": "Answer", text: "純金量がごくわずかなため、基本的に素材買取の対象外となることが多いです。" } }
+      { "@type": "Question", name: "メッキでも売れますか？", acceptedAnswer: { "@type": "Answer", text: "純金量がごくわずかなため、基本的に素材買取の対象外となるのが一般的です。" } }
   ] };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
@@ -98,7 +98,7 @@ export default function KinMekkiMikataPage() {
             },
             {
               q: "メッキでも売れますか？",
-              a: "純金量がごくわずかなため、基本的に素材買取の対象外となることが多いです。",
+              a: "純金量がごくわずかなため、基本的に素材買取の対象外となるのが一般的です。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

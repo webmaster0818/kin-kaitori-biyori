@@ -46,7 +46,7 @@ function FaqSchema() {
       { "@type": "Question", name: "金メッキ（GP・GF）のブレスレットは売れますか？", acceptedAnswer: { "@type": "Answer", text: "GP（金メッキ）は表面のごく薄い金膜のみで地金価値がほぼないため、金としての買取は基本的にできません。GF（金張り）も金の含有量がわずかで、買取対象外か少額になるのが一般的です。刻印が「K18GP」「K18GF」「1/20 K18」などの場合は本物のK18とは評価が異なる点にご注意ください。" } },
       { "@type": "Question", name: "工賃・デザイン料は買取額に含まれますか？", acceptedAnswer: { "@type": "Answer", text: "地金としての金買取では、購入時に支払った工賃・デザイン料・加工賃は買取額に含まれず、評価されるのは金の重量と純度のみです。例外はカルティエなどのブランド品や有名デザイナーズジュエリーで、ブランド買取店ならデザイン・ブランド価値が上乗せされることがあります。" } },
       { "@type": "Question", name: "テニスブレスレットのダイヤも評価されますか？", acceptedAnswer: { "@type": "Answer", text: "はい、テニスブレスレットは金の地金部分とダイヤモンド部分が別々に評価されます。金部分は「重量 × 本日の相場」で概算できますが、ダイヤ部分は4C（カラット・カラー・クラリティ・カット）と鑑定書の有無で大きく変わるため、実際の査定が必須です。" } },
-      { "@type": "Question", name: "バングルとブレスレットで買取価格は違いますか？", acceptedAnswer: { "@type": "Answer", text: "買取価格は純度と重量で決まるため、バングルかブレスレットかは関係ありません。ただしバングルは構造上、チェーンブレスレットより重い傾向があるため、結果的に高額になることが多いです。" } },
+      { "@type": "Question", name: "バングルとブレスレットで買取価格は違いますか？", acceptedAnswer: { "@type": "Answer", text: "買取価格は純度と重量で決まるため、バングルかブレスレットかは関係ありません。ただしバングルは構造上、チェーンブレスレットより重い傾向があるため、結果として買取額も高くなる傾向があります。" } },
       { "@type": "Question", name: "金のブレスレットの重さの目安は？", acceptedAnswer: { "@type": "Answer", text: "細いチェーンブレスレットで3〜5g、テニスブレスレットで5〜10g、喜平ブレスレットで10〜50g、バングルで15〜40gが一般的な重量です。" } },
     ],
   };
@@ -231,7 +231,7 @@ export default function KinBraceletKaitoriPage() {
         <h2>金ブレスレットの買取におすすめの業者4社</h2>
 
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
-        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数業者に一括査定。喜平ブレスレットのような高額品こそ、比較のメリットが大きいです。</p>
+        <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数業者に一括査定。喜平ブレスレットのような高額品こそ、複数社を比較するメリットが大きくなります。</p>
 
         <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
         <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）。ブレスレットをその場で計量・査定し即現金化。公式の金・貴金属ページには「K18 喜平ブレスレット」などの買取参考価格が掲載されています（2026年10月11日確認）。</p>

@@ -96,7 +96,7 @@ export default function BrandJewelryKinKaitoriPage() {
           <li><strong>ポンテヴェキオ</strong> — K18のカラーストーンジュエリー。地金価値＋宝石評価</li>
           <li><strong>スタージュエリー</strong> — K10・K18・Pt。素材価値＋ブランド価値</li>
         </ul>
-        <p>国産ブランドは海外ハイブランドに比べ中古ブランド市場が小さいため、<strong>K18・Ptの地金価値が査定の実質的な基準</strong>になるケースが多いです。当日の1g相場（<Link href="/articles/kin-kaitori-souba/">相場一覧</Link>）を確認してから売ることをおすすめします。</p>
+        <p>国産ブランドは海外ハイブランドに比べ中古ブランド市場が小さいため、<strong>K18・Ptの地金価値が査定の実質的な基準</strong>となるのが一般的です。当日の1g相場（<Link href="/articles/kin-kaitori-souba/">相場一覧</Link>）を確認してから売ることをおすすめします。</p>
 
         <h2 id="pearl">真珠ブランド（ミキモト・タサキ）</h2>
         <ul>
