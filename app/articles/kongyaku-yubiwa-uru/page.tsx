@@ -29,7 +29,7 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】婚約指輪を売る方法｜離婚・破談時の買取相場と注意点を完全解説",
-    description: "婚約指輪を売る判断基準・買取相場・税金・心理的ハードルの対処法を解説。離婚や破談時に後悔せず売却するための業者選びとタイミングを徹底ガイド。",
+    description: "婚約指輪を売る判断基準・買取相場・税金・心理的ハードルの対処法を解説。離婚や破談時に後悔せず売却するための業者選びとタイミングを解説します。",
     datePublished: "2026-05-18",
     dateModified: "2026-05-18",
     author: {
@@ -58,7 +58,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】婚約指輪を売る方法｜離婚・破談時の買取相場と注意点を完全解説",
-  description: "婚約指輪を売る判断基準・買取相場・税金・心理的ハードルの対処法を解説。離婚や破談時に後悔せず売却するための業者選びとタイミングを徹底ガイド。",
+  description: "婚約指輪を売る判断基準・買取相場・税金・心理的ハードルの対処法を解説。離婚や破談時に後悔せず売却するための業者選びとタイミングを解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kongyaku-yubiwa-uru/" },
 };
 
@@ -98,7 +98,7 @@ export default function Page() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">婚約指輪を売る完全ガイド｜離婚・破談時の買取とタイミング</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">婚約指輪を売る方法｜離婚・破談時の買取とタイミング</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 

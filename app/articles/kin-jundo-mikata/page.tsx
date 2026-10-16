@@ -303,7 +303,7 @@ export default function KinJundoMikataPage() {
 
         <CtaBox />
 
-        <h2>K18・K24の違いを徹底比較</h2>
+        <h2>K18・K24の違いを比較</h2>
 
         <div className="table-wrapper">
           <table>

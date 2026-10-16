@@ -4,7 +4,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
 
-const TITLE = "金買取のおすすめ業者はどこがいい？4社を目的別に徹底比較【2026年7月】";
+const TITLE = "金買取のおすすめ業者はどこがいい？4社を目的別に比較【2026年7月】";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-osusume/";
 const P = goldData.purity_buyback_estimate_per_g;
 const [, pMonth, pDay] = goldData.date.split("-").map(Number);
@@ -74,7 +74,7 @@ export default function KinKaitoriOsusumePage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取のおすすめ業者はどこがいい？4社を目的別に徹底比較</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取のおすすめ業者はどこがいい？4社を目的別に比較</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {pMonth}月{pDay}日（相場データは毎朝自動更新・業者情報は各社公式サイトを当サイトが直接確認）</p>
 
         <p>「金を売りたいけど、どこがいいのか分からない」——<strong>適した業者は目的によって異なります</strong>。査定額を比較したい場合は複数社比較、すぐに現金化したい場合は店頭、自宅完結なら出張。この記事では、当サイトが公式情報を直接確認した4社を目的別に整理し、選び方の基準・査定前の準備・当日の相場までまとめて案内します。</p>

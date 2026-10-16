@@ -496,7 +496,7 @@ export default function KinKaitoriSoubaPage() {
           />
 
           <DealerComparisonTable
-          heading="金買取業者 主要7社 徹底比較（2026年最新）"
+          heading="金買取業者 主要7社の比較（2026年最新）"
           intro="全国展開の大手チェーンから金専門の質屋・宅配買取専門店まで、店舗数・対応エリア・手数料を公式情報で比較しました。"
           />
           <h2>まとめ</h2>

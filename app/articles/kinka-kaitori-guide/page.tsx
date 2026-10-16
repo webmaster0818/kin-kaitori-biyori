@@ -230,7 +230,7 @@ export default function KinkaKaitoriGuidePage() {
             </li>
             <li>
               <strong>本人確認書類を準備する</strong>
-              <p>金貨の売却には本人確認が必須です。また200万円を超える取引ではマイナンバーの提示が必要になる場合があります。詳しくは<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent hover:underline">金買取の手続き完全ガイド</Link>をご覧ください。</p>
+              <p>金貨の売却には本人確認が必須です。また200万円を超える取引ではマイナンバーの提示が必要になる場合があります。詳しくは<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent hover:underline">金買取の手続きガイド</Link>をご覧ください。</p>
             </li>
             <li>
               <strong>税金のルールを理解しておく</strong>

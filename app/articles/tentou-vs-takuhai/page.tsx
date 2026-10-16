@@ -36,14 +36,14 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリットの比較", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
-export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリット徹底比較", description: "金買取の店頭・宅配・出張・一括査定を徹底比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの方を解説します。", alternates: { canonical: "https://gold-biyori.com/articles/tentou-vs-takuhai/" } };
+export const metadata: Metadata = { title: "【2026年最新】金買取は店頭・宅配・出張どれがお得？方法別メリット・デメリットの比較", description: "金買取の店頭・宅配・出張・一括査定を比較。それぞれのメリット・デメリット、買取価格の傾向、おすすめの方を解説します。", alternates: { canonical: "https://gold-biyori.com/articles/tentou-vs-takuhai/" } };
 
 function CtaBox() {
   return (
@@ -74,7 +74,7 @@ export default function TentouVsTakuhaiPage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金買取は店頭・宅配・出張どれがお得？</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-        <p>金を売る方法は主に<strong>店頭買取・宅配買取・出張買取・一括査定</strong>の4つがあります。「どの方法が一番高く売れる？」「初めてだけどどれがいい？」——この記事では、4つの方法を<strong>価格・手間・安全性・スピード</strong>の観点で徹底比較します。</p>
+        <p>金を売る方法は主に<strong>店頭買取・宅配買取・出張買取・一括査定</strong>の4つがあります。「どの方法が一番高く売れる？」「初めてだけどどれがいい？」——この記事では、4つの方法を<strong>価格・手間・安全性・スピード</strong>の観点で比較します。</p>
 
         <h2>4つの買取方法の総合比較</h2>
         <div className="table-wrapper">

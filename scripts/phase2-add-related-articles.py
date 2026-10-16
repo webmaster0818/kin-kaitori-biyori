@@ -63,12 +63,12 @@ REGION_SLUGS: dict[str, dict] = {
     "tokyo-kin-kaitori":        {"badge": "東京", "shortTitle": "東京の金買取おすすめ業者ガイド", "description": "東京エリアの金買取相場と人気店を比較。", "neighbors": ["ginza-kin-kaitori", "okachimachi-kin-kaitori", "ikebukuro-kin-kaitori", "yokohama-kin-kaitori"]},
     "ginza-kin-kaitori":        {"badge": "銀座", "shortTitle": "銀座の金買取おすすめ業者ガイド", "description": "銀座エリアの金・ブランド買取店をまとめて紹介。", "neighbors": ["tokyo-kin-kaitori", "okachimachi-kin-kaitori", "ikebukuro-kin-kaitori", "yokohama-kin-kaitori"]},
     "okachimachi-kin-kaitori":  {"badge": "御徒町", "shortTitle": "御徒町の金買取おすすめ業者ガイド", "description": "宝石街・御徒町の老舗金買取業者を比較。", "neighbors": ["tokyo-kin-kaitori", "ginza-kin-kaitori", "ikebukuro-kin-kaitori", "omiya-kin-kaitori"]},
-    "ikebukuro-kin-kaitori":    {"badge": "池袋", "shortTitle": "池袋の金買取おすすめ業者ガイド", "description": "池袋エリアの金買取専門店を徹底比較。", "neighbors": ["tokyo-kin-kaitori", "ginza-kin-kaitori", "okachimachi-kin-kaitori", "omiya-kin-kaitori"]},
+    "ikebukuro-kin-kaitori":    {"badge": "池袋", "shortTitle": "池袋の金買取おすすめ業者ガイド", "description": "池袋エリアの金買取専門店を比較。", "neighbors": ["tokyo-kin-kaitori", "ginza-kin-kaitori", "okachimachi-kin-kaitori", "omiya-kin-kaitori"]},
     "yokohama-kin-kaitori":     {"badge": "横浜", "shortTitle": "横浜の金買取おすすめ業者ガイド", "description": "横浜エリアの金買取相場と人気業者を紹介。", "neighbors": ["tokyo-kin-kaitori", "chiba-kin-kaitori", "ginza-kin-kaitori", "omiya-kin-kaitori"]},
     "chiba-kin-kaitori":        {"badge": "千葉", "shortTitle": "千葉の金買取おすすめ業者ガイド", "description": "千葉県内の金買取相場と人気店をまとめ。", "neighbors": ["tokyo-kin-kaitori", "yokohama-kin-kaitori", "omiya-kin-kaitori", "ginza-kin-kaitori"]},
     "omiya-kin-kaitori":        {"badge": "大宮", "shortTitle": "大宮の金買取おすすめ業者ガイド", "description": "大宮・さいたまエリアの金買取業者比較。", "neighbors": ["tokyo-kin-kaitori", "ikebukuro-kin-kaitori", "ginza-kin-kaitori", "yokohama-kin-kaitori"]},
     "osaka-kin-kaitori":        {"badge": "大阪", "shortTitle": "大阪の金買取おすすめ業者ガイド", "description": "大阪府全域の金買取相場と人気業者を比較。", "neighbors": ["umeda-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori"]},
-    "umeda-kin-kaitori":        {"badge": "梅田", "shortTitle": "梅田の金買取おすすめ業者ガイド", "description": "梅田・大阪駅周辺の金買取店を徹底比較。", "neighbors": ["osaka-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori"]},
+    "umeda-kin-kaitori":        {"badge": "梅田", "shortTitle": "梅田の金買取おすすめ業者ガイド", "description": "梅田・大阪駅周辺の金買取店を比較。", "neighbors": ["osaka-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori"]},
     "kobe-kin-kaitori":         {"badge": "神戸", "shortTitle": "神戸の金買取おすすめ業者ガイド", "description": "神戸市内の金買取相場と人気業者を紹介。", "neighbors": ["osaka-kin-kaitori", "umeda-kin-kaitori", "kyoto-kin-kaitori", "hiroshima-kin-kaitori"]},
     "kyoto-kin-kaitori":        {"badge": "京都", "shortTitle": "京都の金買取おすすめ業者ガイド", "description": "京都市内の金買取業者を相場とともに紹介。", "neighbors": ["osaka-kin-kaitori", "umeda-kin-kaitori", "kobe-kin-kaitori", "nagoya-kin-kaitori"]},
     "nagoya-kin-kaitori":       {"badge": "名古屋", "shortTitle": "名古屋の金買取おすすめ業者ガイド", "description": "名古屋市内の金買取相場と人気業者まとめ。", "neighbors": ["osaka-kin-kaitori", "kyoto-kin-kaitori", "tokyo-kin-kaitori", "sendai-kin-kaitori"]},
@@ -80,7 +80,7 @@ REGION_SLUGS: dict[str, dict] = {
 
 # 比較・解説 (10)
 COMPARE_SLUGS: dict[str, dict] = {
-    "daikichi-vs-nanboya":         {"badge": "業者比較", "shortTitle": "買取大吉 vs なんぼや 徹底比較", "description": "大手2社の買取価格・特徴を実情報で比較。"},
+    "daikichi-vs-nanboya":         {"badge": "業者比較", "shortTitle": "買取大吉 vs なんぼやの比較", "description": "大手2社の買取価格・特徴を実情報で比較。"},
     "ikkatsu-satei-hikaku":        {"badge": "一括査定", "shortTitle": "金の一括査定サイト比較", "description": "ヒカカク等の一括査定サービス比較ガイド。"},
     "tentou-vs-takuhai":           {"badge": "店頭vs宅配", "shortTitle": "店頭買取と宅配買取の比較", "description": "店頭・宅配買取それぞれのメリット・デメリット。"},
     "line-satei-seido":            {"badge": "LINE査定", "shortTitle": "LINE査定の精度と注意点", "description": "LINE写真査定で本査定にどれだけ近付くか解説。"},
@@ -100,7 +100,7 @@ HOWTO_SLUGS: dict[str, dict] = {
     "kin-kaitori-souba":        {"badge": "相場一覧", "shortTitle": "金買取相場一覧まとめ", "description": "K24/K22/K18等の最新買取相場をまとめて掲載。"},
     "kin-kaitori-hajimete":     {"badge": "初めての方", "shortTitle": "金買取がはじめての方ガイド", "description": "金買取の流れと初心者がチェックすべき項目。"},
     "kin-kaitori-sagi":         {"badge": "詐欺対策", "shortTitle": "金買取の詐欺・押し買い対策", "description": "悪質業者を見抜くチェックポイントを解説。"},
-    "kaitori-houhou-hikaku":    {"badge": "買取方法比較", "shortTitle": "金の買取方法4種類を徹底比較", "description": "店頭・出張・宅配・一括査定の違いと選び方。"},
+    "kaitori-houhou-hikaku":    {"badge": "買取方法比較", "shortTitle": "金の買取方法4種類を比較", "description": "店頭・出張・宅配・一括査定の違いと選び方。"},
     "kin-kaitori-zeikin":       {"badge": "税金", "shortTitle": "金買取と税金（譲渡所得）の解説", "description": "50万円控除や保有期間で変わる税率を整理。"},
     "kin-kakutei-shinkoku":     {"badge": "確定申告", "shortTitle": "金売却の確定申告の進め方", "description": "金売却で必要な確定申告書類と記入例を解説。"},
     "kin-200man-mynumber":      {"badge": "200万円超", "shortTitle": "金200万円超売却とマイナンバー", "description": "200万円ルールと法定調書の仕組みを解説。"},

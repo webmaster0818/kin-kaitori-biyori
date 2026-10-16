@@ -29,8 +29,8 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ",
-    description: "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて徹底比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
+    headline: "【2026年最新】金の買取方法4つを比較 — 店頭・出張・宅配・一括査定のメリット・デメリット",
+    description: "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
     datePublished: "2026-04-15",
     dateModified: "2026-10-09",
     author: {
@@ -81,9 +81,9 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ",
+  title: "【2026年最新】金の買取方法4つを比較 — 店頭・出張・宅配・一括査定のメリット・デメリット",
   description:
-    "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて徹底比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
+    "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
   alternates: { canonical: "https://gold-biyori.com/articles/kaitori-houhou-hikaku/" },
 };
 
@@ -123,7 +123,7 @@ export default function KaitoriHouhouHikakuPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の買取方法4つを徹底比較 — 店頭・出張・宅配・一括査定のメリデメ</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金の買取方法4つを比較 — 店頭・出張・宅配・一括査定のメリット・デメリット</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>金・貴金属を売りたいと思ったとき、「どの方法で売ればいいの？」と迷う方は多いはずです。金の買取方法は大きく分けて<strong>4つ</strong>あり、それぞれにメリット・デメリットがあります。</p>
@@ -273,7 +273,7 @@ export default function KaitoriHouhouHikakuPage() {
           <p><strong>おすすめの方：</strong>「対面が苦手」「近くに買取店がない」「急いでいない」「自分のペースで進めたい」という方。</p>
         </blockquote>
 
-        <h2>4つの方法をメリデメ比較表で一覧</h2>
+        <h2>4つの方法をメリット・デメリット比較表で一覧</h2>
 
         <div className="table-wrapper">
           <table>

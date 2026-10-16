@@ -5,7 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
-const TITLE = "金買取の手数料を13社で徹底比較【2026年7月調査】査定料・出張料・返送料・振込手数料";
+const TITLE = "金買取の手数料を13社で比較【2026年7月調査】査定料・出張料・返送料・振込手数料";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-tesuryo-hikaku/";
 
 function BreadcrumbSchema() {
@@ -81,7 +81,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を13社で徹底比較【2026年7月調査】</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取の手数料を13社で比較【2026年7月調査】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）（各社公式サイトを当サイトが直接確認した時点の情報です）</p>
         <p>金買取で本当に大事なのは「買取単価」だけではありません。<strong>査定料・出張料・キャンセル時の返送料・振込手数料</strong>などの諸費用で、最終的な手取り額が変わります。</p>
         <p>この記事では、主要買取13社の公式サイトを当サイトが直接確認し、手数料と利用条件を一覧にまとめました。公式に記載がない項目は「記載なし」と表記しています。</p>

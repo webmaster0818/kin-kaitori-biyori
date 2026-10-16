@@ -84,7 +84,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
+    headline: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びを解説",
     description: "金・貴金属を少しでも高く売るための方法を解説します。相見積もりの取り方、売却タイミングの見極め方、付属品の重要性、避けるべき行動まで、5つのポイントをご説明します。",
     datePublished: "2026-04-15",
     dateModified: "2026-04-15",
@@ -148,7 +148,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド",
+  title: "【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びを解説",
   description:
     "金・貴金属を少しでも高く売るための方法を解説します。相見積もりの取り方、売却タイミングの見極め方、付属品の重要性、避けるべき行動まで、5つのポイントをご説明します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-takaku-uru/" },
@@ -191,7 +191,7 @@ export default function KinTakakuUruPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びの完全ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】金を高く売る5つのコツ — 相見積もり・タイミング・業者選びを解説</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>金や貴金属を売却する際は、<strong>売却方法や業者の選び方によって手取り額が変わります</strong>。</p>

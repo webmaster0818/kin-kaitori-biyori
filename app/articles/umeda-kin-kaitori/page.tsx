@@ -111,7 +111,7 @@ export default function Page() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">梅田・大阪駅の金買取おすすめ店と高く売る完全ガイド</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">梅田・大阪駅の金買取おすすめ店と高く売る方法</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 

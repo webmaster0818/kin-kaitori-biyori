@@ -57,7 +57,7 @@ function FaqSchema() {
 
 export const metadata: Metadata = {
   title: "金買取は未成年でもできる？予約は必要？当日の流れと現金化までの時間【手続きガイド】",
-  description: "金買取に必要な持ち物リスト、古物営業法で義務付けられる本人確認、未成年の売却可否、予約の要否と当日の流れをまとめて解説。マイナンバーが必要になるケースまで、初めての金買取で迷わないための完全ガイド。",
+  description: "金買取に必要な持ち物リスト、古物営業法で義務付けられる本人確認、未成年の売却可否、予約の要否と当日の流れをまとめて解説。マイナンバーが必要になるケースまで、初めて金買取を利用する方に向けて解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-tetsuzuki-guide/" },
 };
 
@@ -204,7 +204,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
             <li><strong>宅配買取：</strong>宅配キットの取り寄せが必要な場合が多い</li>
           </ul>
 
-          <p>店頭・出張・宅配それぞれの特徴は<Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法4つの徹底比較</Link>で解説しています。即日現金化したい方は<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent hover:underline">即日買取ガイド</Link>もご覧ください。</p>
+          <p>店頭・出張・宅配それぞれの特徴は<Link href="/articles/kaitori-houhou-hikaku/" className="text-accent hover:underline">買取方法4つの比較</Link>で解説しています。即日現金化したい方は<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent hover:underline">即日買取ガイド</Link>もご覧ください。</p>
 
           <CtaBox />
 

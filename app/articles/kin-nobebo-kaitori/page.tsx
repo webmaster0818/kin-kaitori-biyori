@@ -220,7 +220,7 @@ export default function KinNobeboKaitoriPage() {
         <div className="flex flex-wrap gap-2 not-prose">
           <Link href="/articles/kin-kaitori-zeikin/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">金買取の税金ガイド</Link>
           <Link href="/articles/kin-baikyaku-mynumber/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">マイナンバーと200万円の境界</Link>
-          <Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">買取手続き完全ガイド</Link>
+          <Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">買取手続きガイド</Link>
           <Link href="/articles/kin-souzoku-baikyaku/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">相続した金の売却</Link>
           <Link href="/articles/ingot-100g-kaitori/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">インゴット100gの買取</Link>
           <Link href="/articles/kinka-ingot-kaitori/" className="text-sm bg-cream border border-accent/40 rounded-lg px-3 py-2 hover:bg-accent/10">金貨・インゴット買取ガイド</Link>
