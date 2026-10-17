@@ -135,7 +135,7 @@ export default function TokyoKinKaitoriPage() {
 
         <h2>東京の金買取相場（毎日自動更新）</h2>
 
-        <p>2026年4月現在、東京での金買取相場は以下のとおりです。</p>
+        <p>東京での金買取相場の目安は以下のとおりです（田中貴金属の公表価格をもとに毎日更新）。</p>
 
         <PurityPriceTable />
 

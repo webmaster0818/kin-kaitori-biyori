@@ -12,7 +12,7 @@ type Props = {
 export default function DealerComparisonTable({
   dealerIds,
   heading = "金買取業者7社の比較",
-  intro = "店舗数・対応エリア・査定スピード・手数料について、各社の公式情報をまとめています。出典は各社公式サイト（最終確認：2026年5月）。",
+  intro = "店舗数・対応エリア・査定スピード・手数料について、各社の公式情報をまとめています。出典は各社公式サイト（2026年5月に確認。店舗数・査定時間・手数料の一部は2026年10月に再確認）。",
 }: Props) {
   const dealers: Dealer[] = dealerIds ? pickDealers(dealerIds) : DEALERS;
 
@@ -103,7 +103,7 @@ export default function DealerComparisonTable({
       </div>
 
       <p className="text-[11px] text-warm-gray mt-3 leading-relaxed">
-        ※ 上記情報は各業者の公式サイトに記載の内容を 2026年5月時点で確認したものです。最新情報は、各社の公式サイト（
+        ※ 上記情報は各業者の公式サイトに記載の内容を 2026年5月に確認したものです（店舗数・査定時間・手数料の一部は2026年10月に再確認）。最新情報は、各社の公式サイト（
         {dealers.map((d, i) => (
           <span key={d.id}>
             <a

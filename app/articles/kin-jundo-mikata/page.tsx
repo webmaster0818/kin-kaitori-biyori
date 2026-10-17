@@ -144,17 +144,17 @@ export default function KinJundoMikataPage() {
                 <th>金の含有率</th>
                 <th>千分率表記</th>
                 <th>主な用途</th>
-                <th>1gあたり買取価格（2026年4月目安）</th>
+                <th>1gあたり買取価格（{GP_DATE}時点の目安）</th>
               </tr>
             </thead>
             <tbody>
               <tr><td><strong>K24</strong></td><td>99.99%</td><td>999</td><td>インゴット・金貨</td><td>約{LP_K24}円</td></tr>
-              <tr><td><strong>K22</strong></td><td>91.7%</td><td>916</td><td>一部のコイン（クルーガーランド等）</td><td>約13,900円</td></tr>
-              <tr><td><strong>K20</strong></td><td>83.3%</td><td>833</td><td>金歯・歯科用金合金</td><td>約12,600円</td></tr>
+              <tr><td><strong>K22</strong></td><td>91.7%</td><td>916</td><td>一部のコイン（クルーガーランド等）</td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k22).toLocaleString()}円</td></tr>
+              <tr><td><strong>K20</strong></td><td>83.3%</td><td>833</td><td>金歯・歯科用金合金</td><td>約{Math.round(goldData.tanaka_official.au_buyback_per_g * 0.833 * 0.96).toLocaleString()}円</td></tr>
               <tr><td><strong>K18</strong></td><td>75.0%</td><td>750</td><td>ジュエリー全般</td><td>約{LP_K18}円</td></tr>
               <tr><td><strong>K14</strong></td><td>58.5%</td><td>585</td><td>海外ジュエリー</td><td>約{LP_K14}円</td></tr>
               <tr><td><strong>K10</strong></td><td>41.7%</td><td>417</td><td>カジュアルジュエリー</td><td>約{LP_K10}円</td></tr>
-              <tr><td><strong>K9</strong></td><td>37.5%</td><td>375</td><td>英国ジュエリー</td><td>約5,700円</td></tr>
+              <tr><td><strong>K9</strong></td><td>37.5%</td><td>375</td><td>英国ジュエリー</td><td>約{Math.round(goldData.tanaka_official.au_buyback_per_g * 0.375 * 0.96).toLocaleString()}円</td></tr>
             </tbody>
           </table>
         </div>

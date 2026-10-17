@@ -186,7 +186,7 @@ export default function PlatinumKaitoriPage() {
 
           <h2>プラチナ買取相場 — 純度別の価格目安</h2>
 
-          <p>プラチナ製品は純度によって価格が異なります。純度別の買取相場の目安は以下のとおりです（Pt1000・Pt900・Pt850は田中貴金属の公表価格をもとにした{LP_DATE}時点の目安、Pt950は2026年4月時点の目安です）。</p>
+          <p>プラチナ製品は純度によって価格が異なります。純度別の買取相場の目安は以下のとおりです（田中貴金属の公表価格をもとにした{LP_DATE}時点の目安です）。</p>
 
           <div className="table-wrapper">
             <table>
@@ -200,7 +200,7 @@ export default function PlatinumKaitoriPage() {
               </thead>
               <tbody>
                 <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.95%以上</td><td><strong>約{LP_PT}円</strong></td><td>インゴット、一部ジュエリー</td></tr>
-                <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約4,900〜5,200円</td><td>海外ジュエリー、ハイブランド</td></tr>
+                <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約{Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString()}円</td><td>海外ジュエリー、ハイブランド</td></tr>
                 <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約{LP_PT900}円</td><td>日本のジュエリー全般</td></tr>
                 <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約{LP_PT850}円</td><td>ネックレスチェーン</td></tr>
               </tbody>
@@ -332,7 +332,7 @@ export default function PlatinumKaitoriPage() {
 
           <h2>金 vs プラチナ: 2026年、どちらを売るべきか</h2>
 
-          <p>金とプラチナの両方を保有している方にとって、「どちらを先に売るべきか」は悩ましい問題です。2026年4月時点の状況を比較して判断材料を提示します。</p>
+          <p>金とプラチナの両方を保有している方にとって、「どちらを先に売るべきか」は悩ましい問題です。{LP_DATE}時点の価格をもとに比較します。</p>
 
           <div className="table-wrapper">
             <table>
@@ -345,10 +345,8 @@ export default function PlatinumKaitoriPage() {
               </thead>
               <tbody>
                 <tr><td><strong>現在の価格（1g・{LP_DATE}時点）</strong></td><td>約{LP_K24}円</td><td>約{LP_PT}円</td></tr>
-                <tr><td><strong>過去最高値比</strong></td><td>ほぼ最高値圏</td><td>過去最高値（2008年：約7,500円）の約70%</td></tr>
-                <tr><td><strong>6年間の上昇率</strong></td><td>約2.3倍（2020年比）</td><td>約1.9倍（2020年比）</td></tr>
                 <tr><td><strong>今後の見通し</strong></td><td>高止まり〜緩やかな上昇</td><td>水素社会で中長期的な需要拡大</td></tr>
-                <tr><td><strong>売り時の評価</strong></td><td>歴史的な高値圏にあり、売却を検討しやすい</td><td>上昇余地あり、急がなくてもよい</td></tr>
+                <tr><td><strong>売り時の評価</strong></td><td>歴史的な高値圏にあり、売却を検討しやすい</td><td>価格は日々変動するため、売却当日の価格をご確認ください</td></tr>
               </tbody>
             </table>
           </div>

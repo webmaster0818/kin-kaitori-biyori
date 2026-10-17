@@ -127,9 +127,9 @@ export default function IhinSeiriKinPage() {
           <li>遺品整理業者 vs 金買取業���の比較</li>
         </ul>
 
-        <h2>遺品整理で���つかりやすい金製品と価値の目安</h2>
+        <h2>遺品整理で見つかりやすい金製品と価値の目安</h2>
 
-        <p>以下は遺品整理でよく見つかる金製品と、2026年4月時点の買取価格の目安です。</p>
+        <p>以下は遺品整理でよく見つかる金製品と、{GP_DATE}時点の買取価格の目安です。</p>
 
         <div className="table-wrapper">
           <table>
@@ -145,7 +145,7 @@ export default function IhinSeiriKinPage() {
               <tr><td><strong>K18指輪</strong></td><td>2〜10g</td><td>約{_gy(_GP.k18 * 2)}〜{_gy(_GP.k18 * 10)}円</td></tr>
               <tr><td><strong>K18ブレスレット</strong></td><td>3〜20g</td><td>約{_gy(_GP.k18 * 3)}〜{_gy(_GP.k18 * 20)}円</td></tr>
               <tr><td><strong>K18喜平ネックレス</strong></td><td>30〜100g</td><td>約{_gy(_GP.k18 * 30)}〜{_gy(_GP.k18 * 100)}円</td></tr>
-              <tr><td><strong>金歯（K14〜K20相当）</strong></td><td>1〜3g/本</td><td>約6,000〜35,000円/本</td></tr>
+              <tr><td><strong>金歯（K14〜K20相当）</strong></td><td>1〜3g/本</td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k14).toLocaleString()}〜{Math.round(goldData.tanaka_official.au_buyback_per_g * 0.833 * 3 * 0.96).toLocaleString()}円/本</td></tr>
               <tr><td><strong>金の延べ棒（K24）</strong></td><td>5g〜1kg</td><td>約{Math.round(_LPP.k24 * 5).toLocaleString()}〜{Math.round(_LPP.k24 * 1000).toLocaleString()}円</td></tr>
               <tr><td><strong>金貨（メイプルリーフ等）</strong></td><td>約31.1g（1oz）</td><td>約{Math.round(_LPP.k24 * 31.1).toLocaleString()}円</td></tr>
               <tr><td><strong>金杯・金盃</strong></td><td>10〜50g</td><td>約{_gy(_GP.k24 * 10)}〜{_gy(_GP.k24 * 50)}円（K24の場合）</td></tr>

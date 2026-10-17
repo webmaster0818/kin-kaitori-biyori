@@ -41,7 +41,7 @@ function FaqSchema() {
     { "@type": "Question", name: "遺品整理で見つかった金の価値がわからない場合は？", acceptedAnswer: { "@type": "Answer", text: "買取業者に持ち込めば無料で査定してもらえます。刻印の確認やX線分析で純度を判定し、当日の相場で買取価格を算出してくれます。複数業者で査定を受けて比較するのがおすすめです。" } },
     { "@type": "Question", name: "相続した金の取得費（購入価格）がわからない場合は？", acceptedAnswer: { "@type": "Answer", text: "購入時の領収書がない場合、売却額の5%が取得費として計算されます。例えば100万円で売却した場合、取得費は5万円として計算され、売却益95万円に課税されます。領収書があれば大幅に税金を減らせるため、故人の書類をよく探すことをおすすめします。" } },
     { "@type": "Question", name: "相続した金は相続税の申告に含める必要がありますか？", acceptedAnswer: { "@type": "Answer", text: "はい、金・貴金属も相続財産に含まれます。相続税の評価は、相続開始日（死亡日）の金相場で行います。申告漏れがあると追徴課税の対象になるため、税理士に相談することをおすすめします。" } },
-    { "@type": "Question", name: "遺品の金をすぐに売らず保有し続けるべきですか？", acceptedAnswer: { "@type": "Answer", text: "2026年4月現在、金価格は歴史的な高値水準にあります。今後の値動きは予測できませんが、現在の価格に納得できるなら売却のタイミングとしては好適です。保有し続ける場合は盗難・紛失リスクに注意し、適切に保管することをおすすめします。" } },
+    { "@type": "Question", name: "遺品の金をすぐに売らず保有し続けるべきですか？", acceptedAnswer: { "@type": "Answer", text: "金価格は、田中貴金属の年次推移で2024年以前のどの年の最高値も上回る高値圏にあります（2026年10月16日確認）。今後の値動きは予測できませんが、現在の価格に納得できるなら売却のタイミングとしては好適です。保有し続ける場合は盗難・紛失リスクに注意し、適切に保管することをおすすめします。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />;
 }
@@ -171,7 +171,7 @@ export default function KinSouzokuBaikyakuPage() {
             { q: "取得費（購入価格）がわからない場合は？", a: "売却額の5%が取得費として計算されます。非常に不利なので、購入時の領収書を探すことが重要です。" },
             { q: "遺品整理で見つかった金の価値がわからない場合は？", a: "買取業者に持ち込めば無料で査定してもらえます。複数業者で比較することをおすすめします。" },
             { q: "相続人が複数いる場合、誰が売却すべき？", a: "遺産分割協議で合意を得てから、代表者が売却するのが一般的です。売却金は協議に従って分配します。" },
-            { q: "相続した金をすぐに売るべきですか？", a: "2026年4月現在は歴史的な高値水準にあり、売却を検討しやすい時期といえます。ただし税金を考慮して最適な時期を判断することをおすすめします。税理士への相談をおすすめします。" },
+            { q: "相続した金をすぐに売るべきですか？", a: "金価格は、田中貴金属の年次推移で2024年以前のどの年の最高値も上回る高値圏にあります（2026年10月16日確認）。売却を検討しやすい時期といえます。ただし税金を考慮して最適な時期を判断することをおすすめします。税理士への相談をおすすめします。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm"><span>{faq.q}</span><svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></summary>

@@ -159,7 +159,7 @@ export default function GinKaitoriPage() {
 
         <h2>銀の買取相場の目安</h2>
 
-        <p>銀の買取相場の目安は以下のとおりです（SV1000・SV925は田中貴金属の公表価格をもとにした{LP_DATE}時点の目安、その他の純度は2026年4月時点の目安です）。</p>
+        <p>銀の買取相場の目安は以下のとおりです（田中貴金属の公表価格をもとにした{LP_DATE}時点の目安です）。</p>
 
         <div className="table-wrapper">
           <table>
@@ -171,9 +171,9 @@ export default function GinKaitoriPage() {
             </thead>
             <tbody>
               <tr><td><strong>SV1000（純銀）</strong></td><td>約{LP_AG}円</td></tr>
-              <tr><td><strong>SV950</strong></td><td>約125〜140円</td></tr>
+              <tr><td><strong>SV950</strong></td><td>約{Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.95).toLocaleString()}円</td></tr>
               <tr><td><strong>SV925</strong></td><td>約{LP_AG925}円</td></tr>
-              <tr><td><strong>SV900</strong></td><td>約115〜130円</td></tr>
+              <tr><td><strong>SV900</strong></td><td>約{Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.9).toLocaleString()}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -270,7 +270,7 @@ export default function GinKaitoriPage() {
               <tr><td>メイプルリーフ銀貨（1oz）</td><td>31.1g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 31.1).toLocaleString()}円（+コレクター価値）</td></tr>
               <tr><td>イーグル銀貨（1oz）</td><td>31.1g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 31.1).toLocaleString()}円（+コレクター価値）</td></tr>
               <tr><td>銀インゴット（100g）</td><td>100g</td><td>約{Math.round(_LPT.ag_buyback_per_g * 100).toLocaleString()}円</td></tr>
-              <tr><td>銀インゴット（1kg）</td><td>1,000g</td><td>約130,000〜145,000円</td></tr>
+              <tr><td>銀インゴット（1kg）</td><td>1,000g</td><td>約{Math.round(goldData.tanaka_official.ag_buyback_per_g * 1000).toLocaleString()}円</td></tr>
             </tbody>
           </table>
         </div>

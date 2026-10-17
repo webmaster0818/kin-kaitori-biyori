@@ -254,8 +254,8 @@ export default function KinKaitoriSoubaPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.99%</td><td>約5,100〜5,400円</td><td>インゴット</td></tr>
-                <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約4,800〜5,100円</td><td>結婚指輪、高級ジュエリー</td></tr>
+                <tr><td><strong>Pt1000（純プラチナ）</strong></td><td>99.99%</td><td>約{Math.round(goldData.tanaka_official.pt_buyback_per_g * 1).toLocaleString()}円</td><td>インゴット</td></tr>
+                <tr><td><strong>Pt950</strong></td><td>95.0%</td><td>約{Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString()}円</td><td>結婚指輪、高級ジュエリー</td></tr>
                 <tr><td><strong>Pt900</strong></td><td>90.0%</td><td>約{LP_PT900}円</td><td>指輪、ネックレス</td></tr>
                 <tr><td><strong>Pt850</strong></td><td>85.0%</td><td>約{LP_PT850}円</td><td>チェーン、ブレスレット</td></tr>
               </tbody>
@@ -278,9 +278,9 @@ export default function KinKaitoriSoubaPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>金歯（金合金）</td><td>K16〜K20相当（60〜80%）</td><td>約9,000〜12,000円</td></tr>
+                <tr><td>金歯（金合金）</td><td>K16〜K20相当（60〜80%）</td><td>約{Math.round(goldData.tanaka_official.au_buyback_per_g * 0.667 * 0.96).toLocaleString()}〜{Math.round(goldData.tanaka_official.au_buyback_per_g * 0.833 * 0.96).toLocaleString()}円</td></tr>
                 <tr><td>金パラ（金銀パラジウム合金）</td><td>金12%+パラジウム20%</td><td>約2,500〜3,500円</td></tr>
-                <tr><td>銀歯（銀合金）</td><td>銀40〜50%</td><td>約50〜100円</td></tr>
+                <tr><td>銀歯（銀合金）</td><td>銀40〜50%</td><td>約{Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.4).toLocaleString()}〜{Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.5).toLocaleString()}円</td></tr>
               </tbody>
             </table>
           </div>

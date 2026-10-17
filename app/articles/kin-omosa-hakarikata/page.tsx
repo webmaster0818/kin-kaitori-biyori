@@ -309,7 +309,7 @@ export default function KinOmosaHakrikataPage() {
               <tr>
                 <th>純度</th>
                 <th>純度の割合</th>
-                <th>1gあたり買取相場の目安（2026年4月）</th>
+                <th>1gあたり買取相場の目安（{LP_DATE}時点）</th>
               </tr>
             </thead>
             <tbody>

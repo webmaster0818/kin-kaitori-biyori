@@ -132,9 +132,9 @@ export default function OsakaKinKaitoriPage() {
           <li>大阪で金を高く売るためのコツ</li>
         </ul>
 
-        <h2>大阪の金買取相場（2026年4月）</h2>
+        <h2>大阪の金買取相場（毎日自動更新）</h2>
 
-        <p>2026年4月現在、大阪での金買取相場は以下のとおりです。</p>
+        <p>{`${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`}時点の大阪での金買取相場の目安は以下のとおりです（田中貴金属の公表価格をもとに算出）。</p>
 
         <div className="table-wrapper">
           <table>
@@ -146,8 +146,8 @@ export default function OsakaKinKaitoriPage() {
             </thead>
             <tbody>
               <tr><td><strong>K24（純金）</strong></td><td>約{LP_K24}円</td></tr>
-              <tr><td><strong>K18（18金）</strong></td><td>約11,100〜11,500円</td></tr>
-              <tr><td><strong>K14（14金）</strong></td><td>約8,600〜9,000円</td></tr>
+              <tr><td><strong>K18（18金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k18).toLocaleString()}円</td></tr>
+              <tr><td><strong>K14（14金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k14).toLocaleString()}円</td></tr>
               <tr><td><strong>Pt900（プラチナ）</strong></td><td>約{LP_PT900}円</td></tr>
             </tbody>
           </table>
@@ -330,7 +330,7 @@ export default function OsakaKinKaitoriPage() {
           </li>
           <li>
             <strong>相場が高い今が売り時</strong>
-            <p>2026年4月現在の金相場は歴史的な高値水準です。大阪でも同じ相場が適用されるため、売却を検討しやすい時期といえます。</p>
+            <p>金価格は、田中貴金属の年次推移で2024年以前のどの年の最高値も上回る高値圏にあります（2026年10月16日確認）。大阪でも同じ相場が適用されるため、売却を検討しやすい時期といえます。</p>
           </li>
         </ol>
 

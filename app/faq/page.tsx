@@ -117,7 +117,7 @@ export default function FaqPage() {
 
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金買取 よくある質問（FAQ）</h1>
-        <p className="text-warm-gray text-sm mb-4">最終更新: 2026年4月13日</p>
+        <p className="text-warm-gray text-sm mb-4">最終更新: 2026年10月16日</p>
         <p className="text-warm-gray text-sm mb-8">全{totalQuestions}問の質問に回答しています。</p>
 
         <p>金の買取に関してよく寄せられる質問を<strong>カテゴリ別に{totalQuestions}問以上</strong>まとめました。相場・純度・買取方法・税金など、金の売却前にご確認いただきたい情報を掲載しています。</p>

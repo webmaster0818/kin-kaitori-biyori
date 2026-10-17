@@ -126,7 +126,7 @@ export default function OkachimachiKinKaitoriPage() {
 
           <ul>
             <li>なぜ御徒町は他エリアより買取価格が高いのか</li>
-            <li>御徒町の金買取相場（2026年5月）</li>
+            <li>御徒町の金買取相場（毎日自動更新）</li>
             <li>御徒町でおすすめの金買取業者タイプと選び方</li>
             <li>はじめて訪問するときの段取り・持ち物・注意点</li>
             <li>御徒町に行く前にやっておくべき相場確認</li>
@@ -146,9 +146,9 @@ export default function OkachimachiKinKaitoriPage() {
 
           <p>同じブロックに10店舗以上の貴金属業者が並ぶ場所もあり、<strong>顧客の取り合い＝価格競争</strong>が日常的に起きています。相見積もりを取るだけで簡単に価格を引き上げられるエリアは、全国でも御徒町と日本橋・銀座に限られます。</p>
 
-          <h2>御徒町の金買取相場（2026年5月）</h2>
+          <h2>御徒町の金買取相場（毎日自動更新）</h2>
 
-          <p>2026年5月現在、御徒町エリアでの金買取の目安価格は以下のとおりです。地金・大口取引では問屋直接価格に近い数字が出ることもあります。</p>
+          <p>{priceDateJa}時点の金買取の目安価格は以下のとおりです（田中貴金属の公表価格をもとに算出）。地金・大口取引では問屋直接価格に近い数字が出ることもあります。</p>
 
           <div className="table-wrapper">
             <table>
@@ -161,11 +161,11 @@ export default function OkachimachiKinKaitoriPage() {
               </thead>
               <tbody>
                 <tr><td><strong>K24（純金）</strong></td><td>約{LP_K24}円</td><td>地金・インゴットは高値が出やすい</td></tr>
-                <tr><td><strong>K22（22金）</strong></td><td>約13,800〜14,200円</td><td>金貨に多い純度</td></tr>
-                <tr><td><strong>K18（18金）</strong></td><td>約11,300〜11,700円</td><td>ジュエリーで最も流通</td></tr>
-                <tr><td><strong>K14（14金）</strong></td><td>約8,800〜9,200円</td><td>輸入ジュエリーに多い</td></tr>
-                <tr><td><strong>K10（10金）</strong></td><td>約6,200〜6,500円</td><td>カジュアルジュエリー向け</td></tr>
-                <tr><td><strong>Pt900（プラチナ）</strong></td><td>約4,600〜4,900円</td><td>結婚指輪に多い純度</td></tr>
+                <tr><td><strong>K22（22金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k22).toLocaleString()}円</td><td>金貨に多い純度</td></tr>
+                <tr><td><strong>K18（18金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k18).toLocaleString()}円</td><td>ジュエリーで最も流通</td></tr>
+                <tr><td><strong>K14（14金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k14).toLocaleString()}円</td><td>輸入ジュエリーに多い</td></tr>
+                <tr><td><strong>K10（10金）</strong></td><td>約{Math.round(goldData.purity_buyback_estimate_per_g.k10).toLocaleString()}円</td><td>カジュアルジュエリー向け</td></tr>
+                <tr><td><strong>Pt900（プラチナ）</strong></td><td>約{Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.9).toLocaleString()}円</td><td>結婚指輪に多い純度</td></tr>
               </tbody>
             </table>
           </div>

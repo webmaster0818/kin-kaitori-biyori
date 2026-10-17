@@ -257,7 +257,7 @@ export default function CartierKaitoriPage() {
               <tr><td><strong>K18YG（イエローゴールド）</strong></td><td>約{LP_K18}円</td><td>最も定番</td><td>安定した需要。リセールバリューが最も高い傾向</td></tr>
               <tr><td><strong>K18PG（ピンクゴールド）</strong></td><td>約{LP_K18}円</td><td>女性に人気</td><td>ラブブレスレットのPGは特に人気が高い</td></tr>
               <tr><td><strong>K18WG（ホワイトゴールド）</strong></td><td>約{LP_K18}円</td><td>男女兼用</td><td>ダイヤモデルとの組み合わせが人気</td></tr>
-              <tr><td><strong>Pt950（プラチナ）</strong></td><td>約4,800〜5,200円</td><td>婚約・結婚指輪向け</td><td>素材価値は金より低いが、ブランド価値で補完</td></tr>
+              <tr><td><strong>Pt950（プラチナ）</strong></td><td>約{Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString()}円</td><td>婚約・結婚指輪向け</td><td>素材価値は金より低いが、ブランド価値で補完</td></tr>
             </tbody>
           </table>
         </div>
@@ -285,7 +285,7 @@ export default function CartierKaitoriPage() {
           </li>
           <li>
             <strong>金相場が高い時に売る</strong>
-            <p>2026年4月現在、金相場は歴史的高値圏にあります。K18の素材価値が高い今は、カルティエの買取価格も底上げされています。現在の価格に納得できるかどうかを判断の基準とすることをおすすめします。</p>
+            <p>金価格は、田中貴金属の年次推移で2024年以前のどの年の最高値も上回る高値圏にあります（2026年10月16日確認）。K18の素材価値が高い今は、カルティエの買取価格も底上げされています。現在の価格に納得できるかどうかを判断の基準とすることをおすすめします。</p>
           </li>
         </ol>
 
