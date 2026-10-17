@@ -12,6 +12,7 @@ import goldData from "@/data/gold-spot-prices.json";
 
 const k22Price = goldData.purity_buyback_estimate_per_g.k22;
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
+const k216Price = Math.round(goldData.tanaka_official.au_buyback_per_g * 0.9 * 0.96);
 const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
 const priceDateJa = formatDateJa(goldData.date);
 
@@ -47,7 +48,7 @@ function FaqSchema() {
       { "@type": "Question", name: "K22（22金）の買取価格は毎日変わりますか？", acceptedAnswer: { "@type": "Answer", text: "はい、国際金価格と為替レートにより毎日変動します。最新の目安は本ページ冒頭の「本日のK22買取相場」と重量別早見表（毎朝自動更新）でご確認ください。K22はK24（純金）の約92%の価格水準です。" } },
       { "@type": "Question", name: "K22はどんな製品に使われていますか？", acceptedAnswer: { "@type": "Answer", text: "K22は主に金貨（クルーガーランド金貨、アメリカン・ゴールド・イーグル金貨、ソブリン金貨など）や海外製ジュエリーに使用されます。日本国内ではK18が主流ですが、海外（特に中東・東南アジア）ではK22のジュエリーが一般的です。なお、メイプルリーフ金貨やウィーン金貨はK24（純度99.99%）です。" } },
       { "@type": "Question", name: "K22とK24の違いは何ですか？", acceptedAnswer: { "@type": "Answer", text: "K22は金の純度が91.7%（22/24）、K24は99.99%です。K22はK24より硬度が高く、ジュエリーや金貨として加工しやすいというメリットがあります。買取価格はK24の方が高くなります。" } },
-      { "@type": "Question", name: "K22の刻印にはどんな種類がありますか？", acceptedAnswer: { "@type": "Answer", text: "K22の刻印は「K22」「22K」「916」「917」などがあります。「916」「917」は千分率表記で、金の含有率が916/1000（91.6%）であることを示しています。海外製品では「22K」「22ct」と刻印されることもあります。" } },
+      { "@type": "Question", name: "K22の刻印にはどんな種類がありますか？", acceptedAnswer: { "@type": "Answer", text: "K22の刻印は「K22」「22K」「916」「917」などがあります。「916」「917」は千分率表記で、どちらも22金です。造幣局は2012年4月からISO 9202・JIS H 6309に合わせて「917」の表示を「916」に変更しています。海外製品では「22K」「22ct」と刻印されることもあります。" } },
       { "@type": "Question", name: "K22の金貨はどこで売るのがお得ですか？", acceptedAnswer: { "@type": "Answer", text: "金貨の種類によって最適な売却先が異なります。一般的な投資用金貨（クルーガーランド金貨など）は貴金属買取業者で金の重量ベースで買い取ってもらえます。希少な記念金貨はコイン専門店の方が高値がつく場合があります。複数社で見積もりを取って比較するのがおすすめです。" } },
     ],
   };
@@ -58,7 +59,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `K22（22金）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
+    headline: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】各社の公示価格と金貨の査定`,
     datePublished: "2026-04-13",
     dateModified: goldData.date,
     author: { "@type": "Organization", name: "金買取びより" },
@@ -68,8 +69,8 @@ function ArticleSchema() {
 }
 
 export const metadata: Metadata = {
-  title: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】金貨・製品別の査定額も`,
-  description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。K22金貨・ジュエリーの製品別査定額、K24・K18との価格比較、刻印の見分け方、高く売るポイントとおすすめ買取業者4社を解説します。`,
+  title: `22金（K22）の買取相場 今日1g${k22Price.toLocaleString()}円【${priceMonth}月${priceDay}日更新】各社の公示価格と金貨の査定`,
+  description: `本日（${priceMonth}月${priceDay}日）の22金（K22・純度91.7%）買取相場は1gあたり${k22Price.toLocaleString()}円（毎朝自動更新）。重量別早見表、田中貴金属・各買取店の22金公示ページ、造幣局の品位「916」、K21.6との違い、金貨の査定ポイントを解説します。`,
   alternates: { canonical: "https://gold-biyori.com/articles/k22-kaitori/" },
 };
 
@@ -109,10 +110,14 @@ export default function K22KaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">22金（K22）買取相場 — 今日の1g価格と高く売る方法</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">22金（K22）の買取相場 — 今日の1g価格・重量別早見表と各社の公示価格</h1>
         <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k22" />
+
+        <div id="weight-table">
+          <WeightPriceTable purities={["k22"]} />
+        </div>
 
         <p>K22（22金）は、<strong>純度91.7%</strong>という高い金含有率を持つ金合金です。日本国内ではK18やK24と比べて流通量は少ないものの、<strong>海外製のジュエリーや金貨</strong>に多く使われており、買取市場でも多く取引されています。</p>
 
@@ -120,7 +125,9 @@ export default function K22KaitoriPage() {
 
         <p>この記事では、以下の内容をご説明します。</p>
         <ul>
-          <li>K22（22金）の最新買取相場（1gあたりの価格）</li>
+          <li>K22（22金）の今日の買取相場（1gあたり・重量別）</li>
+          <li><a href="#koji" className="text-accent hover:underline">田中貴金属・各買取店の22金の公示ページ</a>と、価格の基準の違い</li>
+          <li><a href="#k216" className="text-accent hover:underline">K22とK21.6の違い</a></li>
           <li>K22が使われる製品の種類と特徴</li>
           <li>K24・K18との買取価格の違い</li>
           <li>K22の刻印の読み方と見分け方</li>
@@ -131,22 +138,18 @@ export default function K22KaitoriPage() {
 
         <GoldSpotPriceCard purity="k22" />
 
-        <div id="weight-table">
-          <WeightPriceTable purities={["k22"]} />
-        </div>
-
 
         <h2>K22（22金）とは — 純度91.7%の高純度金合金</h2>
 
-        <p>K22は<strong>金の純度が91.7%（917/1000）</strong>の合金です。残りの8.3%には銀や銅などが混ぜられています。「カラット」の24分の22、つまり全体の約92%が金で構成されています。</p>
+        <p>K22は<strong>金の純度が91.7%（22/24＝91.67%）</strong>の合金です。残りの8.3%には銀や銅などが混ぜられています。「カラット」の24分の22、つまり全体の約92%が金で構成されています。</p>
 
         <h3>K22の特徴</h3>
 
         <div className="table-wrapper">
           <table>
             <tbody>
-              <tr><th>純度</th><td>91.7%（22/24・917/1000）</td></tr>
-              <tr><th>主な刻印</th><td>K22・22K・916・917</td></tr>
+              <tr><th>純度</th><td>91.67%（22/24）。造幣局の品位証明では「916」</td></tr>
+              <tr><th>主な刻印</th><td>K22・22K・916（2012年3月以前の造幣局ホールマークは917）</td></tr>
               <tr><th>主な用途</th><td>海外発行の金貨（クルーガーランド等）・海外製ジュエリー</td></tr>
               <tr><th>性質</th><td>K24より硬く、金貨・装飾品への加工に向く</td></tr>
             </tbody>
@@ -157,7 +160,9 @@ export default function K22KaitoriPage() {
         <p>K22の買取価格は<strong>K24の約92%の水準</strong>です。K18と比べると1gあたり約{(k22Price - k18Price).toLocaleString()}円高く（{priceDateJa}時点の目安）、同じ重量のジュエリーならK22の方がかなり高額な買取になります。</p>
 
         
-        <p>1オンス（31.1g）のK22金貨であれば、<strong>約{Math.round((31.1 * k22Price) / 10000)}万円前後</strong>（{priceDateJa}時点の目安）の買取価格が期待できます。金価格が歴史的高値圏にある現在は、売却に非常に有利な時期です。</p>
+        <p>K22金貨の地金価値は<strong>実測した重量（g）×K22の1g単価</strong>で計算します。「1オンス金貨」の1オンス（31.1g）は含まれる純金の量を表していることが多く、K22の金貨は銅などを含む分だけ総重量が31.1gより重くなります。表記の「1オンス」ではなく、はかりで量った重さで計算してください（例：30gなら約{(30 * k22Price).toLocaleString()}円・{priceDateJa}時点の目安）。</p>
+
+        <p>造幣局は品位証明（ホールマーク）の区分として金は999・916・750・585・416・375の6区分を定めており、<strong>916がK22に当たります</strong>。2012年（平成24年）4月から、ISO 9202・JIS H 6309に合わせて「917」の表示を「916」に変更しています（<a href="https://www.mint.go.jp/operations/exam/operations_certification-02.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">造幣局「品位証明」</a>）。古い品に「917」、新しい品に「916」とあっても、どちらも22金です。</p>
 
         
         <p>金貨は金の素材価値に加えて、<strong>プレミアム（付加価値）</strong>がつく場合があります。特に発行枚数が限られた記念金貨や、年号が古いヴィンテージ金貨は、金の重量以上の価格で取引されることがあります。</p>
@@ -170,7 +175,35 @@ export default function K22KaitoriPage() {
 
         <WeightPriceTable purities={["k24", "k22", "k18"]} />
 
-        <p>同じ重量でも純度によって査定額は大きく変わります。手元の製品の刻印（917・K22等）を確認したうえで、<Link href="/kin-kaitori-keisanki/">買取計算機</Link>で概算を出しておくと、店頭査定額の妥当性をその場で判断できます。</p>
+        <p>同じ重量でも純度によって査定額は大きく変わります。手元の製品の刻印（K22・916・917等）を確認したうえで、<Link href="/kin-kaitori-keisanki/">買取計算機</Link>で概算を出しておくと、店頭査定額の妥当性をその場で判断できます。</p>
+
+        <h2 id="koji">22金の公示価格を出している主なページと、基準の違い</h2>
+
+        <p>K22の1g買取価格は、田中貴金属と大手買取店が公式サイトで毎日公表しています。<strong>同じ日でも各社の数字は一致しません。</strong>税込か、手数料を含むか、何時時点か、という基準がそれぞれ違うためです。比べるときは基準を揃えてご確認ください（2026年10月17日に各公式ページで確認）。</p>
+
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>公表元</th><th>掲載している品位</th><th>更新・基準（公式の表記）</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://gold.tanaka.co.jp/retanaka/price/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">田中貴金属 RE:TANAKA（製品の買取）</a></td><td>K24・K22・K20・K18・K15・K14・K12・K10・K9（K21.6は無し）</td><td>毎日9:30と14:00に公表・税込・鑑定料等込み</td></tr>
+              <tr><td><a href="https://gold.tanaka.co.jp/commodity/souba/index.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">田中貴金属 地金価格</a></td><td>地金（K24）のみ。K22は無し</td><td>税込。当サイトの目安はこのK24買取価格から計算</td></tr>
+              <tr><td><a href="https://komehyo.jp/kaitori/gold/22k/souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">コメ兵</a></td><td>24K・22K・21.6K・20K・18K・14K・10K・9K</td><td>田中貴金属の公表価格を基準に算出・税込</td></tr>
+              <tr><td><a href="https://nanboya.com/gold-kaitori/22kin/22kin-souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">なんぼや</a></td><td>K22専用ページあり</td><td>毎日更新・時刻つき</td></tr>
+              <tr><td><a href="https://www.kaitori-daikichi.jp/list/gold/k22/souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a></td><td>K24〜K5（K21.6含む）</td><td>日付つきで自動更新</td></tr>
+              <tr><td><a href="https://www.otakaraya.jp/gold/22kin" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">おたからや</a></td><td>K22</td><td>日付・時刻つき</td></tr>
+              <tr><td><a href="https://www.sanoya.co.jp/gold/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">さのや</a></td><td>K24・K22・K20・K18・K14</td><td>当日の日付で掲載</td></tr>
+              <tr><td><a href="https://goldplaza.jp/gold/rate" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ゴールドプラザ</a></td><td>インゴット・K24・K22・K21.6・K20・K18ほか</td><td>毎日更新（土日は金曜時点）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-xs text-warm-gray">※数値は日々変わるため本表には載せていません。当サイトの「今日の1g」は、田中貴金属の地金（K24）店頭買取価格×22/24×業者買取平均係数0.96で毎朝計算した目安で、上の各社の公示価格そのものではありません。</p>
+
+        <h2 id="k216">K22とK21.6の違い</h2>
+
+        <p>K21.6は<strong>純度90%（21.6/24）</strong>の金で、K22（91.67%）より金の割合が約1.7ポイント低くなります。刻印は「K21.6」「900」などです。純度が違うため査定単価も別で、当サイトと同じ計算式で出すと本日のK21.6の目安は1gあたり約{k216Price.toLocaleString()}円（K22は{k22Price.toLocaleString()}円・{priceDateJa}時点）です。田中貴金属のRE:TANAKAはK21.6を掲載していないため、K21.6の公示価格はコメ兵・買取大吉・ゴールドプラザなどのページで確認できます。</p>
 
         <h2>K22の代表的な金貨・製品と買取のポイント</h2>
 
@@ -196,7 +229,7 @@ export default function K22KaitoriPage() {
         <p>K22として売られている製品の中には、金メッキ品や純度表記が不正確なものも紛れています。売却前に確認できるポイントは次のとおりです。</p>
 
         <ul>
-          <li><strong>刻印を確認する</strong>: 本物のK22製品には「K22」「917」などの純度刻印があるのが一般的です。「K22GP」（金メッキ）「K22GF」（金張り）は地金価値がほぼありません。</li>
+          <li><strong>刻印を確認する</strong>: 本物のK22製品には「K22」「22K」「916」（古い品は「917」）などの純度刻印があるのが一般的です。「K22GP」（金メッキ）「K22GF」（金張り）は地金価値がほぼありません。</li>
           <li><strong>磁石を近づける</strong>: 金は磁石に付きません。強く反応する場合はメッキ品の可能性があります（ただし非磁性の金属を使った偽物もあるため、これだけでは断定できません）。</li>
           <li><strong>最終判断は専門店の機器で</strong>: 買取店では比重計や蛍光X線分析機で純度を測定します。刻印がない・自信がない場合も、査定自体は無料の業者が多いのでまず持ち込んで確認するのが確実です。</li>
         </ul>
@@ -205,7 +238,7 @@ export default function K22KaitoriPage() {
 
         <h3>1. 複数の買取業者に見積もりを取る</h3>
 
-        <p>K22の買取価格は業者によって1gあたり数百円の差が出ます。30gの金貨なら、1gあたり200円の差で<strong>6,000円もの差額</strong>になります。必ず3社以上に見積もりを取ることをおすすめします。</p>
+        <p>K22の買取価格は業者ごとに基準が異なり、<a href="#koji" className="text-accent hover:underline">各社の公示価格</a>も同じ日で一致しません。30gの金貨なら、1gあたり200円の差で<strong>6,000円の差額</strong>になります。3社以上に見積もりを取ることをおすすめします。</p>
 
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>のような一括査定サービスを使えば、一度の申し込みで複数業者の見積もりが取れます。</p>
 
