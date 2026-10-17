@@ -21,7 +21,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場【2026年8月】",
+  title: "栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場",
   description:
     "栄生駅（名鉄名古屋本線）から歩ける金買取店を、公式店舗ページで確認した情報だけでまとめました。買取大吉 中村栄生店の住所・営業時間・道順、今日の金相場、名駅を使う場合との比較まで。",
   robots: { index: true, follow: true },
@@ -41,7 +41,7 @@ function Schemas() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場【2026年8月】",
+    headline: "栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場",
     description:
       "栄生駅から歩ける金買取店を、公式店舗ページで確認した情報だけでまとめた記事です。",
     datePublished: "2026-08-24",
@@ -112,7 +112,7 @@ export default function Page() {
 
         <article className="prose">
           <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">
-            栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場【2026年8月】
+            栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場
           </h1>
           <p className="text-warm-gray text-sm mb-8">
             店舗情報は{CHECKED}に公式店舗ページで確認／相場は毎朝自動更新（{priceDateJa}時点）

@@ -4,7 +4,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
 
-const TITLE = "ブランドジュエリー・時計の金買取ガイド｜ブランド価値と地金価値の二重評価【2026年7月】";
+const TITLE = "ブランドジュエリー・時計の金買取ガイド｜ブランド価値と地金価値の二重評価";
 const URL = "https://gold-biyori.com/articles/brand-jewelry-kin-kaitori/";
 const P = goldData.purity_buyback_estimate_per_g;
 const [, pMonth, pDay] = goldData.date.split("-").map(Number);

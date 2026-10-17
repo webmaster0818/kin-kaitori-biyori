@@ -27,7 +27,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年7月】金貨買取ガイド｜メイプルリーフ・イーグル・カンガルー・記念金貨の相場と売り方",
+    headline: "金貨買取ガイド｜メイプルリーフ・イーグル・カンガルー・記念金貨の相場と売り方",
     description: "メイプルリーフ金貨・イーグル金貨・カンガルー金貨・天皇陛下記念金貨の買取を種類別に解説。純度と純金量の見方、地金価値の計算方法、プレミアが付くケース、高く売るコツまで1ページで網羅。",
     datePublished: "2026-07-03",
     dateModified: "2026-07-03",
@@ -56,7 +56,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年7月】金貨買取ガイド｜メイプルリーフ・イーグル・カンガルー・記念金貨の相場と売り方",
+  title: "金貨買取ガイド｜メイプルリーフ・イーグル・カンガルー・記念金貨の相場と売り方",
   description: "メイプルリーフ金貨・イーグル金貨・カンガルー金貨・天皇陛下記念金貨の買取を種類別に解説。純度と純金量の見方、地金価値の計算方法、プレミアが付くケース、高く売るコツまで1ページで網羅。",
   alternates: { canonical: "https://gold-biyori.com/articles/kinka-kaitori-guide/" },
 };
@@ -97,7 +97,7 @@ export default function KinkaKaitoriGuidePage() {
         </div>
 
         <article className="prose">
-          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年7月】金貨買取ガイド — メイプルリーフ・イーグル・カンガルー・記念金貨</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金貨買取ガイド — メイプルリーフ・イーグル・カンガルー・記念金貨</h1>
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
           <p>金貨の買取価格は、基本的に<strong>「純金量×当日の金相場」</strong>で決まります。この記事では、代表的な地金型金貨である<strong>メイプルリーフ金貨・イーグル金貨・カンガルー金貨</strong>と、日本の<strong>記念金貨（天皇陛下御在位記念など）</strong>の買取知識を種類別に1ページへまとめました。</p>

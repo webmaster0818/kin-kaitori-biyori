@@ -54,7 +54,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
+    headline: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ",
     datePublished: "2026-04-13",
     dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
@@ -67,7 +67,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ【2026年7月】",
+  title: "金ネックレスの買取相場はいくら？純度・重さ別の今日の価格と高く売るコツ",
   description:
     "金ネックレスの最新買取相場をK24・K18・K14の純度別・重量別に掲載。喜平ネックレスの買取価格、チェーン切れでも売れる理由、ブランドネックレスの査定ポイント、高く売るコツとおすすめ買取業者4社を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-necklace-kaitori/" },

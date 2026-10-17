@@ -72,7 +72,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説【2026年7月】",
+  title: "金の売り時はいつ？いま売るべきかを今日の相場と判断基準で解説",
   description:
     `2026年は金の売り時？K24（純金）1g約${LP_K24}円（${LP_DATE}時点）の歴史的高値の背景、今後の金相場の見方、売却タイミングの判断基準、税金を考慮した売り方を解説します。`,
   alternates: { canonical: "https://gold-biyori.com/articles/kin-uridoki-2026/" },

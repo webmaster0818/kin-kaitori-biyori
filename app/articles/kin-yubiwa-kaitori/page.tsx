@@ -61,7 +61,7 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "金の指輪・結婚指輪の買取相場はいくら？今日の価格と高く売るコツ【2026年7月】",
+    headline: "金の指輪・結婚指輪の買取相場はいくら？今日の価格と高く売るコツ",
     datePublished: "2026-04-13",
     dateModified: "2026-06-11",
     author: { "@type": "Organization", name: "金買取びより" },
@@ -74,7 +74,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "金の指輪・結婚指輪の買取相場はいくら？今日の価格と高く売るコツ【2026年7月】",
+  title: "金の指輪・結婚指輪の買取相場はいくら？今日の価格と高く売るコツ",
   description:
     "金の指輪の最新買取相場をK18・K24・K14・Pt900の素材別に掲載。結婚指輪・婚約指輪・ブランドリングの買取価格目安、宝石付きリングの査定ポイント、高く売るコツとおすすめ買取業者4社を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-yubiwa-kaitori/" },

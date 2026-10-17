@@ -27,7 +27,7 @@ function ArticleSchema() {
   const d = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ【2026年7月】",
+    headline: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ",
     description: "新座で金を高く売るならどこ？新座の金買取相場、店頭・出張・宅配の方法別比較、埼玉県で高く売るポイントと注意点を公開情報をもとに解説します。",
     datePublished: "2026-06-05",
     dateModified: "2026-06-05",
@@ -56,7 +56,7 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ【2026年7月】",
+  title: "新座市の金買取はどこがいい？おすすめ業者と今日の相場・高く売るコツ",
   description: "新座で金を高く売るならどこ？新座の金買取相場、店頭・出張・宅配の方法別比較、埼玉県で高く売るポイントと注意点を公開情報をもとに解説します。",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/niiza-kin-kaitori/" },
