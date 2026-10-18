@@ -77,7 +77,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "matsusaka-kin-kaitori": {
-    updated: "2026-10-17",
+    updated: "2026-10-18",
     stores: [
       {
         name: "買取大吉 イオンタウン松阪船江店",
@@ -174,6 +174,17 @@ export const localStores: Record<string, CityStores> = {
         access: "公式に駅からの記載なし",
         tel: "0598-31-1140",
         sourceUrl: "https://jewel-cafe.jp/shop/apita-matsusaka-mikumo/",
+      },
+      {
+        name: "買取店わかば ベーシック松阪川井町店",
+        chain: "わかば",
+        address: "三重県松阪市川井町473-1",
+        postalCode: "515-0818",
+        hours: "9:30〜18:30（最終受付18:00）",
+        closed: "金曜日・年末年始",
+        access: "JR紀勢本線・名松線／近鉄山田線から約2km（県道59号線沿い「松阪市民文化会館前」交差点・駐車場あり）",
+        tel: "0598-30-8095",
+        sourceUrl: "https://wakaba-shop.jp/shop/mie-matsusaka/",
       },
     ],
   },

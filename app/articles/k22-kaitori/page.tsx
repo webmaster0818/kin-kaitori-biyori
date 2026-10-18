@@ -294,7 +294,7 @@ export default function K22KaitoriPage() {
 
         <h3>ティファナ — 3つの方法から選べる</h3>
 
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3つの方法から選べる買取サービスです（出張買取は東京・埼玉・神奈川の一部地域、宅配買取は全国）。ライフスタイルに合わせた柔軟な対応が魅力です。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3つの方法から選べる買取サービスです（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。ライフスタイルに合わせた柔軟な対応が魅力です。</p>
 
         <ul>
           <li>店頭・出張・宅配の3方法対応</li>

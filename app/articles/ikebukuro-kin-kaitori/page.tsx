@@ -58,7 +58,7 @@ function FaqSchema() {
       { "@type": "Question", name: "池袋で土日でも金買取できますか？", acceptedAnswer: { "@type": "Answer", text: "できます。公式で確認できた店では、大黒屋 質池袋東口買取センター（年中無休・年末年始を除く）、なんぼや 池袋店（定休日なし）、買取大吉 池袋西口店（年中無休）が土日も営業しています。リファスタ 東京池袋本店は水曜・日曜が定休で完全予約制です（2026年10月13日確認）。" } },
       { "@type": "Question", name: "池袋の金買取で一番高い業者はどこ？", acceptedAnswer: { "@type": "Answer", text: "業者により得意分野が異なるため一概には言えません。一括査定（ヒカカク！）で複数比較がおすすめ。" } },
       { "@type": "Question", name: "池袋駅から徒歩何分の業者が多い？", acceptedAnswer: { "@type": "Answer", text: "公式の表記では、大黒屋 質池袋東口買取センターが池袋駅東口（中央）から徒歩1分、なんぼや 池袋店がJR池袋駅東口から徒歩2分程度、買取大吉 池袋西口店がJR池袋駅西口から徒歩2分、リファスタ 東京池袋本店が池袋駅35番出口から徒歩7分です（2026年10月13日確認）。" } },
-      { "@type": "Question", name: "出張買取で池袋以外も対応できる？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川の一部地域です。申し込み時に対象エリアかご確認ください。" } },
+      { "@type": "Question", name: "出張買取で池袋以外も対応できる？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川・千葉の一部地域です。申し込み時に対象エリアかご確認ください。" } },
       { "@type": "Question", name: "身分証は何が必要？", acceptedAnswer: { "@type": "Answer", text: "古物営業法により本人確認が必要。運転免許証、マイナンバーカード、パスポートのいずれか。" } },
     ],
   };
@@ -169,7 +169,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>出張買取で池袋以外も対応できる？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川の一部地域です。申し込み時に対象エリアかご確認ください。</p>
+  <p className="mt-3 text-sm leading-relaxed">ウリエルは公式の出張対応エリアに東京都を含めています（一部対応できない市町村あり）。ティファナの出張は東京・埼玉・神奈川・千葉の一部地域です。申し込み時に対象エリアかご確認ください。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>身分証は何が必要？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>

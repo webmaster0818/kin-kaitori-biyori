@@ -28,8 +28,8 @@ function ArticleSchema() {
   const d = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内9店（公式確認）・今日の相場【2026年10月】",
-    description: "松阪駅から歩ける金買取店は西出口徒歩10分の大阪屋、南口徒歩約15分のエコリングの2店。買取大吉・おたからや等は車で5〜6分の郊外店です。松阪市内9店の住所・営業時間・駅からのアクセスを公式で確認し、今日の金相場とあわせて掲載。",
+    headline: "松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内10店（公式確認）・今日の相場【2026年10月】",
+    description: "松阪駅から歩ける金買取店は西出口徒歩10分の大阪屋、南口徒歩約15分のエコリングの2店。買取大吉・おたからや等は車で5〜6分の郊外店です。松阪市内10店の住所・営業時間・駅からのアクセスを公式で確認し、今日の金相場とあわせて掲載。",
     datePublished: "2026-06-05",
     dateModified: "2026-10-17",
     author: { "@type": "Organization", name: "金買取びより編集部" },
@@ -46,7 +46,7 @@ function FaqSchema() {
       { "@type": "Question", name: "松阪駅から歩いて行ける金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "各社公式で確認できたのは2店です。質ディスカウント大阪屋 松阪店（湊町265・近鉄/JR松阪駅 西出口より徒歩10分・10:00〜19:00）と、エコリング三重松阪店（長月町88-21・松阪駅南口より徒歩約15分・11:00〜18:30・水曜定休）です（2026年10月17日確認）。" } },
       { "@type": "Question", name: "松阪で金買取の価格が高い業者の選び方は？", acceptedAnswer: { "@type": "Answer", text: "松阪では複数の買取業者を比較することが重要です。同じ純度・重量でも、業者によって1gあたりの査定額が異なる場合があります。ヒカカク！の一括査定などで複数社から見積もりを取り、査定額を比較したうえで業者を選ぶことをおすすめします。" } },
       { "@type": "Question", name: "松阪で金を即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であれば査定後その場で現金を受け取れます。松阪駅から歩いて行けるのは大阪屋（西出口徒歩10分）とエコリング（南口徒歩約15分）で、買取大吉・おたからやの市内店は駅から車で5〜6分の郊外店です（各社公式・2026年10月17日確認）。" } },
-      { "@type": "Question", name: "松阪で出張買取は利用できますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに三重県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、三重県は対象外です。出張費・査定料は無料で、自宅で金製品の売却が完了するため、外出が難しい方や量が多い方に適しています。" } },
+      { "@type": "Question", name: "松阪で出張買取は利用できますか？", acceptedAnswer: { "@type": "Answer", text: "ウリエルは公式の出張対応エリアに三重県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川・千葉の一部地域のため、三重県は対象外です。出張費・査定料は無料で、自宅で金製品の売却が完了するため、外出が難しい方や量が多い方に適しています。" } },
       { "@type": "Question", name: "松阪の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法で買取時の身分証提示が義務付けられています。保証書や箱などの付属品があれば、査定額が上がる場合があります。" } },
       { "@type": "Question", name: "松阪と都心部で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "純度・重量が同じなら金の地金価値は全国共通ですが、業者の経費や競争状況により提示額に差が出ます。一括査定や宅配買取を利用すれば、地域を問わず複数の業者の査定額を比較できます。" } }
     ],
@@ -58,8 +58,8 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内9店（公式確認）・今日の相場【2026年10月】",
-  description: "松阪駅から歩ける金買取店は西出口徒歩10分の大阪屋、南口徒歩約15分のエコリングの2店。買取大吉・おたからや等は車で5〜6分の郊外店です。松阪市内9店の住所・営業時間・駅からのアクセスを公式で確認し、今日の金相場とあわせて掲載。",
+  title: "松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内10店（公式確認）・今日の相場【2026年10月】",
+  description: "松阪駅から歩ける金買取店は西出口徒歩10分の大阪屋、南口徒歩約15分のエコリングの2店。買取大吉・おたからや等は車で5〜6分の郊外店です。松阪市内10店の住所・営業時間・駅からのアクセスを公式で確認し、今日の金相場とあわせて掲載。",
   alternates: { canonical: "https://gold-biyori.com/articles/matsusaka-kin-kaitori/" },
 };
 
@@ -101,10 +101,10 @@ export default function MatsusakaKinKaitoriPage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内9店（公式確認）・今日の相場【2026年10月】</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">松阪駅の金買取｜駅から徒歩10分・15分の2店と松阪市内10店（公式確認）・今日の相場【2026年10月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-        <p>松阪市内の金買取店は、松阪駅から歩ける2店を除くと郊外のショッピングセンター内の店が中心です。この記事では<a href="#stations" className="text-accent hover:underline">松阪駅からの早見表</a>と、公式で確認した市内9店の情報をまとめました。</p>
+        <p>松阪市内の金買取店は、松阪駅から歩ける2店を除くと郊外のショッピングセンター内の店が中心です。この記事では<a href="#stations" className="text-accent hover:underline">松阪駅からの早見表</a>と、公式で確認した市内10店の情報をまとめました。</p>
 
         <p>「松阪で金を売るならどこがいい？」「相場はいくら？」——この記事では、松阪での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を、公開情報にもとづいてまとめました。</p>
         <ul>
@@ -132,6 +132,7 @@ export default function MatsusakaKinKaitoriPage() {
               <tr><td><strong>松阪駅から車</strong></td><td><a href="https://www.otakaraya-shop.jp/matsusaka/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">おたからや アドバンスモール松阪店</a>（田村町235-1）</td><td>JR・近鉄 松阪駅より車で5分／鈴の音バス「アドバンスモール」より徒歩3分</td><td>10:00〜18:00／月曜</td></tr>
               <tr><td><strong>松阪駅から車</strong></td><td><a href="https://www.kaitori-daikichi.jp/store/tr-matsusaka/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉 スーパーセンタートライアル松阪店</a>（東町59-6）</td><td>JR紀勢本線 松阪駅より車で6分</td><td>10:00〜19:00／年中無休</td></tr>
               <tr><td><strong>松ヶ崎駅</strong>（近鉄山田線）</td><td><a href="https://www.kaitori-daikichi.jp/store/at-matsusakafunae/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉 イオンタウン松阪船江店</a>（船江町1392-27 B棟1F）</td><td>松ヶ崎駅より徒歩9分（松阪駅からの記載なし）</td><td>10:00〜19:00／年中無休</td></tr>
+              <tr><td><strong>駅から約2km</strong></td><td><a href="https://wakaba-shop.jp/shop/mie-matsusaka/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取店わかば ベーシック松阪川井町店</a>（川井町473-1）</td><td>JR紀勢本線・名松線／近鉄山田線から約2km。県道59号線沿い「松阪市民文化会館前」交差点（駐車場あり）</td><td>9:30〜18:30（最終受付18:00）／金曜日・年末年始休み</td></tr>
               <tr><td><strong>駅の記載なし</strong></td><td>おたからや 高町店・オークワ松阪下村店・バロー大黒田店、ジュエルカフェ アピタ松阪三雲店</td><td>公式に駅からのアクセスの記載なし（下の店舗一覧に住所を掲載）</td><td>店舗ごとに異なる</td></tr>
             </tbody>
           </table>
@@ -214,7 +215,7 @@ export default function MatsusakaKinKaitoriPage() {
             },
             {
               q: "松阪で出張買取は利用できますか？",
-              a: "ウリエルは公式の出張対応エリアに三重県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川の一部地域のため、三重県は対象外です。出張費・査定料は無料で、自宅で金製品の売却が完了するため、外出が難しい方や量が多い方に適しています。",
+              a: "ウリエルは公式の出張対応エリアに三重県を含めています（一部対応できない市町村あり）。ティファナの出張エリアは東京・埼玉・神奈川・千葉の一部地域のため、三重県は対象外です。出張費・査定料は無料で、自宅で金製品の売却が完了するため、外出が難しい方や量が多い方に適しています。",
             },
             {
               q: "松阪の金買取で必要な持ち物は？",

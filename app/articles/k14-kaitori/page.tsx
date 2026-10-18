@@ -332,7 +332,7 @@ export default function K14KaitoriPage() {
 
         <h3>ティファナ — 3つの方法から選べる</h3>
 
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応（出張買取は東京・埼玉・神奈川の一部地域、宅配買取は全国）。忙しくて店舗に行けない方でも、宅配や出張で査定を依頼できます。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。忙しくて店舗に行けない方でも、宅配や出張で査定を依頼できます。</p>
 
         <h2>K14の売却に関する税金</h2>
 
