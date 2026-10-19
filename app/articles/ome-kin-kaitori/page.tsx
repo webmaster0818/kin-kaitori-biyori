@@ -157,7 +157,7 @@ export default function OmeKinKaitoriPage() {
         <ul>
           <li><strong>ヒカカク！</strong>：複数の業者へ一括で査定を依頼でき、査定額を比較できる</li>
           <li><strong>買取大吉</strong>：全国展開の大手チェーン。予約不要で即日現金化に対応</li>
-          <li><strong>ウリエル</strong>：出張買取が中心（宅配買取にも対応）。出張費・査定料すべて無料</li>
+          <li><strong>ウリエル</strong>：出張買取が中心（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）。出張費・査定料すべて無料</li>
           <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応</li>
         </ul>
 

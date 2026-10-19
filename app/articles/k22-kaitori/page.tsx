@@ -284,7 +284,7 @@ export default function K22KaitoriPage() {
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
-        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（宅配買取にも対応。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられるため、重い金貨や大量のジュエリーを売りたい場合に便利です。</p>
+        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられるため、重い金貨や大量のジュエリーを売りたい場合に便利です。</p>
 
         <ul>
           <li>出張費・査定料すべて無料</li>

@@ -27,8 +27,8 @@ function BreadcrumbSchema() {
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "買取大吉となんぼやではどちらが金を高く買い取ってくれますか？", acceptedAnswer: { "@type": "Answer", text: "金の買取価格は日によって異なり、一概にどちらが高いとは言えません。両社とも業界大手であり、相場に連動した価格を提示します。最高値で売るには両社に加えてヒカカク！の一括査定も利用し、3社以上を比較するのがおすすめです。" } },
-    { "@type": "Question", name: "買取大吉の特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に950店舗以上を展開する業界最大級のチェーンです。店舗数が多くアクセスしやすいのが最大の強み。査定料・手数料は無料で、金・プラチナ・ブランド品・時計など幅広い品目に対応しています。" } },
-    { "@type": "Question", name: "なんぼやの特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に139店舗以上を展開し、ビデオ通話による正確な事前査定が特徴です。LINE査定やビデオ査定で来店前に価格がわかるため、効率的に売却できます。貴金属・ブランド品に強い買取チェーンです。" } },
+    { "@type": "Question", name: "買取大吉の特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に2,400店舗以上（公式表記・2026年10月確認）を展開する業界最大級のチェーンです。店舗数が多くアクセスしやすいのが最大の強み。査定料・手数料は無料で、金・プラチナ・ブランド品・時計など幅広い品目に対応しています。" } },
+    { "@type": "Question", name: "なんぼやの特徴は？", acceptedAnswer: { "@type": "Answer", text: "全国に140店舗以上（公式表記・2026年10月確認）を展開し、ビデオ通話による正確な事前査定が特徴です。LINE査定やビデオ査定で来店前に価格がわかるため、効率的に売却できます。貴金属・ブランド品に強い買取チェーンです。" } },
     { "@type": "Question", name: "どちらも手数料は無料ですか？", acceptedAnswer: { "@type": "Answer", text: "はい、買取大吉・なんぼやともに査定料・手数料は無料です。キャンセルしても費用はかかりません。" } },
     { "@type": "Question", name: "この2社以外も比較すべきですか？", acceptedAnswer: { "@type": "Answer", text: "はい、必ず3社以上を比較することをおすすめします。ヒカカク！の一括査定を使えば、買取大吉やなんぼや以外の業者とも価格を比較できます。" } },
   ]};
@@ -82,25 +82,25 @@ export default function DaikichiVsNanboyaPage() {
           <table>
             <thead><tr><th>比較項目</th><th>買取大吉</th><th>なんぼや</th></tr></thead>
             <tbody>
-              <tr><td><strong>全国店舗数</strong></td><td>950店舗以上</td><td>139店舗以上</td></tr>
-              <tr><td><strong>運営会社</strong></td><td>株式会社エンパワー</td><td>バリュエンスホールディングス株式会社</td></tr>
+              <tr><td><strong>全国店舗数</strong></td><td>2,400店舗以上</td><td>140店舗以上</td></tr>
+              <tr><td><strong>運営会社</strong></td><td>株式会社エンパワー</td><td>バリュエンスジャパン株式会社</td></tr>
               <tr><td><strong>上場</strong></td><td>非上場</td><td>東証グロース上場</td></tr>
-              <tr><td><strong>買取方式</strong></td><td>店頭買取</td><td>店頭・宅配・出張・ビデオ査定</td></tr>
+              <tr><td><strong>買取方式</strong></td><td>店頭・出張（公式「日本全国OK」）</td><td>店頭・宅配・出張・オンライン（ビデオ通話）</td></tr>
               <tr><td><strong>査定料</strong></td><td>無料</td><td>無料</td></tr>
               <tr><td><strong>キャンセル料</strong></td><td>無料</td><td>無料</td></tr>
-              <tr><td><strong>現金化スピード</strong></td><td>即日（店頭）</td><td>即日（店頭）/24時間以内（宅配）</td></tr>
+              <tr><td><strong>現金化スピード</strong></td><td>即日（店頭）</td><td>即日（店頭）/最短当日査定＆振込（宅配・公式表記）</td></tr>
               <tr><td><strong>事前査定</strong></td><td>LINE査定あり</td><td>LINE査定・ビデオ査定あり</td></tr>
             </tbody>
           </table>
         </div>
 
         <h2>比較1：店舗数・アクセスの良さ</h2>
-        <p><strong>買取大吉の圧勝です。</strong>950店舗以上は業界トップクラスで、全国のほとんどの主要都市にアクセスしやすい店舗があります。なんぼやは139店舗と多くはありませんが、主要駅の近くに出店しており、立地条件に優れています。</p>
+        <p><strong>買取大吉の圧勝です。</strong>2,400店舗以上（公式表記）は業界トップクラスで、全国のほとんどの主要都市にアクセスしやすい店舗があります。なんぼやは140店舗以上（公式表記）と大吉より少ないものの、主要駅の近くに出店しており、立地条件に優れています。</p>
         <div className="table-wrapper">
           <table>
             <thead><tr><th></th><th>買取大吉</th><th>なんぼや</th></tr></thead>
             <tbody>
-              <tr><td><strong>店舗数</strong></td><td>950+</td><td>139+</td></tr>
+              <tr><td><strong>店舗数</strong></td><td>2,400+</td><td>140+</td></tr>
               <tr><td><strong>立地傾向</strong></td><td>郊外のロードサイドにも出店</td><td>駅近・繁華街中心</td></tr>
               <tr><td><strong>地方カバー率</strong></td><td>高い</td><td>中程度</td></tr>
             </tbody>
@@ -115,7 +115,7 @@ export default function DaikichiVsNanboyaPage() {
             <thead><tr><th>方法</th><th>買取大吉</th><th>なんぼや</th></tr></thead>
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>対応</td><td>対応</td></tr>
-              <tr><td><strong>出張買取</strong></td><td>一部店舗対応</td><td>対応</td></tr>
+              <tr><td><strong>出張買取</strong></td><td>対応（公式「日本全国OK」）</td><td>対応（公式「最短当日訪問」）</td></tr>
               <tr><td><strong>宅配買取</strong></td><td>非対応（一部店舗のみ）</td><td>対応</td></tr>
               <tr><td><strong>LINE査定</strong></td><td>対応</td><td>対応</td></tr>
               <tr><td><strong>ビデオ査定</strong></td><td>非対応</td><td>対応</td></tr>
@@ -193,7 +193,7 @@ export default function DaikichiVsNanboyaPage() {
             { q: "両社とも手数料は無料ですか？", a: "はい、査定料・手数料・キャンセル料ともに無料です。" },
             { q: "どちらが接客が良い？", a: "なんぼやについては、接客の丁寧さを評価する口コミが多く見られます。買取大吉はフランチャイズのため店舗差がありますが、良い店舗は非常に好評です。" },
             { q: "2社だけで比較すれば十分？", a: "いいえ、最低3社以上の比較を推奨します。ヒカカク！の一括査定で幅広く比較することをおすすめします。" },
-            { q: "どちらも出張買取に対応していますか？", a: "なんぼやは出張買取に対応しています。買取大吉は一部店舗で対応しています。" },
+            { q: "どちらも出張買取に対応していますか？", a: "どちらも出張買取に対応しています。買取大吉は公式に「出張費無料／日本全国OK」、なんぼやは全国対応で、希望エリア・品物・予約状況により対応が難しい場合があると公式に記載しています（2026年10月19日確認）。" },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
               <summary className="flex items-center justify-between p-5 font-medium text-sm"><span>{faq.q}</span><svg className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></summary>

@@ -237,7 +237,7 @@ export default function KinBraceletKaitoriPage() {
         <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）。ブレスレットをその場で計量・査定し即現金化。公式の金・貴金属ページには「K18 喜平ブレスレット」などの買取参考価格が掲載されています（2026年10月11日確認）。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
-        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（宅配買取にも対応。出張買取は沖縄県など一部対象外の地域あり）。高額な喜平ブレスレットを持ち歩くのが不安な方におすすめです。</p>
+        <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。高額な喜平ブレスレットを持ち歩くのが不安な方におすすめです。</p>
 
         <h3>ティファナ — 3つの方法から選べる</h3>
         <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法対応（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。ライフスタイルに合わせて最適な方法を選べます。</p>

@@ -213,7 +213,7 @@ ARTICLES.append({
               <thead><tr><th>業者</th><th>方式</th><th>特徴</th></tr></thead>
               <tbody>
                 <tr><td>ヒカカク！</td><td>一括査定</td><td>1回で複数業者の見積もり比較</td></tr>
-                <tr><td>買取大吉</td><td>店頭・出張</td><td>全国700店舗以上の大手</td></tr>
+                <tr><td>買取大吉</td><td>店頭・出張</td><td>全国2,400店舗以上の大手</td></tr>
                 <tr><td>ウリエル</td><td>出張買取</td><td>自宅で査定、即現金化</td></tr>
                 <tr><td>ティファナ</td><td>店頭・宅配</td><td>初心者にも分かりやすい</td></tr>
               </tbody>
@@ -398,7 +398,7 @@ ARTICLES.append({
               <tbody>
                 <tr><td>ロデオドライブ</td><td>ロレックスの買取実績豊富</td></tr>
                 <tr><td>コメ兵</td><td>ブランド時計の老舗・店舗多数</td></tr>
-                <tr><td>おたからや</td><td>全国700店舗以上で即現金化</td></tr>
+                <tr><td>おたからや</td><td>世界約2,070店舗以上（公式表記・2026年10月）</td></tr>
                 <tr><td>ヒカカク！</td><td>一括査定で複数業者比較</td></tr>
               </tbody>
             </table>

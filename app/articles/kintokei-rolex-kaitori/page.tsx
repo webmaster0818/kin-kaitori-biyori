@@ -178,7 +178,7 @@ export default function Page() {
               <tbody>
                 <tr><td>ロデオドライブ</td><td>ロレックスの買取実績豊富</td></tr>
                 <tr><td>コメ兵</td><td>ブランド時計の老舗・店舗多数</td></tr>
-                <tr><td>おたからや</td><td>全国700店舗以上で即現金化</td></tr>
+                <tr><td>おたからや</td><td>世界約2,070店舗以上（公式表記・2026年10月）</td></tr>
                 <tr><td>ヒカカク！</td><td>一括査定で複数業者比較</td></tr>
               </tbody>
             </table>
