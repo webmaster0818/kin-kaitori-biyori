@@ -20,14 +20,14 @@ function BreadcrumbSchema() {
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
     { "@type": "Question", name: "金買取の査定料はどこも無料ですか？", acceptedAnswer: { "@type": "Answer", text: "今回調査した13社（買取大吉・ウリエル・ティファナ・なんぼや・バイセル・福ちゃん・ザ・ゴールド・おたからや・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス）はすべて公式サイトで査定料無料と明記しています（2026年6月時点）。" } },
-    { "@type": "Question", name: "見落としやすい手数料は何ですか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取でキャンセルした場合の「返送料」です。今回の調査では、なんぼや・ティファナは返送料無料、バイセル・福ちゃん・ザ・ゴールドはお客様負担（着払い）と公式に記載されており、各社で差がありました。また「買取相場価格に手数料は含まれていない」と注記する業者もあるため、査定時に差引きの有無を確認するのが確実です。" } },
+    { "@type": "Question", name: "見落としやすい手数料は何ですか？", acceptedAnswer: { "@type": "Answer", text: "宅配買取でキャンセルした場合の「返送料」です。今回の調査（2026年10月19日再確認）では、なんぼや・ティファナ・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリスは返送料無料、バイセル・福ちゃん・ザ・ゴールドはお客様負担（着払い）と公式に記載されており、各社で差がありました。また「買取相場価格に手数料は含まれていない」と注記する業者もあるため、査定時に差引きの有無を確認するのが確実です。" } },
     { "@type": "Question", name: "手数料無料なら、どこで売っても同じですか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。手数料が無料でも、提示される買取単価（1gあたりの価格）は業者ごとに異なります。手数料の有無と買取単価の両方を見て、手取り額で比較することをおすすめします。複数社の査定を取ることをおすすめします。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-10-19", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -45,15 +45,15 @@ const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: stri
   { name: "ウリエル", satei: "無料", shucchou: "無料（関東・中部（岐阜・静岡・愛知）・近畿・中国・四国・九州（沖縄県は対象外・一部市町村除く））", takuhai: "宅配なし（公式に案内なし）", hensou: "—", cancel: "無料", furikomi: "記載なし", methods: "出張中心・店頭（川崎店）・催事" },
   { name: "ティファナ", satei: "無料", shucchou: "無料（東京・埼玉・神奈川・千葉の一部）", takuhai: "送料無料・キット無料", hensou: "無料（対象外品のみ客負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配" },
   { name: "なんぼや", satei: "無料", shucchou: "無料（全国）", takuhai: "送料・キット無料", hensou: "無料", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配・オンライン" },
-  { name: "バイセル", satei: "無料", shucchou: "無料（離島除く全国）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料（8日間返品保証）", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
-  { name: "福ちゃん", satei: "無料", shucchou: "無料（全国※一部地域除く）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
-  { name: "ザ・ゴールド", satei: "無料", shucchou: "無料（全国90%以上カバー）", takuhai: "送料無料（着払い発送）", hensou: "客負担", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "バイセル", satei: "無料", shucchou: "無料（離島除く全国）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料（出張買取は8日間返品保証）", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "福ちゃん", satei: "無料", shucchou: "無料（対応エリアの記載なし）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "ザ・ゴールド", satei: "無料", shucchou: "無料（沖縄県と一部の離島を除く全国）", takuhai: "送料無料（着払い発送）", hensou: "客負担", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "おたからや", satei: "無料", shucchou: "無料（全国）", takuhai: "宅配なし", hensou: "—", cancel: "記載なし（査定後キャンセル可とは明記）", furikomi: "記載なし", methods: "店頭・出張" },
-  { name: "大黒屋", satei: "無料", shucchou: "無料", takuhai: "送料無料（往復・店負担）", hensou: "無料", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
-  { name: "ゴールドプラザ", satei: "無料", shucchou: "記載なし（出張あり）", takuhai: "送料無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配" },
-  { name: "コメ兵（KOMEHYO）", satei: "無料", shucchou: "記載なし（出張あり）", takuhai: "送料・キット無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
-  { name: "高山質店", satei: "無料", shucchou: "出張なし", takuhai: "送料無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・宅配・LINE" },
-  { name: "銀座パリス", satei: "無料", shucchou: "無料", takuhai: "送料無料（キット・着払伝票）", hensou: "記載なし", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配・LINE" },
+  { name: "大黒屋", satei: "無料", shucchou: "無料（相談・手続きすべて無料。訪問査定は公式掲載の対象エリアのみ）", takuhai: "送料無料（往復・店負担）", hensou: "無料", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "ゴールドプラザ", satei: "無料", shucchou: "記載なし（出張あり）", takuhai: "送料無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "無料（店負担・宅配買取）", methods: "店頭・出張・宅配" },
+  { name: "コメ兵（KOMEHYO）", satei: "無料", shucchou: "無料（出張可能エリア内・一部対象外地域あり）", takuhai: "送料・キット無料", hensou: "無料（店負担）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "高山質店", satei: "無料", shucchou: "出張なし", takuhai: "送料無料", hensou: "無料（当社負担）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・宅配・LINE" },
+  { name: "銀座パリス", satei: "無料", shucchou: "無料（一都三県が中心）", takuhai: "送料無料（キット・着払伝票）", hensou: "無料", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配・LINE" },
 ];
 
 function CtaBox() {
@@ -99,7 +99,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">出典: 各社公式サイト（2026年6月12日確認）。「記載なし」は公式サイトで確認できなかった項目です。最新情報・詳細条件は各公式サイトでご確認ください。</p>
+        <p className="text-xs text-warm-gray">出典: 各社公式サイト（2026年6月12日確認、2026年10月19日に13社とも再確認）。「記載なし」は公式サイトで確認できなかった項目です。最新情報・詳細条件は各公式サイトでご確認ください。</p>
 
         <h2>比較からわかった3つのポイント</h2>
         <h3>1. 査定料・出張料・キャンセル料は「無料」が業界標準</h3>
@@ -108,14 +108,14 @@ export default function KinKaitoriTesuryoHikakuPage() {
         <h3>2. 差がつくのは宅配買取の「返送料」</h3>
         <p>見落としやすいのが、宅配査定後にキャンセルした場合の<strong>返送料</strong>です。今回の調査では明確に差がありました。</p>
         <ul>
-          <li><strong>返送料も無料</strong>: なんぼや（「返送料すべて0円」と明記）、ティファナ（対象外品の返送のみ客負担）</li>
+          <li><strong>返送料も無料</strong>: なんぼや（公式「送料を当社が負担し返送」）、ティファナ（対象外品の返送のみ客負担）、大黒屋、ゴールドプラザ、コメ兵、高山質店、銀座パリス</li>
           <li><strong>返送料は客負担（着払い）</strong>: バイセル・福ちゃん・ザ・ゴールド</li>
           <li><strong>そもそも宅配なし</strong>: 買取大吉・ウリエル・おたからや（店頭・出張のみ）</li>
         </ul>
         <p>「査定額を見てから決めたい」人が宅配を使うなら、キャンセル時のコストまで含めて選ぶのが賢明です。</p>
 
         <h3>3. 「手数料無料」でも買取単価から差し引かれる場合がある</h3>
-        <p>なんぼやは金買取ページに「<strong>買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内</strong>」と注記しています（2026年6月確認）。これは誠実な開示ですが、裏を返せば「Web掲載の相場単価＝手取り単価とは限らない」ということです。</p>
+        <p>なんぼやは金買取ページに「<strong>買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内</strong>」と注記しています（2026年10月19日に再確認）。これは誠実な開示ですが、裏を返せば「Web掲載の相場単価＝手取り単価とは限らない」ということです。</p>
         <p>どの業者でも、査定時に<strong>「この金額から差し引かれるものはありますか？」と一言確認</strong>し、目減り・精錬費等の控除がないかをご確認ください。</p>
 
         <h2>手取り額で比較する手順</h2>
@@ -140,7 +140,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
         <h2>まとめ</h2>
         <ul>
           <li>査定料・出張料・キャンセル料は8社とも実質無料 — ここでは差がつかない</li>
-          <li>差がつくのは<strong>宅配キャンセル時の返送料</strong>（無料: なんぼや・ティファナ／客負担: バイセル・福ちゃん・ザ・ゴールド）と<strong>振込手数料の明記</strong>（無料明記: バイセル・福ちゃん・ザ・ゴールド）</li>
+          <li>差がつくのは<strong>宅配キャンセル時の返送料</strong>（無料: なんぼや・ティファナ・大黒屋・ゴールドプラザ・コメ兵・高山質店・銀座パリス／客負担: バイセル・福ちゃん・ザ・ゴールド）と<strong>振込手数料の明記</strong>（無料明記: バイセル・福ちゃん・ザ・ゴールド）</li>
           <li>「相場価格に手数料が含まれない」業者もある — 査定時に差引きの有無を必ず確認</li>
           <li>最後は手数料込みの<strong>手取り額</strong>で複数社を比較する</li>
         </ul>
