@@ -1,24 +1,24 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "source": "https://gold.tanaka.co.jp/commodity/souba/",
   "source_label": "田中貴金属",
-  "fetched_at": "2026-10-18T11:05:05.260346",
+  "fetched_at": "2026-10-19T11:05:05.217379",
   "tanaka_official": {
-    "au_buyback_per_g": 23118,
-    "au_retail_per_g": 23667,
-    "pt_buyback_per_g": 8920,
-    "pt_retail_per_g": 9469,
-    "ag_buyback_per_g": 305.69,
-    "ag_retail_per_g": 338.69
+    "au_buyback_per_g": 23131,
+    "au_retail_per_g": 23488,
+    "pt_buyback_per_g": 8952,
+    "pt_retail_per_g": 9375,
+    "ag_buyback_per_g": 317.13,
+    "ag_retail_per_g": 334.18
   },
   "purity_buyback_estimate_per_g": {
-    "k24": 22193,
-    "k22": 20344,
-    "k18": 16645,
-    "k14": 12946,
-    "k10": 9247,
-    "k18wg": 16645,
-    "k18pg": 16645
+    "k24": 22206,
+    "k22": 20355,
+    "k18": 16654,
+    "k14": 12953,
+    "k10": 9252,
+    "k18wg": 16654,
+    "k18pg": 16654
   },
   "note": "純度別価格は田中貴金属公開のK24店頭買取価格から純度比×業者買取平均係数0.96で算出した参考値です。実際の業者査定額は各社・状態・付属品により異なります。"
 }
