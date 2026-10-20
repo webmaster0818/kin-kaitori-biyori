@@ -395,7 +395,7 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - source dbcd45a・aebf10f / deploy 9f58f693e・866bae501。precheck ✅（296頁）・外部href 8081=8081・ASP 0
 
 ### 2026-10-20 朝ルーチン: ブランド4本の相場表＋ウリエル出張エリア外ボタンの wip
-- ブランド4本（cartier20/bvlgari17/tiffany16〔K18・Pt10＋SV6〕/vancleef20＝73行）の相場表: ブランド込みの買取相場は日次の金相場からは計算できない（重量も公式に無い）→ **数値は据え置き、列見出しを「買取相場の目安（2026年4月時点の調査）」に**。各行に **「地金の1g単価（{BM_DATE}）」列を追加**＝日次の gold-spot-prices.json から毎朝計算（K18=purity k18〔係数0.96込み〕・Pt950=田中pt買取×0.95・SV925=田中ag買取×0.925。K18系66・Pt3・SV6・SS/K18コンビはK18部分1・SS/チタン/アルミ/レザー7は「地金の評価対象外」）。h2 直下に列の説明（4月の値は更新していない理由・宝石/ブランド評価は含まない）。定数は `/* brand-table-metal */`（import 直後）、スクリプト /tmp/gold1020/brand_tables.py（冪等）
+- ブランド4本（cartier20/bvlgari17/tiffany16〔K18・Pt10＋SV6〕/vancleef20＝73行）の相場表: ブランド込みの買取相場は日次の金相場からは計算できない（重量も公式に無い）→ **数値は据え置き、列見出しを「買取相場の目安（2026年4月時点の調査）」に**。各行に **「地金の1g単価（{BM_DATE}）」列を追加**＝日次の gold-spot-prices.json から毎朝計算（K18=purity k18〔係数0.96込み〕・Pt950=田中pt買取×0.95・SV925=田中ag買取×0.925。K18系56・Pt3・SV6・SS/K18コンビはK18部分1・SS/チタン/アルミ/レザー7は「地金の評価対象外」）。h2 直下に列の説明（4月の値は更新していない理由・宝石/ブランド評価は含まない）。定数は `/* brand-table-metal */`（import 直後）、スクリプト /tmp/gold1020/brand_tables.py（冪等）
 - 未対応（表の外・件数のみ）: 時点表記のない4月の金額 = cartier「同じリングで15〜25万円」1、bvlgari 時計FAQ2（JSON-LD/本文で文言違い）・バッグFAQ1・「100万〜250万円以上」1、tiffany 素材別傾向表3セル。⚠️cartier はラブブレスレット「約30g」と書いており、当日K18で地金だけで約50万円＝表の下限40万円を上回る（重量は出典なし）
 - precheck ✅（296頁）・外部href 8081=8081・ASP 0。source bffa47f / deploy 87c3d121b。本番4ページで新列・旧見出し0
 - **wip/remove-uriel-button-1021**（072b488・push済み・本番未反映）: 10/11 にエリア外テンプレ文を入れた35ページ（現テンプレ文34＋sendai）から「出張買取を申し込む（ウリエル）」を削除、gen-area-articles.py もエリア外県ではボタンを出さない。build・precheck ✅、uriel-cuore.co.jp への href 561→490（−71＝34頁×CtaBox2＋sapporo×3）、外部href 8081→8010、ASP 0
