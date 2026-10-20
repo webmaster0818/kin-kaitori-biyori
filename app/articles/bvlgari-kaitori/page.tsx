@@ -5,6 +5,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
+const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
+const _BM_PT950 = Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString();
+const _BM_SV925 = Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.925).toLocaleString();
+const BM_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -135,6 +141,8 @@ export default function BvlgariKaitoriPage() {
 
         <h2>ブルガリ人気コレクション別の買取相場（2026年4月）</h2>
 
+        <p className="text-sm">表の「買取相場の目安」は2026年4月時点の調査値です。ブランド・モデルの評価を含む金額のため日次の金相場からは計算できず、更新していません。右の「地金の1g単価」は田中貴金属の公表価格（{BM_DATE}）から毎朝計算した素材だけの目安です（K18は純度換算×係数0.96、Pt950・SV925は田中の買取価格×純度）。宝石・ダイヤ・ブランドの評価は含まず、地金分は「重量×1g単価」で求められます。</p>
+
         <h3>ビー・ゼロワン（B.zero1）</h3>
 
         <p>ブルガリの代表的コレクション。古代ローマのコロッセオからインスピレーションを得たスパイラルデザインが特徴です。</p>
@@ -145,15 +153,16 @@ export default function BvlgariKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ビー・ゼロワン リング 1バンド</strong></td><td>K18WG</td><td>約6万〜10万円</td></tr>
-              <tr><td><strong>ビー・ゼロワン リング 3バンド</strong></td><td>K18YG</td><td>約8万〜15万円</td></tr>
-              <tr><td><strong>ビー・ゼロワン リング 4バンド</strong></td><td>K18PG</td><td>約10万〜18万円</td></tr>
-              <tr><td><strong>ビー・ゼロワン ネックレス</strong></td><td>K18WG</td><td>約10万〜18万円</td></tr>
-              <tr><td><strong>ビー・ゼロワン ブレスレット</strong></td><td>K18YG</td><td>約12万〜22万円</td></tr>
+              <tr><td><strong>ビー・ゼロワン リング 1バンド</strong></td><td>K18WG</td><td>約6万〜10万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ビー・ゼロワン リング 3バンド</strong></td><td>K18YG</td><td>約8万〜15万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ビー・ゼロワン リング 4バンド</strong></td><td>K18PG</td><td>約10万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ビー・ゼロワン ネックレス</strong></td><td>K18WG</td><td>約10万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ビー・ゼロワン ブレスレット</strong></td><td>K18YG</td><td>約12万〜22万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -168,15 +177,16 @@ export default function BvlgariKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>セルペンティ ヴァイパー リング</strong></td><td>K18PG</td><td>約10万〜18万円</td></tr>
-              <tr><td><strong>セルペンティ ヴァイパー ネックレス</strong></td><td>K18PG + ダイヤ</td><td>約15万〜35万円</td></tr>
-              <tr><td><strong>セルペンティ ヴァイパー ブレスレット</strong></td><td>K18PG + ダイヤ</td><td>約25万〜50万円</td></tr>
-              <tr><td><strong>セルペンティ トゥボガス ウォッチ</strong></td><td>SS</td><td>約20万〜35万円</td></tr>
-              <tr><td><strong>セルペンティ フォーエバー バッグ</strong></td><td>レザー</td><td>約5万〜15万円</td></tr>
+              <tr><td><strong>セルペンティ ヴァイパー リング</strong></td><td>K18PG</td><td>約10万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>セルペンティ ヴァイパー ネックレス</strong></td><td>K18PG + ダイヤ</td><td>約15万〜35万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>セルペンティ ヴァイパー ブレスレット</strong></td><td>K18PG + ダイヤ</td><td>約25万〜50万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>セルペンティ トゥボガス ウォッチ</strong></td><td>SS</td><td>約20万〜35万円</td><td>—（地金の評価対象外）</td></tr>
+              <tr><td><strong>セルペンティ フォーエバー バッグ</strong></td><td>レザー</td><td>約5万〜15万円</td><td>—（地金の評価対象外）</td></tr>
             </tbody>
           </table>
         </div>
@@ -191,13 +201,14 @@ export default function BvlgariKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ブルガリ・ブルガリ リング</strong></td><td>K18PG</td><td>約6万〜12万円</td></tr>
-              <tr><td><strong>ブルガリ・ブルガリ ネックレス</strong></td><td>K18YG</td><td>約8万〜15万円</td></tr>
-              <tr><td><strong>ブルガリ・ブルガリ ウォッチ</strong></td><td>SS/K18コンビ</td><td>約20万〜40万円</td></tr>
+              <tr><td><strong>ブルガリ・ブルガリ リング</strong></td><td>K18PG</td><td>約6万〜12万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ブルガリ・ブルガリ ネックレス</strong></td><td>K18YG</td><td>約8万〜15万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ブルガリ・ブルガリ ウォッチ</strong></td><td>SS/K18コンビ</td><td>約20万〜40万円</td><td>K18部分 約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -210,14 +221,15 @@ export default function BvlgariKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ディーヴァ ドリーム ネックレス</strong></td><td>K18PG + ダイヤ + マザーオブパール</td><td>約12万〜25万円</td></tr>
-              <tr><td><strong>フィオレヴァー リング</strong></td><td>K18WG + ダイヤ</td><td>約10万〜20万円</td></tr>
-              <tr><td><strong>オクト フィニッシモ ウォッチ</strong></td><td>チタン/SS</td><td>約30万〜60万円</td></tr>
-              <tr><td><strong>アルミニウム ウォッチ</strong></td><td>アルミニウム/ラバー</td><td>約5万〜10万円</td></tr>
+              <tr><td><strong>ディーヴァ ドリーム ネックレス</strong></td><td>K18PG + ダイヤ + マザーオブパール</td><td>約12万〜25万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>フィオレヴァー リング</strong></td><td>K18WG + ダイヤ</td><td>約10万〜20万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>オクト フィニッシモ ウォッチ</strong></td><td>チタン/SS</td><td>約30万〜60万円</td><td>—（地金の評価対象外）</td></tr>
+              <tr><td><strong>アルミニウム ウォッチ</strong></td><td>アルミニウム/ラバー</td><td>約5万〜10万円</td><td>—（地金の評価対象外）</td></tr>
             </tbody>
           </table>
         </div>

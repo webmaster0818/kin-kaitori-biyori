@@ -6,6 +6,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
+const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
+const _BM_PT950 = Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString();
+const _BM_SV925 = Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.925).toLocaleString();
+const BM_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+
 function BreadcrumbSchema() {
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -131,6 +137,8 @@ export default function VancleefKaitoriPage() {
 
         <h2>アルハンブラシリーズの買取相場（2026年4月）</h2>
 
+        <p className="text-sm">表の「買取相場の目安」は2026年4月時点の調査値です。ブランド・モデルの評価を含む金額のため日次の金相場からは計算できず、更新していません。右の「地金の1g単価」は田中貴金属の公表価格（{BM_DATE}）から毎朝計算した素材だけの目安です（K18は純度換算×係数0.96、Pt950・SV925は田中の買取価格×純度）。宝石・ダイヤ・ブランドの評価は含まず、地金分は「重量×1g単価」で求められます。</p>
+
         <p>アルハンブラはヴァンクリーフ&アーペルの最も代表的なコレクションです。四つ葉のクローバーモチーフのジュエリーで、1968年の誕生以来50年以上愛され続けています。</p>
 
         <h3>ヴィンテージアルハンブラ</h3>
@@ -141,18 +149,19 @@ export default function VancleefKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材 / 石</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / オニキス</td><td>約25万〜35万円</td></tr>
-              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約25万〜35万円</td></tr>
-              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / カーネリアン</td><td>約25万〜35万円</td></tr>
-              <tr><td><strong>ブレスレット（5モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約55万〜75万円</td></tr>
-              <tr><td><strong>ブレスレット（5モチーフ）</strong></td><td>K18YG / オニキス</td><td>約55万〜75万円</td></tr>
-              <tr><td><strong>ネックレス（10モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約90万〜120万円</td></tr>
-              <tr><td><strong>ネックレス（20モチーフ）</strong></td><td>K18YG / オニキス</td><td>約170万〜220万円</td></tr>
-              <tr><td><strong>イヤリング</strong></td><td>K18YG / マザーオブパール</td><td>約40万〜55万円</td></tr>
+              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / オニキス</td><td>約25万〜35万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約25万〜35万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ペンダント（1モチーフ）</strong></td><td>K18YG / カーネリアン</td><td>約25万〜35万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ブレスレット（5モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約55万〜75万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ブレスレット（5モチーフ）</strong></td><td>K18YG / オニキス</td><td>約55万〜75万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ネックレス（10モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約90万〜120万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ネックレス（20モチーフ）</strong></td><td>K18YG / オニキス</td><td>約170万〜220万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>イヤリング</strong></td><td>K18YG / マザーオブパール</td><td>約40万〜55万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -165,14 +174,15 @@ export default function VancleefKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材 / 石</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ペンダント</strong></td><td>K18YG / カーネリアン</td><td>約10万〜15万円</td></tr>
-              <tr><td><strong>ペンダント</strong></td><td>K18PG / マザーオブパール</td><td>約10万〜15万円</td></tr>
-              <tr><td><strong>ブレスレット</strong></td><td>K18YG / ターコイズ</td><td>約12万〜18万円</td></tr>
-              <tr><td><strong>ピアス</strong></td><td>K18YG / マザーオブパール</td><td>約15万〜22万円</td></tr>
+              <tr><td><strong>ペンダント</strong></td><td>K18YG / カーネリアン</td><td>約10万〜15万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ペンダント</strong></td><td>K18PG / マザーオブパール</td><td>約10万〜15万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ブレスレット</strong></td><td>K18YG / ターコイズ</td><td>約12万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ピアス</strong></td><td>K18YG / マザーオブパール</td><td>約15万〜22万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -185,12 +195,13 @@ export default function VancleefKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材 / 石</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ネックレス（6モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約40万〜60万円</td></tr>
-              <tr><td><strong>イヤリング（2モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約30万〜45万円</td></tr>
+              <tr><td><strong>ネックレス（6モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約40万〜60万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>イヤリング（2モチーフ）</strong></td><td>K18YG / マザーオブパール</td><td>約30万〜45万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -203,16 +214,17 @@ export default function VancleefKaitoriPage() {
               <tr>
                 <th>コレクション / モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>フリヴォル ペンダント（ミニ）</strong></td><td>K18YG + ダイヤ</td><td>約15万〜25万円</td></tr>
-              <tr><td><strong>フリヴォル ネックレス（3フラワー）</strong></td><td>K18YG + ダイヤ</td><td>約40万〜60万円</td></tr>
-              <tr><td><strong>フリヴォル イヤリング（ミニ）</strong></td><td>K18YG + ダイヤ</td><td>約25万〜40万円</td></tr>
-              <tr><td><strong>ペルレ クルール リング</strong></td><td>K18YG + カーネリアン</td><td>約8万〜14万円</td></tr>
-              <tr><td><strong>ペルレ シニアチュール リング</strong></td><td>K18YG</td><td>約5万〜10万円</td></tr>
-              <tr><td><strong>ドゥパピヨン ダイヤネックレス</strong></td><td>K18WG + ダイヤ</td><td>約80万〜120万円</td></tr>
+              <tr><td><strong>フリヴォル ペンダント（ミニ）</strong></td><td>K18YG + ダイヤ</td><td>約15万〜25万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>フリヴォル ネックレス（3フラワー）</strong></td><td>K18YG + ダイヤ</td><td>約40万〜60万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>フリヴォル イヤリング（ミニ）</strong></td><td>K18YG + ダイヤ</td><td>約25万〜40万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ペルレ クルール リング</strong></td><td>K18YG + カーネリアン</td><td>約8万〜14万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ペルレ シニアチュール リング</strong></td><td>K18YG</td><td>約5万〜10万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ドゥパピヨン ダイヤネックレス</strong></td><td>K18WG + ダイヤ</td><td>約80万〜120万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>

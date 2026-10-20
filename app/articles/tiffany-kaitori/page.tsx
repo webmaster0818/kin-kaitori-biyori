@@ -5,6 +5,12 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+
+/* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
+const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
+const _BM_PT950 = Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString();
+const _BM_SV925 = Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.925).toLocaleString();
+const BM_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -151,6 +157,8 @@ export default function TiffanyKaitoriPage() {
 
         <h2>ティファニー人気モデル別の買取相場（2026年4月）</h2>
 
+        <p className="text-sm">表の「買取相場の目安」は2026年4月時点の調査値です。ブランド・モデルの評価を含む金額のため日次の金相場からは計算できず、更新していません。右の「地金の1g単価」は田中貴金属の公表価格（{BM_DATE}）から毎朝計算した素材だけの目安です（K18は純度換算×係数0.96、Pt950・SV925は田中の買取価格×純度）。宝石・ダイヤ・ブランドの評価は含まず、地金分は「重量×1g単価」で求められます。</p>
+
         <h3>K18・プラチナ製品</h3>
 
         <div className="table-wrapper">
@@ -159,20 +167,21 @@ export default function TiffanyKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>Tスマイル ネックレス ミニ</strong></td><td>K18YG</td><td>約5万〜8万円</td></tr>
-              <tr><td><strong>Tスマイル ネックレス スモール</strong></td><td>K18PG</td><td>約8万〜13万円</td></tr>
-              <tr><td><strong>Tワン リング ワイド</strong></td><td>K18PG</td><td>約10万〜14万円</td></tr>
-              <tr><td><strong>Tワン リング ナロー ハーフダイヤ</strong></td><td>K18PG</td><td>約12万〜18万円</td></tr>
-              <tr><td><strong>ハードウェア リンクブレスレット</strong></td><td>K18YG</td><td>約30万〜50万円</td></tr>
-              <tr><td><strong>ハードウェア ボールペンダント</strong></td><td>K18YG</td><td>約10万〜16万円</td></tr>
-              <tr><td><strong>バイザヤード 1Pダイヤ ネックレス</strong></td><td>K18YG</td><td>約5万〜8万円</td></tr>
-              <tr><td><strong>バイザヤード 1Pダイヤ ネックレス</strong></td><td>Pt950</td><td>約4万〜7万円</td></tr>
-              <tr><td><strong>ソレスト ダイヤリング</strong></td><td>Pt950</td><td>約15万〜30万円</td></tr>
-              <tr><td><strong>セッティング エンゲージリング 0.3ct</strong></td><td>Pt950</td><td>約10万〜20万円</td></tr>
+              <tr><td><strong>Tスマイル ネックレス ミニ</strong></td><td>K18YG</td><td>約5万〜8万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>Tスマイル ネックレス スモール</strong></td><td>K18PG</td><td>約8万〜13万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>Tワン リング ワイド</strong></td><td>K18PG</td><td>約10万〜14万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>Tワン リング ナロー ハーフダイヤ</strong></td><td>K18PG</td><td>約12万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ハードウェア リンクブレスレット</strong></td><td>K18YG</td><td>約30万〜50万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ハードウェア ボールペンダント</strong></td><td>K18YG</td><td>約10万〜16万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>バイザヤード 1Pダイヤ ネックレス</strong></td><td>K18YG</td><td>約5万〜8万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>バイザヤード 1Pダイヤ ネックレス</strong></td><td>Pt950</td><td>約4万〜7万円</td><td>約{_BM_PT950}円</td></tr>
+              <tr><td><strong>ソレスト ダイヤリング</strong></td><td>Pt950</td><td>約15万〜30万円</td><td>約{_BM_PT950}円</td></tr>
+              <tr><td><strong>セッティング エンゲージリング 0.3ct</strong></td><td>Pt950</td><td>約10万〜20万円</td><td>約{_BM_PT950}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -185,16 +194,17 @@ export default function TiffanyKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>リターントゥティファニー ハートタグ ネックレス</strong></td><td>SV925</td><td>約5,000〜15,000円</td></tr>
-              <tr><td><strong>オープンハート ネックレス</strong></td><td>SV925</td><td>約3,000〜10,000円</td></tr>
-              <tr><td><strong>1837 リング</strong></td><td>SV925</td><td>約2,000〜6,000円</td></tr>
-              <tr><td><strong>インフィニティ ネックレス</strong></td><td>SV925</td><td>約3,000〜8,000円</td></tr>
-              <tr><td><strong>アトラス リング</strong></td><td>SV925</td><td>約2,000〜5,000円</td></tr>
-              <tr><td><strong>ビーン ネックレス</strong></td><td>SV925</td><td>約3,000〜8,000円</td></tr>
+              <tr><td><strong>リターントゥティファニー ハートタグ ネックレス</strong></td><td>SV925</td><td>約5,000〜15,000円</td><td>約{_BM_SV925}円</td></tr>
+              <tr><td><strong>オープンハート ネックレス</strong></td><td>SV925</td><td>約3,000〜10,000円</td><td>約{_BM_SV925}円</td></tr>
+              <tr><td><strong>1837 リング</strong></td><td>SV925</td><td>約2,000〜6,000円</td><td>約{_BM_SV925}円</td></tr>
+              <tr><td><strong>インフィニティ ネックレス</strong></td><td>SV925</td><td>約3,000〜8,000円</td><td>約{_BM_SV925}円</td></tr>
+              <tr><td><strong>アトラス リング</strong></td><td>SV925</td><td>約2,000〜5,000円</td><td>約{_BM_SV925}円</td></tr>
+              <tr><td><strong>ビーン ネックレス</strong></td><td>SV925</td><td>約3,000〜8,000円</td><td>約{_BM_SV925}円</td></tr>
             </tbody>
           </table>
         </div>

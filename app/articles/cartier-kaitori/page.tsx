@@ -6,6 +6,12 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 
+/* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
+const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
+const _BM_PT950 = Math.round(goldData.tanaka_official.pt_buyback_per_g * 0.95).toLocaleString();
+const _BM_SV925 = Math.round(goldData.tanaka_official.ag_buyback_per_g * 0.925).toLocaleString();
+const BM_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
+
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const GP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
@@ -145,6 +151,8 @@ export default function CartierKaitoriPage() {
 
         <h2>カルティエ人気モデル別の買取相場（2026年4月）</h2>
 
+        <p className="text-sm">表の「買取相場の目安」は2026年4月時点の調査値です。ブランド・モデルの評価を含む金額のため日次の金相場からは計算できず、更新していません。右の「地金の1g単価」は田中貴金属の公表価格（{BM_DATE}）から毎朝計算した素材だけの目安です（K18は純度換算×係数0.96、Pt950・SV925は田中の買取価格×純度）。宝石・ダイヤ・ブランドの評価は含まず、地金分は「重量×1g単価」で求められます。</p>
+
         <p>以下は2026年4月時点のカルティエ主要モデルの買取相場目安です。状態・サイズ・付属品の有無により変動します。</p>
 
         <h3>ラブコレクション</h3>
@@ -155,16 +163,17 @@ export default function CartierKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ラブリング</strong></td><td>K18YG</td><td>約15万〜25万円</td></tr>
-              <tr><td><strong>ラブリング ハーフダイヤ</strong></td><td>K18YG</td><td>約25万〜40万円</td></tr>
-              <tr><td><strong>ラブリング フルダイヤ</strong></td><td>K18WG</td><td>約40万〜65万円</td></tr>
-              <tr><td><strong>ラブブレスレット</strong></td><td>K18YG</td><td>約40万〜60万円</td></tr>
-              <tr><td><strong>ラブブレスレット ハーフダイヤ</strong></td><td>K18PG</td><td>約55万〜80万円</td></tr>
-              <tr><td><strong>ラブネックレス</strong></td><td>K18YG</td><td>約15万〜25万円</td></tr>
+              <tr><td><strong>ラブリング</strong></td><td>K18YG</td><td>約15万〜25万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ラブリング ハーフダイヤ</strong></td><td>K18YG</td><td>約25万〜40万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ラブリング フルダイヤ</strong></td><td>K18WG</td><td>約40万〜65万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ラブブレスレット</strong></td><td>K18YG</td><td>約40万〜60万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ラブブレスレット ハーフダイヤ</strong></td><td>K18PG</td><td>約55万〜80万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ラブネックレス</strong></td><td>K18YG</td><td>約15万〜25万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -179,14 +188,15 @@ export default function CartierKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>ジュストアンクル リング SM</strong></td><td>K18YG</td><td>約8万〜14万円</td></tr>
-              <tr><td><strong>ジュストアンクル ブレスレット SM</strong></td><td>K18YG</td><td>約25万〜40万円</td></tr>
-              <tr><td><strong>ジュストアンクル ブレスレット レギュラー</strong></td><td>K18PG</td><td>約40万〜60万円</td></tr>
-              <tr><td><strong>ジュストアンクル ネックレス</strong></td><td>K18YG</td><td>約15万〜25万円</td></tr>
+              <tr><td><strong>ジュストアンクル リング SM</strong></td><td>K18YG</td><td>約8万〜14万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ジュストアンクル ブレスレット SM</strong></td><td>K18YG</td><td>約25万〜40万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ジュストアンクル ブレスレット レギュラー</strong></td><td>K18PG</td><td>約40万〜60万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ジュストアンクル ネックレス</strong></td><td>K18YG</td><td>約15万〜25万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -199,14 +209,15 @@ export default function CartierKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>トリニティリング クラシック</strong></td><td>K18 3カラー</td><td>約10万〜18万円</td></tr>
-              <tr><td><strong>トリニティリング SM</strong></td><td>K18 3カラー</td><td>約6万〜10万円</td></tr>
-              <tr><td><strong>トリニティ ネックレス</strong></td><td>K18 3カラー</td><td>約10万〜18万円</td></tr>
-              <tr><td><strong>トリニティ ブレスレット</strong></td><td>K18 3カラー</td><td>約12万〜20万円</td></tr>
+              <tr><td><strong>トリニティリング クラシック</strong></td><td>K18 3カラー</td><td>約10万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>トリニティリング SM</strong></td><td>K18 3カラー</td><td>約6万〜10万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>トリニティ ネックレス</strong></td><td>K18 3カラー</td><td>約10万〜18万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>トリニティ ブレスレット</strong></td><td>K18 3カラー</td><td>約12万〜20万円</td><td>約{_BM_K18}円</td></tr>
             </tbody>
           </table>
         </div>
@@ -219,16 +230,17 @@ export default function CartierKaitoriPage() {
               <tr>
                 <th>モデル</th>
                 <th>素材</th>
-                <th>買取相場の目安</th>
+                <th>買取相場の目安（2026年4月時点の調査）</th>
+                <th>地金の1g単価（{BM_DATE}）</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><strong>パンテール リング</strong></td><td>K18YG</td><td>約20万〜50万円</td></tr>
-              <tr><td><strong>ディアマンレジェ ネックレス SM</strong></td><td>K18YG + ダイヤ</td><td>約8万〜15万円</td></tr>
-              <tr><td><strong>Cドゥカルティエ リング</strong></td><td>K18WG + ダイヤ</td><td>約10万〜20万円</td></tr>
-              <tr><td><strong>タンクフランセーズ（時計）</strong></td><td>SS</td><td>約20万〜35万円</td></tr>
-              <tr><td><strong>バロンブルー（時計）</strong></td><td>SS</td><td>約25万〜45万円</td></tr>
-              <tr><td><strong>パシャ（時計）</strong></td><td>SS</td><td>約15万〜30万円</td></tr>
+              <tr><td><strong>パンテール リング</strong></td><td>K18YG</td><td>約20万〜50万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>ディアマンレジェ ネックレス SM</strong></td><td>K18YG + ダイヤ</td><td>約8万〜15万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>Cドゥカルティエ リング</strong></td><td>K18WG + ダイヤ</td><td>約10万〜20万円</td><td>約{_BM_K18}円</td></tr>
+              <tr><td><strong>タンクフランセーズ（時計）</strong></td><td>SS</td><td>約20万〜35万円</td><td>—（地金の評価対象外）</td></tr>
+              <tr><td><strong>バロンブルー（時計）</strong></td><td>SS</td><td>約25万〜45万円</td><td>—（地金の評価対象外）</td></tr>
+              <tr><td><strong>パシャ（時計）</strong></td><td>SS</td><td>約15万〜30万円</td><td>—（地金の評価対象外）</td></tr>
             </tbody>
           </table>
         </div>
