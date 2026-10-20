@@ -46,6 +46,7 @@ function FaqSchema() {
       { "@type": "Question", name: "名古屋の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法により、買取時には身分証の提示が義務付けられています。付属品（保証書・箱）があれば査定額が上がる場合があります。" } },
       { "@type": "Question", name: "名鉄名古屋駅や久屋大通駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。" } },
       { "@type": "Question", name: "栄生駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "あります。買取大吉 中村栄生店が名鉄名古屋本線 栄生駅より徒歩5分（名古屋市中村区佐古前町2番49号）で、営業時間は10:00〜18:00・年中無休（お盆・年末年始を除く）です。金・貴金属に加え宝石・ジュエリーも買取品目にあり、公式にはエルメス・シャネル・ルイ・ヴィトン・カルティエ・ティファニーなどが買取強化ブランドとして掲載されています（2026年10月11日に公式店舗ページで確認）。" } },
+      { "@type": "Question", name: "名古屋大学駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "名古屋大学駅（名城線）の目の前には見当たりませんが、エコリング 名古屋本山店が公式表記で名古屋大学駅から徒歩11分（本山駅から徒歩5分）です。営業は11:00〜18:30・毎週水曜定休。名城線で1駅の本山駅にはおたからや 本山店（本山駅より徒歩2分・10:00〜18:00・日曜定休）、2駅先の八事駅には KOMEHYO買取センター八事（2番出口より徒歩1分・10:00〜19:00）があります（2026年10月20日に各店の店舗ページで確認）。" } },
       { "@type": "Question", name: "本陣駅・ささしまライブ駅・堀田駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "本陣駅・ささしまライブ駅・堀田駅は、駅からの徒歩圏に金買取店を確認できませんでした（2026年10月11日確認）。本陣駅からは東山線で2駅、ささしまライブ駅からはあおなみ線で1駅の名古屋駅に出れば、なんぼや 名古屋サンロード店（近鉄名古屋駅 正面出口より徒歩1分・10:00〜20:00）などが使えます。堀田駅からは名鉄で金山、名城線で矢場町・栄へ。移動が難しければ無料の出張買取・宅配買取で自宅から売れます。" } },
     ],
   };
@@ -58,7 +59,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金・ブランド買取｜栄生・近鉄名古屋・本陣・ささしまライブ 駅別の店舗と徒歩分【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-10-14",
+    dateModified: "2026-10-20",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅は徒歩5分に買取大吉、近鉄名古屋駅は正面出口徒歩1分になんぼや。本陣・ささしまライブ駅は徒歩圏に店がなく名古屋駅へ1〜2駅。駅別に金・ブランド買取店の住所・徒歩分・営業時間を公式店舗ページで確認して一覧に（2026年10月14日更新）。今日の金相場も毎日更新。",
@@ -156,11 +157,14 @@ export default function NagoyaKinKaitoriPage() {
               <tr><td><strong>栄駅</strong></td><td>KOMEHYO買取センター 栄森の地下街（中区栄3-5-12先）※ブランド品・ジュエリー中心</td><td>地下鉄栄駅 中改札出てすぐ</td><td>10:00〜19:00</td></tr>
               <tr><td><strong>矢場町駅</strong></td><td>おたからや 名古屋本店（中区栄3-27-7）</td><td>名城線 矢場町駅 5出入口より徒歩4分</td><td>10:00〜19:00／年中無休（年末年始除く）</td></tr>
               <tr><td><strong>丸の内駅</strong></td><td>買取大吉 名古屋錦店（中区錦2-6-25）</td><td>桜通線 丸の内駅より徒歩4分</td><td>10:00〜19:00／年中無休</td></tr>
+              <tr><td><strong>名古屋大学駅</strong>（名城線）</td><td>エコリング 名古屋本山店（千種区東山通二丁目8番地）◆</td><td>名古屋大学駅から徒歩11分（870m）／本山駅から徒歩5分（350m）</td><td>11:00〜18:30／毎週水曜定休</td></tr>
+              <tr><td><strong>本山駅</strong>（名古屋大学駅から名城線で1駅）</td><td>おたからや 本山店（千種区猫洞通5-31-2）◆</td><td>地下鉄本山駅より徒歩2分</td><td>10:00〜18:00／日曜定休（事前予約で日曜も営業）</td></tr>
+              <tr><td><strong>八事駅</strong>（名古屋大学駅から名城線で2駅）</td><td>KOMEHYO買取センター八事（昭和区広路町石坂35 クルールテラス八事1階）◆</td><td>名城線・鶴舞線 八事駅 2番出口より徒歩1分</td><td>10:00〜19:00</td></tr>
               <tr><td><strong>本陣駅・ささしまライブ駅・堀田駅</strong></td><td>徒歩圏の店舗は確認できず</td><td>名駅・金山などへ移動するか、出張・宅配買取（下記）</td><td>—</td></tr>
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">出典：<a href="https://www.kaitori-daikichi.jp/store/nakamura-sako/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 中村栄生店</a>／<a href="https://nanboya.com/gold-kaitori/shop/nagoya-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 名古屋サンロード店（エスカ店も掲載）</a>／<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">バイセル 名古屋栄セントラルパーク店</a>／<a href="https://nanboya.com/gold-kaitori/shop/melsa-sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや メルサ栄店</a>／<a href="https://kaitori.e-daikoku.com/metal/gold-sakae/" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質名古屋栄買取センター</a>／<a href="https://horita78.co.jp/company/shop/" target="_blank" rel="noopener noreferrer nofollow">堀田商事 店舗案内</a>／<a href="https://www.otakaraya.jp/shop/nagoya-honten/" target="_blank" rel="noopener noreferrer nofollow">おたからや 名古屋本店</a>／<a href="https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 名古屋錦店</a>（いずれも2026年10月11日確認。栄生・名駅サンロードは10月14日に再確認）／※の3店は2026年10月14日確認：<a href="https://buysell-kaitori.com/store/kitte-nagoya/" target="_blank" rel="noopener noreferrer nofollow">バイセル KITTE名古屋店</a>／<a href="https://buysell-kaitori.com/store/nagoya-centralpark/" target="_blank" rel="noopener noreferrer nofollow">バイセル 栄セントラルパーク2号店</a>／<a href="https://komehyo.jp/kaitori/shop/kc-sakae-morinochikagai" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO買取センター 栄森の地下街</a>（公式の取扱は時計・バッグ・ジュエリー・貴金属製品など）</p>
+        <p className="text-xs text-warm-gray">出典：<a href="https://www.kaitori-daikichi.jp/store/nakamura-sako/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 中村栄生店</a>／<a href="https://nanboya.com/gold-kaitori/shop/nagoya-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 名古屋サンロード店（エスカ店も掲載）</a>／<a href="https://buysell-kaitori.com/store/nagoya/" target="_blank" rel="noopener noreferrer nofollow">バイセル 名古屋栄セントラルパーク店</a>／<a href="https://nanboya.com/gold-kaitori/shop/melsa-sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや メルサ栄店</a>／<a href="https://kaitori.e-daikoku.com/metal/gold-sakae/" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質名古屋栄買取センター</a>／<a href="https://horita78.co.jp/company/shop/" target="_blank" rel="noopener noreferrer nofollow">堀田商事 店舗案内</a>／<a href="https://www.otakaraya.jp/shop/nagoya-honten/" target="_blank" rel="noopener noreferrer nofollow">おたからや 名古屋本店</a>／<a href="https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 名古屋錦店</a>（いずれも2026年10月11日確認。栄生・名駅サンロードは10月14日に再確認）／※の3店は2026年10月14日確認：<a href="https://buysell-kaitori.com/store/kitte-nagoya/" target="_blank" rel="noopener noreferrer nofollow">バイセル KITTE名古屋店</a>／<a href="https://buysell-kaitori.com/store/nagoya-centralpark/" target="_blank" rel="noopener noreferrer nofollow">バイセル 栄セントラルパーク2号店</a>／<a href="https://komehyo.jp/kaitori/shop/kc-sakae-morinochikagai" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO買取センター 栄森の地下街</a>（公式の取扱は時計・バッグ・ジュエリー・貴金属製品など）／◆の3店は2026年10月20日確認：<a href="https://www.eco-ring.com/shop/aichi/nagoya-chikusa/nagoyamotoyama" target="_blank" rel="noopener noreferrer nofollow">エコリング 名古屋本山店</a>／<a href="https://motoyamaten.originality-otakaraya.net/" target="_blank" rel="noopener noreferrer nofollow">おたからや 本山店（加盟店の店舗サイト）</a>／<a href="https://komehyo.jp/kaitori/shop/kc-yagoto" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO買取センター八事</a></p>
 
         <h3>栄生駅</h3>
         <p>栄生駅から歩ける実店舗があります。<strong>買取大吉 中村栄生店</strong>（名鉄名古屋本線 栄生駅より徒歩5分／名古屋市中村区佐古前町2番49号）。営業時間 10:00〜18:00、年中無休（お盆・年末年始を除く）。買取品目に金・貴金属と宝石・ジュエリーがあり、無料査定・出張買取・無料駐車場に対応しています。改札を出て高架下を右へ進み、直進した右手です。</p>
@@ -168,6 +172,7 @@ export default function NagoyaKinKaitoriPage() {
         <p><Link href="/articles/sako-eki-kin-kaitori/" className="text-accent-dark underline">→ 栄生駅の金買取（実在店舗・道順・営業時間）</Link></p>
 
         <h3>名鉄名古屋駅・名古屋駅（名駅）・近鉄名古屋駅</h3>
+        <p>「名駅（めいえき）」は名古屋駅周辺の通称（地名は中村区名駅）で、<strong>「名駅」という名前の駅はありません</strong>。JR・地下鉄の名古屋駅、名鉄名古屋駅、近鉄名古屋駅、あおなみ線の名古屋駅がこのエリアの駅です。下の店はどの駅からも地下街・駅前で歩けます。</p>
         <p>名駅は地下街に大手が直結しており、名鉄・JR・近鉄いずれの利用でも徒歩圏です。<strong>なんぼや 名古屋サンロード店</strong>（ナゴヤ地下街サンロード／中村区名駅4-7-25先）は、公式表記で<strong>近鉄名古屋駅 正面出口より徒歩1分・名鉄名古屋駅 中央改札口より徒歩3分</strong>、営業10:00〜20:00です。JR側なら<strong>なんぼや 名古屋エスカ店</strong>（中村区椿町6-9 エスカ地下街／JR名古屋駅 中央口より徒歩1分程度・10:00〜20:00）。金・プラチナ・貴金属に対応しています（2026年10月11日確認・サンロード店は10月14日再確認）。<a href="https://nanboya.com/gold-kaitori/shop/nagoya-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
         <p>2軒目の相見積もり先には、JR側の<strong>バイセル KITTE名古屋店</strong>（JPタワー名古屋 KITTE名古屋 2階／JR名古屋駅 桜通口・地下鉄名古屋駅 中改札北口から各徒歩5分／10:00〜20:00・1月1日休）があります。公式店舗ページの買取実績にはK18ネックレス・K22の帯留めのほか、ティファニーのリング・ロレックス・グッチのバッグなどブランド品も並んでおり、<strong>金とブランド品をまとめて査定に出せます</strong>（<a href="https://buysell-kaitori.com/store/kitte-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：バイセル公式</a>・2026年10月14日確認）。</p>
 
@@ -181,6 +186,12 @@ export default function NagoyaKinKaitoriPage() {
 
         <h3>栄駅・栄町駅・矢場町駅</h3>
         <p><strong>なんぼや メルサ栄店</strong>（栄駅 S7a・S7b出口より徒歩1分程度／中区栄3-4-5 メルサ栄本店4F／10:00〜20:00）、<strong>大黒屋 質名古屋栄買取センター</strong>（栄駅8番出口 徒歩3分／中区栄3-7-9 新鏡栄ビル2F／10:30〜19:30）、栄地下街の<strong>堀田商事 栄地下店</strong>（栄駅 南改札口・中改札口すぐ／10:00〜19:00・年中無休）が代表です。ブランド品が中心なら、栄駅 中改札を出てすぐの<strong>KOMEHYO買取センター 栄森の地下街</strong>（10:00〜19:00・公式の取扱にカルティエ・ティファニーなどのジュエリー、時計、バッグ、貴金属製品）もあります（10月14日確認）。栄町駅（名鉄瀬戸線）からは、セントラルパーク地下街の<strong>バイセル 栄セントラルパーク2号店</strong>が公式表記で徒歩5分です。矢場町駅側には<strong>おたからや 名古屋本店</strong>（矢場町駅5出入口より徒歩4分／10:00〜19:00）もあります（2026年10月11日確認）。ブランドジュエリーは素材＋ブランドの二重評価が期待できます。<a href="https://nanboya.com/gold-kaitori/shop/melsa-sakae-brandshop/" target="_blank" rel="noopener noreferrer nofollow">出典：なんぼや公式</a></p>
+
+        <h3>名古屋大学駅・本山駅・八事駅（千種区・昭和区）</h3>
+        <p>名古屋大学駅（名城線）は、駅の目の前に買取店がある駅ではありません。公式の店舗ページで<strong>名古屋大学駅からの徒歩分を書いている店は、エコリング 名古屋本山店（名古屋大学駅から徒歩11分・870m）</strong>でした。本山駅からは徒歩5分（350m）で、営業は11:00〜18:30・毎週水曜定休です。公式の買取品目に「金・貴金属」があり、店頭のほか出張・宅配買取も案内しています。<a href="https://www.eco-ring.com/shop/aichi/nagoya-chikusa/nagoyamotoyama" target="_blank" rel="noopener noreferrer nofollow">出典：エコリング公式</a></p>
+        <p>名城線で1駅の<strong>本山駅</strong>には、<strong>おたからや 本山店</strong>（千種区猫洞通5-31-2／地下鉄本山駅より徒歩2分／10:00〜18:00・日曜定休、事前予約があれば日曜も営業）があり、金・貴金属の買取を掲げています。この店の情報は、おたからや加盟店（株式会社Grow up）の店舗サイトの表記です。<a href="https://motoyamaten.originality-otakaraya.net/" target="_blank" rel="noopener noreferrer nofollow">出典：おたからや本山店</a></p>
+        <p>2駅先の<strong>八事駅</strong>なら、<strong>KOMEHYO買取センター八事</strong>（クルールテラス八事1階／名城線・鶴舞線 八事駅 2番出口より徒歩1分／10:00〜19:00）があり、公式の買取品目に金・貴金属製品があります。<a href="https://komehyo.jp/kaitori/shop/kc-yagoto" target="_blank" rel="noopener noreferrer nofollow">出典：KOMEHYO公式</a>（3店とも2026年10月20日確認）</p>
+        <p>2店とも公式表記で本山駅から徒歩5分以内なので、<strong>本山駅で降りて2店で見積もりを比べる</strong>のが、名古屋大学駅の周辺ではいちばん手間の少ない方法です。水曜はエコリング、日曜はおたからやが休みなので、2店とも開いているのは月・火・木・金・土曜です。</p>
 
         <h3>大須（大須観音駅・上前津駅）</h3>
         <p>大須商店街のエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
@@ -446,6 +457,10 @@ export default function NagoyaKinKaitoriPage() {
             {
               q: "名鉄名古屋駅や久屋大通駅の近くに金買取店はありますか？",
               a: "名鉄名古屋駅は地下街サンロード・エスカに「なんぼや」が直結しています。久屋大通駅は直下のセントラルパーク地下街に「バイセル」が徒歩1分です。栄・大須にも大手が集中しており、名駅・栄・久屋大通・大須のいずれも駅近で比較できます。",
+            },
+            {
+              q: "名古屋大学駅の近くに金買取店はありますか？",
+              a: "名古屋大学駅（名城線）の目の前には見当たりませんが、エコリング 名古屋本山店が公式表記で名古屋大学駅から徒歩11分（本山駅から徒歩5分）です。営業は11:00〜18:30・毎週水曜定休。名城線で1駅の本山駅にはおたからや 本山店（本山駅より徒歩2分・10:00〜18:00・日曜定休）、2駅先の八事駅には KOMEHYO買取センター八事（2番出口より徒歩1分・10:00〜19:00）があります（2026年10月20日に各店の店舗ページで確認）。",
             },
             {
               q: "栄生駅の近くに金買取店はありますか？",

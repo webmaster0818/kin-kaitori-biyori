@@ -50,12 +50,12 @@ function ArticleSchema() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
+    headline: "横浜の金買取はどこがいい？横浜駅・関内・元町の9店を公式情報で比較【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-10-12",
+    dateModified: "2026-10-20",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
-    description: "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、買取方法の比較、横浜の金買取相場と高く売るコツを解説します。",
+    description: "横浜で金を売るならどこがいい？横浜駅西口・東口・関内・元町の金買取9店を、住所・駅からの徒歩分・営業時間・定休日（日曜休・水曜休の店あり）で比較。選び方の4つの基準と今日の金相場（毎朝更新）も掲載。",
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />;
 }
@@ -64,9 +64,9 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年最新】横浜の金買取おすすめ業者ガイド — 横浜駅・元町・関内エリア別比較",
+  title: "横浜の金買取はどこがいい？横浜駅・関内・元町の9店を公式情報で比較【2026年10月】",
   description:
-    "横浜で金を高く売るならどこがいい？横浜駅・元町・関内のエリア別おすすめ買取業者、店頭・出張・宅配の方法別比較、横浜の金買取相場と高く売るコツを解説します。",
+    "横浜で金を売るならどこがいい？横浜駅西口・東口・関内・元町の金買取9店を、住所・駅からの徒歩分・営業時間・定休日（日曜休・水曜休の店あり）で比較。選び方の4つの基準と今日の金相場（毎朝更新）も掲載。",
   alternates: { canonical: "https://gold-biyori.com/articles/yokohama-kin-kaitori/" },
 };
 
@@ -106,7 +106,7 @@ export default function YokohamaKinKaitoriPage() {
         </div>
 
         <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】横浜の金買取おすすめ業者ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">横浜の金買取はどこがいい？横浜駅・関内・元町の9店を公式情報で比較【2026年10月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <p>横浜駅周辺から元町・関内エリアまで、多くの買取業者が営業しています。</p>
@@ -121,6 +121,42 @@ export default function YokohamaKinKaitoriPage() {
           <li>店頭・出張・宅配の方法別メリット</li>
           <li>横浜の金買取で注意すべきポイント</li>
         </ul>
+
+        <h2 id="compare">横浜で金買取はどこがいい？駅別9店の比較表</h2>
+        <p>横浜駅・関内・元町で、<strong>公式の店舗ページに金・貴金属の買取が書かれている店</strong>を一覧にしました。住所・駅からのアクセス・営業時間・定休日は各社公式の表記のままです（<strong>2026年10月20日確認</strong>）。祝日や施設の休館日で変わることがあるため、来店前に公式ページでもご確認ください。</p>
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>エリア</th>
+                <th>店舗（住所）</th>
+                <th>駅からのアクセス（公式表記）</th>
+                <th>営業時間・定休日</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>横浜駅 西口</strong></td><td>なんぼや 横浜西口駅前店（西区南幸1-2-4 濱角HAMAKADO 3F）</td><td>JR横浜駅西口 徒歩30秒</td><td>10:00〜20:00（最終受付19:30）／定休日なし</td></tr>
+              <tr><td><strong>横浜駅 西口</strong></td><td>買取大吉 横浜駅西口店（西区南幸1-14-8）</td><td>相模鉄道本線 横浜駅みなみ西口より徒歩2分</td><td>10:00〜19:00／<strong>日曜定休</strong></td></tr>
+              <tr><td><strong>横浜駅 西口</strong></td><td>おたからや 横浜本店（神奈川区鶴屋町3-33-7 若葉ビル1階）</td><td>横浜駅 西口より徒歩5分</td><td>10:00〜19:00／年中無休（年末年始除く）</td></tr>
+              <tr><td><strong>横浜駅 西口</strong></td><td>なんぼや 横浜店（西区南幸2-18-2）</td><td>JR横浜駅 9番出口より徒歩7分程度</td><td>10:00〜20:00／定休日なし</td></tr>
+              <tr><td><strong>横浜駅 西口</strong></td><td>大黒屋 質横浜モアーズ前店（西区南幸1-2-3 共立ビル2F）</td><td>横浜駅 きた西口・西口から（公式に道順あり・分数の記載なし）</td><td>10:00〜19:00／年中無休（年末年始除く）</td></tr>
+              <tr><td><strong>横浜駅 みなみ西口</strong></td><td>大黒屋 質横浜買取センター（西区岡野1-12-13 千代田ビル1F）</td><td>JR横浜駅 みなみ西口から（公式に道順あり・分数の記載なし）</td><td>10:30〜19:30／年中無休（年末年始除く）</td></tr>
+              <tr><td><strong>横浜駅 東口</strong></td><td>ゴールドプラザ 横浜店（西区高島2-14-13 エストビル6F）</td><td>JR横浜駅 東口より徒歩2分</td><td>10:00〜19:00／<strong>当面の間 毎週水曜定休</strong></td></tr>
+              <tr><td><strong>関内・伊勢佐木町</strong></td><td>大黒屋 質関内買取センター（中区伊勢佐木町1-4-7 マリヤビル1F）</td><td>JR関内駅 北口から（公式に道順あり・分数の記載なし）</td><td>10:30〜19:30／年中無休（年末年始除く）</td></tr>
+              <tr><td><strong>元町・中華街</strong></td><td>なんぼや 横浜元町プラザ店（中区元町1-13 元町プラザ1F）</td><td>みなとみらい線 元町・中華街駅 5番出口より徒歩1分程度</td><td>10:00〜18:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-warm-gray">出典（いずれも2026年10月20日確認）：<a href="https://nanboya.com/gold-kaitori/shop/yokohama-nishiguchi-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 横浜西口駅前店</a>／<a href="https://www.kaitori-daikichi.jp/store/yokohama-nishi/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 横浜駅西口店</a>／<a href="https://www.otakaraya.jp/shop/yokohama-honten/" target="_blank" rel="noopener noreferrer nofollow">おたからや 横浜本店</a>／<a href="https://nanboya.com/gold-kaitori/shop/yokohama-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 横浜店</a>／<a href="https://shop.e-daikoku.com/info/spot/detail?code=0000000012" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質横浜モアーズ前店</a>／<a href="https://shop.e-daikoku.com/info/spot/detail?code=0000000293" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質横浜買取センター</a>／<a href="https://goldplaza.jp/shop/yokohama/" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 横浜店</a>／<a href="https://shop.e-daikoku.com/info/spot/detail?code=0000000338" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質関内買取センター</a>／<a href="https://nanboya.com/gold-kaitori/shop/yokohama-motomachi-plaza-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 横浜元町プラザ店</a></p>
+
+        <h3>横浜で金買取店を選ぶ4つの基準</h3>
+        <ol>
+          <li><strong>金・貴金属を買取品目として公式に掲げているか</strong>——上の表は全店が該当します。ブランドのジュエリーや時計も一緒に売るなら、ブランド品も扱う店でまとめて査定に出すと手間が減ります。</li>
+          <li><strong>行く日に開いているか</strong>——横浜駅周辺でも<strong>買取大吉 横浜駅西口店は日曜定休、ゴールドプラザ 横浜店は当面の間 水曜定休</strong>です。仕事帰りなら、表の中で20時まで開いているのはなんぼやの2店（横浜西口駅前店は最終受付19:30）。</li>
+          <li><strong>同じ日に2〜3店を回れるか</strong>——金の買取額は、その日の相場×純度×重さから各店の差し引きで決まります。相場は毎日動くので、<strong>別の日の見積もりを比べても差が分かりません</strong>。横浜駅西口なら、なんぼや（西口徒歩30秒）→買取大吉（みなみ西口徒歩2分）→おたからや（西口徒歩5分）と歩いて回れます。{LP_DATE}時点のK24の目安は1gあたり約{LP_K24}円です（田中貴金属の公表値をもとに純度換算・毎朝更新）。</li>
+          <li><strong>持って行けないときの手段があるか</strong>——重い地金や量が多いときは出張買取が安全です。ウリエルは公式の出張対応エリアに神奈川県を含み（一部対応できない市町村あり）、ティファナは出張が東京・埼玉・神奈川・千葉の一部地域です。店が遠い場合は宅配買取も使えます。</li>
+        </ol>
+        <p><strong>目的別に言うと</strong>、日曜に売りたい→大吉以外の横浜駅の店／水曜に売りたい→ゴールドプラザ以外／20時近くまで→なんぼや 横浜店・横浜西口駅前店／関内・伊勢佐木町で→大黒屋 質関内買取センター（10:30〜19:30）／元町・中華街で→なんぼや 横浜元町プラザ店（18時まで）です。表のうち7店は横浜駅の徒歩圏で、西口・みなみ西口側だけで6店あります。</p>
 
         <h2>横浜の金買取市場の特徴</h2>
 
@@ -146,7 +182,7 @@ export default function YokohamaKinKaitoriPage() {
 
         <h3>横浜駅周辺エリア</h3>
 
-        <p>横浜駅周辺は<strong>横浜で最も買取業者が集中</strong>しているエリアです。ゴールドプラザ横浜店（横浜市西区高島2-14-13 エストビル6F）はJR横浜駅東口から徒歩2分、営業時間は10:00〜19:00で、当面の間は毎週水曜が定休日です。おたからや横浜本店は横浜駅西口から徒歩5分、受付9:00〜19:00・年中無休（年末年始を除く）です（2026年10月12日確認）。</p>
+        <p>横浜駅周辺は<strong>横浜で最も買取業者が集中</strong>しているエリアです。ゴールドプラザ横浜店（横浜市西区高島2-14-13 エストビル6F）はJR横浜駅東口から徒歩2分、営業時間は10:00〜19:00で、当面の間は毎週水曜が定休日です。おたからや横浜本店は横浜駅西口から徒歩5分、営業時間10:00〜19:00・年中無休（年末年始を除く）です（2026年10月20日再確認）。</p>
         <p className="text-xs text-warm-gray">出典：<a href="https://goldplaza.jp/shop/yokohama/" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 横浜店</a>／<a href="https://www.otakaraya.jp/shop/yokohama-honten/" target="_blank" rel="noopener noreferrer nofollow">おたからや 横浜本店</a></p>
 
         <div className="table-wrapper">
@@ -278,7 +314,7 @@ export default function YokohamaKinKaitoriPage() {
               <tr>
                 <td><strong>買取大吉</strong></td>
                 <td>店頭買取</td>
-                <td>横浜市内に複数店舗。即日現金化が可能</td>
+                <td>横浜駅西口店（相鉄 横浜駅みなみ西口より徒歩2分・日曜定休）など。店頭ならその場で現金化</td>
                 <td>即現金化したい</td>
               </tr>
               <tr>

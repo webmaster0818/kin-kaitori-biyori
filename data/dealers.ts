@@ -87,7 +87,7 @@ export const DEALERS: Dealer[] = [
     name: "おたからや",
     url: "https://www.otakaraya.jp/",
     source: "https://www.otakaraya.jp/",
-    shops: "世界約 2,070 店舗以上（2026年10月時点・公式表記）",
+    shops: "世界 2,080 店舗以上（2026年10月時点・公式表記）",
     visitArea: "出張買取無料・全国対応（公式「全国あらゆる場所に専門の査定士がお伺い」）",
     speed: "金・貴金属の査定は平均5〜15分程度（物量による・公式FAQ）",
     fees: "出張料・査定料・買取手数料すべて無料（公式表記）",

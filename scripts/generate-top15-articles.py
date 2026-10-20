@@ -398,7 +398,7 @@ ARTICLES.append({
               <tbody>
                 <tr><td>ロデオドライブ</td><td>ロレックスの買取実績豊富</td></tr>
                 <tr><td>コメ兵</td><td>ブランド時計の老舗・店舗多数</td></tr>
-                <tr><td>おたからや</td><td>世界約2,070店舗以上（公式表記・2026年10月）</td></tr>
+                <tr><td>おたからや</td><td>世界2,080店舗以上（公式表記・2026年10月）</td></tr>
                 <tr><td>ヒカカク！</td><td>一括査定で複数業者比較</td></tr>
               </tbody>
             </table>
@@ -547,7 +547,7 @@ ARTICLES.append({
             <li><strong>KOMEHYO GINZA</strong>（コメ兵）: 東京都中央区銀座2-7-18 藤田ビル（買取は2F。銀座一丁目駅8番出口より徒歩1分）。11:00〜20:00（臨時休業・営業内容の変更が店舗ページで告知されるため来店前に確認を）。ジュエリー・時計・バッグ等のブランド品買取店（地金の買取可否は店舗ページに記載なし）</li>
             <li><strong>ゴールドプラザ 東京銀座本店</strong>: 東京都中央区銀座5-8-17 銀座プラザ58ビル4F。10:00〜19:00（定休日は公式の店舗ページに記載なし）。金・プラチナ・ダイヤ・宝石のほか、ブランド品・時計も買取</li>
             <li><strong>大黒屋 質銀座買取センター</strong>: 東京都中央区銀座3-3-7 サカイリ9ビル1F-B1F（銀座駅C8出口より徒歩1分）。10:30〜19:30、年中無休（年末年始を除く）。質預かり・買取の店で、金・プラチナ・記念金貨も取り扱い。銀座には大黒屋の店舗がほかに2店（質銀座松屋通り店・質銀座並木通り買取センター）あります</li>
-            <li><strong>おたからや 銀座本店</strong>: 東京都中央区銀座4-6-18 ギンザアクトビル3階（銀座駅A13・A8出口より徒歩0分）。10:00〜19:00、年中無休（年末年始を除く）。おたからやは公式表記で店舗数2,070店舗以上</li>
+            <li><strong>おたからや 銀座本店</strong>: 東京都中央区銀座4-6-18 ギンザアクトビル3階（銀座駅A13・A8出口より徒歩0分）。10:00〜19:00、年中無休（年末年始を除く）。おたからやは公式表記で店舗数2,080店舗以上（2026年10月時点）</li>
           </ul>
           <p>以前この記事で紹介していた「リファスタ 銀座店」は、リファスタ公式の店舗が東京池袋本店と大阪心斎橋店の2店のみで銀座に店舗がないため削除しました。</p>
           <p className="text-xs text-warm-gray">出典：<a href="https://nanboya.com/shop/tokyo/ginza-brandshop/" target="_blank" rel="noopener noreferrer nofollow">なんぼや 銀座本店</a>／<a href="https://komehyo.jp/kaitori/shop/ginza" target="_blank" rel="noopener noreferrer nofollow">KOMEHYO GINZA</a>／<a href="https://goldplaza.jp/shop/ginza" target="_blank" rel="noopener noreferrer nofollow">ゴールドプラザ 東京銀座本店</a>／<a href="https://shichi.e-daikoku.com/shop/ginza-kaitori/" target="_blank" rel="noopener noreferrer nofollow">大黒屋 質銀座買取センター</a>／<a href="https://www.otakaraya.jp/shop/tokyo/" target="_blank" rel="noopener noreferrer nofollow">おたからや 東京都の店舗一覧</a>／<a href="https://kinkaimasu.jp/accessmap/tokyo/" target="_blank" rel="noopener noreferrer nofollow">リファスタ 店舗アクセス</a>（いずれも2026年10月13日確認）</p>
