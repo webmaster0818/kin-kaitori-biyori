@@ -432,3 +432,5 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - **公式サイトのキャプチャ**: hikakaku.com／kaitori-daikichi.jp／uriel-cuore.co.jp／tifana.net のトップを 1280×800 dpr2 で撮影（ASP・解析リクエストはブロック、計測リンクは開いていない）→ `public/images/services/*.webp`。`components/ServiceCapture.tsx`（キャプション「画像：〇〇 公式サイト（domain）2026年10月21日時点」・リンクなし）＋ `ServiceCaptureGrid.tsx`（4社 2×2）。配置: TOP おすすめ4社カード4／地域記事207本（送客先4社の箇条書きの直後に Grid）／k10・k14・k18・k22・bracelet・necklace・yubiwa・tokyo・osaka の各社 h3 直下（9本×4）／osusume（4社比較表の注記の直後に Grid）。挿入は `scripts/add-service-captures-202610.py`（冪等）、`gen-area-articles.py` のテンプレにも同じ行を追加。DealerComparisonTable には撮影していない業者が多いのでサムネイルは入れていない。
 - **SEO 不変の確認**（out/ と deploy repo の全300 HTML を比較・同じ 10/21 の相場データ）: title/meta/canonical・alternate/JSON-LD/h1〜h3/href 集合の差分 **0 ページ**。本文で消えた文字列は絵文字・▶ の10種のみ（業者の事実文は全て残存）。precheck ✅全項目OK（296頁）。ASP 計測リンク 0。
 - 未対応・判断待ち: /kin-kaitori-hakusho/ の h2「📊 データの引用について」の絵文字（h2 文言を変えない制約のため残した）／favicon・icon.png は旧アイコンのまま。
+
+- 10/21夕: TOPスマホ相場枠中央寄せ／公式キャプチャを全本文ページへ（+72・290/298）。deploy 2834fafab
