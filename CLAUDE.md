@@ -414,3 +414,9 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - wip/remove-uriel-button-1021（072b488）を main に取り込み（source 09d2a04）。35ページ（地域生成33＋sendai/ueda）の CtaBox から「出張買取を申し込む（ウリエル）」を削除。gen-area-articles.py は URIEL_VISIT_PREFS 外の県ではボタンを出さない（全207エントリを gen() で生成して検証: 対象県174=各1・エリア外33=0）。あわせてテンプレの `robots: {{ index: false, follow: true }}` の波括弧を二重にした（NameError の既存不具合を解消）
 - out/ の外部 href（html・ホスト別）: uriel-cuore.co.jp 560→489（−71）、ほかの全ホストは前後一致（7239=7239）。ボタンを持つページ 280→245。precheck ✅（296頁）
 - deploy 79a886a5e（09:18 push・09:21 反映）。本番35ページ 200・ボタン0、対象県（osaka/tokyo/chiba/hiroshima）は従来どおり。日次ジョブ（11:05）は生成器を実行せず commit 済みソースをビルドするので戻らない
+
+### 2026-10-21 12:00成長ルーチン: 「喜平ブレスレット 10g 買取価格」（10.4位・imp18）＋久屋大通駅 ✅本番反映済み
+- kin-bracelet に `#kihei-10g`（品位別10g表: K24/K22/K18/K14/K10/Pt900/Pt850 × 地金換算〔田中 金/Pt 店頭買取×品位・日次〕＋なんぼや「今日の金相場」公表1g×10g〔10/21固定値・/ajax/metal-price/metal-list.json と同じ値〕）・計算式と出典・重さ別×品位別（10g行強調）・重さの確かめ方（造幣局ホールマーク公式文言）・`#kihei-cut`（おたからや公式 2面49.6g=1,296,100円/6面50.2g=1,367,400円、いずれも1/29過去最高実績注記）。定数は `/* kihei-10g-table */`。なんぼや列は日次で更新しない（要なら手動）
+- 訂正: 「面数による価格差はほとんどありません」（本文・FAQ・JSON-LD）→ 地金として量る店では分かれない／中古品として評価する店は上乗せあり、に。title/h1/headline「喜平10gの買取価格は約◯円」、FAQ「喜平ブレスレット10gの買取価格はいくら？」追加（本文＋JSON-LD）、dateModified 10-21
+- hisayaodori: 4店（バイセル1号・2号、KOMEHYO栄、大吉錦）の住所・営業時間を10/21公式で再確認＝変化なし→ CHECKED 10/21。title/desc は金・ブランド両方入りで据え置き
+- precheck ✅（296頁）・ASP 0・外部href 7728→7733（出典5本）。source 36268d7 / deploy c286cb87d。本番確認・Indexing 2/2
