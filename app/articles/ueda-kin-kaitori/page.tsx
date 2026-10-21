@@ -10,6 +10,7 @@ import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = {
@@ -201,6 +202,7 @@ export default function UedaKinKaitoriPage() {
           <li><strong>ウリエル</strong>：出張買取が中心。長野県は公式の出張エリア外で、店頭買取は川崎店のみ・宅配買取の案内は公式サイトにないため、上田からは利用しにくい業者です</li>
           <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応。店舗は東京・埼玉、出張は東京・埼玉・神奈川・千葉の一部（公式の出張可能エリア）のため、上田からは宅配買取（全国対応・送料無料）で利用</li>
         </ul>
+        <ServiceCaptureGrid />
 
         <CtaBox />
 

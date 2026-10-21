@@ -53,7 +53,7 @@ export function TodayPriceAnswer({ purity }: { purity: Purity }) {
   const dateJa = formatDateJa(goldData.date);
 
   return (
-    <section className="not-prose my-6 bg-gold-bg border-2 border-accent/40 rounded-2xl p-6 shadow-sm">
+    <section className="not-prose my-6 bg-card border border-rule p-6">
       <p className="text-sm font-bold text-accent-dark mb-2 !mt-0">本日の{label}買取相場</p>
       <p className="flex items-baseline flex-wrap gap-x-2 gap-y-1 mb-2">
         <span className="text-base font-medium text-foreground">1gあたり</span>

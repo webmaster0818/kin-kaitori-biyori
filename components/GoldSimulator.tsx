@@ -21,7 +21,7 @@ export function GoldSimulator() {
   const total = valid ? Math.round(perG * g) : 0;
 
   return (
-    <div className="not-prose bg-gradient-to-br from-amber/10 via-cream/40 to-amber/5 border-2 border-amber/30 rounded-2xl p-6 my-8 shadow-md">
+    <div className="not-prose bg-card border border-rule p-6 my-8">
       <h3 className="font-display text-lg md:text-xl font-bold text-amber-dark mb-1">金買取シミュレーター</h3>
       <p className="text-xs text-warm-gray mb-4">
         {goldData.date} の田中貴金属公表値ベース（毎日自動更新）。純度と重量を選択すると、買取額の概算を表示します。

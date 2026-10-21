@@ -3,6 +3,7 @@ import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const TITLE = "金買取のおすすめ業者はどこがいい？4社を目的別に比較";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-osusume/";
@@ -119,6 +120,7 @@ export default function KinKaitoriOsusumePage() {
           </table>
         </div>
         <p className="text-sm text-warm-gray">※手数料・エリアは各社公式サイトの記載を当サイトが直接確認したものです（2026年7月時点）。13社のより詳しい手数料比較は<Link href="/articles/kin-kaitori-tesuryo-hikaku/">手数料13社比較</Link>、買取方法自体の違いは<Link href="/articles/kaitori-houhou-hikaku/">方法4つの比較</Link>をご覧ください。</p>
+        <ServiceCaptureGrid />
 
         <CtaBox />
           <p>一括査定サービスそのものの評判や注意点（キャンセル方法・電話連絡・個人情報）は <Link href="/articles/hikakaku-kin-kaitori-kuchikomi/">ヒカカクの金買取 口コミ・評判</Link> で公式クチコミの傾向を出典付きで整理しています。</p>

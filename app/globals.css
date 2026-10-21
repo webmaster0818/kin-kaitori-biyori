@@ -1,17 +1,33 @@
 @import "tailwindcss";
 
+/*
+  デザイン（2026-10-21 MediaXAI 承認「②、B」= Ivory：生成り×真鍮、ロゴ B＝コインの縁と相場帳の罫）
+  - 色は3系統: 生成りの紙 #f5f2ec / 墨 #1f1d1a / 真鍮 #8a6d3b。罫線は 1px（#d9cfbd）。
+  - 角は付けない（2px まで）。影・装飾のグラデーションは使わない。ボタンは細い罫の矩形（.btn 相当）。
+  - 見出しは明朝（Shippori Mincho）、本文・UI はゴシック（Zen Kaku Gothic New）。
+  - 既存のクラス名（navy / accent / cream / gold-bg / amber …）はトークンの値だけを差し替えて全ページを一括で再配色する。
+    amber / amber-dark は 6/21 から「未定義の死にクラス」だった（CLAUDE.md）→ ここで真鍮として定義した。
+*/
 :root {
-  --background: #FFFEF7;
-  --foreground: #2C2418;
-  --accent: #C9A84C;
-  --accent-light: #D4B966;
-  --accent-dark: #8B6914;
-  --navy: #1a1a2e;
-  --navy-light: #2a2a4e;
-  --cream: #F5F0E0;
-  --warm-gray: #8a8478;
-  --warm-border: #e8e0d0;
-  --gold-bg: #fdf8ec;
+  --background: #f5f2ec;
+  --foreground: #1f1d1a;
+  --accent: #8a6d3b;
+  --accent-light: #b39a6c;
+  --accent-dark: #6b5228;
+  --navy: #1f1d1a;
+  --navy-light: #3a3631;
+  --cream: #efe9df;
+  --warm-gray: #6b6358;
+  --warm-border: #ddd3c2;
+  --gold-bg: #fbf9f5;
+  --amber: #8a6d3b;
+  --amber-dark: #6b5228;
+  --paper: #f5f2ec;
+  --paper-2: #ede7dc;
+  --card: #fffdf9;
+  --rule: #d9cfbd;
+  --rule-strong: #b8a684;
+  --band: #ece5d8;
 }
 
 @theme inline {
@@ -26,18 +42,67 @@
   --color-warm-gray: var(--warm-gray);
   --color-warm-border: var(--warm-border);
   --color-gold-bg: var(--gold-bg);
-  --font-sans: var(--font-noto-sans-jp);
-  --font-display: var(--font-zen-maru-gothic);
+  --color-amber: var(--amber);
+  --color-amber-dark: var(--amber-dark);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-paper-2: var(--paper-2);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --font-sans: var(--font-zen-kaku), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-display: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+/* 角丸・影はサイト全体で控えめに（既存 296 ページの rounded-xl / shadow-md をトークンで一括に） */
+@theme {
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+  --radius-3xl: 2px;
+  --shadow-sm: 0 0 #0000;
+  --shadow: 0 0 #0000;
+  --shadow-md: 0 0 #0000;
+  --shadow-lg: 0 0 #0000;
+  --shadow-xl: 0 0 #0000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-noto-sans-jp), sans-serif;
+  font-family: var(--font-zen-kaku), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.01em;
 }
 
-html {
-  scroll-behavior: smooth;
+.font-display,
+.font-serif-display {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* 帯の下線などの全幅要素が横スクロールを生まないように */
+main {
+  overflow-x: clip;
+}
+
+/* 枠線 2px → 1px（細い罫に統一） */
+.border-2 {
+  border-width: 1px;
 }
 
 /* FAQ details animation */
@@ -63,73 +128,231 @@ details[open] summary .faq-arrow {
 
 /* Breadcrumb separator */
 .breadcrumb-sep::before {
-  content: ">";
+  content: "/";
   margin: 0 0.5rem;
-  color: var(--warm-gray);
+  color: var(--rule-strong);
 }
 
-/* Article hero banner */
-.article-hero {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  margin-bottom: 2rem;
+/* ===== 共通部品 ===== */
+/* 細い罫の矩形ボタン（モックアップの「今日の相場を見る」「おすすめ4社を比較」） */
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--accent);
+  color: var(--foreground);
+  background: transparent;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  transition: background-color 0.2s, color 0.2s;
 }
-.article-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.btn-line:hover {
+  background: var(--accent);
+  color: #fff;
 }
-.article-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(26,26,46,0.7) 0%, rgba(26,26,46,0.3) 100%);
+.btn-line--solid {
+  background: var(--foreground);
+  border-color: var(--foreground);
+  color: var(--paper);
+}
+.btn-line--solid:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
-/* Article utility classes */
-.article-heading {
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
+/* セクション見出しの上の真鍮の短い罫 */
+.rule-mark::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 1rem;
+}
+.rule-mark.text-left::before {
+  margin-left: 0;
+}
+
+/* 記事内の CTA ボタン（CtaBox・280 ページ）＝塗りの角丸ボタン → 細い罫の矩形ボタン。文言・リンクは不変 */
+a.gold-cta,
+a.block.bg-accent.text-white,
+a.block.bg-navy.text-white,
+a.block.bg-navy.text-accent,
+a.block.bg-green-700.text-white,
+a.block.bg-blue-700.text-white,
+a.bg-accent.text-white.rounded-lg {
+  background: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--accent);
+  letter-spacing: 0.03em;
+}
+a.gold-cta:hover,
+a.block.bg-accent.text-white:hover,
+a.block.bg-navy.text-white:hover,
+a.block.bg-navy.text-accent:hover,
+a.block.bg-green-700.text-white:hover,
+a.block.bg-blue-700.text-white:hover,
+a.bg-accent.text-white.rounded-lg:hover {
+  background: var(--accent);
+  color: #fff;
+}
+/* 先頭のボタン（一括査定）だけ墨で塗る＝主ボタン */
+a.block.bg-accent.text-white {
+  background: var(--foreground);
+  border-color: var(--foreground);
+  color: var(--paper);
+}
+.gold-cta {
+  background: var(--card);
   color: var(--foreground);
 }
 .gold-table-header {
-  background-color: var(--navy) !important;
-  color: var(--accent) !important;
-}
-.gold-cta {
-  background: linear-gradient(135deg, #C9A84C 0%, #8B6914 100%);
-  color: white;
-}
-.gold-cta:hover {
-  background: linear-gradient(135deg, #D4B966 0%, #A07B1A 100%);
+  background-color: var(--band) !important;
+  color: var(--foreground) !important;
 }
 
-/* Article prose styling */
-.prose h2 {
-  font-size: 1.375rem;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  border-left: 4px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
+/* 記事のチップ型リンク（地域ハブ・関連ガイド）＝丸い泡 → 細い罫の矩形 */
+.rounded-full.border {
+  border-radius: 2px;
+}
+
+/* ===== 配下ページの見出し帯（2026-10-21 MediaXAI「②、B」）=====
+   記事 282 本（生成物）はファイルを触らずに、CSS で「パンくず＋h1＋最終更新」を全幅の帯にする。
+   構造: div.max-w-3xl > nav(パンくず) > div.article-hero > article.prose > h1 + p.text-warm-gray
+   - 全幅の塗りは box-shadow の spread＋clip-path（左右だけ伸ばす）。上下の余白は padding で作る。
+   - h1 は `!pb-0 !mt-0`（important・レイヤー内）なので padding を足せない → ::after の空ブロックで余白を作る。
+   - 暗いグラデーションを重ねた装飾写真（.article-hero）は帯に置き換えるので表示しない（画像は装飾・alt のみ）。 */
+:is(div, main)[class*="max-w-"]:has(> nav:first-child + :is(.article-hero, article, h1, header)) {
+  padding-top: 0;
+}
+:is(div, main)[class*="max-w-"] > nav:first-child:has(+ :is(.article-hero, article, h1, header)),
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1,
+:is(div, main)[class*="max-w-"] > nav:first-child + header,
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child + p.text-warm-gray,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child + p.text-warm-gray,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1 + p.text-warm-gray {
+  position: relative;
+  background: var(--band);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+}
+:is(div, main)[class*="max-w-"] > nav:first-child:has(+ :is(.article-hero, article, h1, header)) {
+  margin-bottom: 0;
+  padding-top: 1.25rem;
+  padding-bottom: 1.1rem;
+  color: var(--warm-gray);
+}
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero {
+  display: none;
+}
+/* h1（帯の中の題名） */
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1 {
+  margin-bottom: 0;
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
   color: var(--foreground);
 }
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child::before,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child::before,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1::before,
+:is(div, main)[class*="max-w-"] > nav:first-child + header > h1:first-child::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 1rem;
+}
+/* h1 の後ろに「最終更新」の行が無いページは h1 自体で帯を閉じる */
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child:not(:has(+ p.text-warm-gray))::after,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child:not(:has(+ p.text-warm-gray))::after,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1:not(:has(+ p.text-warm-gray))::after {
+  content: "";
+  display: block;
+  height: 1.75rem;
+}
+/* 帯の最後の行（最終更新）＋帯の下の罫 */
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child + p.text-warm-gray,
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child + p.text-warm-gray,
+:is(div, main)[class*="max-w-"] > nav:first-child + h1 + p.text-warm-gray {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 1.75rem;
+  box-shadow: 0 0 0 100vmax var(--band), 0 1px 0 100vmax var(--rule);
+  clip-path: inset(0 -100vmax -1px);
+}
+:is(div, main)[class*="max-w-"] > nav:first-child + .article-hero + article > h1:first-child:not(:has(+ p.text-warm-gray)),
+:is(div, main)[class*="max-w-"] > nav:first-child + article > h1:first-child:not(:has(+ p.text-warm-gray)),
+:is(div, main)[class*="max-w-"] > nav:first-child + h1:not(:has(+ p.text-warm-gray)) {
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 0 100vmax var(--band), 0 1px 0 100vmax var(--rule);
+  clip-path: inset(0 -100vmax -1px);
+}
+:is(div, main)[class*="max-w-"] > nav:first-child + header {
+  padding-top: 0.25rem;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 0 100vmax var(--band), 0 1px 0 100vmax var(--rule);
+  clip-path: inset(0 -100vmax -1px);
+}
+:is(div, main)[class*="max-w-"] > nav:first-child + header > h1 {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ===== 記事本文（.prose）===== */
+.prose h1 {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 600;
+}
+.prose h2 {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.55;
+  margin-top: 3rem;
+  margin-bottom: 1.1rem;
+  padding: 0 0 0.7rem;
+  border-left: 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--foreground);
+  position: relative;
+}
+.prose h2::after {
+  /* 下罫の左端だけ真鍮（相場帳の罫のイメージ） */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 3rem;
+  height: 1px;
+  background: var(--accent);
+}
 .prose h3 {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: 700;
-  margin-top: 1.75rem;
+  margin-top: 1.9rem;
   margin-bottom: 0.75rem;
   padding-left: 0.75rem;
-  border-left: 3px solid var(--accent);
+  border-left: 2px solid var(--accent);
   color: var(--foreground);
+  line-height: 1.6;
 }
 .prose p {
   margin-bottom: 1rem;
-  line-height: 1.9;
+  line-height: 1.95;
 }
 .prose ul, .prose ol {
   margin-bottom: 1rem;
@@ -137,10 +360,13 @@ details[open] summary .faq-arrow {
 }
 .prose li {
   margin-bottom: 0.5rem;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 .prose ul li {
   list-style-type: disc;
+}
+.prose ul li::marker {
+  color: var(--accent);
 }
 .prose ol li {
   list-style-type: decimal;
@@ -149,32 +375,236 @@ details[open] summary .faq-arrow {
   color: var(--accent-dark);
   font-weight: 700;
 }
+.prose a:not([class*="bg-"]):not(.gold-cta) {
+  text-underline-offset: 3px;
+}
 .prose table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
+  background: var(--card);
 }
 .prose th {
-  background: var(--navy);
-  color: var(--accent);
+  background: var(--band);
+  color: var(--foreground);
   font-weight: 700;
   text-align: left;
-  padding: 0.75rem;
-  border: 1px solid var(--navy-light);
-  font-size: 0.875rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-bottom-color: var(--rule-strong);
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 .prose td {
-  padding: 0.75rem;
-  border: 1px solid var(--warm-border);
-  font-size: 0.875rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  line-height: 1.6;
 }
 .prose tr:nth-child(even) td {
   background: var(--gold-bg);
 }
 .prose blockquote {
-  background: var(--gold-bg);
-  border-left: 4px solid var(--accent);
+  background: var(--card);
+  border-left: 2px solid var(--accent);
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* 表の高さを抑える（2026-10-21 MediaXAI「比較表が縦に長い」）＝CSS のみ・文言は不変。
+   6列以上の表は列幅の下限を持たせて横スクロールにし（1行の折り返しを減らす）、1列目（業者名・駅名）を固定する。 */
+.prose .table-wrapper {
+  border: 1px solid var(--rule);
+  background: var(--card);
+  margin-bottom: 1.5rem;
+}
+.prose .table-wrapper > table {
+  margin-bottom: 0;
+  border-style: hidden;
+}
+.prose .table-wrapper > table:has(th:nth-child(6)) {
+  width: max-content;
+  min-width: 100%;
+}
+.prose .table-wrapper > table:has(th:nth-child(6)) :is(td, th) {
+  max-width: 15em;
+  min-width: 5.5em;
+  vertical-align: top;
+}
+.prose .table-wrapper > table:has(th:nth-child(6)) th {
+  white-space: nowrap;
+}
+.prose .table-wrapper > table:has(th:nth-child(5)) :is(td, th):first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--card);
+  box-shadow: inset -1px 0 0 var(--rule-strong);
+}
+.prose .table-wrapper > table:has(th:nth-child(6)) :is(td, th):first-child {
+  max-width: 8.5em;
+  min-width: 6em;
+  white-space: normal;
+}
+.prose .table-wrapper > table:has(th:nth-child(5)) th:first-child {
+  background: var(--band);
+}
+.prose .table-wrapper > table:has(th:nth-child(5)) tr:nth-child(even) td:first-child {
+  background: var(--gold-bg);
+}
+
+/* ===== ServiceCapture（公式サイトのキャプチャ）===== */
+.service-capture img {
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+/* ===== DealerComparisonTable（223ページ・横スクロール＋業者名固定）===== */
+.dealer-cmp__table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  background: var(--card);
+}
+.dealer-cmp__table :is(th, td) {
+  padding: 0.5rem 0.65rem;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  vertical-align: top;
+  text-align: left;
+  font-size: inherit;
+  line-height: inherit;
+  background: var(--card);
+}
+.dealer-cmp__table :is(th, td):last-child {
+  border-right: 0;
+}
+.dealer-cmp__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.dealer-cmp__table th {
+  background: var(--band);
+  color: var(--foreground);
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom-color: var(--rule-strong);
+}
+.dealer-cmp__table td {
+  color: var(--warm-gray);
+}
+.dealer-cmp__table tr:nth-child(even) td {
+  background: var(--gold-bg);
+}
+.dealer-cmp__table .dealer-cmp__name {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  width: 9em;
+  min-width: 9em;
+  max-width: 9em;
+  box-shadow: inset -1px 0 0 var(--rule-strong);
+  border-right: 0;
+}
+.dealer-cmp__table th.dealer-cmp__name {
+  background: var(--band);
+}
+.dealer-cmp__table .dealer-cmp__name h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+  color: var(--foreground);
+}
+.dealer-cmp__btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  white-space: nowrap;
+  border: 1px solid var(--accent);
+  color: var(--foreground);
+  padding: 0.2rem 0.6rem;
+  font-size: 11.5px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.dealer-cmp__btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.dealer-cmp__more[open] summary .faq-arrow {
+  transform: rotate(180deg);
+}
+.dealer-cmp__more dl > div:first-child {
+  border-top: 0;
+}
+/* PC では本文の幅（768px）からはみ出させて、横スクロールをほぼ無くす */
+@media (min-width: 1100px) {
+  .dealer-cmp__scroll,
+  .dealer-cmp__more {
+    width: min(1200px, calc(100vw - 48px));
+    margin-left: calc((100% - min(1200px, calc(100vw - 48px))) / 2);
+  }
+}
+
+/* 横並びのチップ（ul.flex / ul.grid）には黒丸を付けない */
+.prose ul:is(.flex, .grid) > li {
+  list-style: none;
+}
+/* 中央揃えの見出し（CtaBox など）は左の縦罫を付けない */
+.prose h3.text-center {
+  border-left: 0;
+  padding-left: 0;
+}
+
+/* 行の多い表（10行以上・4列以上＝名古屋の駅別早見表・手数料13社など）は、PC では本文幅からはみ出させて
+   1セルの折り返しを減らす（縦の長さを抑える）。スマホは横スクロール＋1列目固定。 */
+.prose .table-wrapper > table:has(th:nth-child(4)):has(tbody tr:nth-child(10)) {
+  width: max-content;
+  min-width: 100%;
+}
+.prose .table-wrapper > table:has(th:nth-child(4)):has(tbody tr:nth-child(10)) :is(td, th) {
+  max-width: 21em;
+  vertical-align: top;
+}
+.prose .table-wrapper > table:has(th:nth-child(4)):has(tbody tr:nth-child(10)) :is(td, th):first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  max-width: 8.5em;
+  min-width: 6em;
+  background: var(--card);
+  box-shadow: inset -1px 0 0 var(--rule-strong);
+}
+.prose .table-wrapper > table:has(th:nth-child(4)):has(tbody tr:nth-child(10)) th:first-child {
+  background: var(--band);
+}
+.prose .table-wrapper > table:has(th:nth-child(4)):has(tbody tr:nth-child(10)) tr:nth-child(even) td:first-child {
+  background: var(--gold-bg);
+}
+@media (min-width: 1100px) {
+  .prose .table-wrapper:has(> table:has(th:nth-child(4)):has(tbody tr:nth-child(10))) {
+    width: min(1200px, calc(100vw - 48px));
+    margin-left: calc((100% - min(1200px, calc(100vw - 48px))) / 2);
+  }
+}
+
+/* スマホ：5列の表は1セルが細すぎて縦に伸びるので、列幅の下限を持たせて横スクロールにする */
+@media (max-width: 767px) {
+  .prose .table-wrapper > table:has(th:nth-child(5)) {
+    width: max-content;
+    min-width: 100%;
+  }
+  .prose .table-wrapper > table:has(th:nth-child(5)) :is(td, th) {
+    min-width: 6.5em;
+    max-width: 13em;
+    vertical-align: top;
+  }
+  .prose .table-wrapper > table:has(th:nth-child(5)) :is(td, th):first-child {
+    min-width: 5.5em;
+    max-width: 7.5em;
+  }
 }

@@ -9,6 +9,7 @@ import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCapture from "@/components/ServiceCapture";
 
 const k22Price = goldData.purity_buyback_estimate_per_g.k22;
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
@@ -264,6 +265,8 @@ export default function K22KaitoriPage() {
 
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
 
+        <ServiceCapture id="hikakaku" />
+
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K22のように流通量が少ない純度の場合、業者によって買取価格に差が出やすいため、一括査定で比較するメリットが大きくなります。</p>
 
         <ul>
@@ -273,6 +276,8 @@ export default function K22KaitoriPage() {
         </ul>
 
         <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+
+        <ServiceCapture id="daikichi" />
 
         <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開する大手買取チェーンです。店頭に持ち込めば、その場で査定・即現金化できます。</p>
 
@@ -284,6 +289,8 @@ export default function K22KaitoriPage() {
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
+        <ServiceCapture id="uriel" />
+
         <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられるため、重い金貨や大量のジュエリーを売りたい場合に便利です。</p>
 
         <ul>
@@ -293,6 +300,8 @@ export default function K22KaitoriPage() {
         </ul>
 
         <h3>ティファナ — 3つの方法から選べる</h3>
+
+        <ServiceCapture id="tifana" />
 
         <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3つの方法から選べる買取サービスです（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。ライフスタイルに合わせた柔軟な対応が魅力です。</p>
 

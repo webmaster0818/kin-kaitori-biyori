@@ -25,9 +25,9 @@ export function HighRangeIndicator() {
         <h3 className="font-display text-base font-bold text-amber-dark">高値圏インジケーター</h3>
         <span className="text-xs text-warm-gray">{windowLabel}のK24推移内での位置</span>
       </div>
-      <div className="relative h-3 rounded-full bg-gradient-to-r from-emerald-100 via-amber/20 to-red-100 mb-1">
+      <div className="relative h-3 bg-cream border border-rule mb-1">
         <span
-          className="absolute -top-1 h-5 w-5 rounded-full bg-amber-dark border-2 border-white shadow"
+          className="absolute -top-1 h-5 w-5 rounded-full bg-amber-dark border-2 border-card"
           style={{ left: `calc(${pos}% - 10px)` }}
         />
       </div>

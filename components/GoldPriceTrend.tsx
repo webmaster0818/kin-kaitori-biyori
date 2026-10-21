@@ -56,7 +56,7 @@ export function GoldPriceTrend() {
   const up = delta >= 0;
 
   return (
-    <section className="my-8 not-prose bg-white border border-amber/30 rounded-2xl p-5 md:p-6 shadow-sm">
+    <section className="my-8 not-prose bg-card border border-rule p-5 md:p-6">
       <div className="flex items-baseline justify-between flex-wrap gap-2 mb-1">
         <h3 className="font-display text-lg md:text-xl font-bold text-amber-dark !mt-0 !mb-0 !border-none">
           金（K24）買取相場の推移

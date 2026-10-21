@@ -27,7 +27,7 @@ export function GoldSpotPriceCard({ purity }: { purity: Purity }) {
   const isPtAg = purity === "pt" || purity === "ag";
 
   return (
-    <aside className="my-6 not-prose bg-gradient-to-br from-amber/10 via-cream/40 to-amber/5 border-2 border-amber/30 rounded-2xl p-6 shadow-md">
+    <aside className="my-6 not-prose bg-card border border-rule p-6">
       <div className="flex items-baseline justify-between flex-wrap gap-2 mb-3">
         <h3 className="font-display text-lg md:text-xl font-bold text-amber-dark !mt-0 !mb-0 !border-none">
           本日の{label} 1g買取相場

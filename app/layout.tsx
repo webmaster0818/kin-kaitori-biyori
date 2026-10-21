@@ -1,19 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
+import { Shippori_Mincho, Zen_Kaku_Gothic_New } from "next/font/google";
 import Link from "next/link";
-import Image from "next/image";
+import { LogoWordmark } from "@/components/Logo";
 import "./globals.css";
 
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
+// 2026-10-21 デザイン②（Ivory）: 見出し＝明朝、本文・UI＝ゴシック（brandwatchbank と同じ組み合わせ）
+const shipporiMincho = Shippori_Mincho({
+  variable: "--font-shippori",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["500", "600", "700"],
   display: "swap",
   preload: true,
 });
 
-const zenMaruGothic = Zen_Maru_Gothic({
-  variable: "--font-zen-maru-gothic",
+const zenKakuGothic = Zen_Kaku_Gothic_New({
+  variable: "--font-zen-kaku",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
@@ -118,50 +119,41 @@ const navLinks = [
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-accent/20">
-      <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-display text-xl font-bold text-accent tracking-tight flex items-center gap-2"
-        >
-          <Image src="/images/icon-gold-bar.png" alt="" width={28} height={28} className="rounded" />
-          {SITE_NAME}
+    <header className="sticky top-0 z-50 bg-[#f5f2ec]/95 backdrop-blur-sm border-b border-rule">
+      <nav className="max-w-6xl mx-auto px-4 md:px-8 h-[68px] flex items-center justify-between gap-6">
+        <Link href="/" className="flex-shrink-0" aria-label={SITE_NAME}>
+          <LogoWordmark name={SITE_NAME} />
         </Link>
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-white/80">
+        <ul className="hidden lg:flex items-center gap-6 text-[0.8125rem] tracking-[0.04em] text-foreground">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="hover:text-accent transition-colors"
+                className="py-2 border-b border-transparent hover:border-accent hover:text-accent-dark transition-colors"
               >
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
-        {/* Mobile hamburger */}
-        <details className="md:hidden relative group">
-          <summary className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 transition-colors">
+        {/* Mobile menu（ロゴの輪と見分けがつくよう、枠なしの2本線） */}
+        <details className="lg:hidden relative">
+          <summary className="flex items-center justify-center w-11 h-11 -mr-2">
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-foreground"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               aria-label="メニューを開く"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="square" strokeWidth={1.2} d="M3 9h18M3 15h18" />
             </svg>
           </summary>
-          <div className="absolute right-0 mt-2 w-48 bg-navy border border-accent/20 rounded-lg shadow-lg py-2 z-50">
+          <div className="absolute right-0 mt-2 w-60 bg-card border border-rule py-2 z-50">
             <Link
               href="/"
-              className="block px-4 py-2 text-sm text-white/80 hover:text-accent hover:bg-white/5 transition-colors"
+              className="block px-5 py-2.5 text-sm text-foreground hover:text-accent-dark hover:bg-paper transition-colors"
             >
               ホーム
             </Link>
@@ -169,7 +161,7 @@ function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm text-white/80 hover:text-accent hover:bg-white/5 transition-colors"
+                className="block px-5 py-2.5 text-sm text-foreground border-t border-rule/60 hover:text-accent-dark hover:bg-paper transition-colors"
               >
                 {link.label}
               </Link>
@@ -182,29 +174,27 @@ function Header() {
 }
 
 function Footer() {
+  const linkCls = "text-foreground/75 hover:text-accent-dark transition-colors";
   return (
-    <footer className="bg-navy text-white/90 mt-auto">
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#ece6db] border-t border-rule mt-auto">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10">
           <div>
-            <p className="font-display text-lg font-bold mb-2 text-accent">
-              {SITE_NAME}
+            <p className="mb-4">
+              <LogoWordmark name={SITE_NAME} />
             </p>
-            <p className="text-sm text-white/70 leading-relaxed">
+            <p className="text-sm text-warm-gray leading-relaxed">
               金・貴金属の買取相場と買取サービスを、
               <br />
               公式情報にもとづいて掲載しています。
             </p>
           </div>
           <div>
-            <p className="font-bold text-sm mb-3 text-accent">記事カテゴリ</p>
-            <ul className="space-y-2 text-sm text-white/70">
+            <p className="text-xs tracking-[0.12em] mb-4 text-accent-dark border-b border-rule pb-2">記事カテゴリ</p>
+            <ul className="space-y-2.5 text-sm">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className={linkCls}>
                     {link.label}
                   </Link>
                 </li>
@@ -212,52 +202,37 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-bold text-sm mb-3 text-accent">サイト情報</p>
-            <ul className="space-y-2 text-sm text-white/70">
+            <p className="text-xs tracking-[0.12em] mb-4 text-accent-dark border-b border-rule pb-2">サイト情報</p>
+            <ul className="space-y-2.5 text-sm">
               <li>
-                <Link
-                  href="/about/"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/about/" className={linkCls}>
                   運営者情報
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/author/"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/author/" className={linkCls}>
                   運営方針・データの確認手順
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/faq/"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/faq/" className={linkCls}>
                   よくある質問
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/privacy-policy/"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/privacy-policy/" className={linkCls}>
                   プライバシーポリシー
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/terms-of-service/"
-                  className="hover:text-white transition-colors"
-                >
+                <Link href="/terms-of-service/" className={linkCls}>
                   利用規約
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-accent/20 mt-8 pt-6 text-center text-xs text-white/50">
+        <div className="border-t border-rule mt-12 pt-6 text-center text-xs text-warm-gray">
           <p>&copy; 2026 {SITE_NAME} All rights reserved.</p>
           <p className="mt-1">
             ※当サイトはプロモーション（PR）を含みます。
@@ -276,7 +251,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${notoSansJP.variable} ${zenMaruGothic.variable} h-full antialiased`}
+      className={`${shipporiMincho.variable} ${zenKakuGothic.variable} h-full antialiased`}
     >
       <head>
         <meta

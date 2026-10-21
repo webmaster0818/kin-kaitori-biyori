@@ -9,6 +9,7 @@ import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCapture from "@/components/ServiceCapture";
 
 const k14Price = goldData.purity_buyback_estimate_per_g.k14;
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
@@ -314,6 +315,8 @@ export default function K14KaitoriPage() {
 
         <h3>ヒカカク！ — 一括査定で最高値を比較</h3>
 
+        <ServiceCapture id="hikakaku" />
+
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービスです。K14の買取価格は業者によって差が大きいため、一括査定のメリットが特に大きい純度です。</p>
 
         <ul>
@@ -324,13 +327,19 @@ export default function K14KaitoriPage() {
 
         <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
 
+        <ServiceCapture id="daikichi" />
+
         <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開。K14の刻印がある製品はもちろん、刻印なしの製品も比重などで品位を確認したうえで査定します（公式表記）。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
+        <ServiceCapture id="uriel" />
+
         <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられます。大量のアクセサリーをまとめて売りたい場合に便利です。</p>
 
         <h3>ティファナ — 3つの方法から選べる</h3>
+
+        <ServiceCapture id="tifana" />
 
         <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。忙しくて店舗に行けない方でも、宅配や出張で査定を依頼できます。</p>
 
