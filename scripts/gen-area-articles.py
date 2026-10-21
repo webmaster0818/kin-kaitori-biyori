@@ -509,6 +509,9 @@ def gen(slug, city, pref, region, hook, districts, intro, related):
     title=f"【2026年最新】{city}の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ"
     desc=f"{city}で金を高く売るならどこ？{city}の金買取相場、店頭・出張・宅配の方法別比較、{pref}で高く売るポイントと注意点を公開情報をもとに解説します。"
     crumb=f"{city}の金買取おすすめ"
+    # ウリエルの出張ボタンは公式の出張対応エリアの県だけ（エリア外は外す。2026-10-20 wip）
+    uriel_cta = ('        <a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="block gold-cta text-center text-sm font-medium py-3 rounded-lg transition-colors">出張買取を申し込む（ウリエル）</a>\n'
+                 if pref in URIEL_VISIT_PREFS else "")
     rel_js=", ".join(f'"{r}"' for r in (related+["kin-kaitori-souba","kin-takaku-uru","daikichi-vs-nanboya","kin-kaitori-sagi"]))
     d=districts
     # intro が都市名から始まる場合（batch2）は「{city}は{hook}です。」を付けない（同じ内容の2文が並んでいた）
@@ -555,7 +558,7 @@ function ArticleSchema() {{
     "@type": "Article",
     headline: {json.dumps(title,ensure_ascii=False)},
     description: {json.dumps(desc,ensure_ascii=False)},
-  robots: { index: false, follow: true },
+  robots: {{ index: false, follow: true }},
     datePublished: "2026-06-05",
     dateModified: "2026-06-05",
     author: {{ "@type": "Organization", name: "金買取びより編集部" }},
@@ -588,8 +591,7 @@ function CtaBox() {{
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="block bg-accent text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-accent-dark transition-colors">一括査定で最高値を調べる（ヒカカク！）</a>
         <a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">近くの店舗で査定する（買取大吉）</a>
-        <a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="block gold-cta text-center text-sm font-medium py-3 rounded-lg transition-colors">出張買取を申し込む（ウリエル）</a>
-        <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy border border-accent/50 text-accent text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">好きな方法で査定する（ティファナ）</a>
+{uriel_cta}        <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="block bg-navy border border-accent/50 text-accent text-center text-sm font-medium py-3 rounded-lg hover:bg-navy-light transition-colors">好きな方法で査定する（ティファナ）</a>
       </div>
     </div>
   );
