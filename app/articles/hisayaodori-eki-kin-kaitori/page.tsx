@@ -17,14 +17,14 @@ import DealerComparisonTable from "@/components/DealerComparisonTable";
      久屋大通駅からの徒歩分数は公式に無いので、勝手に計算せず「1駅」と書く。
 */
 
-const CHECKED = "2026年10月14日"; // 初回確認 2026-08-24、10/14 に公式店舗ページで再確認
+const CHECKED = "2026年10月21日"; // 初回確認 2026-08-24、10/14・10/21 に公式店舗ページで再確認（10/21 は4店とも住所・営業時間に変化なし）
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "久屋大通駅の金・ブランド買取｜南改札徒歩1分と5分、地下街の2店と今日の相場【2026年10月】",
   description:
-    "久屋大通駅の南改札から地上に出ずに行ける買取店は、セントラルパーク地下街のバイセル2店（徒歩1分・21時まで／徒歩5分）。金・ブランド品の査定先として住所・道順・営業時間を公式店舗ページで確認（2026年10月14日）。今日の金相場も毎日更新。",
+    "久屋大通駅の南改札から地上に出ずに行ける買取店は、セントラルパーク地下街のバイセル2店（徒歩1分・21時まで／徒歩5分）。金・ブランド品の査定先として住所・道順・営業時間を公式店舗ページで確認（2026年10月21日）。今日の金相場も毎日更新。",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/hisayaodori-eki-kin-kaitori/" },
 };
@@ -45,7 +45,7 @@ function Schemas() {
     headline: "久屋大通駅の金・ブランド買取｜南改札徒歩1分と5分、地下街の2店と今日の相場【2026年10月】",
     description: "久屋大通駅から地下街だけで行ける金・ブランド買取店（バイセル2店）を、公式店舗ページで確認した情報だけでまとめた記事です。",
     datePublished: "2026-08-24",
-    dateModified: "2026-10-14",
+    dateModified: "2026-10-21",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
