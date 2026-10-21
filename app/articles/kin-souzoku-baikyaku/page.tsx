@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 計算例（取得費の有無）: 売却額は日次の純度換算値×100gから毎朝再計算。取得費45万円は仮定 */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -150,6 +151,8 @@ export default function KinSouzokuBaikyakuPage() {
         <p>遺品整理の際に「不用品として引き取ります」と言って金製品を安く持ち去る悪質な業者が報告されています。遺品整理業者と金の買取は<strong>別々の業者に依頼</strong>することをおすすめします。</p>
 
         <h2>4社比較 — 相続した金の買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
         <div className="table-wrapper">
           <table>
             <thead><tr><th>業者名</th><th>方式</th><th>相続金の買取特徴</th><th>おすすめの方</th></tr></thead>

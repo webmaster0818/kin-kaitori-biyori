@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -396,6 +397,7 @@ export default function KinKaitoriZeikinPage() {
           <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
           で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
         </div>
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-kaitori-zeikin"
           relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}

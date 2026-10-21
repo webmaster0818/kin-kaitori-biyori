@@ -7,6 +7,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { NearbyAreas } from "@/components/NearbyAreas";
 import RelatedArticles from "@/components/RelatedArticles";
 import DealerComparisonTable from "@/components/DealerComparisonTable";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /*
   N3（2026-08-24）駅名クエリの検証用ページ。
@@ -202,6 +203,7 @@ export default function Page() {
               { slug: "gifu-kin-kaitori", label: "岐阜" },
             ]}
           />
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="sako-eki-kin-kaitori"
             relatedSlugs={["nagoya-kin-kaitori", "hisayaodori-eki-kin-kaitori", "kin-kaitori-souba", "kin-takaku-uru", "kin-kaitori-tetsuzuki-guide"]}

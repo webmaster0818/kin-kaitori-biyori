@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import goldData from "@/data/gold-spot-prices.json";
 import Link from "next/link";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -165,6 +166,8 @@ export default function FaqPage() {
             <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="block bg-blue-700 text-white text-center text-sm font-medium py-3 rounded-lg hover:bg-blue-800 transition-colors">好きな方法で査定する（ティファナ）</a>
           </div>
         </div>
+
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
 
         <h2>関連記事</h2>
 

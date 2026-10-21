@@ -7,6 +7,7 @@ import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { TodayPriceAnswer } from "@/components/TodayPriceAnswer";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -383,6 +384,8 @@ export default function KinbaKaitoriPage() {
           <p>業者が金歯の重量を測定し、X線分析で純度を判定します。買取価格が提示されるので、納得すれば売却、納得できなければキャンセル（無料）できます。</p>
 
           <h2>4社比較 — 金歯買取におすすめの業者</h2>
+
+          <ServiceCaptureGrid />
 
           <div className="table-wrapper">
             <table>

@@ -7,6 +7,7 @@ import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
 const priceDateJa = formatDateJa(goldData.date);
@@ -222,6 +223,8 @@ export default function PlatinumPt900KaitoriPage() {
         <p>最も確実なのは刻印の確認です。判別が難しい場合は、買取業者に持ち込めばX線蛍光分析装置で正確に判定してもらえます（大手業者なら無料）。金の純度の見方は<Link href="/articles/kin-jundo-mikata/" className="text-accent hover:underline">金の純度の見方ガイド</Link>もご覧ください。</p>
 
         <h2>Pt900の買取におすすめの業者4社</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

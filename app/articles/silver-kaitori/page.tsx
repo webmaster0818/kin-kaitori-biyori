@@ -7,6 +7,7 @@ import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
 const priceDateJa = formatDateJa(goldData.date);
@@ -209,6 +210,8 @@ export default function SilverKaitoriPage() {
         <CtaBox />
 
         <h2>シルバー買取におすすめの業者4社</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

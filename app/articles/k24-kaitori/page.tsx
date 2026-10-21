@@ -10,6 +10,7 @@ import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const k24Price = goldData.purity_buyback_estimate_per_g.k24;
 const k22Price = goldData.purity_buyback_estimate_per_g.k22;
@@ -425,6 +426,8 @@ export default function K24KaitoriPage() {
           </blockquote>
 
           <h2>4社比較 — K24買取におすすめの業者</h2>
+
+          <ServiceCaptureGrid />
 
           <div className="table-wrapper">
             <table>

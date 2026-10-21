@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -192,6 +193,8 @@ export default function KinKaitoriHajimetePage() {
         <p className="text-xs text-warm-gray">※田中貴金属の公表する買取参考価格をもとに純度換算した目安で、毎朝自動更新しています。実際の査定額は業者の手数料・状態により目安を下回ることが一般的です。</p>
 
         <h2>4社比較 — 初心者におすすめの買取業者</h2>
+
+        <ServiceCaptureGrid />
         <div className="table-wrapper">
           <table>
             <thead><tr><th>業者名</th><th>方式</th><th>初心者へのおすすめポイント</th></tr></thead>

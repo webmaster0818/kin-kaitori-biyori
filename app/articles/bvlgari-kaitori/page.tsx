@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
 const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
@@ -266,6 +267,8 @@ export default function BvlgariKaitoriPage() {
         </ol>
 
         <h2>4社比較 — ブルガリ買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

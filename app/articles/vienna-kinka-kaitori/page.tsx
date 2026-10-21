@@ -7,6 +7,7 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -127,6 +128,7 @@ export default function ViennaKinkaKaitoriPage() {
           <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
           </div>
         </div>
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles currentSlug="vienna-kinka-kaitori" relatedSlugs={["kinka-kaitori-guide", "kinka-ingot-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
         <DealerComparisonTable heading="ウィーン金貨の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

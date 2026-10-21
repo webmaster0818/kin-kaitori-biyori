@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -317,6 +318,8 @@ export default function GinKaitoriPage() {
         <p>銀は1gあたり約{LP_AG}円程度のため、10gのシルバーリング1本では約{Math.round(_LPT.ag_buyback_per_g * 10).toLocaleString()}円程度の買取額です。「わざわざ持ち込む手間に見合わない」と感じる方は、<strong>金やプラチナの製品と一緒にまとめて</strong>査定に出すのがおすすめです。</p>
 
         <h2>4社比較 — 銀買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

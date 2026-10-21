@@ -7,6 +7,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -266,6 +267,8 @@ export default function FukuokaKinKaitoriPage() {
         <p>信頼できる業者は「今日の相場は1gあたり○○円で、お品物は○g、純度K18なので○○円です」と、<strong>計算の根拠を明確に説明</strong>してくれます。根拠を示さずに金額だけ提示する業者は避けることをおすすめします。</p>
 
         <h2>4社比較 — 福岡で金買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

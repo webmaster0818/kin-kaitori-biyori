@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const PUBLISHED = "2026-10-08";
 const UPDATED = "2026-10-15";
@@ -337,6 +338,7 @@ export default function Page() {
           <p className="text-xs text-warm-gray">※ いずれも2026年10月9日に公式サイトの生ページを確認して記載しています（クチコミ件数・カテゴリの掲載点数・利用規約・FAQ・使い方ガイドは10月15日に再確認）。サービス内容・件数は変更されることがあるため、最新情報は公式サイトでご確認ください。本記事はPRリンクを含みます。</p>
 
           <ExpertQA category="compare" />
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="hikakaku-kin-kaitori-kuchikomi"
             relatedSlugs={["ikkatsu-satei-hikaku", "kin-kaitori-osusume", "kaitori-houhou-hikaku", "kin-takaku-uru", "kin-kaitori-hajimete", "kin-kaitori-sagi", "kin-200man-mynumber", "kin-kaitori-souba"]}

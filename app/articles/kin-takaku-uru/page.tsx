@@ -6,6 +6,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -478,6 +479,7 @@ export default function KinTakakuUruPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="howto" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-takaku-uru"
           relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-uridoki-2026", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}

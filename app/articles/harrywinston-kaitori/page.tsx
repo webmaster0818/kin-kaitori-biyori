@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -129,6 +130,8 @@ export default function Page() {
           </ol>
 
           <h2>5. おすすめ買取業者</h2>
+
+          <ServiceCaptureGrid />
           <div className="table-wrapper">
             <table>
               <thead><tr><th>業者</th><th>強み</th></tr></thead>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const TITLE = "金買取の手数料を13社で比較【2026年7月調査】査定料・出張料・返送料・振込手数料";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-tesuryo-hikaku/";
@@ -146,6 +147,7 @@ export default function KinKaitoriTesuryoHikakuPage() {
         </ul>
 
         <ExpertQA category="compare" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-kaitori-tesuryo-hikaku"
           relatedSlugs={["nagoya-kin-kaitori", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tentou-vs-takuhai", "kin-kaitori-souba", "kin-takaku-uru", "kin-kaitori-hajimete", "kin-baikyaku-mynumber", "kin-kaitori-zeikin"]}

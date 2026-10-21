@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* brand-table-metal: 相場表の「地金の1g単価」列。日次の田中貴金属データから毎朝再計算 */
 const _BM_K18 = Math.round((goldData.purity_buyback_estimate_per_g as Record<string, number>).k18).toLocaleString();
@@ -349,6 +350,8 @@ export default function CartierKaitoriPage() {
         <p>定価が上がるたびに、中古品の「お得感」が増し、中古市場での需要が高まります。その結果、<strong>買取価格も連動して上昇</strong>する傾向にあります。現在の高水準な買取相場は、金価格の高騰と定価改定のダブル効果です。</p>
 
         <h2>4社比較 — カルティエ買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

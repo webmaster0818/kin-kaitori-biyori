@@ -4,6 +4,7 @@ import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const TITLE = "【2026年最新】金の贈与と税金ガイド — 贈与税の計算・110万円の基礎控除・売却時の取得費";
 const URL = "https://gold-biyori.com/articles/kin-zouyo-zeikin/";
@@ -145,6 +146,7 @@ export default function KinZouyoZeikinPage() {
         <p className="text-sm text-warm-gray">参照: 国税庁タックスアンサー No.4402（贈与税がかかる場合）・No.4408（贈与税の計算と税率）・No.4103（相続時精算課税）・No.3270（相続や贈与によって取得した資産の取得費）。税制は改正される場合があります。個別の判断は税理士・税務署にご確認ください。</p>
 
         <ExpertQA category="howto" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-zouyo-zeikin"
           relatedSlugs={["kin-kaitori-zeikin", "kin-souzoku-baikyaku", "kin-baikyaku-mynumber", "kin-kaitori-souba", "k24-kaitori", "kin-uridoki-2026", "ihin-seiri-kin", "kin-takaku-uru"]}

@@ -7,6 +7,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -293,6 +294,8 @@ export default function YokohamaKinKaitoriPage() {
         </div>
 
         <h2>4社比較 — 横浜で金買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

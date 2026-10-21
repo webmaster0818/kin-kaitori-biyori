@@ -6,6 +6,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -112,6 +113,7 @@ export default function KinFuzokuhinNashiPage() {
         </div>
         <GoldPriceTrend />
         <ExpertQA category="howto" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles currentSlug="kin-fuzokuhin-nashi" relatedSlugs={["kin-kaitori-tetsuzuki-guide", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-takaku-uru", "kaitori-houhou-hikaku"]} />
         <DealerComparisonTable heading="付属品なしでも売れる？の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

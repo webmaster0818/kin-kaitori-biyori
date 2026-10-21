@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -386,6 +387,7 @@ export default function KinOmosaHakrikataPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="compare" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-omosa-hakarikata"
           relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}

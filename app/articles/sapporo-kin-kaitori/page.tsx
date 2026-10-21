@@ -7,6 +7,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -254,6 +255,8 @@ export default function SapporoKinKaitoriPage() {
         <p>高額な金製品（インゴット、喜平ネックレスなど）であれば、交通費をかけてでも札幌に持ち込んで複数店舗で比較する価値があります。一方、少量のアクセサリーであれば<strong>宅配買取が最もコスパの良い方法</strong>です。</p>
 
         <h2>4社比較 — 札幌で金買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

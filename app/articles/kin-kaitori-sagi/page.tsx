@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -228,6 +229,7 @@ export default function KinKaitoriSagiPage() {
 
         <GoldPriceTrend />
         <ExpertQA category="howto" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-kaitori-sagi"
           relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}

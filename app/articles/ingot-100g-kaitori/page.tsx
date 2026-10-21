@@ -7,6 +7,7 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -133,6 +134,7 @@ export default function Ingot100gKaitoriPage() {
           <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
           で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
         </div>
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles currentSlug="ingot-100g-kaitori" relatedSlugs={["kinka-ingot-kaitori", "k24-kaitori", "kin-takaku-uru", "kin-kaitori-souba"]} />
         <DealerComparisonTable heading="インゴット100gの買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

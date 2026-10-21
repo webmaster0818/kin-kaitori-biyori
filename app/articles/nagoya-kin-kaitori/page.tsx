@@ -9,6 +9,7 @@ import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -388,6 +389,8 @@ export default function NagoyaKinKaitoriPage() {
         <p>1回の取引で金地金・インゴットの売却額が200万円を超える場合、業者は税務署に支払調書を提出する義務があります。マイナンバーの提示も必要ですので、事前に準備しておくことをおすすめします。</p>
 
         <h2>4社比較 — 名古屋で金買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
 
         <div className="table-wrapper">
           <table>

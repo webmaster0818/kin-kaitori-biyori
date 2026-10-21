@@ -6,6 +6,7 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 /* 重量×金額の例: 日次の純度換算値から毎朝再計算（田中貴金属の公表値ベース） */
 const _GP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -171,6 +172,8 @@ export default function Page() {
           </ol>
 
           <h2>6. 金時計買取のおすすめ業者</h2>
+
+          <ServiceCaptureGrid />
 
           <div className="table-wrapper">
             <table>

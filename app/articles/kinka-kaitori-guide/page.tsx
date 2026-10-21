@@ -9,6 +9,7 @@ import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
 import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -291,6 +292,7 @@ export default function KinkaKaitoriGuidePage() {
             <Link href="/souba-dashboard/" className="text-sm bg-amber/15 border border-amber/50 text-amber-dark font-bold rounded-lg px-3 py-2 hover:bg-amber/25">相場ダッシュボードで見る</Link>
             </div>
           </div>
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="kinka-kaitori-guide"
             relatedSlugs={["kinka-ingot-kaitori", "vienna-kinka-kaitori", "ingot-100g-kaitori", "k24-kaitori", "k22-kaitori", "kin-nobebo-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}

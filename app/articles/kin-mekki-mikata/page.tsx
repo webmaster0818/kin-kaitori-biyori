@@ -6,6 +6,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -112,6 +113,7 @@ export default function KinMekkiMikataPage() {
         </div>
         <GoldPriceTrend />
         <ExpertQA category="howto" />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles currentSlug="kin-mekki-mikata" relatedSlugs={["kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "kinseido-kaitori-guide", "kin-takaku-uru"]} />
         <DealerComparisonTable heading="金メッキの見分け方の買取で使える主要サービス比較" intro="公式情報をもとに金買取サービスを比較しました。" />
         <h2>まとめ</h2>

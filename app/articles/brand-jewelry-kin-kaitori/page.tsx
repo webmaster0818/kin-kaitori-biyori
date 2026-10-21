@@ -3,6 +3,7 @@ import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const TITLE = "ブランドジュエリー・時計の金買取ガイド｜ブランド価値と地金価値の二重評価";
 const URL = "https://gold-biyori.com/articles/brand-jewelry-kin-kaitori/";
@@ -132,6 +133,7 @@ export default function BrandJewelryKinKaitoriPage() {
         </ol>
 
         <CtaBox />
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="brand-jewelry-kin-kaitori"
           relatedSlugs={["cartier-kaitori", "tiffany-kaitori", "kin-kaitori-osusume", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-kaitori-souba", "kintokei-rolex-kaitori"]}

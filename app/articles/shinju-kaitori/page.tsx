@@ -5,6 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -193,6 +194,8 @@ export default function ShinjuKaitoriPage() {
         <p>真珠は有機物（炭酸カルシウム）でできているため、<strong>時間とともにテリ（光沢）が失われます</strong>。数十年放置された真珠は光沢が完全に失われ、買取不可になることもあります。売却を検討しているなら、<strong>早めに査定を受ける</strong>ことをおすすめします。</p>
 
         <h2>4社比較 — 真珠買取におすすめの業者</h2>
+
+        <ServiceCaptureGrid />
         <div className="table-wrapper">
           <table>
             <thead><tr><th>業者名</th><th>方式</th><th>真珠買取の特徴</th><th>おすすめの方</th></tr></thead>

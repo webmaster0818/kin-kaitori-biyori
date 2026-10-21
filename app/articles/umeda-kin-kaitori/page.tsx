@@ -6,6 +6,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -167,6 +168,7 @@ export default function Page() {
           <GoldPriceTrend />
           <ExpertQA category="region" />
           <NearbyAreas pref="大阪府" areas={[{ slug: "osaka-kin-kaitori", label: "大阪" }, { slug: "higashiosaka-kin-kaitori", label: "東大阪" }, { slug: "hirakata-kin-kaitori", label: "枚方" }, { slug: "ibaraki-osaka-kin-kaitori", label: "茨木" }, { slug: "ikeda-osaka-kin-kaitori", label: "池田" }, { slug: "izumi-osaka-kin-kaitori", label: "和泉" }, { slug: "kishiwada-kin-kaitori", label: "岸和田" }, { slug: "moriguchi-kin-kaitori", label: "守口" }]} />
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="umeda-kin-kaitori"
             relatedSlugs={["osaka-kin-kaitori", "kobe-kin-kaitori", "kyoto-kin-kaitori", "nagoya-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}

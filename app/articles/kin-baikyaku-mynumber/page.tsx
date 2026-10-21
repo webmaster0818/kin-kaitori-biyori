@@ -4,6 +4,7 @@ import Link from "next/link";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const TITLE = "金を売るとマイナンバーが必要？200万円の境界線と支払調書の仕組みを解説【2026年】";
 const URL = "https://gold-biyori.com/articles/kin-baikyaku-mynumber/";
@@ -130,6 +131,7 @@ export default function KinBaikyakuMynumberPage() {
           <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
           で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
         </div>
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-baikyaku-mynumber"
           relatedSlugs={["kin-kaitori-zeikin", "kin-zouyo-zeikin", "kin-souzoku-baikyaku", "kin-kaitori-souba", "k24-kaitori", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-hajimete"]}

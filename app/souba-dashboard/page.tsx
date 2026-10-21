@@ -7,6 +7,7 @@ import { PurityPriceTable } from "@/components/PurityPriceTable";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import goldData from "@/data/gold-spot-prices.json";
 import trend from "@/data/gold-price-trend.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 export const metadata: Metadata = {
   title: "金価格・買取相場ダッシュボード【毎日自動更新】| 純度別価格とシミュレーター",
@@ -91,6 +92,8 @@ export default function SoubaDashboard() {
           <p>掲載しているのは公表値から純度換算した理論上の目安です。実際の買取額は業者の手数料・査定基準・製品の状態によって目安を下回ることが一般的です。複数業者の無料査定で比較することをおすすめします。</p>
           <h3>Q. 価格はいつ更新されますか？</h3>
           <p>毎日午前に自動更新しています。田中貴金属工業が公表する税込参考価格をもとにしています。</p>
+
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
 
           <h2 id="cite">データの引用・ウィジェット設置について</h2>
           <p>

@@ -4,6 +4,7 @@ import spot from "@/data/gold-spot-prices.json";
 import trend from "@/data/gold-price-trend.json";
 // ⚠️ 配布しているのは history。schemaの期間は配布物に合わせる（表示用trendとは範囲が違う）
 import history from "@/public/data/gold-price-history.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const per = spot.purity_buyback_estimate_per_g as Record<string, number>;
 const date = spot.date as string;
@@ -288,6 +289,8 @@ export default function Page() {
             本日の相場をご自身のサイトに表示する場合は、コードを1行貼り付けるだけで設置できる<Link href="/widget/" className="text-accent-dark underline">金価格ウィジェット（無料配布）</Link>もご利用ください。
           </p>
         </section>
+
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
 
         {/* 関連 */}
         <section className="mb-4">

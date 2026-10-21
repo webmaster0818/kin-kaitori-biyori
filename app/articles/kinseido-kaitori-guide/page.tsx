@@ -10,6 +10,7 @@ import { GoldSpotPriceCard } from "@/components/GoldSpotPriceCard";
 import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
 const k10Price = goldData.purity_buyback_estimate_per_g.k10;
@@ -260,6 +261,8 @@ export default function KinseidoKaitoriGuidePage() {
           </ol>
 
           <h2>4社比較 — 品位別買取におすすめの業者</h2>
+
+          <ServiceCaptureGrid />
 
           <div className="table-wrapper">
             <table>

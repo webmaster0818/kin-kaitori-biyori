@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GoldSimulator } from "@/components/GoldSimulator";
 import goldData from "@/data/gold-spot-prices.json";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 export const metadata: Metadata = {
   title: "金買取相場グラム計算機｜純度×重量で本日の買取目安を計算【日次更新】",
@@ -197,6 +198,8 @@ export default function KeisankiPage() {
             ))}
           </div>
         </section>
+
+        <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
 
         {/* 引用歓迎（被リンク資産） */}
         <section className="my-10 border-t border-accent/20 pt-6">

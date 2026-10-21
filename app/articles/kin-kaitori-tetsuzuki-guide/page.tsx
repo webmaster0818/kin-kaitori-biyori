@@ -7,6 +7,7 @@ import { GoldSimulator } from "@/components/GoldSimulator";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const breadcrumbData = {
@@ -314,6 +315,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
           <Link href="/articles/kin-nobebo-kaitori/#kisei-2026" className="text-accent hover:underline">金インゴットの買取規制【2026年の最新動向】</Link>
           で一次情報ベースの整理を公開しています（変わること・変わらないこと）。
         </div>
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="kin-kaitori-tetsuzuki-guide"
             relatedSlugs={["kin-kaitori-hajimete", "kin-kaitori-sokujitsu", "kin-baikyaku-mynumber", "kin-200man-mynumber", "kin-kaitori-zeikin", "kin-kaitori-sagi", "kin-fuzokuhin-nashi", "kin-takaku-uru", "kaitori-houhou-hikaku", "kin-kaitori-souba"]}

@@ -6,6 +6,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -350,6 +351,7 @@ export default function OkachimachiKinKaitoriPage() {
           <GoldPriceTrend />
           <ExpertQA category="region" />
           <NearbyAreas pref="東京都" areas={[{ slug: "tokyo-kin-kaitori", label: "東京" }, { slug: "adachi-kin-kaitori", label: "足立区" }, { slug: "arakawa-kin-kaitori", label: "荒川区" }, { slug: "bunkyo-kin-kaitori", label: "文京区" }, { slug: "chiyoda-kin-kaitori", label: "千代田区" }, { slug: "chofu-kin-kaitori", label: "調布" }, { slug: "chuo-tokyo-kin-kaitori", label: "中央区" }, { slug: "edogawa-kin-kaitori", label: "江戸川区" }]} />
+          <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="okachimachi-kin-kaitori"
             relatedSlugs={["tokyo-kin-kaitori", "ginza-kin-kaitori", "ikebukuro-kin-kaitori", "omiya-kin-kaitori", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]}
