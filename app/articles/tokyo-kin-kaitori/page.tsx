@@ -8,6 +8,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCapture from "@/components/ServiceCapture";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -261,6 +262,8 @@ export default function TokyoKinKaitoriPage() {
 
         <h3>ヒカカク！ — 東京の業者を一括比較</h3>
 
+        <ServiceCapture id="hikakaku" />
+
         <p>ヒカカク！は複数の買取業者に一括で査定依頼ができるサービスです。東京は登録業者数が最も多いエリアなので、<strong>最も比較の効果が高い</strong>地域と言えます。</p>
 
         <ul>
@@ -270,6 +273,8 @@ export default function TokyoKinKaitoriPage() {
         </ul>
 
         <h3>買取大吉 — 東京都内に多数店舗</h3>
+
+        <ServiceCapture id="daikichi" />
 
         <p>買取大吉は全国2,400店舗以上を展開する大手チェーンで、東京都内にも<strong>新宿・銀座・池袋・渋谷・上野</strong>をはじめ多数の店舗があります。</p>
 
@@ -281,6 +286,8 @@ export default function TokyoKinKaitoriPage() {
 
         <h3>ウリエル — 東京都への出張買取に対応</h3>
 
+        <ServiceCapture id="uriel" />
+
         <p>ウリエルは出張買取が中心の買取専門店（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）で、公式の出張買取対応エリアに<strong>東京都</strong>が含まれています（一部対応できない市町村あり・公式表記、2026年10月11日確認）。</p>
 
         <ul>
@@ -290,6 +297,8 @@ export default function TokyoKinKaitoriPage() {
         </ul>
 
         <h3>ティファナ — 3つの方法から選択</h3>
+
+        <ServiceCapture id="tifana" />
 
         <p>ティファナは店頭・出張・宅配の3つの方法に対応。東京に複数の店舗を構え、ライフスタイルに合わせた柔軟な売却が可能です。</p>
 

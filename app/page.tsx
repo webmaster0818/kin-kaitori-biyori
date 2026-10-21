@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ServiceCapture, { type ServiceCaptureId } from "@/components/ServiceCapture";
 
 import goldTopData from "@/data/gold-spot-prices.json";
 
@@ -22,39 +22,35 @@ const [, goldTopMonth, goldTopDay] = goldTopData.date.split("-").map(Number);
 const services = [
   {
     name: "ヒカカク！",
+    capture: "hikakaku" as ServiceCaptureId,
     method: "一括査定",
     description: "複数の業者へ一括で査定を依頼でき、査定額を比較できる",
     target: "複数社の査定額を比較したい方",
     url: "https://hikakaku.com",
-    color: "bg-white border-accent/30 hover:border-accent",
-    iconSrc: "/images/icon-compare.png",
   },
   {
     name: "買取大吉",
+    capture: "daikichi" as ServiceCaptureId,
     method: "店頭買取",
     description: "全国2,400店舗以上。店頭で査定を受け、その場で現金化できる",
     target: "店頭ですぐに現金化したい方",
     url: "https://kaitori-daikichi.jp",
-    color: "bg-white border-accent/30 hover:border-accent",
-    iconSrc: "/images/icon-gold-bar.png",
   },
   {
     name: "ティファナ",
+    capture: "tifana" as ServiceCaptureId,
     method: "出張/店頭/宅配",
     description: "店頭・出張・宅配の3つの方法に対応（出張・店頭は対応地域に限りあり）",
     target: "売却方法を選びたい方",
     url: "https://tifana.net",
-    color: "bg-white border-accent/30 hover:border-accent",
-    iconSrc: "/images/icon-jewelry.png",
   },
   {
     name: "ウリエル",
+    capture: "uriel" as ServiceCaptureId,
     method: "出張買取中心",
     description: "自宅で査定・売却が完了する。出張費・査定料は無料",
     target: "自宅で売却を完了したい方",
     url: "https://uriel-cuore.co.jp",
-    color: "bg-white border-accent/30 hover:border-accent",
-    iconSrc: "/images/icon-price.png",
   },
 ];
 
@@ -502,256 +498,260 @@ export default function Home() {
     <>
       <FaqSchema />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
-        <Image
-          src="/images/hero-gold.png"
-          alt="金・貴金属イメージ"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 md:py-24 w-full">
-          <div className="text-center">
-            <p className="text-accent font-medium text-sm mb-3 tracking-[0.2em] uppercase">
+      {/* Hero（デザイン② Ivory：額装写真は左右を切らない＝object-contain・画像と枠の縦横比を一致させる） */}
+      <section className="border-b border-rule">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 pt-10 pb-12 md:pt-16 md:pb-16 grid grid-cols-1 md:grid-cols-[1fr_1.08fr] gap-10 md:gap-14 items-center">
+          <div>
+            <p className="text-accent text-[0.7rem] mb-5 tracking-[0.32em] uppercase">
               Gold &amp; Precious Metals
             </p>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+            <h1 className="font-display text-[1.8rem] sm:text-[2.1rem] lg:text-[2.6rem] leading-[1.45] text-foreground mb-6">
               金・貴金属の買取相場と
               <br />
-              <span className="text-accent">買取サービス</span>の比較情報
+              <span className="text-accent-dark">買取サービス</span>の比較情報
             </h1>
-            <p className="text-white/80 text-base md:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-foreground/80 text-[0.95rem] md:text-base leading-[2] mb-8 max-w-xl">
               K24（純金）・K18・プラチナの買取相場を毎日更新しています。
-              <br className="hidden md:block" />
+              <br className="hidden lg:block" />
               4つの買取サービスを公式情報にもとづいて比較し、売却方法の検討を支援します。
             </p>
-            <div className="bg-black/40 backdrop-blur-sm border border-accent/30 rounded-xl inline-block px-6 py-3 mb-8">
-              <p className="text-xs text-white/60 mb-1">本日の金買取参考相場（K24/1g）</p>
-              <p className="text-2xl md:text-3xl font-bold text-accent">
-                &#165;{LP_K24}<span className="text-sm text-white/60 font-normal ml-1">前後</span>
-              </p>
-              <p className="text-xs text-white/50 mt-1">※{LP_DATE}時点の目安（毎朝自動更新）。実際の買取価格は業者・純度により異なります。</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
-                href="/articles/kin-kaitori-souba/"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent-light text-navy font-bold px-7 py-3.5 rounded-full hover:from-accent-light hover:to-accent transition-all shadow-lg hover:shadow-accent/30"
-              >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+              <Link href="/articles/kin-kaitori-souba/" className="btn-line btn-line--solid">
                 最新の金買取相場を見る
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </Link>
-              <Link
-                href="/articles/kin-takaku-uru/"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur text-white border border-white/30 font-medium px-7 py-3.5 rounded-full hover:bg-white/20 transition-all"
-              >
+              <Link href="/articles/kin-takaku-uru/" className="btn-line">
                 高く売るコツを読む
               </Link>
             </div>
-            <p className="text-white/40 text-xs mt-4">最終更新: {LP_DATE}</p>
+            <p className="text-warm-gray text-xs mt-5 tracking-[0.04em]">最終更新: {LP_DATE}</p>
+          </div>
+
+          <div className="relative md:pl-6 md:pb-6">
+            <div className="border border-[#b8a684] bg-card p-2.5 md:p-3">
+              <picture>
+                <source media="(max-width: 767px)" srcSet="/images/hero-ivory-m.webp" width={960} height={720} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/hero-ivory.webp"
+                  alt="金・貴金属イメージ"
+                  width={1600}
+                  height={1195}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="block w-full h-auto object-contain"
+                />
+              </picture>
+            </div>
+            <div className="relative -mt-10 ml-4 mr-10 sm:mr-auto sm:max-w-[17rem] md:absolute md:left-0 md:bottom-0 md:mt-0 md:ml-0 bg-card border border-rule px-5 py-4">
+              <p className="text-[0.7rem] text-warm-gray mb-1.5 tracking-[0.04em]">本日の金買取参考相場（K24/1g）</p>
+              <p className="font-display text-[1.9rem] leading-none text-foreground num">
+                &#165;{LP_K24}<span className="text-xs text-warm-gray font-normal ml-1 font-sans">前後</span>
+              </p>
+              <p className="text-[0.66rem] text-warm-gray mt-2 leading-relaxed">※{LP_DATE}時点の目安（毎朝自動更新）。実際の買取価格は業者・純度により異なります。</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <section className="border-y border-warm-border bg-white">
-        <div className="max-w-5xl mx-auto px-4 py-5">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-xs md:text-sm text-warm-gray">
-            {["査定料・出張費すべて無料", "4社の買取サービスを比較", "相場を毎日更新", "公式情報にもとづく掲載"].map((text) => (
-              <span key={text} className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+      {/* Trust（4項目を罫で区切った1列） */}
+      <section className="border-b border-rule bg-card">
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
+          <ul className="grid grid-cols-2 md:grid-cols-4 text-[0.78rem] md:text-sm text-foreground/80 tracking-[0.03em]">
+            {["査定料・出張費すべて無料", "4社の買取サービスを比較", "相場を毎日更新", "公式情報にもとづく掲載"].map((text, i) => (
+              <li
+                key={text}
+                className={`py-4 md:py-5 px-2 text-center ${i % 2 === 1 ? "border-l border-rule" : ""} ${i >= 2 ? "border-t md:border-t-0 border-rule" : ""} ${i === 2 ? "md:border-l" : ""}`}
+              >
                 {text}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       {/* データで見る金買取（一次データ資産への導線） */}
-      <section className="bg-gold-bg border-b border-warm-border">
-        <div className="max-w-5xl mx-auto px-4 py-8">
-          <h2 className="font-display text-lg md:text-xl font-bold mb-4 text-center">
-            データで見る金買取（毎日自動更新）
-          </h2>
-          {/* 今日の実数価格バー（日次cronビルドで自動更新） */}
-          <div className="flex flex-wrap justify-center gap-2 mb-5 text-sm">
-            {([["K24", goldTop.k24], ["K22", goldTop.k22], ["K18", goldTop.k18], ["K14", goldTop.k14]] as const).map(([label, price]) => (
-              <span key={label} className="inline-flex items-baseline gap-1 bg-white border border-accent/30 rounded-full px-4 py-1.5">
-                <span className="font-bold text-navy">{label}</span>
-                <span className="font-semibold text-accent-dark">{price.toLocaleString()}円</span>
-                <span className="text-[10px] text-warm-gray">/g</span>
-              </span>
-            ))}
-            <span className="inline-flex items-center text-xs text-warm-gray px-2">{goldTopMonth}月{goldTopDay}日更新・買取目安</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/souba-dashboard/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
-              <span className="font-bold text-sm">📊 本日の金買取相場</span>
-              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">K24〜K10の1g目安と推移グラフ。田中貴金属の公表値をもとに毎朝更新。</span>
-            </Link>
-            <Link href="/kin-kaitori-keisanki/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
-              <span className="font-bold text-sm">🧮 グラム計算機</span>
-              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">純度×重量を選ぶだけで、今日の買取目安をその場で計算。</span>
-            </Link>
-            <Link href="/kin-kaitori-hakusho/" className="block bg-white border border-warm-border rounded-xl p-5 hover:border-accent/40 hover:shadow-md transition-all">
-              <span className="font-bold text-sm">📖 金買取 相場白書</span>
-              <span className="block text-xs text-warm-gray mt-1.5 leading-relaxed">日次データの統計と傾向を公開。出典を明記いただければ引用いただけます。</span>
-            </Link>
-          </div>
-          {/* 今日の注目ガイド（機会ページへの内部リンク集中） */}
-          <div className="flex flex-wrap justify-center gap-2 mt-5">
-            {[
-              { href: "/articles/kin-kaitori-osusume/", label: "⭐ おすすめ業者比較" },
-              { href: "/articles/kin-kaitori-souba/", label: "金買取相場一覧" },
-              { href: "/articles/k22-kaitori/", label: "K22（22金）の買取" },
-              { href: "/articles/k14-kaitori/", label: "K14（14金）の買取" },
-              { href: "/articles/kin-bracelet-kaitori/", label: "金ブレスレット買取" },
-              { href: "/articles/nagoya-kin-kaitori/", label: "名古屋の金買取" },
-              { href: "/articles/niiza-kin-kaitori/", label: "新座市の金買取" },
-              { href: "/articles/kowareta-kin-kaitori/", label: "壊れた金の買取" },
-              { href: "/articles/kin-uridoki-2026/", label: "金の売り時" },
-            ].map((c) => (
-              <Link key={c.href} href={c.href} className="inline-block bg-white border border-warm-border rounded-full px-4 py-1.5 text-xs text-navy hover:border-accent/50 hover:text-accent-dark transition">
-                {c.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2026年4月 金は今が売り時？相場高騰の背景 */}
-      <section className="max-w-5xl mx-auto px-4 py-14">
-        <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          {LP_DATE}時点の金相場と高騰の背景
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+        <h2 className="rule-mark font-display text-xl md:text-2xl mb-8 text-center">
+          データで見る金買取（毎日自動更新）
         </h2>
-        <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          金の買取価格は{LP_DATE}時点で歴史的な高値水準にあります。K24（純金）は1gあたり約{LP_K24}円前後と、2016年（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍に上昇しました（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-          <div className="bg-white border border-warm-border rounded-xl p-5">
-            <p className="text-accent font-bold text-2xl mb-1">+246%</p>
-            <p className="text-sm text-warm-gray">10年間の金価格上昇率（2016年→2026年）</p>
-          </div>
-          <div className="bg-white border border-warm-border rounded-xl p-5">
-            <p className="text-accent font-bold text-2xl mb-1">{LP_K24}円/g</p>
-            <p className="text-sm text-warm-gray">K24（純金）の買取参考相場（{LP_DATE}時点）</p>
-          </div>
-          <div className="bg-white border border-warm-border rounded-xl p-5">
-            <p className="text-accent font-bold text-2xl mb-1">+34%</p>
-            <p className="text-sm text-warm-gray">2024年の年間上昇率（過去最大級）</p>
-          </div>
-        </div>
-        <div className="bg-cream rounded-xl p-6 md:p-8">
-          <h3 className="font-bold text-base mb-4">金価格が高騰している主な要因</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { title: "各国中央銀行の金購入拡大", desc: "中国・インド・ポーランドなどの中央銀行が外貨準備として金を大量購入。年間1,000トン以上の買い越しが続く" },
-              { title: "地政学リスクの継続", desc: "ウクライナ紛争、中東情勢、米中対立の長期化により、安全資産としての金需要が持続" },
-              { title: "円安の進行", desc: "1ドル=約155円前後の円安により、ドル建て金価格に加えて円建ての上昇幅がさらに拡大" },
-              { title: "世界的なインフレ", desc: "各国の金融緩和によるインフレを背景に、実物資産である金への逃避需要が増加" },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-lg p-4 border border-warm-border">
-                <p className="font-bold text-sm mb-1">{item.title}</p>
-                <p className="text-xs text-warm-gray leading-relaxed">{item.desc}</p>
+        {/* 今日の実数価格バー（日次cronビルドで自動更新） */}
+        <div className="border border-rule bg-card mb-3">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {([["K24", goldTop.k24], ["K22", goldTop.k22], ["K18", goldTop.k18], ["K14", goldTop.k14]] as const).map(([label, price], i) => (
+              <div
+                key={label}
+                className={`px-4 py-5 text-center ${i % 2 === 1 ? "border-l border-rule" : ""} ${i >= 2 ? "border-t md:border-t-0 border-rule" : ""} ${i === 2 ? "md:border-l" : ""}`}
+              >
+                <span className="block text-xs tracking-[0.2em] text-accent-dark mb-1.5">{label}</span>
+                <span className="font-display text-xl md:text-2xl text-foreground num">{price.toLocaleString()}円</span>
+                <span className="text-[10px] text-warm-gray ml-0.5">/g</span>
               </div>
             ))}
           </div>
-          <p className="text-sm text-warm-gray mt-4 leading-relaxed">
-            多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。ただし、短期的に相場が下落する可能性もあるため、<strong>現在の価格に納得できるかどうか</strong>を判断の基準とすることをおすすめします。
-          </p>
+        </div>
+        <p className="text-xs text-warm-gray text-right mb-10">{goldTopMonth}月{goldTopDay}日更新・買取目安</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-rule">
+          <Link href="/souba-dashboard/" className="group block py-6 sm:pr-6 border-b border-rule sm:border-b-0">
+            <span className="font-display text-base group-hover:text-accent-dark transition-colors">本日の金買取相場</span>
+            <span className="block text-xs text-warm-gray mt-2 leading-relaxed">K24〜K10の1g目安と推移グラフ。田中貴金属の公表値をもとに毎朝更新。</span>
+          </Link>
+          <Link href="/kin-kaitori-keisanki/" className="group block py-6 sm:px-6 border-b border-rule sm:border-b-0 sm:border-l">
+            <span className="font-display text-base group-hover:text-accent-dark transition-colors">グラム計算機</span>
+            <span className="block text-xs text-warm-gray mt-2 leading-relaxed">純度×重量を選ぶだけで、今日の買取目安をその場で計算。</span>
+          </Link>
+          <Link href="/kin-kaitori-hakusho/" className="group block py-6 sm:pl-6 sm:border-l border-rule">
+            <span className="font-display text-base group-hover:text-accent-dark transition-colors">金買取 相場白書</span>
+            <span className="block text-xs text-warm-gray mt-2 leading-relaxed">日次データの統計と傾向を公開。出典を明記いただければ引用いただけます。</span>
+          </Link>
+        </div>
+        {/* 今日の注目ガイド（機会ページへの内部リンク集中） */}
+        <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 mt-8 pt-8 border-t border-rule">
+          {[
+            { href: "/articles/kin-kaitori-osusume/", label: "おすすめ業者比較" },
+            { href: "/articles/kin-kaitori-souba/", label: "金買取相場一覧" },
+            { href: "/articles/k22-kaitori/", label: "K22（22金）の買取" },
+            { href: "/articles/k14-kaitori/", label: "K14（14金）の買取" },
+            { href: "/articles/kin-bracelet-kaitori/", label: "金ブレスレット買取" },
+            { href: "/articles/nagoya-kin-kaitori/", label: "名古屋の金買取" },
+            { href: "/articles/niiza-kin-kaitori/", label: "新座市の金買取" },
+            { href: "/articles/kowareta-kin-kaitori/", label: "壊れた金の買取" },
+            { href: "/articles/kin-uridoki-2026/", label: "金の売り時" },
+          ].map((c) => (
+            <Link key={c.href} href={c.href} className="inline-block border border-rule bg-card px-3.5 py-1.5 text-xs text-foreground hover:border-accent hover:text-accent-dark transition-colors">
+              {c.label}
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* 4社比較サマリー */}
-      <section className="bg-cream py-14">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-            買取方法で選ぶ おすすめ4社
+      {/* 金相場と高騰の背景 */}
+      <section className="bg-paper-2 border-y border-rule">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+            {LP_DATE}時点の金相場と高騰の背景
           </h2>
-          <p className="text-warm-gray text-sm text-center mb-8">
-            ご希望の売却方法に応じて、買取業者をお選びいただけます
+          <p className="text-warm-gray text-sm text-center mb-10 max-w-2xl mx-auto leading-relaxed">
+            金の買取価格は{LP_DATE}時点で歴史的な高値水準にあります。K24（純金）は1gあたり約{LP_K24}円前後と、2016年（約4,400円）の約{Math.round((_LPP.k24 / 4400) * 10) / 10}倍に上昇しました（田中貴金属の公表値をもとに純度換算した目安・毎朝自動更新）。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {services.map((svc) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 border border-rule bg-card mb-10">
+            <div className="p-6 text-center">
+              <p className="font-display text-accent-dark text-3xl mb-2 num">+246%</p>
+              <p className="text-xs text-warm-gray">10年間の金価格上昇率（2016年→2026年）</p>
+            </div>
+            <div className="p-6 text-center border-t md:border-t-0 md:border-l border-rule">
+              <p className="font-display text-accent-dark text-3xl mb-2 num">{LP_K24}円/g</p>
+              <p className="text-xs text-warm-gray">K24（純金）の買取参考相場（{LP_DATE}時点）</p>
+            </div>
+            <div className="p-6 text-center border-t md:border-t-0 md:border-l border-rule">
+              <p className="font-display text-accent-dark text-3xl mb-2 num">+34%</p>
+              <p className="text-xs text-warm-gray">2024年の年間上昇率（過去最大級）</p>
+            </div>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-display text-base mb-5">金価格が高騰している主な要因</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 border-t border-rule">
+              {[
+                { title: "各国中央銀行の金購入拡大", desc: "中国・インド・ポーランドなどの中央銀行が外貨準備として金を大量購入。年間1,000トン以上の買い越しが続く" },
+                { title: "地政学リスクの継続", desc: "ウクライナ紛争、中東情勢、米中対立の長期化により、安全資産としての金需要が持続" },
+                { title: "円安の進行", desc: "1ドル=約155円前後の円安により、ドル建て金価格に加えて円建ての上昇幅がさらに拡大" },
+                { title: "世界的なインフレ", desc: "各国の金融緩和によるインフレを背景に、実物資産である金への逃避需要が増加" },
+              ].map((item) => (
+                <div key={item.title} className="py-5 border-b border-rule">
+                  <p className="font-bold text-sm mb-1.5">{item.title}</p>
+                  <p className="text-xs text-warm-gray leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-warm-gray mt-6 leading-relaxed">
+              多くのアナリストは2026年後半も「高止まり〜緩やかな上昇」を予測しています。ただし、短期的に相場が下落する可能性もあるため、<strong className="text-foreground">現在の価格に納得できるかどうか</strong>を判断の基準とすることをおすすめします。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4社比較サマリー（各社の公式サイトのキャプチャ付き。キャプチャにはリンクを付けない） */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+        <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+          買取方法で選ぶ おすすめ4社
+        </h2>
+        <p className="text-warm-gray text-sm text-center mb-10">
+          ご希望の売却方法に応じて、買取業者をお選びいただけます
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          {services.map((svc) => (
+            <div key={svc.name} className="border border-rule bg-card p-4 md:p-5 flex flex-col">
+              <ServiceCapture id={svc.capture} className="mb-4" />
               <a
-                key={svc.name}
                 href={svc.url}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className={`${svc.color} border-2 rounded-xl p-6 hover:shadow-lg transition-all group block`}
+                className="group block flex-1"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <Image src={svc.iconSrc} alt="" width={48} height={48} className="rounded-lg flex-shrink-0" />
-                  <div>
-                    <h3 className="font-bold text-base group-hover:text-accent transition-colors">
-                      {svc.name}
-                    </h3>
-                    <span className="inline-block bg-white/80 text-accent text-xs font-bold px-2 py-0.5 rounded mt-1">
-                      {svc.method}
-                    </span>
-                  </div>
+                <div className="flex items-baseline justify-between gap-3 mb-2 border-b border-rule pb-2">
+                  <h3 className="font-display text-lg group-hover:text-accent-dark transition-colors">
+                    {svc.name}
+                  </h3>
+                  <span className="text-xs text-accent-dark tracking-[0.06em] whitespace-nowrap">
+                    {svc.method}
+                  </span>
                 </div>
                 <p className="text-warm-gray text-sm leading-relaxed mb-2">
                   {svc.description}
                 </p>
-                <p className="text-xs text-navy font-medium">
-                  &#x25B6; {svc.target}
+                <p className="text-xs text-foreground">
+                  {svc.target}
                 </p>
               </a>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* 業者の選び方3つのポイント */}
-      <section className="max-w-5xl mx-auto px-4 py-14">
-        <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          金買取業者の選び方 3つのポイント
-        </h2>
-        <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          買取業者を選ぶ際は、以下の3点をご確認いただくことをおすすめします。
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="bg-white border border-warm-border rounded-xl p-6">
-            <div className="text-accent font-bold text-2xl mb-2">1</div>
-            <h3 className="font-bold text-base mb-2">査定料・手数料が無料か</h3>
-            <p className="text-sm text-warm-gray leading-relaxed">
-              査定料・出張費・キャンセル料が無料かどうかをご確認ください。「査定料3,000円」「手数料10%」など、査定額から費用を差し引く業者もあります。当サイトで紹介している4社は、いずれも査定を無料としています。
-            </p>
-          </div>
-          <div className="bg-white border border-warm-border rounded-xl p-6">
-            <div className="text-accent font-bold text-2xl mb-2">2</div>
-            <h3 className="font-bold text-base mb-2">買取価格の根拠を説明してくれるか</h3>
-            <p className="text-sm text-warm-gray leading-relaxed">
-              査定額の根拠を、純度・重量・当日の相場にもとづいて説明する業者を選ぶことをおすすめします。金額の根拠を示さずに即決を求める業者にはご注意ください。
-            </p>
-          </div>
-          <div className="bg-white border border-warm-border rounded-xl p-6">
-            <div className="text-accent font-bold text-2xl mb-2">3</div>
-            <h3 className="font-bold text-base mb-2">複数業者を比較しているか</h3>
-            <p className="text-sm text-warm-gray leading-relaxed">
-              1社の査定だけで売却を決めることはおすすめしません。同じ金製品でも、業者によって査定額が異なります。3社以上から見積もりを取ることをおすすめします。
-            </p>
+      <section className="bg-paper-2 border-y border-rule">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+            金買取業者の選び方 3つのポイント
+          </h2>
+          <p className="text-warm-gray text-sm text-center mb-10 max-w-2xl mx-auto">
+            買取業者を選ぶ際は、以下の3点をご確認いただくことをおすすめします。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-rule md:border-t-0">
+            <div className="py-6 md:py-2 md:pr-8 border-b md:border-b-0 border-rule">
+              <div className="font-display text-accent-dark text-3xl mb-3 num">1</div>
+              <h3 className="font-bold text-base mb-2">査定料・手数料が無料か</h3>
+              <p className="text-sm text-warm-gray leading-relaxed">
+                査定料・出張費・キャンセル料が無料かどうかをご確認ください。「査定料3,000円」「手数料10%」など、査定額から費用を差し引く業者もあります。当サイトで紹介している4社は、いずれも査定を無料としています。
+              </p>
+            </div>
+            <div className="py-6 md:py-2 md:px-8 border-b md:border-b-0 md:border-l border-rule">
+              <div className="font-display text-accent-dark text-3xl mb-3 num">2</div>
+              <h3 className="font-bold text-base mb-2">買取価格の根拠を説明してくれるか</h3>
+              <p className="text-sm text-warm-gray leading-relaxed">
+                査定額の根拠を、純度・重量・当日の相場にもとづいて説明する業者を選ぶことをおすすめします。金額の根拠を示さずに即決を求める業者にはご注意ください。
+              </p>
+            </div>
+            <div className="py-6 md:py-2 md:pl-8 md:border-l border-rule">
+              <div className="font-display text-accent-dark text-3xl mb-3 num">3</div>
+              <h3 className="font-bold text-base mb-2">複数業者を比較しているか</h3>
+              <p className="text-sm text-warm-gray leading-relaxed">
+                1社の査定だけで売却を決めることはおすすめしません。同じ金製品でも、業者によって査定額が異なります。3社以上から見積もりを取ることをおすすめします。
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 品目別リンク */}
-      <section className="bg-cream py-14">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-            品目から探す
-          </h2>
-          <p className="text-warm-gray text-sm text-center mb-8">
-            お持ちの金製品に合った買取情報をご覧ください
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
-            {[
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+        <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+          品目から探す
+        </h2>
+        <p className="text-warm-gray text-sm text-center mb-10">
+          お持ちの金製品に合った買取情報をご覧ください
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 border-l border-t border-rule">
+          {[
               { label: "K24（純金）", href: "/articles/k24-kaitori/" },
               { label: "K18（18金）", href: "/articles/kinseido-kaitori-guide/" },
               { label: "K14（14金）", href: "/articles/kin-kaitori-souba/#k14" },
@@ -794,121 +794,120 @@ export default function Home() {
               { label: "確定申告のやり方", href: "/articles/kin-kakutei-shinkoku/" },
               { label: "遺品整理の金買取", href: "/articles/ihin-seiri-kin/" },
               { label: "よくある質問", href: "/faq/" },
-            ].map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="bg-white rounded-lg border border-warm-border p-3 text-center text-sm font-medium hover:border-accent/50 hover:shadow-sm transition-all"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+          ].map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="bg-card border-r border-b border-rule px-2 py-3.5 text-center text-[0.8rem] md:text-sm hover:bg-paper hover:text-accent-dark transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </section>
 
       {/* 税金・確定申告の注意点 */}
-      <section className="max-w-5xl mx-auto px-4 py-14">
-        <h2 className="font-display text-xl md:text-2xl font-bold mb-3 text-center">
-          金の売却にかかる税金・確定申告について
-        </h2>
-        <p className="text-warm-gray text-sm text-center mb-8 max-w-2xl mx-auto">
-          金の売却益は「譲渡所得」として課税対象になる場合があります。主な制度は以下のとおりです。
-        </p>
-        <div className="bg-white border border-warm-border rounded-xl p-6 md:p-8 max-w-3xl mx-auto">
-          <div className="space-y-4 text-sm">
-            <div className="flex gap-3">
-              <span className="text-accent font-bold flex-shrink-0">1.</span>
-              <div>
-                <p className="font-bold mb-1">年間50万円の特別控除</p>
-                <p className="text-warm-gray">金の売却益が年間50万円以内であれば実質非課税です。生活用の金製品（ジュエリーなど）で1点30万円以下の売却は非課税になる場合もあります。</p>
+      <section className="bg-paper-2 border-y border-rule">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+            金の売却にかかる税金・確定申告について
+          </h2>
+          <p className="text-warm-gray text-sm text-center mb-10 max-w-2xl mx-auto">
+            金の売却益は「譲渡所得」として課税対象になる場合があります。主な制度は以下のとおりです。
+          </p>
+          <div className="border border-rule bg-card p-6 md:p-8 max-w-3xl mx-auto">
+            <div className="text-sm divide-y divide-rule">
+              <div className="flex gap-4 pb-5">
+                <span className="font-display text-accent-dark text-lg leading-none flex-shrink-0 num">1.</span>
+                <div>
+                  <p className="font-bold mb-1">年間50万円の特別控除</p>
+                  <p className="text-warm-gray leading-relaxed">金の売却益が年間50万円以内であれば実質非課税です。生活用の金製品（ジュエリーなど）で1点30万円以下の売却は非課税になる場合もあります。</p>
+                </div>
+              </div>
+              <div className="flex gap-4 py-5">
+                <span className="font-display text-accent-dark text-lg leading-none flex-shrink-0 num">2.</span>
+                <div>
+                  <p className="font-bold mb-1">5年超保有で税額が半分に</p>
+                  <p className="text-warm-gray leading-relaxed">保有期間5年超の金は「長期譲渡所得」となり、課税対象額が1/2に軽減されます。売却を急がない場合は、保有期間が5年を超えてから売却する方法もあります。</p>
+                </div>
+              </div>
+              <div className="flex gap-4 pt-5">
+                <span className="font-display text-accent-dark text-lg leading-none flex-shrink-0 num">3.</span>
+                <div>
+                  <p className="font-bold mb-1">200万円超の取引は支払調書が発行される</p>
+                  <p className="text-warm-gray leading-relaxed">1回の取引で200万円を超える金地金・金貨の売却は、業者が税務署に支払調書を提出する義務があります。マイナンバーの提示も必要です。</p>
+                </div>
               </div>
             </div>
-            <div className="flex gap-3">
-              <span className="text-accent font-bold flex-shrink-0">2.</span>
-              <div>
-                <p className="font-bold mb-1">5年超保有で税額が半分に</p>
-                <p className="text-warm-gray">保有期間5年超の金は「長期譲渡所得」となり、課税対象額が1/2に軽減されます。売却を急がない場合は、保有期間が5年を超えてから売却する方法もあります。</p>
-              </div>
+            <div className="mt-6 pt-4 border-t border-rule">
+              <p className="text-xs text-warm-gray leading-relaxed">
+                ※詳しい税金の計算方法や節税対策は <Link href="/articles/kin-kaitori-zeikin/" className="text-accent-dark underline underline-offset-2">金買取の税金・確定申告ガイド</Link> で解説しています。個別のご判断にあたっては、税理士または税務署にご相談ください。
+              </p>
             </div>
-            <div className="flex gap-3">
-              <span className="text-accent font-bold flex-shrink-0">3.</span>
-              <div>
-                <p className="font-bold mb-1">200万円超の取引は支払調書が発行される</p>
-                <p className="text-warm-gray">1回の取引で200万円を超える金地金・金貨の売却は、業者が税務署に支払調書を提出する義務があります。マイナンバーの提示も必要です。</p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-6 pt-4 border-t border-warm-border">
-            <p className="text-xs text-warm-gray">
-              ※詳しい税金の計算方法や節税対策は <Link href="/articles/kin-kaitori-zeikin/" className="text-accent hover:underline">金買取の税金・確定申告ガイド</Link> で解説しています。個別のご判断にあたっては、税理士または税務署にご相談ください。
-            </p>
           </div>
         </div>
       </section>
 
       {/* 記事一覧 */}
-      <section className="bg-cream py-14">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="font-display text-xl md:text-2xl font-bold mb-8 text-center">
-            人気の記事
-          </h2>
-          <div className="space-y-5">
-            {articles.map((article) => (
-              <Link
-                key={article.href}
-                href={article.href}
-                className="block bg-white border border-warm-border rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group p-6"
-              >
-                <span className="inline-block bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full mb-3">
-                  {article.tag}
-                </span>
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors leading-snug">
-                  {article.title}
-                </h3>
-                <p className="text-warm-gray text-sm leading-relaxed mb-3">
-                  {article.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {article.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-cream text-warm-gray text-xs px-3 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
-            ))}
-          </div>
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+        <h2 className="rule-mark font-display text-xl md:text-2xl mb-10 text-center">
+          人気の記事
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 border-t border-rule">
+          {articles.map((article) => (
+            <Link
+              key={article.href}
+              href={article.href}
+              className="group block py-5 border-b border-rule"
+            >
+              <span className="inline-block text-[0.7rem] tracking-[0.12em] text-accent-dark mb-1.5">
+                {article.tag}
+              </span>
+              <h3 className="text-[0.95rem] font-bold text-foreground mb-1.5 group-hover:text-accent-dark transition-colors leading-snug">
+                {article.title}
+              </h3>
+              <p className="text-warm-gray text-xs leading-relaxed mb-2">
+                {article.description}
+              </p>
+              <div className="flex flex-wrap gap-x-3 gap-y-1">
+                {article.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-warm-gray text-[0.7rem]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-gold-bg py-14">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-display text-xl md:text-2xl font-bold mb-8 text-center">
+      <section className="bg-paper-2 border-y border-rule">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-20">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-10 text-center">
             よくある質問
           </h2>
-          <div className="space-y-3">
+          <div className="border-t border-rule">
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="bg-white border border-warm-border rounded-xl overflow-hidden group"
+                className="border-b border-rule group"
               >
-                <summary className="flex items-center justify-between p-5 font-medium text-sm">
+                <summary className="flex items-center justify-between py-5 font-medium text-sm">
                   <span>{faq.q}</span>
                   <svg
-                    className="w-5 h-5 text-warm-gray flex-shrink-0 ml-4 faq-arrow"
+                    className="w-4 h-4 text-accent flex-shrink-0 ml-4 faq-arrow"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="square" strokeWidth={1.2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="px-5 pb-5 text-sm text-warm-gray leading-relaxed">
+                <div className="pb-5 text-sm text-warm-gray leading-relaxed">
                   {faq.a}
                 </div>
               </details>
@@ -918,9 +917,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-b from-cream to-background py-16">
+      <section className="py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-display text-xl md:text-2xl font-bold mb-4">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-4">
             無料査定のご案内
           </h2>
           <p className="text-warm-gray mb-8 text-sm md:text-base leading-relaxed">
@@ -928,23 +927,20 @@ export default function Home() {
             <br className="md:hidden" />
             複数社の査定額を比較したうえでの売却をおすすめします。
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto">
             <a
               href="https://hikakaku.com"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent-light text-navy font-bold px-7 py-3.5 rounded-full hover:from-accent-light hover:to-accent transition-all shadow-lg hover:shadow-accent/30"
+              className="btn-line btn-line--solid"
             >
               一括査定で最高値を調べる
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
             </a>
             <a
               href="https://uriel-cuore.co.jp"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center justify-center gap-2 bg-navy text-white font-medium px-7 py-3.5 rounded-full hover:bg-navy-light transition-colors shadow-md hover:shadow-lg"
+              className="btn-line"
             >
               出張買取を申し込む
             </a>

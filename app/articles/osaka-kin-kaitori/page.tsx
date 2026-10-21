@@ -6,6 +6,7 @@ import { NearbyAreas } from "@/components/NearbyAreas";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCapture from "@/components/ServiceCapture";
 /* live-price-consts */
 const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
@@ -269,6 +270,8 @@ export default function OsakaKinKaitoriPage() {
 
         <h3>ヒカカク！ — 大阪の業者を一括比較</h3>
 
+        <ServiceCapture id="hikakaku" />
+
         <p>ヒカカク！は複数の買取業者に一括で査定依頼ができるサービスです。大阪は登録業者数が東京に次いで多く、<strong>比較による価格アップ効果が大きい</strong>エリアです。</p>
 
         <ul>
@@ -278,6 +281,8 @@ export default function OsakaKinKaitoriPage() {
         </ul>
 
         <h3>買取大吉 — 大阪に多数店舗展開</h3>
+
+        <ServiceCapture id="daikichi" />
 
         <p>買取大吉は全国2,400店舗以上を展開する大手チェーンで、大阪には<strong>梅田・難波・天王寺・堺</strong>など府内各所に店舗があります。</p>
 
@@ -289,6 +294,8 @@ export default function OsakaKinKaitoriPage() {
 
         <h3>ウリエル — 大阪府への出張買取に対応</h3>
 
+        <ServiceCapture id="uriel" />
+
         <p>ウリエルは出張買取が中心の買取専門店（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）で、公式の出張買取対応エリアに<strong>大阪府</strong>が含まれています（一部対応できない市町村あり・公式表記、2026年10月11日確認）。</p>
 
         <ul>
@@ -298,6 +305,8 @@ export default function OsakaKinKaitoriPage() {
         </ul>
 
         <h3>ティファナ — 大阪からは宅配買取で利用</h3>
+
+        <ServiceCapture id="tifana" />
 
         <p>ティファナは店頭・出張・宅配の3つの方法に対応していますが、店舗は東京都・埼玉県のみで、出張エリアも東京・埼玉・神奈川・千葉の一部地域です（公式表記）。大阪からは、全国対応・送料無料の宅配買取で利用できます。</p>
 

@@ -9,6 +9,7 @@ import { LocalStores } from "@/components/LocalStores";
 import { GoldPriceTrend } from "@/components/GoldPriceTrend";
 import { ExpertQA } from "@/components/ExpertQA";
 import Image from "next/image";
+import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
 function BreadcrumbSchema() {
   const d = {
@@ -163,6 +164,7 @@ export default function MatsudoKinKaitoriPage() {
           <li><strong>ウリエル</strong>：出張買取が中心（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）。出張費・査定料すべて無料</li>
           <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応</li>
         </ul>
+        <ServiceCaptureGrid />
 
         <CtaBox />
 

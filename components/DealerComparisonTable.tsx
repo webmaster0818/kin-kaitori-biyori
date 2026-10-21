@@ -9,6 +9,20 @@ type Props = {
   intro?: string;
 };
 
+/*
+  2026-10-21 MediaXAI「比較表が縦に長い」（223ページで使用・旧版は PC 1,839px／スマホ 3,291px）
+  - PC・スマホとも同じ1枚の横スクロール表。1列目（業者名）は固定（sticky）。
+  - 各セルは列幅を広めに取り、折り返しを2〜4行に収める。公式サイトへのボタンは固定列（業者名の下）に置き、横に送っても常に押せるようにした。長い「特徴・強み」は表の下の <details> にまとめた。
+  - 掲載する事実・リンク先（公式 url／出典 source）は旧版と同一。文言は削っていない。
+*/
+const COLS: { key: keyof Dealer; label: string; width: string }[] = [
+  { key: "shops", label: "店舗数", width: "13em" },
+  { key: "visitArea", label: "出張エリア", width: "17em" },
+  { key: "speed", label: "査定スピード", width: "16em" },
+  { key: "fees", label: "送料・手数料", width: "20.5em" },
+  { key: "expertise", label: "専門性", width: "12.5em" },
+];
+
 export default function DealerComparisonTable({
   dealerIds,
   heading = "金買取業者7社の比較",
@@ -19,88 +33,63 @@ export default function DealerComparisonTable({
   if (dealers.length === 0) return null;
 
   return (
-    <section className="my-10 not-prose">
+    <section className="dealer-cmp my-10 not-prose">
       <h2 className="text-xl md:text-2xl font-bold mb-3 text-foreground">
         {heading}
       </h2>
-      <p className="text-sm text-warm-gray mb-5 leading-relaxed">{intro}</p>
+      <p className="text-sm text-warm-gray mb-4 leading-relaxed">{intro}</p>
 
-      {/* デスクトップ：横スクロールテーブル */}
-      <div className="hidden md:block table-wrapper overflow-x-auto border border-warm-border rounded-xl bg-white">
-        <table className="w-full text-sm">
+      <div className="dealer-cmp__scroll overflow-x-auto border border-rule bg-card" tabIndex={0} aria-label={heading}>
+        <table className="dealer-cmp__table text-[12px] leading-[1.55]">
           <thead>
-            <tr className="bg-navy text-accent">
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">業者名</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">店舗数</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">出張エリア</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">査定スピード</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">送料・手数料</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">専門性</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">特徴・強み</th>
-              <th className="px-4 py-3 text-left font-bold whitespace-nowrap">公式</th>
+            <tr>
+              <th scope="col" className="dealer-cmp__name">業者名</th>
+              {COLS.map((c) => (
+                <th key={c.key} scope="col" style={{ minWidth: c.width, width: c.width }}>
+                  {c.label}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {dealers.map((d) => (
-              <tr key={d.id} className="border-t border-warm-border hover:bg-gold-bg/40">
-                <td className="px-4 py-3 font-bold text-foreground">{d.name}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.shops}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.visitArea}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.speed}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.fees}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.expertise}</td>
-                <td className="px-4 py-3 text-warm-gray">{d.strengths}</td>
-                <td className="px-4 py-3">
+              <tr key={d.id}>
+                <td className="dealer-cmp__name">
+                  <h3>{d.name}</h3>
                   <a
                     href={d.url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-block bg-accent text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-accent-dark transition-colors whitespace-nowrap"
+                    className="dealer-cmp__btn"
                   >
                     公式サイト
                   </a>
                 </td>
+                {COLS.map((c) => (
+                  <td key={c.key}>{d[c.key]}</td>
+                ))}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      {/* モバイル：カード型 */}
-      <div className="md:hidden space-y-4">
-        {dealers.map((d) => (
-          <div
-            key={d.id}
-            className="bg-white border border-warm-border rounded-xl p-4 shadow-sm"
-          >
-            <div className="flex items-start justify-between gap-3 mb-3">
-              <h3 className="font-bold text-base text-foreground">{d.name}</h3>
-              <a
-                href={d.url}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-block bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-accent-dark transition-colors whitespace-nowrap"
-              >
-                公式
-              </a>
-            </div>
-            <dl className="grid grid-cols-[6.5rem_1fr] gap-y-2 gap-x-3 text-xs leading-relaxed">
-              <dt className="text-accent-dark font-bold">店舗数</dt>
-              <dd className="text-warm-gray">{d.shops}</dd>
-              <dt className="text-accent-dark font-bold">出張エリア</dt>
-              <dd className="text-warm-gray">{d.visitArea}</dd>
-              <dt className="text-accent-dark font-bold">査定スピード</dt>
-              <dd className="text-warm-gray">{d.speed}</dd>
-              <dt className="text-accent-dark font-bold">手数料</dt>
-              <dd className="text-warm-gray">{d.fees}</dd>
-              <dt className="text-accent-dark font-bold">専門性</dt>
-              <dd className="text-warm-gray">{d.expertise}</dd>
-              <dt className="text-accent-dark font-bold">強み</dt>
+      <details className="dealer-cmp__more border border-t-0 border-rule bg-card">
+        <summary className="flex items-center justify-between px-4 py-2.5 text-[13px] font-bold text-foreground">
+          <span>特徴・強み</span>
+          <svg className="w-3.5 h-3.5 text-accent faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="square" strokeWidth={1.4} d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <dl className="px-4 pb-3 text-[12.5px] leading-relaxed">
+          {dealers.map((d) => (
+            <div key={d.id} className="grid grid-cols-[8.5em_1fr] gap-x-3 py-2 border-t border-rule">
+              <dt className="font-bold text-foreground">{d.name}</dt>
               <dd className="text-warm-gray">{d.strengths}</dd>
-            </dl>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </dl>
+      </details>
 
       <p className="text-[11px] text-warm-gray mt-3 leading-relaxed">
         ※ 上記情報は各業者の公式サイトに記載の内容を 2026年10月19日に確認したものです。最新情報は、各社の公式サイト（
@@ -110,7 +99,7 @@ export default function DealerComparisonTable({
               href={d.source}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              className="text-accent-dark hover:underline"
             >
               {d.name}
             </a>
