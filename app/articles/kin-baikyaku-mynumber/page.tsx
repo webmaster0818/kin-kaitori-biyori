@@ -57,7 +57,7 @@ function CtaBox() {
 
 export default function KinBaikyakuMynumberPage() {
   return (<><FaqSchema /><BreadcrumbSchema /><ArticleSchema />
-    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
+    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16" style={{ ["--subhero" as string]: "url(/images/subhero/topic-mynumber.webp)", ["--subhero-m" as string]: "url(/images/subhero/topic-mynumber-m.webp)" }}>
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">金売却とマイナンバー</span></li></ol></nav>
       <div className="article-hero mb-8">
         <Image src="/images/article-hero-howto.png" alt="金売却とマイナンバーの解説イメージ" width={1200} height={400} className="w-full h-[200px] object-cover rounded-xl" priority />

@@ -109,7 +109,7 @@ export default function Page() {
   return (
     <>
       <Schemas />
-      <div className="max-w-3xl mx-auto px-4 py-10">
+      <div className="max-w-3xl mx-auto px-4 py-10" style={{ ["--subhero" as string]: "url(/images/subhero/region-aichi-b.webp)", ["--subhero-m" as string]: "url(/images/subhero/region-aichi-b-m.webp)" }}>
         <nav className="text-xs text-warm-gray mb-4">
           <Link href="/">ホーム</Link> ／ <Link href="/articles/">記事一覧</Link> ／ 久屋大通駅の金買取
         </nav>

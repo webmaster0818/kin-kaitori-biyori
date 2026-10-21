@@ -101,7 +101,7 @@ export default function Page() {
   return (
     <>
       <Schemas />
-      <div className="max-w-3xl mx-auto px-4 py-10">
+      <div className="max-w-3xl mx-auto px-4 py-10" style={{ ["--subhero" as string]: "url(/images/subhero/region-aichi-a.webp)", ["--subhero-m" as string]: "url(/images/subhero/region-aichi-a-m.webp)" }}>
         <nav className="text-xs text-warm-gray mb-4">
           <Link href="/">ホーム</Link> ／ <Link href="/articles/">記事一覧</Link> ／ 栄生駅の金買取
         </nav>

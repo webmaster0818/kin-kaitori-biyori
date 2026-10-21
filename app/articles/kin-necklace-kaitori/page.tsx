@@ -95,7 +95,7 @@ export default function KinNecklaceKaitoriPage() {
       <FaqSchema />
       <BreadcrumbSchema />
       <ArticleSchema />
-    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
+    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16" style={{ ["--subhero" as string]: "url(/images/subhero/topic-necklace.webp)", ["--subhero-m" as string]: "url(/images/subhero/topic-necklace-m.webp)" }}>
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
         <ol className="flex items-center gap-1">
           <li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li>

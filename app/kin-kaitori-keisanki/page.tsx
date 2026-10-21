@@ -86,7 +86,7 @@ export default function KeisankiPage() {
   return (
     <>
       <Schemas />
-      <main className="max-w-4xl mx-auto px-4 py-10 md:py-14">
+      <main className="max-w-4xl mx-auto px-4 py-10 md:py-14" style={{ ["--subhero" as string]: "url(/images/subhero/topic-gram-keisan.webp)", ["--subhero-m" as string]: "url(/images/subhero/topic-gram-keisan-m.webp)" }}>
         {/* Breadcrumb */}
         <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6">
           <ol className="flex items-center gap-1">

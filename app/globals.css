@@ -311,6 +311,115 @@ a.block.bg-accent.text-white {
   letter-spacing: 0.03em;
 }
 
+/* ===== 配下ページのテーマ画像（2026-10-21 MediaXAI 承認・Nano Banana Pro）=====
+   コンテナ（帯を含む max-w の div / main）に style="--subhero:url(…);--subhero-m:url(…)" があるページだけ、帯に写真を敷く
+   （付けるのは scripts/add-subhero-images-202610.py。画像は scripts/gen-subhero-images-202610.py）。
+   - 帯は「nav・h1・最終更新 p」の3要素が別々に塗っている（上の box-shadow＋clip-path）。写真を3要素にまたがって
+     文字の下に敷くため、写真のあるページだけ 帯の塗り を1枚の層（コンテナの ::before）に移し、写真は ::after。
+     層の上端＝パンくず nav の上端、下端＝帯の最後の要素の下端を CSS アンカー位置指定で合わせる（帯の高さは題名の行数で変わる）。
+   - アンカー位置指定に対応しないブラウザは @supports で外れ、従来の写真なしの帯のまま（崩れない）。
+   - PC: 写真は右側。左（文字側）へ帯の色に溶かす。題名は写真に被りすぎないよう幅を抑える。
+   - スマホ: パンくずと題名の間に写真の面（-m＝右側を切り出した版）。 */
+@supports (anchor-name: --a) and (top: anchor(--a top)) {
+  :is(div, main)[class*="max-w-"][style*="--subhero"]:has(> nav:first-child + :is(.article-hero, article, h1, header)) {
+    position: relative;
+  }
+  /* 白書・計算機はコンテナ自体が main で、上の main { overflow-x: clip } が全幅の層を切ってしまう
+     （横スクロール防止はレイアウト側の外側の main が引き続き担う） */
+  main[class*="max-w-"][style*="--subhero"] {
+    overflow-x: visible;
+  }
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child {
+    anchor-name: --sh-top;
+  }
+  /* 帯の最後の要素（最終更新 p があれば p、無ければ h1／header） */
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child + p.text-warm-gray,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child + p.text-warm-gray,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1 + p.text-warm-gray,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child:not(:has(+ p.text-warm-gray)),
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child:not(:has(+ p.text-warm-gray)),
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1:not(:has(+ p.text-warm-gray)),
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + header {
+    anchor-name: --sh-end;
+  }
+  /* 帯の各要素は塗らずに文字だけ（層の上に出す） */
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + header,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child + p.text-warm-gray,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child + p.text-warm-gray,
+  :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1 + p.text-warm-gray {
+    position: relative;
+    z-index: 1;
+    background: none;
+    box-shadow: none;
+    clip-path: none;
+  }
+  /* 帯の塗り＋下の罫（全幅） */
+  :is(div, main)[style*="--subhero"]::before,
+  :is(div, main)[style*="--subhero"]::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: anchor(--sh-top top);
+    bottom: anchor(--sh-end bottom);
+    pointer-events: none;
+  }
+  :is(div, main)[style*="--subhero"]::before {
+    left: calc(50% - 50vw);
+    width: 100vw;
+    background: var(--band);
+    border-bottom: 1px solid var(--rule);
+  }
+  /* 写真（右側・文字側へ溶かす） */
+  :is(div, main)[style*="--subhero"]::after {
+    right: calc(50% - 50vw);
+    bottom: calc(anchor(--sh-end bottom) + 1px);
+    width: min(58vw, 900px);
+    background: var(--subhero) right 62% / cover no-repeat;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.3) 20%, rgb(0 0 0 / 0.78) 44%, #000 64%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 0.3) 20%, rgb(0 0 0 / 0.78) 44%, #000 64%);
+  }
+  /* 題名・最終更新が写真の被写体に重なりすぎないように（PC） */
+  @media (min-width: 768px) {
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + header > * {
+      max-width: min(100%, 34rem);
+    }
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child {
+      padding-right: 30%;
+    }
+  }
+  /* スマホ: パンくずの下に写真の面、その下に題名 */
+  @media (max-width: 767px) {
+    [style*="--subhero"] {
+      --sh-mh: min(56vw, 300px);
+    }
+    :is(div, main)[style*="--subhero"]::after {
+      top: anchor(--sh-top bottom);
+      bottom: auto;
+      right: auto;
+      left: calc(50% - 50vw);
+      width: 100vw;
+      height: var(--sh-mh);
+      background-image: var(--subhero-m, var(--subhero));
+      background-position: center 60%;
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+      mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+    }
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + .article-hero + article > h1:first-child::before,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + article > h1:first-child::before,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + h1::before,
+    :is(div, main)[class*="max-w-"][style*="--subhero"] > nav:first-child + header > h1:first-child::before {
+      margin-top: calc(var(--sh-mh) + 0.4rem);
+    }
+  }
+}
+
 /* ===== 記事本文（.prose）===== */
 .prose h1 {
   font-family: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;

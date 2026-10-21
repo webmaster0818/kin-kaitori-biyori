@@ -64,7 +64,7 @@ function CtaBox() {
 export default function ShinjuKaitoriPage() {
   return (<><FaqSchema />
       <BreadcrumbSchema /><ArticleSchema />
-    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16">
+    <div className="max-w-3xl mx-auto px-4 py-10 md:py-16" style={{ ["--subhero" as string]: "url(/images/subhero/topic-shinju.webp)", ["--subhero-m" as string]: "url(/images/subhero/topic-shinju-m.webp)" }}>
       <nav aria-label="パンくずリスト" className="text-xs text-warm-gray mb-6"><ol className="flex items-center gap-1"><li><Link href="/" className="hover:text-accent transition-colors">ホーム</Link></li><li className="breadcrumb-sep" /><li><span className="text-foreground">真珠（パール）買取ガイド</span></li></ol></nav>
 
       <div className="article-hero mb-8">
