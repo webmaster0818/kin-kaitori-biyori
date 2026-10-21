@@ -542,7 +542,7 @@ export default function Home() {
                 />
               </picture>
             </div>
-            <div className="relative -mt-10 ml-4 mr-10 sm:mr-auto sm:max-w-[17rem] md:absolute md:left-0 md:bottom-0 md:mt-0 md:ml-0 bg-card border border-rule px-5 py-4">
+            <div className="relative -mt-10 mx-auto w-[calc(100%-3rem)] max-w-[17rem] text-center md:text-left md:w-auto md:absolute md:left-0 md:bottom-0 md:mt-0 md:mx-0 bg-card border border-rule px-5 py-4">
               <p className="text-[0.7rem] text-warm-gray mb-1.5 tracking-[0.04em]">本日の金買取参考相場（K24/1g）</p>
               <p className="font-display text-[1.9rem] leading-none text-foreground num">
                 &#165;{LP_K24}<span className="text-xs text-warm-gray font-normal ml-1 font-sans">前後</span>
