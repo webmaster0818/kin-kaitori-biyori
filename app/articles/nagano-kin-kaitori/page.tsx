@@ -125,6 +125,9 @@ export default function NaganoKinKaitoriPage() {
         <h3>権堂</h3>
         <p>権堂方面でも買取に対応する店舗があります。ご自宅に近い店舗で査定を受けたい場合は、周辺エリアもあわせてご検討ください。</p>
 
+        <h3>東信エリア（上田市）</h3>
+        <p>上田市の店舗は、<Link href="/articles/ueda-kin-kaitori/">上田駅・八木沢駅・中塩田駅の金買取</Link>の記事にまとめています。上田駅から徒歩5〜10分の3店を含む市内7店を、各社の公式店舗ページで確認した住所・駅からの行き方・買取品目・駐車場・定休日で比較しています（2026年10月22日確認）。</p>
+
         <CtaBox />
 
         <h2>長野での金買取方法を比較</h2>
@@ -209,7 +212,7 @@ export default function NaganoKinKaitoriPage() {
         <GoldPriceTrend />
         <ExpertQA category="region" />
         <NearbyAreas pref="長野県" areas={[{ slug: "matsumoto-kin-kaitori", label: "松本" }, { slug: "ueda-kin-kaitori", label: "上田" }, { slug: "nagoya-kin-kaitori", label: "名古屋" }, { slug: "nagoya-sakae-kin-kaitori", label: "名古屋・栄" }, { slug: "toyota-kin-kaitori", label: "豊田" }, { slug: "gifu-kin-kaitori", label: "岐阜" }, { slug: "shizuoka-kin-kaitori", label: "静岡" }, { slug: "hamamatsu-kin-kaitori", label: "浜松" }]} />
-        <RelatedArticles currentSlug="nagano-kin-kaitori" relatedSlugs={["kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
+        <RelatedArticles currentSlug="nagano-kin-kaitori" relatedSlugs={["ueda-kin-kaitori", "matsumoto-kin-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable
           heading="長野の金買取で利用できる主要サービス比較"
