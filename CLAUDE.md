@@ -466,3 +466,7 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - ueda: わかば上田原店が公式で開けた → 品目・買取方法（店頭・出張・LINE査定）を埋め、確認日 10/23。nagoya: なんぼや サンロード／エスカを公式で再確認（値変化なし）→ 確認日 10/23
 - ⚠️おたからや店舗一覧は JS 描画 → `Google Chrome --headless=new --dump-dom` で取得。大吉の県別一覧は /list/<品目>/store/nagano-ken
 - precheck ✅（296頁）・ASP 0→0・外部href 6477→6499（出典リンク）。表示テキストが変わったのは4ページのみ。source 2eaff8c / deploy b05d13a5f。Indexing ueda/nagoya 2/2（nagano/matsumoto は noindex なので送らず）
+
+### 2026-10-23 長野・松本の noindex を解除（MediaXAI「うん、noindex外そう」）✅本番反映済み
+- 公式で確認した店舗（長野12・松本8）に書き直したため、`robots: { index: false }` を2ページから削除。gen-sitemap.py の noindex 自動除外が外れ、sitemap 106→108。
+- precheck ✅・ASP計測リンク 0→0・本番で noindex 0／sitemap 掲載を確認。Indexing 2/2・sitemap 再送信。source（noindex 解除＋sitemap）／deploy a66850f99。
