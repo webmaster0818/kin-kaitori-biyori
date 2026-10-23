@@ -10,6 +10,11 @@ const _LPP = goldData.purity_buyback_estimate_per_g as Record<string, number>;
 const _LPT = goldData.tanaka_official as Record<string, number>;
 const LP_DATE = `${Number(goldData.date.split("-")[1])}月${Number(goldData.date.split("-")[2])}日`;
 const LP_K24 = Math.round(_LPP.k24).toLocaleString();
+// 取得元（田中貴金属）が落ちていて日次ジョブが前日の値のままビルドした日（11:05前の手動ビルドも同じ）は「本日」と書かない。
+// 価格の日付（gold-spot-prices.json の date）とビルド日（JST）が違えば前日以前の値。
+const LP_BUILD_DATE = new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Tokyo" });
+const LP_STALE = goldData.date !== LP_BUILD_DATE;
+const LP_BUILD_LABEL = `${Number(LP_BUILD_DATE.split("-")[1])}月${Number(LP_BUILD_DATE.split("-")[2])}日`;
 
 // トップの自己参照canonical。layoutに置くと全ページへ継承されてトップに誤集約するため、ここに置く。
 export const metadata: Metadata = {
@@ -543,11 +548,11 @@ export default function Home() {
               </picture>
             </div>
             <div className="relative -mt-10 mx-auto w-[calc(100%-3rem)] max-w-[17rem] text-center md:text-left md:w-auto md:absolute md:left-0 md:bottom-0 md:mt-0 md:mx-0 bg-card border border-rule px-5 py-4">
-              <p className="text-[0.7rem] text-warm-gray mb-1.5 tracking-[0.04em]">本日の金買取参考相場（K24/1g）</p>
+              <p className="text-[0.7rem] text-warm-gray mb-1.5 tracking-[0.04em]">{LP_STALE ? `${LP_DATE}の金買取参考相場（K24/1g）` : "本日の金買取参考相場（K24/1g）"}</p>
               <p className="font-display text-[1.9rem] leading-none text-foreground num">
                 &#165;{LP_K24}<span className="text-xs text-warm-gray font-normal ml-1 font-sans">前後</span>
               </p>
-              <p className="text-[0.66rem] text-warm-gray mt-2 leading-relaxed">※{LP_DATE}時点の目安（毎朝自動更新）。実際の買取価格は業者・純度により異なります。</p>
+              <p className="text-[0.66rem] text-warm-gray mt-2 leading-relaxed">※{LP_DATE}時点の目安（毎朝自動更新）。{LP_STALE ? `田中貴金属の${LP_BUILD_LABEL}の公表値は未反映のため、${LP_DATE}の値を表示しています。` : ""}実際の買取価格は業者・純度により異なります。</p>
             </div>
           </div>
         </div>
@@ -589,7 +594,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <p className="text-xs text-warm-gray text-right mb-10">{goldTopMonth}月{goldTopDay}日更新・買取目安</p>
+        <p className="text-xs text-warm-gray text-right mb-10">{goldTopMonth}月{goldTopDay}日{LP_STALE ? `の値（${LP_BUILD_LABEL}の公表値は未反映）` : "更新"}・買取目安</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-rule">
           <Link href="/souba-dashboard/" className="group block py-6 sm:pr-6 border-b border-rule sm:border-b-0">
             <span className="font-display text-base group-hover:text-accent-dark transition-colors">本日の金買取相場</span>

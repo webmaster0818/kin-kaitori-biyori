@@ -37,7 +37,7 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】買取大吉 vs なんぼやの比較 — 金買取はどちらがお得？", datePublished: "2026-04-24", dateModified: "2026-04-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】買取大吉 vs なんぼやの比較 — 金買取はどちらがお得？", datePublished: "2026-04-24", dateModified: "2026-10-23", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -90,7 +90,7 @@ export default function DaikichiVsNanboyaPage() {
               <tr><td><strong>査定料</strong></td><td>無料</td><td>無料</td></tr>
               <tr><td><strong>キャンセル料</strong></td><td>無料</td><td>無料</td></tr>
               <tr><td><strong>現金化スピード</strong></td><td>即日（店頭）</td><td>即日（店頭）/最短当日査定＆振込（宅配・公式表記）</td></tr>
-              <tr><td><strong>事前査定</strong></td><td>LINE査定あり</td><td>LINE査定・ビデオ査定あり</td></tr>
+              <tr><td><strong>事前査定</strong></td><td>電話で無料査定（公式「最短1分」）・メールで相談</td><td>LINE査定・ビデオ査定あり</td></tr>
             </tbody>
           </table>
         </div>
@@ -117,12 +117,13 @@ export default function DaikichiVsNanboyaPage() {
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>対応</td><td>対応</td></tr>
               <tr><td><strong>出張買取</strong></td><td>対応（公式「日本全国OK」）</td><td>対応（公式「最短当日訪問」）</td></tr>
-              <tr><td><strong>宅配買取</strong></td><td>非対応（一部店舗のみ）</td><td>対応</td></tr>
-              <tr><td><strong>LINE査定</strong></td><td>対応</td><td>対応</td></tr>
+              <tr><td><strong>宅配買取</strong></td><td>非対応（公式の買取方法は店舗・出張・催事）</td><td>対応</td></tr>
+              <tr><td><strong>LINE査定</strong></td><td>公式に記載なし（事前の相談は電話・メール）</td><td>対応</td></tr>
               <tr><td><strong>ビデオ査定</strong></td><td>非対応</td><td>対応</td></tr>
             </tbody>
           </table>
         </div>
+        <p className="text-xs text-warm-gray">※買取大吉の買取方法・事前査定は、公式サイトの「店舗買取」「初めての方へ」「よくあるご質問」で2026年10月23日に確認しました。</p>
 
         <h2>比較3：金買取の実力</h2>
         <p>金の買取価格は両社とも国際相場に連動した水準です。<strong>どちらが高いかはその日の価格設定による</strong>ため、一概には言えません。</p>
