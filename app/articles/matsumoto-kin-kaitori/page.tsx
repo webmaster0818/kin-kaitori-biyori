@@ -59,7 +59,6 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "松本の金買取｜松本駅お城口から徒歩7分の店と市内8店を公式情報で比較【2026年10月】",
   description: "松本駅お城口から徒歩7分のおたからや 伊勢町通り店、21時まで開くジュエルカフェ イオンモール松本店、駐車場のある買取大吉3店など松本市内8店の住所・営業時間・定休日・駐車場を公式店舗ページで比較（2026年10月23日確認）。今日の金相場も。",
-  robots: { index: false, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/matsumoto-kin-kaitori/" },
 };
 

@@ -59,7 +59,6 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 export const metadata: Metadata = {
   title: "長野駅の金買取｜善光寺口から徒歩1〜2分の3店と長野市内12店を公式情報で比較【2026年10月】",
   description: "長野駅の善光寺口から徒歩0〜2分のなんぼや・おたからや・さすがや、善光寺下駅のおたからや、車で行ける買取大吉など長野市内12店の住所・営業時間・定休日・駐車場を公式店舗ページで比較（2026年10月23日確認）。今日の金相場も。",
-  robots: { index: false, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/nagano-kin-kaitori/" },
 };
 
