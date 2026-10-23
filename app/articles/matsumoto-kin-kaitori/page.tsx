@@ -27,10 +27,10 @@ function ArticleSchema() {
   const d = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "【2026年最新】松本の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
-    description: "松本で金を高く売るならどこ？松本の金買取相場、店頭・出張・宅配の方法別比較、長野県で高く売るポイントと注意点を公開情報をもとに解説します。",
+    headline: "松本の金買取｜松本駅お城口から徒歩7分の店と市内8店を公式情報で比較【2026年10月】",
+    description: "松本駅お城口から徒歩7分のおたからや 伊勢町通り店、21時まで開くジュエルカフェ イオンモール松本店、駐車場のある買取大吉3店など松本市内8店の住所・営業時間・定休日・駐車場を公式店舗ページで比較（2026年10月23日確認）。今日の金相場も。",
     datePublished: "2026-06-05",
-    dateModified: "2026-06-05",
+    dateModified: "2026-10-23",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -43,8 +43,9 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "松本で金買取の価格が高い業者の選び方は？", acceptedAnswer: { "@type": "Answer", text: "松本では複数の買取業者を比較することが重要です。同じ純度・重量でも、業者によって1gあたりの査定額が異なる場合があります。ヒカカク！の一括査定などで複数社から見積もりを取り、査定額を比較したうえで業者を選ぶことをおすすめします。" } },
-      { "@type": "Question", name: "松本で金を即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であれば査定後その場で現金を受け取れます。買取大吉などの大手チェーンは予約不要で対応しており、松本駅周辺の店舗で即日現金化が可能です。" } },
-      { "@type": "Question", name: "松本で出張買取は利用できますか？", acceptedAnswer: { "@type": "Answer", text: "長野県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）をご検討ください。" } },
+      { "@type": "Question", name: "松本駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "JR松本駅 お城口から徒歩7分（伊勢町通り沿い・伊勢町交差点からすぐ）に、おたからや 伊勢町通り店（松本市中央1-20-30 井垣ビル1F-B・10:00〜19:00・不定休）があります。中央4丁目のジュエルカフェ イオンモール松本店（イオンモール松本1F）は10:00〜21:00・定休日なしです（駅からの徒歩分は店舗ページに記載なし）。JR村井駅 北口から徒歩6分にはおたからや イオンタウン松本村井店があります（各社公式・2026年10月23日確認）。" } },
+      { "@type": "Question", name: "松本で金を即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "店頭買取であれば、査定に納得すればその場で現金を受け取れます。松本駅からはお城口から徒歩7分のおたからや 伊勢町通り店（10:00〜19:00・不定休）が歩いて行ける店です。買取大吉は松本元町店・松本店・ネオパーク松本店の3店があり、公式で「予約不要」と案内しています（2026年10月23日確認）。" } },
+      { "@type": "Question", name: "松本で出張買取は利用できますか？", acceptedAnswer: { "@type": "Answer", text: "長野県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。買取大吉は松本市内の店舗の公式ページで出張買取を「出張費無料・日本全国OK」と案内しています（2026年10月23日確認）。宅配買取ならティファナが全国対応・送料無料（公式表記）です。" } },
       { "@type": "Question", name: "松本の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法で買取時の身分証提示が義務付けられています。保証書や箱などの付属品があれば、査定額が上がる場合があります。" } },
       { "@type": "Question", name: "松本と都心部で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "純度・重量が同じなら金の地金価値は全国共通ですが、業者の経費や競争状況により提示額に差が出ます。一括査定や宅配買取を利用すれば、地域を問わず複数の業者の査定額を比較できます。" } }
     ],
@@ -56,8 +57,8 @@ const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
-  title: "【2026年最新】松本の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
-  description: "松本で金を高く売るならどこ？松本の金買取相場、店頭・出張・宅配の方法別比較、長野県で高く売るポイントと注意点を公開情報をもとに解説します。",
+  title: "松本の金買取｜松本駅お城口から徒歩7分の店と市内8店を公式情報で比較【2026年10月】",
+  description: "松本駅お城口から徒歩7分のおたからや 伊勢町通り店、21時まで開くジュエルカフェ イオンモール松本店、駐車場のある買取大吉3店など松本市内8店の住所・営業時間・定休日・駐車場を公式店舗ページで比較（2026年10月23日確認）。今日の金相場も。",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/matsumoto-kin-kaitori/" },
 };
@@ -99,13 +100,14 @@ export default function MatsumotoKinKaitoriPage() {
       </div>
 
       <article className="prose">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">【2026年最新】松本の金買取おすすめ業者ガイド</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">松本の金買取｜松本駅お城口から徒歩7分の店と市内8店を公式情報で比較【2026年10月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
-        <p>松本市は国宝・松本城を擁する中信地方の中核都市です。駅周辺と城下の商業エリアに買取店が点在し、観光客・住民の売却に対応します。</p>
+        <p>松本駅から歩いて行ける金買取店は、公式表記で<strong>お城口から徒歩7分のおたからや 伊勢町通り店</strong>です。ほかに中央4丁目のジュエルカフェ イオンモール松本店、元町・高宮北・出川の買取大吉3店、村井町南のおたからや・さすがやなど、駐車場のある店が市内にあります（<a href="#stations" className="text-accent-dark underline">駅から探す</a>／<a href="#compare" className="text-accent-dark underline">8店の比較</a>）。</p>
 
         <p>「松本で金を売るならどこがいい？」「相場はいくら？」——この記事では、松本での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を、公開情報にもとづいてまとめました。</p>
         <ul>
+          <li>松本駅・村井駅から歩いて行ける2店と、市内8店の比較（2026年10月23日に公式で確認）</li>
           <li>松本の金買取相場（{priceDateJa}時点の目安）</li>
           <li>店頭・出張・宅配・一括査定の方法別比較</li>
           <li>松本で金を高く売るためのポイント</li>
@@ -117,13 +119,45 @@ export default function MatsumotoKinKaitoriPage() {
         <PurityPriceTable />
         <p>金相場は歴史的な高値圏で推移しています。松本でも、まとまった量や高純度の金製品は高額査定が期待できます。最新の相場は<Link href="/articles/kin-kaitori-souba/">金買取相場一覧</Link>で確認できます。</p>
 
-        <h2>松本の主な金買取エリア</h2>
-        <h3>松本駅周辺</h3>
-        <p><strong>松本駅周辺</strong>は松本の中心的な買取スポットです。大手買取チェーンや貴金属店が集まり、アクセスも良いエリアです。</p>
-        <h3>松本城周辺</h3>
-        <p>松本城周辺にも買取店が点在します。松本駅周辺とあわせて、比較先として見積もりを取ることも可能です。</p>
-        <h3>浅間温泉方面</h3>
-        <p>浅間温泉方面でも買取に対応する店舗があります。ご自宅に近い店舗で査定を受けたい場合は、周辺エリアもあわせてご検討ください。</p>
+        <h2 id="stations">松本駅・村井駅から歩いて行ける金買取店</h2>
+        <p>松本市内で金・貴金属の買取に対応している実在店舗のうち、<strong>駅からの徒歩分を公式の店舗ページに載せている店</strong>は、松本駅お城口のおたからや 伊勢町通り店と、JR村井駅北口のおたからや イオンタウン松本村井店の2店です。住所・アクセス・営業時間は各社の公式店舗ページの表記どおりです（<strong>2026年10月23日確認</strong>）。来店前に公式ページで最新の営業日をご確認ください。</p>
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>店舗（住所）</th><th>駅からのアクセス（公式表記）</th><th>営業時間・定休日</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>おたからや 伊勢町通り店</strong>（松本市中央1-20-30 井垣ビル1F-B）</td><td>JR松本駅 お城口から徒歩7分（伊勢町通り沿い、伊勢町交差点からすぐ）</td><td>10:00〜19:00／不定休</td></tr>
+              <tr><td><strong>おたからや イオンタウン松本村井店</strong>（松本市村井町南2丁目21-45 イオンタウン松本村井2階）</td><td>JR村井駅 北口より徒歩6分（八十二銀行向い・国道19号村井交差点すぐ）</td><td>10:00〜19:00／年中無休（年末年始は除く）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>松本駅から歩いて行くなら</h3>
+        <p>松本駅お城口から徒歩7分のおたからや 伊勢町通り店は、車の場合は近くのコインパーキングを使うよう案内しています。買取品目は貴金属のほか、ブランドバッグ・小物、ブランド腕時計、切手・テレカ、古銭・古紙幣、カメラ、美術品、香木です。松本市・塩尻市・安曇野市へは出張費無料で出張買取にも対応しています（公式サイトの表記）。</p>
+        <p>松本駅周辺ではほかに、<strong>ジュエルカフェ イオンモール松本店</strong>（松本市中央4-9-51 イオンモール松本1F・10:00〜21:00・定休日なし）があります。駅からの徒歩分は店舗ページに記載がないため載せていません。買取品目は金プラチナ・ダイヤモンド・宝石・ブランドバッグ・ブランド腕時計・金券・切手などで、21時まで開いているのは下の表の8店のうちこの店だけです。</p>
+
+        <h2 id="compare">松本市内の金買取店8店を比較：場所・営業時間・定休日・駐車場</h2>
+        <p>駅から歩ける2店に加えて、車で行ける店を並べました。いずれも公式の店舗ページの表記です（2026年10月23日確認）。</p>
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>店舗（住所）</th><th>場所の目印（公式表記）</th><th>営業時間・定休日</th><th>駐車場</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>おたからや 伊勢町通り店</strong>（中央1-20-30）</td><td>JR松本駅 お城口から徒歩7分</td><td>10:00〜19:00／不定休</td><td>近くのコインパーキング</td></tr>
+              <tr><td><strong>ジュエルカフェ イオンモール松本店</strong>（中央4-9-51 イオンモール松本1F）</td><td>イオンモール松本の1階</td><td>10:00〜21:00／定休日なし</td><td>イオンモール松本の近隣駐車場の案内あり</td></tr>
+              <tr><td><strong>買取大吉 松本元町店</strong>（元町3-3-8）</td><td>信州大学医学部附属病院より徒歩6分</td><td>10:00〜19:00／水曜定休</td><td>専用駐車場</td></tr>
+              <tr><td><strong>買取大吉 松本店</strong>（高宮北1-7 塩ノ崎ビル1階）</td><td>国道19号線沿い、松本日産から北に100m・ニトリ松本高宮店の斜向かい</td><td>10:00〜19:00／年中無休（年末年始除く）</td><td>店舗前</td></tr>
+              <tr><td><strong>買取大吉 ネオパーク松本店</strong>（出川2丁目3番1号）</td><td>ネオパーク松本の入口からすぐ</td><td>10:00〜19:00／年中無休（臨時休業を除く）</td><td>ネオパーク松本の駐車場</td></tr>
+              <tr><td><strong>おたからや イオンタウン松本村井店</strong>（村井町南2丁目21-45 イオンタウン松本村井2階）</td><td>JR村井駅 北口より徒歩6分</td><td>10:00〜19:00／年中無休（年末年始は除く）</td><td>イオンタウン松本村井の駐車場</td></tr>
+              <tr><td><strong>買取専門店さすがや イオンタウン松本村井店</strong>（村井町南2-21-60）</td><td>国道19号 ガスト松本村井店の南側隣</td><td>10:00〜19:00／年末年始を除く年中無休</td><td>店舗ページに記載なし</td></tr>
+              <tr><td><strong>おたからや 筑摩店</strong>（筑摩4丁目3-48 横内ビル1階西側）</td><td>松本駅から車で5分（松本信用金庫つかま支店の向かい）</td><td>10:00〜19:00／不定休</td><td>店舗併設駐車場</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-warm-gray">出典：<a href="https://isemachidori.originality-otakaraya.net/info.php" target="_blank" rel="noopener noreferrer nofollow">おたからや 伊勢町通り店</a>／<a href="https://jewel-cafe.jp/shop/chubu/nagano/aeonmall-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ イオンモール松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto-motomachi/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 松本元町店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto/" target="_blank" rel="noopener noreferrer nofollow">松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/np-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ネオパーク松本店</a>／<a href="https://www.otakaraya.jp/shop/aeon-matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">おたからや イオンタウン松本村井店</a>／<a href="https://sasugaya.jp/shop/matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">さすがや イオンタウン松本村井店</a>／<a href="http://tsukama.otakaraya.net/info/index.html" target="_blank" rel="noopener noreferrer nofollow">おたからや 筑摩店</a>（<a href="https://www.otakaraya.jp/shop/nagano/matsumoto_shi/" target="_blank" rel="noopener noreferrer nofollow">おたからや公式の松本市店舗一覧</a>は3店）。いずれも2026年10月23日に確認。ザ・ゴールドの松本市内の店舗は、公式サイトが10月23日に応答しなかったため確認できず、掲載していません。</p>
+        <p>買取大吉の3店は、いずれも公式の店舗ページで出張買取を「出張費無料・日本全国OK」と案内しています。松本元町店は完全個室で、LINE査定・メール査定にも対応しています。村井では、おたからやとさすがやがどちらも村井町南2丁目にあり、1日で2店の見積もりを比べられます。</p>
 
         <h3>東信エリア（上田市）</h3>
         <p>上田市の店舗は、<Link href="/articles/ueda-kin-kaitori/">上田駅・八木沢駅・中塩田駅の金買取</Link>の記事にまとめています。上田駅から徒歩5〜10分の3店を含む市内7店を、各社の公式店舗ページで確認した住所・駅からの行き方・買取品目・駐車場・定休日で比較しています（2026年10月22日確認）。</p>
@@ -138,7 +172,7 @@ export default function MatsumotoKinKaitoriPage() {
             </thead>
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>買取大吉</td><td>即日現金化・目の前で計量</td><td>すぐに現金化したい方</td></tr>
-              <tr><td><strong>出張買取</strong></td><td>ウリエル</td><td>自宅で完結・量が多い場合も依頼しやすい</td><td>外出が難しい方</td></tr>
+              <tr><td><strong>出張買取</strong></td><td>買取大吉（松本市内3店の公式ページに「出張費無料・日本全国OK」）</td><td>自宅で完結・量が多い場合も依頼しやすい</td><td>外出が難しい方（ウリエル・ティファナは長野県が出張エリア外）</td></tr>
               <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・送料無料（公式表記）</td><td>店舗へ行く時間がない方</td></tr>
               <tr><td><strong>一括査定</strong></td><td>ヒカカク！</td><td>複数業者を一度に比較</td><td>複数社の査定額を比較したい方</td></tr>
             </tbody>
@@ -160,8 +194,8 @@ export default function MatsumotoKinKaitoriPage() {
         <ul>
           <li><strong>ヒカカク！</strong>：複数の業者へ一括で査定を依頼でき、査定額を比較できる</li>
           <li><strong>買取大吉</strong>：全国展開の大手チェーン。予約不要で即日現金化に対応</li>
-          <li><strong>ウリエル</strong>：出張買取が中心（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）。出張費・査定料すべて無料</li>
-          <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応</li>
+          <li><strong>ウリエル</strong>：出張買取が中心。長野県は公式の出張エリア外で、店頭買取は川崎店のみ・宅配買取の案内は公式サイトにないため、松本市からは利用しにくい業者です</li>
+          <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応。店舗は東京・埼玉、出張は東京・埼玉・神奈川・千葉の一部（公式の出張可能エリア）のため、松本市からは宅配買取（全国対応・送料無料）で利用</li>
         </ul>
         <ServiceCaptureGrid />
 
@@ -181,12 +215,16 @@ export default function MatsumotoKinKaitoriPage() {
               a: "松本では複数の買取業者を比較することが重要です。同じ純度・重量でも、業者によって1gあたりの査定額が異なる場合があります。ヒカカク！の一括査定などで複数社から見積もりを取り、査定額を比較したうえで業者を選ぶことをおすすめします。",
             },
             {
+              q: "松本駅の近くに金買取店はありますか？",
+              a: "JR松本駅 お城口から徒歩7分（伊勢町通り沿い・伊勢町交差点からすぐ）に、おたからや 伊勢町通り店（松本市中央1-20-30 井垣ビル1F-B・10:00〜19:00・不定休）があります。中央4丁目のジュエルカフェ イオンモール松本店（イオンモール松本1F）は10:00〜21:00・定休日なしです（駅からの徒歩分は店舗ページに記載なし）。JR村井駅 北口から徒歩6分にはおたからや イオンタウン松本村井店があります（各社公式・2026年10月23日確認）。",
+            },
+            {
               q: "松本で金を即日現金化できますか？",
-              a: "はい、店頭買取であれば査定後その場で現金を受け取れます。買取大吉などの大手チェーンは予約不要で対応しており、松本駅周辺の店舗で即日現金化が可能です。",
+              a: "店頭買取であれば、査定に納得すればその場で現金を受け取れます。松本駅からはお城口から徒歩7分のおたからや 伊勢町通り店（10:00〜19:00・不定休）が歩いて行ける店です。買取大吉は松本元町店・松本店・ネオパーク松本店の3店があり、公式で「予約不要」と案内しています（2026年10月23日確認）。",
             },
             {
               q: "松本で出張買取は利用できますか？",
-              a: "長野県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。外出が難しい方や量が多い方は、宅配買取（ティファナは全国対応・送料無料）をご検討ください。",
+              a: "長野県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月11日確認）。買取大吉は松本市内の店舗の公式ページで出張買取を「出張費無料・日本全国OK」と案内しています（2026年10月23日確認）。宅配買取ならティファナが全国対応・送料無料（公式表記）です。",
             },
             {
               q: "松本の金買取で必要な持ち物は？",
@@ -212,7 +250,7 @@ export default function MatsumotoKinKaitoriPage() {
         <GoldPriceTrend />
         <ExpertQA category="region" />
         <NearbyAreas pref="長野県" areas={[{ slug: "nagano-kin-kaitori", label: "長野" }, { slug: "ueda-kin-kaitori", label: "上田" }, { slug: "nagoya-kin-kaitori", label: "名古屋" }, { slug: "nagoya-sakae-kin-kaitori", label: "名古屋・栄" }, { slug: "toyota-kin-kaitori", label: "豊田" }, { slug: "gifu-kin-kaitori", label: "岐阜" }, { slug: "shizuoka-kin-kaitori", label: "静岡" }, { slug: "hamamatsu-kin-kaitori", label: "浜松" }]} />
-        <RelatedArticles currentSlug="matsumoto-kin-kaitori" relatedSlugs={["nagano-kin-kaitori", "ueda-kin-kaitori", "kin-kaitori-souba", "kin-kaitori-souba", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
+        <RelatedArticles currentSlug="matsumoto-kin-kaitori" relatedSlugs={["nagano-kin-kaitori", "ueda-kin-kaitori", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-takaku-uru", "daikichi-vs-nanboya", "kin-kaitori-sagi"]} />
 
         <DealerComparisonTable
           heading="松本の金買取で利用できる主要サービス比較"
