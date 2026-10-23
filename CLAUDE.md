@@ -450,3 +450,10 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - nagano/matsumoto: 本文に「東信エリア（上田市）」h3＋ueda への本文リンク。nagano の relatedSlugs 重複（souba/takaku-uru 2回）を ueda/matsumoto に
 - precheck ✅（296頁）・ASP 0→0・外部href 6469→6477（komehyo+1・google maps+7）。source d3e7f87 / deploy 14f848cac
 - 未対応: nagano/matsumoto の「大手買取チェーンや貴金属店が集まり」等の裏付けなし定型文（店舗未調査）
+
+### 2026-10-23 朝ルーチン: 田中 503 の日に TOP が前日値を「本日」と出さないように＋daikichi-vs-nanboya の大吉の事前査定・宅配・LINE ✅本番反映済み
+- 田中 /commodity/souba/ が 07:00〜11:31 ずっと 503。11:05 の日次ジョブは fetch が HTTPError で落ちても `| tail -3` で止まらず、10/22 のデータのままビルド・deploy し、src は空コミット「Daily gold price data: 2026-10-23」（data の date は 2026-10-22 のまま＝値の日付は正しい）
+- TOP（app/page.tsx）: 価格の日付（gold-spot-prices.json の date）とビルド日（JST）が違うときは `LP_STALE`。見出し「本日の金買取参考相場」→「10月22日の金買取参考相場」、注記に「田中貴金属の10月23日の公表値は未反映のため、10月22日の値を表示しています」、価格バー「10月22日更新」→「10月22日の値（10月23日の公表値は未反映）」。通常日（date＝ビルド日）は従来どおり。11:05 ビルドの本番で「本日の金買取参考相場」0・未反映 2 を確認
+- 未対応（件数のみ）: TodayPriceAnswer「本日の◯買取相場」17ページ・title に「今日」19ページは、取得失敗日も「今日」のまま。日次ジョブの commit メッセージも取得失敗日に当日日付になる
+- daikichi-vs-nanboya: 大吉公式（店舗買取／初めての方へ／よくあるご質問、10/23）の買取方法は店舗・出張・催事、事前査定は電話（「最短1分」）とメール相談で LINE の記載なし → 事前査定「LINE査定あり」→「電話で無料査定（公式「最短1分」）・メールで相談」、宅配「非対応（一部店舗のみ）」→「非対応（公式の買取方法は店舗・出張・催事）」、LINE査定「対応」→「公式に記載なし（事前の相談は電話・メール）」＋確認日の注記、dateModified 10-23。未対応: line-satei-seido の「大吉公式LINE」（一覧から外すかは判断）、「上場」行のなんぼや（運営はバリュエンスジャパン・上場は親会社）
+- precheck ✅（296頁）・外部 href 6477=6477・ASP 0。source a21376c / deploy 0eaf4c30d（09:23 push・09:31 反映）。Indexing 1/1（daikichi-vs-nanboya）
