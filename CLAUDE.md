@@ -470,3 +470,8 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 ### 2026-10-23 長野・松本の noindex を解除（MediaXAI「うん、noindex外そう」）✅本番反映済み
 - 公式で確認した店舗（長野12・松本8）に書き直したため、`robots: { index: false }` を2ページから削除。gen-sitemap.py の noindex 自動除外が外れ、sitemap 106→108。
 - precheck ✅・ASP計測リンク 0→0・本番で noindex 0／sitemap 掲載を確認。Indexing 2/2・sitemap 再送信。source（noindex 解除＋sitemap）／deploy a66850f99。
+
+### 2026-10-24 朝ルーチン: 田中 503 継続の確認＋daikichi-vs-nanboya のなんぼや「上場」行 ✅本番反映済み
+- 田中 /commodity/souba/ は 09:20 も 503（10/23 に続き。data の date は 2026-10-22 のまま）。TOP は LP_STALE 表記（「10月22日の金買取参考相場」・未反映注記）で出ていることを out で確認。11:05 の日次の結果は下に追記
+- daikichi-vs-nanboya: 「上場」行のなんぼや「東証グロース上場」→「運営会社は非上場（親会社のバリュエンスホールディングス株式会社が東証グロース上場・証券コード9270）」。根拠＝valuence.inc /company/（社名 バリュエンスホールディングス・グループ会社にバリュエンスジャパン）・/ir/stock/basic_info/（東京／グロース・9270）10/24。表の下に確認日の注記、dateModified 10-24。大吉「非上場」はエンパワー公式で未確認のまま据え置き
+- precheck ✅（296頁）・外部 href 6499=6499・ASP 0。source 7f5f5a1 / deploy 05f1f0821
