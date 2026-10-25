@@ -37,7 +37,7 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】買取大吉 vs なんぼやの比較 — 金買取はどちらがお得？", datePublished: "2026-04-24", dateModified: "2026-10-24", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: "【2026年最新】買取大吉 vs なんぼやの比較 — 金買取はどちらがお得？", datePublished: "2026-04-24", dateModified: "2026-10-25", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -85,7 +85,7 @@ export default function DaikichiVsNanboyaPage() {
             <tbody>
               <tr><td><strong>全国店舗数</strong></td><td>2,400店舗以上</td><td>140店舗以上</td></tr>
               <tr><td><strong>運営会社</strong></td><td>株式会社エンパワー</td><td>バリュエンスジャパン株式会社</td></tr>
-              <tr><td><strong>上場</strong></td><td>非上場</td><td>運営会社は非上場（親会社のバリュエンスホールディングス株式会社が東証グロース上場・証券コード9270）</td></tr>
+              <tr><td><strong>上場</strong></td><td>公式の会社概要に記載なし</td><td>運営会社は非上場（親会社のバリュエンスホールディングス株式会社が東証グロース上場・証券コード9270）</td></tr>
               <tr><td><strong>買取方式</strong></td><td>店頭・出張（公式「日本全国OK」）</td><td>店頭・宅配・出張・オンライン（ビデオ通話）</td></tr>
               <tr><td><strong>査定料</strong></td><td>無料</td><td>無料</td></tr>
               <tr><td><strong>キャンセル料</strong></td><td>無料</td><td>無料</td></tr>
@@ -94,7 +94,7 @@ export default function DaikichiVsNanboyaPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">※なんぼやの上場の行は、バリュエンスホールディングス公式の会社情報（グループ会社にバリュエンスジャパン株式会社）と銘柄基本情報（上場市場 東京／グロース・証券コード9270）で2026年10月24日に確認しました。</p>
+        <p className="text-xs text-warm-gray">※買取大吉の店舗数・運営会社は、買取大吉公式の会社案内（会社概要：社名 株式会社エンパワー・店舗数 2400店舗以上）と株式会社エンパワー公式の会社概要で2026年10月25日に確認しました。どちらの会社概要にも上場の有無の記載はありません。なんぼやの上場の行は、バリュエンスホールディングス公式の会社情報（グループ会社にバリュエンスジャパン株式会社）と銘柄基本情報（上場市場 東京／グロース・証券コード9270）で2026年10月24日に確認しました。</p>
 
         <h2>比較1：店舗数・アクセスの良さ</h2>
         <p><strong>買取大吉の圧勝です。</strong>2,400店舗以上（公式表記）は業界トップクラスで、全国のほとんどの主要都市にアクセスしやすい店舗があります。なんぼやは140店舗以上（公式表記）と大吉より少ないものの、主要駅の近くに出店しており、立地条件に優れています。</p>
