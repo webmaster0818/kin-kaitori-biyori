@@ -21,9 +21,9 @@ function BreadcrumbSchema() {
 
 function FaqSchema() {
   const d = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-    { "@type": "Question", name: "金買取はどこがいいですか？", acceptedAnswer: { "@type": "Answer", text: "目的によって最適な業者は変わります。査定額を比較したい場合は複数社の一括査定（ヒカカク！）、その場で現金化したいなら全国店舗網のある店頭買取（買取大吉）、自宅で完結したいなら出張買取が中心のウリエル、店頭・出張・宅配から選びたいならティファナが候補です。いずれも査定は無料なので、2社以上の査定額を比較したうえで売却することをおすすめします。" } },
+    { "@type": "Question", name: "金買取はどこがいいですか？", acceptedAnswer: { "@type": "Answer", text: "目的によって最適な業者は変わります。査定額を比較したい場合は複数社の一括査定（ヒカカク！）、その場で現金化したいなら全国店舗網のある店頭買取（買取大吉）、自宅で完結したいなら出張買取が中心のウリエル、店頭・出張から選びたいならティファナが候補です（ティファナの宅配買取は、公式サイトで「システムリニューアルのため一時停止」と案内されています。2026年10月26日確認）。いずれも査定は無料なので、2社以上の査定額を比較したうえで売却することをおすすめします。" } },
     { "@type": "Question", name: "金買取の業者選びで最も重要なポイントは何ですか？", acceptedAnswer: { "@type": "Answer", text: "「複数社の査定額を比較すること」です。査定料はどこも無料ですが、提示される1gあたりの買取単価は業者ごとに異なります。売る前に当日の相場（本日のK24買取目安は1g" + P.k24.toLocaleString() + "円）を把握し、相場に近い単価を提示する業者を選ぶことをおすすめします。" } },
-    { "@type": "Question", name: "査定だけ受けて売らなくても大丈夫ですか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルは査定無料・キャンセル無料を公式サイトで明記しています。ヒカカク！は一括査定の利用が無料で、キャンセルは申し込み先の業者へ直接連絡します（2026年10月確認）。査定額に納得できなければ売らなくて問題ありません。ただし宅配買取は業者によってキャンセル時の返送料負担が異なるため、事前確認をおすすめします。" } },
+    { "@type": "Question", name: "査定だけ受けて売らなくても大丈夫ですか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルは査定無料・キャンセル無料を公式サイトで明記しています。ヒカカク！は一括査定の利用が無料で、キャンセルは申し込み先の業者へ直接連絡します（2026年10月26日確認）。査定額に納得できなければ売らなくて問題ありません。ただし宅配買取は業者によってキャンセル時の返送料負担が異なるため、事前確認をおすすめします。" } },
     { "@type": "Question", name: "壊れた金製品や刻印のない金でも売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。金は素材そのものに価値があるため、チェーンが切れたネックレス、片方だけのピアス、変色した指輪でも重量×純度で査定されます。刻印がなくても比重検査やX線分析で純度を確認できます。詳しくは「壊れた金・刻印なしでも売れる」の記事をご覧ください。" } },
     { "@type": "Question", name: "金を高く売るタイミングはいつですか？", acceptedAnswer: { "@type": "Answer", text: "金相場は日々変動します。当サイトの相場ページ（毎朝自動更新）で当日の1g価格を確認し、直近の推移と見比べるのが基本です。相場が歴史的高値圏にある局面では、使っていない金製品の売却を検討する価値があります。" } },
   ]};
@@ -37,15 +37,15 @@ function ArticleSchema() {
 
 export const metadata: Metadata = {
   title: TITLE,
-  description: `金買取はどこがいい？一括査定・店頭・出張・宅配の4タイプ別におすすめ業者を比較。手数料・対応エリア・向いている人を一覧表で確認できます。本日の相場（K24 1g${P.k24.toLocaleString()}円・${pMonth}月${pDay}日更新）と査定前の準備、純度・品目・地域別ガイドへの入口も。`,
+  description: `金買取はどこがいい？一括査定・店頭・出張のタイプ別におすすめ4社を比較。手数料・対応エリア・向いている人を一覧表で確認できます。本日の相場（K24 1g${P.k24.toLocaleString()}円・${pMonth}月${pDay}日更新）と査定前の準備、純度・品目・地域別ガイドへの入口も。`,
   alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-osusume/" },
 };
 
 const COMPANIES = [
-  { name: "ヒカカク！", method: "一括査定", url: "https://hikakaku.com", point: "複数業者にまとめて査定を依頼し、査定額を比較できる", fee: "無料", area: "全国（Web完結）", fit: "複数社の査定額を比較したい方・相見積もりの手間を省きたい方" },
-  { name: "買取大吉", method: "店頭買取", url: "https://kaitori-daikichi.jp", point: "全国2,400店舗以上。その場で査定・即現金化", fee: "査定・キャンセル無料", area: "全国47都道府県（店頭・出張）", fit: "近くの店舗でその場で現金化したい人" },
+  { name: "ヒカカク！", method: "一括査定", url: "https://hikakaku.com", point: "複数業者にまとめて査定を依頼し、査定額を比較できる", fee: "無料", area: "全国（申し込みはWeb・LINE。取引方法と対応エリアは申し込み先の業者による）", fit: "複数社の査定額を比較したい方・相見積もりの手間を省きたい方" },
+  { name: "買取大吉", method: "店頭買取", url: "https://kaitori-daikichi.jp", point: "全国2,400店舗以上。その場で査定・即現金化", fee: "査定・キャンセル無料", area: "店頭＝全国2,400店舗以上／出張＝日本全国（公式表記）", fit: "近くの店舗でその場で現金化したい人" },
   { name: "ウリエル", method: "出張買取", url: "https://uriel-cuore.co.jp", point: "出張買取が中心（店頭は川崎店のみ・宅配の案内なし）。出張費・査定料すべて無料で自宅完結", fee: "査定・出張・キャンセル無料", area: "関東・中部（岐阜・静岡・愛知）・近畿・中国・四国・九州（沖縄県は対象外・一部市町村除く）", fit: "自宅にいながら売却を完結したい人・量が多い人" },
-  { name: "ティファナ", method: "店頭・出張・宅配", url: "https://tifana.net", point: "3つの買取方法から選べる。宅配は送料・キット無料", fee: "査定・キャンセル無料（宅配返送は対象外品のみ客負担）", area: "店頭=東京中心／宅配=全国", fit: "ライフスタイルに合わせて方法を選びたい人" },
+  { name: "ティファナ", method: "店頭・出張（宅配は一時停止中）", url: "https://tifana.net", point: "店頭・出張から選べる。宅配買取は公式で「システムリニューアルのため一時停止」と案内（2026年10月26日確認）", fee: "査定・キャンセル無料（宅配返送は対象外品のみ客負担）", area: "店頭＝東京都・埼玉県の店舗／出張＝東京・埼玉・神奈川・千葉の一部／宅配＝全国（一時停止中）", fit: "ライフスタイルに合わせて方法を選びたい人" },
 ];
 
 function CtaBox() {
@@ -88,7 +88,7 @@ export default function KinKaitoriOsusumePage() {
               <tr><td>複数社の<strong>査定額を比較</strong>したい</td><td><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow">ヒカカク！</a>（一括査定）</td><td>複数業者の査定額をまとめて比較でき、相見積もりの手間を省ける</td></tr>
               <tr><td><strong>今日中に現金化</strong>したい</td><td><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow">買取大吉</a>（店頭）</td><td>全国2,400店舗以上。その場で査定・即現金化</td></tr>
               <tr><td><strong>自宅で完結</strong>したい・量が多い</td><td><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow">ウリエル</a>（出張）</td><td>出張費・査定料すべて無料の出張買取が中心</td></tr>
-              <tr><td>買取<strong>方法を選びたい</strong></td><td><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow">ティファナ</a>（店頭/出張/宅配）</td><td>3つの方法から都合に合わせて選べる。宅配は送料・キット無料</td></tr>
+              <tr><td>買取<strong>方法を選びたい</strong></td><td><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow">ティファナ</a>（店頭/出張）</td><td>店頭・出張から都合に合わせて選べる。宅配買取は公式で「システムリニューアルのため一時停止」と案内（2026年10月26日確認）</td></tr>
             </tbody>
           </table>
         </div>
@@ -119,7 +119,7 @@ export default function KinKaitoriOsusumePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-warm-gray">※手数料・エリアは各社公式サイトの記載を当サイトが直接確認したものです（2026年7月時点）。13社のより詳しい手数料比較は<Link href="/articles/kin-kaitori-tesuryo-hikaku/">手数料13社比較</Link>、買取方法自体の違いは<Link href="/articles/kaitori-houhou-hikaku/">方法4つの比較</Link>をご覧ください。</p>
+        <p className="text-sm text-warm-gray">※手数料・エリアは各社公式サイトの記載を当サイトが直接確認したものです（2026年10月26日確認）。13社のより詳しい手数料比較は<Link href="/articles/kin-kaitori-tesuryo-hikaku/">手数料13社比較</Link>、買取方法自体の違いは<Link href="/articles/kaitori-houhou-hikaku/">方法4つの比較</Link>をご覧ください。</p>
         <ServiceCaptureGrid />
 
         <CtaBox />
@@ -131,7 +131,7 @@ export default function KinKaitoriOsusumePage() {
           <li><strong>当日の相場を基準に判断する</strong>——上記の相場（毎朝更新）と提示単価の差をご確認ください。大きく下回る場合は、理由（手数料の内含・製品の状態）を確認することをおすすめします。</li>
           <li><strong>手数料は「返送料」まで見る</strong>——査定・出張は無料の業者が一般的です。差が生じやすいのは、宅配買取のキャンセル時の返送料です（<Link href="/articles/kin-kaitori-tesuryo-hikaku/">13社比較</Link>をご参照ください）。</li>
           <li><strong>重量と純度を自分で把握しておく</strong>——キッチンスケールで重さを量り、刻印（K24/K18/750など）をご確認ください。<Link href="/articles/kin-jundo-mikata/">純度の見分け方</Link>もご参照ください。</li>
-          <li><strong>古物商許可を確認する</strong>——公式サイトに古物商許可番号の記載がある業者を選ぶことをおすすめします（本記事の4社は記載あり）。</li>
+          <li><strong>古物商許可を確認する</strong>——公式サイトに古物商許可番号の記載がある業者を選ぶことをおすすめします（本記事の買取大吉・ウリエル・ティファナは許可番号を公式サイトに記載。ヒカカク！は買取業者を紹介する一括査定サービスで、運営会社の表記は「都道府県公安委員会の許可を得て営業」、番号の記載はありません。2026年10月26日確認）。</li>
         </ol>
 
         <h2 id="by-purity">純度別の買取ガイド</h2>
