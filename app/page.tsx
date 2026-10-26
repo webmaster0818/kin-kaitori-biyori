@@ -712,6 +712,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 主要業者の比較表（手数料・買取方法・対応エリア。2026-10-26 に各社公式で確認した値のみ） */}
+      <section className="bg-card border-y border-rule" id="hikaku">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+          <h2 className="rule-mark font-display text-xl md:text-2xl mb-4 text-center">
+            金買取業者の比較表 — 手数料・買取方法・対応エリア
+          </h2>
+          <p className="text-warm-gray text-sm text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+            主要6社の公式サイトを2026年10月26日に確認し、金の買取で差が出やすい項目を並べました。査定料・キャンセル料は6社とも無料と記載しています。差が出るのは、買取方法・出張の対応エリア・宅配でキャンセルしたときの返送料です。
+          </p>
+          <div className="overflow-x-auto border border-rule bg-card">
+            <table className="w-full min-w-[760px] text-left text-[0.8rem] leading-relaxed">
+              <thead className="bg-paper text-foreground">
+                <tr>
+                  <th className="px-3 py-3 border-b border-rule whitespace-nowrap">業者</th>
+                  <th className="px-3 py-3 border-b border-rule">買取方法</th>
+                  <th className="px-3 py-3 border-b border-rule">出張（料金・対応エリア）</th>
+                  <th className="px-3 py-3 border-b border-rule">宅配（送料・キャンセル時の返送料）</th>
+                  <th className="px-3 py-3 border-b border-rule whitespace-nowrap">振込手数料</th>
+                  <th className="px-3 py-3 border-b border-rule">店舗数（公式表記）</th>
+                </tr>
+              </thead>
+              <tbody className="text-warm-gray">
+                {[
+                  ["買取大吉", "店頭・出張・催事", "無料・日本全国（公式「日本全国OK」）", "宅配買取なし", "記載なし", "2,400店舗以上"],
+                  ["ウリエル", "出張中心・店頭（川崎 ラ チッタデッラ店）・催事", "無料・関東、中部（岐阜・静岡・愛知）、近畿、中国、四国、九州（沖縄県は対象外・一部市町村を除く）", "宅配買取なし", "記載なし", "店頭は川崎の1店"],
+                  ["なんぼや", "店頭・出張・宅配・オンライン", "無料・全国（遠方・日程により伺えない場合あり）", "送料・キット無料／返送料は会社負担", "無料", "140店舗以上"],
+                  ["バイセル", "店頭・出張・宅配", "無料・離島を除く全国", "送料・キット無料／返送料はお客様負担（着払い）", "無料", "記載なし"],
+                  ["福ちゃん", "店頭・出張・宅配", "無料・対応エリアの記載なし", "送料無料／返送料はお客様負担（着払い）", "無料（利用規約）", "記載なし"],
+                  ["コメ兵（KOMEHYO）", "店頭・出張・宅配", "無料・出張可能エリア内（一部対象外地域あり）", "送料・キット無料／返送料は会社負担", "無料", "全国205ヶ所"],
+                ].map(([name, ...cells]) => (
+                  <tr key={name} className="border-b border-rule last:border-b-0 align-top">
+                    <th scope="row" className="px-3 py-3 font-bold text-foreground whitespace-nowrap">{name}</th>
+                    {cells.map((c, i) => (
+                      <td key={i} className="px-3 py-3">{c}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-warm-gray mt-3 leading-relaxed">
+            出典: 各社公式サイト（買取大吉・ウリエル・なんぼや・バイセル・福ちゃん・コメ兵の金買取／出張／宅配／よくある質問・利用規約のページ、2026年10月26日確認）。「記載なし」は公式サイトで確認できなかった項目です。なんぼやは金買取ページに「買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内」と記載しています。コメ兵の返送料は、到着後のお客様都合による返送はお客様負担と利用規約にあります。最新の条件は各公式サイトでご確認ください。
+          </p>
+          <p className="text-sm text-center mt-6">
+            <Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent-dark underline underline-offset-2">ティファナ・おたからや・ザ・ゴールドなどを含む13社の手数料比較</Link>
+            <span className="text-warm-gray mx-2">／</span>
+            <Link href="/articles/kin-kaitori-osusume/" className="text-accent-dark underline underline-offset-2">目的別のおすすめ業者</Link>
+          </p>
+        </div>
+      </section>
+
       {/* 業者の選び方3つのポイント */}
       <section className="bg-paper-2 border-y border-rule">
         <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
@@ -794,6 +845,9 @@ export default function Home() {
               { label: "京都の金買取", href: "/articles/kyoto-kin-kaitori/" },
               { label: "大宮の金買取", href: "/articles/omiya-kin-kaitori/" },
               { label: "千葉の金買取", href: "/articles/chiba-kin-kaitori/" },
+              { label: "長野の金買取", href: "/articles/nagano-kin-kaitori/" },
+              { label: "松本の金買取", href: "/articles/matsumoto-kin-kaitori/" },
+              { label: "上田の金買取", href: "/articles/ueda-kin-kaitori/" },
               { label: "金の重さの測り方", href: "/articles/kin-omosa-hakarikata/" },
               { label: "偽物の見分け方", href: "/articles/kin-nisemono-mikata/" },
               { label: "確定申告のやり方", href: "/articles/kin-kakutei-shinkoku/" },

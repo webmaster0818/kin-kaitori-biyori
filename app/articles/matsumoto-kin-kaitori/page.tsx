@@ -30,7 +30,7 @@ function ArticleSchema() {
     headline: "松本の金買取｜松本駅お城口から徒歩7分の店と市内8店を公式情報で比較【2026年10月】",
     description: "松本駅お城口から徒歩7分のおたからや 伊勢町通り店、21時まで開くジュエルカフェ イオンモール松本店、駐車場のある買取大吉3店など松本市内8店の住所・営業時間・定休日・駐車場を公式店舗ページで比較（2026年10月23日確認）。今日の金相場も。",
     datePublished: "2026-06-05",
-    dateModified: "2026-10-23",
+    dateModified: "2026-10-26",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -155,7 +155,7 @@ export default function MatsumotoKinKaitoriPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">出典：<a href="https://isemachidori.originality-otakaraya.net/info.php" target="_blank" rel="noopener noreferrer nofollow">おたからや 伊勢町通り店</a>／<a href="https://jewel-cafe.jp/shop/chubu/nagano/aeonmall-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ イオンモール松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto-motomachi/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 松本元町店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto/" target="_blank" rel="noopener noreferrer nofollow">松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/np-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ネオパーク松本店</a>／<a href="https://www.otakaraya.jp/shop/aeon-matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">おたからや イオンタウン松本村井店</a>／<a href="https://sasugaya.jp/shop/matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">さすがや イオンタウン松本村井店</a>／<a href="http://tsukama.otakaraya.net/info/index.html" target="_blank" rel="noopener noreferrer nofollow">おたからや 筑摩店</a>（<a href="https://www.otakaraya.jp/shop/nagano/matsumoto_shi/" target="_blank" rel="noopener noreferrer nofollow">おたからや公式の松本市店舗一覧</a>は3店）。いずれも2026年10月23日に確認。ザ・ゴールドの松本市内の店舗は、公式サイトが10月23日に応答しなかったため確認できず、掲載していません。</p>
+        <p className="text-xs text-warm-gray">出典：<a href="https://isemachidori.originality-otakaraya.net/info.php" target="_blank" rel="noopener noreferrer nofollow">おたからや 伊勢町通り店</a>／<a href="https://jewel-cafe.jp/shop/chubu/nagano/aeonmall-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ イオンモール松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto-motomachi/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 松本元町店</a>／<a href="https://www.kaitori-daikichi.jp/store/matsumoto/" target="_blank" rel="noopener noreferrer nofollow">松本店</a>／<a href="https://www.kaitori-daikichi.jp/store/np-matsumoto/" target="_blank" rel="noopener noreferrer nofollow">ネオパーク松本店</a>／<a href="https://www.otakaraya.jp/shop/aeon-matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">おたからや イオンタウン松本村井店</a>／<a href="https://sasugaya.jp/shop/matsumotomurai/" target="_blank" rel="noopener noreferrer nofollow">さすがや イオンタウン松本村井店</a>／<a href="http://tsukama.otakaraya.net/info/index.html" target="_blank" rel="noopener noreferrer nofollow">おたからや 筑摩店</a>（<a href="https://www.otakaraya.jp/shop/nagano/matsumoto_shi/" target="_blank" rel="noopener noreferrer nofollow">おたからや公式の松本市店舗一覧</a>は3店）。いずれも2026年10月23日に確認。ザ・ゴールドは、<a href="https://www.the-gold.jp/shop/nagano/92.html" target="_blank" rel="noopener noreferrer nofollow">公式の店舗ページ</a>で松本市内は松本村井店（村井町南2丁目4-20・国道19号線沿い・10:00〜18:00・年中無休〔一部夏季・年末年始は除く〕・駐車場6台）の1店です（公式の長野県の店舗一覧に南松本の店舗はありません。10月26日確認）。</p>
         <p>買取大吉の3店は、いずれも公式の店舗ページで出張買取を「出張費無料・日本全国OK」と案内しています。松本元町店は完全個室で、LINE査定・メール査定にも対応しています。村井では、おたからやとさすがやがどちらも村井町南2丁目にあり、1日で2店の見積もりを比べられます。</p>
 
         <h3>東信エリア（上田市）</h3>

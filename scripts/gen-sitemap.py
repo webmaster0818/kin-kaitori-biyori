@@ -44,6 +44,7 @@ def main() -> None:
     lastmod = spot["date"]
 
     paths = []
+    page_lastmod: dict[str, str] = {}
     skipped_noindex = 0
     for p in OUT.rglob("index.html"):
         rel = p.parent.relative_to(OUT).as_posix()
@@ -56,11 +57,16 @@ def main() -> None:
         #    実測(2026-08-16)で301URL中190本がこれに該当し、
         #    さらに submit-indexing-rotation.py がこのsitemapを読んで毎日80件送っていたため、
         #    Indexing APIのクォータの大半を、登録され得ないページに使い続けていた。
-        if re.search(r'<meta name="robots"[^>]*noindex',
-                     p.read_text(encoding="utf-8", errors="replace")):
+        html = p.read_text(encoding="utf-8", errors="replace")
+        if re.search(r'<meta name="robots"[^>]*noindex', html):
             skipped_noindex += 1
             continue
         paths.append(path)
+        # 本文を相場データより後の日に直したページ（JSON-LD dateModified が新しい）は、その日を lastmod にする。
+        # 2026-10-26: 田中 503 で相場の date が 10-22 のまま止まり、10/23 に直した ueda も lastmod 10-22 になっていた。
+        dms = [d for d in re.findall(r'"dateModified":"(\d{4}-\d{2}-\d{2})', html) if d > lastmod]
+        if dms:
+            page_lastmod[path] = max(dms)
     paths.sort(key=lambda x: (x != "/", x))
 
     # ⚠️ 配布データ（/data/*.csv・*.json）は sitemap に載せない。
@@ -71,7 +77,7 @@ def main() -> None:
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for path in paths:
         cf, pr = rule(path)
-        lines.append(f"  <url><loc>{SITE}{path}</loc><lastmod>{lastmod}</lastmod>"
+        lines.append(f"  <url><loc>{SITE}{path}</loc><lastmod>{page_lastmod.get(path, lastmod)}</lastmod>"
                      f"<changefreq>{cf}</changefreq><priority>{pr}</priority></url>")
     lines += ["</urlset>", ""]
     xml = "\n".join(lines)
@@ -79,7 +85,7 @@ def main() -> None:
     for d in (ROOT / "public", OUT):
         if d.exists():
             (d / "sitemap.xml").write_text(xml, encoding="utf-8")
-    print(f"sitemap: {len(paths)} URLs (lastmod={lastmod}, noindex除外={skipped_noindex})")
+    print(f"sitemap: {len(paths)} URLs (lastmod={lastmod}, 個別lastmod={len(page_lastmod)}, noindex除外={skipped_noindex})")
 
 
 if __name__ == "__main__":
