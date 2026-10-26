@@ -510,3 +510,10 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - ueda: 内部リンク（TOP から追加）＋ **sitemap lastmod**: gen-sitemap.py が全URLを相場の date（田中503で 10-22 のまま）にしていたため、JSON-LD dateModified が新しいページはその日を使うよう変更（個別6本: ueda/matsumoto 10-26・tesuryo 10-26・nagano/nagoya 10-23・daikichi-vs-nanboya 10-25）。店舗カード二重は判断待ちのまま
 - ザ・ゴールド（the-gold.jp 復旧・10/26 200）: 長野県の店舗一覧は9店で南松本は無し。松本村井店（村井町南2丁目4-20・国道19号線沿い・10-18時・駐車場6台）→ matsumoto の「応答せず未掲載」文を事実に更新（表への追加はしていない）。上田店の定休日は公式で2通り（/item/metal/shop/45.html「年末年始は除く」・/shop/nagano/45.html「一部夏季・年末年始は除く」）→ ueda は両方を併記。local-stores.ts は前者どおりで不変
 - precheck ✅（296頁）・ASP 0=0・外部href 6499→6500（the-gold +1）・__next*.txt 0。source 6816366・49fa562 / deploy 947948235・b4d5f008e（12:21 本番反映）。Indexing 2/2（/・ueda）
+
+### 2026-10-26 16:00遅れ挽回ルーチン: 駅名クエリ（6〜12位・0クリック）の冒頭即答 ✅本番反映済み
+- nagoya: h1直下に「駅名で即答」枠（栄生=大吉 徒歩5分／近鉄名古屋=なんぼや サンロード 正面出口1分／ささしま・本陣=徒歩圏なし→名古屋駅へ1・2駅／久屋大通=バイセル 南改札1分→hisayaodori へ／妙音通・堀田=徒歩圏なし）。値は既存の公式確認値（10/11〜10/23）
+- hisayaodori: h1直下に「結論」枠（バイセル2店の徒歩分・営業時間＋錦の大吉・栄のKOMEHYO）＋nagoya #stations への導線。カニバリ「久屋大通駅 金 買取」は hisayaodori 主・nagoya から導線（既存＋即答枠）
+- ueda: 冒頭段落を「駅名で即答」枠に（上田駅3店の徒歩分・営業時間／上田原わかば／神畑・中塩田・八木沢）。**神畑駅（BE07）節＋FAQ（本文＋JSON-LD）を新設**（駅順は Wikipedia 別所線の駅一覧。上田電鉄公式は 10/26 503）。神畑を最寄りと案内する店は確認済み7店に無い
+- 「金 買取 比較」: kaitori-houhou-hikaku＝売り方の比較／osusume＝目的別の業者選び／TOP #hikaku＝業者比較表、と各ページ冒頭に役割の1段落＋相互リンク。TOP #hikaku 下に houhou-hikaku への導線
+- title は全ページ不変（7日ルール）。precheck ✅（296頁）・ASP 0=0・外部href 6500→6501（Wikipedia）。source ce80b90 / deploy 74461e989。Indexing 5/5
