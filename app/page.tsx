@@ -759,6 +759,8 @@ export default function Home() {
             <Link href="/articles/kin-kaitori-tesuryo-hikaku/" className="text-accent-dark underline underline-offset-2">ティファナ・おたからや・ザ・ゴールドなどを含む13社の手数料比較</Link>
             <span className="text-warm-gray mx-2">／</span>
             <Link href="/articles/kin-kaitori-osusume/" className="text-accent-dark underline underline-offset-2">目的別のおすすめ業者</Link>
+            <span className="text-warm-gray mx-2">／</span>
+            <Link href="/articles/kaitori-houhou-hikaku/" className="text-accent-dark underline underline-offset-2">店頭・出張・宅配・一括査定の違い</Link>
           </p>
         </div>
       </section>

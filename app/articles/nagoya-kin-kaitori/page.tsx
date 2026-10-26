@@ -62,7 +62,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金・ブランド買取｜栄生・近鉄名古屋・本陣・ささしまライブ 駅別の店舗と徒歩分【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-10-23",
+    dateModified: "2026-10-26",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅は徒歩5分に買取大吉（金・時計・バッグも）、近鉄名古屋駅は正面出口徒歩1分になんぼや。本陣・ささしまライブ駅は徒歩圏に店がなく名古屋駅へ1〜2駅。駅別に金・ブランド買取店の住所・徒歩分・営業時間を公式店舗ページで確認して一覧に（2026年10月22日更新）。今日の金相場も毎日更新。",
@@ -119,6 +119,18 @@ export default function NagoyaKinKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">名古屋の金・ブランド買取｜栄生・近鉄名古屋・本陣・ささしまライブ 駅別の店舗と徒歩分【2026年10月】</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
+
+        <div className="bg-white border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-6 not-prose">
+          <p className="font-bold text-navy text-lg mb-3">駅名で即答：いちばん近い金・ブランド買取店</p>
+          <ul className="space-y-2 text-sm md:text-base">
+            <li><strong>栄生駅</strong> → 買取大吉 中村栄生店（徒歩5分・10:00〜18:00・年中無休）。金・宝石・ブランド品とも同じ店で査定。<a href="#sako" className="text-accent-dark underline">詳しく</a></li>
+            <li><strong>近鉄名古屋駅</strong> → なんぼや 名古屋サンロード店（正面出口 徒歩1分・地下街・10:00〜20:00）。<a href="#kintetsu-nagoya" className="text-accent-dark underline">詳しく</a></li>
+            <li><strong>ささしまライブ駅・本陣駅</strong> → 徒歩圏に店なし。あおなみ線で1駅／東山線で2駅の名古屋駅へ（なんぼや サンロード・エスカ）。<a href="#honjin-sasashima" className="text-accent-dark underline">詳しく</a></li>
+            <li><strong>久屋大通駅</strong> → バイセル 名古屋栄セントラルパーク店（南改札 徒歩1分・月〜土21時まで）。<Link href="/articles/hisayaodori-eki-kin-kaitori/" className="text-accent-dark underline">久屋大通駅の専用記事</Link></li>
+            <li><strong>妙音通駅・堀田駅</strong> → 徒歩圏に店なし。金山（さてい屋 東口徒歩2分）・大須・栄へ移動するか出張・宅配。<a href="#hotta" className="text-accent-dark underline">詳しく</a></li>
+          </ul>
+          <p className="text-xs text-warm-gray mt-3">各社の公式店舗ページの表記（2026年10月11日〜23日確認・確認日は下の早見表の出典欄）。ほかの駅は<a href="#stations" className="text-accent-dark underline">駅別早見表</a>へ。</p>
+        </div>
 
         <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-8 not-prose">
           <p className="font-bold text-navy text-lg mb-3">名古屋で金を売る際の目的別の選び方</p>

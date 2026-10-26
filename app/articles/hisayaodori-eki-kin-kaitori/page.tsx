@@ -46,7 +46,7 @@ function Schemas() {
     headline: "久屋大通駅の金・ブランド買取｜南改札徒歩1分と5分、地下街の2店と今日の相場【2026年10月】",
     description: "久屋大通駅から地下街だけで行ける金・ブランド買取店（バイセル2店）を、公式店舗ページで確認した情報だけでまとめた記事です。",
     datePublished: "2026-08-24",
-    dateModified: "2026-10-21",
+    dateModified: "2026-10-26",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -126,6 +126,16 @@ export default function Page() {
           <p className="text-warm-gray text-sm mb-8">
             店舗情報は{CHECKED}に公式店舗ページで確認／相場は毎朝自動更新（{priceDateJa}時点）
           </p>
+
+          <div className="bg-gold-bg border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-8 not-prose">
+            <p className="font-bold text-navy text-lg mb-3">結論：久屋大通駅からいちばん近い金・ブランド買取店</p>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><strong>① バイセル 名古屋栄セントラルパーク店</strong> — 南改札より<strong>徒歩1分</strong>（セントラルパーク地下街B1F）／月〜土 10:00〜21:00・日祝 10:00〜20:00</li>
+              <li><strong>② バイセル 栄セントラルパーク2号店</strong> — 南改札口より<strong>徒歩5分</strong>（同じ地下街）／11:00〜20:00</li>
+              <li><strong>別の会社と比べるなら</strong> — 買取大吉 名古屋錦店（桜通線で1駅・丸の内駅 徒歩4分／10:00〜19:00・年中無休）、ブランド品中心なら栄駅 中改札すぐのKOMEHYO買取センター 栄森の地下街（10:00〜19:00）</li>
+            </ul>
+            <p className="text-xs text-warm-gray mt-3">いずれも各社の公式店舗ページの表記（{CHECKED}確認）。名古屋のほかの駅（栄生・近鉄名古屋・ささしまライブ・本陣など）は<Link href="/articles/nagoya-kin-kaitori/#stations" className="text-accent-dark underline">名古屋の駅別早見表</Link>へ。</p>
+          </div>
 
           <p>
             久屋大通駅（桜通線・名城線）は、駅の真下にセントラルパーク地下街が広がっています。

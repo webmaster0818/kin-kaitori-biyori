@@ -33,7 +33,7 @@ function ArticleSchema() {
     headline: "【2026年最新】金の買取方法4つを比較 — 店頭・出張・宅配・一括査定のメリット・デメリット",
     description: "金・貴金属の買取方法を4つ（店頭買取・出張買取・宅配買取・一括査定）に分けて比較。メリット・デメリット、品目別おすすめ方法、各業者の対応一覧まで解説。",
     datePublished: "2026-04-15",
-    dateModified: "2026-10-09",
+    dateModified: "2026-10-26",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -130,6 +130,8 @@ export default function KaitoriHouhouHikakuPage() {
         <p>金・貴金属を売りたいと思ったとき、「どの方法で売ればいいの？」と迷う方は多いはずです。金の買取方法は大きく分けて<strong>4つ</strong>あり、それぞれにメリット・デメリットがあります。</p>
 
         <p>この記事では、4つの買取方法を詳しく解説し、<strong>状況に応じた売却方法</strong>を見つけるお手伝いをします。</p>
+
+        <p className="text-sm bg-cream border border-warm-border rounded-lg p-3">この記事は<strong>「売り方（店頭・出張・宅配・一括査定）」の比較</strong>です。<strong>業者どうし</strong>の手数料・買取方法・対応エリアを並べた比較表は<Link href="/#hikaku" className="text-accent-dark underline">トップページの金買取業者比較表（主要6社）</Link>、目的別にどの業者を選ぶかは<Link href="/articles/kin-kaitori-osusume/" className="text-accent-dark underline">金買取のおすすめ業者</Link>にまとめています。</p>
 
         <ul>
           <li><strong>一括査定</strong> — 複数業者の査定額を一度に比較できる</li>

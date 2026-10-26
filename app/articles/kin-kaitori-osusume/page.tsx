@@ -80,6 +80,8 @@ export default function KinKaitoriOsusumePage() {
 
         <p>「金を売りたいけど、どこがいいのか分からない」——<strong>適した業者は目的によって異なります</strong>。査定額を比較したい場合は複数社比較、すぐに現金化したい場合は店頭、自宅完結なら出張。この記事では、当サイトが公式情報を直接確認した4社を目的別に整理し、選び方の基準・査定前の準備・当日の相場までまとめて案内します。</p>
 
+        <p className="text-sm bg-cream border border-warm-border rounded-lg p-3">この記事は<strong>「目的別にどの業者を選ぶか」</strong>の案内です。主要6社の手数料・買取方法・対応エリアを1つの表で見比べたい場合は<Link href="/#hikaku" className="text-accent-dark underline">トップページの金買取業者比較表</Link>、店頭・出張・宅配・一括査定という<strong>売り方の違い</strong>は<Link href="/articles/kaitori-houhou-hikaku/" className="text-accent-dark underline">金の買取方法4つの比較</Link>へ。</p>
+
         <h2 id="conclusion">目的別の金買取業者</h2>
         <div className="table-wrapper">
           <table>
