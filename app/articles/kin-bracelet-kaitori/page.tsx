@@ -83,7 +83,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: `金ブレスレット買取相場｜喜平10gの買取価格は約${K18_10G}円・30gは約${K18_30G}円【${priceDateJa}更新】`,
     datePublished: "2026-04-13",
-    dateModified: "2026-10-21",
+    dateModified: "2026-10-27",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -137,6 +137,17 @@ export default function KinBraceletKaitoriPage() {
         <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">金ブレスレット買取相場｜喜平10gの買取価格は約{K18_10G}円・30gは約{K18_30G}円</h1>
         <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
+
+        <div className="bg-white border-2 border-accent/30 rounded-xl p-5 md:p-6 mb-6 not-prose">
+          <p className="font-bold text-navy text-lg mb-3">結論：喜平ブレスレット10gの買取価格の目安（{priceDateJa}の公表価格で計算）</p>
+          <ul className="space-y-2 text-sm md:text-base">
+            {KIHEI_METALS.filter((m) => ["k18", "k24", "k14", "pt850"].includes(m.key)).map((m) => (
+              <li key={m.key}><strong>{m.label} 10g</strong> → 地金換算 <strong>{yen(metalPerG(m) * 10)}</strong>（1g {yen(metalPerG(m))} × 10g）</li>
+            ))}
+          </ul>
+          <p className="text-sm mt-3">計算式：田中貴金属工業の店頭買取価格（税込・1g。{priceDateJa}は金 {_TK.au_buyback_per_g.toLocaleString()}円・プラチナ {_TK.pt_buyback_per_g.toLocaleString()}円）× 品位（K18＝18/24、Pt850＝0.85）× 重さ。店の査定は手数料の分だけこれより下がるのがふつうで、当サイトの目安（掛け率0.96）ではK18 10gで約{K18_10G}円です。</p>
+          <p className="text-xs text-warm-gray mt-2">出典：<a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener noreferrer nofollow" className="underline">田中貴金属 貴金属価格情報</a>（{priceDateJa}公表分。公表ページが開けない日は最後に取得できた日の値のまま）。K22・K10・Pt900と、なんぼや公表値との比較は<a href="#kihei-10g" className="text-accent-dark underline">品位別10gの表</a>へ。</p>
+        </div>
 
         <TodayPriceAnswer purity="k18" />
 
