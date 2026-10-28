@@ -536,4 +536,4 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - ティファナ tifana.net/shipping/（200）: 「宅配買取のサービス・ECサイトをシステムリニューアルのため一時停止しております」が今日も表示中（再開日の記載なし）。サイト全体の反映は判断待ちのまま未変更
 - line-satei-seido: 大吉公式（トップ・/qa/・/contact/ 10/28）の事前査定は電話（「最短1分」）とメール相談のみ、SNS リンクは X/Facebook/Instagram/TikTok/YouTube で LINE なし。トップの meta description も「全国出張買取も可能！」（LINE の文言なし。/llms.txt には旧文「LINE買取も可能！」が残る＝古い自動生成とみて根拠にしない）→ 一覧の「大吉公式LINE」を削除し、確認日つき注記を追加。dateModified 10-28。他4社のうちなんぼやはトップに「LINEから査定」あり（10/28）、福ちゃん・ジュエルカフェは公式トップで LINE 査定の文言を確認できず（ジュエルカフェには /about-line/ ページあり・本文は取得できず）→ 未変更・次回照合候補
 - 🚨大吉の店舗数が公式で **2500店舗以上** に（/company/ 会社概要「店舗数 2500店舗以上」・トップ「全国2500店舗以上展開中」10/28）→ 「2,400店舗以上」を 22 ページ＋dealers.ts（223頁）＋generate-top15 で 2,500 に、daikichi-vs-nanboya の表「2,400+」と注記の確認日も更新
-- precheck ✅（296頁）・ASP 0・__next*.txt 削除。source 1212808 / deploy d69652584（09:23 push）
+- precheck ✅（296頁）・ASP 0・__next*.txt 削除。source 1212808 / deploy d69652584（09:23 push・20分反映なし）→ 空コミット a476098d2 で 09:46 本番反映（line-satei 注記2・TOP 2,500×4/2,400×0・tokyo・daikichi-vs-nanboya を ?cb= で確認）
