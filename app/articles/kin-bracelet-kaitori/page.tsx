@@ -340,10 +340,10 @@ export default function KinBraceletKaitoriPage() {
         <ServiceCapture id="hikakaku" />
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数業者に一括査定。喜平ブレスレットのような高額品こそ、複数社を比較するメリットが大きくなります。</p>
 
-        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,500店舗以上で即現金化</h3>
 
         <ServiceCapture id="daikichi" />
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）。ブレスレットをその場で計量・査定し即現金化。公式の金・貴金属ページには「K18 喜平ブレスレット」などの買取参考価格が掲載されています（2026年10月11日確認）。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,500店舗以上（公式表記・2026年10月確認）。ブレスレットをその場で計量・査定し即現金化。公式の金・貴金属ページには「K18 喜平ブレスレット」などの買取参考価格が掲載されています（2026年10月11日確認）。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 

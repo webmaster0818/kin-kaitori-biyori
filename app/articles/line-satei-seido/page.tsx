@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "【2026年最新】金買取のLINE査定・写真査定の精度｜実物査定との差と活用法",
     description: "金買取のLINE査定・写真査定がどこまで信頼できるか、業者ごとの精度差、実物査定との金額差、効率的な活用法を解説します。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-10-28",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -109,11 +109,11 @@ export default function Page() {
           <p>LINE等のメッセージアプリ・メールで金製品の写真を送り、業者から概算査定を受ける方法。最近では多くの大手業者が対応:</p>
           <ul>
             <li>ヒカカク！LINE査定</li>
-            <li>大吉公式LINE</li>
             <li>なんぼやLINE査定</li>
             <li>福ちゃんLINE査定</li>
             <li>ジュエルカフェLINE査定</li>
           </ul>
+          <p className="text-sm text-warm-gray">※買取大吉は、公式サイトの事前査定が電話（公式表記「最短1分」）とメールでの相談で、LINE査定の記載はありません（2026年10月28日、買取大吉公式サイトのトップ・よくあるご質問・お問い合わせページで確認）。</p>
 
           <h2>2. 精度の限界</h2>
           <p>写真査定は<strong>概算金額</strong>のみ。以下の理由で実物査定と差が出ることがあります:</p>

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 const COMPANIES = [
   { name: "ヒカカク！", method: "一括査定", url: "https://hikakaku.com", point: "複数業者にまとめて査定を依頼し、査定額を比較できる", fee: "無料", area: "全国（申し込みはWeb・LINE。取引方法と対応エリアは申し込み先の業者による）", fit: "複数社の査定額を比較したい方・相見積もりの手間を省きたい方" },
-  { name: "買取大吉", method: "店頭買取", url: "https://kaitori-daikichi.jp", point: "全国2,400店舗以上。その場で査定・即現金化", fee: "査定・キャンセル無料", area: "店頭＝全国2,400店舗以上／出張＝日本全国（公式表記）", fit: "近くの店舗でその場で現金化したい人" },
+  { name: "買取大吉", method: "店頭買取", url: "https://kaitori-daikichi.jp", point: "全国2,500店舗以上。その場で査定・即現金化", fee: "査定・キャンセル無料", area: "店頭＝全国2,500店舗以上／出張＝日本全国（公式表記）", fit: "近くの店舗でその場で現金化したい人" },
   { name: "ウリエル", method: "出張買取", url: "https://uriel-cuore.co.jp", point: "出張買取が中心（店頭は川崎店のみ・宅配の案内なし）。出張費・査定料すべて無料で自宅完結", fee: "査定・出張・キャンセル無料", area: "関東・中部（岐阜・静岡・愛知）・近畿・中国・四国・九州（沖縄県は対象外・一部市町村除く）", fit: "自宅にいながら売却を完結したい人・量が多い人" },
   { name: "ティファナ", method: "店頭・出張（宅配は一時停止中）", url: "https://tifana.net", point: "店頭・出張から選べる。宅配買取は公式で「システムリニューアルのため一時停止」と案内（2026年10月26日確認）", fee: "査定・キャンセル無料（宅配返送は対象外品のみ客負担）", area: "店頭＝東京都・埼玉県の店舗／出張＝東京・埼玉・神奈川・千葉の一部／宅配＝全国（一時停止中）", fit: "ライフスタイルに合わせて方法を選びたい人" },
 ];
@@ -88,7 +88,7 @@ export default function KinKaitoriOsusumePage() {
             <thead><tr><th>目的</th><th>おすすめ</th><th>理由</th></tr></thead>
             <tbody>
               <tr><td>複数社の<strong>査定額を比較</strong>したい</td><td><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow">ヒカカク！</a>（一括査定）</td><td>複数業者の査定額をまとめて比較でき、相見積もりの手間を省ける</td></tr>
-              <tr><td><strong>今日中に現金化</strong>したい</td><td><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow">買取大吉</a>（店頭）</td><td>全国2,400店舗以上。その場で査定・即現金化</td></tr>
+              <tr><td><strong>今日中に現金化</strong>したい</td><td><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow">買取大吉</a>（店頭）</td><td>全国2,500店舗以上。その場で査定・即現金化</td></tr>
               <tr><td><strong>自宅で完結</strong>したい・量が多い</td><td><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow">ウリエル</a>（出張）</td><td>出張費・査定料すべて無料の出張買取が中心</td></tr>
               <tr><td>買取<strong>方法を選びたい</strong></td><td><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow">ティファナ</a>（店頭/出張）</td><td>店頭・出張から都合に合わせて選べる。宅配買取は公式で「システムリニューアルのため一時停止」と案内（2026年10月26日確認）</td></tr>
             </tbody>

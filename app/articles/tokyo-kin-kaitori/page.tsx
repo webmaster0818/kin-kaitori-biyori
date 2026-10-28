@@ -276,7 +276,7 @@ export default function TokyoKinKaitoriPage() {
 
         <ServiceCapture id="daikichi" />
 
-        <p>買取大吉は全国2,400店舗以上を展開する大手チェーンで、東京都内にも<strong>新宿・銀座・池袋・渋谷・上野</strong>をはじめ多数の店舗があります。</p>
+        <p>買取大吉は全国2,500店舗以上を展開する大手チェーンで、東京都内にも<strong>新宿・銀座・池袋・渋谷・上野</strong>をはじめ多数の店舗があります。</p>
 
         <ul>
           <li>予約不要。飛び込みで即日査定可能</li>

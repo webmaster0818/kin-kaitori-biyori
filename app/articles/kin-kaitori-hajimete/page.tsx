@@ -200,7 +200,7 @@ export default function KinKaitoriHajimetePage() {
             <thead><tr><th>業者名</th><th>方式</th><th>初心者へのおすすめポイント</th></tr></thead>
             <tbody>
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者を比較できるので初めての方でも比較しやすい</td></tr>
-              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,400店舗以上（公式表記・2026年10月確認）。予約不要で店頭査定</td></tr>
+              <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,500店舗以上（公式表記・2026年10月確認）。予約不要で店頭査定</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で対面査定。持ち運びの心配なし</td></tr>
               <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>好きな方法を選べる。初めてでも安心</td></tr>
             </tbody>

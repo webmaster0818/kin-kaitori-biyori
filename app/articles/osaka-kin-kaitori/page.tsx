@@ -284,7 +284,7 @@ export default function OsakaKinKaitoriPage() {
 
         <ServiceCapture id="daikichi" />
 
-        <p>買取大吉は全国2,400店舗以上を展開する大手チェーンで、大阪には<strong>梅田・難波・天王寺・堺</strong>など府内各所に店舗があります。</p>
+        <p>買取大吉は全国2,500店舗以上を展開する大手チェーンで、大阪には<strong>梅田・難波・天王寺・堺</strong>など府内各所に店舗があります。</p>
 
         <ul>
           <li>予約なしで来店可能</li>

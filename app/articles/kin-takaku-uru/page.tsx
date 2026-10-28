@@ -346,7 +346,7 @@ export default function KinTakakuUruPage() {
                 <td><strong>買取大吉</strong></td>
                 <td>店頭買取</td>
                 <td>すぐに現金化したい方</td>
-                <td>全国2,400店舗以上。その場で査定・現金受取</td>
+                <td>全国2,500店舗以上。その場で査定・現金受取</td>
               </tr>
               <tr>
                 <td><strong>ウリエル</strong></td>

@@ -226,10 +226,10 @@ export default function KinYubiwaKaitoriPage() {
         <ServiceCapture id="hikakaku" />
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数業者に一括査定。指輪の写真を送るだけで概算査定を受けられます。宝石付き・ブランドリングも対応。</p>
 
-        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,500店舗以上で即現金化</h3>
 
         <ServiceCapture id="daikichi" />
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上で予約不要。その場で計量・査定し即現金化。ブランドリングの査定にも対応しています。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,500店舗以上で予約不要。その場で計量・査定し即現金化。ブランドリングの査定にも対応しています。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 

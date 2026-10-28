@@ -35,7 +35,7 @@ export const DEALERS: Dealer[] = [
     name: "買取大吉",
     url: "https://kaitori-daikichi.jp/",
     source: "https://kaitori-daikichi.jp/",
-    shops: "全国 2,400 店舗以上（2026年10月 公式表記）",
+    shops: "全国 2,500 店舗以上（2026年10月 公式表記）",
     visitArea: "全国対応（離島・一部地域は対象外の場合あり）",
     speed: "電話無料査定 最短1分／店頭査定 約10〜15分（1点）",
     fees: "査定料・出張料・買取手数料・キャンセル料すべて無料",

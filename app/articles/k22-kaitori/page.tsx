@@ -275,14 +275,14 @@ export default function K22KaitoriPage() {
           <li>査定料・利用料すべて無料</li>
         </ul>
 
-        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,500店舗以上で即現金化</h3>
 
         <ServiceCapture id="daikichi" />
 
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上（公式表記・2026年10月確認）を展開する大手買取チェーンです。店頭に持ち込めば、その場で査定・即現金化できます。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,500店舗以上（公式表記・2026年10月確認）を展開する大手買取チェーンです。店頭に持ち込めば、その場で査定・即現金化できます。</p>
 
         <ul>
-          <li>全国2,400店舗以上（予約不要）</li>
+          <li>全国2,500店舗以上（予約不要）</li>
           <li>刻印がなくても比重などで品位を確認して査定（公式表記）</li>
           <li>査定料・出張費すべて無料</li>
         </ul>

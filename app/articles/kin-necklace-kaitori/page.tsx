@@ -258,10 +258,10 @@ export default function KinNecklaceKaitoriPage() {
         <ServiceCapture id="hikakaku" />
         <p><a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！</a>は複数の買取業者に一括で査定を依頼できるサービス。ネックレスの純度がわからなくても、写真を送るだけで概算査定を受けられます。</p>
 
-        <h3>買取大吉 — 全国2,400店舗以上で即現金化</h3>
+        <h3>買取大吉 — 全国2,500店舗以上で即現金化</h3>
 
         <ServiceCapture id="daikichi" />
-        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,400店舗以上。ネックレスをその場で計量・査定し、即現金化。チェーン切れや刻印なしの品も比重などで品位を確認して査定（公式表記）。</p>
+        <p><a href="https://kaitori-daikichi.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">買取大吉</a>は全国2,500店舗以上。ネックレスをその場で計量・査定し、即現金化。チェーン切れや刻印なしの品も比重などで品位を確認して査定（公式表記）。</p>
 
         <h3>ウリエル — 自宅で完結する出張買取</h3>
 
