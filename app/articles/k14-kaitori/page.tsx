@@ -337,11 +337,11 @@ export default function K14KaitoriPage() {
 
         <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながらプロの査定を受けられます。大量のアクセサリーをまとめて売りたい場合に便利です。</p>
 
-        <h3>ティファナ — 3つの方法から選べる</h3>
+        <h3>ティファナ — 店頭・出張に対応（宅配は一時停止中）</h3>
 
         <ServiceCapture id="tifana" />
 
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。忙しくて店舗に行けない方でも、宅配や出張で査定を依頼できます。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張に対応しています（出張買取は東京・埼玉・神奈川・千葉の一部地域）。宅配買取は公式サイトで「システムリニューアルのため一時停止」と案内されています（2026年10月29日確認）。</p>
 
         <h2>K14の売却に関する税金</h2>
 

@@ -268,10 +268,10 @@ export default function KinNecklaceKaitoriPage() {
         <ServiceCapture id="uriel" />
         <p><a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ウリエル</a>は出張買取が中心の買取専門店です（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし。出張買取は沖縄県など一部対象外の地域あり）。自宅にいながら査定を受けられ、複数のネックレスをまとめて売りたい場合に便利です。</p>
 
-        <h3>ティファナ — 3つの方法から選べる</h3>
+        <h3>ティファナ — 店頭・出張に対応（宅配は一時停止中）</h3>
 
         <ServiceCapture id="tifana" />
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3方法に対応。ライフスタイルに合わせて選べる柔軟さが魅力です。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張に対応しています。宅配買取は公式サイトで「システムリニューアルのため一時停止」と案内されています（2026年10月29日確認）。</p>
 
         <h2>よくある質問（FAQ）</h2>
 

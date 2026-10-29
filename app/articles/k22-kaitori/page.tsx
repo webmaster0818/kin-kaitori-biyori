@@ -299,14 +299,14 @@ export default function K22KaitoriPage() {
           <li>キャンセル料無料（金額に納得できなければ断れる）</li>
         </ul>
 
-        <h3>ティファナ — 3つの方法から選べる</h3>
+        <h3>ティファナ — 店頭・出張に対応（宅配は一時停止中）</h3>
 
         <ServiceCapture id="tifana" />
 
-        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張・宅配の3つの方法から選べる買取サービスです（出張買取は東京・埼玉・神奈川・千葉の一部地域、宅配買取は全国）。ライフスタイルに合わせた柔軟な対応が魅力です。</p>
+        <p><a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ティファナ</a>は店頭・出張に対応する買取サービスです（出張買取は東京・埼玉・神奈川・千葉の一部地域）。宅配買取は公式サイトで「システムリニューアルのため一時停止」と案内されています（2026年10月29日確認）。</p>
 
         <ul>
-          <li>店頭・出張・宅配の3方法対応</li>
+          <li>店頭・出張に対応（宅配買取は一時停止中・公式 2026年10月29日確認）</li>
           <li>すべての方法で査定料無料</li>
           <li>金貨・ジュエリーの両方に対応</li>
         </ul>

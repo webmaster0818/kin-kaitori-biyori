@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: string; hensou: string; cancel: string; furikomi: string; methods: string }> = [
   { name: "買取大吉", satei: "無料", shucchou: "無料（全国47都道府県※離島等除く）", takuhai: "宅配なし", hensou: "—", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張" },
   { name: "ウリエル", satei: "無料", shucchou: "無料（関東・中部（岐阜・静岡・愛知）・近畿・中国・四国・九州（沖縄県は対象外・一部市町村除く））", takuhai: "宅配なし（公式に案内なし）", hensou: "—", cancel: "無料", furikomi: "記載なし", methods: "出張中心・店頭（川崎店）・催事" },
-  { name: "ティファナ", satei: "無料", shucchou: "無料（東京・埼玉・神奈川・千葉の一部）", takuhai: "送料無料・キット無料", hensou: "無料（対象外品のみ客負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張・宅配" },
+  { name: "ティファナ", satei: "無料", shucchou: "無料（東京・埼玉・神奈川・千葉の一部）", takuhai: "一時停止中（公式 2026年10月29日確認）", hensou: "無料（対象外品のみ客負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張（宅配は一時停止中）" },
   { name: "なんぼや", satei: "無料", shucchou: "無料（全国。遠方・日程によりお伺いできない場合あり）", takuhai: "送料・キット無料", hensou: "無料", cancel: "無料", furikomi: "無料（公式FAQ）", methods: "店頭・出張・宅配・オンライン" },
   { name: "バイセル", satei: "無料", shucchou: "無料（離島除く全国）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料（出張買取は8日間返品保証）", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "福ちゃん", satei: "無料", shucchou: "無料（対応エリアの記載なし）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },

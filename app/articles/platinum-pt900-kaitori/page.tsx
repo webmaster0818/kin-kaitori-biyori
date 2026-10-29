@@ -240,7 +240,7 @@ export default function PlatinumPt900KaitoriPage() {
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者のプラチナ買取価格を一括比較</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>純度をその場で測定・即現金化</td><td>即現金化したい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で査定が完結・出張費無料</td><td>自宅で完結したい</td></tr>
-              <tr><td><strong>ティファナ</strong></td><td>店頭/出張/宅配</td><td>3つの方法から選択・金とまとめて査定可能</td><td>方法を選びたい</td></tr>
+              <tr><td><strong>ティファナ</strong></td><td>店頭/出張（宅配は一時停止中）</td><td>店頭・出張に対応（宅配買取は一時停止中・公式 2026年10月29日確認）。金とまとめて査定可能</td><td>方法を選びたい</td></tr>
             </tbody>
           </table>
         </div>

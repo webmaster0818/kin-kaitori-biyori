@@ -291,8 +291,8 @@ export default function TiffanyKaitoriPage() {
               </tr>
               <tr>
                 <td><strong>ティファナ</strong></td>
-                <td>出張/店頭/宅配</td>
-                <td>3つの方法から選択可能。ブランド品・貴金属まとめて査定可能</td>
+                <td>店頭/出張（宅配は一時停止中）</td>
+                <td>店頭・出張に対応（宅配買取は一時停止中・公式 2026年10月29日確認）。ブランド品・貴金属まとめて査定可能</td>
                 <td>方法を選びたい</td>
               </tr>
             </tbody>

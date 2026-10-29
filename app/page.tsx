@@ -44,8 +44,8 @@ const services = [
   {
     name: "ティファナ",
     capture: "tifana" as ServiceCaptureId,
-    method: "出張/店頭/宅配",
-    description: "店頭・出張・宅配の3つの方法に対応（出張・店頭は対応地域に限りあり）",
+    method: "出張/店頭",
+    description: "店頭・出張に対応（対応地域に限りあり）。宅配買取は一時停止中（公式 2026年10月29日確認）",
     target: "売却方法を選びたい方",
     url: "https://tifana.net",
   },

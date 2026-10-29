@@ -449,7 +449,7 @@ export default function KowaretaKinKaitoriPage() {
                 </tr>
                 <tr>
                   <td><strong>ティファナ</strong></td>
-                  <td>出張/店頭/宅配</td>
+                  <td>店頭/出張（宅配は一時停止中）</td>
                   <td>壊れた金・刻印なしも積極的に買取。まとめ査定で効率的</td>
                   <td>方法を選びたい</td>
                 </tr>

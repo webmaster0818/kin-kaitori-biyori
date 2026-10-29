@@ -287,7 +287,7 @@ export default function YokohamaKinKaitoriPage() {
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>可能</td><td>不可</td><td>買取大吉、ゴールドプラザ</td></tr>
               <tr><td><strong>出張買取</strong></td><td>可能（当日〜翌日）</td><td>可能</td><td>ウリエル、ティファナ</td></tr>
-              <tr><td><strong>宅配買取</strong></td><td>不可（数日〜1週間）</td><td>可能</td><td>ティファナ</td></tr>
+              <tr><td><strong>宅配買取</strong></td><td>不可（数日〜1週間）</td><td>可能</td><td>—（ティファナは一時停止中）</td></tr>
               <tr><td><strong>一括査定</strong></td><td>不可</td><td>可能</td><td>ヒカカク！</td></tr>
             </tbody>
           </table>
@@ -328,8 +328,8 @@ export default function YokohamaKinKaitoriPage() {
               </tr>
               <tr>
                 <td><strong>ティファナ</strong></td>
-                <td>出張/宅配</td>
-                <td>出張は東京・埼玉・神奈川・千葉の一部地域。店舗は東京・埼玉のみ。宅配は全国・送料無料</td>
+                <td>出張（宅配は一時停止中）</td>
+                <td>出張は東京・埼玉・神奈川・千葉の一部地域。店舗は東京・埼玉のみ。宅配買取は一時停止中（公式 2026年10月29日確認）</td>
                 <td>方法を選びたい</td>
               </tr>
             </tbody>

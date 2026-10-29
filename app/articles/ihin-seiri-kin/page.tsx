@@ -308,7 +308,7 @@ export default function IhinSeiriKinPage() {
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数業者の買取価格を一括比較。最高値が見つかりやすい</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>全国2,500店舗以上。遺品のまとめ査定に対応</td><td>近くの店舗で売りたい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅に出張して査定。大量の遺品もその場で対応</td><td>自宅で完結したい</td></tr>
-              <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>3つの方法から選択。遺品のまとめ買取に対応</td><td>方法を選びたい</td></tr>
+              <tr><td><strong>ティファナ</strong></td><td>店頭/出張（宅配は一時停止中）</td><td>店頭・出張に対応（宅配買取は一時停止中・公式 2026年10月29日確認）。遺品のまとめ買取に対応</td><td>方法を選びたい</td></tr>
             </tbody>
           </table>
         </div>

@@ -225,7 +225,7 @@ export default function OmiyaKinKaitoriPage() {
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>大宮（埼玉）の業者+全国の業者に一括見積もり。最高値が見つかりやすい</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>大宮（埼玉）市内に複数店舗あり。即日現金化可能</td><td>即現金化したい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>埼玉エリアで出張対応。出張費・査定料無料</td><td>自宅で完結したい</td></tr>
-              <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>出張は東京・埼玉・神奈川・千葉の一部地域、店舗は東京・埼玉。宅配は全国・送料無料。大宮が出張の対象地域かは申し込み時に確認を</td><td>方法を選びたい</td></tr>
+              <tr><td><strong>ティファナ</strong></td><td>店頭/出張（宅配は一時停止中）</td><td>出張は東京・埼玉・神奈川・千葉の一部地域、店舗は東京・埼玉。宅配買取は一時停止中（公式 2026年10月29日確認）。大宮が出張の対象地域かは申し込み時に確認を</td><td>方法を選びたい</td></tr>
             </tbody>
           </table>
         </div>

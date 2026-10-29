@@ -144,7 +144,7 @@ export default function MatsusakaKinKaitoriPage() {
         <ul>
           <li><strong>電車で来て歩いて行きたい：</strong>西出口の大阪屋（徒歩10分・質屋で金・プラチナ・ダイヤの買取に対応）、または南口のエコリング（徒歩約15分。水曜定休）</li>
           <li><strong>車で行ける・相見積もりを取りたい：</strong>おたからや アドバンスモール松阪店（車で5分・月曜定休）と買取大吉 トライアル松阪店（車で6分・年中無休）を回ると、2社の査定額を比べられます</li>
-          <li><strong>店に行かずに売りたい：</strong>ウリエルは公式の出張エリアに三重県を含みます（一部市町村を除く）。ティファナは三重県が出張エリア外のため宅配買取（全国・送料無料）で利用できます</li>
+          <li><strong>店に行かずに売りたい：</strong>ウリエルは公式の出張エリアに三重県を含みます（一部市町村を除く）。ティファナは三重県が出張エリア外で、宅配買取も公式サイトで「システムリニューアルのため一時停止」と案内されています（2026年10月29日確認）</li>
         </ul>
 
         <h2>松阪の金買取相場（毎日自動更新）</h2>
@@ -166,7 +166,7 @@ export default function MatsusakaKinKaitoriPage() {
             <tbody>
               <tr><td><strong>店頭買取</strong></td><td>買取大吉</td><td>即日現金化・目の前で計量</td><td>すぐに現金化したい方</td></tr>
               <tr><td><strong>出張買取</strong></td><td>ウリエル</td><td>自宅で完結・量が多い場合も依頼しやすい</td><td>外出が難しい方</td></tr>
-              <tr><td><strong>宅配買取</strong></td><td>ティファナ</td><td>全国対応・送料無料（公式表記）</td><td>店舗へ行く時間がない方</td></tr>
+              <tr><td><strong>宅配買取</strong></td><td>ティファナ（一時停止中・公式 2026年10月29日確認）</td><td>ティファナの宅配買取は公式サイトで「システムリニューアルのため一時停止」と案内されています。再開は公式サイトでご確認ください</td><td>—</td></tr>
               <tr><td><strong>一括査定</strong></td><td>ヒカカク！</td><td>複数業者を一度に比較</td><td>複数社の査定額を比較したい方</td></tr>
             </tbody>
           </table>
@@ -188,7 +188,7 @@ export default function MatsusakaKinKaitoriPage() {
           <li><strong>ヒカカク！</strong>：複数の業者へ一括で査定を依頼でき、査定額を比較できる</li>
           <li><strong>買取大吉</strong>：全国展開の大手チェーン。予約不要で即日現金化に対応</li>
           <li><strong>ウリエル</strong>：出張買取が中心（店頭買取は川崎店のみ・宅配買取の案内は公式サイトになし）。出張費・査定料すべて無料</li>
-          <li><strong>ティファナ</strong>：店頭・出張・宅配の3方式に対応</li>
+          <li><strong>ティファナ</strong>：店頭・出張に対応（宅配買取は一時停止中・公式 2026年10月29日確認）</li>
         </ul>
         <ServiceCaptureGrid />
 

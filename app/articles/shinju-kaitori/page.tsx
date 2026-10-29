@@ -203,7 +203,7 @@ export default function ShinjuKaitoriPage() {
               <tr><td><strong>ヒカカク！</strong></td><td>一括査定</td><td>複数の宝石買取業者を比較可能</td><td>最高値で売りたい</td></tr>
               <tr><td><strong>買取大吉</strong></td><td>店頭買取</td><td>真珠を含む宝石全般に対応</td><td>即現金化したい</td></tr>
               <tr><td><strong>ウリエル</strong></td><td>出張買取</td><td>自宅で完結。出張費無料</td><td>自宅で完結したい</td></tr>
-              <tr><td><strong>ティファナ</strong></td><td>出張/店頭/宅配</td><td>宝石を含む幅広い品目に対応</td><td>方法を選びたい</td></tr>
+              <tr><td><strong>ティファナ</strong></td><td>店頭/出張（宅配は一時停止中）</td><td>宝石を含む幅広い品目に対応</td><td>方法を選びたい</td></tr>
             </tbody>
           </table>
         </div>
