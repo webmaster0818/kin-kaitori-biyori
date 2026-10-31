@@ -28,7 +28,7 @@ function FaqSchema() {
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-10-26", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-10-31", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -47,7 +47,7 @@ const ROWS: Array<{ name: string; satei: string; shucchou: string; takuhai: stri
   { name: "ティファナ", satei: "無料", shucchou: "無料（東京・埼玉・神奈川・千葉の一部）", takuhai: "一時停止中（公式 2026年10月29日確認）", hensou: "無料（対象外品のみ客負担）", cancel: "無料", furikomi: "記載なし", methods: "店頭・出張（宅配は一時停止中）" },
   { name: "なんぼや", satei: "無料", shucchou: "無料（全国。遠方・日程によりお伺いできない場合あり）", takuhai: "送料・キット無料", hensou: "無料", cancel: "無料", furikomi: "無料（公式FAQ）", methods: "店頭・出張・宅配・オンライン" },
   { name: "バイセル", satei: "無料", shucchou: "無料（離島除く全国）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料（出張買取は8日間返品保証）", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
-  { name: "福ちゃん", satei: "無料", shucchou: "無料（対応エリアの記載なし）", takuhai: "送料・キット無料", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
+  { name: "福ちゃん", satei: "無料", shucchou: "無料（対応エリアの記載なし）", takuhai: "送料・キット無料（宅配の申込は電話のみ・公式 2026年10月31日確認）", hensou: "客負担（着払い）", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "ザ・ゴールド", satei: "無料", shucchou: "無料（沖縄県と一部の離島を除く全国）", takuhai: "送料無料（着払い発送）", hensou: "客負担", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
   { name: "おたからや", satei: "無料", shucchou: "無料（全国）", takuhai: "宅配なし", hensou: "—", cancel: "記載なし（査定後キャンセル可とは明記）", furikomi: "記載なし", methods: "店頭・出張" },
   { name: "大黒屋", satei: "無料", shucchou: "無料（相談・手続きすべて無料。訪問査定は公式掲載の対象エリアのみ）", takuhai: "送料無料（往復・店負担）", hensou: "無料", cancel: "無料", furikomi: "無料（会社負担）", methods: "店頭・出張・宅配" },
