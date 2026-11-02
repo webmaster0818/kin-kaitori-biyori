@@ -527,7 +527,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "ueda-kin-kaitori": {
-    updated: "2026-10-22",
+    updated: "2026-11-02",
     stores: [
       { name: "買取大吉 上田天神店", chain: "買取大吉", address: "長野県上田市天神3丁目4-25 デンセンショールーム", hours: "10:00〜19:00", closed: "毎週日曜日", access: "JR上田駅お城口より徒歩10分", tel: "0268-75-0277", sourceUrl: "https://www.kaitori-daikichi.jp/store/uedatenjin/" },
       { name: "ザ・ゴールド 上田店", chain: "ザ・ゴールド", address: "長野県上田市中央東2-11", postalCode: "386-0013", hours: "10:00〜18:00", closed: "年中無休（年末年始は除く）", access: "国道18号線産業道路沿い（下川原柳バス停から中央東交差点方面へ徒歩10分）", tel: "0268-28-7776", sourceUrl: "https://www.the-gold.jp/item/metal/shop/45.html" },
@@ -535,7 +535,7 @@ export const localStores: Record<string, CityStores> = {
       { name: "買取専門店さすがや アリオ上田店", chain: "さすがや", address: "長野県上田市天神3-5-1 アリオ上田 2F", postalCode: "386-0025", hours: "10:00〜20:00", closed: "アリオ上田に準ずる", access: "JR上田駅 温泉口から徒歩5分", sourceUrl: "https://sasugaya.jp/shop/ueda/" },
       { name: "キングラム 上田インター店", chain: "キングラム", address: "長野県上田市住吉277-17", postalCode: "386-0002", hours: "平日10:00〜18:00／土日祝10:00〜17:00", closed: "年中無休（年末年始・特別休業を除く）", access: "上田菅平インターから上田市街方面・長島の交差点（車で上田駅から約10分）", sourceUrl: "https://kingram.jp/shop/uedainter/" },
       { name: "買取店わかば 上田原店", chain: "わかば", address: "長野県上田市上田原1175-10 バードビル1F", postalCode: "386-1102", hours: "10:00〜18:00", closed: "日曜日・年末年始", access: "上田電鉄別所線 上田原駅から徒歩約7分（創造館入口交差点の角・無料駐車場あり）", sourceUrl: "https://wakaba-shop.jp/shop/nagano-uedahara/" },
-      { name: "ジュエルカフェ イオンスタイル上田店", chain: "ジュエルカフェ", address: "長野県上田市常田2丁目12-18 イオンスタイル上田1階", postalCode: "386-0018", hours: "10:00〜19:00", access: "上田駅から徒歩14分・車で5分（公式の施設紹介）", tel: "0268-28-8872", sourceUrl: "https://jewel-cafe.jp/shop/chubu/nagano/aeon-ueda/" },
+      { name: "ジュエルカフェ イオンスタイル上田店", chain: "ジュエルカフェ", address: "長野県上田市常田2丁目12-18 イオンスタイル上田1階", postalCode: "386-0018", hours: "10:00〜19:00", access: "上田駅から徒歩14分・車で5分（公式の施設紹介。アクセス案内は徒歩約15分）", tel: "0268-28-8872", sourceUrl: "https://jewel-cafe.jp/shop/chubu/nagano/aeon-ueda/" },
     ],
   },
   "yokkaichi-kin-kaitori": {

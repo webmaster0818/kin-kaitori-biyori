@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "上田駅・八木沢駅・中塩田駅の金買取はどこ？別所線沿線から行ける店と上田市の実在7店・今日の相場【2026年10月】",
     description: "中塩田駅・八木沢駅・神畑駅の徒歩圏に金買取店はなく、別所線で上田原駅のわかば（徒歩約7分）か上田駅へ。上田駅は温泉口徒歩5分のさすがや、お城口徒歩5分のおたからやなど3店。上田市の7店を住所・営業時間・駐車場で比較（2026年10月公式確認）。",
     datePublished: "2026-06-05",
-    dateModified: "2026-10-26",
+    dateModified: "2026-11-02",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -47,9 +47,9 @@ function FaqSchema() {
       { "@type": "Question", name: "上田で金買取の価格が高い業者の選び方は？", acceptedAnswer: { "@type": "Answer", text: "上田では複数の買取業者を比較することが重要です。同じ純度・重量でも、業者によって1gあたりの査定額が異なる場合があります。ヒカカク！の一括査定などで複数社から見積もりを取り、査定額を比較したうえで業者を選ぶことをおすすめします。" } },
       { "@type": "Question", name: "上田で金を即日現金化できますか？", acceptedAnswer: { "@type": "Answer", text: "はい、店頭買取であれば査定後その場で現金を受け取れます。上田駅から徒歩圏のさすがや アリオ上田店（温泉口徒歩5分）、おたからや 上田海野町店（お城口徒歩5分）、買取大吉 上田天神店（お城口徒歩10分）などの店頭なら、査定に納得すればその日のうちに現金化できます。" } },
       { "@type": "Question", name: "八木沢駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "八木沢駅（上田電鉄別所線）・別所温泉駅の周辺には、各社公式で確認できる金買取店はありません（2026年10月17日確認）。別所線で上田原駅まで行けば買取店わかば 上田原店（上田原駅から徒歩約7分・日曜定休）、終点の上田駅まで行けば、さすがや アリオ上田店（温泉口から徒歩5分）・おたからや 上田海野町店（お城口から徒歩5分）・買取大吉 上田天神店（お城口より徒歩10分）があります。" } },
-      { "@type": "Question", name: "神畑駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "当サイトが公式店舗ページで確認した上田市の7店に、神畑駅（上田電鉄別所線）を最寄りとして案内している店はありません（2026年10月26日時点）。上田方面へ2駅の上田原駅で降りれば買取店わかば 上田原店（徒歩約7分・日曜定休）、6駅先の終点・上田駅に出れば、さすがや アリオ上田店（温泉口から徒歩5分）、おたからや 上田海野町店（お城口から徒歩5分）、買取大吉 上田天神店（お城口より徒歩10分）に歩いて行けます。" } },
+      { "@type": "Question", name: "神畑駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "当サイトが公式店舗ページで確認した上田市の7店に、神畑駅（上田電鉄別所線）を最寄りとして案内している店はありません（2026年11月2日時点）。上田方面へ2駅の上田原駅で降りれば買取店わかば 上田原店（徒歩約7分・日曜定休）、6駅先の終点・上田駅に出れば、さすがや アリオ上田店（温泉口から徒歩5分）、おたからや 上田海野町店（お城口から徒歩5分）、買取大吉 上田天神店（お城口より徒歩10分）に歩いて行けます。" } },
       { "@type": "Question", name: "中塩田駅の近くに金買取店はありますか？", acceptedAnswer: { "@type": "Answer", text: "中塩田駅の徒歩圏には金・貴金属の買取店を確認できませんでした（2026年10月17日確認）。別所線の上田原駅で降りれば買取店わかば 上田原店（徒歩約7分）、終点の上田駅に出れば、さすがや アリオ上田店（温泉口から徒歩5分）、おたからや 上田海野町店（お城口から徒歩5分）、買取大吉 上田天神店（お城口より徒歩10分）に歩いて行けます。外出が難しい場合は、買取大吉の出張買取（上田天神店の公式ページに「日本全国OK」と記載）や宅配買取が使えます。" } },
-      { "@type": "Question", name: "上田で車で行ける（駐車場がある）金買取店は？", acceptedAnswer: { "@type": "Answer", text: "公式の店舗ページに駐車場の記載があるのは、買取大吉 上田天神店（専用駐車場・来店客は無料）、おたからや 上田海野町店（店舗裏に専用2台＋海野町パーク立体駐車場）、ザ・ゴールド 上田店（CoCo壱番屋と共同）、キングラム 上田インター店（駐車場完備）、ジュエルカフェ イオンスタイル上田店（イオンスタイル上田の駐車場）です（2026年10月22日確認）。わかば 上田原店も無料駐車場ありと記載されています（10月23日確認）。" } },
+      { "@type": "Question", name: "上田で車で行ける（駐車場がある）金買取店は？", acceptedAnswer: { "@type": "Answer", text: "公式の店舗ページに駐車場の記載があるのは、買取大吉 上田天神店（専用駐車場・来店客は無料）、おたからや 上田海野町店（店舗裏に専用2台＋海野町パーク立体駐車場）、ザ・ゴールド 上田店（CoCo壱番屋と共同）、キングラム 上田インター店（駐車場完備）、ジュエルカフェ イオンスタイル上田店（イオンスタイル上田の駐車場）です（2026年11月2日確認）。わかば 上田原店も無料駐車場ありと記載されています。" } },
       { "@type": "Question", name: "上田で出張買取は利用できますか？", acceptedAnswer: { "@type": "Answer", text: "長野県は、ウリエル・ティファナとも公式の出張買取対応エリアに含まれていません（2026年10月17日確認）。なお、ティファナの宅配買取は公式サイトで「システムリニューアルのため一時停止」と案内されています（2026年10月29日確認）。" } },
       { "@type": "Question", name: "上田の金買取で必要な持ち物は？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートなど）が必須です。古物営業法で買取時の身分証提示が義務付けられています。保証書や箱などの付属品があれば、査定額が上がる場合があります。" } },
       { "@type": "Question", name: "上田と都心部で金の買取価格に差はありますか？", acceptedAnswer: { "@type": "Answer", text: "純度・重量が同じなら金の地金価値は全国共通ですが、業者の経費や競争状況により提示額に差が出ます。一括査定や宅配買取を利用すれば、地域を問わず複数の業者の査定額を比較できます。" } }
@@ -117,7 +117,7 @@ export default function UedaKinKaitoriPage() {
             <li><strong>上田原駅</strong>（別所線）→ 買取店わかば 上田原店（徒歩約7分・10:00〜18:00・日曜定休）</li>
             <li><strong>神畑駅・中塩田駅・八木沢駅</strong>（別所線）→ 徒歩圏に公式で確認できる店なし。上田方面へ神畑から2駅・中塩田から5駅の上田原駅（わかば）か、終点の上田駅（上の3店）へ。<a href="#kamihata" className="text-accent-dark underline">神畑</a>／<a href="#nakashioda" className="text-accent-dark underline">中塩田</a>／<a href="#yagisawa" className="text-accent-dark underline">八木沢</a></li>
           </ul>
-          <p className="text-xs text-warm-gray mt-3">店舗は各社の公式店舗ページの表記（2026年10月22日確認・わかばは10月23日）。車なら国道18号線沿いのザ・ゴールド、上田菅平IC方面のキングラムも（<a href="#compare" className="text-accent-dark underline">7店の比較</a>）。</p>
+          <p className="text-xs text-warm-gray mt-3">店舗は各社の公式店舗ページの表記（2026年11月2日に7店とも再確認）。車なら国道18号線沿いのザ・ゴールド、上田菅平IC方面のキングラムも（<a href="#compare" className="text-accent-dark underline">7店の比較</a>）。</p>
         </div>
 
         <p>「上田で金を売るならどこがいい？」「相場はいくら？」——この記事では、上田での金買取に役立つ<strong>相場・方法・高く売るコツ</strong>を、公開情報にもとづいてまとめました。</p>
@@ -135,7 +135,7 @@ export default function UedaKinKaitoriPage() {
         <p>金相場は歴史的な高値圏で推移しています。上田でも、まとまった量や高純度の金製品は高額査定が期待できます。最新の相場は<Link href="/articles/kin-kaitori-souba/">金買取相場一覧</Link>で確認できます。</p>
 
         <h2 id="stations">上田駅・八木沢駅・中塩田駅から探す金買取店</h2>
-        <p>上田市内で金・貴金属の買取に対応している実在店舗を、駅からの行き方と営業時間を含めてまとめました。住所・アクセス・営業時間は各社の公式店舗ページの表記どおりです（<strong>2026年10月22日確認</strong>。わかば上田原店は10月23日確認）。来店前に公式ページで最新の営業日をご確認ください。</p>
+        <p>上田市内で金・貴金属の買取に対応している実在店舗を、駅からの行き方と営業時間を含めてまとめました。住所・アクセス・営業時間は各社の公式店舗ページの表記どおりです（<strong>2026年11月2日確認</strong>）。来店前に公式ページで最新の営業日をご確認ください。</p>
         <div className="table-wrapper">
           <table>
             <thead>
@@ -145,14 +145,14 @@ export default function UedaKinKaitoriPage() {
               <tr><td><strong>買取専門店さすがや アリオ上田店</strong>（上田市天神3-5-1 アリオ上田2F）</td><td>JR上田駅 温泉口から徒歩5分</td><td>10:00〜20:00／アリオ上田に準ずる</td></tr>
               <tr><td><strong>おたからや 上田海野町店</strong>（上田市中央2-5-10 丸陽ビル2階）</td><td>しなの鉄道線 上田駅お城口 徒歩5分（海野町商店街・高市神社向い）</td><td>平日10:00〜18:00・土日祝10:00〜17:00／水曜定休（臨時休業あり）</td></tr>
               <tr><td><strong>買取大吉 上田天神店</strong>（上田市天神3丁目4-25 デンセンショールーム）</td><td>JR上田駅お城口より徒歩10分（店長挨拶欄は「徒歩15分」）</td><td>10:00〜19:00／毎週日曜定休（年末年始等を除く）・専用駐車場無料</td></tr>
-              <tr><td><strong>ザ・ゴールド 上田店</strong>（上田市中央東2-11）</td><td>最寄駅の記載なし。国道18号線産業道路沿い（下川原柳バス停から徒歩10分）</td><td>10:00〜18:00（店舗情報欄の表記。ページ上部の予約欄は18:30）／年中無休（貴金属買取の店舗情報は「年末年始は除く」、店舗ページは「一部夏季・年末年始は除く」。10月26日確認）</td></tr>
+              <tr><td><strong>ザ・ゴールド 上田店</strong>（上田市中央東2-11）</td><td>最寄駅の記載なし。国道18号線産業道路沿い（下川原柳バス停から徒歩10分）</td><td>10:00〜18:00（店舗情報欄の表記。ページ上部の予約欄は18:30）／年中無休（貴金属買取の店舗情報は「年末年始は除く」、店舗ページは「一部夏季・年末年始は除く」。11月2日確認）</td></tr>
               <tr><td><strong>キングラム 上田インター店</strong>（上田市住吉277-17）</td><td>最寄駅の記載なし。車で上田駅から約10分（上田菅平IC方面・長島の交差点）</td><td>平日10:00〜18:00・土日祝10:00〜17:00／年中無休（年末年始等を除く）</td></tr>
               <tr><td><strong>買取店わかば 上田原店</strong>（上田市上田原1175-10 バードビル1F）</td><td>上田電鉄別所線 上田原駅から徒歩約7分（創造館入口交差点の角・無料駐車場あり）</td><td>10:00〜18:00／日曜・年末年始</td></tr>
-              <tr><td><strong>ジュエルカフェ イオンスタイル上田店</strong>（上田市常田2-12-18 イオンスタイル上田1階）</td><td>上田駅から徒歩14分・車で5分（公式の施設紹介）</td><td>10:00〜19:00／定休日の記載なし</td></tr>
+              <tr><td><strong>ジュエルカフェ イオンスタイル上田店</strong>（上田市常田2-12-18 イオンスタイル上田1階）</td><td>上田駅から徒歩14分・車で5分（公式の施設紹介。同じページのアクセス案内は「徒歩約15分」）</td><td>10:00〜19:00／定休日の記載なし</td></tr>
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">出典：<a href="https://sasugaya.jp/shop/ueda/" target="_blank" rel="noopener noreferrer nofollow">さすがや アリオ上田店</a>／<a href="https://www.otakaraya-shop.jp/ueda/" target="_blank" rel="noopener noreferrer nofollow">おたからや 上田海野町店</a>（<a href="https://www.otakaraya.jp/shop/nagano/" target="_blank" rel="noopener noreferrer nofollow">おたからや公式の長野県店舗一覧</a>でも上田市は同店1件）／<a href="https://www.kaitori-daikichi.jp/store/uedatenjin/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 上田天神店</a>／<a href="https://www.the-gold.jp/item/metal/shop/45.html" target="_blank" rel="noopener noreferrer nofollow">ザ・ゴールド 上田店</a>／<a href="https://kingram.jp/shop/uedainter/" target="_blank" rel="noopener noreferrer nofollow">キングラム 上田インター店</a>／<a href="https://wakaba-shop.jp/shop/nagano-uedahara/" target="_blank" rel="noopener noreferrer nofollow">わかば 上田原店</a>／<a href="https://jewel-cafe.jp/shop/chubu/nagano/aeon-ueda/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ イオンスタイル上田店</a>（わかばは2026年10月23日、ほかの6店は10月22日に確認）。わかばの公式には「赤坂下駅から徒歩約5分」の記載もありますが、別所線に赤坂下駅は無い（最寄りは赤坂上駅）ため、上田原駅からの表記のみ掲載しています。</p>
+        <p className="text-xs text-warm-gray">出典：<a href="https://sasugaya.jp/shop/ueda/" target="_blank" rel="noopener noreferrer nofollow">さすがや アリオ上田店</a>／<a href="https://www.otakaraya-shop.jp/ueda/" target="_blank" rel="noopener noreferrer nofollow">おたからや 上田海野町店</a>（<a href="https://www.otakaraya.jp/shop/nagano/" target="_blank" rel="noopener noreferrer nofollow">おたからや公式の長野県店舗一覧</a>でも上田市は同店1件）／<a href="https://www.kaitori-daikichi.jp/store/uedatenjin/" target="_blank" rel="noopener noreferrer nofollow">買取大吉 上田天神店</a>／<a href="https://www.the-gold.jp/item/metal/shop/45.html" target="_blank" rel="noopener noreferrer nofollow">ザ・ゴールド 上田店</a>／<a href="https://kingram.jp/shop/uedainter/" target="_blank" rel="noopener noreferrer nofollow">キングラム 上田インター店</a>／<a href="https://wakaba-shop.jp/shop/nagano-uedahara/" target="_blank" rel="noopener noreferrer nofollow">わかば 上田原店</a>／<a href="https://jewel-cafe.jp/shop/chubu/nagano/aeon-ueda/" target="_blank" rel="noopener noreferrer nofollow">ジュエルカフェ イオンスタイル上田店</a>（7店とも2026年11月2日に確認）。わかばの公式には「赤坂下駅から徒歩約5分」の記載もありますが、別所線に赤坂下駅は無い（最寄りは赤坂上駅）ため、上田原駅からの表記のみ掲載しています。</p>
 
         <h3>上田駅から歩いて行くなら</h3>
         <p>駅から歩ける距離にあるのは、<strong>温泉口側のさすがや アリオ上田店（徒歩5分・20時まで）</strong>と、<strong>お城口側のおたからや 上田海野町店（徒歩5分）・買取大吉 上田天神店（徒歩10分）</strong>です。さすがやと大吉はどちらも天神3丁目で近いので、1日で2〜3店の見積もりを比べられます。おたからやは水曜定休、大吉は日曜定休、おたからや・キングラムは土日祝が17時までなので、週末や夕方に行く場合は営業時間にご注意ください。</p>
@@ -166,7 +166,7 @@ export default function UedaKinKaitoriPage() {
         </ul>
 
         <h3 id="kamihata">神畑駅（上田電鉄別所線 BE07）から売りに行く場合</h3>
-        <p>神畑駅は上田駅から7駅目（BE07）、上田原駅の2つ先の駅です（<a href="https://ja.wikipedia.org/wiki/%E4%B8%8A%E7%94%B0%E9%9B%BB%E9%89%84%E5%88%A5%E6%89%80%E7%B7%9A" target="_blank" rel="noopener noreferrer nofollow">別所線の駅一覧</a>）。<strong>当サイトが公式店舗ページで確認した上田市の7店に、神畑駅を最寄りとして案内している店はありません</strong>（2026年10月26日時点）。</p>
+        <p>神畑駅は上田駅から7駅目（BE07）、上田原駅の2つ先の駅です（<a href="https://ja.wikipedia.org/wiki/%E4%B8%8A%E7%94%B0%E9%9B%BB%E9%89%84%E5%88%A5%E6%89%80%E7%B7%9A" target="_blank" rel="noopener noreferrer nofollow">別所線の駅一覧</a>）。<strong>当サイトが公式店舗ページで確認した上田市の7店に、神畑駅を最寄りとして案内している店はありません</strong>（2026年11月2日時点）。</p>
         <ul>
           <li><strong>上田方面へ2駅の上田原駅（BE05）で降りる</strong>——買取店わかば 上田原店が上田原駅から徒歩約7分（公式表記）。10:00〜18:00・日曜定休、無料駐車場あり。</li>
           <li><strong>終点の上田駅（BE01）まで6駅乗る</strong>——さすがや（温泉口徒歩5分）・おたからや（お城口徒歩5分）・買取大吉（お城口徒歩10分）を歩いて回れます（<a href="#route" className="text-accent-dark underline">回り方</a>）。</li>
@@ -184,14 +184,14 @@ export default function UedaKinKaitoriPage() {
         <p>迷ったら、上田駅周辺の2〜3店で見積もりを取ることで、効率よく比較できます（<a href="#route" className="text-accent-dark underline">回り方</a>）。</p>
 
         <h2 id="compare">上田市の7店を比較：買える品目・出張/宅配・駐車場・定休日</h2>
-        <p>住所と駅からの行き方に続けて、<strong>「何を売れるか」「車で行けるか」「何曜日が休みか」</strong>を店ごとに並べました。いずれも各店の公式店舗ページの表記です（2026年10月22日確認。わかばは10月23日確認）。「地図」は住所をGoogleマップで開きます。</p>
+        <p>住所と駅からの行き方に続けて、<strong>「何を売れるか」「車で行けるか」「何曜日が休みか」</strong>を店ごとに並べました。いずれも各店の公式店舗ページの表記です（2026年11月2日確認）。「地図」は住所をGoogleマップで開きます。</p>
         <div className="table-wrapper">
           <table>
             <thead>
               <tr><th>店舗</th><th>公式の買取品目</th><th>買取方法</th><th>駐車場</th><th>定休日</th><th>地図</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>買取専門店さすがや アリオ上田店</strong></td><td>金・プラチナ／ダイヤ・宝石／ブランド品／腕時計／切手など</td><td>店舗買取・出張買取</td><td>店舗ページに記載なし（アリオ上田内）</td><td>アリオ上田に準ずる（11月の臨時休業日のお知らせあり）</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%8A%E7%94%B0%E5%B8%82%E5%A4%A9%E7%A5%9E3-5-1%20%E3%82%A2%E3%83%AA%E3%82%AA%E4%B8%8A%E7%94%B0" target="_blank" rel="noopener noreferrer nofollow">地図</a></td></tr>
+              <tr><td><strong>買取専門店さすがや アリオ上田店</strong></td><td>金・プラチナ／ダイヤ・宝石／ブランド品／腕時計／切手など</td><td>店舗買取・出張買取</td><td>店舗ページに記載なし（アリオ上田内）</td><td>アリオ上田に準ずる（公式のお知らせ：2026年11月13日は臨時休業）</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%8A%E7%94%B0%E5%B8%82%E5%A4%A9%E7%A5%9E3-5-1%20%E3%82%A2%E3%83%AA%E3%82%AA%E4%B8%8A%E7%94%B0" target="_blank" rel="noopener noreferrer nofollow">地図</a></td></tr>
               <tr><td><strong>おたからや 上田海野町店</strong></td><td>金／宝石・ダイヤ／ブランド／ブランド時計／切手／金貨・銀貨／古銭など</td><td>店頭・出張買取</td><td>店舗裏に専用駐車場2台＋海野町パーク立体駐車場</td><td>水曜（臨時休業あり）。土日祝は17時まで</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%8A%E7%94%B0%E5%B8%82%E4%B8%AD%E5%A4%AE2%E4%B8%81%E7%9B%AE5-10" target="_blank" rel="noopener noreferrer nofollow">地図</a></td></tr>
               <tr><td><strong>買取大吉 上田天神店</strong></td><td>金・貴金属／宝石・ジュエリー／時計／バッグ／財布／服／切手など</td><td>店頭・出張買取（出張費無料・日本全国OK）</td><td>専用駐車場 無料（来店客に限る）</td><td>毎週日曜（年末年始等を除く）</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%8A%E7%94%B0%E5%B8%82%E5%A4%A9%E7%A5%9E3%E4%B8%81%E7%9B%AE4-25" target="_blank" rel="noopener noreferrer nofollow">地図</a></td></tr>
               <tr><td><strong>ザ・ゴールド 上田店</strong></td><td>金／プラチナ／貴金属／ダイヤモンド／宝石／着物・帯／ブランド／時計／切手／骨董古美術品など</td><td>店頭・出張（店舗ページに予約窓口）・宅配（公式サイトの買取方法）</td><td>CoCo壱番屋と共同</td><td>年中無休（年末年始は除く。店舗ページは一部夏季も除くと記載）</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%8A%E7%94%B0%E5%B8%82%E4%B8%AD%E5%A4%AE%E6%9D%B12-11" target="_blank" rel="noopener noreferrer nofollow">地図</a></td></tr>
@@ -217,7 +217,7 @@ export default function UedaKinKaitoriPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-warm-gray">さすがやはアリオ上田の休館日・臨時休業日に休み、おたからやは臨時休業あり、大吉は年末年始等を除く（いずれも公式表記・2026年10月22日確認）。3店が同時に開いているのは月・火・木・金・土・祝日です。</p>
+        <p className="text-xs text-warm-gray">さすがやはアリオ上田の休館日・臨時休業日に休み、おたからやは臨時休業あり、大吉は年末年始等を除く（いずれも公式表記・2026年11月2日確認）。3店が同時に開いているのは月・火・木・金・土・祝日です。</p>
 
         <LocalStores citySlug="ueda-kin-kaitori" cityLabel="上田" pref="長野県" />
 
@@ -279,7 +279,7 @@ export default function UedaKinKaitoriPage() {
             },
             {
               q: "神畑駅の近くに金買取店はありますか？",
-              a: "当サイトが公式店舗ページで確認した上田市の7店に、神畑駅（上田電鉄別所線）を最寄りとして案内している店はありません（2026年10月26日時点）。上田方面へ2駅の上田原駅で降りれば買取店わかば 上田原店（徒歩約7分・日曜定休）、6駅先の終点・上田駅に出れば、さすがや アリオ上田店（温泉口から徒歩5分）、おたからや 上田海野町店（お城口から徒歩5分）、買取大吉 上田天神店（お城口より徒歩10分）に歩いて行けます。",
+              a: "当サイトが公式店舗ページで確認した上田市の7店に、神畑駅（上田電鉄別所線）を最寄りとして案内している店はありません（2026年11月2日時点）。上田方面へ2駅の上田原駅で降りれば買取店わかば 上田原店（徒歩約7分・日曜定休）、6駅先の終点・上田駅に出れば、さすがや アリオ上田店（温泉口から徒歩5分）、おたからや 上田海野町店（お城口から徒歩5分）、買取大吉 上田天神店（お城口より徒歩10分）に歩いて行けます。",
             },
             {
               q: "中塩田駅の近くに金買取店はありますか？",
@@ -287,7 +287,7 @@ export default function UedaKinKaitoriPage() {
             },
             {
               q: "上田で車で行ける（駐車場がある）金買取店は？",
-              a: "公式の店舗ページに駐車場の記載があるのは、買取大吉 上田天神店（専用駐車場・来店客は無料）、おたからや 上田海野町店（店舗裏に専用2台＋海野町パーク立体駐車場）、ザ・ゴールド 上田店（CoCo壱番屋と共同）、キングラム 上田インター店（駐車場完備）、ジュエルカフェ イオンスタイル上田店（イオンスタイル上田の駐車場）です（2026年10月22日確認）。わかば 上田原店も無料駐車場ありと記載されています（10月23日確認）。",
+              a: "公式の店舗ページに駐車場の記載があるのは、買取大吉 上田天神店（専用駐車場・来店客は無料）、おたからや 上田海野町店（店舗裏に専用2台＋海野町パーク立体駐車場）、ザ・ゴールド 上田店（CoCo壱番屋と共同）、キングラム 上田インター店（駐車場完備）、ジュエルカフェ イオンスタイル上田店（イオンスタイル上田の駐車場）です（2026年11月2日確認）。わかば 上田原店も無料駐車場ありと記載されています。",
             },
             {
               q: "上田で出張買取は利用できますか？",
