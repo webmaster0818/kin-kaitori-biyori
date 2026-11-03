@@ -12,13 +12,26 @@ import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
 const priceDateJa = formatDateJa(goldData.date);
 
+/* ag-today-1103: 田中貴金属 銀の公表値（日次の gold-spot-prices.json と同じ取得値）。
+   tanaka_published_at は田中のページ表記「YYYY年MM月DD日 HH:MM公表」。休日は前営業日の公表値になる */
+const AG_BUY = goldData.tanaka_official.ag_buyback_per_g as number;
+const AG_RETAIL = goldData.tanaka_official.ag_retail_per_g as number;
+const AG_SV925 = Math.round(AG_BUY * 0.925 * 100) / 100;
+const _agPub = (goldData as Record<string, unknown>).tanaka_published_at as string | null | undefined;
+const agPubJa = (() => {
+  const m = _agPub ? /^(\d{4})-(\d{2})-(\d{2}) (\d{1,2}:\d{2})$/.exec(_agPub) : null;
+  return m ? `${Number(m[1])}年${Number(m[2])}月${Number(m[3])}日 ${m[4]}公表` : null;
+})();
+const agPubLabel = agPubJa ?? `${priceDateJa}取得`;
+const yen2 = (n: number) => n.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
 // タイトルは metadata と ArticleSchema headline で共有し、文言のズレ（罠）を防ぐ。
-// ⚠️ 銀の純度別自動目安キーは未整備のため、価格は断定せず田中貴金属の公表値へ誘導する。
+// 銀は田中貴金属の公表値（日次取得）を冒頭に表示し、SV925 は含有率で換算するだけ（業者係数は掛けない）。
 const pageTitle = `シルバー（銀・SV925）の買取相場 今日1gはいくら？田中貴金属の店頭価格で確認【${priceMonth}月${priceDay}日更新】`;
 
 const todayFaq = {
   q: "今日のシルバー（銀）の1g買取価格はいくらですか？",
-  a: `当サイトの銀の純度別自動買取目安は現在準備中（実勢データ取得中）です。最新の1g価格は、田中貴金属が毎営業日公表する銀の店頭価格をご参照ください（本ページ内に本日の公表値カードを掲載しています）。銀は純銀（Ag999）を基準に、SV925（スターリングシルバー）は含有率92.5%が目安です。銀は金・プラチナに比べ1gあたりの単価が低いため、買取は重量が多いほど有利です。実際の買取額は業者・状態・付属品により異なります。`,
+  a: `田中貴金属の銀の店頭買取価格は1gあたり${yen2(AG_BUY)}円（税込・${agPubLabel}）、店頭小売価格は${yen2(AG_RETAIL)}円です。SV925（スターリングシルバー）は銀の含有率92.5%のため、素材としての目安は${yen2(AG_BUY)}円×92.5%＝約${yen2(AG_SV925)}円/gです。業者の買取額はここから業者ごとの条件・手数料を差し引いた額になり、製品の状態・付属品でも変わります。銀は金・プラチナに比べ1gあたりの単価が低いため、重量が多いほど有利です。`,
 };
 
 function BreadcrumbSchema() {
@@ -69,7 +82,7 @@ function ArticleSchema() {
 
 export const metadata: Metadata = {
   title: pageTitle,
-  description: `シルバー（銀・SV925）の買取相場の確認方法を解説。最新の1g価格は田中貴金属公表の店頭価格を参照（本日の公表値カード掲載）。SV925・純銀の違い、銀アクセサリー・銀食器の買取の基本、銀メッキの注意点、おすすめ業者4社を紹介。`,
+  description: `田中貴金属の銀の店頭買取価格は1g${yen2(AG_BUY)}円（${agPubLabel}）、SV925の素材価値の目安は約${yen2(AG_SV925)}円/g。純銀・SV925・銀メッキの違い、刻印の見分け方、銀アクセサリー・銀食器を売るときの注意点をまとめています。`,
   alternates: { canonical: "https://gold-biyori.com/articles/silver-kaitori/" },
 };
 
@@ -88,26 +101,35 @@ function CtaBox() {
   );
 }
 
-// 金の TodayPriceAnswer と同じ体裁の「近日掲載（実勢データ取得中）」ボックス。
-// 価格は断定せず、田中貴金属の公表値カードへ誘導する（捏造回避・YMYL配慮）。
+// 冒頭の即答枠。値は田中貴金属の公表値（日次取得）をそのまま表示し、SV925 は含有率で換算するだけ（業者係数は掛けない）。
 function AgTodayAnswer() {
   return (
     <section className="not-prose my-6 bg-gold-bg border-2 border-accent/40 rounded-2xl p-6 shadow-sm">
-      <p className="text-sm font-bold text-accent-dark mb-2 !mt-0">本日のシルバー（銀）買取相場</p>
-      <p className="flex items-baseline flex-wrap gap-x-2 gap-y-1 mb-2">
-        <strong className="font-display text-2xl md:text-3xl font-bold text-accent-dark leading-tight">
-          実勢データ取得中 — 田中貴金属の店頭価格を参照
-        </strong>
+      <p className="text-sm font-bold text-accent-dark mb-2 !mt-0">田中貴金属の銀価格（1gあたり・税込）</p>
+      <p className="flex items-baseline flex-wrap gap-x-2 gap-y-1 mb-1">
+        <span className="text-sm text-foreground/80">店頭買取</span>
+        <strong className="font-display text-3xl md:text-4xl font-bold text-accent-dark leading-tight">{yen2(AG_BUY)}円</strong>
+        <span className="text-sm text-foreground/80">／ 店頭小売 {yen2(AG_RETAIL)}円</span>
       </p>
+      <p className="text-sm mb-3"><strong>{agPubLabel}</strong>（田中貴金属工業「貴金属価格情報」の地金価格。当サイトは毎日取得）</p>
+      <div className="table-wrapper mb-3">
+        <table className="text-sm">
+          <thead><tr><th>品位</th><th>銀の含有率</th><th>1gあたりの素材価値の目安</th></tr></thead>
+          <tbody>
+            <tr><td>純銀（Ag999・SV1000）</td><td>99.9%以上</td><td>{yen2(AG_BUY)}円（店頭買取価格そのまま）</td></tr>
+            <tr><td>SV925（スターリングシルバー）</td><td>92.5%</td><td>約{yen2(AG_SV925)}円（{yen2(AG_BUY)}円×92.5%）</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p className="text-xs text-warm-gray leading-relaxed mb-4">
-        当サイトの銀の純度別自動買取目安は現在準備中です。最新の1g価格は、田中貴金属が毎営業日公表する銀の店頭価格をご確認ください（本ページ内に本日の公表値カードを掲載）。純銀（Ag999）を基準に、SV925は含有率92.5%が目安です。実際の買取額は業者・状態・付属品により異なります。
+        目安は田中貴金属の店頭買取価格に含有率を掛けただけの値です。買取店の提示額はここから各社の条件・手数料を差し引いた額になり、製品の状態・付属品でも変わります。公表のない日（土日祝など）は、直前の公表値を表示します。
       </p>
       <div className="flex flex-wrap gap-2">
         <a
           href="#today-ag-card"
           className="text-sm bg-white border border-accent/50 text-accent-dark font-medium rounded-lg px-3 py-2 hover:bg-accent/10 transition-colors"
         >
-          本日の田中貴金属 銀公表値を見る
+          SV925の計算方法と刻印を見る
         </a>
         <a
           href={goldData.source as string}
@@ -115,7 +137,7 @@ function AgTodayAnswer() {
           rel="noopener noreferrer"
           className="text-sm bg-accent text-white font-medium rounded-lg px-3 py-2 hover:bg-accent-dark transition-colors"
         >
-          田中貴金属の公式相場ページ
+          出典：田中貴金属の公式相場ページ
         </a>
       </div>
     </section>
@@ -166,7 +188,7 @@ export default function SilverKaitoriPage() {
 
         <GoldSpotPriceCard purity="ag" />
 
-        <p className="text-xs text-warm-gray">※上記は田中貴金属公表の銀の店頭買取価格です。SV925の実際の買取額は「公表値 × 92.5% × 業者の買取係数」に加え、製品の状態・付属品・手数料により変動します。銀は金・プラチナに比べ単価が低いため、少量では買取額が小さくなります。当サイトは銀の純度別自動目安を整備中のため、正確な額は各業者の無料査定でご確認ください。金額を保証するものではありません。</p>
+        <p className="text-xs text-warm-gray">※上記は田中貴金属公表の銀の店頭買取価格です。SV925の実際の買取額は「公表値 × 92.5% × 業者の買取係数」に加え、製品の状態・付属品・手数料により変動します。銀は金・プラチナに比べ単価が低いため、少量では買取額が小さくなります。正確な額は各業者の無料査定でご確認ください。金額を保証するものではありません。</p>
 
         <h2>銀の純度と刻印 — SV925・純銀・銀メッキの違い</h2>
 
@@ -277,7 +299,7 @@ export default function SilverKaitoriPage() {
 
         <p>シルバー（銀）はアクセサリー・食器・置物など幅広い製品に使われる貴金属です。アクセサリーの定番はSV925（銀92.5%）で、買取は「1gの相場 × 重量 × 純度」が基本です。銀は金・プラチナより単価が低いため、まとめて売ると効率的です。「Silver Plated」「EPNS」などの銀メッキは素材価値がほとんどない点に注意することをおすすめします。</p>
 
-        <p>当サイトは銀の純度別自動目安を整備中のため、<strong>最新の1g価格は本ページ掲載の田中貴金属公表値</strong>と、各業者の無料査定でご確認ください。</p>
+        <p><strong>最新の1g価格は本ページ冒頭の田中貴金属公表値</strong>（毎日取得）で確認し、実際の買取額は各業者の無料査定でご確認ください。</p>
 
         <p>まずは<a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ヒカカク！の一括査定</a>でお手持ちの銀製品の価値を確認してみてください。査定は無料です。</p>
 

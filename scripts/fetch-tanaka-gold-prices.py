@@ -47,8 +47,13 @@ def parse_price(html: str) -> dict:
     def to_num(s: str) -> float:
         return float(s.replace(",", ""))
 
+    # 地金価格の公表日時（例: 「2026年11月02日 17:00公表（日本時間）」）。取れなければ None
+    pub = re.search(r'地金価格\s*<span>\s*(\d{4})年(\d{1,2})月(\d{1,2})日\s*(\d{1,2}:\d{2})公表', html)
+    published_at = f"{pub.group(1)}-{int(pub.group(2)):02d}-{int(pub.group(3)):02d} {pub.group(4)}" if pub else None
+
     # 最初の3組: 金(Au), プラチナ(Pt), 銀(Ag)
     return {
+        "published_at": published_at,  # main() でトップレベル tanaka_published_at に移す
         "au_retail_per_g": int(to_num(retails[0])),
         "au_buyback_per_g": int(to_num(purchases[0])),
         "pt_retail_per_g": int(to_num(retails[1])),
@@ -100,6 +105,9 @@ def main():
         "source": URL,
         "source_label": "田中貴金属",
         "fetched_at": datetime.now().isoformat(),
+        # 田中の地金価格の公表日時（JST・ページ表記）。休日は前営業日の値。
+        # ⚠️ tanaka_official の中に入れない（各ページが Record<string, number> で読んでいる）
+        "tanaka_published_at": prices.get("published_at"),
         "tanaka_official": {
             "au_buyback_per_g": prices.get("au_buyback_per_g"),
             "au_retail_per_g": prices.get("au_retail_per_g"),
