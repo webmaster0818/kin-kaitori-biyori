@@ -30,9 +30,9 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "金買取の一括査定サイト比較【2026年10月】｜ヒカカク！とウリドキの公式表記・使い方と注意点",
-    description: "金買取の一括査定サイトを公式表記で比較（2026年10月9日確認）。ヒカカク！は貴金属・宝石カテゴリ1,082社、ウリドキは1商品あたり最大10社。社数を公式で確認できないサービスはその旨を明記し、仕組み・メリットとデメリット・使い方のコツを解説。",
+    description: "金買取の一括査定サイトを公式表記で比較。ヒカカク！は貴金属・宝石カテゴリ1,083社（2026年11月3日確認）、ウリドキは1商品あたり最大10社（10月9日確認）。社数を公式で確認できないサービスはその旨を明記し、仕組み・メリットとデメリット・使い方のコツを解説。",
     datePublished: "2026-05-18",
-    dateModified: "2026-10-16",
+    dateModified: "2026-11-03",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -51,7 +51,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"一括査定の利用に費用はかかる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"完全無料。複数業者の見積もりも、最終的にキャンセルしても料金は発生しません。\"}}, {\"@type\": \"Question\", \"name\": \"一括査定の見積もりは正確？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Web査定のため概算。実物査定で金額が変わる可能性がある旨を理解しておくと安心。\"}}, {\"@type\": \"Question\", \"name\": \"どのサイトを使うのが一番おすすめ？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"貴金属カテゴリの掲載社数を公式に示しているヒカカク！（1,082社・2026年10月9日確認）が比べやすい選択肢です。他のサービスは掲載社数の公式表記を確認できませんでした。\"}}, {\"@type\": \"Question\", \"name\": \"見積もり後、必ず売らないといけない？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"全ての一括査定サイトでキャンセル無料。見積もりだけ取得し売らないことも可能。\"}}, {\"@type\": \"Question\", \"name\": \"複数のサイトに同時に依頼してもいい？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能。むしろ複数サイトで重複しない業者の見積もりを集める方が効果的。\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"一括査定の利用に費用はかかる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"完全無料。複数業者の見積もりも、最終的にキャンセルしても料金は発生しません。\"}}, {\"@type\": \"Question\", \"name\": \"一括査定の見積もりは正確？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Web査定のため概算。実物査定で金額が変わる可能性がある旨を理解しておくと安心。\"}}, {\"@type\": \"Question\", \"name\": \"どのサイトを使うのが一番おすすめ？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"貴金属カテゴリの掲載社数を公式に示しているヒカカク！（1,083社・2026年11月3日確認）が比べやすい選択肢です。他のサービスは掲載社数の公式表記を確認できませんでした。\"}}, {\"@type\": \"Question\", \"name\": \"見積もり後、必ず売らないといけない？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"全ての一括査定サイトでキャンセル無料。見積もりだけ取得し売らないことも可能。\"}}, {\"@type\": \"Question\", \"name\": \"複数のサイトに同時に依頼してもいい？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"可能。むしろ複数サイトで重複しない業者の見積もりを集める方が効果的。\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -59,7 +59,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "金買取の一括査定サイト比較【2026年10月】｜ヒカカク！とウリドキの公式表記・使い方と注意点",
-  description: "金買取の一括査定サイトを公式表記で比較（2026年10月9日確認）。ヒカカク！は貴金属・宝石カテゴリ1,082社、ウリドキは1商品あたり最大10社。社数を公式で確認できないサービスはその旨を明記し、仕組み・メリットとデメリット・使い方のコツを解説。",
+  description: "金買取の一括査定サイトを公式表記で比較。ヒカカク！は貴金属・宝石カテゴリ1,083社（2026年11月3日確認）、ウリドキは1商品あたり最大10社（10月9日確認）。社数を公式で確認できないサービスはその旨を明記し、仕組み・メリットとデメリット・使い方のコツを解説。",
   alternates: { canonical: "https://gold-biyori.com/articles/ikkatsu-satei-hikaku/" },
 };
 
@@ -113,7 +113,7 @@ export default function Page() {
             <table>
               <thead><tr><th>サイト名</th><th>提携業者数</th><th>強み</th></tr></thead>
               <tbody>
-                <tr><td>ヒカカク！</td><td>貴金属・宝石カテゴリ 1,082社（公式表記・2026年10月9日確認）</td><td>公式は「国内最大級の買取比較サイト」「最大20社から一括で査定見積もり」と表記（2026年10月16日確認）</td></tr>
+                <tr><td>ヒカカク！</td><td>貴金属・宝石カテゴリ 1,083社（公式表記・2026年11月3日確認）</td><td>公式は「国内最大級の買取比較サイト」「最大20社から一括で査定見積もり」と表記（2026年10月16日確認）</td></tr>
                 <tr><td>うるココ</td><td>公式に記載なし（一括査定サービスとしての公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
                 <tr><td>買取コネクト</td><td>公式に記載なし（公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
                 <tr><td>サイトポリス</td><td>公式に記載なし（公式サイトを確認できず）</td><td>—（公式情報を確認できず）</td></tr>
@@ -121,7 +121,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-warm-gray">※ 社数は2026年10月9日に各社の公式サイトで確認しました。ヒカカク！は公式の「貴金属・宝石の買取価格を比較」ページのタイトル表記（16,409点・1,082社）で、カテゴリごとに掲載社数を表示しており、サイト全体の提携社数は公表されていません。ウリドキは公式の金・ジュエリー買取ページに提携社数の記載がなく、「最大10社」（2024年4月〜2026年3月の実績に基づく、と注記）が1商品あたりの査定社数です。うるココ・買取コネクト・サイトポリスは一括査定サービスとしての公式サイトを確認できなかったため、以前掲載していた社数（150社以上・100社以上・50社以上）と特徴を削除しました。</p>
+          <p className="text-xs text-warm-gray">※ 社数は2026年10月9日に各社の公式サイトで確認しました（ヒカカク！は2026年11月3日に再確認）。ヒカカク！は公式の「貴金属・宝石の買取価格を比較」ページのタイトル表記（16,518点・1,083社）で、カテゴリごとに掲載社数を表示しており、サイト全体の提携社数は公表されていません。ウリドキは公式の金・ジュエリー買取ページに提携社数の記載がなく、「最大10社」（2024年4月〜2026年3月の実績に基づく、と注記）が1商品あたりの査定社数です。うるココ・買取コネクト・サイトポリスは一括査定サービスとしての公式サイトを確認できなかったため、以前掲載していた社数（150社以上・100社以上・50社以上）と特徴を削除しました。</p>
 
           <h2>3. 一括査定のメリット・デメリット</h2>
           <p><strong>メリット:</strong></p>
@@ -163,7 +163,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>どのサイトを使うのが一番おすすめ？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">貴金属カテゴリの掲載社数を公式に示しているヒカカク！（1,082社・2026年10月9日確認）が比べやすい選択肢です。他のサービスは掲載社数の公式表記を確認できませんでした。</p>
+  <p className="mt-3 text-sm leading-relaxed">貴金属カテゴリの掲載社数を公式に示しているヒカカク！（1,083社・2026年11月3日確認）が比べやすい選択肢です。他のサービスは掲載社数の公式表記を確認できませんでした。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>見積もり後、必ず売らないといけない？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
