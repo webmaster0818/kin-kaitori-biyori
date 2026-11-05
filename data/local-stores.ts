@@ -10,6 +10,7 @@ export type LocalStore = {
   closed?: string;
   access?: string;
   tel?: string;
+  parking?: string;
   sourceUrl: string;
 };
 
@@ -582,13 +583,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "hiratsuka-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-05",
     stores: [
-      { name: "買取大吉 平塚菫平店", chain: "買取大吉", address: "神奈川県平塚市菫平9-11", hours: "10:00〜19:00", closed: "日曜日", access: "JR東海道本線 平塚駅よりバスと徒歩で6分", tel: "0463-74-5327", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-sumiredaira/" },
-      { name: "買取大吉 OSC湘南シティ店", chain: "買取大吉", address: "神奈川県平塚市代官町33番1号 OSC湘南シティ", postalCode: "254-0807", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "平塚駅北口より徒歩", tel: "0120-550-219", sourceUrl: "https://www.kaitori-daikichi.jp/store/oscshonan-city/" },
-      { name: "ブランド買取「なんぼや」平塚店", chain: "なんぼや", address: "神奈川県平塚市代官町2-10", postalCode: "254-0807", hours: "10:00〜21:00", closed: "定休日なし", access: "JR平塚駅 南出口より徒歩1分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/hiratsuka-brandshop/" },
-      { name: "大黒屋 平塚北口店", chain: "大黒屋", address: "神奈川県平塚市紅谷町2-27 都まんじゅうさん 2階", postalCode: "254-0043", hours: "平日10:00〜18:00／土日祝10:00〜17:00", closed: "不定休", access: "JR東海道線 平塚駅 北口ロータリー内", tel: "0463-25-1521", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000217" },
-      { name: "買取大吉 マックスバリュ平塚四之宮店", chain: "買取大吉", address: "神奈川県平塚市四之宮2-18-26 マックスバリュ平塚四之宮店", hours: "10:00〜19:00", closed: "月曜日", access: "平塚駅より車で11分", tel: "0463-38-4808", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-shinomiya/" },
+      { name: "買取大吉 平塚菫平店", chain: "買取大吉", address: "神奈川県平塚市菫平9-11", hours: "10:00〜19:00", closed: "日曜日", access: "JR東海道本線・湘南新宿ライン 平塚駅よりバスと徒歩で6分／しまむらストアー すみれ平店より徒歩3分", tel: "0463-74-5327", parking: "店舗の案内先はダイレクトパーク花水No.2（平塚市菫平9-13・24時間・店まで約50m）。料金は平日8:00〜15:00 30分300円／15:00〜8:00 30分100円、土日祝40分200円。公式の設備欄に「駐車代サービス」あり（条件は店舗に確認）", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-sumiredaira/" },
+      { name: "買取大吉 OSC湘南シティ店", chain: "買取大吉", address: "神奈川県平塚市代官町33番1号 OSC湘南シティ", postalCode: "254-0807", hours: "10:00〜19:00", closed: "年中無休", access: "平塚駅北口より徒歩（公式に分数の記載なし）。OSC湘南シティ内", tel: "0120-550-219", parking: "OSC湘南シティの駐車場（8:00〜24:00）。お買い上げ金額にかかわらず3時間無料、以降30分ごとに220円。駐車場と店舗の営業時間は異なる", sourceUrl: "https://www.kaitori-daikichi.jp/store/oscshonan-city/" },
+      { name: "ブランド買取「なんぼや」平塚店", chain: "なんぼや", address: "神奈川県平塚市代官町2-10", postalCode: "254-0807", hours: "10:00〜18:00", closed: "定休日なし", access: "JR平塚駅 南出口より徒歩1分程度", tel: "0120-66-1333", parking: "公式の近隣駐車場案内：相石パーク代官町（代官町10）20分220円・駐車後12時間最大1,210円／相石パーク代官町NO2（代官町3-2）30分330円・駐車後24時間最大990円", sourceUrl: "https://nanboya.com/gold-kaitori/shop/hiratsuka-brandshop/" },
+      { name: "大黒屋 平塚北口店", chain: "大黒屋", address: "神奈川県平塚市紅谷町2-27 都まんじゅうさん 2階", postalCode: "254-0043", hours: "平日10:00〜18:00／土日祝10:00〜17:00", closed: "不定休", access: "JR東海道線 平塚駅 北口ロータリー内", tel: "0463-25-1521", parking: "公式の案内は平塚ラスカ駐車場。駐車場代の負担あり（詳細は店舗に確認）", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000217" },
+      { name: "買取大吉 マックスバリュ平塚四之宮店", chain: "買取大吉", address: "神奈川県平塚市四之宮2-18-26 マックスバリュ平塚四之宮店", hours: "10:00〜19:00", closed: "月曜日", access: "平塚駅より車で11分。マックスバリュ平塚四之宮店 2階", tel: "0463-38-4808", parking: "マックスバリュ平塚四之宮店の駐車場（無料・24時間）", sourceUrl: "https://www.kaitori-daikichi.jp/store/hiratsuka-shinomiya/" },
     ],
   },
   "kichijoji-kin-kaitori": {

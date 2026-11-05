@@ -87,6 +87,12 @@ export function LocalStores({
                   <dd className="m-0">{s.tel}</dd>
                 </div>
               )}
+              {s.parking && (
+                <div className="flex gap-2">
+                  <dt className="flex-shrink-0 w-16 text-foreground font-medium">駐車場</dt>
+                  <dd className="m-0">{s.parking}</dd>
+                </div>
+              )}
             </dl>
             {s.sourceUrl && (
               <p className="mt-3 mb-0">
