@@ -636,7 +636,7 @@ export const localStores: Record<string, CityStores> = {
       { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
       { name: "買取大吉 モラージュ柏店", chain: "買取大吉", address: "千葉県柏市大山台2-3 モラージュ柏 2階", postalCode: "277-0837", hours: "10:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より無料送迎バス", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/m-kashiwa/" },
       { name: "なんぼや 柏西口店", chain: "なんぼや", address: "千葉県柏市末広町4-1", postalCode: "277-0842", hours: "11:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/kashiwa-nishiguchi-brandshop/" },
-      { name: "なんぼや 柏東口店", chain: "なんぼや", address: "千葉県柏市柏1-1-11 ファミリかしわ 1F", postalCode: "277-0005", hours: "11:00〜19:00", closed: "施設に準ずる", access: "JR柏駅 東口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba-kashiwa-brandshop/" },
+      { name: "なんぼや 柏東口店", chain: "なんぼや", address: "千葉県柏市柏1-1-11 ファミリかしわ 1F", postalCode: "277-0005", hours: "10:00〜18:00", closed: "施設に準ずる", access: "JR柏駅 東口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba-kashiwa-brandshop/" },
       { name: "バイセル セブンパークアリオ柏店", chain: "BUYSELL（バイセル）", address: "千葉県柏市大島田1-6-1 セブンパークアリオ柏 3階", postalCode: "277-0922", hours: "10:00〜19:00（施設に準ずる）", access: "「セブンパークアリオ柏前」バス停より徒歩1分", tel: "0120-425-814", sourceUrl: "https://buysell-kaitori.com/store/sevenpark-kashiwa/" },
     ],
   },
