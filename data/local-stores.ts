@@ -365,7 +365,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "toyokawa-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-06",
     stores: [
       {
         name: "買取大吉 諏訪町駅前店",
@@ -384,7 +384,7 @@ export const localStores: Record<string, CityStores> = {
         postalCode: "441-1231",
         hours: "10:00〜18:00",
         closed: "日曜日・祝日",
-        access: "名鉄飯田線 三河一宮駅周辺／県道151号沿い（三河一宮郵便局すぐ）",
+        access: "県道151号、三河一宮郵便局すぐそば",
         tel: "0533-56-3481",
         sourceUrl: "https://www.otakaraya-shop.jp/mikawaichinomiya/",
       },
@@ -681,13 +681,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "hamamatsu-kin-kaitori": {
-    updated: "2026-07-07",
+    updated: "2026-11-06",
     stores: [
       { name: "買取大吉 浜松駅前店", chain: "買取大吉", address: "静岡県浜松市中央区鍛冶町140-1", postalCode: "430-0933", hours: "10:00～19:00", closed: "年中無休", access: "JR浜松駅から徒歩5分、遠鉄新浜松駅から徒歩3分", tel: "0120-661-077", sourceUrl: "https://www.kaitori-daikichi.jp/store/hamamatsu/" },
       { name: "買取大吉 浜松中沢柳通り店", chain: "買取大吉", address: "静岡県浜松市中央区中沢町74-21", hours: "10:00～19:00", closed: "木曜日", access: "遠州鉄道八幡駅より徒歩10分", tel: "053-569-2633", sourceUrl: "https://www.kaitori-daikichi.jp/store/hamamatsu-nakazawa/" },
       { name: "ザ・ゴールド 浜松若林店", chain: "ザ・ゴールド", address: "静岡県浜松市中央区若林町1232", postalCode: "432-8051", hours: "10:00～18:00", closed: "年中無休（一部除く）", access: "国道257号線沿い、可美小学校東の角", tel: "053-525-7776", sourceUrl: "https://www.the-gold.jp/shop/shizuoka/28.html" },
       { name: "大黒屋 質浜松買取センター", chain: "大黒屋", address: "静岡県浜松市中央区鴨江3丁目76-12 1階東号室", postalCode: "432-8023", hours: "月水木金 10:00～18:00／土日祝 10:00～17:00", closed: "火曜日", access: "JR浜松駅より西へ車で約10分", tel: "053-489-8751", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000386" },
-      { name: "なんぼや 浜松店", chain: "なんぼや", address: "静岡県浜松市中央区旭町10-7", hours: "11:00～19:00", access: "JR浜松駅北口より約3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/hamamatsu-brandshop/" },
+      { name: "なんぼや 浜松店", chain: "なんぼや", address: "静岡県浜松市中央区旭町10-7", postalCode: "430-0927", hours: "10:00～18:00", closed: "定休日なし（1月1日のみ休業）", access: "JR浜松駅北口より徒歩2分程度、遠州鉄道 新浜松駅西出口より徒歩2分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/hamamatsu-brandshop/" },
     ],
   },
   "himeji-kin-kaitori": {
