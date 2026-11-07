@@ -517,7 +517,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "nagoya-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-07",
     stores: [
       { name: "買取大吉 名古屋錦店", chain: "買取大吉", address: "愛知県名古屋市中区錦2-6-25", hours: "10:00〜19:00", closed: "年中無休", access: "名古屋市営地下鉄桜通線 丸の内駅より徒歩4分", tel: "0120-02-8268", sourceUrl: "https://www.kaitori-daikichi.jp/store/nagoya-nishiki/" },
       { name: "なんぼや メルサ栄店", chain: "なんぼや", address: "愛知県名古屋市中区栄3-4-5 メルサ栄本店 4F", postalCode: "460-0008", hours: "10:00〜20:00（最終受付19:30）", closed: "施設に準ずる", access: "地下鉄東山線・名城線 栄駅より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/melsa-sakae-brandshop/" },
@@ -618,7 +618,7 @@ export const localStores: Record<string, CityStores> = {
       { name: "買取大吉 所沢中富店", chain: "買取大吉", address: "埼玉県所沢市中富1565-1", hours: "10:00〜19:00", closed: "月曜日（祝日の場合は火曜日）", access: "The Market Place 所沢北原より徒歩6分", tel: "04-2997-8957", sourceUrl: "https://www.kaitori-daikichi.jp/store/tokorozawa-nakatomi/" },
       { name: "買取大吉 西所沢駅前店", chain: "買取大吉", address: "埼玉県所沢市西所沢1丁目12番7号", hours: "10:00〜19:00", closed: "水曜日", access: "西武線 西所沢駅 東口より徒歩1分", tel: "0120-675-178", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/nishi-tokorozawa/" },
       { name: "買取大吉 所沢和ケ原店", chain: "買取大吉", address: "埼玉県所沢市和ケ原1丁目121番地1", hours: "10:00〜19:00", closed: "日曜日", access: "西武池袋線 狭山ヶ丘駅より徒歩8分", tel: "04-2968-9111", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/tokorozawa-wagahara/" },
-      { name: "なんぼや 所沢駅西口店", chain: "なんぼや", address: "埼玉県所沢市日吉町2-2 キノシタビルⅡ 1F", postalCode: "359-1123", access: "西武池袋線・西武新宿線 所沢駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/tokorozawa-nishiguchi-brandshop/" },
+      { name: "なんぼや 所沢駅西口店", chain: "なんぼや", address: "埼玉県所沢市日吉町2-2 キノシタビルⅡ 1F", postalCode: "359-1123", hours: "10:00〜18:00", access: "西武池袋線・西武新宿線 所沢駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/tokorozawa-nishiguchi-brandshop/" },
     ],
   },
   "koshigaya-kin-kaitori": {
