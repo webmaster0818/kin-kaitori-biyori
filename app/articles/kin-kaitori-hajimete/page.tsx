@@ -36,7 +36,8 @@ function BreadcrumbSchema() {
 
 function FaqSchema() {
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-    { "@type": "Question", name: "金を売るのに必要なものは何ですか？", acceptedAnswer: { "@type": "Answer", text: "本人確認書類（運転免許証・マイナンバーカード・パスポートのいずれか1点）が必須です。古物営業法により、金額にかかわらず身分証の提示が義務付けられています。200万円超の取引ではマイナンバーの提示も必要です。" } },
+    { "@type": "Question", name: "金を売るのに必要なものは何ですか？", acceptedAnswer: { "@type": "Answer", text: `本人確認書類（運転免許証・マイナンバーカード・パスポートのいずれか1点）が必要です。古物営業法は買取額1万円以上の取引で本人確認を義務付けており、K18は${LP_DATE}の目安で1g約${LP_K18}円なので、ほとんどの金買取があてはまります。マイナンバーが必要になるのは、金地金・白金地金・金貨・白金貨を200万円超で売るときです（業者が税務署へ出す支払調書に記載するため）。` } },
+    { "@type": "Question", name: "金の買取でマイナンバーは必要ですか？", acceptedAnswer: { "@type": "Answer", text: "必要になるのは、買取業者が金地金・白金地金・金貨・白金貨の対価として200万円超を支払うときです。業者は税務署へ支払調書を出す義務があり、その様式に個人番号の欄があります（国税庁）。国税庁の説明で挙げられているのはこの4種で、ネックレスや指輪などのジュエリーは挙がっていないため、ジュエリーを高額で売るときは売却先に確認してください。" } },
     { "@type": "Question", name: "金買取の流れはどうなりますか？", acceptedAnswer: { "@type": "Answer", text: "店頭買取の場合、来店→受付→純度測定（X線分析）→重量計量→買取価格提示→承諾→本人確認→現金受け取り、という流れです。所要時間は15〜30分程度です。" } },
     { "@type": "Question", name: "壊れたアクセサリーや刻印がない金でも売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、壊れていても、刻印がなくても買取可能です。金の買取は素材価値がベースなので、チェーン切れや変色があっても金としての価値は変わりません。刻印がない場合はX線分析で純度を判定します。" } },
     { "@type": "Question", name: "金買取に手数料はかかりますか？", acceptedAnswer: { "@type": "Answer", text: "買取大吉・ティファナ・ウリエルの3社は、公式サイトで査定料・出張費・キャンセル料の無料を明記しています。ヒカカク！は一括査定の利用が無料ですが、査定・買取は申し込み先の各業者が行い、キャンセルも業者へ直接連絡する仕組みです。手数料・返送料は申し込み先の業者ごとに確認し、手数料がかかる業者は避けることをおすすめします。" } },
@@ -54,7 +55,7 @@ function ArticleSchema() {
 }
 
 
-export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、買取の流れ、必要な持ち物、注意すべきポイント、おすすめの買取業者をわかりやすく解説。初めての方に向けて、売却の手順と注意点をまとめています。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
+export const metadata: Metadata = { title: "金買取に必要なものは？本人確認書類と当日の流れ・注意点【初めてガイド2026】", description: "金を売るのが初めての方向けに、必要な本人確認書類、マイナンバーが要るとき（金地金・金貨などを200万円超で売る場合）、買取の流れ、注意点、おすすめの買取業者を解説します。", alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-hajimete/" } };
 
 function CtaBox() {
   return (
@@ -88,11 +89,11 @@ export default function KinKaitoriHajimetePage() {
           <p className="font-bold text-base mb-2">必要なものは「本人確認書類1点」と「売却する金製品」です</p>
           <ul className="text-sm leading-relaxed space-y-1 list-disc pl-5">
             <li><strong>必須</strong>：有効期限内の本人確認書類1点（運転免許証／マイナンバーカード／パスポート／在留カード）</li>
-            <li><strong>200万円を超えるとき</strong>：加えてマイナンバーの提示（業者が支払調書を出すため）</li>
+            <li><strong>マイナンバーが要るとき</strong>：金地金・白金地金・金貨・白金貨を200万円超で売るとき（業者が税務署へ支払調書を出すため。<a href="#mynumber" className="text-accent underline">詳しく</a>）</li>
             <li><strong>あると有利</strong>：保証書・鑑定書・箱・購入時のレシート（無くても売れます）</li>
             <li><strong>不要</strong>：印鑑・通帳・手数料（買取大吉・ティファナ・ウリエルは査定・出張・キャンセルすべて無料と公式に明記。ヒカカク！経由の場合は申し込み先の業者の条件を確認）</li>
           </ul>
-          <p className="text-xs text-warm-gray mt-3">本人確認は古物営業法による義務で、金額にかかわらず求められます。求めてこない業者はむしろ避けてください。<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent underline">未成年の可否・予約の要否はこちら</Link></p>
+          <p className="text-xs text-warm-gray mt-3">本人確認は古物営業法による義務です（買取額1万円以上。K18は{LP_DATE}の目安で1g約{LP_K18}円なので、ほとんどの金買取があてはまります）。1万円以上の買取で求めてこない業者は避けてください。<Link href="/articles/kin-kaitori-tetsuzuki-guide/" className="text-accent underline">未成年の可否・予約の要否はこちら</Link></p>
         </div>
 
         <p>「金を売りたいけど、何から始めればいいの？」「どんな準備が必要？」「騙されない？」——金を売るのが初めての方は不安が多いものです。この記事では<strong>買取の流れ・必要なもの・注意点</strong>をステップごとに解説します。</p>
@@ -114,7 +115,7 @@ export default function KinKaitoriHajimetePage() {
 
         <h2>ステップ1：準備するもの</h2>
         <h3>必須：本人確認書類</h3>
-        <p>古物営業法により、金買取では<strong>金額にかかわらず本人確認</strong>が必要です。以下のいずれか1点を持参してください。</p>
+        <p>古物営業法により、<strong>買取額が1万円以上なら本人確認</strong>が必要です（<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/kobutsu_sekoukisoku.files/antique.pdf" target="_blank" rel="noopener noreferrer nofollow">警視庁のチェック表</a>。1万円未満は原則免除）。K18は{LP_DATE}の目安で1g約{LP_K18}円なので、ほとんどの金買取があてはまります。以下のいずれか1点を持参してください。</p>
         <ul>
           <li>運転免許証</li>
           <li>マイナンバーカード（通知カードは不可）</li>
@@ -124,8 +125,22 @@ export default function KinKaitoriHajimetePage() {
         </ul>
         <p><strong>有効期限が切れているものは使えません。</strong>事前にご確認ください。</p>
 
-        <h3>200万円超の場合：マイナンバー</h3>
-        <p>1回の取引で200万円を超える金地金（インゴット）の売却では、マイナンバーの提示が必要です。マイナンバーカードまたは通知カード+身分証を持参してください。</p>
+        <h3 id="mynumber">マイナンバーが必要なとき：金地金・金貨などを200万円超で売る場合</h3>
+        <p>業者が金地金・白金地金・金貨・白金貨の対価として<strong>200万円超を支払うとき</strong>は、税務署へ支払調書を出す義務があります（<a href="https://www.nta.go.jp/information/release/kokuzeicho/2015/shotoku_shohi/sanko04_05.htm" target="_blank" rel="noopener noreferrer nofollow">国税庁</a>）。<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hotei/pdf/h31/1251-01.pdf" target="_blank" rel="noopener noreferrer nofollow">調書の様式</a>に個人番号の欄があるため、売る人はマイナンバーを伝えることになります。</p>
+        <div className="table-wrapper">
+          <table>
+            <thead><tr><th>売るもの・金額</th><th>本人確認書類</th><th>マイナンバー</th></tr></thead>
+            <tbody>
+              <tr><td>買取額1万円未満</td><td>法律上は原則免除（店の扱いは売却先へ）</td><td>支払調書の対象外</td></tr>
+              <tr><td>買取額1万円以上・200万円以下</td><td>必要</td><td>支払調書の対象外</td></tr>
+              <tr><td><strong>金地金・白金地金・金貨・白金貨で200万円超</strong></td><td>必要</td><td><strong>必要</strong></td></tr>
+              <tr><td>ネックレスや指輪などのジュエリーで200万円超</td><td>必要</td><td>国税庁の説明の4種に挙がっていないため、売却先に確認</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>マイナンバーカードがあれば1枚で済みます。無ければ、番号の確認に番号付きの住民票の写しなど、身元の確認に運転免許証やパスポートなどの写真付き身分証を使います（<a href="https://www.nta.go.jp/taxes/tetsuzuki/mynumberinfo/honninkakunin/shorui.htm" target="_blank" rel="noopener noreferrer nofollow">国税庁の主な本人確認書類</a>。通知カードは<a href="https://www.nta.go.jp/taxes/tetsuzuki/mynumberinfo/FAQ/honninkakunin_qa.htm" target="_blank" rel="noopener noreferrer nofollow">氏名・住所などが住民票と一致する場合に限り</a>番号の確認に使えます）。店ごとの必要書類は売却前に確認してください。税金や分割売却の考え方は<Link href="/articles/kin-baikyaku-mynumber/">金の売却とマイナンバー</Link>で解説しています。</p>
+        <p>現金で200万円を超える代金を受け取る売買では、犯罪収益移転防止法の取引時確認（氏名・住居・生年月日のほか、取引の目的や職業など）もあります（<a href="https://www.npa.go.jp/sosikihanzai/jafic/hourei/data/hougaiyou20240401.pdf" target="_blank" rel="noopener noreferrer nofollow">警察庁 JAFIC の法令概要</a>）。</p>
+        <p className="text-xs text-warm-gray">確認日：2026年11月7日。</p>
 
         <h3>査定額に影響する付属品</h3>
         <ul>
@@ -212,7 +227,8 @@ export default function KinKaitoriHajimetePage() {
         <h2>初めての金買取 よくある質問</h2>
         <div className="space-y-3 not-prose">
           {[
-            { q: "金を売るのに必要なものは？", a: "有効期限内の本人確認書類1点（運転免許証・マイナンバーカード・パスポート・在留カード）と、売りたい金製品だけです。古物営業法により金額にかかわらず本人確認が必要です。1回200万円を超える取引ではマイナンバーの提示も求められます。印鑑や通帳は不要です。" },
+            { q: "金を売るのに必要なものは？", a: `有効期限内の本人確認書類1点（運転免許証・マイナンバーカード・パスポート・在留カード）と、売りたい金製品だけです。古物営業法は買取額1万円以上の取引で本人確認を義務付けており、K18は${LP_DATE}の目安で1g約${LP_K18}円なので、ほとんどの金買取があてはまります。金地金・白金地金・金貨・白金貨を200万円超で売るときはマイナンバーも必要です。印鑑や通帳は不要です。` },
+            { q: "金の買取でマイナンバーは必要ですか？", a: "必要になるのは、買取業者が金地金・白金地金・金貨・白金貨の対価として200万円超を支払うときです。業者は税務署へ支払調書を出す義務があり、その様式に個人番号の欄があります（国税庁）。国税庁の説明で挙げられているのはこの4種で、ネックレスや指輪などのジュエリーは挙がっていないため、ジュエリーを高額で売るときは売却先に確認してください。" },
             { q: "本人確認書類はコピーでもいいですか？", a: "店頭では原本が必要です。宅配買取のみ、コピーの同封で受け付ける方式が一般的です。有効期限が切れた書類は使えません。" },
             { q: "壊れたアクセサリーでも売れますか？", a: "はい、壊れていても刻印がなくても買取可能です。金は素材価値で評価されるため、状態は問いません。" },
             { q: "手数料はかかりますか？", a: "買取大吉・ティファナ・ウリエルは査定料・出張費・キャンセル料すべて無料と公式に明記しています。ヒカカク！は一括査定の利用が無料で、査定・買取・キャンセルは申し込み先の各業者とのやり取りになるため、手数料や返送料はその業者の条件をご確認ください。" },
