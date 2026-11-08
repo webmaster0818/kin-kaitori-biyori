@@ -23,13 +23,13 @@ function FaqSchema() {
     { "@type": "Question", name: "金を売るとき、いくらからマイナンバーが必要ですか？", acceptedAnswer: { "@type": "Answer", text: "金地金・金貨の売却額が200万円を超えると、買取業者は税務署へ支払調書を提出する義務があり、その記載のために売主のマイナンバーの告知が必要になります。200万円以下の取引ではマイナンバーの提供は不要です（本人確認書類は別途必要）。" } },
     { "@type": "Question", name: "マイナンバーを提示すると税金が増えますか？", acceptedAnswer: { "@type": "Answer", text: "いいえ。マイナンバーの提示自体で税金が増えることはありません。売却益への課税（譲渡所得）は提示の有無に関係なく従来から発生するもので、支払調書は税務署が取引を把握するための書類です。" } },
     { "@type": "Question", name: "200万円以下に分けて売れば申告しなくていい？", acceptedAnswer: { "@type": "Answer", text: "いいえ。支払調書が提出されないことと、納税義務がないことは別問題です。年間の売却益が特別控除50万円を超えれば、調書の有無に関係なく確定申告が必要です。意図的な分割売却でも申告義務は変わりません。" } },
-    { "@type": "Question", name: "マイナンバーカードを持っていない場合は？", acceptedAnswer: { "@type": "Answer", text: "通知カードやマイナンバー記載の住民票と、運転免許証などの本人確認書類の組み合わせで対応できる業者が一般的です。必要書類は業者により異なるため、事前にご確認ください。" } },
+    { "@type": "Question", name: "マイナンバーカードを持っていない場合は？", acceptedAnswer: { "@type": "Answer", text: "マイナンバー記載の住民票の写しと、運転免許証などの本人確認書類の組み合わせが使えます。通知カードは、氏名・住所などが住民票と一致する場合に限り番号の確認に使えます（国税庁）。必要書類は業者により異なるため、事前にご確認ください。" } },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
 function ArticleSchema() {
-  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-06-12", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
+  const d = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, datePublished: "2026-06-12", dateModified: "2026-11-08", author: { "@type": "Organization", name: "金買取びより" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />;
 }
 
@@ -75,8 +75,8 @@ export default function KinBaikyakuMynumberPage() {
           <table>
             <thead><tr><th>売却額</th><th>マイナンバー</th><th>本人確認書類</th><th>支払調書</th></tr></thead>
             <tbody>
-              <tr><td><strong>200万円以下</strong></td><td>不要</td><td>必要（古物営業法・犯罪収益移転防止法）</td><td>提出されない</td></tr>
-              <tr><td><strong>200万円超</strong></td><td>告知が必要</td><td>必要</td><td>税務署へ提出される</td></tr>
+              <tr><td><strong>200万円以下</strong></td><td>不要</td><td>買取額1万円以上なら必要（古物営業法）</td><td>提出されない</td></tr>
+              <tr><td><strong>200万円超</strong></td><td>告知が必要</td><td>必要（現金払いなら犯罪収益移転防止法の取引時確認も）</td><td>税務署へ提出される</td></tr>
             </tbody>
           </table>
         </div>
@@ -103,8 +103,8 @@ export default function KinBaikyakuMynumberPage() {
 
         <h2>売却時に必要な書類まとめ</h2>
         <ol>
-          <li><strong>本人確認書類</strong>（運転免許証・マイナンバーカード・パスポート等）— 金額にかかわらず必要。古物営業法・犯罪収益移転防止法に基づき、1万円超の取引では本人確認が義務付けられています</li>
-          <li><strong>マイナンバー確認書類</strong> — 200万円超のとき。マイナンバーカード、または通知カード／個人番号記載の住民票＋本人確認書類</li>
+          <li><strong>本人確認書類</strong>（運転免許証・マイナンバーカード・パスポート等）— 買取額1万円以上のとき（古物営業法。1万円未満は原則免除で、金・貴金属は例外の品目に入っていません。<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/kobutsu_sekoukisoku.files/antique.pdf" target="_blank" rel="noopener noreferrer nofollow">警視庁のチェック表</a>）。代金を現金で200万円超受け取るときは、犯罪収益移転防止法の取引時確認もあります（<a href="https://www.npa.go.jp/sosikihanzai/jafic/hourei/data/hougaiyou20240401.pdf" target="_blank" rel="noopener noreferrer nofollow">警察庁 JAFIC の法令概要</a>）</li>
+          <li><strong>マイナンバー確認書類</strong> — 金地金・白金地金・金貨・白金貨を200万円超で売るとき（業者が支払調書を出すため。<a href="https://www.nta.go.jp/information/release/kokuzeicho/2015/shotoku_shohi/sanko04_05.htm" target="_blank" rel="noopener noreferrer nofollow">国税庁</a>）。マイナンバーカード、または個人番号記載の住民票の写し＋本人確認書類（通知カードは氏名・住所などが住民票と一致する場合に限り使えます。<a href="https://www.nta.go.jp/taxes/tetsuzuki/mynumberinfo/FAQ/honninkakunin_qa.htm" target="_blank" rel="noopener noreferrer nofollow">国税庁</a>）</li>
           <li><strong>購入時の領収書・計算書</strong>（あれば）— 税額計算で大幅に有利になります。<Link href="/articles/kin-souzoku-baikyaku/">相続した金</Link>でも故人の書類が使えます</li>
         </ol>
 
