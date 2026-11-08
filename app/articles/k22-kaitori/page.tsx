@@ -16,6 +16,14 @@ const k18Price = goldData.purity_buyback_estimate_per_g.k18;
 const k216Price = Math.round(goldData.tanaka_official.au_buyback_per_g * 0.9 * 0.96);
 const [, priceMonth, priceDay] = goldData.date.split("-").map(Number);
 const priceDateJa = formatDateJa(goldData.date);
+/* k22-pub-1108: 計算の元にした田中貴金属 K24 店頭買取価格と、その公表日時（田中のページ表記）。
+   休日は前営業日の公表値のままなので、「今日」の目安がいつの公表値から出ているかを示す */
+const tanakaAuBuy = goldData.tanaka_official.au_buyback_per_g as number;
+const _auPub = (goldData as Record<string, unknown>).tanaka_published_at as string | null | undefined;
+const auPubJa = (() => {
+  const m = _auPub ? /^(\d{4})-(\d{2})-(\d{2}) (\d{1,2}:\d{2})$/.exec(_auPub) : null;
+  return m ? `${Number(m[1])}年${Number(m[2])}月${Number(m[3])}日 ${m[4]}公表` : null;
+})();
 
 const todayFaq = {
   q: "今日のK22（22金）の1g買取価格はいくらですか？",
@@ -115,6 +123,12 @@ export default function K22KaitoriPage() {
         <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k22" />
+
+        {auPubJa && (
+          <p className="text-sm">
+            計算の元にした値: <a href="https://gold.tanaka.co.jp/commodity/souba/index.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">田中貴金属</a>の金（K24）店頭買取価格 1g{tanakaAuBuy.toLocaleString()}円（{auPubJa}）。{tanakaAuBuy.toLocaleString()}円×22/24×0.96＝{k22Price.toLocaleString()}円です。田中貴金属の地金価格は公表のない日は前回の公表値のままなので、上の目安も同じ値になります。22金そのものの公示価格は<a href="#koji" className="text-accent hover:underline">各社の公示ページ</a>でご確認ください。
+          </p>
+        )}
 
         <div id="weight-table">
           <WeightPriceTable purities={["k22"]} />
