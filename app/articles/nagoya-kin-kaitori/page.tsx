@@ -63,7 +63,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金・ブランド買取｜栄生・近鉄名古屋・本陣・ささしまライブ 駅別の店舗と徒歩分【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-09",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅は徒歩5分に買取大吉（金・宝石・ブランド品）、近鉄名古屋駅は正面出口徒歩1分になんぼや、ささしまライブ駅は直線約470mにおたからや。本陣駅は徒歩圏に店がなく名古屋駅へ2駅（なんぼや・KOMEHYO）。駅別に金・ブランド・宝石の買取店を公式で確認（2026年10月27日更新）。",
@@ -281,7 +281,7 @@ export default function NagoyaKinKaitoriPage() {
 
         <h3>名古屋ならではの「大須」エリア</h3>
 
-        <p>名古屋の大須は、秋葉原（東京）・日本橋（大阪）と並ぶ日本三大電気街の一つですが、<strong>宝石・貴金属の専門店も多数集まるエリア</strong>です。池田商店をはじめとする老舗貴金属店が営業しており、地金売買に慣れた専門店ならではの<strong>相場に近い適正価格</strong>での買取が期待できます。</p>
+        <p>名古屋の大須は、秋葉原（東京）・日本橋（大阪）と並ぶ日本三大電気街の一つですが、<strong>宝石・貴金属の専門店も多数集まるエリア</strong>です。</p>
 
         <h3>名古屋の金買取相場（毎日自動更新）</h3>
 
@@ -362,7 +362,9 @@ export default function NagoyaKinKaitoriPage() {
           </table>
         </div>
 
-        <p>大須エリアには池田商店や質ウエダ、質セブンなど、<strong>名古屋の老舗貴金属店</strong>が営業しています。これらの店舗は貴金属問屋としての歴史が長く、地金の売買に精通しているため、大手チェーンよりも<strong>1gあたり数十円〜100円程度高い</strong>買取価格を提示してくれるケースがあります。</p>
+        <p>大須エリアには質セブンなどが営業しています。</p>
+
+        <p>地場の貴金属店・質屋の池田商店と質ウエダは、大須ではなく栄にあります。<strong>宝石貴金属 池田商店</strong>（1886年創業・徳力本店の金地金取扱店）は中区栄2-5-13、地下鉄伏見駅4番出口から徒歩5分・栄駅8番出口から徒歩7分、営業時間10:00〜18:00・火曜定休です。地金・コインの取引は平日10:00〜16:00のみで、土日・祝日は受け付けていません（<a href="https://xn--tor2a0ir56a086d4ng.net/shop" target="_blank" rel="noopener noreferrer nofollow">池田商店公式 店舗のご案内</a>／<a href="https://www.ikeda-shouten.co.jp/company" target="_blank" rel="noopener noreferrer nofollow">会社情報</a>）。<strong>質ウエダ 栄店</strong>は中区栄3-31-18 アルティメイトウエダ1〜3F、地下鉄矢場町駅4番出口から徒歩約30秒、営業時間10:00〜20:00・年中無休です（名古屋市内4店で、大須に店舗はありません。<a href="https://ueda78.co.jp/shops" target="_blank" rel="noopener noreferrer nofollow">質ウエダ公式 店舗紹介</a>）。いずれも2026年11月9日確認。買取価格は店ごとに異なるため、複数店で見積もりを取って比べてください。</p>
 
         <h2>名古屋で金を高く売る5つのコツ</h2>
 
