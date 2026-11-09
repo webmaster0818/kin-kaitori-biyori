@@ -48,7 +48,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "【2026年最新】札幌の金買取おすすめ業者ガイド — 札幌駅・大通・すすきのエリア別比較",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-11-09",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
     description: "札幌で金を高く売るならどこがいい？札幌駅・大通・すすきののエリア別おすすめ買取業者、買取方法の比較、札幌の金買取相場と高く売るコツを解説します。",
@@ -321,7 +321,7 @@ export default function SapporoKinKaitoriPage() {
             },
             {
               q: "札幌で金を売る際に必要な持ち物は？",
-              a: "本人確認書類（運転免許証・マイナンバーカード等）が必須です。200万円超の取引ではマイナンバーの提示も必要です。",
+              a: "本人確認書類（運転免許証・マイナンバーカード等）が必須です。マイナンバーの告知も必要になるのは、金地金・白金地金・金貨・白金貨を売って200万円超の代金を受け取るときです（業者が税務署へ支払調書を出すため。国税庁）。ジュエリーの扱いは売却先にご確認ください。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">

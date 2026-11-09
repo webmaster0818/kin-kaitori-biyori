@@ -30,9 +30,9 @@ function ArticleSchema() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "【2026年最新】金の200万円超売却時のマイナンバー提出義務｜法律と業者対応を完全解説",
-    description: "金200万円超の売却時に必要なマイナンバー提出義務（犯罪収益移転防止法）。提出を避ける方法はあるか、業者の対応、確定申告との関係を解説します。",
+    description: "金地金・金貨を200万円超で売るときのマイナンバー告知義務（所得税法・支払調書。犯罪収益移転防止法ではありません）。業者の対応、確定申告との関係を解説します。",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
+    dateModified: "2026-11-09",
     author: {
       "@type": "Organization",
       name: "金買取びより編集部",
@@ -51,7 +51,7 @@ function ArticleSchema() {
 }
 
 function FaqSchema() {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"マイナンバーを提出したくない場合、売れない？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"200万円超の取引はできません。200万円以下に分割するか、提出に同意する必要があります。\"}}, {\"@type\": \"Question\", \"name\": \"マイナンバー提出後に税金がかかるの？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"提出自体は税金とは別。譲渡益が年間50万円超なら確定申告が必要。\"}}, {\"@type\": \"Question\", \"name\": \"家族複数の名義で売却すれば回避できる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"実際の所有者が異なる場合は合法。所有者が同一人物なのに名義変えは脱税リスク。\"}}, {\"@type\": \"Question\", \"name\": \"マイナンバー通知カードでもいい？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"業者により対応が異なる。マイナンバーカード（顔写真付き）が確実。\"}}, {\"@type\": \"Question\", \"name\": \"複数回に分けて売る場合の業者の対応は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"同じ業者で短期間に複数回 = 合算判断される可能性あり。事前に業者へ確認。\"}}]}" }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"マイナンバーを提出したくない場合、売れない？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"200万円超の取引はできません。200万円以下に分割するか、提出に同意する必要があります。\"}}, {\"@type\": \"Question\", \"name\": \"マイナンバー提出後に税金がかかるの？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"提出自体は税金とは別。譲渡益が年間50万円超なら確定申告が必要。\"}}, {\"@type\": \"Question\", \"name\": \"家族複数の名義で売却すれば回避できる？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"実際の所有者が異なる場合は合法。所有者が同一人物なのに名義変えは脱税リスク。\"}}, {\"@type\": \"Question\", \"name\": \"マイナンバー通知カードでもいい？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"通知カードは令和2年5月25日に廃止されていますが、記載の氏名・住所などが住民票と一致している場合に限り、番号確認書類として使えます（国税庁）。一致しない場合は番号付きの住民票の写しかマイナンバーカードを使います。\"}}, {\"@type\": \"Question\", \"name\": \"複数回に分けて売る場合の業者の対応は？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"同じ業者で短期間に複数回 = 合算判断される可能性あり。事前に業者へ確認。\"}}]}" }} />;
 }
 
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
@@ -59,7 +59,7 @@ const priceDateJa = `2026年${_pm}月${_pd}日`;
 
 export const metadata: Metadata = {
   title: "【2026年最新】金の200万円超売却時のマイナンバー提出義務｜法律と業者対応を完全解説",
-  description: "金200万円超の売却時に必要なマイナンバー提出義務（犯罪収益移転防止法）。提出を避ける方法はあるか、業者の対応、確定申告との関係を解説します。",
+  description: "金地金・金貨を200万円超で売るときのマイナンバー告知義務（所得税法・支払調書。犯罪収益移転防止法ではありません）。業者の対応、確定申告との関係を解説します。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-200man-mynumber/" },
 };
 
@@ -103,10 +103,12 @@ export default function Page() {
           <p className="text-warm-gray text-sm mb-8">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
 
-          <p>金製品を<strong>1回の取引で200万円超</strong>売却する場合、業者は犯罪収益移転防止法に基づき、お客様にマイナンバー（個人番号）の提出を求める必要があります。本記事で詳細を解説。</p>
+          <p><strong>金地金・白金地金・金貨・白金貨</strong>（国税庁のいう「金地金等」）を買取業者に売り、<strong>200万円超</strong>の代金を受け取る場合、売主は氏名・住所・マイナンバー（個人番号）を業者に告知し、業者は税務署へ支払調書を提出します。根拠は<strong>所得税法</strong>（224条の6・225条）で、犯罪収益移転防止法ではありません（2026年11月9日に国税庁・e-Gov法令検索で確認）。本記事で詳細を解説。</p>
 
           <h2>1. 200万円超でマイナンバーが必要な理由</h2>
-          <p>「犯罪収益移転防止法」第4条の規定により、貴金属の200万円超の取引では業者に本人確認義務が課されます。マイナンバー（個人番号）の通知が必要です。</p>
+          <p>マイナンバーが必要になるのは、<strong>所得税法の「金地金等の譲渡の対価の支払調書」</strong>のためです。金地金等の売買を業として行う者が、国内で金地金等の譲渡を受けて200万円超の対価を支払うときは、税務署へ支払調書を提出する義務があります（平成24年1月から。<a href="https://www.nta.go.jp/information/release/kokuzeicho/2015/shotoku_shohi/sanko04_05.htm" target="_blank" rel="noopener noreferrer nofollow" className="text-accent underline">国税庁</a>）。売主には、支払を受ける時までに氏名・住所・個人番号を業者へ告知する義務があり、業者は住民票の写しなどの書類でそれを確認します（所得税法224条の6・225条1項14号。<a href="https://laws.e-gov.go.jp/law/340AC0000000033" target="_blank" rel="noopener noreferrer nofollow" className="text-accent underline">e-Gov法令検索</a>）。</p>
+          <p>対象は国税庁の説明する<strong>金・白金の地金と金貨・白金貨</strong>です。ネックレス・指輪などのジュエリーはこの4種に挙がっていないため、扱いは売却先にご確認ください。</p>
+          <p>なお、犯罪収益移転防止法は、<strong>代金を現金で200万円超</strong>支払う宝石・貴金属等の売買で、業者に取引時確認（本人確認）を求める法律です（<a href="https://www.npa.go.jp/sosikihanzai/jafic/hourei/data/hougaiyou20240401.pdf" target="_blank" rel="noopener noreferrer nofollow" className="text-accent underline">警察庁JAFIC 法令の概要</a>）。本人確認の根拠であって、マイナンバーの根拠ではありません。</p>
 
           <h2>2. マイナンバー提出を避ける方法</h2>
           <p>下記の方法がありますが、いずれも法令準拠が前提:</p>
@@ -127,7 +129,7 @@ export default function Page() {
           <h2>5. 200万円超売却時の流れ</h2>
           <ol>
             <li>業者が200万円超を確認</li>
-            <li>本人確認書類（運転免許証等）+ マイナンバーカード（または通知カード）の提示</li>
+            <li>本人確認書類（運転免許証等）+ マイナンバーカード（または番号付きの住民票の写し。通知カードは氏名・住所が住民票と一致する場合に限る）の提示</li>
             <li>業者が提出書類のコピーを取得</li>
             <li>業者が税務署へ支払調書を提出（取引日から翌月末まで）</li>
             <li>お客様も確定申告（年間50万円超の譲渡益の場合）</li>
@@ -157,7 +159,7 @@ export default function Page() {
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>マイナンバー通知カードでもいい？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>
-  <p className="mt-3 text-sm leading-relaxed">業者により対応が異なる。マイナンバーカード（顔写真付き）が確実。</p>
+  <p className="mt-3 text-sm leading-relaxed">通知カードは令和2年5月25日に廃止されていますが、記載の氏名・住所などが住民票と一致している場合に限り、番号確認書類として使えます（<a href="https://www.nta.go.jp/taxes/tetsuzuki/mynumberinfo/honninkakunin/shorui.htm" target="_blank" rel="noopener noreferrer nofollow" className="text-accent underline">国税庁</a>）。一致しない場合は番号付きの住民票の写しかマイナンバーカードを使います。</p>
 </details>
 <details className="border-b border-warm-border py-4 group not-prose">
   <summary className="font-bold cursor-pointer flex justify-between items-center"><span>複数回に分けて売る場合の業者の対応は？</span><span className="text-2xl ml-4 group-open:rotate-45 transition-transform">+</span></summary>

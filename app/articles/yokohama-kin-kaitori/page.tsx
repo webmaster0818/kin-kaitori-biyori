@@ -53,7 +53,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "横浜の金買取はどこがいい？横浜駅・関内・元町の9店を公式情報で比較【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-11-06",
+    dateModified: "2026-11-09",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://kin-kaitori-biyori.pages.dev" },
     description: "横浜で金を売るならどこがいい？横浜駅西口・東口・関内・元町の金買取9店を、住所・駅からの徒歩分・営業時間・定休日（日曜休・水曜休の店あり）で比較。選び方の4つの基準と今日の金相場（毎朝更新）も掲載。",
@@ -380,7 +380,7 @@ export default function YokohamaKinKaitoriPage() {
             },
             {
               q: "横浜で金を売る際に必要なものは？",
-              a: "本人確認書類（運転免許証・マイナンバーカード等）が必須です。200万円超の取引ではマイナンバーの提示も必要です。",
+              a: "本人確認書類（運転免許証・マイナンバーカード等）が必須です。マイナンバーの告知も必要になるのは、金地金・白金地金・金貨・白金貨を売って200万円超の代金を受け取るときです（業者が税務署へ支払調書を出すため。国税庁）。ジュエリーの扱いは売却先にご確認ください。",
             },
           ].map((faq) => (
             <details key={faq.q} className="bg-white border border-warm-border rounded-xl overflow-hidden">
