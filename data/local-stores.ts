@@ -612,7 +612,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "tokorozawa-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-10",
     stores: [
       { name: "買取大吉 所沢上安松店", chain: "買取大吉", address: "埼玉県所沢市上安松1116-4", postalCode: "359-0025", hours: "10:00〜18:30", closed: "年中無休（年末年始を除く）", access: "県道179号・6号沿い（山田うどん食堂 本店すぐ近く）", tel: "04-2935-3036", sourceUrl: "https://www.kaitori-daikichi.jp/store/tokorozawa-kamiyasumatsu/" },
       { name: "買取大吉 所沢中富店", chain: "買取大吉", address: "埼玉県所沢市中富1565-1", hours: "10:00〜19:00", closed: "月曜日（祝日の場合は火曜日）", access: "The Market Place 所沢北原より徒歩6分", tel: "04-2997-8957", sourceUrl: "https://www.kaitori-daikichi.jp/store/tokorozawa-nakatomi/" },

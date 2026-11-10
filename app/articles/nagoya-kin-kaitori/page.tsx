@@ -63,7 +63,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: "名古屋の金・ブランド買取｜栄生・近鉄名古屋・本陣・ささしまライブ 駅別の店舗と徒歩分【2026年10月】",
     datePublished: "2026-04-24",
-    dateModified: "2026-11-09",
+    dateModified: "2026-11-10",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
     description: "栄生駅は徒歩5分に買取大吉（金・宝石・ブランド品）、近鉄名古屋駅は正面出口徒歩1分になんぼや、ささしまライブ駅は直線約470mにおたからや。本陣駅は徒歩圏に店がなく名古屋駅へ2駅（なんぼや・KOMEHYO）。駅別に金・ブランド・宝石の買取店を公式で確認（2026年10月27日更新）。",
@@ -249,7 +249,7 @@ export default function NagoyaKinKaitoriPage() {
         <p>大須商店街のエリア。<strong>なんぼや 名古屋大須店</strong>（大須観音駅 徒歩5分／中区大須2-30-6）、<strong>大黒屋ブランド館 名古屋大須店</strong>（上前津駅 徒歩4分／中区大須3-26-40）が徒歩圏です。<a href="https://kaitori.e-daikoku.com/metal/gold-nagoya/" target="_blank" rel="noopener noreferrer nofollow">出典：大黒屋公式</a></p>
 
         <h3 id="kanayama">金山駅</h3>
-        <p>金山駅は総合駅で、大手チェーンの駅至近店は確認できませんでしたが、地場の買取専門店<strong>「さてい屋」（金山総合駅 東口 徒歩2分）</strong>が金・プラチナの買取に対応しています。査定料・手数料は無料、予約不要で身分証を持参すれば来店買取が可能です。所在地は熱田区波寄町21-2、営業時間は平日12:00〜17:00、土曜・祝日の営業日は12:00〜16:00で、日曜・水曜が休み（不定休・臨時休業あり。営業日は<a href="http://www.sateiya.net/" target="_blank" rel="noopener noreferrer nofollow">公式サイト</a>の営業カレンダーで確認してください。2026年11月8日確認）。より多くの業者を比較したい場合は、栄・大須の大手店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>で相見積もりを取るのが確実です。</p>
+        <p>金山駅は総合駅で、大手チェーンの駅至近店は確認できませんでしたが、地場の買取専門店<strong>「さてい屋」（金山総合駅 東口 徒歩2分）</strong>が金・プラチナの買取に対応しています。査定料・手数料は無料、予約不要で身分証を持参すれば来店買取が可能です。所在地は熱田区波寄町21-2、営業時間は平日12:00〜17:00、土曜・祝日の営業日は12:00〜16:00で、日曜・水曜が休み（不定休・臨時休業あり。営業日は<a href="http://www.sateiya.net/" target="_blank" rel="noopener noreferrer nofollow">公式サイト</a>の営業カレンダーで確認してください。2026年11月10日確認）。より多くの業者を比較したい場合は、栄・大須の大手店舗へ足を延ばすか、下記の<strong>出張・宅配買取</strong>で相見積もりを取るのが確実です。</p>
 
         <h3 id="hotta">堀田駅・妙音通駅（瑞穂区・名古屋市南部）</h3>
         <p>堀田駅（名鉄名古屋本線・地下鉄名城線）と妙音通駅（名城線）の周辺は住宅エリアで、駅の徒歩圏に金買取店は確認できませんでした（2026年10月11日確認）。なお店名が似ている<strong>堀田商事 瑞穂本店</strong>（瑞穂区玉水町2-22-2／質・買取10:00〜19:00・日曜定休）は、公式に最寄駅の記載がなく、堀田駅から歩ける距離かは確認できませんでした。来店する場合は地図で道のりを確かめてください。<a href="https://horita78.co.jp/company/shop/" target="_blank" rel="noopener noreferrer nofollow">出典：堀田商事 店舗案内</a></p>

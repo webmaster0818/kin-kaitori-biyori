@@ -31,7 +31,7 @@ function ArticleSchema() {
     headline: "【2026年最新】所沢の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
     description: "所沢で金を高く売るならどこ？所沢の金買取相場、店頭・出張・宅配の方法別比較、埼玉県で高く売るポイントと注意点を公開情報をもとに解説します。",
     datePublished: "2026-06-05",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-10",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
