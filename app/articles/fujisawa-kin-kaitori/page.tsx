@@ -31,7 +31,7 @@ function ArticleSchema() {
     headline: "【2026年最新】藤沢の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
     description: "藤沢で金を高く売るならどこ？藤沢の金買取相場、店頭・出張・宅配の方法別比較、神奈川県で高く売るポイントと注意点を公開情報をもとに解説します。",
     datePublished: "2026-06-05",
-    dateModified: "2026-06-05",
+    dateModified: "2026-11-11",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };

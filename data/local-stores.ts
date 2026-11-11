@@ -701,11 +701,11 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "fujisawa-kin-kaitori": {
-    updated: "2026-07-07",
+    updated: "2026-11-11",
     stores: [
-      { name: "買取大吉 藤沢店", chain: "買取大吉", address: "神奈川県藤沢市南藤沢22-2 春日ビル1階", postalCode: "251-0055", hours: "10:00～19:00", closed: "年中無休", access: "JR・小田急藤沢駅から徒歩約5分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/fujisawa/" },
-      { name: "大黒屋 質藤沢駅北口店", chain: "大黒屋", address: "神奈川県藤沢市藤沢462 石田屋ビル2階A号室", postalCode: "251-0052", hours: "10:00～18:00", closed: "日曜日", access: "JR藤沢駅北口 徒歩約2分", tel: "0466-55-0531", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000150" },
-      { name: "おたからや 藤沢店", chain: "おたからや", address: "神奈川県藤沢市藤沢484-4 オーク湘南藤沢ビル1階", postalCode: "251-0052", hours: "9:00～19:00", closed: "年中無休", access: "JR藤沢駅北口より徒歩4分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/fujisawa/" },
+      { name: "買取大吉 藤沢店", chain: "買取大吉", address: "神奈川県藤沢市南藤沢22-2 春日ビル1階", postalCode: "251-0055", hours: "10:00～19:00", closed: "年中無休", access: "JR・小田急藤沢駅から徒歩約5分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/fujisawa/" },
+      { name: "大黒屋 質藤沢駅北口店", chain: "大黒屋", address: "神奈川県藤沢市藤沢462 石田屋ビル2階A号室", postalCode: "251-0052", hours: "10:00～18:00", closed: "日曜日", access: "JR藤沢駅北口 徒歩約2分（店舗情報欄の表記は徒歩3分）", tel: "0466-55-0531", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000150" },
+      { name: "おたからや 藤沢店", chain: "おたからや", address: "神奈川県藤沢市藤沢484-4 オーク湘南藤沢ビル1階", postalCode: "251-0052", hours: "10:00～19:00", closed: "年中無休（年末年始を除く）", access: "JR藤沢駅北口より徒歩4分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/fujisawa/" },
       { name: "おたからや 湘南藤沢オーパ店", chain: "おたからや", address: "神奈川県藤沢市南藤沢22-3 湘南藤沢オーパ3階", postalCode: "251-0055", hours: "10:00～21:00", closed: "年中無休", access: "藤沢駅南口すぐ", tel: "0466-90-5900", sourceUrl: "https://www.otakaraya-shop.jp/fujisawa-opa/" },
       { name: "なんぼや 藤沢ODAKYU湘南GATE店", chain: "なんぼや", address: "神奈川県藤沢市南藤沢21-1 ODAKYU湘南GATE 5F", postalCode: "251-8570", hours: "10:00～20:00", closed: "年中無休", access: "JR藤沢駅南口より徒歩4分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/shonan-brandshop/" },
     ],
