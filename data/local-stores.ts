@@ -199,7 +199,7 @@ export const localStores: Record<string, CityStores> = {
         hours: "10:00〜19:00",
         closed: "年中無休",
         access: "JR・新京成 松戸駅 西口から徒歩3分",
-        tel: "0120-15-1234",
+        tel: "0120-381-048",
         sourceUrl: "https://www.kaitori-daikichi.jp/store/matsudo/",
       },
       {
@@ -315,7 +315,7 @@ export const localStores: Record<string, CityStores> = {
         hours: "10:00〜19:00",
         closed: "年中無休",
         access: "JR武蔵野線 新座駅より西武バス約5分、野火止大門バス停下車 徒歩約6分",
-        tel: "0120-15-1234",
+        tel: "0120-381-048",
         sourceUrl: "https://www.kaitori-daikichi.jp/store/seiyu-niiza/",
       },
       {
@@ -478,7 +478,7 @@ export const localStores: Record<string, CityStores> = {
         hours: "10:00〜20:00",
         closed: "年中無休",
         access: "JR鴨宮駅南口からバスで約10分（箱根登山バス「ダイナシティ小田原行き」）",
-        tel: "0120-15-1234",
+        tel: "0120-381-048",
         sourceUrl: "https://www.kaitori-daikichi.jp/store/dynacity-odawara/",
       },
       {
@@ -554,7 +554,7 @@ export const localStores: Record<string, CityStores> = {
     updated: "2026-07-05",
     stores: [
       { name: "おたからや 加古川ヤマトヤシキ店", chain: "おたからや", address: "兵庫県加古川市加古川町篠原町21-8 加古川ヤマトヤシキ3階", postalCode: "675-0065", closed: "年中無休", access: "JR加古川駅 南口より徒歩2分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kakogawa-yy/" },
-      { name: "買取大吉 加古川カピル店", chain: "買取大吉", address: "兵庫県加古川市加古川町篠原町21-8 加古川カピル1階", postalCode: "675-0065", hours: "10:00〜19:00", closed: "年中無休", access: "JR加古川駅より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kakogawa-kapiru/" },
+      { name: "買取大吉 加古川カピル店", chain: "買取大吉", address: "兵庫県加古川市加古川町篠原町21-8 加古川カピル1階", postalCode: "675-0065", hours: "10:00〜19:00", closed: "年中無休", access: "JR加古川駅より徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/kakogawa-kapiru/" },
       { name: "買取大吉 西加古川店", chain: "買取大吉", address: "兵庫県加古川市米田町船頭200-1 マックスバリュ加古川西店", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", tel: "0120-88-2217", sourceUrl: "https://www.kaitori-daikichi.jp/store/nishikakogawa/" },
       { name: "買取大吉 神野石守店", chain: "買取大吉", address: "兵庫県加古川市神野町石守323-1", postalCode: "675-0017", hours: "10:00〜19:00", closed: "年中無休", access: "東播磨道 神野ICすぐ", tel: "0120-785-578", sourceUrl: "https://www.kaitori-daikichi.jp/store/kanno-ishimori/" },
       { name: "買取大吉 アリオ加古川店", chain: "買取大吉", address: "兵庫県加古川市別府町緑町2 アリオ加古川 アネックス館2F", hours: "10:00〜19:00", closed: "年中無休", access: "山陽電鉄 別府駅より徒歩5分", tel: "079-490-5990", sourceUrl: "https://www.kaitori-daikichi.jp/store/gp-befu/" },
@@ -564,7 +564,7 @@ export const localStores: Record<string, CityStores> = {
     updated: "2026-07-05",
     stores: [
       { name: "買取大吉 本八幡店", chain: "買取大吉", address: "千葉県市川市八幡2-3-15", hours: "10:00〜18:00", closed: "年中無休", access: "京成八幡駅より徒歩1分／JR・都営新宿線 本八幡駅より徒歩3〜4分", tel: "0120-144-114", sourceUrl: "https://www.kaitori-daikichi.jp/store/motoyawata/" },
-      { name: "買取大吉 イオンフードスタイル市川店", chain: "買取大吉", address: "千葉県市川市市川1丁目4-10 ダイエー市川 7階", hours: "10:00〜19:00", closed: "年中無休", access: "JR総武本線 市川駅より徒歩約1分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/ae-ichikawa/" },
+      { name: "買取大吉 イオンフードスタイル市川店", chain: "買取大吉", address: "千葉県市川市市川1丁目4-10 ダイエー市川 7階", hours: "10:00〜19:00", closed: "年中無休", access: "JR総武本線 市川駅より徒歩約1分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/ae-ichikawa/" },
       { name: "おたからや アイアイロード市川店", chain: "おたからや", address: "千葉県市川市市川1丁目2-14 ベレール・サツキ1F", postalCode: "272-0034", hours: "10:00〜19:00", closed: "年中無休", access: "JR市川駅 北口より徒歩1分", tel: "0120-551-797", sourceUrl: "https://www.otakaraya-shop.jp/iiroad/" },
       { name: "なんぼや 市川店", chain: "なんぼや", address: "千葉県市川市市川1-12-5", postalCode: "272-0034", hours: "11:00〜19:00", access: "JR総武線 市川駅 北口より徒歩5分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/ichikawa-brandshop/" },
       { name: "大黒屋 市川駅北口店", chain: "大黒屋", address: "千葉県市川市市川1丁目6-9", postalCode: "272-0034", hours: "10:00〜18:00", closed: "木曜日", access: "JR総武線 市川駅 北口より徒歩1分", tel: "047-324-5061", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000208" },
@@ -574,7 +574,7 @@ export const localStores: Record<string, CityStores> = {
   "fuchu-tokyo-kin-kaitori": {
     updated: "2026-07-05",
     stores: [
-      { name: "買取大吉 ぷらりと京王府中店", chain: "買取大吉", address: "東京都府中市府中町1丁目3-6ほか ぷらりと京王府中 東2階", postalCode: "183-0055", hours: "10:00〜20:00", closed: "年中無休", access: "京王線 府中駅より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/purarito-keiofuchu/" },
+      { name: "買取大吉 ぷらりと京王府中店", chain: "買取大吉", address: "東京都府中市府中町1丁目3-6ほか ぷらりと京王府中 東2階", postalCode: "183-0055", hours: "10:00〜20:00", closed: "年中無休", access: "京王線 府中駅より徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/purarito-keiofuchu/" },
       { name: "買取大吉 府中新町店", chain: "買取大吉", address: "東京都府中市新町1丁目67-2", postalCode: "183-0052", hours: "10:00〜19:00", closed: "不定休", access: "京王線 府中駅南口よりバス「新町1丁目東」下車 徒歩3分", tel: "042-318-0420", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-shinmachi/" },
       { name: "買取大吉 ライフ府中中河原店", chain: "買取大吉", address: "東京都府中市住吉町1-84-1", postalCode: "183-0034", hours: "10:00〜19:00", closed: "年中無休", access: "京王線 中河原駅より徒歩2分", tel: "042-319-1717", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-nakagawara/" },
       { name: "リサイクルショップ ティファナ FORIS府中店", chain: "ティファナ", address: "東京都府中市宮町1-41-1 FORIS 3F", postalCode: "183-0023", hours: "10:00〜20:00", access: "京王線 府中駅南口より徒歩1分", tel: "042-319-1201", sourceUrl: "https://www.tifana.net/foris_fuchu/" },
@@ -595,7 +595,7 @@ export const localStores: Record<string, CityStores> = {
   "kichijoji-kin-kaitori": {
     updated: "2026-07-05",
     stores: [
-      { name: "買取大吉 吉祥寺店", chain: "買取大吉", address: "東京都武蔵野市吉祥寺南町1丁目1-10", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "JR中央線・京王井の頭線 吉祥寺駅南口より徒歩2分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kichijoji/" },
+      { name: "買取大吉 吉祥寺店", chain: "買取大吉", address: "東京都武蔵野市吉祥寺南町1丁目1-10", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "JR中央線・京王井の頭線 吉祥寺駅南口より徒歩2分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/kichijoji/" },
       { name: "大黒屋 質吉祥寺買取センター", chain: "大黒屋", address: "東京都武蔵野市吉祥寺本町1-2-5 山利屋ビル2F", postalCode: "180-0004", hours: "10:30〜19:30", closed: "年中無休（年末年始を除く）", access: "JR・京王井の頭線 吉祥寺駅 北口より徒歩2分", tel: "0422-28-4030", sourceUrl: "https://shichi.e-daikoku.com/shop/kichijoji/" },
       { name: "なんぼや キラリナ京王吉祥寺店", chain: "なんぼや", address: "東京都武蔵野市吉祥寺南町2-1-25 キラリナ京王吉祥寺7F", postalCode: "180-0003", hours: "10:00〜19:00", closed: "年中無休", access: "JR吉祥寺駅 南改札直結、エレベーターで7F", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/tokyo/kirarina-keio-kichijoji-brandshop/" },
       { name: "ゴールドプラザ吉祥寺店", chain: "ゴールドプラザ", address: "東京都武蔵野市吉祥寺本町1-17-12", hours: "10:00〜19:00", closed: "水曜日", access: "JR吉祥寺駅 北口・中央口より徒歩すぐ", tel: "0422-23-3720", sourceUrl: "https://goldplaza.jp/shop/kichijoji" },
@@ -605,7 +605,7 @@ export const localStores: Record<string, CityStores> = {
   "kawagoe-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 川越店", chain: "買取大吉", address: "埼玉県川越市脇田町17-6 あすなろビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR川越線・東武東上線 川越駅東口より徒歩4分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe/" },
+      { name: "買取大吉 川越店", chain: "買取大吉", address: "埼玉県川越市脇田町17-6 あすなろビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR川越線・東武東上線 川越駅東口より徒歩4分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe/" },
       { name: "買取大吉 川越霞ケ関店", chain: "買取大吉", address: "埼玉県川越市霞ケ関北2-1-8", hours: "10:00〜18:00", closed: "水曜日", access: "東武東上線 霞ヶ関駅南口より徒歩9分", tel: "049-292-1533", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe-kasumigaseki/" },
       { name: "買取大吉 いなげや川越新河岸店", chain: "買取大吉", address: "埼玉県川越市砂新田89-1", postalCode: "350-1137", hours: "10:00〜18:30", closed: "年中無休（年末年始を除く）", access: "東武東上線 新河岸駅より徒歩6分", tel: "049-293-1083", sourceUrl: "https://kaitori-kawagoe.com/access/" },
       { name: "なんぼや アトレ川越店", chain: "なんぼや", address: "埼玉県川越市脇田町105 アトレ6F", postalCode: "350-1122", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "JR川越線・東武東上線 川越駅東口より徒歩約6分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/atre-kawagoe-brandshop/" },
@@ -624,7 +624,7 @@ export const localStores: Record<string, CityStores> = {
   "koshigaya-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 新越谷店", chain: "買取大吉", address: "埼玉県越谷市南越谷1丁目13-7 ハローマートビル 1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR武蔵野線 南越谷駅から徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/shin-koshigaya/" },
+      { name: "買取大吉 新越谷店", chain: "買取大吉", address: "埼玉県越谷市南越谷1丁目13-7 ハローマートビル 1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR武蔵野線 南越谷駅から徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/shin-koshigaya/" },
       { name: "買取大吉 北越谷店", chain: "買取大吉", address: "埼玉県越谷市大沢3-21-33", hours: "10:00〜19:00", closed: "日曜日", access: "東武スカイツリーライン 北越谷駅より徒歩5分", tel: "0120-665-800", sourceUrl: "https://www.kaitori-daikichi.jp/store/kitakoshigaya/" },
       { name: "買取大吉 東越谷店", chain: "買取大吉", address: "埼玉県越谷市東越谷3-1-1 イーストレジデンスII 107", hours: "10:00〜19:00", closed: "月曜日", access: "越谷市役所より徒歩10分（市役所前中央通り沿い）", tel: "048-940-9878", sourceUrl: "https://www.kaitori-daikichi.jp/store/higashi-koshigaya/" },
       { name: "おたからや ベルクス南越谷店", chain: "おたからや", address: "埼玉県越谷市新越谷1-42-5（ベルクス南越谷店 北側駐車場内）", postalCode: "343-0857", hours: "10:00〜19:00（日曜は18:00まで）", closed: "年中無休", access: "新越谷駅 西口より徒歩6分", tel: "048-989-0100", sourceUrl: "https://belxminamikoshigaya-otakaraya.net/" },
@@ -633,8 +633,8 @@ export const localStores: Record<string, CityStores> = {
   "kashiwa-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
-      { name: "買取大吉 モラージュ柏店", chain: "買取大吉", address: "千葉県柏市大山台2-3 モラージュ柏 2階", postalCode: "277-0837", hours: "10:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より無料送迎バス", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/m-kashiwa/" },
+      { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
+      { name: "買取大吉 モラージュ柏店", chain: "買取大吉", address: "千葉県柏市大山台2-3 モラージュ柏 2階", postalCode: "277-0837", hours: "10:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より無料送迎バス", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/m-kashiwa/" },
       { name: "なんぼや 柏西口店", chain: "なんぼや", address: "千葉県柏市末広町4-1", postalCode: "277-0842", hours: "11:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/kashiwa-nishiguchi-brandshop/" },
       { name: "なんぼや 柏東口店", chain: "なんぼや", address: "千葉県柏市柏1-1-11 ファミリかしわ 1F", postalCode: "277-0005", hours: "10:00〜18:00", closed: "施設に準ずる", access: "JR柏駅 東口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba-kashiwa-brandshop/" },
       { name: "バイセル セブンパークアリオ柏店", chain: "BUYSELL（バイセル）", address: "千葉県柏市大島田1-6-1 セブンパークアリオ柏 3階", postalCode: "277-0922", hours: "10:00〜19:00（施設に準ずる）", access: "「セブンパークアリオ柏前」バス停より徒歩1分", tel: "0120-425-814", sourceUrl: "https://buysell-kaitori.com/store/sevenpark-kashiwa/" },
@@ -643,8 +643,8 @@ export const localStores: Record<string, CityStores> = {
   "funabashi-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
-      { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "274-0056", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
+      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
+      { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "274-0056", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
       { name: "大黒屋 質船橋店", chain: "大黒屋", address: "千葉県船橋市本町1-8-1 ケーアイ・フナバシ1F", postalCode: "273-0005", hours: "10:30〜19:30", closed: "定休日なし", access: "京成船橋駅 西口より徒歩10秒、JR船橋駅 徒歩3分", tel: "047-495-5831", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-funabashi/" },
       { name: "なんぼや 船橋フェイス店", chain: "なんぼや", address: "千葉県船橋市本町1-3-1 船橋フェイスビル 2F", postalCode: "273-0005", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "京成船橋駅東口 徒歩1分、JR船橋駅南口 徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/funabashi-face-brandshop/" },
       { name: "おたからや 大神宮下駅本店", chain: "おたからや", address: "千葉県船橋市宮本2-13-11 丸商船橋ビル1階", postalCode: "273-0003", hours: "10:00〜18:00", closed: "木曜日", access: "京成本線 大神宮下駅改札右 徒歩1分", tel: "047-778-2014", sourceUrl: "https://www.otakaraya-shop.jp/funabashidaijingu/" },
@@ -666,7 +666,7 @@ export const localStores: Record<string, CityStores> = {
       { name: "KOMEHYO買取センター 八木橋百貨店", chain: "KOMEHYO（コメ兵）", address: "埼玉県熊谷市仲町74 八木橋百貨店 5F", postalCode: "360-8502", hours: "10:00〜18:30（買取最終受付18:00）", closed: "八木橋百貨店に準ずる", access: "秩父鉄道 上熊谷駅より徒歩約5分／JR熊谷駅北口より徒歩約15分", tel: "048-580-7302", sourceUrl: "https://komehyo.jp/kaitori/shop/kc-yagihashi-hyakkaten" },
       { name: "大黒屋 質17号熊谷石原店", chain: "大黒屋", address: "埼玉県熊谷市石原3-242-1", postalCode: "360-0816", hours: "10:00〜20:00", closed: "年中無休", access: "秩父鉄道 石原駅より徒歩約10分", tel: "048-599-2301", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000161" },
       { name: "買取大吉 熊谷ティアラ21店", chain: "買取大吉", address: "埼玉県熊谷市筑波3-202 ティアラ21", hours: "10:00〜19:00", closed: "年中無休", access: "JR高崎線・秩父鉄道 熊谷駅直結（さくら広場口より徒歩1分）", tel: "048-500-9583", sourceUrl: "https://www.kaitori-daikichi.jp/store/kumagaya-tiara21/" },
-      { name: "買取大吉 イオン熊谷店", chain: "買取大吉", address: "埼玉県熊谷市本石2-135 イオン熊谷 3階", postalCode: "360-0014", hours: "10:00〜19:00", closed: "年中無休", access: "秩父鉄道 上熊谷駅より徒歩7分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/am-kumagaya/" },
+      { name: "買取大吉 イオン熊谷店", chain: "買取大吉", address: "埼玉県熊谷市本石2-135 イオン熊谷 3階", postalCode: "360-0014", hours: "10:00〜19:00", closed: "年中無休", access: "秩父鉄道 上熊谷駅より徒歩7分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/am-kumagaya/" },
       { name: "おたからや 熊谷ニットーモール店", chain: "おたからや", address: "埼玉県熊谷市銀座2-245 ニットーモール1F", postalCode: "360-0032", closed: "年中無休", access: "熊谷駅東口直結の連絡通路よりニットーモールへ", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kumagaya-nittohmall/" },
     ],
   },
@@ -734,7 +734,7 @@ export const localStores: Record<string, CityStores> = {
   "hachioji-kin-kaitori": {
     updated: "2026-07-07",
     stores: [
-      { name: "買取大吉 八王子店", chain: "買取大吉", address: "東京都八王子市横山町5-10", hours: "10:00～19:00", closed: "年中無休", access: "JR八王子駅より徒歩9分", tel: "0120-15-1234", sourceUrl: "https://www.kaitori-daikichi.jp/store/hachioji/" },
+      { name: "買取大吉 八王子店", chain: "買取大吉", address: "東京都八王子市横山町5-10", hours: "10:00～19:00", closed: "年中無休", access: "JR八王子駅より徒歩9分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/hachioji/" },
       { name: "大黒屋 質八王子店", chain: "大黒屋", address: "東京都八王子市中町7-9 中町ビル1F", postalCode: "192-0085", hours: "10:00～19:00", closed: "なし", access: "JR八王子駅北口より徒歩5分", tel: "042-620-5223", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000049" },
       { name: "大黒屋 高尾狭間買取センター", chain: "大黒屋", address: "東京都八王子市狭間町1455-2 宮田ビル1階", postalCode: "193-0941", hours: "月～金 10:00～17:30／土日祝 10:00～16:00", closed: "なし", access: "京王高尾線 狭間駅より徒歩3分", tel: "042-669-5520", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000259" },
       { name: "なんぼや 八王子オクトーレ店", chain: "なんぼや", address: "東京都八王子市旭町9-1 八王子オクトーレ8F", postalCode: "192-0083", hours: "10:00～20:00", access: "JR八王子駅北口より徒歩2分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/tokyo/hachioji-tokyu-brandshop/" },
