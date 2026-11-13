@@ -21,7 +21,7 @@ export type CityStores = {
 
 export const localStores: Record<string, CityStores> = {
   "handa-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-13",
     stores: [
       {
         name: "買取大吉 エクボ半田店",
@@ -633,7 +633,7 @@ export const localStores: Record<string, CityStores> = {
   "kashiwa-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
+      { name: "買取大吉 スカイプラザ柏店", chain: "買取大吉", address: "千葉県柏市柏1丁目1-20 スカイプラザ柏 1階", hours: "10:00〜20:00（最終受付19:30。12/31・1/2・1/3は10:00〜19:00）", closed: "年中無休", access: "JR柏駅 東口より徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/skyplaza-kashiwa/" },
       { name: "買取大吉 モラージュ柏店", chain: "買取大吉", address: "千葉県柏市大山台2-3 モラージュ柏 2階", postalCode: "277-0837", hours: "10:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より無料送迎バス", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/m-kashiwa/" },
       { name: "なんぼや 柏西口店", chain: "なんぼや", address: "千葉県柏市末広町4-1", postalCode: "277-0842", hours: "11:00〜19:00", closed: "年中無休", access: "JR柏駅 西口より徒歩1分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/kashiwa-nishiguchi-brandshop/" },
       { name: "なんぼや 柏東口店", chain: "なんぼや", address: "千葉県柏市柏1-1-11 ファミリかしわ 1F", postalCode: "277-0005", hours: "10:00〜18:00", closed: "施設に準ずる", access: "JR柏駅 東口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba-kashiwa-brandshop/" },
@@ -643,7 +643,7 @@ export const localStores: Record<string, CityStores> = {
   "funabashi-kin-kaitori": {
     updated: "2026-07-06",
     stores: [
-      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
+      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始・臨時休業を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
       { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "274-0056", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
       { name: "大黒屋 質船橋店", chain: "大黒屋", address: "千葉県船橋市本町1-8-1 ケーアイ・フナバシ1F", postalCode: "273-0005", hours: "10:30〜19:30", closed: "定休日なし", access: "京成船橋駅 西口より徒歩10秒、JR船橋駅 徒歩3分", tel: "047-495-5831", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-funabashi/" },
       { name: "なんぼや 船橋フェイス店", chain: "なんぼや", address: "千葉県船橋市本町1-3-1 船橋フェイスビル 2F", postalCode: "273-0005", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "京成船橋駅東口 徒歩1分、JR船橋駅南口 徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/funabashi-face-brandshop/" },
