@@ -23,6 +23,26 @@ const agPubJa = (() => {
   return m ? `${Number(m[1])}年${Number(m[2])}月${Number(m[3])}日 ${m[4]}公表` : null;
 })();
 const agPubLabel = agPubJa ?? `${priceDateJa}取得`;
+
+/* retanaka-ag-1113: RE:TANAKA（田中貴金属の貴金属製品買取）の銀製品リサイクル価格（Ag800〜1000 一律・1g税込）。
+   日次の fetch-tanaka-gold-prices.py が retanaka_ag_recycle_per_g / retanaka_published_at に保存。取れない日は枠ごと出さない */
+const RETANAKA_URL = "https://gold.tanaka.co.jp/retanaka/price/";
+const RETANAKA_NOTICE_URL = "https://gold.tanaka.co.jp/retanaka/service/notice.html";
+const _rt = goldData as Record<string, unknown>;
+const RT_AG = typeof _rt.retanaka_ag_recycle_per_g === "number" ? (_rt.retanaka_ag_recycle_per_g as number) : null;
+const rtPubJa = (() => {
+  const v = _rt.retanaka_published_at as string | null | undefined;
+  const m = v ? /^(\d{4})-(\d{2})-(\d{2}) (\d{1,2}:\d{2})$/.exec(v) : null;
+  return m ? `${Number(m[1])}年${Number(m[2])}月${Number(m[3])}日 ${m[4]}発表` : null;
+})();
+const showRt = RT_AG !== null && rtPubJa !== null;
+
+const tanakaSv925Faq = showRt
+  ? {
+      q: "田中貴金属ではSV925（シルバー925）のアクセサリーを買い取ってもらえますか？",
+      a: `田中貴金属の貴金属製品買取（RE:TANAKA）では、銀製品の買取対象はメダル・コイン、大判・小判、盃のうち銀の含有を表す刻印または品位刻印があるもの（Ag800以上・1件あたり買取総重量10g以上）に限られています（2021年4月1日から。田中貴金属の製品・マークがある製品は別扱い）。そのため一般的なSV925のアクセサリーは対象外です。対象品の銀製品リサイクル価格は品位1000〜800まで一律で1g${RT_AG}円（税込・${rtPubJa}）です。SV925のアクセサリーは、ほかの買取店で査定を受けることになります。`,
+    }
+  : null;
 const yen2 = (n: number) => n.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 // タイトルは metadata と ArticleSchema headline で共有し、文言のズレ（罠）を防ぐ。
@@ -58,6 +78,7 @@ function FaqSchema() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: todayFaq.q, acceptedAnswer: { "@type": "Answer", text: todayFaq.a } },
+      ...(tanakaSv925Faq ? [{ "@type": "Question", name: tanakaSv925Faq.q, acceptedAnswer: { "@type": "Answer", text: tanakaSv925Faq.a } }] : []),
       { "@type": "Question", name: "「SV925」「シルバー925」とは何ですか？", acceptedAnswer: { "@type": "Answer", text: "SV925は銀を92.5%含む合金で、スターリングシルバーとも呼ばれます。純銀（Ag999）は柔らかいため、銅などを7.5%加えて強度を高めたものがSV925です。アクセサリーで最も一般的な銀の純度で、刻印は「SV925」「925」「STERLING」などがあります。" } },
       { "@type": "Question", name: "銀のアクセサリーは買取してもらえますか？", acceptedAnswer: { "@type": "Answer", text: "はい、買取可能です。ただし銀は金・プラチナに比べて1gあたりの単価が大幅に低いため、少量では買取額が小さくなります。業者によっては最低重量や手数料の条件があるため、まとめて査定に出すのがおすすめです。ブランド銀製品はブランド価値が加わることもあります。" } },
       { "@type": "Question", name: "銀食器や銀の置物も売れますか？", acceptedAnswer: { "@type": "Answer", text: "はい、純銀（Sterling）の食器・トレー・置物なども買取対象です。重量があるため、アクセサリーより買取額が大きくなることがあります。ただし「銀メッキ（Silver Plated／EPNS表記）」は表面だけが銀のため、素材としての買取価格は大きく下がります。刻印をご確認ください。" } },
@@ -124,6 +145,24 @@ function AgTodayAnswer() {
       <p className="text-xs text-warm-gray leading-relaxed mb-4">
         目安は田中貴金属の店頭買取価格に含有率を掛けただけの値です。買取店の提示額はここから各社の条件・手数料を差し引いた額になり、製品の状態・付属品でも変わります。公表のない日（土日祝など）は、直前の公表値を表示します。
       </p>
+      {showRt && (
+        <div className="bg-white border border-warm-border rounded-xl p-4 mb-4 text-sm leading-relaxed">
+          <p className="font-bold !mt-0 mb-1">田中貴金属の店頭で銀製品を売る場合（RE:TANAKA）</p>
+          <p className="!my-1">
+            銀製品のリサイクル価格は<strong>品位1000〜800まで一律で1g {RT_AG}円</strong>（税込・{rtPubJa}）です。上の「店頭買取 {yen2(AG_BUY)}円」は地金（インゴット）の価格で、製品の買取価格とは別です。
+          </p>
+          <p className="!my-1">
+            ただし買取対象は<strong>メダル・コイン、大判・小判、盃</strong>のうち銀の含有または品位の刻印があるもの（Ag800以上・1件あたり買取総重量10g以上）に限られ、<strong>一般的なSV925のアクセサリーは対象外</strong>です（2021年4月1日から。田中貴金属の製品・マークがある製品は別扱い）。
+          </p>
+          <p className="text-xs text-warm-gray !mb-0 !mt-2">
+            出典：
+            <a href={RETANAKA_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">RE:TANAKA 最新のリサイクル価格</a>
+            ／
+            <a href={RETANAKA_NOTICE_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">銀製品の買取対象範囲の見直しについて</a>
+            （当サイトは毎日取得。9:30・14:00に公表され、同日内に変わることがあります）
+          </p>
+        </div>
+      )}
       <div className="flex flex-wrap gap-2">
         <a
           href="#today-ag-card"
@@ -259,6 +298,7 @@ export default function SilverKaitoriPage() {
         <div className="space-y-3 not-prose">
           {[
             todayFaq,
+            ...(tanakaSv925Faq ? [tanakaSv925Faq] : []),
             {
               q: "「SV925」「シルバー925」とは何ですか？",
               a: "SV925は銀を92.5%含む合金で、スターリングシルバーとも呼ばれます。純銀（Ag999）は柔らかいため、銅などを7.5%加えて強度を高めたものがSV925です。アクセサリーで最も一般的な銀の純度で、刻印は「SV925」「925」「STERLING」などがあります。",

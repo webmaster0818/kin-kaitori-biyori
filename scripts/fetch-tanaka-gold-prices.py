@@ -63,6 +63,35 @@ def parse_price(html: str) -> dict:
     }
 
 
+RETANAKA_URL = "https://gold.tanaka.co.jp/retanaka/price/"
+
+
+def fetch_retanaka_ag() -> dict:
+    """RE:TANAKA（田中貴金属の貴金属製品買取）の銀製品リサイクル価格（1g・税込）と発表日時。
+
+    ページ構造: 銀製品表は品位 1000(999)〜800 の6行に <td rowspan="6">&yen;160</td> が1つ（全品位一律）。
+    取れなければ {}（silver-kaitori は行を出さない）。日次処理は止めない。
+    """
+    try:
+        req = urllib.request.Request(RETANAKA_URL, headers={"User-Agent": "Mozilla/5.0 (KinKaitori-Bot)"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            html = r.read().decode("utf-8", errors="ignore")
+        # 銀製品の表（<section id="ag_price">）の 品位 1000 (999) の行のセル。プラチナ表にも同じ品位表記があるので section で絞る
+        i = html.find('id="ag_price"')
+        m = re.search(r'<th>\s*1000\s*<br\s*/?>\s*\(999\)\s*</th>\s*<td[^>]*>\s*(?:&yen;|¥|￥)\s*([\d,]+)', html[i:]) if i >= 0 else None
+        pub = re.search(r'リサイクル価格\s*(?:<[^>]+>\s*)*(\d{4})年(\d{1,2})月(\d{1,2})日\s*(\d{1,2}:\d{2})発表', html)
+        if not m or not pub:
+            print("WARN: RE:TANAKA 銀製品リサイクル価格の表が見つかりません")
+            return {}
+        return {
+            "ag_per_g": int(m.group(1).replace(",", "")),
+            "published_at": f"{pub.group(1)}-{int(pub.group(2)):02d}-{int(pub.group(3)):02d} {pub.group(4)}",
+        }
+    except Exception as e:  # noqa: BLE001
+        print(f"WARN: RE:TANAKA 銀製品リサイクル価格を取得できませんでした: {e}")
+        return {}
+
+
 def calc_purity_prices(au_per_g: int) -> dict:
     """K24 (Au 999.9) 価格から純度別の理論値を算出。
 
@@ -98,6 +127,7 @@ def main():
         sys.exit(1)
 
     purity = calc_purity_prices(prices["au_buyback_per_g"])
+    retanaka = fetch_retanaka_ag()
 
     today = datetime.now().strftime("%Y-%m-%d")
     data = {
@@ -108,6 +138,10 @@ def main():
         # 田中の地金価格の公表日時（JST・ページ表記）。休日は前営業日の値。
         # ⚠️ tanaka_official の中に入れない（各ページが Record<string, number> で読んでいる）
         "tanaka_published_at": prices.get("published_at"),
+        # RE:TANAKA 銀製品リサイクル価格（Ag800〜1000 一律・1g税込）と発表日時。silver-kaitori 冒頭で使う。
+        # ⚠️ これも tanaka_official の中に入れない（同上）
+        "retanaka_ag_recycle_per_g": retanaka.get("ag_per_g"),
+        "retanaka_published_at": retanaka.get("published_at"),
         "tanaka_official": {
             "au_buyback_per_g": prices.get("au_buyback_per_g"),
             "au_retail_per_g": prices.get("au_retail_per_g"),
