@@ -671,12 +671,12 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "soka-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-14",
     stores: [
-      { name: "買取大吉 草加店", chain: "買取大吉", address: "埼玉県草加市高砂2-18-4 リコメンド草加ビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "東武スカイツリーライン 草加駅より徒歩2分", tel: "048-951-2660", sourceUrl: "https://www.kaitori-daikichi.jp/store/soka/" },
+      { name: "買取大吉 草加店", chain: "買取大吉", address: "埼玉県草加市高砂2-18-4 リコメンド草加ビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "東武スカイツリーライン 草加駅隣接のイトーヨーカドー・マルイの交差点を抜けてから徒歩2分", tel: "048-951-2660", sourceUrl: "https://www.kaitori-daikichi.jp/store/soka/" },
       { name: "買取大吉 西友草加店", chain: "買取大吉", address: "埼玉県草加市高砂1-6-21", hours: "10:00〜19:00", closed: "年中無休", access: "東武スカイツリーライン 草加駅より徒歩4分", tel: "048-606-3660", sourceUrl: "https://www.kaitori-daikichi.jp/store/seiyu-soka/" },
       { name: "買取大吉 草加金明店", chain: "買取大吉", address: "埼玉県草加市金明町417-5", hours: "10:00〜17:00", closed: "年中無休（臨時休業を除く）", access: "東武スカイツリーライン 新田駅から徒歩3分", tel: "0120-00-7152", sourceUrl: "https://www.kaitori-daikichi.jp/list/gold/store/soka-kinmei/" },
-      { name: "なんぼや 草加ヴァリエ店", chain: "なんぼや", address: "埼玉県草加市高砂2-5-25 東武草加ヴァリエ「VARIE-1」2F", postalCode: "340-0015", hours: "10:00〜20:00（最終受付19:30）", closed: "施設に準ずる", access: "東武スカイツリーライン 草加駅 中央改札口より徒歩圏内", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/soka-varie-brandshop/" },
+      { name: "なんぼや 草加ヴァリエ店", chain: "なんぼや", address: "埼玉県草加市高砂2-5-25 東武草加ヴァリエ「VARIE-1」2F", postalCode: "340-0015", hours: "10:00〜20:00（最終受付19:30）", closed: "定休日なし（施設に準じる）", access: "東武スカイツリーライン 草加駅 中央改札口より徒歩圏内", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/soka-varie-brandshop/" },
       { name: "大黒屋 草加買取センター", chain: "大黒屋", address: "埼玉県草加市高砂2丁目6-20-1F 並木ビル", postalCode: "340-0015", hours: "10:00〜18:00", closed: "水曜日", access: "東武スカイツリーライン 草加駅 東口より徒歩2分", tel: "048-920-3051", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000118" },
     ],
   },
