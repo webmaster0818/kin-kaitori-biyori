@@ -275,7 +275,7 @@ export default function KinNobeboKaitoriPage() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-nobebo-kaitori"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kinka-ingot-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
+          relatedSlugs={["ingot-toha", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kinka-ingot-kaitori", "kin-spot-vs-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "tokyo-kin-kaitori", "osaka-kin-kaitori", "cartier-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <h2>まとめ</h2>

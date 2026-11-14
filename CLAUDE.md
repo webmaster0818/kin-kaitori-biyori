@@ -748,3 +748,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 書かなかった: 大吉の店舗別金ページ（/list/gold/store/nakamura-sako/）の相場欄が静的 HTML で「2026年03月19日自動更新」だが、daikichi_rate_data.js で描画時に更新される可能性があり確認できないため不掲載
 - 競合（WebSearch・US 固定）: 「栄生駅 金 買取」は栄（なんぼや）の店舗ページが返り、栄生の店は取れず。別語でウリドキの店舗ページ（定休日を「日曜日」と記載＝公式と食い違い）が出た。栄生駅の周辺で他に金を扱う店は見つからず＝掲載は1軒のまま
 - precheck ✅（296頁）・sponsored 3126=3126・ASP計測リンク 0=0。表示テキストが変わったのは sako-eki のみ。source d65790f / deploy abfd8a5ff2（12:08 push・12:14 本番反映）
+
+### 2026-11-14 20:00 kwexp（競合ベンチマーク型ページ拡張・作成初日）: 新規5ページ ✅本番反映済み
+- queue（kw-expansion/gold/queue.csv）の上から5語: 砂金(17760)→/articles/sakin-toha/・インゴットとは(9680)→/articles/ingot-toha/・24kgp(7920)→/articles/k24gp-toha/・金 投資信託 おすすめしない(4320)→/articles/kin-toushin-hiyou-hikaku/・ホワイトゴールドとは(4320)→/articles/white-gold-toha/。重複は own-pages・GSC90日・app/ で確認（kin-mekki-mikata の GP 1行、kinseido の K18WG 節はあるが「とは」の定義・表示規定は無し）
+- 一次情報（11/14 確認）: 田中貴金属（金地金の9サイズ・寸法、売買別途手数料、ご売却＝現金100万円上限、RE:TANAKA の買取不可＝鉱石・粉末状・粒状・メッキ品、総合口座の手数料一覧）／日本ジュエリー協会「素材等の表示規定 2026年度改訂版」（GP・GF・RG・WG の定義、ロジウムめっき⊿E14、NF）／造幣局（品位証明、地金・鉱物の分析）／e-Gov 鉱業法3・5・7・8・11条、河川法25条／GSJ 地質ニュース（枝幸砂金、パンニング）／三菱UFJ AM 交付目論見書 2026.4.18（ファインゴールド 0.55%・実質0.99%程度・購入時上限1.1%・NISA成長投資枠）／三菱UFJ信託「金の果実」1540（0.440%・総経費率0.46%・1口0.9327298g・転換手数料）／国税庁 No.3161・No.1463・東京国税局 文書回答（純金積立＝先入先出・総平均法）／徳力本店の物性表（金 19.32g/cm³）
+- 独自計算: インゴット9サイズの購入額・売却額・往復差（日次 json 連動）、めっき面積×厚み別の金の量、品位を仮定した砂金の価値（仮定と明記）、100万円1年の保有費用、1540 の1口金量の減少率。投資信託ページは勧める・勧めないを書かず数字のみ
+- ⚠️ tanaka_published_at が前日（11/13 17:00）の日があるので、新規5ページは「本日の」ではなく「最新の」＋公表日時ラベルで表示
+- 内部リンク: articles-metadata.json に5件追加（/articles/ 一覧）、関連記事に kin-mekki-mikata→k24gp・kinseido/k18→white-gold・kin-nobebo→ingot・kin-kaitori-zeikin→toushin・kin-jundo-mikata→sakin。sitemap 113（lastmod 11-14）
+- trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（301頁）・ASP計測リンク 0。本番5頁 200・h1 一致を確認

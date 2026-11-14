@@ -2262,5 +2262,45 @@
     "badge": "手続き",
     "description": "必要な持ち物、本人確認、未成年の可否、当日の流れを網羅。",
     "category": "howto"
+  },
+  {
+    "slug": "ingot-toha",
+    "title": "インゴットとは？金地金のサイズ9種・手数料・刻印と1本あたりの価格",
+    "shortTitle": "インゴットとは",
+    "badge": "インゴット",
+    "description": "田中貴金属の9サイズ・500g未満の手数料・今日の1本あたりの購入額と売却額。",
+    "category": "howto"
+  },
+  {
+    "slug": "k24gp-toha",
+    "title": "24KGP（K24GP）とは？金めっきの表示記号と含まれる金の量",
+    "shortTitle": "24KGPとは",
+    "badge": "金めっき",
+    "description": "GP・GF・RGの定義と、めっき厚み別の金の量の計算、買取での扱い。",
+    "category": "howto"
+  },
+  {
+    "slug": "white-gold-toha",
+    "title": "ホワイトゴールドとは？定義・ロジウムめっき・プラチナとの違い",
+    "shortTitle": "ホワイトゴールドとは",
+    "badge": "WG",
+    "description": "表示規定によるWGの定義、ロジウムめっきの扱い、K18WGとPt900の1g参考値。",
+    "category": "purity"
+  },
+  {
+    "slug": "sakin-toha",
+    "title": "砂金とは？鉱業法・河川法での扱いと分析・売却時の確認点",
+    "shortTitle": "砂金とは",
+    "badge": "砂金",
+    "description": "鉱業法・河川法の条文、枝幸砂金の記録、造幣局の分析、買取での扱い。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-toushin-hiyou-hikaku",
+    "title": "金の投資信託の費用と税金｜純金ファンド・金ETF・純金積立・地金の比較",
+    "shortTitle": "金の投資信託の費用と税金",
+    "badge": "費用・税金",
+    "description": "目論見書・田中貴金属・国税庁の数字で、4つの持ち方の費用と税金を比較。",
+    "category": "compare"
   }
 ]

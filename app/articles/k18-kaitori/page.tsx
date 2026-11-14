@@ -398,7 +398,7 @@ export default function K18KaitoriPage() {
         </div>
         <RelatedArticles
           currentSlug="k18-kaitori"
-          relatedSlugs={["k24-kaitori", "k22-kaitori", "k14-kaitori", "k10-kaitori", "kinseido-kaitori-guide", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-jundo-mikata", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+          relatedSlugs={["white-gold-toha", "k24-kaitori", "k22-kaitori", "k14-kaitori", "k10-kaitori", "kinseido-kaitori-guide", "kin-necklace-kaitori", "kin-yubiwa-kaitori", "kin-bracelet-kaitori", "kin-jundo-mikata", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
         />
 
         <h2>まとめ</h2>

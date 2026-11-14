@@ -369,7 +369,7 @@ export default function KinJundoMikataPage() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-jundo-mikata"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-mekki-mikata"]}
+          relatedSlugs={["sakin-toha", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-nisemono-mikata", "kin-omosa-hakarikata", "platinum-kaitori", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-mekki-mikata"]}
         />
 
         <h2>まとめ</h2>

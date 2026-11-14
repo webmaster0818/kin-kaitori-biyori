@@ -400,7 +400,7 @@ export default function KinKaitoriZeikinPage() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-kaitori-zeikin"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
+          relatedSlugs={["kin-toushin-hiyou-hikaku", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-souzoku-baikyaku", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori"]}
         />
 
         <h2>まとめ</h2>
