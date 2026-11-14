@@ -17,9 +17,12 @@ import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
   ⚠️ 掲載する店舗情報は公式店舗ページで確認したもののみ。徒歩分数も公式表記をそのまま使う。
 */
 
-const CHECKED = "2026年11月4日";
+const CHECKED = "2026年11月14日";
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
+const tanakaBuy = goldData.tanaka_official.au_buyback_per_g;
+const [, _tm, _td] = (goldData.tanaka_published_at ?? goldData.date).slice(0, 10).split("-").map(Number);
+const tanakaPubJa = `${_tm}月${_td}日`;
 
 export const metadata: Metadata = {
   title: "栄生駅の金買取はどこ？徒歩5分の実在店舗と今日の相場",
@@ -46,7 +49,7 @@ function Schemas() {
     description:
       "栄生駅から歩ける金買取店を、公式店舗ページで確認した情報だけでまとめた記事です。",
     datePublished: "2026-08-24",
-    dateModified: "2026-11-04",
+    dateModified: "2026-11-14",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -117,6 +120,34 @@ export default function Page() {
           </h1>
           <p className="text-warm-gray text-sm mb-8">
             店舗情報は{CHECKED}に公式店舗ページで確認／相場は毎朝自動更新（{priceDateJa}時点）
+          </p>
+
+          <h2 className="!mt-0">栄生駅周辺で金を売れる店の早見表</h2>
+          <div className="table-wrapper">
+            <table>
+              <thead><tr><th>店名</th><th>栄生駅からの距離</th><th>田中貴金属の当日価格への言及</th><th>公式ページ</th><th>確認日</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>買取大吉 中村栄生店</td>
+                  <td>徒歩5分（公式のアクセス欄。店長あいさつ欄は徒歩3分）</td>
+                  <td>なし。買取大吉は公式の金・貴金属ページに自社の「本日の金相場」（K24インゴットの買取参考価格・日付つき）を掲示</td>
+                  <td><a href="https://www.kaitori-daikichi.jp/store/nakamura-sako/" target="_blank" rel="noopener noreferrer nofollow">店舗ページ</a>／<a href="https://www.kaitori-daikichi.jp/list/gold/" target="_blank" rel="noopener noreferrer nofollow">金・貴金属ページ</a></td>
+                  <td>{CHECKED}</td>
+                </tr>
+                <tr>
+                  <td>名古屋駅周辺の店舗（名鉄で1駅・約2分）</td>
+                  <td>電車で1駅</td>
+                  <td>店ごとに異なる</td>
+                  <td><Link href="/articles/nagoya-kin-kaitori/">名古屋の金買取（駅別）</Link></td>
+                  <td>各店の確認日は駅別ページに記載</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm">
+            比べる基準として、田中貴金属の金の店頭買取価格（税込）は<strong>1g {tanakaBuy.toLocaleString()}円</strong>（{tanakaPubJa}公表・毎朝自動更新）です。
+            出典：<a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener noreferrer nofollow">田中貴金属 金価格推移・相場</a>。
+            店で示される価格は、この地金価格から各社の条件で決まります。その日の店頭での価格は、来店前に電話（0120-772-001）で確かめてください。
           </p>
 
           <p>
