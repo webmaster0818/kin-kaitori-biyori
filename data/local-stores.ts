@@ -190,7 +190,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "matsudo-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-15",
     stores: [
       {
         name: "買取大吉 松戸店",
@@ -203,12 +203,12 @@ export const localStores: Record<string, CityStores> = {
         sourceUrl: "https://www.kaitori-daikichi.jp/store/matsudo/",
       },
       {
-        name: "買取大吉 新松戸駅前店",
-        chain: "買取大吉",
+        name: "買取専門店大吉 新松戸駅前店",
+        chain: "買取専門店大吉",
         address: "千葉県松戸市新松戸1丁目439番6 新松戸駅前ビル1階",
         hours: "10:00〜19:00",
         closed: "毎週日曜日",
-        access: "JR・流鉄 新松戸駅から徒歩すぐ",
+        access: "新松戸駅から徒歩すぐ",
         tel: "0120-122-917",
         sourceUrl: "https://shinmatsudo-daikichi.jp/",
       },
@@ -228,8 +228,8 @@ export const localStores: Record<string, CityStores> = {
         chain: "なんぼや（バリュエンス）",
         address: "千葉県松戸市松戸1181 アトレ松戸5階",
         postalCode: "271-0092",
-        hours: "10:00〜21:00",
-        closed: "アトレ松戸休館日に準ずる",
+        hours: "10:00〜21:00（最終受付20:30）",
+        closed: "定休日なし",
         access: "JR松戸駅 アトレ松戸直結・徒歩1分",
         tel: "0120-66-1333",
         sourceUrl: "https://nanboya.com/shop/matsudo-brandshop/",
