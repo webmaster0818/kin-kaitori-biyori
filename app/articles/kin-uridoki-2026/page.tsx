@@ -353,7 +353,7 @@ export default function KinUridoki2026Page() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-uridoki-2026"
-          relatedSlugs={["k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-uridoki-2026", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
+          relatedSlugs={["kin-kakaku-boraku-kako", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "kin-uridoki-2026", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tentou-vs-takuhai", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori"]}
         />
 
         <h2>まとめ</h2>

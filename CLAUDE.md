@@ -770,3 +770,12 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 「その日の金額の出し方」（田中の値・公表時刻・計算例）は早見表の直下にあり＝追加なし。title・h1 の【2026年10月】は判断待ちのまま不変。
 - 競合: WebSearch はヒカカク駅ページ・ウリドキ名古屋・トクバイ（バイセル 10-20 と古い・福ちゃん栄セントラルパーク店＝現バイセル2号店）のみ＝うちに無い答えは見当たらず。
 - precheck ✅・計測リンク 0=0・sponsored 1563=1563・外部href 6586=6586。source ac06875 / deploy 209d47eaff（CF 反映 約6分）。本番「で確認（2026年11月15日）」2・「2026年11月5日」0。
+
+### 2026-11-15 20:00 kwexp（競合ベンチマーク型ページ拡張・2日目）: 新規5ページ ✅本番反映済み
+- queue の上から: 金価格 暴落(3520)→/articles/kin-kakaku-boraku-kako/・純金積立 やめとけ(2880)→/articles/junkin-tsumitate-hikaku/・プラチナ 価値がなくなる(2320)→/articles/platinum-kachi-suii/・プラチナとは(2320)→/articles/platinum-toha/・グリーンゴールド(2320)→/articles/green-gold-toha/
+- skip: 18金とは・18KT（k18-kaitori の h2「K18（18金）とは」・刻印表 K18/18K/750 と重複）／金鉱脈 発見（発表元の一次情報を確認できず・報道のみ）
+- 一次情報（11/15 確認）: 田中貴金属 年次金価格推移・年次プラチナ価格推移（1973〜2025・税抜の年平均/最高/最低・ドル建て・為替）、田中「プラチナの価値」、純金積立7社の公式（田中 tt.tanaka.jp・三菱マテリアル・石福・徳力・SBI・楽天・マネックス）、国税庁 No.1520/3161/3152・東京国税局 文書回答、WPIC Platinum Quarterly Q2 2026（2025年需給）、USGS MCS 2026、TANAKA 元素データ Pt・日本金属学会、JJA 表示規定 2026年度版（GRG＝青金・カラーゴールドの定義）、造幣局 品位区分
+- 独自計算: 年平均の前年比（円・ドル・為替の分解）、1980年高値の回復年数（金2020年・プラチナ2025年）、当サイト日次記録の最大下落（金 8/25→11/3 -17.9%・Pt 5/28→11/3 -27.0%）、プラチナ÷金の比率、積立 月1万/3万の年間手数料、品位別1gの地金の値、K18GRG の金・銀（上限）の値。投資系3本は予測・勧誘なし（過去の公表値のみ）
+- ⚠️ 石福の引出手数料（Web 2,200円/郵送1,650円）・徳力の年会費（1,100円/1,080円）は公式内で表記が割れている→両方を記載
+- 内部リンク: metadata +5（category は howto/compare/purity のみ有効＝"souba" は一覧に出ない）、relatedSlugs 追加 white-gold-toha・kinseido・k18以外（platinum-kaitori/pt900→platinum-toha/kachi、toushin→tsumitate、uridoki-2026→boraku、white-gold/kinseido→green-gold）。sitemap 118
+- trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（306頁）・ASP計測リンク 0

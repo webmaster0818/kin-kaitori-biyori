@@ -2302,5 +2302,45 @@
     "badge": "費用・税金",
     "description": "目論見書・田中貴金属・国税庁の数字で、4つの持ち方の費用と税金を比較。",
     "category": "compare"
+  },
+  {
+    "slug": "kin-kakaku-boraku-kako",
+    "title": "金価格の暴落は過去に何回あった？田中貴金属の年次データで見る下落の記録",
+    "shortTitle": "金価格の暴落の記録",
+    "badge": "相場",
+    "description": "1973〜2025年の年次データで、大きく下がった年と1980年の高値の回復までの年数。",
+    "category": "howto"
+  },
+  {
+    "slug": "junkin-tsumitate-hikaku",
+    "title": "純金積立の手数料・年会費・保管方法を7社の公式表記で比較",
+    "shortTitle": "純金積立の費用比較",
+    "badge": "費用・税金",
+    "description": "7社の積立手数料・年会費・引出し手数料・保管方法と、月1万円・3万円の年間手数料。",
+    "category": "compare"
+  },
+  {
+    "slug": "platinum-kachi-suii",
+    "title": "プラチナは価値がなくなる？53年分の価格と需要・供給の公表データ",
+    "shortTitle": "プラチナの価値の推移",
+    "badge": "プラチナ",
+    "description": "田中貴金属の年次価格、金との比率、WPICの2025年需給、USGSの国別生産量。",
+    "category": "howto"
+  },
+  {
+    "slug": "platinum-toha",
+    "title": "プラチナとは？性質・品位の表示（Pt950・Pt900・Pt850）・用途と1gの価格",
+    "shortTitle": "プラチナとは",
+    "badge": "プラチナ",
+    "description": "元素データ、表示規定と造幣局の品位区分、用途の内訳、品位別の1gの地金の値。",
+    "category": "purity"
+  },
+  {
+    "slug": "green-gold-toha",
+    "title": "グリーンゴールド（青金）とは？K18GRGの定義・表示規定と1gの地金の値",
+    "shortTitle": "グリーンゴールドとは",
+    "badge": "GRG",
+    "description": "表示規定によるカラーゴールド4種の定義と、K18GRGに含まれる金・銀の地金の値。",
+    "category": "purity"
   }
 ]
