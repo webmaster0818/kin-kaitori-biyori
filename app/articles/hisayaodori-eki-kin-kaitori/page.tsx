@@ -22,7 +22,7 @@ import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
      「バイセル セントラルパーク2号店」（No.49）で、同じ区画＝2号店と同じ店舗（2026-11-05 確認）。
 */
 
-const CHECKED = "2026年11月5日"; // 初回確認 2026-08-24、10/14・10/21・11/5 に公式店舗ページで再確認（11/5 は既存4店とも住所・営業時間に変化なし・かんてい局を追加）
+const CHECKED = "2026年11月15日"; // 初回確認 2026-08-24、10/14・10/21・11/5・11/15 に公式店舗ページで再確認（11/5 は既存4店とも住所・営業時間に変化なし・かんてい局を追加／11/15 は5店とも住所・営業時間・最寄り表記に変化なし）
 const [, _pm, _pd] = goldData.date.split("-").map(Number);
 const priceDateJa = `2026年${_pm}月${_pd}日`;
 const _purity = goldData.purity_buyback_estimate_per_g as Record<string, number>;
@@ -33,7 +33,7 @@ const publishedTime = _publishedAt && _publishedAt.startsWith(goldData.date) ? `
 export const metadata: Metadata = {
   title: "久屋大通駅の金・ブランド買取｜南改札徒歩1分と5分、地下街の2店と今日の相場【2026年10月】",
   description:
-    "久屋大通駅から行ける金買取店の早見表。南改札徒歩1分と5分の地下街バイセル2店（21時まで）、4番出口徒歩約2分のかんてい局（22時まで・日曜定休）ほか、営業時間を公式で確認（2026年11月5日）。その日の相場から金額を出す手順も掲載。",
+    "久屋大通駅から行ける金買取店の早見表。南改札徒歩1分と5分の地下街バイセル2店（21時まで）、4番出口徒歩約2分のかんてい局（22時まで・日曜定休）ほか、営業時間を公式で確認（2026年11月15日）。その日の相場から金額を出す手順も掲載。",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://gold-biyori.com/articles/hisayaodori-eki-kin-kaitori/" },
 };
@@ -54,7 +54,7 @@ function Schemas() {
     headline: "久屋大通駅の金・ブランド買取｜南改札徒歩1分と5分、地下街の2店と今日の相場【2026年10月】",
     description: "久屋大通駅から地下街だけで行ける金・ブランド買取店（バイセル2店）を、公式店舗ページで確認した情報だけでまとめた記事です。",
     datePublished: "2026-08-24",
-    dateModified: "2026-11-05",
+    dateModified: "2026-11-15",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
