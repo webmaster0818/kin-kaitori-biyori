@@ -84,7 +84,7 @@ export function LocalStores({
               {s.tel && (
                 <div className="flex gap-2">
                   <dt className="flex-shrink-0 w-16 text-foreground font-medium">電話</dt>
-                  <dd className="m-0">{s.tel}</dd>
+                  <dd className="m-0">{s.tel}{s.telNote ? `（${s.telNote}）` : ""}</dd>
                 </div>
               )}
               {s.parking && (
