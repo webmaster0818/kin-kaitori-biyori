@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "金・貴金属の買取は何歳から？未成年・18歳19歳の扱いと主要10社の年齢規定｜当日の流れ",
     description: "金買取は未成年でも売れるのか、予約は必要か、当日は受付から現金受け取りまでどのくらいかかるのか——手続きまわりの疑問に絞って解説します。持ち物や本人確認書類の詳細は「金買取に必要なもの」ページをご覧ください。",
     datePublished: "2026-07-03",
-    dateModified: "2026-11-06",
+    dateModified: "2026-11-16",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -49,7 +49,7 @@ function FaqSchema() {
       { "@type": "Question", name: "年齢を偽って売ったらどうなりますか？", acceptedAnswer: { "@type": "Answer", text: "民法21条により、成年だと信じさせるために詐術を用いた場合、未成年者でもその契約を取り消せなくなります。古物商は古物営業法15条で年齢を確認する義務があり、大阪府の条例は身分証などで青少年でないことを確認する義務も定めています。" } },
       { "@type": "Question", name: "金買取に身分証は必要ですか？", acceptedAnswer: { "@type": "Answer", text: "必須です。古物営業法15条により、古物商は買取時に住所・氏名・職業・年齢を確認する義務があります（対価1万円未満は法律上不要ですが、店の方針で求められることがあります）。運転免許証・マイナンバーカード・パスポートなどが使えます。従来の健康保険証は、買取大吉が「令和7年12月2日（2025年12月2日）より身分証明書として認められなくなった」と公式に告知しています。" } },
       { "@type": "Question", name: "マイナンバーの提出が必要になるのはどんなときですか？", acceptedAnswer: { "@type": "Answer", text: "金地金・金貨などで1回200万円を超える取引では、業者が税務署に支払調書を提出するため、マイナンバーの提示が必要になる場合があります。" } },
-      { "@type": "Question", name: "未成年でも金を売れますか？", acceptedAnswer: { "@type": "Answer", text: "18歳未満は、買取大吉・おたからや・なんぼや・ウリエル・ティファナ・大黒屋などの公式規定で買取不可です。民法5条で未成年者の契約は親権者の同意がなければ取り消せること、東京都・大阪府などの条例が古物商に18歳未満からの買受けを禁じていることが理由です。ブランドリバリューは親権者の同意書または同伴で対応すると公式に記載しています。" } },
+      { "@type": "Question", name: "未成年でも金を売れますか？", acceptedAnswer: { "@type": "Answer", text: "18歳未満は、買取大吉・おたからや・なんぼや・ウリエル・ティファナ・大黒屋などの公式規定で買取不可です。民法5条で未成年者の契約は親権者の同意がなければ取り消せること、東京都・大阪府などの条例が古物商に18歳未満からの買受けを禁じていることが理由です。ブランドリバリューは親権者の同意書の持参と親権者・監護者の同伴があれば対応すると公式に記載しています。" } },
       { "@type": "Question", name: "金買取に予約は必要ですか？", acceptedAnswer: { "@type": "Answer", text: "予約不要の店舗も多いですが、混雑時は予約すると待ち時間を減らせます。出張買取は日程調整が必要です。" } },
       { "@type": "Question", name: "査定にどれくらい時間がかかりますか？", acceptedAnswer: { "@type": "Answer", text: "点数にもよりますが、数点なら15〜30分程度が目安です。受付→本人確認→査定→金額提示→同意で現金受け取り、という流れが一般的です。" } },
       { "@type": "Question", name: "保証書や箱がなくても売れますか？", acceptedAnswer: { "@type": "Answer", text: "売れます。金は素材価値で査定されるため付属品なしでも問題ありません。ただし保証書・箱・鑑定書があると、特にブランド品で査定額が上がる場合があります。" } },
@@ -110,7 +110,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <p><strong>結論：18歳未満は単独では売れません。18歳・19歳は法律上は成年ですが、店によっては同意書が要る・高校生は不可・20歳以上のみ、という独自の規定があります。</strong>宝石・ブランド品など貴金属以外でも同じ扱いです。</p>
 
-          <h3>主要10社の年齢規定と同意書の要否（2026年11月6日確認）</h3>
+          <h3>主要10社の年齢規定と同意書の要否（2026年11月16日確認）</h3>
 
           <div className="table-wrapper">
             <table>
@@ -124,14 +124,16 @@ export default function KinKaitoriTetsuzukiGuidePage() {
                 <tr><td><strong>ウリエル</strong></td><td>不可</td><td>同意書または委任状が必要（同じページのQ&Aには「未成年の方はご利用いただけません」とも記載）</td><td><a href="https://www.uriel-cuore.co.jp/event/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">催事・買取案内</a></td></tr>
                 <tr><td><strong>ティファナ</strong></td><td>不可</td><td>高校生・高専学校生は不可。それ以外は公式に同意書の記載なし</td><td><a href="https://www.tifana.net/visitlp/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">出張買取ページ</a></td></tr>
                 <tr><td><strong>大黒屋</strong></td><td>不可</td><td>高校生は不可。それ以外は申込可（公式に同意書の記載なし）</td><td><a href="https://kaitori.e-daikoku.com/faq.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
-                <tr><td><strong>ブランドリバリュー</strong></td><td>原則不可。親権者同意書＋続柄のわかる書類の持参、または親権者・監護者の同伴で対応（宅配は不可）</td><td>同意書は不要（高校生を除く）。99万9,999円を超える取引は親権者同意書と続柄のわかる書類が必要</td><td><a href="https://brandrevalue.com/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">公式サイト</a></td></tr>
+                <tr><td><strong>ブランドリバリュー</strong></td><td>原則不可。親権者同意書＋続柄のわかる書類の持参と、親権者・監護者の同伴があれば対応（宅配買取の利用規約 第8条は同意書の持参「かつ」同伴。同伴できない宅配は不可。18歳でも高校生は未成年とみなす）</td><td>同意書は不要（高校生を除く）。99万9,999円を超える取引は親権者同意書と続柄のわかる書類が必要</td><td><a href="https://brandrevalue.com/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">公式サイト</a></td></tr>
                 <tr><td><strong>バイセル</strong></td><td>不可（「未成年者からの買取はできません」・年齢の定義は記載なし）</td><td>公式に記載なし</td><td><a href="https://buysell-kaitori.com/store/kinshicho-parco/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">店舗ページ（例）</a></td></tr>
                 <tr><td><strong>福ちゃん</strong></td><td>不可（利用は成年に限る・利用規約 第7条）</td><td>公式に同意書の記載なし</td><td><a href="https://www.fuku-chan.info/terms.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">利用規約</a></td></tr>
                 <tr><td><strong>コメ兵</strong></td><td>不可</td><td>不可（20歳未満は買取不可）</td><td><a href="https://komehyo.jp/kaitori/faq/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-warm-gray">※各社公式ページの記載を2026年11月6日に確認したものです。「記載なし」は確認したページに書かれていないという意味で、不要と断定するものではありません。規定は変わることがあるため、来店前に各社へご確認ください。ヒカカク！（一括査定）は申込先の各業者の規定に従います。</p>
+          <p className="text-xs text-warm-gray">※各社公式ページの記載を2026年11月16日に確認したものです（11月6日の確認から変更なし。ブランドリバリューの18歳未満の条件のみ表記を訂正）。「記載なし」は確認したページに書かれていないという意味で、不要と断定するものではありません。規定は変わることがあるため、来店前に各社へご確認ください。ヒカカク！（一括査定）は申込先の各業者の規定に従います。</p>
+
+          <p><strong>店に年齢を確認されるのは法律上の義務です。</strong>古物商は買い受けるとき、相手の住所・氏名・職業・年齢を確認しなければなりません（古物営業法15条1項）。警視庁の解説では、確認義務は<strong>買い受ける物品の総額が1万円未満なら原則免除</strong>で、例外（1万円未満でも確認が必要）はバイク・ゲームソフト・CDやDVD等・書籍と、2025年10月1日に追加されたエアコン室外機等・電線・金属製グレーチングです（<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/kobutsu_sekoukisoku.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">警視庁「古物営業法施行規則の一部改正について」</a>）。金・貴金属はこの例外に入っていないため、<strong>1万円以上の買取なら必ず本人確認と年齢の確認があります</strong>。宅配などの非対面の買取では、警視庁は「免許証等のコピーや住民票の写しを送ってもらうだけでは違反」「1万円未満であっても、18歳未満の者からの買い取りでないことを確認する必要があります」と案内しています（<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/hitaimen.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">警視庁「非対面取引における確認の方法」</a>・いずれも2026年11月16日確認）。</p>
 
           <h3>年齢別の早見表</h3>
 
@@ -143,7 +145,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
               <tbody>
                 <tr><td><strong>20歳以上</strong></td><td>成年。単独で契約可</td><td>上の表のどの店でも年齢による制限なし</td></tr>
                 <tr><td><strong>18歳・19歳</strong></td><td>成年（民法4条）。単独で契約可</td><td>大吉・おたからや・大黒屋（高校生除く）は可／なんぼや・ウリエルは同意書等が必要／ティファナ・大黒屋は高校生不可／コメ兵は不可</td></tr>
-                <tr><td><strong>18歳未満</strong></td><td>未成年。親権者の同意なしの契約は取り消せる（民法5条）</td><td>ほぼすべて不可。ブランドリバリューのみ同意書または同伴で対応と明記</td></tr>
+                <tr><td><strong>18歳未満</strong></td><td>未成年。親権者の同意なしの契約は取り消せる（民法5条）</td><td>ほぼすべて不可。ブランドリバリューのみ同意書の持参と親権者等の同伴で対応と明記</td></tr>
               </tbody>
             </table>
           </div>
@@ -264,7 +266,7 @@ export default function KinKaitoriTetsuzukiGuidePage() {
               },
               {
                 q: "未成年でも金を売れますか？",
-                a: "18歳未満は、買取大吉・おたからや・なんぼや・ウリエル・ティファナ・大黒屋などの公式規定で買取不可です。民法5条で未成年者の契約は親権者の同意がなければ取り消せること、東京都・大阪府などの条例が古物商に18歳未満からの買受けを禁じていることが理由です。ブランドリバリューは親権者の同意書または同伴で対応すると公式に記載しています。",
+                a: "18歳未満は、買取大吉・おたからや・なんぼや・ウリエル・ティファナ・大黒屋などの公式規定で買取不可です。民法5条で未成年者の契約は親権者の同意がなければ取り消せること、東京都・大阪府などの条例が古物商に18歳未満からの買受けを禁じていることが理由です。ブランドリバリューは親権者の同意書の持参と親権者・監護者の同伴があれば対応すると公式に記載しています。",
               },
               {
                 q: "金買取に予約は必要ですか？",
