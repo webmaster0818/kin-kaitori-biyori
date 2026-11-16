@@ -2342,5 +2342,45 @@
     "badge": "GRG",
     "description": "表示規定によるカラーゴールド4種の定義と、K18GRGに含まれる金・銀の地金の値。",
     "category": "purity"
+  },
+  {
+    "slug": "koban-kachi",
+    "title": "小判の価値はいくら？慶長・元禄・天保・万延小判に含まれる金の量と地金としての値",
+    "shortTitle": "小判の価値",
+    "badge": "小判",
+    "description": "貨幣博物館が示す重さと品位から、小判・大判に含まれる金の量と地金としての値を計算。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-kounyu-chuiten",
+    "title": "金を購入するときの注意点 — 価格差・手数料・本人確認・税金・勧誘の手口を公式情報で整理",
+    "shortTitle": "金を購入するときの注意点",
+    "badge": "費用・税金",
+    "description": "購入価格と買取価格の差、500g未満の手数料、購入額に戻るまでに必要な値上がり幅。",
+    "category": "compare"
+  },
+  {
+    "slug": "kin-mitsudo",
+    "title": "金の密度は19.32g/cm³ — 重さと体積の換算表・他の貴金属との比較",
+    "shortTitle": "金の密度",
+    "badge": "純度の見方",
+    "description": "1g〜1kgの体積、プラチナ・パラジウム・銀との比較、水に沈めて確かめる方法の精度。",
+    "category": "purity"
+  },
+  {
+    "slug": "palladium-toha",
+    "title": "パラジウムとは？性質・品位の表示（Pd950・Pd500）・ジュエリーでの使われ方と産出国",
+    "shortTitle": "パラジウムとは",
+    "badge": "パラジウム",
+    "description": "元素データ、JIS・ISOの品位区分、ホワイトゴールドの割り金、国別の産出量と価格の推移。",
+    "category": "purity"
+  },
+  {
+    "slug": "kin-maizoryo",
+    "title": "金の埋蔵量は世界で約6万6,000トン — 国別の埋蔵量・生産量と日本の菱刈鉱山",
+    "shortTitle": "金の埋蔵量",
+    "badge": "金の基礎知識",
+    "description": "USGSの国別埋蔵量・2025年の生産量と、菱刈鉱山の産金量・可採金量。",
+    "category": "howto"
   }
 ]

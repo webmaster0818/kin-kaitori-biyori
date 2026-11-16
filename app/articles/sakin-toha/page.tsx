@@ -171,7 +171,7 @@ export default function SakinTohaPage() {
         <p className="text-sm text-warm-gray">確認日: 2026年11月14日。法令の適用は個別の事情により異なります。具体的な判断は所管の行政機関にご確認ください。</p>
 
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
-        <RelatedArticles currentSlug="sakin-toha" relatedSlugs={["kin-jundo-mikata", "k24-kaitori", "ingot-toha", "kin-kaitori-zeikin", "kin-gram-keisan"]} />
+        <RelatedArticles currentSlug="sakin-toha" relatedSlugs={["kin-maizoryo", "kin-jundo-mikata", "k24-kaitori", "ingot-toha", "kin-kaitori-zeikin", "kin-gram-keisan"]} />
       </article>
     </div>
   </>);
