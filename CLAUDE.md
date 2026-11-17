@@ -794,3 +794,10 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 独自計算: 小判・大判の金量×田中買取価格（日次連動）、購入額に戻る買取価格と必要な値上がり幅（8サイズ・日次連動）、重さ別の体積・立方体の一辺・水置換の精度、Pd の国別構成比と Pd÷Pt 価格比、埋蔵量÷生産の年数（国別）と体積。田中は Pd の店頭価格を公表していない（11/16 確認）ため palladium-toha は日次値なし
 - 内部リンク: metadata +5（koban/maizoryo=howto・kounyu=compare・mitsudo/palladium=purity）、relatedSlugs 追加 kinka-kaitori-guide→koban・ingot-toha→kounyu・kin-nisemono-mikata→mitsudo・white-gold/platinum-toha→palladium・sakin-toha→maizoryo。sitemap 123（gen-sitemap.py・lastmod 11-16）
 - trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（311頁）・ASP計測リンク 0。Indexing は未送信（親が実施）
+
+### 2026-11-17 朝ルーチン（15:1x やり直し）: hikakaku-kin-kaitori-kuchikomi 公式値更新／niiza 5店照合 ✅
+- 07:00 点検「データが3日より古い」hikakaku-kin-kaitori-kuchikomi（11/3）: 公式（11/17）貴金属・宝石カテゴリ title「16583点・1084社」（11/3 は 16,518点・1,083社）・買取実績「最低 9円 〜 最高 15,000,000円」変化なし。クチコミページ 総合3.4・星5 425／4 200／3 106／2 86／1 266・最新投稿 2026-03-19 で変化なし（見出しは【2026年11月最新】）。description・要点・表・注記を 1,084社・16,583点に、確認日 11/17、注記に 11/3 の値を残した。title の【2026年10月最新】は不変（C5 系 A/B に触れない）
+- 範囲外（報告のみ）: k14-kaitori・k22-kaitori・ikkatsu-satei-hikaku の「1,083社」は日付つき（10/27・11/3 確認）のため未変更
+- niiza 5店（確認日 7/4）を公式店舗ページで照合: ①大黒屋 志木買取センター 10:00〜19:00・水曜/第3木曜 → 公式 10:30〜18:00（月〜土）・休業日 日曜日 祝日（公式「8月1日（土）よりリニューアルオープン・営業時間・定休日を変更」）、アクセス 南口徒歩約2分→約1分（太田ビル2階・1階日高屋）②おたからや OSCデオシティ新座店「新座駅より路線バス約8分／志木駅より約10分」→公式は「バス『中野』降車後 徒歩8分／『団地南』降車後 徒歩10分」（分数は徒歩）。一致: 大吉 西友新座・志木駅南口、なんぼや志木（notice-status は /shop/saitama/shiki-brandshop/notice-status・11:00〜19:00 定休日なし）。dateModified 06-05→11-17
+- trust-audit C3 /author/「監修者」: 本番原文は「掲載していないもの 執筆者・監修者の個人名…」の否定文で誤検知（Person schema 0・11/2 以降同じ）。変更なし
+- precheck ✅（311頁）・ASP 0=0・外部href 6666=6666・表示テキストが変わったのは2ページのみ。次の地域照合（確認日 7/4）: amagasaki・odawara
