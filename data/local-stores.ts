@@ -307,7 +307,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "niiza-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-17",
     stores: [
       {
         name: "買取大吉 西友新座店",
@@ -339,7 +339,7 @@ export const localStores: Record<string, CityStores> = {
         postalCode: "352-0005",
         hours: "10:00〜20:00（最終受付19:00）",
         closed: "年中無休",
-        access: "JR武蔵野線 新座駅より路線バス約8分／東武東上線 志木駅より路線バス約10分",
+        access: "JR武蔵野線 新座駅より路線バス「中野」下車 徒歩8分／東武東上線 志木駅より路線バス「団地南」下車 徒歩10分",
         tel: "0120-520-221",
         sourceUrl: "https://www.otakaraya-shop.jp/oscdeocity/",
       },
@@ -359,9 +359,9 @@ export const localStores: Record<string, CityStores> = {
         chain: "大黒屋",
         address: "埼玉県新座市東北2丁目31-15 太田ビル2F",
         postalCode: "352-0001",
-        hours: "10:00〜19:00",
-        closed: "水曜日・第3木曜日",
-        access: "東武東上線 志木駅南口より徒歩約2分",
+        hours: "10:30〜18:00（月〜土）",
+        closed: "日曜日・祝日",
+        access: "東武東上線 志木駅南口より徒歩約1分（1階に日高屋が入る太田ビルの2階）",
         tel: "048-485-2051",
         sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000104",
       },
