@@ -2382,5 +2382,45 @@
     "badge": "金の基礎知識",
     "description": "USGSの国別埋蔵量・2025年の生産量と、菱刈鉱山の産金量・可採金量。",
     "category": "howto"
+  },
+  {
+    "slug": "kin-ingot-kounyusaki",
+    "title": "金のインゴットはどこで買う？地金商4社のサイズ別手数料と購入額を公式情報で比較",
+    "shortTitle": "金のインゴットはどこで買う？",
+    "badge": "購入先",
+    "description": "田中貴金属・三菱マテリアル・石福金属興業・徳力本店のサイズ別販売手数料と、同じ日の小売価格の差。",
+    "category": "compare"
+  },
+  {
+    "slug": "platinum-silver-chigai",
+    "title": "プラチナとシルバー（銀）の違い — 刻印・重さ・価格を公式データで比較",
+    "shortTitle": "プラチナとシルバーの違い",
+    "badge": "Pt・SV",
+    "description": "元素データ、表示規定・造幣局の品位区分、同じ大きさでの重さの差、1gあたりの価格差。",
+    "category": "purity"
+  },
+  {
+    "slug": "platinum-allergy",
+    "title": "プラチナで金属アレルギーは起きる？公的研究のパッチテスト陽性率と、刻印で確認できること",
+    "shortTitle": "プラチナと金属アレルギー",
+    "badge": "プラチナ",
+    "description": "厚生労働科学研究の報告書の金属別パッチテスト陽性率と、Pt900の残り10%・めっきの表示。",
+    "category": "purity"
+  },
+  {
+    "slug": "kin-sakimono-torihiki",
+    "title": "金先物取引とは？大阪取引所の4商品の取引単位・決済方法・税金と、2026年12月の金限日先物の休止",
+    "shortTitle": "金先物取引とは",
+    "badge": "費用・税金",
+    "description": "金標準先物・金ミニ・ポケットゴールド100・金限日の取引単位と決済方法、1枚あたりの金額の目安、税金。",
+    "category": "compare"
+  },
+  {
+    "slug": "gin-toushi",
+    "title": "銀投資の方法と費用 — 銀地金・積立・ETF・先物の手数料と税金を公式資料で比較",
+    "shortTitle": "銀投資の方法と費用",
+    "badge": "費用・税金",
+    "description": "銀地金・積立・ETF・先物の費用と税金、銀と金の売買価格差、銀地金の往復コスト。",
+    "category": "compare"
   }
 ]

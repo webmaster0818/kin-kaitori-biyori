@@ -332,7 +332,7 @@ export default function SilverKaitoriPage() {
         <ExpertQA category="compare" />
         <RelatedArticles
           currentSlug="silver-kaitori"
-          relatedSlugs={["platinum-pt900-kaitori", "platinum-kaitori", "k24-kaitori", "k18-kaitori", "kin-jundo-mikata", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+          relatedSlugs={["gin-toushi", "platinum-silver-chigai", "platinum-pt900-kaitori", "platinum-kaitori", "k24-kaitori", "k18-kaitori", "kin-jundo-mikata", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
         />
 
         <h2>まとめ</h2>

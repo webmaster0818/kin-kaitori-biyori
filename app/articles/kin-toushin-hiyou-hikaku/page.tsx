@@ -164,7 +164,7 @@ export default function KinToushinHiyouHikakuPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月14日。金・投資信託・ETFは元本保証の商品ではありません。手数料・税制は変更される場合があります。ご利用前に、目論見書・公式サイトにて最新情報をご確認ください。個別の税務判断は税務署・税理士にご確認ください。</p>
 
-        <RelatedArticles currentSlug="kin-toushin-hiyou-hikaku" relatedSlugs={["junkin-tsumitate-hikaku", "kin-kaitori-zeikin", "ingot-toha", "kin-uridoki-2026", "kin-zouyo-zeikin", "kin-kaitori-souba"]} />
+        <RelatedArticles currentSlug="kin-toushin-hiyou-hikaku" relatedSlugs={["kin-sakimono-torihiki", "gin-toushi", "junkin-tsumitate-hikaku", "kin-kaitori-zeikin", "ingot-toha", "kin-uridoki-2026", "kin-zouyo-zeikin", "kin-kaitori-souba"]} />
       </article>
     </div>
   </>);

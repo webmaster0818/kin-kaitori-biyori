@@ -801,3 +801,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - niiza 5店（確認日 7/4）を公式店舗ページで照合: ①大黒屋 志木買取センター 10:00〜19:00・水曜/第3木曜 → 公式 10:30〜18:00（月〜土）・休業日 日曜日 祝日（公式「8月1日（土）よりリニューアルオープン・営業時間・定休日を変更」）、アクセス 南口徒歩約2分→約1分（太田ビル2階・1階日高屋）②おたからや OSCデオシティ新座店「新座駅より路線バス約8分／志木駅より約10分」→公式は「バス『中野』降車後 徒歩8分／『団地南』降車後 徒歩10分」（分数は徒歩）。一致: 大吉 西友新座・志木駅南口、なんぼや志木（notice-status は /shop/saitama/shiki-brandshop/notice-status・11:00〜19:00 定休日なし）。dateModified 06-05→11-17
 - trust-audit C3 /author/「監修者」: 本番原文は「掲載していないもの 執筆者・監修者の個人名…」の否定文で誤検知（Person schema 0・11/2 以降同じ）。変更なし
 - precheck ✅（311頁）・ASP 0=0・外部href 6666=6666・表示テキストが変わったのは2ページのみ。次の地域照合（確認日 7/4）: amagasaki・odawara
+
+### 2026-11-17 20:00 kwexp（競合ベンチマーク型ページ拡張・4日目）: 新規5ページ ✅本番反映済み
+- queue の上から: 金 インゴット どこで買う(1040)→/articles/kin-ingot-kounyusaki/・プラチナ シルバー 違い(800)→/articles/platinum-silver-chigai/・プラチナ アレルギー(800)→/articles/platinum-allergy/・金先物取引(800)→/articles/kin-sakimono-torihiki/・銀投資(384)→/articles/gin-toushi/
+- skip: 白金とは（platinum-toha と重複）／K18YG（k18-kaitori・kinseido の YG 行と重複）／ホワイトゴールド 変色（white-gold-toha のロジウムめっき節と重複）／金メッキとは（k24gp-toha・kin-mekki-mikata と重複）／金 買うタイミング（投資判断の語。事実部分は boraku・kounyu と重複）／純金積立 デメリット（junkin-tsumitate-hikaku と重複）／プラチナ価格 今後（platinum-kachi-suii と重複・将来予測）／18金 変色（一次情報なし）／K10WG（k10-kaitori・kinseido と重複）
+- 一次情報（11/17 確認）: 田中「売買価格と別途手数料」・三菱マテリアル（bullion.html・2026-04-01 手数料改定＝5/11〜 5-20g 8,800/100g 16,500・金価格推移 店頭21,913）・石福（product/gold.html バーチャージ。当日価格は JS 表示で取得不可）・徳力本店（goldetc/item/ 金・銀地金の売買手数料と当日価格 21,957／銀 280.06・263.01）／JPX 制度概要（金標準・金ミニ・ポケットゴールド100＝gold-cash-settled-futures・金限日・銀先物、限日は 2026-12-22 で休止＝02.html）※WebFetch は 403 だが curl 既定 UA で 200（UA 偽装なし）／国税庁 No.1522・No.3105／JJA 表示規定 2026年度版（Pt・Ag の品位・表示、洋白、PTP）／造幣局 品位区分（白金4・銀5、白金は銀と似るが記号で判別）／TANAKA 元素データ Pt・Ag／USGS MCS 2026 Silver（世界生産26,000t・価格推移）／厚労科研「金属アレルギーの新規管理法の確立に関する研究」R6 総括報告書（345例 Pt<1%・Pd15.9%・Ag2.7%、JBS2015 2023 Ni25.2%・Au26.7%）／JPX 1542 銘柄概要（信託報酬0.55%・2026-02-27）
+- 独自計算: 4社×サイズの手数料上乗せ率（日次）・同日3社の購入額、Pt÷Ag 価格比・品位別の地金の値（日次）、先物1枚の金額と1%・5%変動の損益目安（田中小売÷1.1・日次）、銀地金4サイズの往復に必要な値上がり幅（日次）・銀と金の売買スプレッド
+- 内部リンク: metadata +5（ingot/sakimono/gin=compare・pt-silver/allergy=purity）、relatedSlugs 追加 kounyu→ingot・platinum-toha→pt-silver/allergy・white-gold→allergy・toushin→sakimono/gin・silver-kaitori→gin/pt-silver。sitemap 128
+- trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（316頁）・ASP計測リンク 0。Indexing は未送信（親が実施）

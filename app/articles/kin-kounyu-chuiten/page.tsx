@@ -143,7 +143,7 @@ export default function KinKounyuChuitenPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月16日。価格・手数料は変更される場合があります。ご購入・ご売却の前に、各社の最新情報をご確認ください。</p>
 
-        <RelatedArticles currentSlug="kin-kounyu-chuiten" relatedSlugs={["ingot-toha", "kin-nobebo-kaitori", "kin-kaitori-zeikin", "junkin-tsumitate-hikaku", "kin-toushin-hiyou-hikaku"]} />
+        <RelatedArticles currentSlug="kin-kounyu-chuiten" relatedSlugs={["kin-ingot-kounyusaki", "ingot-toha", "kin-nobebo-kaitori", "kin-kaitori-zeikin", "junkin-tsumitate-hikaku", "kin-toushin-hiyou-hikaku"]} />
       </article>
     </div>
   </>);

@@ -164,7 +164,7 @@ export default function WhiteGoldTohaPage() {
         <p className="text-sm text-warm-gray">確認日: 2026年11月14日。相場は変動します。実際の査定額は業者・製品の状態により異なります。</p>
 
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
-        <RelatedArticles currentSlug="white-gold-toha" relatedSlugs={["green-gold-toha", "palladium-toha", "platinum-toha", "kinseido-kaitori-guide", "k18-kaitori", "k14-kaitori", "platinum-kaitori", "kin-jundo-mikata", "k24gp-toha"]} />
+        <RelatedArticles currentSlug="white-gold-toha" relatedSlugs={["platinum-allergy", "green-gold-toha", "palladium-toha", "platinum-toha", "kinseido-kaitori-guide", "k18-kaitori", "k14-kaitori", "platinum-kaitori", "kin-jundo-mikata", "k24gp-toha"]} />
       </article>
     </div>
   </>);
