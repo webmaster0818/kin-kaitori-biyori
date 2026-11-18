@@ -2422,5 +2422,37 @@
     "badge": "費用・税金",
     "description": "銀地金・積立・ETF・先物の費用と税金、銀と金の売買価格差、銀地金の往復コスト。",
     "category": "compare"
+  },
+  {
+    "slug": "houmon-kaitori-ihou",
+    "title": "訪問買取は違法？特定商取引法で禁止される行為・罰則と、2021〜2026年度の行政処分9件の集計",
+    "shortTitle": "訪問買取で違法になる行為",
+    "badge": "訪問購入",
+    "description": "飛び込み勧誘・再勧誘・書面不備などの禁止事項と罰則、消費者庁の処分一覧から集計した訪問購入の行政処分。",
+    "category": "howto"
+  },
+  {
+    "slug": "kin-toha",
+    "title": "金（ゴールド）とは？元素の性質・純度の表し方（JIS・造幣局・買取の区分の対応表）と1gの価格",
+    "shortTitle": "金とは",
+    "badge": "金",
+    "description": "元素データ、JIS・造幣局・RE:TANAKAの品位区分の対応表、品位別の1gの金の地金の値。",
+    "category": "purity"
+  },
+  {
+    "slug": "kin-kaitori-shohizei",
+    "title": "金買取に消費税はかかる？個人が売るときの扱い・買取価格に含まれる消費税相当額",
+    "shortTitle": "金買取と消費税",
+    "badge": "費用・税金",
+    "description": "個人・事業者・買取業者それぞれの消費税の扱いと、重さ別の消費税相当額。",
+    "category": "howto"
+  },
+  {
+    "slug": "k9-kaitori",
+    "title": "9金（K9）の買取価格は？田中貴金属の公表値で見る1gの価格と、金の含有量に対する買取の割合",
+    "shortTitle": "9金（K9）の買取価格",
+    "badge": "K9",
+    "description": "RE:TANAKAのK9の価格と、品位別の金の含有量に対する買取の割合、JIS・造幣局の区分。",
+    "category": "purity"
   }
 ]

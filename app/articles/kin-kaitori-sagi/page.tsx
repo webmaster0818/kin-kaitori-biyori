@@ -232,7 +232,7 @@ export default function KinKaitoriSagiPage() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kin-kaitori-sagi"
-          relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
+          relatedSlugs={["houmon-kaitori-ihou", "hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "kin-kaitori-hajimete", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori"]}
         />
 
         <h2>まとめ</h2>

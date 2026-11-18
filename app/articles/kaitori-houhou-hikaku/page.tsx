@@ -451,7 +451,7 @@ export default function KaitoriHouhouHikakuPage() {
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
         <RelatedArticles
           currentSlug="kaitori-houhou-hikaku"
-          relatedSlugs={["hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
+          relatedSlugs={["houmon-kaitori-ihou", "hikakaku-kin-kaitori-kuchikomi", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "tentou-vs-takuhai", "ikkatsu-satei-hikaku", "line-satei-seido", "kin-takaku-uru", "kin-kaitori-souba", "kin-kaitori-hajimete", "daikichi-vs-nanboya", "tokyo-kin-kaitori", "kin-necklace-kaitori", "kin-bracelet-kaitori", "ueda-kin-kaitori"]}
         />
 
         <DealerComparisonTable

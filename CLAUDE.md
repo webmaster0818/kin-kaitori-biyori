@@ -821,3 +821,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 造幣局・おたからやの「確認日」が NANBOYA_DATE を流用していたので REF_CHECK_DATE（10/21）に分離（日付を偽って進めないため）。dateModified 11-18。title は日次自動の値のみ（手では変えていない）
 - 競合（WebSearch・米国経由）: 上位はウリドキの査定実績ページ・おたからや（重さ記載なし・2022年の参考価格）。10g 単位の品位別表を持つ競合は見当たらず＝追加なし
 - precheck ✅（316頁）・ASP計測リンク 0=0・表示テキストが変わったのは kin-bracelet 1ページのみ
+
+### 2026-11-18 20:00 kwexp（競合ベンチマーク型ページ拡張・5日目）: 新規4ページ（queue の空欄を使い切り）
+- queue の上から: 訪問買取 違法(312)→/articles/houmon-kaitori-ihou/・金とは(256)→/articles/kin-toha/・金買取 消費税(88)→/articles/kin-kaitori-shohizei/・9金 買取(32)→/articles/k9-kaitori/
+- skip: 金 酸化（金そのものの酸化・変色を公的資料で確認できず＝11/16 金 錆びると同じ）／Pt900とは（platinum-pt900-kaitori の h2「Pt900とは」と重複）／銀投資 やめとけ（gin-toushi と重複・投資判断の語）／カラーゴールド・ピンクゴールドとは（green-gold-toha の h2「カラーゴールド4種の定義」と重複）／ローズゴールドとは（表示規定・造幣局に定義なし）／金メッキ 売れる（k24gp-toha の h2「24KGPの製品は買い取ってもらえるか」と重複）／K10とは・10金 価値（k10-kaitori）／K18とは（k18-kaitori）／パラジウム 将来性・下落（palladium-toha と重複・将来予測）／金 現物 投資（kin-kounyu-chuiten・kin-ingot-kounyusaki）／金価格 下落 理由・高騰 理由・金の価値 下がらない（kin-kakaku-boraku-kako と重複・要因を公的資料で特定できず）／ブラックゴールド 買取（公的な定義なし）／金 価値がある理由（kin-toha と重複）／金 ペンダント 買取（kin-necklace-kaitori と重複）／金相場 株価 関係（公的資料なし）
+- 一次情報（11/18 確認）: 消費者庁 特商法ガイド 訪問購入・執行状況の処分一覧CSV（2021年度〜本年度 540行→訪問購入38行＝9件、条項別集計。事業者名は不掲載）／e-Gov 特商法 58条の5〜13・70・71・74条（拘禁刑表記）／消費者ホットライン188／TANAKA 元素データ Au／JJA 表示規定 2026年度（JIS H6309:2022 金9区分・K表示・333未満不可）／造幣局 品位区分（金6区分・916/416 表記変更）／RE:TANAKA リサイクル価格 11/18 17:00（K24 19,084〜K9 6,089）と同時刻の田中 金買取 20,876／国税庁 No.6105・6303・6499・H31改正のお知らせ
+- 独自計算: 訪問購入の処分の条項別件数、JIS・造幣局・RE:TANAKA の品位区分対応表＋品位別の金の地金の値（日次）、重さ別の消費税相当額（日次）、品位別のリサイクル価格÷含有金の地金の値（K24 91.5%→K9 77.8%）と K9 目安（日次×11/18比率）
+- 内部リンク: metadata +4（ihou/shohizei=howto・kin-toha/k9=purity）、relatedSlugs 追加 sagi・houhou-hikaku→ihou、zeikin→shohizei、mitsudo・jundo-mikata→kin-toha、k10→k9。sitemap 132
+- trust-audit check_page 4頁とも指摘0・precheck ✅全項目OK（320頁）・scaled-content-lint 違反0・ASP計測リンク 0。Indexing は未送信（親が実施）
