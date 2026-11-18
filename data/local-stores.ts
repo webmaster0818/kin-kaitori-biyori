@@ -414,7 +414,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "amagasaki-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-18",
     stores: [
       {
         name: "買取大吉 尼崎中央商店街店",
@@ -422,7 +422,7 @@ export const localStores: Record<string, CityStores> = {
         address: "兵庫県尼崎市神田中通2-27-28",
         hours: "11:00〜19:00",
         closed: "年中無休",
-        access: "阪神尼崎駅より徒歩約2分（中央商店街入り口付近）",
+        access: "阪神尼崎駅 北方面出口より徒歩2分（商店街入り口付近すぐ）",
         tel: "06-6480-9526",
         sourceUrl: "https://www.kaitori-daikichi.jp/store/amagasaki-chuoshoutengai/",
       },
@@ -431,7 +431,7 @@ export const localStores: Record<string, CityStores> = {
         chain: "買取大吉",
         address: "兵庫県尼崎市潮江1丁目16番1号 アミング潮江ウエスト2番館1階",
         hours: "10:00〜19:00",
-        closed: "年中無休（年末年始を除く）",
+        closed: "年中無休",
         access: "JR尼崎駅より徒歩4分",
         tel: "0120-68-0014",
         sourceUrl: "https://www.kaitori-daikichi.jp/store/amagasaki-r/",
@@ -452,7 +452,7 @@ export const localStores: Record<string, CityStores> = {
         address: "兵庫県尼崎市潮江1-3-1 あまがさきキューズモール 1F",
         postalCode: "661-0976",
         hours: "10:00〜20:00（最終受付19:30）",
-        closed: "施設に準じる",
+        closed: "定休日なし（施設に準じる）",
         access: "JR尼崎駅 北口より徒歩約6分",
         tel: "0120-66-1333",
         sourceUrl: "https://nanboya.com/gold-kaitori/shop/amagasaki-qs-mall-brandshop/",
@@ -471,7 +471,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "odawara-kin-kaitori": {
-    updated: "2026-07-04",
+    updated: "2026-11-18",
     stores: [
       {
         name: "買取大吉 ダイナシティ小田原店",
