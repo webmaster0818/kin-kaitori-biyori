@@ -21,16 +21,18 @@ const K18_30G = Math.round(_BP.k18 * 30).toLocaleString();
 // 地金換算＝田中貴金属の本日の店頭買取価格（K24・Pt1000、税込1g）× 品位。毎朝11:05の日次ビルドで更新。
 const _TK = goldData.tanaka_official as Record<string, number>;
 const KIHEI_METALS = [
-  { key: "k24", label: "K24（純金）", ratio: 1, base: _TK.au_buyback_per_g, ratioLabel: "24/24", nanboya: 22583 },
-  { key: "k22", label: "K22", ratio: 22 / 24, base: _TK.au_buyback_per_g, ratioLabel: "22/24", nanboya: 20720 },
-  { key: "k18", label: "K18（750）", ratio: 18 / 24, base: _TK.au_buyback_per_g, ratioLabel: "18/24", nanboya: 17110 },
-  { key: "k14", label: "K14", ratio: 14 / 24, base: _TK.au_buyback_per_g, ratioLabel: "14/24", nanboya: 12964 },
-  { key: "k10", label: "K10", ratio: 10 / 24, base: _TK.au_buyback_per_g, ratioLabel: "10/24", nanboya: 9086 },
-  { key: "pt900", label: "Pt900", ratio: 0.9, base: _TK.pt_buyback_per_g, ratioLabel: "0.90", nanboya: 8219 },
-  { key: "pt850", label: "Pt850", ratio: 0.85, base: _TK.pt_buyback_per_g, ratioLabel: "0.85", nanboya: 7722 },
+  { key: "k24", label: "K24（純金）", ratio: 1, base: _TK.au_buyback_per_g, ratioLabel: "24/24", nanboya: 21152 },
+  { key: "k22", label: "K22", ratio: 22 / 24, base: _TK.au_buyback_per_g, ratioLabel: "22/24", nanboya: 19404 },
+  { key: "k18", label: "K18（750）", ratio: 18 / 24, base: _TK.au_buyback_per_g, ratioLabel: "18/24", nanboya: 16026 },
+  { key: "k14", label: "K14", ratio: 14 / 24, base: _TK.au_buyback_per_g, ratioLabel: "14/24", nanboya: 12140 },
+  { key: "k10", label: "K10", ratio: 10 / 24, base: _TK.au_buyback_per_g, ratioLabel: "10/24", nanboya: 8507 },
+  { key: "pt900", label: "Pt900", ratio: 0.9, base: _TK.pt_buyback_per_g, ratioLabel: "0.90", nanboya: 7096 },
+  { key: "pt850", label: "Pt850", ratio: 0.85, base: _TK.pt_buyback_per_g, ratioLabel: "0.85", nanboya: 6667 },
 ];
-// なんぼや「今日の金相場」公表の1g買取相場（2026年10月21日分・この列は日次更新しない）
-const NANBOYA_DATE = "2026年10月21日";
+// なんぼや「今日の金相場」公表の1g買取相場（2026年11月18日 9:30更新分・この列は日次更新しない）
+const NANBOYA_DATE = "2026年11月18日";
+// 造幣局・おたからやの記述を確認した日（なんぼや列の更新日とは別）
+const REF_CHECK_DATE = "2026年10月21日";
 const KIHEI_WEIGHTS = [5, 10, 20, 30, 50];
 const KIHEI_MATRIX = ["k24", "k18", "k14", "pt900", "pt850"];
 const metalPerG = (m: { ratio: number; base: number }) => m.base * m.ratio;
@@ -83,7 +85,7 @@ function ArticleSchema() {
     "@type": "Article",
     headline: `金ブレスレット買取相場｜喜平10gの買取価格は約${K18_10G}円・30gは約${K18_30G}円【${priceDateJa}更新】`,
     datePublished: "2026-04-13",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-18",
     author: { "@type": "Organization", name: "金買取びより" },
     publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" },
   };
@@ -247,7 +249,7 @@ export default function KinBraceletKaitoriPage() {
         <ul>
           <li><strong>地金換算（金）</strong> = 田中貴金属工業の本日の金 店頭買取価格（税込・1g）× 品位（K18なら18/24＝75%）× 重さ。{priceDateJa}の基準価格は<strong>金 {_TK.au_buyback_per_g.toLocaleString()}円/g</strong>（<a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">田中貴金属 貴金属価格情報</a>・9:30公表）。例：K18 10g＝{_TK.au_buyback_per_g.toLocaleString()}円 × 18/24 × 10g ＝ 約{K18_10G_RAW}円</li>
           <li><strong>地金換算（プラチナ）</strong> = 同じく田中貴金属のプラチナ 店頭買取価格（{priceDateJa}は<strong>{_TK.pt_buyback_per_g.toLocaleString()}円/g</strong>）× 品位（Pt850なら0.85）× 重さ</li>
-          <li><strong>なんぼや公表の1g相場</strong> = 買取店なんぼやが<a href="https://nanboya.com/gold-kaitori/souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">「今日の金相場」ページ</a>で公表している品位別の1g買取相場（{NANBOYA_DATE}分：K24 22,583円・K22 20,720円・K18 17,110円・K14 12,964円・K10 9,086円・Pt900 8,219円・Pt850 7,722円）× 10g。なんぼやは「買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内」と注記しています。この列は{NANBOYA_DATE}時点の値で、毎日の自動更新はしていません</li>
+          <li><strong>なんぼや公表の1g相場</strong> = 買取店なんぼやが<a href="https://nanboya.com/gold-kaitori/souba/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">「今日の金相場」ページ</a>で公表している品位別の1g買取相場（{NANBOYA_DATE} 9:30更新分：K24 21,152円・K22 19,404円・K18 16,026円・K14 12,140円・K10 8,507円・Pt900 7,096円・Pt850 6,667円。10月21日分はK18 17,110円で、約4週間で1gあたり1,084円下がっています）× 10g。なんぼやは「買取相場価格に手数料は含まれておりません。手数料に関しては実物拝見時にご案内」と注記しています。この列は{NANBOYA_DATE}時点の値で、毎日の自動更新はしていません</li>
           <li>ページ冒頭のカードと早見表の「目安」は、地金換算に業者の平均的な掛け率（0.96）をかけた値です（K18 10gで約{K18_10G}円）。実際の査定額は店の手数料・状態で変わるため、地金換算は<strong>「これより大きく下回る査定なら他店も見る」ための上限の目安</strong>としてお使いください</li>
         </ul>
 
@@ -279,12 +281,12 @@ export default function KinBraceletKaitoriPage() {
         <h3 id="kihei-omosa">喜平ブレスレットの重さの確かめ方</h3>
         <ul>
           <li><strong>0.1g単位のはかりで量る</strong>: 10gと9.5gの差（0.5g）でも、K18の地金換算では約{K18_HALF_G}円の差になります（{priceDateJa}の基準価格で計算）。見た目の太さ・長さでは重さは決まらず、中空（ホロー）の喜平は見た目より軽くなります</li>
-          <li><strong>刻印は「品位」の表示で、重さではない</strong>: 「K18」「750」「Pt850」は品位（純度）の表示です。造幣局の公式説明では、造幣局が品位を証明した製品には<strong>日の丸と、ひし形の中に1000分率の数字（K18相当なら750）</strong>のホールマークが打たれ、「K18、Pt900などの記号は造幣局の証明記号ではありません」とされています。ホールマークは任意の制度のため、無い製品もあります（<a href="https://www.mint.go.jp/operations/exam/operations_certification-01.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">造幣局「貴金属製品の品位証明」</a>・{NANBOYA_DATE}確認）</li>
+          <li><strong>刻印は「品位」の表示で、重さではない</strong>: 「K18」「750」「Pt850」は品位（純度）の表示です。造幣局の公式説明では、造幣局が品位を証明した製品には<strong>日の丸と、ひし形の中に1000分率の数字（K18相当なら750）</strong>のホールマークが打たれ、「K18、Pt900などの記号は造幣局の証明記号ではありません」とされています。ホールマークは任意の制度のため、無い製品もあります（<a href="https://www.mint.go.jp/operations/exam/operations_certification-01.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">造幣局「貴金属製品の品位証明」</a>・{REF_CHECK_DATE}確認）</li>
           <li><strong>査定では店の計量と品位判定が使われる</strong>: 事前に量った重さを控えておくと、店が示した重さと照らし合わせられます</li>
         </ul>
 
         <h3 id="kihei-cut">2面・6面などカットの種類で価格は変わる？</h3>
-        <p><strong>地金として量り売りする場合、1g単価は品位で決まり、カットの種類では分かれません</strong>。なんぼやの「今日の金相場」も、1g相場は品位別（K18・K14など）で、形状別の単価はありません。一方、<strong>中古品として再販できる喜平は、カットや状態で上乗せが付く店もあります</strong>。おたからや公式の参考買取価格では、K18喜平ブレスレットの<strong>2面シングル49.6g＝1,296,100円（1gあたり約26,131円）</strong>、<strong>6面ダブル50.2g＝1,367,400円（1gあたり約27,239円）</strong>で、6面ダブルのほうが1gあたり約4%高くなっています（どちらも「2026年1月29日時点の過去最高買取実績であり、現在の買取価格ではありません」と注記。<a href="https://www.otakaraya.jp/gold/result/gold/kihei/kihei-bracelet/23746/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">2面シングル</a>・<a href="https://www.otakaraya.jp/gold/result/gold/kihei/kihei-bracelet/32924/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">6面ダブル</a>・{NANBOYA_DATE}確認）。カット付きの喜平は、地金だけで計算する店と、製品として評価する店の両方で見積もりを取ると差がわかります。</p>
+        <p><strong>地金として量り売りする場合、1g単価は品位で決まり、カットの種類では分かれません</strong>。なんぼやの「今日の金相場」も、1g相場は品位別（K18・K14など）で、形状別の単価はありません。一方、<strong>中古品として再販できる喜平は、カットや状態で上乗せが付く店もあります</strong>。おたからや公式の参考買取価格では、K18喜平ブレスレットの<strong>2面シングル49.6g＝1,296,100円（1gあたり約26,131円）</strong>、<strong>6面ダブル50.2g＝1,367,400円（1gあたり約27,239円）</strong>で、6面ダブルのほうが1gあたり約4%高くなっています（どちらも「2026年1月29日時点の過去最高買取実績であり、現在の買取価格ではありません」と注記。<a href="https://www.otakaraya.jp/gold/result/gold/kihei/kihei-bracelet/23746/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">2面シングル</a>・<a href="https://www.otakaraya.jp/gold/result/gold/kihei/kihei-bracelet/32924/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">6面ダブル</a>・{REF_CHECK_DATE}確認）。カット付きの喜平は、地金だけで計算する店と、製品として評価する店の両方で見積もりを取ると差がわかります。</p>
 
         <h2>テニスブレスレットの買取 — 金とダイヤは別評価</h2>
 
