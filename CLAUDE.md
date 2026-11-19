@@ -845,3 +845,12 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 追加: ロデオドライブ 横浜関内店（kaitori.rodeodrive.co.jp/store/yokohama-kannai/・羽衣町1-2-8 銀泉関内ビル 3F が買取・JR関内駅北口改札 徒歩1分・11:00〜19:00・休業日は公式お知らせ）、ブランドオフ 横浜元町店（kaitori.brandoff.co.jp/shop/kanto/kanagawa/12493/・元町1-38-2・元町・中華街駅元町口 徒歩2分・11:00〜18:30・水曜定休・品目に金・貴金属）。目的別の文の店数も更新
 - 競合（WebSearch 米国経由・日本の結果は返るが順位は取れない）: おたからやの横浜まとめ記事（40店超・駅徒歩つき）、ウリドキ・ekiten・hikakaku。ロデオドライブ関内・ブランドオフ元町・エコスタイル元町が当サイトに無かった→前2店は公式で確認できたので追加（エコスタイルは未確認）
 - precheck ✅（320頁）・ASP計測リンク 0=0・sponsored 224=224（html）。可視テキスト変化は yokohama 1ページのみ（TOP 変化なし＝11:05 日次後のビルド）・__next*.txt 削除
+
+### 2026-11-19 20:00 kwexp（競合ベンチマーク型ページ拡張・6日目・goldmrs/goldplaza の queue 初日）: 新規5ページ
+- queue の上から: 1オンス 何グラム(17760)→/articles/ounce-gram/・王水(14480)→/articles/ousui-toha/・金本位制(6480)→/articles/kin-honisei/・プラチナ インゴット(2320)→/articles/platinum-ingot/・プラチナ 投資(1040)→/articles/platinum-toushi/
+- skip: 金 相続税（kin-souzoku-baikyaku の h3「相続税（相続時）」と重複）／金 採掘（kin-maizoryo の菱刈鉱山・生産量、sakin-toha の鉱業法と重複）／銀杯 買取（内閣府・造幣局の公式で材質・重さを確認できず）／プラチナ 結婚指輪（platinum-pt900-kaitori・platinum-kaitori の指輪の節と重複）
+- 一次情報（11/19 確認）: 計量法5・8条・計量単位令 別表第六（トロイオンス 0.0311035kg＝金貨の質量の計量／もんめ・カラット）・別表第七（常衡オンス）／USGS MCS 2026 Gold（ドル/トロイオンス年平均・1t＝32,150.7oz・公定$42.22）／LBMA「Aqua Regia Refining」／今野 2007 Journal of MMIJ（中外鉱業 東京工場：18金→王水溶解→AgClろ過→溶媒抽出→1kg、月520kg・3日）／平山 1997 資源と素材（王水で Au・Pt・Pd 溶解）／大阪大学 理学部 Q&A（硝酸1:塩酸3・自宅不可）／毒劇指定令 2条16号・63号／日本銀行 歴史年表（1871〜1988）／山口県文書館（新貨条例 1円＝純金1.5g）／Fed History（$35/oz・1971-08-15）／徳力本店 取扱品目・手数料（Pt 5g〜500gの購入・売却手数料、13:00 小売8,013・買取7,590＝田中と同値）・純金プラチナ積立（月3,000円〜・年会費1,100円・1,000円ごと25円）／石福 プラチナ地金（500g〜5gの寸法・バーチャージ。1kg はHTMLコメントアウト＝非掲載）／三菱マテリアル（Pt現物は店頭取扱なし・Pt500g/1kg引出無料・積立 1,000円につき26/31円）／JPX 1541 銘柄概要・白金4商品の制度概要・限日休止 12/22／国税庁 金地金等の調査状況（金・白金地金・200万円超の支払調書）
+- ⚠️ gold.tanaka.co.jp・tanaka-preciousmetals.com は 11/19 20時台に 504/503（回避せず）。新規ページの出典リンクは既存ページと同じ URL を使用
+- 独自計算: 1オンス・端数オンスの金/Pt/銀の価格（日次）、ドル/oz→ドル/g、1円＝1.5g と $35×360円の金1g（約405円）の今日換算、王水精製で取り出す品位別の金の値・月520kgの金額（日次）、Pt地金6サイズの往復コスト（日次）・寸法と密度の体積照合・200万円になる重さ（日次）、Pt積立/ETFの年間手数料、白金先物1枚の金額（日次）。投資ページは勧める・勧めないを書かない
+- 内部リンク: metadata +5（ounce-gram・kin-honisei=howto／ousui-toha=purity／platinum-ingot・platinum-toushi=compare）、relatedSlugs 追加 kinka-kaitori-guide・kin-omosa-hakarikata→ounce-gram、kin-jundo-mikata・kin-mekki-mikata→ousui-toha、kin-kakaku-boraku-kako・koban-kachi→kin-honisei、platinum-kaitori・platinum-toha→platinum-ingot、platinum-kachi-suii・gin-toushi→platinum-toushi。sitemap 137
+- trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（325頁）・scaled-content-lint 違反0・ASP計測リンク 0。Indexing は未送信（親が実施）。source 2ad336f / deploy 6d02300715
