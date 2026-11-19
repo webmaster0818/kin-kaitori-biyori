@@ -159,7 +159,7 @@ export default function PlatinumTohaPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月15日。価格は変動します。ご売却の際は、各業者の最新の買取価格をご確認ください。</p>
 
-        <RelatedArticles currentSlug="platinum-toha" relatedSlugs={["platinum-silver-chigai", "platinum-allergy", "palladium-toha", "platinum-kaitori", "platinum-pt900-kaitori", "platinum-kachi-suii", "white-gold-toha", "kinseido-kaitori-guide"]} />
+        <RelatedArticles currentSlug="platinum-toha" relatedSlugs={["platinum-silver-chigai", "platinum-allergy", "palladium-toha", "platinum-kaitori", "platinum-pt900-kaitori", "platinum-kachi-suii", "white-gold-toha", "kinseido-kaitori-guide", "platinum-ingot"]} />
       </article>
     </div>
   </>);

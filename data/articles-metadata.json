@@ -2454,5 +2454,45 @@
     "badge": "K9",
     "description": "RE:TANAKAのK9の価格と、品位別の金の含有量に対する買取の割合、JIS・造幣局の区分。",
     "category": "purity"
+  },
+  {
+    "slug": "ounce-gram",
+    "title": "1オンスは何グラム？金・プラチナはトロイオンス31.1035g — 常衡オンスとの違いと1オンスの価格",
+    "shortTitle": "1オンスは何グラム",
+    "badge": "単位",
+    "description": "計量単位令のトロイオンスと常衡オンスの定義、1オンスの金・プラチナ・銀の価格（毎朝更新）、端数の重さ。",
+    "category": "howto"
+  },
+  {
+    "slug": "ousui-toha",
+    "title": "王水とは？金を溶かす仕組みと、買い取った金の精製での使われ方",
+    "shortTitle": "王水とは",
+    "badge": "金",
+    "description": "王水に溶ける金属・溶けない金属、国内の精製工場で18金が純金に戻るまでの工程、劇物指定。",
+    "category": "purity"
+  },
+  {
+    "slug": "kin-honisei",
+    "title": "金本位制とは？日本の金本位制の年表と、1円・1ドルが金何グラムだったかを今の金価格で換算",
+    "shortTitle": "金本位制とは",
+    "badge": "金の歴史",
+    "description": "新貨条例から貨幣法廃止までの年表、1円＝純金1.5g・1オンス35ドルの今の金価格での換算。",
+    "category": "howto"
+  },
+  {
+    "slug": "platinum-ingot",
+    "title": "プラチナインゴットのサイズと手数料 — 5g〜500gの寸法と往復コスト",
+    "shortTitle": "プラチナインゴット",
+    "badge": "プラチナ",
+    "description": "徳力本店・石福金属興業のサイズ・手数料、買って売るまでの往復コスト、200万円を超える重さ（毎朝更新）。",
+    "category": "compare"
+  },
+  {
+    "slug": "platinum-toushi",
+    "title": "プラチナ投資の方法と費用 — 地金・積立・ETF・先物の手数料と税金を比較",
+    "shortTitle": "プラチナ投資の方法と費用",
+    "badge": "プラチナ",
+    "description": "4つの方法の手数料と税金、月1万円を1年積み立てた場合の手数料、白金先物1枚の金額。",
+    "category": "compare"
   }
 ]

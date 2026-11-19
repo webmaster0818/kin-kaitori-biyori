@@ -159,7 +159,7 @@ export default function KobanKachiPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月16日。金価格は変動します。ご売却の際は、各業者の最新の買取価格をご確認ください。</p>
 
-        <RelatedArticles currentSlug="koban-kachi" relatedSlugs={["kinka-kaitori-guide", "kin-gram-keisan", "k22-kaitori", "kin-jundo-mikata", "sakin-toha"]} />
+        <RelatedArticles currentSlug="koban-kachi" relatedSlugs={["kinka-kaitori-guide", "kin-gram-keisan", "k22-kaitori", "kin-jundo-mikata", "sakin-toha", "kin-honisei"]} />
       </article>
     </div>
   </>);

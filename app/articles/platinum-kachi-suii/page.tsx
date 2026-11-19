@@ -177,7 +177,7 @@ export default function PlatinumKachiSuiiPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月15日。過去の価格・需給は将来の価格を示すものではありません。プラチナは元本保証の商品ではありません。</p>
 
-        <RelatedArticles currentSlug="platinum-kachi-suii" relatedSlugs={["platinum-toha", "platinum-kaitori", "platinum-pt900-kaitori", "kin-kakaku-boraku-kako", "kin-kaitori-souba"]} />
+        <RelatedArticles currentSlug="platinum-kachi-suii" relatedSlugs={["platinum-toha", "platinum-kaitori", "platinum-pt900-kaitori", "kin-kakaku-boraku-kako", "kin-kaitori-souba", "platinum-toushi"]} />
       </article>
     </div>
   </>);

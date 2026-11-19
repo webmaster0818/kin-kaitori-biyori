@@ -170,7 +170,7 @@ export default function GinToushiPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月17日。手数料・制度・税制は変更される場合があります。お取引の前に、各社の最新情報と説明書面をご確認ください。</p>
 
-        <RelatedArticles currentSlug="gin-toushi" relatedSlugs={["silver-kaitori", "kin-toushin-hiyou-hikaku", "kin-sakimono-torihiki", "junkin-tsumitate-hikaku", "platinum-silver-chigai"]} />
+        <RelatedArticles currentSlug="gin-toushi" relatedSlugs={["silver-kaitori", "kin-toushin-hiyou-hikaku", "kin-sakimono-torihiki", "junkin-tsumitate-hikaku", "platinum-silver-chigai", "platinum-toushi"]} />
       </article>
     </div>
   </>);

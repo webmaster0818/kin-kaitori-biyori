@@ -507,7 +507,7 @@ export default function PlatinumKaitoriPage() {
           <ExpertQA category="compare" />
           <RelatedArticles
             currentSlug="platinum-kaitori"
-            relatedSlugs={["platinum-toha", "platinum-kachi-suii", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku"]}
+            relatedSlugs={["platinum-toha", "platinum-kachi-suii", "k24-kaitori", "kinseido-kaitori-guide", "k22-kaitori", "daikichi-vs-nanboya", "ikkatsu-satei-hikaku", "tentou-vs-takuhai", "line-satei-seido", "kin-spot-vs-kaitori", "kin-jundo-mikata", "kin-nisemono-mikata", "kin-omosa-hakarikata", "diamond-kaitori", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "platinum-ingot"]}
           />
 
           <h2>まとめ</h2>
