@@ -544,14 +544,14 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "yokkaichi-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-19",
     stores: [
-      { name: "買取大吉 四日市店", chain: "買取大吉", address: "三重県四日市市日永東3丁目8-18", postalCode: "510-0943", hours: "10:00〜19:00", closed: "年中無休", access: "国道1号線・日永五交差点角（イオンタウン四日市泊より徒歩約10分）", tel: "059-328-4466", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-r/" },
+      { name: "買取大吉 四日市店", chain: "買取大吉", address: "三重県四日市市日永東3丁目8-18", postalCode: "510-0943", hours: "10:00〜19:00", closed: "年中無休", access: "国道1号線・日永五交差点角（イオンタウン四日市泊より徒歩10分）", tel: "059-328-4466", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-r/" },
       { name: "買取大吉 四日市新正店", chain: "買取大吉", address: "三重県四日市市新正1丁目1-6", postalCode: "510-0045", hours: "10:00〜19:00", closed: "年中無休", access: "近鉄四日市駅より徒歩13分", tel: "070-8300-1009", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-shinsho/" },
       { name: "買取大吉 MEGAドン・キホーテ四日市店", chain: "買取大吉", address: "三重県四日市市西日野町1608-1 MEGAドン・キホーテ四日市店内", hours: "10:00〜19:00", closed: "年中無休", access: "MEGAドン・キホーテ四日市店内 正面入口すぐ右手", tel: "059-340-9555", sourceUrl: "https://www.kaitori-daikichi.jp/store/mdq-yokkaichi/" },
-      { name: "買取大吉 四日市生桑店", chain: "買取大吉", address: "三重県四日市市生桑町114-6", hours: "10:00〜19:00", closed: "年中無休", tel: "050-8882-7699", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-ikuwa/" },
+      { name: "買取大吉 四日市生桑店", chain: "買取大吉", address: "三重県四日市市生桑町114-6", hours: "10:00〜19:00", closed: "年中無休（臨時休業を除く）", tel: "050-8882-7699", sourceUrl: "https://www.kaitori-daikichi.jp/store/yokkaichi-ikuwa/" },
       { name: "おたからや トナリエ四日市店", chain: "おたからや", address: "三重県四日市市安島1丁目3-31", postalCode: "510-0075", hours: "10:00〜19:00", closed: "年中無休", access: "近鉄四日市駅 北改札口より徒歩3分", tel: "059-329-5058", sourceUrl: "https://www.otakaraya-shop.jp/tonarieyokkaichi/" },
-      { name: "おたからや 三滝通り店", chain: "おたからや", address: "三重県四日市市諏訪町15-1 ラヴァンス四日市102", postalCode: "510-0085", tel: "059-390-3318", sourceUrl: "https://mitakidouri.original-otakaraya.net/" },
+      { name: "おたからや 三滝通り店", chain: "おたからや", address: "三重県四日市市諏訪町15-1 ラヴァンス四日市102", postalCode: "510-0085", hours: "10:00〜18:00（月〜金）", closed: "土日（土日は完全予約制）", tel: "059-390-3318", sourceUrl: "https://otakaraya-mitakidouri.com/" },
     ],
   },
   "kakogawa-kin-kaitori": {
