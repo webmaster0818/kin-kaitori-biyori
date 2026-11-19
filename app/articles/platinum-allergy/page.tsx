@@ -142,7 +142,7 @@ export default function PlatinumAllergyPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月17日。本ページは医学的な診断や助言を行うものではありません。</p>
 
-        <RelatedArticles currentSlug="platinum-allergy" relatedSlugs={["platinum-toha", "white-gold-toha", "palladium-toha", "platinum-silver-chigai", "platinum-kaitori"]} />
+        <RelatedArticles currentSlug="platinum-allergy" relatedSlugs={["platinum-toha", "white-gold-toha", "palladium-toha", "platinum-silver-chigai", "platinum-kaitori", "kin-allergy"]} />
       </article>
     </div>
   </>);

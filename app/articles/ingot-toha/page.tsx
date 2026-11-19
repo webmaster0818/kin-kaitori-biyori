@@ -192,7 +192,7 @@ export default function IngotTohaPage() {
         <p className="text-sm text-warm-gray">確認日: 2026年11月14日。手数料・取扱条件は変更される場合があります。ご利用前に、公式サイトにて最新情報をご確認ください。</p>
 
         <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
-        <RelatedArticles currentSlug="ingot-toha" relatedSlugs={["kin-kounyu-chuiten", "kin-nobebo-kaitori", "ingot-100g-kaitori", "kinka-ingot-kaitori", "k24-kaitori", "kin-kaitori-zeikin", "kin-toushin-hiyou-hikaku"]} />
+        <RelatedArticles currentSlug="ingot-toha" relatedSlugs={["kin-kounyu-chuiten", "kin-nobebo-kaitori", "ingot-100g-kaitori", "kinka-ingot-kaitori", "k24-kaitori", "kin-kaitori-zeikin", "kin-toushin-hiyou-hikaku", "ingot-bunkatsu"]} />
       </article>
     </div>
   </>);

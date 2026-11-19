@@ -2494,5 +2494,45 @@
     "badge": "プラチナ",
     "description": "4つの方法の手数料と税金、月1万円を1年積み立てた場合の手数料、白金先物1枚の金額。",
     "category": "compare"
+  },
+  {
+    "slug": "kin-allergy",
+    "title": "金で金属アレルギーは起きる？パッチテスト陽性率の推移と、18金・10金に含まれる金以外の金属",
+    "shortTitle": "金と金属アレルギー",
+    "badge": "金",
+    "description": "日本接触皮膚炎研究班の金・ニッケルの陽性率（2015〜2023年）と、品位別の金以外の金属の割合。",
+    "category": "purity"
+  },
+  {
+    "slug": "ingot-bunkatsu",
+    "title": "金インゴットの分割（精錬加工）の費用 — 1kgを100g・50gにする料金と売って買い直す場合の比較",
+    "shortTitle": "インゴットの分割",
+    "badge": "インゴット",
+    "description": "日本マテリアルの精錬加工の料金と条件、売却して買い直す場合との費用比較（毎朝更新）、税金・支払調書。",
+    "category": "compare"
+  },
+  {
+    "slug": "kinpaku-toha",
+    "title": "金箔とは — 厚さ1万分の1mm・金の割合（1号色〜4号色）・作り方と含まれる金の値",
+    "shortTitle": "金箔とは",
+    "badge": "金",
+    "description": "金沢市・石川県・文化庁の資料による金箔の厚さ・金銀銅の割合・作り方、色ごとの金の値（毎朝更新）。",
+    "category": "howto"
+  },
+  {
+    "slug": "krugerrand-kaitori",
+    "title": "クルーガーランド金貨の買取 — 22金・1オンスに含まれる金の値と国内の地金商の取扱",
+    "shortTitle": "クルーガーランド金貨の買取",
+    "badge": "金貨",
+    "description": "南アフリカ造幣局・Rand Refineryの規格、1oz〜1/10ozに含まれる金の値（毎朝更新）、国内の取扱と支払調書。",
+    "category": "compare"
+  },
+  {
+    "slug": "sovereign-kaitori",
+    "title": "ソブリン金貨の買取 — 22金・7.98gに含まれる金の値と年号による違い",
+    "shortTitle": "ソブリン金貨の買取",
+    "badge": "金貨",
+    "description": "英国王立造幣局の規格、枚数別の金の値（毎朝更新）、年号・状態で異なる販売価格の例、国内の取扱。",
+    "category": "compare"
   }
 ]
