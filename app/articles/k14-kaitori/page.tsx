@@ -10,6 +10,7 @@ import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
 import ServiceCapture from "@/components/ServiceCapture";
+import { ShopPublishedPurityPrice } from "@/components/ShopPublishedPurityPrice";
 
 const k14Price = goldData.purity_buyback_estimate_per_g.k14;
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
@@ -116,6 +117,8 @@ export default function K14KaitoriPage() {
         <p className="text-warm-gray text-sm mb-4">最終更新: {priceDateJa}（相場は毎朝自動更新）</p>
 
         <TodayPriceAnswer purity="k14" />
+
+        <ShopPublishedPurityPrice purity="k14" />
 
         <p>K14（14金）は、<strong>純度58.5%</strong>の金合金です。日本ではK18が主流ですが、<strong>アメリカやヨーロッパではK14が最も一般的な金製品の純度</strong>として広く流通しています。海外旅行で購入したジュエリーや、ブランドアクセサリーにK14が使われているケースも多く見られます。</p>
 

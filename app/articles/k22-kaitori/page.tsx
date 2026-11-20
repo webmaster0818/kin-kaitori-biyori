@@ -10,6 +10,7 @@ import { WeightPriceTable } from "@/components/WeightPriceTable";
 import { TodayPriceAnswer, formatDateJa } from "@/components/TodayPriceAnswer";
 import goldData from "@/data/gold-spot-prices.json";
 import ServiceCapture from "@/components/ServiceCapture";
+import { ShopPublishedPurityPrice } from "@/components/ShopPublishedPurityPrice";
 
 const k22Price = goldData.purity_buyback_estimate_per_g.k22;
 const k18Price = goldData.purity_buyback_estimate_per_g.k18;
@@ -129,6 +130,8 @@ export default function K22KaitoriPage() {
             計算の元にした値: <a href="https://gold.tanaka.co.jp/commodity/souba/index.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">田中貴金属</a>の金（K24）店頭買取価格 1g{tanakaAuBuy.toLocaleString()}円（{auPubJa}）。{tanakaAuBuy.toLocaleString()}円×22/24×0.96＝{k22Price.toLocaleString()}円です。田中貴金属の地金価格は公表のない日は前回の公表値のままなので、上の目安も同じ値になります。22金そのものの公示価格は<a href="#koji" className="text-accent hover:underline">各社の公示ページ</a>でご確認ください。
           </p>
         )}
+
+        <ShopPublishedPurityPrice purity="k22" />
 
         <div id="weight-table">
           <WeightPriceTable purities={["k22"]} />

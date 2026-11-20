@@ -5,7 +5,7 @@ import Image from "next/image";
 import goldData from "@/data/gold-spot-prices.json";
 import ServiceCaptureGrid from "@/components/ServiceCaptureGrid";
 
-const TITLE = "金買取のおすすめ業者はどこがいい？4社を目的別に比較";
+const TITLE = "金買取業者の比較｜おすすめ4社はどこがいい？目的別（一括査定・店頭・出張）";
 const URL = "https://gold-biyori.com/articles/kin-kaitori-osusume/";
 const P = goldData.purity_buyback_estimate_per_g;
 const [, pMonth, pDay] = goldData.date.split("-").map(Number);

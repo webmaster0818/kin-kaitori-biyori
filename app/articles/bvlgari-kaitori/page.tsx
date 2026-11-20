@@ -116,6 +116,31 @@ export default function BvlgariKaitoriPage() {
 
         <p>ブルガリ（BVLGARI）は1884年にローマで創業したイタリアを代表するハイジュエリーブランドです。ビー・ゼロワン、セルペンティ、ブルガリ・ブルガリなどの人気コレクションは中古市場でも高い需要があり、<strong>素材価値とブランド価値の両方が評価</strong>された高額買取が期待できます。</p>
 
+        <section className="not-prose my-6 border border-rule bg-white p-5" id="jisseki">
+          <p className="text-sm font-bold text-accent-dark mb-1 !mt-0">買取店が公式サイトに載せているブルガリの買取額（2026年11月20日確認）</p>
+          <p className="text-xs text-warm-gray mb-3">ブラリバは「買取実績一覧」に買取日・状態ランクつきで載せている実際の買取金額、おたからやは各ページに「◯年◯月◯日時点の参考買取価格」と書かれた参考価格です。同じモデルでも素材・石・サイズ・状態・付属品で金額は大きく変わります。</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-rule text-left"><th className="py-2 pr-3">モデル（公式の表記）</th><th className="py-2 pr-3">買取額</th><th className="py-2 pr-3">日付</th><th className="py-2">店名・種類</th></tr>
+              </thead>
+              <tbody>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ビー・ゼロワン リング 750WG #59</td><td className="py-2 pr-3 font-bold whitespace-nowrap">175,600円</td><td className="py-2 pr-3 text-xs">2026年10月13日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/b-zero1" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ビー・ゼロワン 2バンドリング Au750WG #57</td><td className="py-2 pr-3 font-bold whitespace-nowrap">171,000円</td><td className="py-2 pr-3 text-xs">2026年10月12日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/b-zero1" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ビー・ゼロワン ネックレス 750</td><td className="py-2 pr-3 font-bold whitespace-nowrap">176,700円</td><td className="py-2 pr-3 text-xs">2026年9月23日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/b-zero1" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ビー・ゼロワン エレメント ブレスレット Au750</td><td className="py-2 pr-3 font-bold whitespace-nowrap">249,200円</td><td className="py-2 pr-3 text-xs">2026年10月15日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/b-zero1" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">セルペンティ ヴァイパー リング Au750WG #52</td><td className="py-2 pr-3 font-bold whitespace-nowrap">120,000円</td><td className="py-2 pr-3 text-xs">2026年8月25日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/serpenti" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ブルガリ・ブルガリ リング Au750（赤石・紫石）</td><td className="py-2 pr-3 font-bold whitespace-nowrap">160,000円</td><td className="py-2 pr-3 text-xs">2026年3月17日時点</td><td className="py-2 text-xs"><a href="https://www.otakaraya.jp/brand/result/brand-jewelry/96535/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">おたからや（参考買取価格）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ブルガリ・ブルガリ リング 750 約11.5号（イエローゴールド・ブラック）</td><td className="py-2 pr-3 font-bold whitespace-nowrap">456,000円</td><td className="py-2 pr-3 text-xs">2026年3月17日時点</td><td className="py-2 text-xs"><a href="https://www.otakaraya.jp/brand/result/brand-jewelry/45261/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">おたからや（参考買取価格）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ブルガリ・ブルガリ リング 750 約13号（透明石）</td><td className="py-2 pr-3 font-bold whitespace-nowrap">459,000円</td><td className="py-2 pr-3 text-xs">2026年5月17日時点</td><td className="py-2 text-xs"><a href="https://www.otakaraya.jp/brand/result/brand-jewelry/100792/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">おたからや（参考買取価格）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ブルガリ・ブルガリ 腕時計 SS×YG/QZ BB23SG</td><td className="py-2 pr-3 font-bold whitespace-nowrap">105,300円</td><td className="py-2 pr-3 text-xs">2026年10月9日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/bvlgari-bvlgari" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              <tr className="border-b border-rule/50"><td className="py-2 pr-3">ブルガリ・ブルガリ 腕時計 SS/QZ（黒文字盤）</td><td className="py-2 pr-3 font-bold whitespace-nowrap">45,300円</td><td className="py-2 pr-3 text-xs">2026年10月10日</td><td className="py-2 text-xs"><a href="https://brandrevalue.com/cat/gem/purchase-jewelry/bvlgari/bvlgari-bvlgari" target="_blank" rel="noopener noreferrer nofollow" className="text-accent-dark underline">ブラリバ（買取実績・状態B）</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-warm-gray mt-3 mb-0">※2026年11月20日に各社の公式ページで確認した値で、自動更新はしていません。おたからやの参考価格は「実際の買取価格を保証するものではない」「掲載画像はイメージ」と注記されています。ブルガリ・ブルガリのリングは、公式の参考価格（16万〜45.9万円）が下の「2026年4月時点の調査」の目安（約6万〜12万円）を上回っています。売る前に複数社で査定額を比べてください。</p>
+        </section>
+
         <p>「ブルガリの指輪を売りたい」「BVLGARIの買取相場はいくら？」「セルペンティはどのくらいで売れる？」——この記事では、ブルガリの買取相場をモデル別に解説し、<strong>高く売却するための実践ガイド</strong>をお届けします。</p>
 
         <p>この記事では、以下の内容をご説明します。</p>
