@@ -864,3 +864,12 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 内部リンク: metadata +5（kin-allergy=purity・kinpaku-toha=howto・ingot-bunkatsu/krugerrand/sovereign=compare）、relatedSlugs 追加 platinum-allergy・white-gold-toha→kin-allergy、ingot-toha・kin-nobebo・kin-ingot-kounyusaki→ingot-bunkatsu、kin-toha・kin-mitsudo→kinpaku-toha、kinka-kaitori-guide・k22-kaitori→krugerrand/sovereign。sitemap 142
 - trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（330頁）・scaled-content-lint 違反0・ASP計測リンク 0。本番5頁 200・h1 一致。Indexing は未送信（親が実施）。source eef85ec / deploy 46ab3794bb
 - 報告のみ: kinka-ingot-kaitori のパンダ金貨の行「K24（99.99%）・30g」は発行元の公式で未確認（販売業者の記載は 99.9%）
+
+### 2026-11-20 朝ルーチン: kakogawa（加古川）掲載5店を公式店舗ページで照合 → 3店を訂正・確認日更新／07:00 点検「田中 HTTP 000」の確認
+- 田中 gold.tanaka.co.jp: 09:20〜10:21 の間ずっと応答なし（TLS接続後に応答が来ず、20秒で CDN が 504。トップ・/commodity/souba/・d-gold.php・www.tanaka.co.jp とも同じ。WebFetch=外部からも 504 → 田中側の障害で、当方のIPの問題ではない）。本番 TOP は 02:00 kwexp ビルドの LP_STALE 表示「11月19日の金買取参考相場」「11月20日の公表値は未反映」＝表示は正しい。相場値は 11/19 09:30 公表分（金 店頭買取 20,970円/g）
+- 11:05 日次の見込み（コード確認・実行結果は未確認）: fetch-tanaka は urlopen timeout=15 で例外→`| tail -3` で止まらず、data は 11/19 のままビルド・deploy、src は「Daily gold price data: 2026-11-20」（値の date は 11-19 のまま）。田中が復旧していれば当日分が入る
+- kakogawa 訂正: ①おたからや 加古川ヤマトヤシキ店 定休「年中無休」→公式「年中無休（年末年始は除く）」・営業時間 10:00〜19:00 を追記 ②買取大吉 神野石守店 〒675-0017（日本郵便で「野口町良野」）→675-0005（日本郵便「神野町石守」11/20）、アクセス「東播磨道 神野ICすぐ」→公式「車で神野IC下りてすぐ（JR東加古川駅から徒歩30分）」③アリオ加古川店 住所に公式の「アリオモール」を補う
+- 一致: 大吉 加古川カピル（10:00〜19:00・年中無休・0120-381-048＝総合受付・篠原町21-8 カピル1階・JR加古川駅徒歩3分）・西加古川（10:00〜19:00・年中無休（年末年始を除く）・0120-88-2217・米田町船頭200-1）・神野石守（10:00-19:00・年中無休・0120-785-578）・アリオ加古川（079-490-5990・別府駅から徒歩5分）、おたからや（〒675-0065・0120-555-600・南口徒歩2分）
+- 範囲外（報告のみ）: 同ページ「東加古川周辺にも買取店が点在」「加古川市役所周辺方面でも…」は定型文（公式の裏づけなし・同じ定型文が 203 ページ）。東加古川駅から最寄りの掲載店は神野石守（徒歩30分）
+- 点検 C3 /author/「監修者」= 「掲載していないもの：執筆者・監修者の個人名…」の否定文脈・Person schema 0 ＝誤検知（変更なし）
+- precheck ✅（330頁）・ASP計測リンク 0=0・sponsored 3126=3126・外部href 6493=6493。表示テキスト/JSON-LD が変わったのは kakogawa のみ・__next*.txt 0。source 1d20005 / deploy 3e40df4d52（09:27 push）→30分未反映で空コミット 5dc9946142（09:56）→10:03 本番反映（675-0005 ×4・675-0017 0・東播磨道 0）。Indexing は枠切れ（tomomi-2 55/55）→ sitemap 再送信（sc-domain:gold-biyori.com OK）
