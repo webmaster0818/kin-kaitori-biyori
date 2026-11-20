@@ -555,13 +555,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "kakogawa-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-20",
     stores: [
-      { name: "おたからや 加古川ヤマトヤシキ店", chain: "おたからや", address: "兵庫県加古川市加古川町篠原町21-8 加古川ヤマトヤシキ3階", postalCode: "675-0065", closed: "年中無休", access: "JR加古川駅 南口より徒歩2分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kakogawa-yy/" },
+      { name: "おたからや 加古川ヤマトヤシキ店", chain: "おたからや", address: "兵庫県加古川市加古川町篠原町21-8 加古川ヤマトヤシキ3階", postalCode: "675-0065", hours: "10:00〜19:00", closed: "年中無休（年末年始は除く）", access: "JR加古川駅 南口より徒歩2分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kakogawa-yy/" },
       { name: "買取大吉 加古川カピル店", chain: "買取大吉", address: "兵庫県加古川市加古川町篠原町21-8 加古川カピル1階", postalCode: "675-0065", hours: "10:00〜19:00", closed: "年中無休", access: "JR加古川駅より徒歩3分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/kakogawa-kapiru/" },
       { name: "買取大吉 西加古川店", chain: "買取大吉", address: "兵庫県加古川市米田町船頭200-1 マックスバリュ加古川西店", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", tel: "0120-88-2217", sourceUrl: "https://www.kaitori-daikichi.jp/store/nishikakogawa/" },
-      { name: "買取大吉 神野石守店", chain: "買取大吉", address: "兵庫県加古川市神野町石守323-1", postalCode: "675-0017", hours: "10:00〜19:00", closed: "年中無休", access: "東播磨道 神野ICすぐ", tel: "0120-785-578", sourceUrl: "https://www.kaitori-daikichi.jp/store/kanno-ishimori/" },
-      { name: "買取大吉 アリオ加古川店", chain: "買取大吉", address: "兵庫県加古川市別府町緑町2 アリオ加古川 アネックス館2F", hours: "10:00〜19:00", closed: "年中無休", access: "山陽電鉄 別府駅より徒歩5分", tel: "079-490-5990", sourceUrl: "https://www.kaitori-daikichi.jp/store/gp-befu/" },
+      { name: "買取大吉 神野石守店", chain: "買取大吉", address: "兵庫県加古川市神野町石守323-1", postalCode: "675-0005", hours: "10:00〜19:00", closed: "年中無休", access: "車で神野IC下りてすぐ（JR東加古川駅から徒歩30分）", tel: "0120-785-578", sourceUrl: "https://www.kaitori-daikichi.jp/store/kanno-ishimori/" },
+      { name: "買取大吉 アリオ加古川店", chain: "買取大吉", address: "兵庫県加古川市別府町緑町2 アリオ加古川 アリオモール アネックス館2F", hours: "10:00〜19:00", closed: "年中無休", access: "山陽電鉄 別府駅より徒歩5分", tel: "079-490-5990", sourceUrl: "https://www.kaitori-daikichi.jp/store/gp-befu/" },
     ],
   },
   "ichikawa-chiba-kin-kaitori": {
