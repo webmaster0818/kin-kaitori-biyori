@@ -597,13 +597,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "kichijoji-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-21",
     stores: [
-      { name: "買取大吉 吉祥寺店", chain: "買取大吉", address: "東京都武蔵野市吉祥寺南町1丁目1-10", hours: "10:00〜19:00", closed: "年中無休（年末年始を除く）", access: "JR中央線・京王井の頭線 吉祥寺駅南口より徒歩2分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/kichijoji/" },
+      { name: "買取大吉 吉祥寺店", chain: "買取大吉", address: "東京都武蔵野市吉祥寺南町1丁目1-10", hours: "10:00〜19:00", closed: "年中無休", access: "JR中央線・京王井の頭線 吉祥寺駅南口より徒歩2分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/kichijoji/" },
       { name: "大黒屋 質吉祥寺買取センター", chain: "大黒屋", address: "東京都武蔵野市吉祥寺本町1-2-5 山利屋ビル2F", postalCode: "180-0004", hours: "10:30〜19:30", closed: "年中無休（年末年始を除く）", access: "JR・京王井の頭線 吉祥寺駅 北口より徒歩2分", tel: "0422-28-4030", sourceUrl: "https://shichi.e-daikoku.com/shop/kichijoji/" },
-      { name: "なんぼや キラリナ京王吉祥寺店", chain: "なんぼや", address: "東京都武蔵野市吉祥寺南町2-1-25 キラリナ京王吉祥寺7F", postalCode: "180-0003", hours: "10:00〜19:00", closed: "年中無休", access: "JR吉祥寺駅 南改札直結、エレベーターで7F", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/tokyo/kirarina-keio-kichijoji-brandshop/" },
+      { name: "なんぼや キラリナ京王吉祥寺店", chain: "なんぼや", address: "東京都武蔵野市吉祥寺南町2-1-25 キラリナ京王吉祥寺7F", postalCode: "180-0003", hours: "10:00〜19:00", closed: "定休日なし", access: "JR吉祥寺駅 南改札直結、エレベーターで7F", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/tokyo/kirarina-keio-kichijoji-brandshop/" },
       { name: "ゴールドプラザ吉祥寺店", chain: "ゴールドプラザ", address: "東京都武蔵野市吉祥寺本町1-17-12", hours: "10:00〜19:00", closed: "水曜日", access: "JR吉祥寺駅 北口・中央口より徒歩すぐ", tel: "0422-23-3720", sourceUrl: "https://goldplaza.jp/shop/kichijoji" },
-      { name: "リユースセレクト ティファナ 吉祥寺店", chain: "ティファナ", address: "東京都武蔵野市吉祥寺本町2-12-5", hours: "11:00〜20:00（買取受付は18:00まで）", closed: "年中無休（年末年始を除く）", access: "JR吉祥寺駅 北口より徒歩約5分", tel: "0422-20-3751", sourceUrl: "https://www.tifana.net/kichijoji/" },
+      { name: "リユースセレクト ティファナ 吉祥寺店", chain: "ティファナ", address: "東京都武蔵野市吉祥寺本町2-12-5", hours: "11:00〜20:00（買取受付は18:00まで）", closed: "定休日なし", access: "JR吉祥寺駅 北口からパルコ方面へ進み中道通りへ（公式に分数の記載なし）", tel: "0422-20-3751", sourceUrl: "https://www.tifana.net/kichijoji/" },
     ],
   },
   "kawagoe-kin-kaitori": {
