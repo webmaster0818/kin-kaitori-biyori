@@ -565,12 +565,12 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "ichikawa-chiba-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-21",
     stores: [
-      { name: "買取大吉 本八幡店", chain: "買取大吉", address: "千葉県市川市八幡2-3-15", hours: "10:00〜18:00", closed: "年中無休", access: "京成八幡駅より徒歩1分／JR・都営新宿線 本八幡駅より徒歩3〜4分", tel: "0120-144-114", sourceUrl: "https://www.kaitori-daikichi.jp/store/motoyawata/" },
-      { name: "買取大吉 イオンフードスタイル市川店", chain: "買取大吉", address: "千葉県市川市市川1丁目4-10 ダイエー市川 7階", hours: "10:00〜19:00", closed: "年中無休", access: "JR総武本線 市川駅より徒歩約1分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/ae-ichikawa/" },
+      { name: "買取大吉 本八幡店", chain: "買取大吉", address: "千葉県市川市八幡2-3-15", hours: "10:00〜18:00", closed: "年中無休（年末年始・臨時休業除く）", access: "京成八幡駅より徒歩1分／JR本八幡駅より徒歩4分／都営新宿線 本八幡駅より徒歩3分", tel: "0120-144-114", sourceUrl: "https://www.kaitori-daikichi.jp/store/motoyawata/" },
+      { name: "買取大吉 イオンフードスタイル市川店", chain: "買取大吉", address: "千葉県市川市市川1丁目4-10 ダイエー市川 イオンフードスタイル市川 7階", hours: "10:00〜19:00", closed: "年中無休", access: "JR総武本線 市川駅より徒歩約1分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/ae-ichikawa/" },
       { name: "おたからや アイアイロード市川店", chain: "おたからや", address: "千葉県市川市市川1丁目2-14 ベレール・サツキ1F", postalCode: "272-0034", hours: "10:00〜19:00", closed: "年中無休", access: "JR市川駅 北口より徒歩1分", tel: "0120-551-797", sourceUrl: "https://www.otakaraya-shop.jp/iiroad/" },
-      { name: "なんぼや 市川店", chain: "なんぼや", address: "千葉県市川市市川1-12-5", postalCode: "272-0034", hours: "11:00〜19:00", access: "JR総武線 市川駅 北口より徒歩5分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/ichikawa-brandshop/" },
+      { name: "なんぼや 市川店", chain: "なんぼや", address: "千葉県市川市市川1-12-5", postalCode: "272-0034", hours: "11:00〜19:00", closed: "定休日なし", access: "JR総武線 市川駅 北口より徒歩5分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/chiba/ichikawa-brandshop/" },
       { name: "大黒屋 市川駅北口店", chain: "大黒屋", address: "千葉県市川市市川1丁目6-9", postalCode: "272-0034", hours: "10:00〜18:00", closed: "木曜日", access: "JR総武線 市川駅 北口より徒歩1分", tel: "047-324-5061", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000208" },
       { name: "質屋かんてい局 市川インター店", chain: "質屋かんてい局", address: "千葉県市川市東大和田1丁目26-19 石井ビル", hours: "10:00〜19:00", tel: "047-711-2663", sourceUrl: "https://kanteikyoku.jp/store/ichikawa/gold/" },
     ],
