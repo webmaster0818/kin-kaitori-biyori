@@ -583,7 +583,7 @@ export const localStores: Record<string, CityStores> = {
       { name: "買取大吉 ライフ府中中河原店", chain: "買取大吉", address: "東京都府中市住吉町1-84-1", postalCode: "183-0034", hours: "10:00〜19:00", closed: "年中無休", access: "京王線 中河原駅より徒歩2分", tel: "042-319-1717", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-nakagawara/" },
       { name: "リサイクルショップ ティファナ FORIS府中店", chain: "ティファナ", address: "東京都府中市宮町1-41-1 FORIS 3F", postalCode: "183-0023", hours: "10:00〜20:00", access: "京王線 府中駅南口より徒歩1分", tel: "042-319-1201", sourceUrl: "https://www.tifana.net/foris_fuchu/" },
       { name: "おたからや くるる宮町店", chain: "おたからや", address: "東京都府中市宮町1-50 くるる1階", postalCode: "183-0023", hours: "10:00〜18:00", closed: "日曜日", access: "京王線 府中駅南口直結・徒歩1分", tel: "042-404-2854", sourceUrl: "https://www.otakaraya-shop.jp/kururumiyamachi/" },
-      { name: "大黒屋 質府中駅前店", chain: "大黒屋", address: "東京都府中市寿町1-1-32 いつかビル1F", postalCode: "183-0056", hours: "10:00〜19:00", access: "京王線 府中駅より徒歩2分", tel: "042-358-1645", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-fuchu/" },
+      { name: "大黒屋 質府中駅前店", chain: "大黒屋", address: "東京都府中市寿町1-1-32 いつかビル1F", postalCode: "183-0056", hours: "10:00〜19:00", closed: "定休日なし", access: "京王線 府中駅より徒歩2分", tel: "042-358-1645", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-fuchu/" },
     ],
   },
   "hiratsuka-kin-kaitori": {
@@ -707,7 +707,7 @@ export const localStores: Record<string, CityStores> = {
   "fujisawa-kin-kaitori": {
     updated: "2026-11-11",
     stores: [
-      { name: "買取大吉 藤沢店", chain: "買取大吉", address: "神奈川県藤沢市南藤沢22-2 春日ビル1階", postalCode: "251-0055", hours: "10:00～19:00", closed: "年中無休", access: "JR・小田急藤沢駅から徒歩約5分", tel: "0120-381-048", sourceUrl: "https://www.kaitori-daikichi.jp/store/fujisawa/" },
+      { name: "買取大吉 藤沢店", chain: "買取大吉", address: "神奈川県藤沢市南藤沢22-2 春日ビル1階", postalCode: "251-0055", hours: "10:00～19:00", closed: "年中無休", access: "JR・小田急藤沢駅から徒歩約5分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/fujisawa/" },
       { name: "大黒屋 質藤沢駅北口店", chain: "大黒屋", address: "神奈川県藤沢市藤沢462 石田屋ビル2階A号室", postalCode: "251-0052", hours: "10:00～18:00", closed: "日曜日", access: "JR藤沢駅北口 徒歩約2分（店舗情報欄の表記は徒歩3分）", tel: "0466-55-0531", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000150" },
       { name: "おたからや 藤沢店", chain: "おたからや", address: "神奈川県藤沢市藤沢484-4 オーク湘南藤沢ビル1階", postalCode: "251-0052", hours: "10:00～19:00", closed: "年中無休（年末年始を除く）", access: "JR藤沢駅北口より徒歩4分", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/fujisawa/" },
       { name: "おたからや 湘南藤沢オーパ店", chain: "おたからや", address: "神奈川県藤沢市南藤沢22-3 湘南藤沢オーパ3階", postalCode: "251-0055", hours: "10:00～21:00", closed: "年中無休", access: "藤沢駅南口すぐ", tel: "0466-90-5900", sourceUrl: "https://www.otakaraya-shop.jp/fujisawa-opa/" },

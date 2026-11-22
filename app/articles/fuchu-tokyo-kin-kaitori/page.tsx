@@ -31,7 +31,7 @@ function ArticleSchema() {
     headline: "【2026年最新】府中の金買取おすすめ業者ガイド — 相場・方法・高く売るコツ",
     description: "府中で金を高く売るならどこ？府中の金買取相場、店頭・出張・宅配の方法別比較、東京都で高く売るポイントと注意点を公開情報をもとに解説します。",
     datePublished: "2026-06-05",
-    dateModified: "2026-06-05",
+    dateModified: "2026-11-22",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
