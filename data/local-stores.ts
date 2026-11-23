@@ -607,12 +607,12 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "kawagoe-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-23",
     stores: [
       { name: "買取大吉 川越店", chain: "買取大吉", address: "埼玉県川越市脇田町17-6 あすなろビル1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR川越線・東武東上線 川越駅東口より徒歩4分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe/" },
       { name: "買取大吉 川越霞ケ関店", chain: "買取大吉", address: "埼玉県川越市霞ケ関北2-1-8", hours: "10:00〜18:00", closed: "水曜日", access: "東武東上線 霞ヶ関駅南口より徒歩9分", tel: "049-292-1533", sourceUrl: "https://www.kaitori-daikichi.jp/store/kawagoe-kasumigaseki/" },
       { name: "買取大吉 いなげや川越新河岸店", chain: "買取大吉", address: "埼玉県川越市砂新田89-1", postalCode: "350-1137", hours: "10:00〜18:30", closed: "年中無休（年末年始を除く）", access: "東武東上線 新河岸駅より徒歩6分", tel: "049-293-1083", sourceUrl: "https://kaitori-kawagoe.com/access/" },
-      { name: "なんぼや アトレ川越店", chain: "なんぼや", address: "埼玉県川越市脇田町105 アトレ6F", postalCode: "350-1122", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "JR川越線・東武東上線 川越駅東口より徒歩約6分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/atre-kawagoe-brandshop/" },
+      { name: "なんぼや アトレ川越店", chain: "なんぼや", address: "埼玉県川越市脇田町105 アトレ6F", postalCode: "350-1122", hours: "10:00〜21:00（最終受付20:30）", closed: "定休日なし（施設に準ずる）", access: "JR川越線・東武東上線 川越駅東口より徒歩6分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/atre-kawagoe-brandshop/" },
     ],
   },
   "tokorozawa-kin-kaitori": {
