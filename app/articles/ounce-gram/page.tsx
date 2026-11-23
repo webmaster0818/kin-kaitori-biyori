@@ -182,7 +182,7 @@ export default function OunceGramPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月19日。価格は毎朝の田中貴金属の公表値で自動更新しています。</p>
 
-        <RelatedArticles currentSlug="ounce-gram" relatedSlugs={["kinka-kaitori-guide", "kin-omosa-hakarikata", "ingot-toha", "kin-mitsudo", "kinka-ingot-kaitori", "kin-kakaku-boraku-kako"]} />
+        <RelatedArticles currentSlug="ounce-gram" relatedSlugs={["kinka-kaitori-guide", "kin-omosa-hakarikata", "ingot-toha", "kin-mitsudo", "kinka-ingot-kaitori", "kin-kakaku-boraku-kako", "enyasu-kin"]} />
       </article>
     </div>
   </>);

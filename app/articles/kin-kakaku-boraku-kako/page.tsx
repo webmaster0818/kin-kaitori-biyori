@@ -181,7 +181,7 @@ export default function KinKakakuBorakuPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月15日。過去の価格は将来の価格を示すものではありません。金は元本保証の商品ではありません。</p>
 
-        <RelatedArticles currentSlug="kin-kakaku-boraku-kako" relatedSlugs={["kin-uridoki-2026", "kin-kaitori-souba", "kin-toushin-hiyou-hikaku", "platinum-kachi-suii", "kin-kaitori-zeikin", "kin-honisei"]} />
+        <RelatedArticles currentSlug="kin-kakaku-boraku-kako" relatedSlugs={["kin-uridoki-2026", "kin-kaitori-souba", "kin-toushin-hiyou-hikaku", "platinum-kachi-suii", "kin-kaitori-zeikin", "kin-honisei", "enyasu-kin"]} />
       </article>
     </div>
   </>);
