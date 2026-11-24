@@ -626,7 +626,7 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "koshigaya-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-24",
     stores: [
       { name: "買取大吉 新越谷店", chain: "買取大吉", address: "埼玉県越谷市南越谷1丁目13-7 ハローマートビル 1階", hours: "10:00〜19:00", closed: "年中無休", access: "JR武蔵野線 南越谷駅から徒歩3分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/shin-koshigaya/" },
       { name: "買取大吉 北越谷店", chain: "買取大吉", address: "埼玉県越谷市大沢3-21-33", hours: "10:00〜19:00", closed: "日曜日", access: "東武スカイツリーライン 北越谷駅より徒歩5分", tel: "0120-665-800", sourceUrl: "https://www.kaitori-daikichi.jp/store/kitakoshigaya/" },
