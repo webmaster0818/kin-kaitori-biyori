@@ -914,3 +914,14 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 田中 gold.tanaka.co.jp は 09:16〜11:06 ずっと 503（11/20 から）。11:05 日次も HTTPError 503 → data は 11/19 のままビルド・deploy（src e417279・deploy 34a281ddc7）
 - 点検 C3 /author/「監修者」= 「掲載していないもの：執筆者・監修者の個人名…」の否定文脈・Person schema 0 ＝誤検知（変更なし）
 - precheck ✅（331頁）・ASP計測リンク 0=0・sponsored 1563=1563・外部href 6849=6849・表示テキストが変わったのは各回1ページのみ・__next*.txt 0。source 14b7638/18947ef・deploy 95abb59429（09:19 push）/2f35af4952（09:21 push）→09:46 本番反映。Indexing は送らず（店舗値のみ・日次ローテーションも枠切れ）
+
+### 2026-11-25 深夜04時 kwexp（競合ベンチマーク型ページ拡張・深夜の追加の回・inoue78 の queue 初日）: 新規5ページ
+- queue の上から: 貴金属とは(2320)→/articles/kikinzoku-toha/・インド 金(472)→/articles/india-kin/・金貨 どこで買う(256)→/articles/kinka-kounyusaki/・金 インフレ(256)→/articles/kin-inflation/・金 どうやってできた(136)→/articles/kin-dekikata/
+- 残り空欄3語（金貨 インゴット どっち・アルキメデス 金・金 お手入れ）は次の回。「金貨 インゴット どっち」は kinka-ingot-kaitori（decisions own「金貨 インゴット 違い」）・新規 kinka-kounyusaki と重なるか作る前に確認。「アルキメデス 金」は kin-mitsudo の「水に沈めて密度を確かめる方法」と重なるか確認
+- 一次情報（11/25 確認）: 田中貴金属 産業用サイト「貴金属元素比較」（8元素の密度・融点・発見年）・「産業用貴金属相場（2026年10月）」月間平均（Pt 8,373／Au 20,973／Ag 298.89／Pd 5,826／Rh 46,524／Ir 45,774／Ru 9,424 円/g・税抜・Os は公表なし）／犯収法施行令 第4条（金、白金、銀及びこれらの合金）・第7条（200万円超）＝e-Gov 法令API／RBI 半期報告 2025-10〜2026-03（880.52t・国内680.05t・BoE/BIS 197.67t・預金2.80t・13.92%→約16.70%）／PIB 2024-07-23（金・銀 15%→6%・Pt 15.4%→6.4%）／BIS Hallmarking FAQ（IS 1417:2016 の6区分・HUID 2021-07-01・Rs.45）／田中 コイン価格 11/24 17:00（1oz 682,635/612,647 ほか・メイプル1oz 販売中止）・地金 20,688/20,139・別途手数料／徳力 11/24 09:30（コイン小売・プレミアム有/無の買取）／石福「地金型コイン」（2種4サイズ）／造幣局 昭和100年記念貨幣（純銀・34,800円・40,000個・申込164,774・4.58倍）／統計局 CPI 2025年平均 表7（2013〜2025 総合指数・前年比）・「しくみと見方」（1970年=30.9）／田中 年次金価格推移（1973〜2025 年平均）／国税庁 No.3161／名古屋大学 ISEE 2017-10-17（GW170817・rプロセス・キロノヴァ・J-GEM）／GSJ 地質ニュース Vol.6 No.2（菱刈：浅熱水性鉱脈型・1.2〜0.64Ma・37g/t×20.4万t＝7.5t・累計224t・温泉水0.6ppt）／USGS MCS2026 Gold
+- 不採用: WGC の GDT 表・PDF はログイン必須（回避せず）→インドの需要量は掲載しない／三菱マテリアル GOLDPARK は 11/25 04時 システムメンテナンス中→価格を載せず注記のみ／NAOJ・すばるの 2017 リリース URL は 404・トップへ転送→名古屋大学の PDF を出典に
+- 独自計算: 8元素の金との価格比・金1kgの体積／RBI 保有量の円換算・BIS 6区分×1gの金の値（日次）／金貨サイズ別の上乗せ率（1oz +6.1%・1/10oz +14.5%）と同日売買の戻り率・5g/10g 地金との比較／CPI で割った「2020年の物価で見た金価格」と前年比の並び（物価↑金↓＝2014・2018）／金1gに必要な鉱石（37g/t で約27kg）・鉱石1tの金の値（日次）・温泉水約17億L
+- 投資判断の語（金 インフレ）は勧める/勧めないを書かず、物価指数・金価格の公表値と売買の価格差・税（国税庁）のみ。金貨 どこで買う も購入の推奨なし
+- 内部リンク: metadata +5（kikinzoku-toha/india-kin/kin-inflation/kin-dekikata=howto・kinka-kounyusaki=compare）、relatedSlugs 追加 kin-toha・platinum-toha・palladium-toha→kikinzoku-toha、k22-kaitori→india-kin、kin-ingot-kounyusaki・kinka-kaitori-guide→kinka-kounyusaki、enyasu-kin・kin-kakaku-boraku-kako→kin-inflation、kin-maizoryo・kin-mitsudo→kin-dekikata。sitemap 148
+- trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（336頁）・scaled-content-lint 違反0・ASP計測リンク 0。Indexing は未送信（親が実施）。source 38825e2 / deploy bdced894e2
+- ⚠️ gold.tanaka.co.jp は 11/25 04時に 200（11/24 17:00公表分が取れた）。data/gold-spot-prices.json は 11/19 09:30 のままで、新規ページの日次の値も「11月19日 09:30公表」と表示（11:05 日次で更新される見込み・未確認）
