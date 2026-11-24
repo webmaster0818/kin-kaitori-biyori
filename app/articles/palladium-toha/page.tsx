@@ -165,7 +165,7 @@ export default function PalladiumTohaPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月16日。価格は変動します。</p>
 
-        <RelatedArticles currentSlug="palladium-toha" relatedSlugs={["white-gold-toha", "platinum-toha", "platinum-kaitori", "kinseido-kaitori-guide", "kin-mitsudo"]} />
+        <RelatedArticles currentSlug="palladium-toha" relatedSlugs={["white-gold-toha", "platinum-toha", "platinum-kaitori", "kinseido-kaitori-guide", "kin-mitsudo", "kikinzoku-toha"]} />
       </article>
     </div>
   </>);

@@ -156,7 +156,7 @@ export default function KinMaizoryoPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月16日。</p>
 
-        <RelatedArticles currentSlug="kin-maizoryo" relatedSlugs={["sakin-toha", "kin-mitsudo", "ingot-toha", "kin-kakaku-boraku-kako", "kin-uridoki-2026"]} />
+        <RelatedArticles currentSlug="kin-maizoryo" relatedSlugs={["sakin-toha", "kin-mitsudo", "ingot-toha", "kin-kakaku-boraku-kako", "kin-uridoki-2026", "kin-dekikata"]} />
       </article>
     </div>
   </>);

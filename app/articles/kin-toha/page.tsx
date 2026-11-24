@@ -151,7 +151,7 @@ export default function KinTohaPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月18日。価格は変動します。ご売却の際は、各業者の最新の買取価格をご確認ください。</p>
 
-        <RelatedArticles currentSlug="kin-toha" relatedSlugs={["kin-jundo-mikata", "kin-mitsudo", "kin-maizoryo", "kinseido-kaitori-guide", "k9-kaitori", "platinum-toha", "kinpaku-toha"]} />
+        <RelatedArticles currentSlug="kin-toha" relatedSlugs={["kin-jundo-mikata", "kin-mitsudo", "kin-maizoryo", "kinseido-kaitori-guide", "k9-kaitori", "platinum-toha", "kinpaku-toha", "kikinzoku-toha"]} />
       </article>
     </div>
   </>);

@@ -151,7 +151,7 @@ export default function KinMitsudoPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月16日。</p>
 
-        <RelatedArticles currentSlug="kin-mitsudo" relatedSlugs={["kin-toha", "kin-nisemono-mikata", "kin-omosa-hakarikata", "ingot-toha", "platinum-toha", "kin-jundo-mikata", "kinpaku-toha"]} />
+        <RelatedArticles currentSlug="kin-mitsudo" relatedSlugs={["kin-toha", "kin-nisemono-mikata", "kin-omosa-hakarikata", "ingot-toha", "platinum-toha", "kin-jundo-mikata", "kinpaku-toha", "kin-dekikata"]} />
       </article>
     </div>
   </>);

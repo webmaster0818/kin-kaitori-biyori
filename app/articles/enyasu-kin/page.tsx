@@ -214,7 +214,7 @@ export default function EnyasuKinPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月24日。本ページは過去の公表値をもとにした計算で、金の売買や投資を勧めるものではありません。</p>
 
-        <RelatedArticles currentSlug="enyasu-kin" relatedSlugs={["kin-kakaku-boraku-kako", "kin-kaitori-souba", "ounce-gram", "kin-uridoki-2026", "kin-kaitori-zeikin", "kin-toushin-hiyou-hikaku"]} />
+        <RelatedArticles currentSlug="enyasu-kin" relatedSlugs={["kin-kakaku-boraku-kako", "kin-kaitori-souba", "ounce-gram", "kin-uridoki-2026", "kin-kaitori-zeikin", "kin-toushin-hiyou-hikaku", "kin-inflation"]} />
       </article>
     </div>
   </>);
