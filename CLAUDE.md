@@ -933,3 +933,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - atsugi（確認日 7/6→11/25）: 訂正 ①買取大吉 厚木ガーデンシティ店 営業時間 10:00〜20:00→公式「10:00～19:00」②厚木妻田店 〒243-0801（日本郵便で厚木市上依知）→243-0812（妻田北）。なんぼや 本厚木（notice-status 11:00〜19:00 定休日なし）・おたからや 本厚木（10:00〜18:00・土曜）・ヨークマート厚木インター（10:00〜20:00・年中無休）は一致。source f4c4c0f / deploy 5b68c1694a（09:45 push・09:51 本番反映）
 - 点検 C3 /author/「監修者」= 「掲載していないもの：執筆者・監修者の個人名…」の否定文脈・Person schema 0 ＝誤検知（変更なし）
 - precheck ✅（336頁）・ASP計測リンク 0=0・sponsored 3126=3126・外部href 6542=6542・表示テキストが変わったのは各回1ページのみ・__next*.txt 0。次の地域照合: kumagaya（7/6）
+
+### 2026-11-25 20:00 kwexp（競合ベンチマーク型ページ拡張・inoue78 の queue 残り3語）: 新規1ページ（queue の空欄を使い切り）
+- 作成: アルキメデス 金(40)→/articles/archimedes-kin/。kin-mitsudo の「水に沈めて密度を確かめる方法の精度」（家庭での真贋確認）とは別の意図（王冠の逸話と方法）として作成し、相互リンク
+- skip: 金貨 インゴット どっち（kinka-kounyusaki の上乗せ率・戻り率の節で金貨4サイズと5g/10g地金を比較済み・kinka-ingot-kaitori）／金 お手入れ（一次情報なし：MIKIMOTO のジュエリー全般の案内のみ。ブルガリ・シャネル・ヴァンクリーフは 403＝回避せず、GIA 日本語版はタイムアウト）。**queue の空欄は0**
+- 一次情報（11/25 確認）: Vitruvius『建築について』第9書 序 9〜12節（LacusCurtius 英訳：冠の重さの数字なし）／Museo Galileo「La bilancetta」展示解説（死後出版・Vitruvius の説明を単純すぎるとした）・所蔵「Small hydrostatic balance」（目録27・17世紀半ば）／NYU「The Golden Crown」（1586年・22歳）／田中 元素データ Au 19.32・Ag 10.5／田中 店頭買取（日次）
+- 独自計算（仮定を明記）: 1kgの王冠で銀0〜30%の体積・あふれる水の差（20%で約8.7cm³）・口径20cm容器の水面差（約0.28mm）・水中の見かけの重さ・金200gと銀200gの今日の価格差（日次）
+- 内部リンク: metadata +1（howto）、relatedSlugs 追加 kin-mitsudo・kin-nisemono-mikata→archimedes-kin。sitemap 149
+- trust-audit check_page 指摘0・precheck ✅全項目OK（337頁）・scaled-content-lint 違反0・heading-lint 該当0。表示テキストが変わったのは新規・articles 一覧・kin-mitsudo・kin-nisemono-mikata の4ページのみ。本番 200・h1 一致。Indexing は未送信（親が実施）。source 7579d37 / deploy cf5f99ce39
