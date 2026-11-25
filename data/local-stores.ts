@@ -645,12 +645,12 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "funabashi-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-25",
     stores: [
-      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始・臨時休業を除く）", access: "京成船橋駅 徒歩約2分、JR船橋駅南口 徒歩5分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
-      { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "274-0056", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
-      { name: "大黒屋 質船橋店", chain: "大黒屋", address: "千葉県船橋市本町1-8-1 ケーアイ・フナバシ1F", postalCode: "273-0005", hours: "10:30〜19:30", closed: "定休日なし", access: "京成船橋駅 西口より徒歩10秒、JR船橋駅 徒歩3分", tel: "047-495-5831", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-funabashi/" },
-      { name: "なんぼや 船橋フェイス店", chain: "なんぼや", address: "千葉県船橋市本町1-3-1 船橋フェイスビル 2F", postalCode: "273-0005", hours: "10:00〜21:00（最終受付20:30）", closed: "施設に準ずる", access: "京成船橋駅東口 徒歩1分、JR船橋駅南口 徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/funabashi-face-brandshop/" },
+      { name: "買取大吉 ネクスト船橋店", chain: "買取大吉", address: "千葉県船橋市本町1丁目5-1 ネクスト船橋 1階", postalCode: "273-0005", hours: "10:00〜21:00", closed: "年中無休（年末年始・臨時休業を除く）", access: "京成船橋駅 徒歩2分、JR船橋駅南口 徒歩5分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/n-funabashi/" },
+      { name: "買取大吉 イオンタウン新船橋店", chain: "買取大吉", address: "千葉県船橋市北本町1丁目19-50 イオンタウン新船橋 1階", postalCode: "273-0864", hours: "10:00〜19:00", closed: "年中無休", access: "東武野田線 新船橋駅 徒歩3分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/at-shinfunabashi/" },
+      { name: "大黒屋 質船橋店", chain: "大黒屋", address: "千葉県船橋市本町1-8-1 ケーアイ・フナバシ1F", postalCode: "273-0005", hours: "10:30〜19:30", closed: "定休日なし", access: "京成船橋駅 西口より徒歩10秒、JR船橋駅 シャポー口より徒歩3分", tel: "047-495-5831", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-funabashi/" },
+      { name: "なんぼや 船橋フェイス店", chain: "なんぼや", address: "千葉県船橋市本町1-3-1 船橋フェイスビル 2F", postalCode: "273-0005", hours: "10:00〜21:00（最終受付20:30）", closed: "定休日なし（施設に準ずる）", access: "京成船橋駅 東口改札より徒歩1分程度、JR船橋駅南口より徒歩3分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/funabashi-face-brandshop/" },
       { name: "おたからや 大神宮下駅本店", chain: "おたからや", address: "千葉県船橋市宮本2-13-11 丸商船橋ビル1階", postalCode: "273-0003", hours: "10:00〜18:00", closed: "木曜日", access: "京成本線 大神宮下駅改札右 徒歩1分", tel: "047-778-2014", sourceUrl: "https://www.otakaraya-shop.jp/funabashidaijingu/" },
     ],
   },
