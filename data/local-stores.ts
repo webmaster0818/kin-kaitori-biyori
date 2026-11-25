@@ -655,10 +655,10 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "atsugi-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-25",
     stores: [
-      { name: "買取大吉 厚木ガーデンシティ店", chain: "買取大吉", address: "神奈川県厚木市中町1-5-10 厚木ガーデンシティビル4階", postalCode: "243-0018", hours: "10:00〜20:00", closed: "年中無休", access: "小田急線 本厚木駅から徒歩4分", tel: "046-259-8931", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-gc/" },
-      { name: "買取大吉 厚木妻田店", chain: "買取大吉", address: "神奈川県厚木市妻田北1-13-14", postalCode: "243-0801", hours: "10:00〜19:00", closed: "水曜日", access: "本厚木駅よりバス「中村入口」下車 徒歩1分", tel: "0120-755-206", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-tsumada/" },
+      { name: "買取大吉 厚木ガーデンシティ店", chain: "買取大吉", address: "神奈川県厚木市中町1-5-10 厚木ガーデンシティビル4階", postalCode: "243-0018", hours: "10:00〜19:00", closed: "年中無休", access: "小田急線 本厚木駅から徒歩4分", tel: "046-259-8931", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-gc/" },
+      { name: "買取大吉 厚木妻田店", chain: "買取大吉", address: "神奈川県厚木市妻田北1-13-14", postalCode: "243-0812", hours: "10:00〜19:00", closed: "水曜日", access: "本厚木駅よりバス「中村入口」下車 徒歩1分", tel: "0120-755-206", sourceUrl: "https://www.kaitori-daikichi.jp/store/atsugi-tsumada/" },
       { name: "なんぼや 本厚木店", chain: "なんぼや", address: "神奈川県厚木市中町3-11-15", postalCode: "243-0018", hours: "11:00〜19:00", closed: "定休日なし", access: "小田急小田原線 本厚木駅北口より徒歩7分程度", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/gold-kaitori/shop/honatsugi-brandshop/" },
       { name: "おたからや 本厚木店", chain: "おたからや", address: "神奈川県厚木市中町4丁目14-6 パティオビル1階", postalCode: "243-0018", hours: "10:00〜18:00", closed: "土曜日", access: "小田急線 本厚木駅北口より徒歩3分", tel: "0120-713-753", sourceUrl: "https://honatsugi.originality-otakaraya.net/" },
       { name: "おたからや ヨークマート厚木インター店", chain: "おたからや", address: "神奈川県厚木市酒井3052 ヨークマート厚木インター", postalCode: "243-0022", hours: "10:00〜20:00", closed: "年中無休", access: "海老名JCTから車で8分", tel: "0120-803-650", sourceUrl: "https://www.otakaraya-shop.jp/atsugi-inter/" },
