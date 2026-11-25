@@ -925,3 +925,11 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 内部リンク: metadata +5（kikinzoku-toha/india-kin/kin-inflation/kin-dekikata=howto・kinka-kounyusaki=compare）、relatedSlugs 追加 kin-toha・platinum-toha・palladium-toha→kikinzoku-toha、k22-kaitori→india-kin、kin-ingot-kounyusaki・kinka-kaitori-guide→kinka-kounyusaki、enyasu-kin・kin-kakaku-boraku-kako→kin-inflation、kin-maizoryo・kin-mitsudo→kin-dekikata。sitemap 148
 - trust-audit check_page 5頁とも指摘0・precheck ✅全項目OK（336頁）・scaled-content-lint 違反0・ASP計測リンク 0。Indexing は未送信（親が実施）。source 38825e2 / deploy bdced894e2
 - ⚠️ gold.tanaka.co.jp は 11/25 04時に 200（11/24 17:00公表分が取れた）。data/gold-spot-prices.json は 11/19 09:30 のままで、新規ページの日次の値も「11月19日 09:30公表」と表示（11:05 日次で更新される見込み・未確認）
+
+### 2026-11-25 朝ルーチン: 田中 503 復旧の確認＋07:00「3日より古い」の判定／funabashi 5店・atsugi 5店を公式で照合 → 郵便番号2件ほか訂正 ✅本番反映済み
+- 田中 gold.tanaka.co.jp は 09:19 に 200（/commodity/souba/ は 11/24 17:00 公表分、10:01 に 11/25 09:30 公表分 店頭買取 19,821円/g）。11:05 日次で data が 2026-11-25 09:30 に更新（src e665fd8 / deploy e421610ea4）→ 本番 TOP「本日の金買取参考相場」2・「未反映」0・K24 19,028、/data/gold-price-history.csv 最終行 2026-11-25、widget.js 2026-11-25。手動の fetch-tanaka・再ビルドは不要だった
+- 07:00 点検「データが3日より古い 8/12（例 hamamatsu 2026-11-19）」: daily-site-check.py の DATE_RE＋CAPTION_RE（画像説明文は 11/1 から除外済み）を本番 hamamatsu に当てると最大日付 2026-11-19＝「金買取相場（2026年11月19日 時点の目安）」「1gあたり買取目安（2026-11-19 時点）」＝田中 503 による実際の古さ（誤検知ではない）。日次前の deploy リポで sitemap 148URL の最大日付は 11-19 が 53URL、日次後は 11-25 が 58URL・11-19 は1（platinum-toushi の商品条件の確認日）。残る古い日付は bvlgari 5/17（おたからや参考価格の時点）・toushin 11/13・hikakaku 11/17・houmon 11/18 の出典日付のみ
+- funabashi（確認日 7/6→11/25）: 訂正 ①買取大吉 イオンタウン新船橋店 〒274-0056（日本郵便で船橋市神保町）→273-0864（北本町）②ネクスト船橋店「京成船橋駅 徒歩約2分」→店長あいさつの「徒歩2分」③大黒屋 質船橋店 JR船橋駅→「シャポー口より徒歩3分」④なんぼや 船橋フェイス店 定休→「定休日なし（施設に準ずる）」（notice-status 11/25・10:00〜21:00 最終受付20:30 は一致）・アクセスを公式「東口改札より徒歩1分程度／南口より徒歩3分程度」。おたからや 大神宮下駅本店は一致。source bf4d2d3 / deploy d6c0af0c0e（09:23 push・09:39 本番反映）
+- atsugi（確認日 7/6→11/25）: 訂正 ①買取大吉 厚木ガーデンシティ店 営業時間 10:00〜20:00→公式「10:00～19:00」②厚木妻田店 〒243-0801（日本郵便で厚木市上依知）→243-0812（妻田北）。なんぼや 本厚木（notice-status 11:00〜19:00 定休日なし）・おたからや 本厚木（10:00〜18:00・土曜）・ヨークマート厚木インター（10:00〜20:00・年中無休）は一致。source f4c4c0f / deploy 5b68c1694a（09:45 push・09:51 本番反映）
+- 点検 C3 /author/「監修者」= 「掲載していないもの：執筆者・監修者の個人名…」の否定文脈・Person schema 0 ＝誤検知（変更なし）
+- precheck ✅（336頁）・ASP計測リンク 0=0・sponsored 3126=3126・外部href 6542=6542・表示テキストが変わったのは各回1ページのみ・__next*.txt 0。次の地域照合: kumagaya（7/6）
