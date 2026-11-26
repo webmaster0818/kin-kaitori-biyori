@@ -665,13 +665,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "kumagaya-kin-kaitori": {
-    updated: "2026-07-06",
+    updated: "2026-11-26",
     stores: [
       { name: "KOMEHYO買取センター 八木橋百貨店", chain: "KOMEHYO（コメ兵）", address: "埼玉県熊谷市仲町74 八木橋百貨店 5F", postalCode: "360-8502", hours: "10:00〜18:30（買取最終受付18:00）", closed: "八木橋百貨店に準ずる", access: "秩父鉄道 上熊谷駅より徒歩約5分／JR熊谷駅北口より徒歩約15分", tel: "048-580-7302", sourceUrl: "https://komehyo.jp/kaitori/shop/kc-yagihashi-hyakkaten" },
       { name: "大黒屋 質17号熊谷石原店", chain: "大黒屋", address: "埼玉県熊谷市石原3-242-1", postalCode: "360-0816", hours: "10:00〜20:00", closed: "年中無休", access: "秩父鉄道 石原駅より徒歩約10分", tel: "048-599-2301", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000161" },
-      { name: "買取大吉 熊谷ティアラ21店", chain: "買取大吉", address: "埼玉県熊谷市筑波3-202 ティアラ21", hours: "10:00〜19:00", closed: "年中無休", access: "JR高崎線・秩父鉄道 熊谷駅直結（さくら広場口より徒歩1分）", tel: "048-500-9583", sourceUrl: "https://www.kaitori-daikichi.jp/store/kumagaya-tiara21/" },
-      { name: "買取大吉 イオン熊谷店", chain: "買取大吉", address: "埼玉県熊谷市本石2-135 イオン熊谷 3階", postalCode: "360-0014", hours: "10:00〜19:00", closed: "年中無休", access: "秩父鉄道 上熊谷駅より徒歩7分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/am-kumagaya/" },
-      { name: "おたからや 熊谷ニットーモール店", chain: "おたからや", address: "埼玉県熊谷市銀座2-245 ニットーモール1F", postalCode: "360-0032", closed: "年中無休", access: "熊谷駅東口直結の連絡通路よりニットーモールへ", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kumagaya-nittohmall/" },
+      { name: "買取大吉 熊谷ティアラ21店", chain: "買取大吉", address: "埼玉県熊谷市筑波3-202 ティアラ21", hours: "10:00〜19:00", closed: "年中無休", access: "ティアラ21 さくら広場口より20m・徒歩1分", tel: "048-500-9583", sourceUrl: "https://www.kaitori-daikichi.jp/store/kumagaya-tiara21/" },
+      { name: "買取大吉 イオン熊谷店", chain: "買取大吉", address: "埼玉県熊谷市本石2-135 イオン熊谷 3階（立体駐車場側）", postalCode: "360-0815", hours: "10:00〜19:00", closed: "年中無休", access: "秩父鉄道 上熊谷駅より徒歩7分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/am-kumagaya/" },
+      { name: "おたからや 熊谷ニットーモール店", chain: "おたからや", address: "埼玉県熊谷市銀座2-245 ニットーモール1F", postalCode: "360-0032", hours: "10:00〜19:30", closed: "年中無休（年末年始を除く）", access: "熊谷駅 東口直結・イベント広場そば（熊谷駅から徒歩約6分）", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/kumagaya-nittohmall/" },
     ],
   },
   "soka-kin-kaitori": {
