@@ -32,7 +32,7 @@ function ArticleSchema() {
     headline: "金・貴金属の買取は何歳から？未成年・18歳19歳の扱いと主要10社の年齢規定｜当日の流れ",
     description: "金買取は未成年でも売れるのか、予約は必要か、当日は受付から現金受け取りまでどのくらいかかるのか——手続きまわりの疑問に絞って解説します。持ち物や本人確認書類の詳細は「金買取に必要なもの」ページをご覧ください。",
     datePublished: "2026-07-03",
-    dateModified: "2026-11-16",
+    dateModified: "2026-11-26",
     author: { "@type": "Organization", name: "金買取びより編集部" },
     publisher: { "@type": "Organization", name: "金買取びより" },
   };
@@ -61,7 +61,7 @@ function FaqSchema() {
 
 export const metadata: Metadata = {
   title: "金・貴金属の買取は何歳から？未成年・18歳19歳の扱いと主要10社の年齢規定｜当日の流れ",
-  description: "金・貴金属は18歳未満は単独で売れず、18・19歳も店により同意書や高校生不可の規定があります。大吉・なんぼや・おたからや等10社の公式の年齢規定、民法5条の取消権、古物営業法の本人確認、予約と当日の流れを解説。",
+  description: "金・貴金属・宝石は18歳未満は単独で売れず、18・19歳も店により同意書や高校生不可の規定があります。大吉・なんぼや・おたからや等10社の公式の年齢規定、民法5条の取消権、古物営業法の本人確認、予約と当日の流れを解説。",
   alternates: { canonical: "https://gold-biyori.com/articles/kin-kaitori-tetsuzuki-guide/" },
 };
 
@@ -106,32 +106,34 @@ export default function KinKaitoriTetsuzukiGuidePage() {
 
           <p>金買取の手続きで実際に迷いやすいのは、「<strong>何歳から売れるのか（未成年でも売れるのか）</strong>」「予約は必要か」「当日どのくらい時間がかかるのか」の3点です。この記事はその3点に絞って答えます。</p>
 
-          <h2 id="nenrei">金・貴金属は何歳から売れる？ — 法律は18歳、店の規定は「18歳」「高校生不可」「20歳」の3通り</h2>
+          <h2 id="nenrei">金・貴金属・宝石は何歳から売れる？ — 法律は18歳、店の規定は「18歳」「高校生不可」「20歳」の3通り</h2>
 
-          <p><strong>結論：18歳未満は単独では売れません。18歳・19歳は法律上は成年ですが、店によっては同意書が要る・高校生は不可・20歳以上のみ、という独自の規定があります。</strong>宝石・ブランド品など貴金属以外でも同じ扱いです。</p>
+          <p><strong>結論：18歳未満は単独では売れません。18歳・19歳は法律上は成年ですが、店によっては同意書が要る・高校生は不可・20歳以上のみ、という独自の規定があります。</strong></p>
 
-          <h3>主要10社の年齢規定と同意書の要否（2026年11月16日確認）</h3>
+          <p id="houseki"><strong>宝石・ダイヤ・指輪も、金と同じ年齢規定です（10社中7社は公式で確認。残り3社も宝石を別扱いにする記載はなし）。</strong>下の10社の公式ページには、宝石や貴金属だけを別の年齢で扱う記載はありません。買取大吉・おたからや・ウリエル・コメ兵は、宝石（ジュエリー・ダイヤモンド）の買取ページと金の買取ページにも、同じ年齢の注意書きを載せています。大黒屋・バイセル・福ちゃんは品目を限らない規定で、品目による例外として書かれているのは<strong>お酒（20歳以上）だけ</strong>です。なんぼや・ブランドリバリュー・ティファナの規定も品目を限らない書き方ですが、宝石についての個別の記載は公式にありません（2026年11月26日、各社公式で確認）。</p>
+
+          <h3>主要10社の年齢規定と同意書の要否（2026年11月26日確認）</h3>
 
           <div className="table-wrapper">
             <table>
               <thead>
-                <tr><th>買取店</th><th>18歳未満</th><th>18歳・19歳（保護者の同意）</th><th>出典</th></tr>
+                <tr><th>買取店</th><th>18歳未満</th><th>18歳・19歳（保護者の同意）</th><th>宝石・貴金属も同じ規定か</th><th>出典</th></tr>
               </thead>
               <tbody>
-                <tr><td><strong>買取大吉</strong></td><td>不可（「18歳未満のお客様の場合は買取いたしません」）</td><td>公式に同意書の記載なし</td><td><a href="https://www.kaitori-daikichi.jp/shop-kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">店頭買取ページ</a></td></tr>
-                <tr><td><strong>おたからや</strong></td><td>不可（公式の案内は「保護者の方と一緒に来店をしてください」）</td><td>公式に同意書の記載なし</td><td><a href="https://www.otakaraya.jp/first/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">初めての方へ</a></td></tr>
-                <tr><td><strong>なんぼや</strong></td><td>不可（結婚している未成年者も不可）</td><td>本人の物＝親権者の同意書／父母の物＝委任状／それ以外の人の物＝同意書（200万円超は委任状なども）</td><td><a href="https://nanboya.com/yokuaru-questions/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくあるご質問</a>・<a href="https://nanboya.com/takuhai-kaitori/hitsuyounamono/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">宅配買取の必要な物</a>・<a href="https://nanboya.com/wp-content/themes/nanboya/pdf/douisho-nanboya.pdf" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">同意書PDF</a></td></tr>
-                <tr><td><strong>ウリエル</strong></td><td>不可</td><td>同意書または委任状が必要（同じページのQ&Aには「未成年の方はご利用いただけません」とも記載）</td><td><a href="https://www.uriel-cuore.co.jp/event/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">催事・買取案内</a></td></tr>
-                <tr><td><strong>ティファナ</strong></td><td>不可</td><td>高校生・高専学校生は不可。それ以外は公式に同意書の記載なし</td><td><a href="https://www.tifana.net/visitlp/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">出張買取ページ</a></td></tr>
-                <tr><td><strong>大黒屋</strong></td><td>不可</td><td>高校生は不可。それ以外は申込可（公式に同意書の記載なし）</td><td><a href="https://kaitori.e-daikoku.com/faq.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
-                <tr><td><strong>ブランドリバリュー</strong></td><td>原則不可。親権者同意書＋続柄のわかる書類の持参と、親権者・監護者の同伴があれば対応（宅配買取の利用規約 第8条は同意書の持参「かつ」同伴。同伴できない宅配は不可。18歳でも高校生は未成年とみなす）</td><td>同意書は不要（高校生を除く）。99万9,999円を超える取引は親権者同意書と続柄のわかる書類が必要</td><td><a href="https://brandrevalue.com/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">公式サイト</a></td></tr>
-                <tr><td><strong>バイセル</strong></td><td>不可（「未成年者からの買取はできません」・年齢の定義は記載なし）</td><td>公式に記載なし</td><td><a href="https://buysell-kaitori.com/store/kinshicho-parco/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">店舗ページ（例）</a></td></tr>
-                <tr><td><strong>福ちゃん</strong></td><td>不可（利用は成年に限る・利用規約 第7条）</td><td>公式に同意書の記載なし</td><td><a href="https://www.fuku-chan.info/terms.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">利用規約</a></td></tr>
-                <tr><td><strong>コメ兵</strong></td><td>不可</td><td>不可（20歳未満は買取不可）</td><td><a href="https://komehyo.jp/kaitori/faq/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
+                <tr><td><strong>買取大吉</strong></td><td>不可（「18歳未満のお客様の場合は買取いたしません」）</td><td>公式に同意書の記載なし</td><td>同じ（<a href="https://www.kaitori-daikichi.jp/list/jewelry/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">宝石・ジュエリー</a>・<a href="https://www.kaitori-daikichi.jp/list/gold/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">金</a>の買取ページにも「18歳未満のお客様の場合は買取いたしません」）</td><td><a href="https://www.kaitori-daikichi.jp/shop-kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">店頭買取ページ</a></td></tr>
+                <tr><td><strong>おたからや</strong></td><td>不可（公式の案内は「保護者の方と一緒に来店をしてください」）</td><td>公式に同意書の記載なし</td><td>同じ（<a href="https://www.otakaraya.jp/daiya/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ダイヤモンド</a>・<a href="https://www.otakaraya.jp/gold/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">金</a>の買取ページにも「18歳未満のお客様の場合は買取いたしません」）</td><td><a href="https://www.otakaraya.jp/first/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">初めての方へ</a></td></tr>
+                <tr><td><strong>なんぼや</strong></td><td>不可（結婚している未成年者も不可）</td><td>本人の物＝親権者の同意書／父母の物＝委任状／それ以外の人の物＝同意書（200万円超は委任状なども）</td><td>公式に宝石の記載なし（よくあるご質問・宅配の規定は品目を限らない書き方）</td><td><a href="https://nanboya.com/yokuaru-questions/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくあるご質問</a>・<a href="https://nanboya.com/takuhai-kaitori/hitsuyounamono/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">宅配買取の必要な物</a>・<a href="https://nanboya.com/wp-content/themes/nanboya/pdf/douisho-nanboya.pdf" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">同意書PDF</a></td></tr>
+                <tr><td><strong>ウリエル</strong></td><td>不可</td><td>同意書または委任状が必要（同じページのQ&Aには「未成年の方はご利用いただけません」とも記載）</td><td>同じ（<a href="https://www.uriel-cuore.co.jp/jewelry/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">宝石</a>・<a href="https://www.uriel-cuore.co.jp/gold/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">金</a>の買取ページにも同じ18歳未満・18歳19歳の注記）</td><td><a href="https://www.uriel-cuore.co.jp/event/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">催事・買取案内</a></td></tr>
+                <tr><td><strong>ティファナ</strong></td><td>不可</td><td>高校生・高専学校生は不可。それ以外は公式に同意書の記載なし</td><td>公式に宝石の記載なし（出張買取のQ&Aは品目を限らない書き方）</td><td><a href="https://www.tifana.net/visitlp/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">出張買取ページ</a></td></tr>
+                <tr><td><strong>大黒屋</strong></td><td>不可</td><td>高校生は不可。それ以外は申込可（公式に同意書の記載なし）</td><td>同じ（品目の例外は「お酒の買取は20歳以上」のみ。宅配の対象に宝石・ジュエリー・貴金属を明記）</td><td><a href="https://kaitori.e-daikoku.com/faq.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
+                <tr><td><strong>ブランドリバリュー</strong></td><td>原則不可。親権者同意書＋続柄のわかる書類の持参と、親権者・監護者の同伴があれば対応（宅配買取の利用規約 第8条は同意書の持参「かつ」同伴。同伴できない宅配は不可。18歳でも高校生は未成年とみなす）</td><td>同意書は不要（高校生を除く）。99万9,999円を超える取引は親権者同意書と続柄のわかる書類が必要</td><td>公式に宝石の記載なし（トップの「20歳未満の買取について」は品目を限らない書き方）</td><td><a href="https://brandrevalue.com/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">公式サイト</a></td></tr>
+                <tr><td><strong>バイセル</strong></td><td>不可（「未成年者からの買取はできません」・年齢の定義は記載なし）</td><td>公式に記載なし</td><td>同じ（品目の例外は「酒類の買取は20歳以上」のみ。買取品目にジュエリー）</td><td><a href="https://buysell-kaitori.com/store/kinshicho-parco/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">店舗ページ（例）</a></td></tr>
+                <tr><td><strong>福ちゃん</strong></td><td>不可（利用は成年に限る・利用規約 第7条）</td><td>公式に同意書の記載なし</td><td>同じ（宅配査定利用規約 第7条。品目の例外は「酒類の買取は20歳以上」のみ。買取品目に金・貴金属・宝石）</td><td><a href="https://www.fuku-chan.info/terms.php" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">利用規約</a></td></tr>
+                <tr><td><strong>コメ兵</strong></td><td>不可</td><td>不可（20歳未満は買取不可）</td><td>同じ（<a href="https://komehyo.jp/kaitori/jewelry/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">ジュエリー</a>・<a href="https://komehyo.jp/kaitori/gold/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">金</a>の買取ページにも「20歳未満の方はご利用できません」）</td><td><a href="https://komehyo.jp/kaitori/faq/" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">よくある質問</a></td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-warm-gray">※各社公式ページの記載を2026年11月16日に確認したものです（11月6日の確認から変更なし。ブランドリバリューの18歳未満の条件のみ表記を訂正）。「記載なし」は確認したページに書かれていないという意味で、不要と断定するものではありません。規定は変わることがあるため、来店前に各社へご確認ください。ヒカカク！（一括査定）は申込先の各業者の規定に従います。</p>
+          <p className="text-xs text-warm-gray">※各社公式ページの記載を2026年11月26日に確認したものです（年齢規定は11月16日の確認から変更なし。「宝石・貴金属も同じ規定か」の列は11月26日に追加）。福ちゃんの第7条は宅配査定利用規約の条文です。「記載なし」は確認したページに書かれていないという意味で、不要と断定するものではありません。規定は変わることがあるため、来店前に各社へご確認ください。ヒカカク！（一括査定）は申込先の各業者の規定に従います。</p>
 
           <p><strong>店に年齢を確認されるのは法律上の義務です。</strong>古物商は買い受けるとき、相手の住所・氏名・職業・年齢を確認しなければなりません（古物営業法15条1項）。警視庁の解説では、確認義務は<strong>買い受ける物品の総額が1万円未満なら原則免除</strong>で、例外（1万円未満でも確認が必要）はバイク・ゲームソフト・CDやDVD等・書籍と、2025年10月1日に追加されたエアコン室外機等・電線・金属製グレーチングです（<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/kobutsu_sekoukisoku.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">警視庁「古物営業法施行規則の一部改正について」</a>）。金・貴金属はこの例外に入っていないため、<strong>1万円以上の買取なら必ず本人確認と年齢の確認があります</strong>。宅配などの非対面の買取では、警視庁は「免許証等のコピーや住民票の写しを送ってもらうだけでは違反」「1万円未満であっても、18歳未満の者からの買い取りでないことを確認する必要があります」と案内しています（<a href="https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kobutsu/kaisetsu/hitaimen.html" target="_blank" rel="noopener noreferrer nofollow" className="text-accent hover:underline">警視庁「非対面取引における確認の方法」</a>・いずれも2026年11月16日確認）。</p>
 
