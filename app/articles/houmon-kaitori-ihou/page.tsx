@@ -4,8 +4,8 @@ import RelatedArticles from "@/components/RelatedArticles";
 import Image from "next/image";
 
 /* kwexp-20261118: 「訪問買取 違法」。出典: 消費者庁「特定商取引法ガイド 訪問購入」、特定商取引に関する法律（e-Gov 法令API・第58条の5〜第58条の13、第70条・第71条・第74条）、
-   消費者庁「特定商取引法ガイド 執行状況」（2021年度〜本年度の処分一覧CSV・2026-10-28 処分分まで）、田中貴金属 RE:TANAKA「リサイクル価格」ページの注意書き、
-   消費者庁「消費者ホットライン」。確認日 2026-11-18。
+   消費者庁「特定商取引法ガイド 執行状況」（2021年度〜本年度の処分一覧CSV・2026-11-25 処分分まで）、田中貴金属 RE:TANAKA「リサイクル価格」ページの注意書き、
+   消費者庁「消費者ホットライン」。確認日 2026-11-27（初回 2026-11-18）。
    処分一覧は当サイトが取引類型「訪問購入」の行を抜き出して集計（事業者名は掲載しない） */
 const TITLE = "訪問買取は違法？特定商取引法で禁止される行為・罰則と、2021〜2026年度の行政処分9件の集計";
 const URL = "https://gold-biyori.com/articles/houmon-kaitori-ihou/";
@@ -38,7 +38,7 @@ function Schemas() {
     { "@type": "ListItem", position: 2, name: "記事一覧", item: "https://gold-biyori.com/articles/" },
     { "@type": "ListItem", position: 3, name: "訪問買取で違法になる行為", item: URL },
   ] };
-  const art = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, description: DESC, datePublished: "2026-11-18", dateModified: "2026-11-18",
+  const art = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, description: DESC, datePublished: "2026-11-18", dateModified: "2026-11-27",
     author: { "@type": "Organization", name: "金買取びより編集部" }, publisher: { "@type": "Organization", name: "金買取びより", url: "https://gold-biyori.com" } };
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
   return (<>
@@ -72,9 +72,9 @@ export default function HoumonKaitoriIhouPage() {
       </div>
       <article className="prose">
         <h1 className="text-2xl md:text-3xl font-bold mb-2 !border-none !pb-0 !mt-0">訪問買取で違法になる行為 — 特定商取引法の禁止事項・罰則と行政処分の集計</h1>
-        <p className="text-warm-gray text-sm mb-8">公開: 2026年11月18日／法令・処分一覧は2026年11月18日に消費者庁・e-Govで確認</p>
+        <p className="text-warm-gray text-sm mb-8">公開: 2026年11月18日／法令・処分一覧は2026年11月27日に消費者庁・e-Govで確認</p>
 
-        <p>自宅などに来てもらって品物を売る出張買取（訪問買取）は、<strong>それ自体は違法ではありません</strong>。特定商取引法では「訪問購入」として規制されており、<strong>頼まれていない勧誘（飛び込み勧誘）、断った後の再勧誘、決められた書面を渡さないこと、うその説明や威迫</strong>などが禁じられています。消費者庁の処分一覧から当サイトが集計したところ、2021年度から2026年10月28日処分分までの訪問購入の行政処分は9件で、<strong>9件すべてが貴金属を含む品物の買取</strong>でした。</p>
+        <p>自宅などに来てもらって品物を売る出張買取（訪問買取）は、<strong>それ自体は違法ではありません</strong>。特定商取引法では「訪問購入」として規制されており、<strong>頼まれていない勧誘（飛び込み勧誘）、断った後の再勧誘、決められた書面を渡さないこと、うその説明や威迫</strong>などが禁じられています。消費者庁の処分一覧から当サイトが集計したところ、2021年度から2026年11月25日処分分までの訪問購入の行政処分は9件で、<strong>9件すべてが貴金属を含む品物の買取</strong>でした。</p>
 
         <h2>特定商取引法で禁止・義務づけられていること</h2>
         <div className="table-wrapper">
@@ -91,7 +91,7 @@ export default function HoumonKaitoriIhouPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-warm-gray">出典: 消費者庁「特定商取引法ガイド 訪問購入」、特定商取引に関する法律 第58条の5〜第58条の13・第70条・第71条・第74条（e-Gov 法令検索、2026年11月18日確認）。行政処分は、業務改善の指示（第58条の12）、2年以内の業務停止命令（第58条の13）、役員等の業務禁止命令（第58条の13の2）などです。指示に違反すると6か月以下の拘禁刑または100万円以下の罰金（第71条）、業務停止命令に違反すると3年以下の拘禁刑または300万円以下の罰金（第70条）の対象になります。「行政処分」とだけ記載した規制は、第70条〜第72条の罰則の対象として挙げられていないものです。</p>
+        <p className="text-sm text-warm-gray">出典: 消費者庁「特定商取引法ガイド 訪問購入」、特定商取引に関する法律 第58条の5〜第58条の13・第70条・第71条・第74条（e-Gov 法令検索、2026年11月27日確認）。行政処分は、業務改善の指示（第58条の12）、2年以内の業務停止命令（第58条の13）、役員等の業務禁止命令（第58条の13の2）などです。指示に違反すると6か月以下の拘禁刑または100万円以下の罰金（第71条）、業務停止命令に違反すると3年以下の拘禁刑または300万円以下の罰金（第70条）の対象になります。「行政処分」とだけ記載した規制は、第70条〜第72条の罰則の対象として挙げられていないものです。</p>
 
         <h2>訪問購入の行政処分9件（当サイトの集計）</h2>
         <p>消費者庁の「特定商取引法ガイド 執行状況」に掲載されている国・都道府県の処分一覧（2021年度〜本年度）から、取引類型が「訪問購入」の記録を抜き出しました。全540行のうち訪問購入は38行で、処分日と処分行政庁の組み合わせで数えると9件です（2021年度の該当は0件）。</p>
@@ -105,7 +105,7 @@ export default function HoumonKaitoriIhouPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-warm-gray">出典: 消費者庁「特定商取引法ガイド 執行状況」の処分一覧（CSV出力・2026年11月18日取得、本年度は2026年10月28日処分分まで）。「停止」は業務停止命令、「指示」は指示、「禁止」は業務禁止命令の件数で、法人・個人・役員等それぞれへの命令を1件と数えています。2026年2月17日は東北経済産業局と宮城県が同じ日に処分しています。事業者名は掲載していません。</p>
+        <p className="text-sm text-warm-gray">出典: 消費者庁「特定商取引法ガイド 執行状況」の処分一覧（CSV出力・2026年11月27日取得、本年度は2026年11月25日処分分まで）。「停止」は業務停止命令、「指示」は指示、「禁止」は業務禁止命令の件数で、法人・個人・役員等それぞれへの命令を1件と数えています。2026年2月17日は東北経済産業局と宮城県が同じ日に処分しています。事業者名は掲載していません。</p>
 
         <h3>違反とされた条項の多さ（9件中）</h3>
         <div className="table-wrapper">
@@ -129,7 +129,7 @@ export default function HoumonKaitoriIhouPage() {
           <li><strong>品物を渡さない</strong>: クーリング・オフ期間内（書面を受け取った日から8日以内）は、物品の引渡しを拒めます（第58条の15）。</li>
           <li><strong>クーリング・オフ</strong>: 書面（特定記録郵便・書留・内容証明郵便等）または電子メール等で通知します。手順は<Link href="/articles/kin-kaitori-sagi/">金買取の詐欺・トラブル対策</Link>でご説明しています。事業者がクーリング・オフについてうその説明をしたり威迫したりしたためにクーリング・オフしなかった場合は、8日を過ぎても可能です。</li>
           <li><strong>相談</strong>: 消費者ホットライン「188」で、最寄りの消費生活センター等につながります。消費者庁は特定商取引法違反の疑いの情報提供も受け付けています。</li>
-          <li><strong>名前をかたる勧誘</strong>: 田中貴金属は、RE:TANAKA の価格ページで「電話や訪問による買取を行っていません。当社名を騙った勧誘にご注意ください」と案内しています（2026年11月18日確認）。</li>
+          <li><strong>名前をかたる勧誘</strong>: 田中貴金属は、RE:TANAKA の価格ページで「電話や訪問による買取を行っていません。当社名を騙った勧誘にご注意ください」と案内しています（2026年11月27日確認）。</li>
         </ul>
         <p>出張買取・店頭買取・宅配買取の違いは<Link href="/articles/kaitori-houhou-hikaku/">買取方法の比較</Link>、売却時の本人確認は<Link href="/articles/kin-baikyaku-mynumber/">金の売却とマイナンバー</Link>をご覧ください。</p>
 
@@ -154,7 +154,7 @@ export default function HoumonKaitoriIhouPage() {
           <li>消費者庁「消費者ホットライン」<a href="https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/" target="_blank" rel="noopener noreferrer">caa.go.jp</a></li>
           <li>田中貴金属工業 RE:TANAKA「リサイクル価格」<a href="https://gold.tanaka.co.jp/retanaka/price/" target="_blank" rel="noopener noreferrer">gold.tanaka.co.jp</a></li>
         </ul>
-        <p className="text-sm text-warm-gray">確認日: 2026年11月18日。本ページは法令と公表資料の内容をご説明するもので、個別の事案についての法的な判断ではありません。具体的なトラブルは消費生活センター等にご相談ください。</p>
+        <p className="text-sm text-warm-gray">確認日: 2026年11月27日。本ページは法令と公表資料の内容をご説明するもので、個別の事案についての法的な判断ではありません。具体的なトラブルは消費生活センター等にご相談ください。</p>
 
         <RelatedArticles currentSlug="houmon-kaitori-ihou" relatedSlugs={["kin-kaitori-sagi", "kaitori-houhou-hikaku", "kin-baikyaku-mynumber", "kin-kaitori-tetsuzuki-guide"]} />
       </article>

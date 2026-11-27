@@ -576,12 +576,11 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "fuchu-tokyo-kin-kaitori": {
-    updated: "2026-07-05",
+    updated: "2026-11-22",
     stores: [
       { name: "買取大吉 ぷらりと京王府中店", chain: "買取大吉", address: "東京都府中市府中町1丁目3-6ほか ぷらりと京王府中 東2階", postalCode: "183-0055", hours: "10:00〜20:00", closed: "年中無休", access: "京王線 府中駅より徒歩3分", tel: "0120-381-048", telNote: "総合受付", sourceUrl: "https://www.kaitori-daikichi.jp/store/purarito-keiofuchu/" },
       { name: "買取大吉 府中新町店", chain: "買取大吉", address: "東京都府中市新町1丁目67-2", postalCode: "183-0052", hours: "10:00〜19:00", closed: "不定休", access: "京王線 府中駅南口よりバス「新町1丁目東」下車 徒歩3分", tel: "042-318-0420", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-shinmachi/" },
       { name: "買取大吉 ライフ府中中河原店", chain: "買取大吉", address: "東京都府中市住吉町1-84-1", postalCode: "183-0034", hours: "10:00〜19:00", closed: "年中無休", access: "京王線 中河原駅より徒歩2分", tel: "042-319-1717", sourceUrl: "https://www.kaitori-daikichi.jp/store/fuchu-nakagawara/" },
-      { name: "リサイクルショップ ティファナ FORIS府中店", chain: "ティファナ", address: "東京都府中市宮町1-41-1 FORIS 3F", postalCode: "183-0023", hours: "10:00〜20:00", access: "京王線 府中駅南口より徒歩1分", tel: "042-319-1201", sourceUrl: "https://www.tifana.net/foris_fuchu/" },
       { name: "おたからや くるる宮町店", chain: "おたからや", address: "東京都府中市宮町1-50 くるる1階", postalCode: "183-0023", hours: "10:00〜18:00", closed: "日曜日", access: "京王線 府中駅南口直結・徒歩1分", tel: "042-404-2854", sourceUrl: "https://www.otakaraya-shop.jp/kururumiyamachi/" },
       { name: "大黒屋 質府中駅前店", chain: "大黒屋", address: "東京都府中市寿町1-1-32 いつかビル1F", postalCode: "183-0056", hours: "10:00〜19:00", closed: "定休日なし", access: "京王線 府中駅より徒歩2分", tel: "042-358-1645", sourceUrl: "https://kaitori.e-daikoku.com/metal/gold-fuchu/" },
     ],
@@ -695,13 +694,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "himeji-kin-kaitori": {
-    updated: "2026-07-07",
+    updated: "2026-11-27",
     stores: [
-      { name: "なんぼや 姫路店", chain: "なんぼや", address: "兵庫県姫路市駅前町188-1 グランフェスタ3番街 B1F", postalCode: "670-0927", hours: "10:00～20:00", closed: "年中無休", access: "JR姫路駅北口より徒歩4分、山陽姫路駅より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/himeji-brandshop/" },
-      { name: "おたからや 姫路本店", chain: "おたからや", address: "兵庫県姫路市駅前町342", postalCode: "670-0927", hours: "9:00～19:00", closed: "年中無休", access: "山陽姫路駅より徒歩約3分（みゆき通り商店街）", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/himeji-honten/" },
+      { name: "なんぼや 姫路店", chain: "なんぼや", address: "兵庫県姫路市駅前町188-1 グランフェスタ3番街 B1F", postalCode: "670-0927", hours: "10:00～20:00", closed: "定休日なし", access: "JR姫路駅 北口より徒歩4分程度、山陽姫路駅 改札口より徒歩3分", tel: "0120-66-1333", sourceUrl: "https://nanboya.com/shop/himeji-brandshop/" },
+      { name: "おたからや 姫路本店", chain: "おたからや", address: "兵庫県姫路市駅前町342", postalCode: "670-0927", hours: "10:00～19:00", closed: "年中無休（年末年始は除く）", access: "山陽姫路駅より徒歩3分、JR姫路駅 ピオレ側出口より徒歩5分（みゆき通り商店街）", tel: "0120-555-600", sourceUrl: "https://www.otakaraya.jp/shop/himeji-honten/" },
       { name: "買取大吉 姫路田寺店", chain: "買取大吉", address: "兵庫県姫路市田寺8-13-52", hours: "10:00～18:00（土曜10:00～15:00）", closed: "日曜", access: "しまむら田寺店の道路向い", tel: "0120-886-681", sourceUrl: "https://www.kaitori-daikichi.jp/store/himeji-tadera/" },
       { name: "こちら買取本舗 姫路店", chain: "こちら買取本舗", address: "兵庫県姫路市二階町71 丸善姫路ビル1F", postalCode: "670-0922", hours: "10:00～18:00", closed: "水曜", access: "JR・山陽姫路駅徒歩約6分、みゆき通り商店街沿い", tel: "0120-979-399", sourceUrl: "https://www.carbon-gold.com/shop/himeji" },
-      { name: "キンバリー 姫路中地店", chain: undefined, address: "兵庫県姫路市中地", hours: "10:00～19:00", closed: "なし（年始を除く）", access: "姫路バイパス中地ICを北へ、陸上競技場前交差点を西", sourceUrl: "https://www.kinburry-himeji.com/precious-metal" },
+      { name: "キンバリー 姫路中地店", chain: undefined, address: "兵庫県姫路市岡田632-1", postalCode: "670-0982", hours: "10:00～19:00", closed: "なし（年始を除く）", access: "姫路バイパス中地ICを北へ、陸上競技場前の交差点を西に進んでつきあたり左へすぐ（ICから車で約3分）", tel: "079-299-2606", parking: "駐車場あり（12台）", sourceUrl: "https://www.kinburry-himeji.com/access" },
     ],
   },
   "fujisawa-kin-kaitori": {
