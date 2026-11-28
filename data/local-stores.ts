@@ -714,13 +714,13 @@ export const localStores: Record<string, CityStores> = {
     ],
   },
   "higashiosaka-kin-kaitori": {
-    updated: "2026-07-07",
+    updated: "2026-11-28",
     stores: [
       { name: "おたからや イオンタウン東大阪店", chain: "おたからや", address: "大阪府東大阪市東鴻池町1-6-30 イオンタウン東大阪", postalCode: "578-0973", hours: "10:00～20:00", closed: "年中無休", tel: "0120-803-650", sourceUrl: "https://www.otakaraya-shop.jp/aeontown-higashiosaka/" },
-      { name: "おたからや 瓢箪山駅前店", chain: "おたからや", address: "大阪府東大阪市瓢箪山町3-24", postalCode: "579-8051", hours: "10:00～19:00", closed: "年中無休（年末年始除く）", access: "近鉄「瓢箪山駅」南出口より徒歩2分", tel: "0120-359-353", sourceUrl: "https://www.otakaraya-shop.jp/hyotanyama/" },
+      { name: "おたからや 瓢箪山駅前店", chain: "おたからや", address: "大阪府東大阪市瓢箪山町3-24", postalCode: "579-8051", hours: "10:00～19:00", closed: "年中無休（年末年始除く）", access: "近鉄奈良線「瓢箪山駅」南出口より徒歩2分", tel: "0120-359-353", sourceUrl: "https://www.otakaraya-shop.jp/hyotan-yama/" },
       { name: "大黒屋 質東大阪布施買取センター", chain: "大黒屋", address: "大阪府東大阪市足代2-1-4 ブルグリンコート布施駅前1F", postalCode: "577-0841", hours: "10:00～19:00", closed: "月曜日", access: "近鉄布施駅東南出口から徒歩15秒", tel: "06-4308-5033", sourceUrl: "https://shop.e-daikoku.com/info/spot/detail?code=0000000396" },
-      { name: "買取大吉 鴻池新田北口店", chain: "買取大吉", address: "大阪府東大阪市鴻池本町1-22", hours: "10:00～18:00", closed: "水曜日", sourceUrl: "https://www.kaitori-daikichi.jp/open/open-5107318/" },
-      { name: "買取大吉 東大阪日下店", chain: "買取大吉", address: "大阪府東大阪市日下町3丁目6-9", hours: "10:00～19:00", closed: "水曜日", tel: "070-2321-0021", sourceUrl: "https://www.kaitori-daikichi.jp/open/open-5081435/" },
+      { name: "買取大吉 鴻池新田北口店", chain: "買取大吉", address: "大阪府東大阪市鴻池本町1-22", hours: "10:00～18:00", closed: "年中無休", access: "JR東西線・学研都市線 JR鴻池新田駅より徒歩1分", tel: "0120-677-617", sourceUrl: "https://www.kaitori-daikichi.jp/store/konoikeshinden-kita/" },
+      { name: "買取大吉 東大阪日下店", chain: "買取大吉", address: "大阪府東大阪市日下町3丁目6-9", hours: "10:00～19:00", closed: "水曜日", access: "関西スーパー日下店より徒歩3分", tel: "070-2321-0021", sourceUrl: "https://www.kaitori-daikichi.jp/store/higashiosaka-kusaka/" },
     ],
   },
   "hirakata-kin-kaitori": {
