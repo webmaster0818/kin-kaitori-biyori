@@ -134,7 +134,7 @@ export default function KinKaitoriShohizeiPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月18日（国税庁のタックスアンサーは令和8年4月1日現在の法令等）。本ページは制度の概要のご説明で、個別の税務判断ではありません。具体的な申告については税務署または税理士にご確認ください。</p>
 
-        <RelatedArticles currentSlug="kin-kaitori-shohizei" relatedSlugs={["kin-kaitori-zeikin", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-baikyaku-mynumber", "kin-kounyu-chuiten"]} />
+        <RelatedArticles currentSlug="kin-kaitori-shohizei" relatedSlugs={["kin-kaitori-zeikin", "kin-kakutei-shinkoku", "kin-200man-mynumber", "kin-baikyaku-mynumber", "kin-kounyu-chuiten", "kin-mitsuyu"]} />
       </article>
     </div>
   </>);

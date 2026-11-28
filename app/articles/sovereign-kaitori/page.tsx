@@ -146,7 +146,7 @@ export default function SovereignKaitoriPage() {
         </ul>
         <p className="text-sm text-warm-gray">確認日: 2026年11月20日。取扱・価格は変更される場合があります。お取引の前に、各社の最新情報をご確認ください。</p>
 
-        <RelatedArticles currentSlug="sovereign-kaitori" relatedSlugs={["krugerrand-kaitori", "kinka-kaitori-guide", "k22-kaitori", "kinka-ingot-kaitori", "kin-baikyaku-mynumber"]} />
+        <RelatedArticles currentSlug="sovereign-kaitori" relatedSlugs={["krugerrand-kaitori", "kinka-kaitori-guide", "k22-kaitori", "kinka-ingot-kaitori", "kin-baikyaku-mynumber", "britannia-kinka"]} />
       </article>
     </div>
   </>);

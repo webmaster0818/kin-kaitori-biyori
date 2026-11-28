@@ -295,7 +295,7 @@ export default function KinkaKaitoriGuidePage() {
           <ServiceCaptureGrid label="当サイトで比較している買取サービス4社の公式サイト" />
           <RelatedArticles
             currentSlug="kinka-kaitori-guide"
-            relatedSlugs={["koban-kachi", "kinka-ingot-kaitori", "vienna-kinka-kaitori", "ingot-100g-kaitori", "k24-kaitori", "k22-kaitori", "kin-nobebo-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "ounce-gram", "krugerrand-kaitori", "sovereign-kaitori", "kinka-kounyusaki"]}
+            relatedSlugs={["koban-kachi", "kinka-ingot-kaitori", "vienna-kinka-kaitori", "ingot-100g-kaitori", "k24-kaitori", "k22-kaitori", "kin-nobebo-kaitori", "kin-kaitori-zeikin", "kin-takaku-uru", "kin-kaitori-souba", "kaitori-houhou-hikaku", "ounce-gram", "krugerrand-kaitori", "sovereign-kaitori", "kinka-kounyusaki", "britannia-kinka"]}
           />
 
           <DealerComparisonTable
