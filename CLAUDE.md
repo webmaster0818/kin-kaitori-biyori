@@ -969,3 +969,12 @@ major都市8のde-thin: 浜松5/姫路5/藤沢5/東大阪5/枚方6/八王子5/�
 - 訂正: 買取大吉 鴻池新田北口店 定休「水曜日」→店舗ページの「年中無休」、TEL 0120-677-617・アクセス「JR東西線・学研都市線 JR鴻池新田駅より徒歩1分」を追加、出典を開店告知 /open/open-5107318/ → /store/konoikeshinden-kita/。東大阪日下店は一致（10:00〜19:00・水曜・070-2321-0021）→アクセス「関西スーパー日下店より徒歩3分」追加・出典を /store/higashiosaka-kusaka/ に。おたからや イオンタウン東大阪（〒578-0973・10:00〜20:00・年中無休・0120-803-650）・瓢箪山駅前（10:00〜19:00・年中無休（年末年始除く）・0120-359-353・南出口徒歩2分。URL が /hyotan-yama/ にリダイレクト→出典更新）、大黒屋 質東大阪布施（〒577-0841・10:00〜19:00・月曜・06-4308-5033・東南出口徒歩15秒）＝一致。確認日 7/7→11-28・dateModified 06-05→11-28
 - 報告のみ: 本文「布施…大手買取チェーンや貴金属店が集まり」は 6/5 テンプレの裏付けなし文。点検 C3 /author/ は否定文脈（Person schema 0）＝誤検知
 - precheck ✅（337頁）・ASP計測リンク 0=0・sponsored 3126=3126・外部href 6896=6896・表示テキストが変わったのは本ページ＋TOP（11:05 前の自動「未反映」表示）・__next*.txt 0。source af167e1 / deploy 41536b8441（10:18 push・10:19 本番反映）。Indexing 1件(200)。次の地域照合: hirakata（7/7）
+
+### 2026-11-28 20:00 kwexp（競合ベンチマーク型ページ拡張・re-musubi.jp の queue 初日）: 新規2ページ（queue の空欄を使い切り）
+- 作成: 金 密輸(800)→/articles/kin-mitsuyu/・ブリタニア金貨(704)→/articles/britannia-kinka/
+- skip: 金が安い国（国別の金の小売価格の公式比較がなく、税制も各国当局の一次資料を取得できず＝要確認）／ナポレオン金貨（パリ造幣局の公式で規格を確認できず・販売業者のみ）／インディアン金貨 買取（usmint.gov 403＝回避せず）／エリザベス金貨 買取（指す金貨が特定できない・sovereign/britannia と重なる可能性＝要確認）。**queue の空欄は0**（次の競合3案の提案が必要＝親が判断）
+- 一次情報（11/28 確認）: 財務省・税関「金密輸の取締強化について」（令和6年11月・Shift_JIS）／税関 2025haku04.pdf（H27〜R6 摘発件数・押収量、R6 形態別・仕出地別、1,400万円/kg×5kg の例）／財務省 令和6事務年度 犯則調査（R7-11-12：金地金186件・約6億2千万円）／税関 20260313.html（R8-4-1 統計細分・R8-8-1 輸出時書類）・shiharaishudan.htm（金の地金 純度90%以上 1kg超）／The Royal Mint Britannia 2025 1oz（£100・999.9・1 Troy Oz・32.69mm・4セキュリティ）・2017 1oz（1987 Philip Nathan）・「The benefits of the Britannia bullion coin」（1987 22ct→2013 999.9・4サイズ・2021 セキュリティ・英国居住者 CGT 非課税・VAT 非課税）／三菱マテリアル・石福の金貨一覧（ブリタニアなし）／徳力本店 2026/11/27 11:45 ウィーン・メイプル 1oz 買取（プレミアム無）589,699・地金買取 20,146
+- 独自計算: 1/5/10kg の税込買取額に含まれる消費税相当額（日次）・1件あたり押収量の10年推移と形態別（旅客約1.1kg/航空貨物約23kg）／ブリタニア4サイズの金の値（日次）・徳力の金貨買取÷1oz の金の値（約94.1%）・200万円以下の枚数
+- 報告のみ: kin-nobebo-kaitori の表「2025年11月〜 税関が金密輸の『更なる取締強化』を開始（臨時税関長会議…財務大臣指示）」は、税関の公式では臨時税関長会議が令和6年（2024年）11月28日・関税局長の指示。2025年に別の会議があったかは未確認（未変更）
+- 内部リンク: metadata +2（kin-mitsuyu=howto・britannia-kinka=compare）、relatedSlugs 追加 kin-kaitori-shohizei・kin-nobebo-kaitori→kin-mitsuyu、sovereign-kaitori・kinka-kaitori-guide・vienna-kinka-kaitori→britannia-kinka。sitemap 151
+- trust-audit check_page 2頁とも指摘0・precheck ✅全項目OK（339頁）・scaled-content-lint 違反0・heading-lint 該当0。Indexing は未送信（親が実施）。source 7d11652 / deploy 9a5959e691
